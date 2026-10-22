@@ -12,8 +12,7 @@ GitBook rules enforced (see docs/contribute + the internal-linking guide):
      documented exception is a bare directory reference (a relative path
      ending in `/`, no filename, e.g. `./`, `../`, `../../`, `sibling/`), which
      GitBook resolves natively to that folder's own README.md at any relative
-     depth (see the style guide's "Link to the current page's parent page"
-     section).
+     depth (see the style guide's "Parent pages" note).
   2. A relative `.md` link must point at a file that exists.
   3. Relative `../` links can't cross GitBook spaces (top-level folders under
      docs/). Cross-space links must use an app.gitbook.com URL, so a relative
@@ -50,6 +49,7 @@ the changed files in a PR) to check only those. Exits 1 if any error is found.
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import re
 import sys
@@ -64,13 +64,11 @@ EXCLUDE_FILES = {
     "docs/contribute/contribution-guide-for-n8n-docs/style-guide-for-n8n-docs.md",
 }
 
-# The style guide holds the canonical `space folder -> space ID` table used for
-# cross-space (app.gitbook.com/s/<id>/...) links. Parsed at runtime so there's a
-# single source of truth the team already maintains.
-# Generated from each space's GitBook Git Sync config by the DocFather "Space Index"
-# workflow, so it cannot drift the way a hand-kept table can. The style guide keeps a
-# copy for people reading the published docs (this file lives at the repo root and
-# isn't published); the test suite asserts that copy agrees with this one.
+# Space IDs for cross-space (app.gitbook.com/s/<id>/...) links come from this
+# generated file, built from each space's GitBook Git Sync config by the
+# DocFather "Space Index" workflow, so it cannot drift the way a hand-kept
+# table can. The style guide and the n8n-docs-author skill both link to it
+# instead of keeping their own copy.
 SPACE_ID_TABLE_FILE = REPO_ROOT / "SPACE_INDEX.md"
 # Row form: | `space-folder` | `SpaceId` |
 SPACE_ID_ROW_RE = re.compile(r"^\|\s*`([a-z0-9-]+)`\s*\|\s*`([A-Za-z0-9]+)`\s*\|")
@@ -80,7 +78,7 @@ APP_GITBOOK_RE = re.compile(
 
 
 def load_space_ids() -> dict[str, str]:
-    """Parse the style-guide table into {space_id: folder}. Empty on failure."""
+    """Parse SPACE_INDEX.md into {space_id: folder}. Empty on failure."""
     id_to_folder: dict[str, str] = {}
     try:
         for line in SPACE_ID_TABLE_FILE.read_text(encoding="utf-8").split("\n"):
@@ -97,8 +95,12 @@ SPACE_ID_TO_FOLDER = load_space_ids()
 # Run-level stats for coverage transparency (not errors).
 _STATS = {"unknown_space_ids": set(), "unknown_space_links": 0, "generated_links": 0}
 
-# Hidden/utility spaces: include mechanisms, not real link targets.
-HIDDEN_SPACES = {"_workflows", "reusable-content"}
+# Utility spaces that hold no rendered content of their own.
+# `reusable-content` is deliberately NOT listed here. Its files are the git-sync
+# form of GitBook reusable blocks, so the links inside them render on live pages.
+# Skipping the space hid those links from every checker we run; one cross-space
+# link had been broken there unseen until DOC-2396.
+HIDDEN_SPACES = {"_workflows"}
 
 # Sub-trees inside a space whose pages GitBook generates (e.g. the public API
 # reference, rendered from an OpenAPI spec) rather than backing them with a `.md`
@@ -231,8 +233,7 @@ def classify_cross_space(target: str, src_rel: str):
     reject a URL pointing back into that file's own space (rule 4).
 
     Returns (category, message) if broken, "unknown" if the space ID isn't in
-    the table (can't verify — e.g. the reusable-content utility space), or None
-    if it resolves. Reconstructs docs/<folder>/<page-path> and accepts either a
+    SPACE_INDEX.md (can't verify), or None if it resolves. Reconstructs docs/<folder>/<page-path> and accepts either a
     matching `.md` file or a directory (folder page, whatever its index file).
     """
     m = APP_GITBOOK_RE.match(target)
@@ -241,8 +242,8 @@ def classify_cross_space(target: str, src_rel: str):
     space_id, page_path = m.group(1), (m.group(2) or "")
     folder = SPACE_ID_TO_FOLDER.get(space_id)
     if folder is None:
-        # Space ID not in the table (e.g. the reusable-content utility space);
-        # we can't map it to a folder, so we don't verify it. Track for transparency.
+        # Space ID not in SPACE_INDEX.md; we can't map it to a folder, so we
+        # don't verify it. Track for transparency.
         _STATS["unknown_space_ids"].add(space_id)
         _STATS["unknown_space_links"] += 1
         return "unknown"
@@ -533,8 +534,8 @@ def classify(md_file: Path, src_rel: str, target: str):
 
     # Rule 1 exception: a bare directory reference (a relative path ending in
     # `/`, no filename) is the documented way to link to that folder's own
-    # landing page -- see the style guide's "Link to the current page's parent
-    # page" section. GitBook resolves this natively to the folder's README.md
+    # landing page -- see the style guide's "Parent pages" note. GitBook
+    # resolves this natively to the folder's README.md
     # at any relative depth (`./`, `../`, `../../`, `sibling/`, ...), unlike a
     # bare path with no trailing slash, so it doesn't 404 the way Rule 1
     # assumes. Route it through the same file it names: `<path>README.md`.
@@ -586,6 +587,13 @@ def main() -> int:
         action="store_true",
         help="Fail on broken anchors instead of warning (see rule 5).",
     )
+    ap.add_argument(
+        "--json",
+        metavar="PATH",
+        help="Also write the findings as JSON, for the weekly sweep reporter "
+             "(internal_links_report.py). Same split as lychee: this script "
+             "finds, the reporter delivers.",
+    )
     args = ap.parse_args()
 
     if args.files:
@@ -602,6 +610,8 @@ def main() -> int:
     errors: list[str] = []
     warnings: list[str] = []
     counts: dict[str, int] = {}
+    records: list[dict] = []
+    scanned = 0
 
     for md_file in files:
         if not md_file.exists() or md_file.suffix != ".md":
@@ -615,6 +625,7 @@ def main() -> int:
         if space_of(rel) in HIDDEN_SPACES:
             continue
 
+        scanned += 1
         raw = md_file.read_text(encoding="utf-8", errors="replace")
         text = strip_code(blank_gitbook_native(raw))
         for line, target in iter_targets(text):
@@ -624,10 +635,25 @@ def main() -> int:
             category, message = result
             counts[category] = counts.get(category, 0) + 1
             entry = f"{rel}:{line}  [{category}]  {message}"
-            if category in warn_categories:
+            severity = "warning" if category in warn_categories else "error"
+            if severity == "warning":
                 warnings.append(entry)
             else:
                 errors.append(entry)
+            records.append({"page": rel, "line": line, "category": category,
+                            "message": message, "target": target,
+                            "severity": severity})
+
+    if args.json:
+        Path(args.json).parent.mkdir(parents=True, exist_ok=True)
+        Path(args.json).write_text(json.dumps({
+            "files_scanned": scanned,
+            "counts": counts,
+            "errors": len(errors),
+            "warnings": len(warnings),
+            "strict_anchors": bool(args.strict_anchors),
+            "findings": records,
+        }, indent=2), encoding="utf-8")
 
     if warnings:
         print(f"⚠️  {len(warnings)} warning(s):\n")
@@ -640,8 +666,7 @@ def main() -> int:
         n_ids = len(_STATS["unknown_space_ids"])
         print(
             f"ℹ️  Skipped {n_links} cross-space link(s) to {n_ids} space ID(s) not in "
-            f"the style-guide table (e.g. the reusable-content utility space); "
-            f"can't verify these.\n"
+            f"the generated SPACE_INDEX.md; can't verify these.\n"
         )
 
     if _STATS["generated_links"]:
@@ -662,7 +687,7 @@ def main() -> int:
         )
         return 1
 
-    print(f"✅ No broken internal links found ({len(files)} file(s) scanned).")
+    print(f"✅ No broken internal links found ({scanned} file(s) scanned).")
     if warnings:
         print(f"   ({len(warnings)} warning(s) above — not failing the build.)")
     return 0

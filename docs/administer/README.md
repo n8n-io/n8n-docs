@@ -57,3 +57,5 @@ Use Git-backed workflows to promote changes between environments. See [Use sourc
 Track usage and send signals to your logging tools. Use [Observe and log](observe-and-log/README.md) to improve visibility.
 {% endstep %}
 {% endstepper %}
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}

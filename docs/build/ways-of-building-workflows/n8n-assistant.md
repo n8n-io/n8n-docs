@@ -37,6 +37,8 @@ It isn't ready for n8n Cloud Enterprise or self-hosted Enterprise yet. If you're
 n8n Assistant is in Preview. It can make mistakes, and behavior may change while the feature is in development. Always review generated workflows before using them in production.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## What n8n Assistant can help with
 
 You interact with n8n Assistant in a chat. It can use tools inside n8n to help you create and debug workflows.
@@ -46,11 +48,61 @@ You can ask n8n Assistant to:
 - **Create workflows:** describe the automation you want, and n8n Assistant can generate a workflow.
 - **Build agents:** describe the agent you want, and n8n Assistant can suggest instructions, tools, and skills to add. Agents also run on self-hosted with the `agents` module. See [Build and manage agents](../build-and-manage-agents.md) and [Enable agents](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant#enable-agents).
 - **Connect MCP servers:** connect a server from the [MCP servers](../integrate-ai/mcp-servers.md) registry directly to the assistant, both to perform tasks and to gather context while it builds workflows for you.
+- **Work in your browser:** connect [Browser Use](n8n-assistant/browser-use.md) so n8n Assistant can browse sites, fill in forms, and set up credentials for you.
 - **Edit workflows:** ask it to change a workflow, add nodes, update logic, or adjust configuration.
 - **Test and troubleshoot workflows:** ask it to run checks, inspect relevant errors, and suggest fixes.
 - **Help with credentials:** prompt you to select an existing credential or create a new one, without pasting secrets into chat.
 - **Use n8n resources:** create or update supporting resources such as [Data Tables](../work-with-data/data-tables.md) when needed.
 - **Research approved websites:** when web access is enabled, n8n Assistant asks for permission before accessing a domain.
+- **Pick up recent work:** ask about a workflow you built earlier or an execution that failed, and n8n Assistant can find it without you naming it.
+
+## What n8n Assistant knows about your instance
+
+{% hint style="info" %}
+**Preview status**
+
+Instance context is in Preview and may change in future releases. n8n hasn't enabled instance context for all instances. Avoid relying on instance context for production work.
+{% endhint %}
+
+At the start of a conversation, n8n Assistant receives instance context: a short summary of the project you opened it in. This helps n8n Assistant respond to prompts such as "find the last failed execution" without you naming a workflow.
+
+Instance context draws on three sources:
+
+| What instance context reports | Source |
+| --- | --- |
+| Which workflows exist in the project, and their publication status | Your workflows |
+| Recent changes and who made them | The instance activity log |
+| Which workflows ran, how many failed, and the last failure | Your execution history |
+
+n8n Assistant gets an initial summary with your first message in a conversation. The summary limits the number of workflows, activity entries, and execution records it includes. n8n Assistant can retrieve more details when needed. After that, each message carries only what changed since then. Start a new conversation for unrelated work, and n8n Assistant reads the project again from the start.
+
+On n8n Cloud, n8n controls access to instance context. On self-hosted instances, an instance admin can override the feature flag to enable instance context. See [Enable instance context](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant#enable-instance-context).
+
+### What n8n Assistant can look up from instance context
+
+Instance context holds pointers, not contents. From it, n8n Assistant can:
+
+- **Read further back through recent changes.** Instance context covers a recent window. n8n Assistant can list older entries, filter to workflow or credential changes, or open one entry to see a single workflow's recent change history.
+- **Open the live record.** Every line carries an ID, so n8n Assistant can fetch the workflow, execution, or credential it points to.
+
+Activity entries follow your [activity log retention settings](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant#enable-instance-context). Executions follow your [execution data retention settings](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/manage-execution-data). If n8n has pruned an activity entry, n8n Assistant continues without it.
+
+### How n8n Assistant learns which nodes you use
+
+Node type counting is a separate setting from instance context. An instance admin must enable it. See [Enable node type counting](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant#enable-node-type-counting).
+
+With it on, n8n Assistant can ask how many workflows in a project use each node type, instead of reading every workflow to work out your conventions. It reports counts of node types, never parameter values, so it can tell that 10 of your 10 workflows use the **Slack** node, never how you configured any of them. To follow a convention rather than just name it, n8n Assistant reads one workflow in full.
+
+### What instance context doesn't include
+
+The activity log records that a change happened, not what the change contained. To answer questions about a workflow's structure or configuration, n8n Assistant reads the workflow itself.
+
+Instance context doesn't include:
+
+- **Parameter values.** A change entry names the node types you added or removed, and which settings you changed. It never records the values you set.
+- **Individual nodes.** A save entry names added or removed node types, not individual nodes. Adding a second **Slack** node changes the total node count but doesn't add a new type.
+- **Every node type in a large change.** When one save exceeds the node type limit, the entry lists a subset and reports the total.
+- **Work in projects you didn't open.** See [Instance context stays inside one project](#instance-context-stays-inside-one-project).
 
 ## Before you start
 
@@ -62,7 +114,7 @@ Make sure that:
 - You have permission to use the workflows, credentials, and resources needed for the task.
 - You know what you want the workflow to do.
 
-n8n Assistant uses the permissions of your n8n user. It can only access the workflows, credentials, and resources that you can access in the selected project.
+n8n Assistant uses the permissions of your n8n user. It can only access workflows, credentials, and resources that you have permission to use.
 
 ## Write effective prompts
 
@@ -130,7 +182,9 @@ When a workflow needs credentials, n8n Assistant prompts you with a credential c
 - Select an existing credential that you have access to in the project.
 - Create a new credential.
 
-If you create a new credential, you enter the secret in the standard n8n credential screen, not in the chat. Don't paste API keys, passwords, or tokens into the conversation.
+You can also ask n8n Assistant to create the credential for you in your browser with [Browser Use](n8n-assistant/browser-use.md#set-up-credentials-with-browser-use). The secret goes straight into the credential and the AI never sees it.
+
+If you create a new credential yourself, you enter the secret in the standard n8n credential screen, not in the chat. Don't paste API keys, passwords, or tokens into the conversation.
 
 ## Web access
 
@@ -160,7 +214,10 @@ Depending on the task, this can include:
 - workflow structure and node configuration,
 - selected execution and error details used for troubleshooting,
 - credential names, types, descriptions, or connection status,
-- approved web pages or domains, when you enable web access.
+- approved web pages or domains, when you enable web access,
+- the names of the workflows in the project you opened it in,
+- a record of recent workflow and credential changes in that project,
+- which of those workflows ran, and which executions failed.
 
 n8n Assistant doesn't require you to paste secrets into chat. Enter API keys, passwords, and tokens through the standard n8n credential screens.
 
@@ -168,9 +225,19 @@ n8n Assistant doesn't require you to paste secrets into chat. Enter API keys, pa
 Don't paste sensitive data into chat unless it's necessary for the task. AI-generated outputs can be incorrect, so review workflows and configurations before using them in production.
 {% endhint %}
 
+### Instance context stays inside one project
+
+A conversation uses the project you opened it in. Automatic instance context and activity log searches read only that project. Workflow searches and node type counting can include other projects you have permission to read.
+
+n8n Assistant reads instance context with your own permissions, and n8n checks them on every message rather than once at the start. If you lose access to the project, n8n Assistant stops reading it.
+
+Looking up an activity-entry ID outside the conversation's project gives the same answer as looking up a missing entry. These requests don't reveal whether an entry exists in another project.
+
 ## Credit usage
 
-n8n Assistant uses credits based on the tokens processed by the underlying AI model.
+On n8n Cloud, n8n Assistant uses [Assistant credits](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/assistant-credits), based on the tokens processed by the underlying AI model. Your plan includes a monthly allowance of Assistant credits that resets on the first day of every month. If you use it up, the instance owner can buy extra credits to keep using n8n Assistant until the next reset. Everyone on the instance shares one balance.
+
+Assistant credits and [Gateway credits](../understand-workflows/use-gateway-credits.md) are separate. Assistant credits pay for your conversations with n8n Assistant, not for the AI models your workflows or agents call when they run. Gateway credits pay for those model calls, not for n8n Assistant. Topping up one doesn't add to the other.
 
 Longer conversations, larger workflows, debugging sessions, and repeated iterations use more credits.
 
@@ -181,13 +248,14 @@ To reduce unnecessary usage:
 - Review n8n Assistant's plan before asking it to build.
 - Avoid asking it to regenerate the same workflow without adding new guidance.
 
-To get more credits during Preview, upgrade your plan. More ways to top up are coming.
+To check your balance, open the credits menu in the n8n Assistant panel. For your plan's monthly allowance, see [n8n plans and pricing](https://n8n.io/pricing/).
 
-For current plan details, see [n8n plans and pricing](https://n8n.io/pricing/).
+Self-hosted n8n doesn't use Assistant credits. On a self-hosted instance, n8n Assistant runs on your own AI provider account. Refer to [Set up n8n Assistant](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant).
 
 ## Related resources
 
 * [Ways of building workflows](./)
+* [Work with Browser Use](n8n-assistant/browser-use.md)
 * [Use n8n MCP server](connect-to-n8n-mcp-server.md)
 * [Use templates](use-templates.md)
 * [Use Ask n8n AI](use-the-ai-assistant.md)

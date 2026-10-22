@@ -52,6 +52,8 @@ Refer to the [OpenAI credentials documentation](../../../credentials/openai.md) 
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 ### Model <a href="#model" id="model"></a>
@@ -159,7 +161,7 @@ Configure the prompt filled with a unique ID, its version, and substitutable var
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [LangChains's OpenAI documentation](https://js.langchain.com/docs/integrations/chat/openai/) for more information about the service.
+Refer to [LangChain's OpenAI documentation](https://docs.langchain.com/oss/javascript/integrations/chat/openai) for more information about the service.
 
 Refer to [OpenAI documentation](https://platform.openai.com/docs/api-reference/responses/create) for more information about the parameters.
 

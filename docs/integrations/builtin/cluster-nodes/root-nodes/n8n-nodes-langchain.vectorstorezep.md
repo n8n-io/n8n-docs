@@ -62,6 +62,8 @@ For usage examples and templates to help you get started, refer to n8n's [Zep Ve
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node usage patterns <a href="#node-usage-patterns" id="node-usage-patterns"></a>
 
 You can use the Zep Vector Store node in the following patterns.
@@ -142,8 +144,6 @@ Disable this to configure your embeddings in Zep instead of in n8n.
 [Browse Zep Vector Store node documentation integration templates](https://n8n.io/integrations/zep-vector-store) or [search all templates](https://n8n.io/workflows/)
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
-
-Refer to [LangChain's Zep documentation](https://js.langchain.com/docs/integrations/vectorstores/zep/) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

@@ -25,6 +25,8 @@ Be aware of how n8n decides which node version to load:
 If you build a node using the declarative style, you can't use full versioning.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Light versioning <a href="#light-versioning" id="light-versioning"></a>
 
 This is available for all node types.

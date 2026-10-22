@@ -24,6 +24,8 @@ To disable the [public REST API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/
 export N8N_PUBLIC_API_DISABLED=true
 ```
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Disable the API playground <a href="#disable-the-api-playground" id="disable-the-api-playground"></a>
 
 To disable the [API playground](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/use-an-api-playground), set the `N8N_PUBLIC_API_SWAGGERUI_DISABLED` environment variable to `true`, for example:

@@ -23,6 +23,8 @@ Log Streaming is available on:
 
 Log streaming allows you to send events from n8n to your own logging tools. This allows you to manage your n8n monitoring in your own alerting and logging processes.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Set up log streaming <a href="#set-up-log-streaming" id="set-up-log-streaming"></a>
 
 To use log streaming, you have to add a streaming destination.
@@ -77,6 +79,7 @@ The following events are available. You can choose which events to stream in **S
 * Audit
 	* User login success
 	* User login failed
+	* User login email conflict
 	* User signed up
 	* User updated
 	* User deleted
@@ -175,6 +178,42 @@ The following events are available. You can choose which events to stream in **S
 	* Job stalled
 
 Two sets of audit events mention packages, and they're unrelated. **Package installed**, **Package updated**, and **Package deleted** cover [community nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/community-nodes/installation-and-management) installed on the instance. The **n8n package** events cover [n8n packages](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages), the portable archives you use to move workflows between instances.
+
+### Workflow events
+
+The four **Workflow** events cover a single workflow execution's lifecycle.
+
+| Event name | Sent when |
+|---|---|
+| `n8n.workflow.started` | A workflow execution begins. |
+| `n8n.workflow.success` | A workflow execution finishes without an error. |
+| `n8n.workflow.failed` | A workflow execution finishes with an error. |
+| `n8n.workflow.cancelled` | Someone or something cancels a running execution. |
+
+To stream all four, subscribe your destination to `n8n.workflow`. In **Settings** > **Log Streaming** > **Events**, they appear in the **Workflow** group.
+
+Every event carries `executionId`, `workflowId`, and `workflowName`.
+
+`n8n.workflow.started`, `n8n.workflow.success`, and `n8n.workflow.failed` also carry:
+
+| Field | Description |
+|---|---|
+| `userId` | The user who owns the execution. Not present when n8n starts the execution itself, for example from a schedule trigger. |
+| `mode` | The execution mode, for example `trigger`, `manual`, `webhook`, or `retry`. |
+| `isManual` | `true` when someone starts the execution manually from the editor. |
+| `projectId`, `projectName` | The project the workflow belongs to, when it belongs to one. |
+
+`n8n.workflow.success` and `n8n.workflow.failed` also carry a `success` boolean: `true` on the success event, `false` on the failed event.
+
+`n8n.workflow.failed` additionally carries:
+
+| Field | Description |
+|---|---|
+| `lastNodeExecuted` | The name of the node that was running when the execution failed. |
+| `errorNodeType` | That node's type, for example `n8n-nodes-base.httpRequest`. |
+| `errorMessage` | The error message, as a string. |
+
+`n8n.workflow.cancelled` additionally carries `reason`, a string describing why the execution was cancelled.
 
 ### MCP events
 

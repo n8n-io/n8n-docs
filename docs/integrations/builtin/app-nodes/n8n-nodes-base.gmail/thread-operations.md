@@ -22,6 +22,8 @@ layout:
 
 Use the Thread operations to delete, reply to, trash, untrash, add/remove labels, get one, or list threads. Refer to the [Gmail node](README.md) for more information on the Gmail node itself.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Add Label to a thread <a href="#add-label-to-a-thread" id="add-label-to-a-thread"></a>
 
 Use this operation to create a new draft.

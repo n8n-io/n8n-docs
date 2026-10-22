@@ -1,7 +1,7 @@
 ---
 description: >-
   Monitor your Gateway credits balance, spend by model or workflow, and top-up
-  history in the n8n Cloud admin dashboard.
+  history in the n8n Cloud console.
 layout:
   description:
     visible: false
@@ -9,9 +9,11 @@ layout:
 
 # Track Gateway credit spend
 
-The **Gateway credits** tab in the Cloud admin dashboard shows your balance, your spend over time, and your top-up history. To open it, go to the [Cloud admin dashboard](../use-the-admin-dashboard.md) and select the **Gateway credits** tab.
+The **Gateway credits** page in the n8n Cloud console shows your balance, your spend over time, and your top-up history. To open it, go to the [Cloud console](../use-the-cloud-console.md) and select **Gateway credits** in the sidebar. You can also select **Manage** next to your Gateway balance on the **Overview** page.
 
 You can also see your current balance in the editor, next to the Gateway credits option on supported nodes.
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
 
 ## Balance
 

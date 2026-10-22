@@ -38,6 +38,8 @@ This page outlines environment variables to configure your chosen database for y
 | `DB_RECOVERY_BACKOFF_MAX_MS` | Number | `30000` | The longest, in milliseconds, n8n waits between recovery attempts. This caps the backoff. Must be greater than or equal to `DB_RECOVERY_BACKOFF_MIN_MS`. |
 | `DB_CONNECTION_ACQUISITION_TIMEOUT_MS` | Number | `30000` | How long, in milliseconds, a query waits while recovery is in progress before failing fast with an error. Set to `0` to wait indefinitely. Applies to PostgreSQL only. |
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## PostgreSQL <a href="#postgresql" id="postgresql"></a>
 
 | Variable | Type  | Default  | Description |

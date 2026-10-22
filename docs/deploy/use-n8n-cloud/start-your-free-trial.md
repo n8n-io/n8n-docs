@@ -17,6 +17,8 @@ layout:
 
 [n8n Cloud](README.md) is the managed way to run n8n: n8n hosts your instance, so you don't set up or maintain any infrastructure. The best way to start is with a free trial, then move to a paid plan that fits your needs.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Start with a free trial <a href="#start-with-a-free-trial" id="start-with-a-free-trial"></a>
 
 When you create a new n8n Cloud trial, you have 14 days to try all the features of the [Pro plan](https://n8n.io/pricing/), including:
@@ -49,16 +51,19 @@ Exact features, usage limits, and prices for each plan can change. For the curre
 
 ## Upgrade to a paid plan <a href="#upgrade-to-a-paid-account" id="upgrade-to-a-paid-account"></a>
 
-You can upgrade to a paid n8n account at any time. To upgrade:
+You can upgrade to a paid plan at any time during your trial. To upgrade from the n8n Cloud console:
 
-1. Log in to your account.
-2. Select the **Upgrade** button in the upper-right corner.
-3. Select your plan and whether to pay annually or by the month.
-4. Select a payment method.
+1. Open the [Cloud console](use-the-cloud-console.md).
+2. Select **Upgrade plan** in the trial banner at the top of the page. You can also go to **Billing** and select **Upgrade plan**. n8n opens the **Choose a plan** page.
+3. Choose **Monthly** or **Annual** billing.
+4. Select **Select plan** on the plan you want.
+5. Enter your payment details and complete the checkout.
+
+In the n8n editor, the upgrade button in the trial banner at the top of the page opens the same **Choose a plan** page in the Cloud console.
 
 ## When your trial ends <a href="#trial-expiration" id="trial-expiration"></a>
 
-If you don't upgrade by the end of your trial, the trial automatically expires and n8n deletes your workspace.
+If you don't upgrade by the end of your trial, the trial automatically expires and n8n deletes your instance.
 
 {% hint style="info" %}
 **Download your workflows**
@@ -85,9 +90,10 @@ Select the **Contact** button on the [n8n website](https://n8n.io/pricing/).
 ## Related resources
 
 * [Use n8n Cloud](./)
-* [Use the admin dashboard](use-the-admin-dashboard.md)
+* [Use the Cloud console](use-the-cloud-console.md)
 * [Update your version](update-your-version.md)
 * [Configure Cloud](configure-cloud/README.md)
 * [Gateway credits](gateway-credits/README.md)
+* [Assistant credits](assistant-credits/README.md)
 * [Understand concurrency](understand-concurrency.md)
 * [Download workflows](download-workflows.md)

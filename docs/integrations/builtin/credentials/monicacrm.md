@@ -21,6 +21,8 @@ You can use these credentials to authenticate the following nodes:
 
 - [Monica CRM](../app-nodes/n8n-nodes-base.monicacrm.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Sign up for a [Monica CRM](https://www.monicahq.com/) account or self-host an instance.

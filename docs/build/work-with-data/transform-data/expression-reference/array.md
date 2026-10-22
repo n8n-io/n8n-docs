@@ -131,6 +131,8 @@ layout:
 **Description:** Compares two arrays. Returns all elements in the base array that aren't present
 in <code>otherArray</code>.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 **Syntax:** _`Array`_.difference(otherArray)
 
 **Returns:** Array

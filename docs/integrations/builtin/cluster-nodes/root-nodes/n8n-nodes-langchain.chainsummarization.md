@@ -25,6 +25,8 @@ Use the Summarization Chain node to summarize multiple documents.
 
 On this page, you'll find the node parameters for the Summarization Chain node, and links to more resources.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 Choose the type of data you need to summarize in **Data to Summarize**. The data type you choose determines the other node parameters.
@@ -41,9 +43,9 @@ You can configure the summarization method and prompts. Select **Add Option** > 
 
 Options in **Summarization Method**:
 
-* **Map Reduce**: this is the recommended option. Learn more about [Map Reduce](https://js.langchain.com/v0.1/docs/modules/chains/document/map_reduce/) in the LangChain documentation.
-* **Refine**: learn more about [Refine](https://js.langchain.com/v0.1/docs/modules/chains/document/refine/) in the LangChain documentation.
-* **Stuff**: learn more about [Stuff](https://js.langchain.com/v0.1/docs/modules/chains/document/stuff/) in the LangChain documentation.
+* **Map Reduce**: summarizes each chunk on its own, then combines the summaries. This is the recommended option.
+* **Refine**: summarizes the first chunk, then updates that summary with each next chunk in turn.
+* **Stuff**: sends all the text to the model in one prompt. Use it for short text that fits in the model's context window.
 
 You can customize the **Individual Summary Prompts** and the **Final Prompt to Combine**. There are examples in the node. You must include the `"{text}"` placeholder.
 
@@ -53,8 +55,6 @@ You can customize the **Individual Summary Prompts** and the **Final Prompt to C
 [Browse Summarization Chain node documentation integration templates](https://n8n.io/integrations/summarization-chain) or [search all templates](https://n8n.io/workflows/)
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
-
-Refer to [LangChain's documentation on summarization](https://js.langchain.com/docs/tutorials/summarization/) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

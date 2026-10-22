@@ -32,6 +32,8 @@ Ask n8n AI helps you build, debug, and optimize your workflows. From answering q
 Ask n8n AI is n8n's built-in help assistant and is no longer actively developed. To build, edit, and run workflows from a chat, see [Use n8n Assistant](n8n-assistant.md).
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Current capabilities <a href="#current-capabilities" id="current-capabilities"></a>
 
 Ask n8n AI offers a range of tools to support you:
@@ -84,7 +86,7 @@ Ask n8n AI has access to all elements displayed on your n8n screen, excluding ac
 
 ### Who can use the Assistant? <a href="#who-can-use-the-assistant" id="who-can-use-the-assistant"></a>
 
-Any user on a Cloud plan can use the assistant.
+The assistant is available on all n8n Cloud plans. It isn't available on self-hosted.
 
 ### How does the Assistant work? <a href="#how-does-the-assistant-work" id="how-does-the-assistant-work"></a>
 

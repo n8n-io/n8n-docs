@@ -32,6 +32,8 @@ Autopilot has become Ortto. The Autopilot credentials and nodes are only compati
 Refer to [Autopilot credentials](../credentials/autopilot.md) for guidance on setting up authentication.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Operations <a href="#operations" id="operations"></a>
 
 * Contact

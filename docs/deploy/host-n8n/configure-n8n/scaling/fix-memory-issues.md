@@ -19,6 +19,8 @@ n8n doesn't restrict the amount of data each node can fetch and process. While t
 This page describes memory-related errors when [self-hosting n8n](../../README.md). Visit [Cloud data management](../../../use-n8n-cloud/configure-cloud/manage-your-data.md) to learn about memory limits for [n8n Cloud](../../../use-n8n-cloud/README.md).
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Identifying out of memory situations <a href="#identifying-out-of-memory-situations" id="identifying-out-of-memory-situations"></a>
 
 n8n provides error messages that warn you in some out of memory situations. For example, messages such as **Execution stopped at this node (n8n may have run out of memory while executing it)**.

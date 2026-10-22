@@ -34,12 +34,14 @@ There are two concerns when managing data on n8n Cloud:
 
 To avoid these issues, n8n recommends that you build your workflows with memory efficiency in mind, and don't save unnecessary data
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Memory limits on each n8n Cloud plan <a href="#memory-limits-on-each-cloud-plan" id="memory-limits-on-each-cloud-plan"></a>
 
 Current plans:
 
-* Trial: 320MiB RAM, 10 millicore CPU burstable
-* Starter: 320MiB RAM, 10 millicore CPU burstable
+* Trial: 640MiB RAM, 10 millicore CPU burstable
+* Starter: 640MiB RAM, 10 millicore CPU burstable
 * Pro-1 (10k executions): 640MiB RAM, 20 millicore CPU burstable
 * Pro-2 (50k executions): 1280MiB RAM, 80 millicore CPU burstable
 * Enterprise: 4096MiB RAM, 80 millicore CPU burstable
@@ -71,11 +73,11 @@ If a workflow consumes a large amounts of data and is past testing stage, it's a
 
 There are two ways you can control how much execution data n8n stores in the database:
 
-In the admin dashboard:
+In the n8n Cloud console:
 
-1. From your workspace or editor, navigate to **Admin Panel**.
-2. Select **Manage**.
-3. In **Executions to Save** deselect the executions you don't want to log.
+1. Open the [Cloud console](../use-the-cloud-console.md) and select **Instance settings**.
+2. In the **Runtime** section, under **Executions to save**, deselect the execution types you don't want to log: **Manual**, **Failed**, or **Successful**.
+3. Select **Save and restart** in the bar at the bottom of the page. Your instance restarts to apply the change.
 
 In your workflow settings:
 
@@ -92,6 +94,8 @@ n8n automatically prunes execution logs after a certain time or once you reach t
 * Start and Starter plans: max 2500 executions saved and 7 days execution log retention;
 * Pro plans: max 25000 executions saved and 30 days execution log retention;
 * Enterprise plan: max 50000 executions saved and unlimited execution log retention time.
+
+You reach the maximum storage limit either by exceeding the maximum number of saved executions or by exceeding the instance's database storage size. If the instance's database reaches this limit, n8n removes only the execution data and keeps the execution record. Pruning based on execution count or retention time, however, removes the record completely.
 
 ### Manual data pruning <a href="#manual-data-pruning" id="manual-data-pruning"></a>
 

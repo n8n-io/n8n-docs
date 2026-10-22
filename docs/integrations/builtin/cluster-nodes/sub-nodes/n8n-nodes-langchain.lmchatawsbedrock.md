@@ -34,6 +34,8 @@ If you route Bedrock through a [VPC interface endpoint (PrivateLink)](https://do
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 	
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 * **Authentication**: Select the authentication method:
@@ -85,7 +87,7 @@ This node doesn't support the [`NO_PROXY` environment variable](https://app.gitb
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [LangChains's AWS Bedrock Chat Model documentation](https://js.langchain.com/docs/integrations/chat/bedrock/) for more information about the service.
+Refer to [LangChain's AWS Bedrock Chat Model documentation](https://docs.langchain.com/oss/javascript/integrations/chat/bedrock_converse) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

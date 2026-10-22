@@ -12,6 +12,8 @@ layout:
     visible: false
 ---
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Change instance ownership <a href="#change-instance-ownership" id="change-instance-ownership"></a>
 
 You can change the ownership of an instance by navigating to the **Settings > Personal** page in the owner's account and editing the **Email** field. After making the changes, scroll down and press **Save**.
@@ -19,7 +21,7 @@ Note that for the change to be effective, the new email address must not be asso
 
 Changing emails will change the owner of the instance, the email you log in with, and the email your invoices and general communication gets sent to.
 
-If the workspace is deactivated, there will be no **Settings** page and no possibility to change the email address or the owner info.
+If the instance is deactivated, there will be no **Settings** page and no possibility to change the email address or the owner info.
 
 ## Change instance username <a href="#change-instance-username" id="change-instance-username"></a>
 

@@ -14,6 +14,8 @@ layout:
 
 This gives access to all the items of the current or parent nodes. If you don't supply any parameters, it returns all the items of the current node.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Getting items <a href="#getting-items" id="getting-items"></a>
 
 {% tabs %}

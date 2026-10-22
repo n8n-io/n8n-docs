@@ -42,6 +42,8 @@ n8n provides a collection of built-in nodes, as well as the ability to create yo
 * [Community nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/community-nodes/installation-and-management) for guidance on finding and installing community-created nodes.
 * [Creating nodes](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/overview) to start building your own nodes.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Add a node to your workflow <a href="#add-a-node-to-your-workflow" id="add-a-node-to-your-workflow"></a>
 
 ### Add a node to an empty workflow <a href="#add-a-node-to-an-empty-workflow" id="add-a-node-to-an-empty-workflow"></a>

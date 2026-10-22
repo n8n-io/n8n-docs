@@ -7,9 +7,11 @@ layout:
 
 # LangChain in n8n
 
-n8n's AI nodes implement [LangChain](https://js.langchain.com/docs/get_started/introduction)'s JavaScript framework. Each node is configurable: choose your own agent, LLM, memory, and other components. You can connect any other n8n node to your LangChain nodes as normal, so you can combine LangChain logic with any other data source or service n8n supports.
+n8n's AI nodes use [LangChain](https://docs.langchain.com/oss/javascript/langchain/overview)'s JavaScript framework. Each node is configurable: choose your own agent, LLM, memory, and other components. You can connect any other n8n node to your LangChain nodes as normal, so you can combine LangChain logic with any other data source or service n8n supports.
 
 This page is for readers who already know LangChain and want to see how its concepts map onto n8n. If you're new to AI concepts, start with [Understand AI components](understand-ai-components/README.md) instead.
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
 
 ## How LangChain concepts map to n8n nodes
 
@@ -70,7 +72,7 @@ For information on using LangSmith itself, refer to [LangSmith's documentation](
 
 You don't need to know LangChain to use n8n, but these resources can help if you want to go deeper:
 
-* The [LangChain documentation](https://docs.langchain.com/docs/) covers key concepts and use cases. Choose [LangChain | Python](https://python.langchain.com/docs/get_started/introduction) or [LangChain | JavaScript](https://js.langchain.com/docs/get_started/introduction/) for quickstarts, code examples, and API documentation. LangChain also provides [code templates](https://github.com/langchain-ai/cookbooks) for Python and JavaScript, with ideas for common patterns and use cases.
+* The [LangChain documentation](https://docs.langchain.com/) covers key concepts and use cases. Choose [LangChain | Python](https://docs.langchain.com/oss/python/langchain/overview) or [LangChain | JavaScript](https://docs.langchain.com/oss/javascript/langchain/overview) for quickstarts, code examples, and API documentation. LangChain also provides [code templates](https://github.com/langchain-ai/cookbooks) for Python and JavaScript, with ideas for common patterns and use cases.
 * [What's LangChain?](https://www.ibm.com/think/topics/langchain) explains LangChain terminology in plain language, for a general audience.
 * This [YouTube series by Greg Kamradt](https://youtu.be/_v_fgW2SkkQ?si=8Z2tfAoXnN3lXU9s) works through the LangChain documentation with code examples.
 * Join the n8n [Discord](https://discord.gg/bAt54txhHg) to discuss LangChain and share your projects with the n8n community.

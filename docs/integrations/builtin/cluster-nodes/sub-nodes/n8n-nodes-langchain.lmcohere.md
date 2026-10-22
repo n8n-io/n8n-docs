@@ -48,6 +48,8 @@ Refer to the [Cohere credentials documentation](../../credentials/cohere.md) for
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node Options <a href="#node-options" id="node-options"></a>
 
 * **Maximum Number of Tokens**: Enter the maximum number of tokens used, which sets the completion length.
@@ -59,6 +61,6 @@ Refer to the [Cohere credentials documentation](../../credentials/cohere.md) for
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [LangChains's Cohere documentation](https://js.langchain.com/docs/integrations/llms/cohere/) for more information about the service.
+Refer to [LangChain's Cohere documentation](https://docs.langchain.com/oss/javascript/integrations/llms/cohere) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}

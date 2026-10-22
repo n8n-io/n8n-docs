@@ -19,7 +19,14 @@ layout:
 
 # Flow Trigger node <a href="#flow-trigger-node" id="flow-trigger-node"></a>
 
-[Flow](https://www.getflow.com/) is modern task and project management software for teams. It brings together tasks, projects, timelines, and conversations, and integrates with a lot of tools.
+
+{% hint style="warning" %}
+**Feature availability**
+
+The Flow service has shut down and its API no longer responds, so the Flow and Flow Trigger nodes can't connect to it. Workflows using these nodes will fail. Remove them or switch to another service.
+{% endhint %}
+
+Flow is modern task and project management software for teams. It brings together tasks, projects, timelines, and conversations, and integrates with a lot of tools.
 
 {% hint style="info" %}
 **Credentials**
@@ -33,6 +40,8 @@ Refer to the [Flow credentials documentation](../credentials/flow.md) for authen
 For usage examples and templates to help you get started, refer to n8n's [Flow Trigger integrations](https://n8n.io/integrations/flow-trigger/) page.
 {% endhint %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Events <a href="#events" id="events"></a>
 
 * New Flow event
@@ -43,4 +52,3 @@ n8n provides an app node for Flow. Refer to the [Flow node documentation](../app
 
 View [example workflows and related content](https://n8n.io/integrations/flow-trigger/) on n8n's website.
 
-Refer to [Flow's documentation](https://developer.getflow.com/api/) for details about their API.

@@ -25,6 +25,8 @@ Use the Question and Answer Chain node to use a [vector store](#user-content-fn-
 
 On this page, you'll find the node parameters for the Question and Answer Chain node, and links to more resources.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 ### Query <a href="#query" id="query"></a>
@@ -38,7 +40,7 @@ The question you want to ask.
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [LangChain's documentation on retrieval chains](https://js.langchain.com/docs/tutorials/rag/) for examples of how LangChain can use a vector store as a retriever.
+Refer to [LangChain's semantic search tutorial](https://docs.langchain.com/oss/javascript/langchain/knowledge-base) for an example of how LangChain uses a vector store as a retriever.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

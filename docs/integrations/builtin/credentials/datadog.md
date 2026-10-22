@@ -22,6 +22,8 @@ layout:
 
 Create a [Datadog](https://app.datadoghq.eu/signup) account.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Datadog's API documentation](https://docs.datadoghq.com/api/latest/) for more information about authenticating with the service.

@@ -33,6 +33,8 @@ n8n Cloud Enterprise also supports single sign-on, but not through the environme
 
 Refer to [Set up SSO](../../security/configure-sso.md) for in-app setup steps and identity provider guides. See [Manage instance settings using environment variables](../../manage-settings-using-environment-variables.md) for how the activation pattern works.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Activation and shared settings <a href="#activation-and-shared-settings" id="activation-and-shared-settings"></a>
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/TJ7IUBpRrfLoXyEn4T4d/" %}

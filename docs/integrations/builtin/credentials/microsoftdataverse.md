@@ -9,6 +9,8 @@ layout:
 
 You can use the **Microsoft Dataverse OAuth2 API** credential to authenticate the [Microsoft Dataverse node](../app-nodes/n8n-nodes-base.microsoftdataverse.md).
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites
 
 * A Microsoft Dataverse environment and its environment URL.

@@ -41,13 +41,14 @@ Agents need a way to fetch content without rendering a full web page. n8n Docs p
 
 ### Structure and navigation
 
-* **Page length:** n8n Docs splits content into focused pages that are short enough for an agent to retrieve without truncating them or losing them in a wall of unrelated content. See [Page length and granularity](style-guide-for-n8n-docs.md#page-length-and-granularity).
-* **Self-contained sections:** Each section stands on its own, without relying on information "as mentioned above". Agents may retrieve only a chunk or section of a page, not the full content. See [Keep each section self-contained](style-guide-for-n8n-docs.md#keep-each-section-self-contained).
-* **Cross-linking:** Pages link explicitly to prerequisites, next steps, and related topics, so an agent can follow a path instead of guessing a URL. See [Link to related pages, prerequisites, and next steps](style-guide-for-n8n-docs.md#link-to-related-pages-prerequisites-and-next-steps).
+* **Page length:** n8n Docs splits content into focused pages, short enough for an agent to retrieve without truncation. Search and the docs assistant chunk content on `##`/`###` headings, retrieving one section at a time. A page or section that's too small gets merged with unrelated neighbours instead. Over-splitting a topic across small pages measurably lowers answer quality. See [Page length and granularity](style-guide-for-n8n-docs.md#page-length-and-granularity).
+* **Self-contained sections:** Each section stands on its own, without relying on information "as mentioned above". Agents may retrieve only a chunk or section of a page, not the full content, sometimes just a heading. See [Keep each section self-contained](style-guide-for-n8n-docs.md#keep-each-section-self-contained).
+* **Answer-first opening:** Each page opens with a one-sentence plain-language answer directly after the H1. AI assistants and search surfaces often show just this line as the citation, so a concrete opening increases both citation rate and answer accuracy. See [Lead with a one-sentence answer](style-guide-for-n8n-docs.md#lead-with-a-one-sentence-answer).
+* **Cross-linking:** Pages link explicitly to prerequisites, next steps, and related topics, so an agent can follow a path instead of guessing a URL. Interlinked pages also form a topic cluster that AI search reads as a signal of depth and cites far more than standalone pages. See [Link to related pages, prerequisites, and next steps](style-guide-for-n8n-docs.md#link-to-related-pages-prerequisites-and-next-steps).
 
 ### Content and examples
 
-* **Text over images:** Instructions live in easily-parseable text, not images. Screenshots confirm what the reader should already know from the words on the page, not the other way round. See [Images](style-guide-for-n8n-docs.md#images).
+* **Text over images:** Instructions live in easily-parseable text, not images. Agents and screen readers receive only an image's alt text and file path, not the picture itself. Screenshots can only confirm what the reader already knows from the words on the page. They never carry meaning alone. See [Images](style-guide-for-n8n-docs.md#images).
 * **Worked examples:** n8n Docs strives to provide worked examples for features with code, expression, or configuration surfaces. Cover the common case and cases that break, because agents copy examples directly and can't infer what isn't shown. See [Show worked examples for each feature](style-guide-for-n8n-docs.md#show-worked-examples-for-each-feature).
 * **Tabbed content:** Tabbed content stays sparse and short, since a person sees one tab but an agent reads every one. See [Tabbed content](style-guide-for-n8n-docs.md#tabbed-content).
 

@@ -27,6 +27,8 @@ layout:
 
 Refer to [ConvertAPI's API documentation](https://docs.convertapi.com/docs/getting-started) for more information about the service.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 This is a credential-only node. Refer to [Custom API operations](../custom-api-actions-for-existing-nodes.md) to learn more. View [example workflows and related content](https://n8n.io/integrations/convertapi/) on n8n's website.
 
 ## Using API Token <a href="#using-api-token" id="using-api-token"></a>

@@ -39,6 +39,8 @@ This section contains:
 * [Service Account](service-account.md): Create a [Service Account](https://cloud.google.com/iam/docs/service-account-overview) credential for some specific service nodes.
 * [Google PaLM and Gemini](../googleai.md): Get a Google Gemini/Google PaLM API key.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## OAuth2 and Service Account <a href="#oauth2-and-service-account" id="oauth2-and-service-account"></a>
 
 Google service nodes support two authentication methods:
@@ -48,7 +50,18 @@ Google service nodes support two authentication methods:
 
 ### Managed OAuth2 for n8n Cloud users <a href="#managed-oauth2-for-n8n-cloud-users" id="managed-oauth2-for-n8n-cloud-users"></a>
 
-[Managed OAuth2](oauth-single-service.md#managed-oauth2) is available for the following Google nodes, for n8n Cloud users. This provides a simplified credential creation process:
+{% hint style="info" %}
+**Feature availability**
+
+Managed OAuth2 for the Google nodes listed below is available on:
+
+- **n8n Cloud:** All plans
+
+It isn't available on self-hosted. For self-hosted, configure your own OAuth2 credentials instead.
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/OI5s27oyRBdDvpwcuMQF/" %}
+
+{% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/OI5s27oyRBdDvpwcuMQF/" %}
 

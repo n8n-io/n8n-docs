@@ -31,6 +31,8 @@ Refer to the [Wolfram|Alpha credentials documentation](../../credentials/wolfram
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
 
@@ -38,7 +40,7 @@ Refer to the [Wolfram|Alpha credentials documentation](../../credentials/wolfram
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [Wolfram|Alpha's documentation](https://products.wolframalpha.com/api) for more information about the service. You can also view [LangChain's documentation on their WolframAlpha Tool](https://js.langchain.com/docs/integrations/tools/wolframalpha/).
+Refer to [Wolfram|Alpha's documentation](https://products.wolframalpha.com/api) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

@@ -29,6 +29,8 @@ Refer to [Databricks credentials](../credentials/databricks.md) for guidance on 
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Operations <a href="#operations" id="operations"></a>
 
 * Databricks SQL
@@ -41,11 +43,11 @@ Refer to [Databricks credentials](../credentials/databricks.md) for guidance on 
 	* Get File Metadata
 	* List Directory
 	* Upload File
-* Genie
+* Genie Agent
 	* Create Conversation Message
 	* Execute Message SQL Query
 	* Get Conversation Message
-	* Get Genie Space
+	* Get Genie Agent
 	* Get Query Results
 	* Start Conversation
 * Job
@@ -109,7 +111,7 @@ The **Job** field (on **Get** and **Run**) and the **Run** field (on **Get Run**
 |-------|-------|
 | `run_state` | The life cycle state, for example `RUNNING` or `TERMINATED`. |
 | `run_finished` | `true` when the run has reached a final state. |
-| `run_result` | The termination code, for example `SUCCESS`, `SUCCESS_WITH_FAILURES`, `CANCELED`, or `RUN_EXECUTION_ERROR`. `null` until the run finishes. |
+| `run_result` | The termination code, for example `SUCCESS`, `SUCCESS_WITH_FAILURES`, `USER_CANCELED`, or `RUN_EXECUTION_ERROR`. `null` until the run finishes. Refer to `termination_details.code` in the [Databricks API reference](https://docs.databricks.com/api/workspace/jobs/getrun) for the full list. |
 | `run_succeeded` | `true` when `run_result` is `SUCCESS`, `false` for any other result. `null` until the run finishes. |
 | `run_error_message` | The termination message of a run that didn't succeed, cut at 500 characters. `null` otherwise. |
 
@@ -123,12 +125,12 @@ Use these fields in an [If](../core-nodes/n8n-nodes-base.if.md) node to branch o
 |-------|-------|
 | `run_id` | The run you asked for. |
 | `job_id` | The job the run belongs to. |
-| `task_key` | The key of the task in the job definition. Absent when you pass a task run ID. |
+| `task_key` | The key of the task in the job definition. |
 | `task_run_id` | The run ID of this task. |
 | `truncated` | `true` when Databricks cut the notebook output or the logs. |
 | `notebook_output`, `sql_output`, `dbt_output`, `run_job_output`, `clean_rooms_notebook_output`, `logs`, `logs_truncated`, `error`, `error_trace`, `info`, `metadata` | The task output as Databricks returns it. Which fields appear depends on the task type. `notebook_output.result` holds the value a notebook returns with `dbutils.notebook.exit()`. `error` explains why a task failed or why its output isn't available. |
 
-A run with no tasks returns one item for the run itself. You can also read a run that hasn't finished, but tasks that are still running have no output yet. The node reads at most 2,000 tasks of one run. Above that it fails with `Run <run-id> has more tasks than the node can read`.
+A run with no tasks returns one item for the run itself. When Databricks retried a task, the node returns one item for each attempt, with the same `task_key` and a different `task_run_id`. You can also read a run that hasn't finished, but tasks that are still running have no output yet. The node reads at most 2,000 tasks of one run. Above that it fails with `Run <run-id> has more tasks than the node can read`.
 
 ### Run
 
@@ -137,7 +139,7 @@ A run with no tasks returns one item for the run itself. You can also read a run
 | Field | Description |
 |-------|-------------|
 | **Job** | The job to run. |
-| **Job Parameters** | Job-level parameters for this run. Select **Add Parameter** and enter a **Name** and a **Value** for each one. They override the default values defined on the job. The node sends every value as a string. |
+| **Job Parameters** | Job-level parameters for this run. Select **Add Parameter** and enter a **Name** and a **Value** for each one. They override the default values defined on the job. The node sends every value as a string. Databricks accepts a parameter the job doesn't define and records it on the run. |
 | **Wait for Completion** | Whether to wait until the run finishes and return the final run. Off by default. |
 | **Timeout** (in **Options**) | Maximum time in seconds to wait for the run to finish. Default `600`, minimum `1`. Shown only when **Wait for Completion** is on. |
 
@@ -157,7 +159,7 @@ Pass `run_id` to **Get Run** or **Get Run Output** later to read the result.
 With **Wait for Completion** on, the node checks the run every 5 seconds until it reaches a final state (`TERMINATED`, `SKIPPED`, or `INTERNAL_ERROR`) or until the **Timeout** passes. Canceling the execution stops the wait. Then:
 
 * If the run succeeds, the node returns the full run object from Databricks.
-* If the run ends with any other result, including `SUCCESS_WITH_FAILURES` and `CANCELED`, the node fails with `Job run <run-id> failed (<code>): <message>` (or the code again when Databricks gives no message) and the run page URL.
+* If the run ends with any other result, including `SUCCESS_WITH_FAILURES` and `USER_CANCELED`, the node fails with `Job run <run-id> failed (<code>): <message>` (or the code again when Databricks gives no message) and the run page URL.
 * If the run is still going when the timeout passes, the node fails with `Job run <run-id> did not finish within <n> seconds`. The error names the last state and the run page URL. The node doesn't cancel the run in Databricks. Raise **Timeout**, or turn off **Wait for Completion** and read the run later with **Get Run**.
 
 Some jobs run longer than a workflow execution should wait. For those, start the run with **Wait for Completion** off. Let a **Databricks Trigger** node start a second workflow when the run ends.
@@ -201,6 +203,12 @@ Both Databricks nodes can share one credential. It needs **CAN VIEW** on the job
 
 To send one message for the whole run instead of one for each task, add an [Aggregate](../core-nodes/n8n-nodes-base.aggregate.md) node before the Slack node, or turn on **Execute Once** in the Slack node's settings.
 
+## Genie Agent operations
+
+Every **Genie Agent** operation returns a `deep_link` field with the URL of the Genie Agent, or of the conversation, in your Databricks workspace. Use it to let users inspect the SQL and the results in Databricks.
+
+When the Databricks node runs as a tool of an [AI Agent](../cluster-nodes/root-nodes/n8n-nodes-langchain.agent/README.md) node (version 3 or later), the agent appends the **Powered by Databricks Genie** label after its reply. The agent skips the label when **Require Specific Output Format** is on. The label is required by Databricks for Genie-powered integrations. To make the reply link back to Databricks, tell the model in the system message to end its reply with a Markdown link whose text is **Explore in Databricks** and whose URL is the value of the `deep_link` field, for example `[Explore in Databricks](<deep_link value>)`.
+
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
 
@@ -210,6 +218,6 @@ To send one message for the whole run instead of one for each task, add an [Aggr
 
 Refer to [Databricks' REST API documentation](https://docs.databricks.com/api/) for details about their API.
 
-To use Databricks with AI agents, refer to the [Databricks Chat Model](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatdatabricks.md) node and the [Databricks Genie MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md).
+To use Databricks with AI agents, refer to the [Databricks Chat Model](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatdatabricks.md), [Databricks Vector Store](../cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoredatabricks/README.md), [Embeddings Databricks](../cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsdatabricks.md), and [Databricks AI Agent](../cluster-nodes/root-nodes/n8n-nodes-langchain.databricksaiagent.md) nodes, and the [Databricks Genie One MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md).
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

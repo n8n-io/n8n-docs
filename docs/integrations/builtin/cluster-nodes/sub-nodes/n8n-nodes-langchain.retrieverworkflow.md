@@ -27,6 +27,8 @@ On this page, you'll find the node parameters for the Workflow Retriever node, a
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 ### Source <a href="#source" id="source"></a>
@@ -47,7 +49,7 @@ Tell n8n which workflow to call. You can choose either:
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [LangChain's general retriever documentation](https://js.langchain.com/docs/concepts/retrievers/) for more information about the service.
+Refer to [LangChain's retriever documentation](https://docs.langchain.com/oss/javascript/integrations/retrievers) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

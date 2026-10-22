@@ -1,12 +1,8 @@
 ---
 name: n8n-docs-author
 description: >-
-  Authors and reviews n8n documentation pages following the n8n docs style and
-  contribution guides. Use when writing new doc pages, editing existing docs,
-  reviewing doc PRs, or checking content against the style guide. Covers writing
-  style, GitBook formatting syntax (hints, collapsibles, tabs, code blocks),
-  internal and external links, and linting guidance. Use when asked to write or
-  edit docs, or to review content against the style guide.
+  Writes, edits, and reviews customer-facing n8n documentation pages in the n8n-docs repo,
+  following the style guide, contribution guide, and terminology. Use when drafting a page, editing docs, reviewing a docs PR, or checking content against the style guide. Covers audience, plain language, page structure and links, feature availability, frontmatter, and GitBook syntax.
 ---
 
 # n8n docs author
@@ -23,6 +19,16 @@ distills them so you can act quickly, but defer to the guides when in doubt:
 The n8n Docs site is built with [GitBook](https://www.gitbook.com/). Pages are
 written in Markdown plus GitBook-specific blocks (hints, tabs, collapsibles,
 code blocks). Use GitBook syntax, not MkDocs/Material syntax.
+
+## Audience
+
+Write for people who use, operate, or build on n8n, not for n8n's own internal engineers.
+
+Include what the reader does and sees: controls, settings, fields, error messages, limits, and behavior that affects what they've built.
+
+Include an implementation detail only when the reader needs it to act, choose between options, or troubleshoot. For example, how execution data is stored matters on a self-hosting page and not on a node reference page. Otherwise leave it out.
+
+Tickets, PRs, and design docs are sources of facts, not templates for the page. Keep what the reader needs and drop the rest.
 
 ## Modes
 
@@ -135,6 +141,9 @@ docs assistant) chunk on `##`/`###` headings.
   key context instead of "as mentioned above" / "see below". Restate, don't
   duplicate — repeat a fact or two, not whole paragraphs (sections that need the
   same long explanation belong under one heading).
+- **Answer-first opening:** one plain sentence right after the H1, before any
+  existing intro or hint. Concrete, not "it lets you do things." One sentence; two only
+  if genuinely needed. Skip it if the intro already opens with an equivalent line.
 - **Cross-references:** the linking rule doesn't apply to node/integration reference pages
   (`docs/integrations/`) — fixed one-page-per-node template, often
   automation-managed, no natural parent/child or sibling relationship to link.
@@ -265,7 +274,7 @@ See [reference.md](reference.md) for full examples. Quick reference:
 |---------|--------|
 | External link | standard Markdown `[text](url)` (opens in a new tab automatically) |
 | Internal link (same space) | relative path including `.md`: `[text](../folder/page.md)`; `[text](./)` for the parent `README.md` |
-| Internal link (different space) | GitBook page URL, no `.md`: `[text](https://app.gitbook.com/s/<spaceId>/page-path)`. Each top-level `docs/` folder is a separate space, so relative paths don't cross spaces. See [reference.md](reference.md) for the space ID table |
+| Internal link (different space) | GitBook page URL, no `.md`: `[text](https://app.gitbook.com/s/<spaceId>/page-path)`. Each top-level `docs/` folder is a separate space, so relative paths don't cross spaces. Find space IDs in [`SPACE_INDEX.md`](https://github.com/n8n-io/n8n-docs/blob/main/SPACE_INDEX.md) |
 | Image | `![Alt text](../.gitbook/assets/file.png)` — stored in the space's `.gitbook/assets/` folder |
 | Video | `{% embed url="..." %}` — host externally; can't go inside a hint |
 | Hint / callout | `{% hint style="info" %}` … `{% endhint %}` |

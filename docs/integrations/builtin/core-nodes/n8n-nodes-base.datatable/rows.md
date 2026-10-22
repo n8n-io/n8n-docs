@@ -20,6 +20,8 @@ layout:
 
 Use row operations to delete, get, insert, update, upsert, or filter rows in a data table. Refer to the [Data Table node](README.md) documentation for more information on the node itself.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Delete row <a href="#delete-row" id="delete-row"></a>
 
 Use this operation to delete one or more rows from a data table, based on a defined condition(s).
@@ -63,6 +65,15 @@ Enter these parameters:
     - **Value:** Enter the value to compare the column against. You can use a fixed value or an expression that references data from previous nodes. This field doesn't exist for **Is Empty** and **Is Not Empty** conditions.
 - **Return All:** Enable to return all matching rows. Or, disable and enter a **Limit** for the number of rows to return, for example `50`.
 - **Order By:** Enable to define the column to order results on, and the direction (ascending or descending). Or, disable for no ordering of results.
+
+### Reading rows while the table changes
+
+When you ask for a lot of results at once, n8n fetches them in smaller batches ("pages") one after another, rather than all in one go.
+
+Because this can take a little time, if someone changes the underlying data while it's still fetching (adding, editing, or deleting records), the results you get back might be a bit off. Some records could be missing, some could show up twice, and different parts of the results might reflect the data as it was at slightly different moments.
+
+* **To get a fully accurate result:** Make sure no one is adding, editing, or deleting records until the fetch is completely finished.
+* **If you're using "Return All":** If new matching records keep getting added while the fetch is running, **Return All** may never finish, since there's always more data to retrieve. If that happens, you can cancel the operation, and it will stop after the current batch finishes.
 
 ## If row exists <a href="#if-row-exists" id="if-row-exists"></a>
 

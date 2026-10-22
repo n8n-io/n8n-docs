@@ -23,6 +23,8 @@ layout:
 
 This page lists environment variables to set up logging for debugging. Refer to [Logging in n8n](../../../keep-n8n-running/set-up-logging.md) for details. 
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## n8n logs <a href="#n8n-logs" id="n8n-logs"></a>
 
 

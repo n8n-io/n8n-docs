@@ -13,6 +13,8 @@ layout:
 
 To use community nodes, you first need to [install](installation-and-management/README.md) them.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Adding community nodes to your workflow <a href="#adding-community-nodes-to-your-workflow" id="adding-community-nodes-to-your-workflow"></a>
 
 After installing a community node, you can use it like any other node. n8n displays the node in search results in the **Nodes** panel. n8n marks community nodes with a **Package** <img src="../.gitbook/assets/package.png" alt="Package icon" data-size="line"> icon in the nodes panel.

@@ -24,6 +24,8 @@ Use the Sentiment Analysis node to analyze the sentiment of incoming text data.
 
 The language model uses the [**Sentiment Categories**](#node-options) in the node options to determine each item's sentiment.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 * **Text to Analyze** defines the input text for sentiment analysis. This is an expression that references a field from the input items. For example, this could be 

@@ -22,6 +22,8 @@ You can use these credentials to authenticate the following nodes:
 - [Webex by Cisco](../app-nodes/n8n-nodes-base.ciscowebex.md)
 - [Webex by Cisco Trigger](../trigger-nodes/n8n-nodes-base.ciscowebextrigger.md)
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Webex by Cisco](https://www.webex.com/) account (this should automatically get you [developer account access](https://developer.webex.com)).

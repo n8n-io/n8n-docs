@@ -238,7 +238,7 @@ Every operation starts with the same five fields. Each offers a **From list** mo
 | **Schema** | The schema that holds the table. `public` by default. The list offers only `public`, because Databricks has no endpoint that lists Postgres schemas. For another schema, select **By ID** and enter its name. The Data API has to expose that schema. |
 | **Table** | The table to work on. **Execute Function** takes a **Function** instead. |
 
-The table, column, and function lists read the project's OpenAPI document. Until you turn on the **OpenAPI specification** setting of the Data API, the column lists stay empty and the **Table** and **Function** lists show an error. Select **By ID** and type the name to carry on without the document.
+The table, column, and function lists, and the **Columns** and **Arguments** mappers, read the project's OpenAPI document. Until you turn on the **OpenAPI specification** setting of the Data API, the **Table**, **Function**, and column lists show an error, and the mappers stay empty with a notice. Select **By ID** and type the table or function name, enter column names with an expression under **Select Rows**, **Sort**, and **Output Columns**, and set **Specify Arguments** to **Using JSON**.
 
 The node reads and writes rows in tables that already exist. It doesn't create tables. Create the table in the Lakebase SQL editor first, and grant the credential's Postgres role access to it.
 
@@ -387,7 +387,7 @@ Two credentials pointed at the same table can return different rows, and both ar
 Two things to know when a table returns nothing:
 
 * A table with row security turned on hides every row until a policy grants them. An empty result can mean no policy, not no data.
-* A role with `bypassrls` sees every row. The project owner holds `DATABRICKS_SUPERUSER`, so testing as the owner hides a missing policy.
+* A role with `bypassrls` sees every row. The project owner holds `DATABRICKS_SUPERUSER`, so a query you run as the owner in the Databricks SQL editor shows every row even when no policy exists. The node runs as a different role, so the same table can look empty to it.
 
 ### Common Lakebase issues
 
@@ -398,7 +398,8 @@ Two things to know when a table returns nothing:
 | `permission denied to set role` (`42501`) | The role isn't granted to the Data API. Run `GRANT "<role>" TO authenticator` as the role's creator. A project owner can't use the Data API at all, so connect a non-owner identity. |
 | `permission denied for table`, `for schema`, `for sequence`, or `for function` (`42501`) | The role reaches the Data API but holds no grant on the object. Run the data grants in [Set up Lakebase for the Data API](../credentials/databricks.md#set-up-lakebase-for-the-data-api). The node shows the same `authenticator` hint for every `42501`, so read the Postgres message rather than the hint. |
 | `new row violates row-level security policy` (`42501`) | A policy on the table rejects the write for this role. Add a policy that allows it, or write as a role the policy admits. |
-| Empty column lists, or a **Table** or **Function** list that errors | The project doesn't serve its schema document. Turn on **Data API** > **API** > **Advanced settings** > **OpenAPI specification**. Until then, select **By ID** and type the name. |
+| A **Table**, **Function**, or column list that errors with `Turn on the "OpenAPI specification" setting of the Data API`, or an empty **Columns** mapper | The project doesn't serve its schema document. Turn on **Data API** > **API** > **Advanced settings** > **OpenAPI specification**. Until then, select **By ID** for **Table** and **Function**, and enter column names with an expression. |
+| An empty **Arguments** mapper | The schema document lists no arguments for the function. Either the function takes none, or the project doesn't serve the document. To pass arguments anyway, set **Specify Arguments** to **Using JSON**. |
 | `Could not find the table` (`PGRST205`) | Check the schema and table names, and that the Data API exposes the schema. Right after you create or alter a table, the same request can fail once and succeed on a retry while the API reloads its schema. |
 | `Could not find the '<column>' column of '<table>' in the schema cache` (`PGRST204`) | A mapped column isn't in the table. Reopen the node to refresh the column list. |
 | The schema isn't exposed (`PGRST106`) | Add the schema to the exposed schemas in the project's Data API settings. |

@@ -246,7 +246,7 @@ The API exposes only the `public` schema by default. Add any other schema you wa
 
 In the same project, select **Data API** > **API** > **Advanced settings** > **OpenAPI specification**, then select **Follow privileges**. Select **Save** to apply the change, which then takes effect right away.
 
-The node reads this document to list tables, functions, a table's columns, and a function's arguments. Without it, the **Columns** mapper and the column dropdowns stay empty, and the **Table** and **Function** lists show an error. Each message names the same setting:
+The node reads this document to list tables, functions, a table's columns, and a function's arguments. Without it, the **Table**, **Function**, and column lists show an error, and the **Columns** and **Arguments** mappers stay empty with a notice. Each message names the same setting:
 
 ```text
 Data API > API > Advanced settings > OpenAPI specification

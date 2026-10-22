@@ -87,7 +87,7 @@ This is a trade-off, not a free win: the same threshold also decides how long a 
 
 ### Switching topologies
 
-Switching `redis_high_availability_enabled` on a live deployment destroys the existing cache and creates a new one. Everything queued or in progress at that moment is lost. Treat this as a maintenance-window operation: stop new work from reaching n8n, let the workers drain (`bull:jobs:wait` and `bull:jobs:active` reaching zero in Redis), then apply.
+Switching `redis_high_availability_enabled` on a live deployment destroys the existing cache and creates a new one. Everything queued or in progress at that moment is lost. Treat this as a maintenance-window operation: stop new work from reaching n8n, let the workers drain, and verify that `bull:jobs:wait`, `bull:jobs:active`, and `bull:jobs:delayed` are all empty in Redis before applying.
 
 ## Redis eviction policy
 

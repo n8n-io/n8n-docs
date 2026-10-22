@@ -67,14 +67,14 @@ To share a credential:
 6. Select a user or project.
 7. Select **Save** to apply the changes.
 
-People you share a credential with get the **Can use** role: they can run and publish workflows with it, but can't see or edit its secret.
+People you share a credential with get the **Can use** role: they can run and publish workflows with it, but can't see or edit its details.
 
-## Understand the Sharing tab <a href="#understand-the-sharing-tab" id="understand-the-sharing-tab"></a>
+## Understand the Sharing tab
 
 The **Sharing** tab lists everyone with access to the credential, and every project that uses it:
 
 * **Shared projects:** members can use the credential, according to their [project role](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md).
-* **Projects that use it without a share:** a member added their personal credential to one of the project's workflows. The project has the **Can view** label, so its members can see the credential on the workflow but can't use or edit it. To give them access, select **Share**.
+* **Projects that use it without a share:** a member added their personal credential to one of the project's workflows. The project has the **Can view** label, so its members can see the credential on the workflow but can't use or edit it, unless you shared the credential with them directly. To give the whole project access, select **Share**.
 
 Owners and Admins can use any credential in their own personal space without a share. To let them use the credential in team projects too, share it with them.
 

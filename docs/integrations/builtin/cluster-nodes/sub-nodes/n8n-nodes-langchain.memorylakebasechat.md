@@ -10,7 +10,7 @@ layout:
 
 # Databricks Lakebase Chat Memory node
 
-Use the Databricks Lakebase Chat Memory node to use a Databricks Lakebase table as a memory[^1] server for storing chat history. The node reads and writes the table over the [Lakebase Data API](https://docs.databricks.com/aws/en/oltp/projects/data-api), so it needs no connection string and no database driver.
+Use the Databricks Lakebase Chat Memory node to store chat history in a Databricks Lakebase table as memory[^1] for your AI agents. The node reads and writes the table over the [Lakebase Data API](https://docs.databricks.com/aws/en/oltp/projects/data-api), so it needs no connection string or database driver.
 
 On this page, you'll find the one-time table setup, the node parameters, the common issues, and links to more resources.
 

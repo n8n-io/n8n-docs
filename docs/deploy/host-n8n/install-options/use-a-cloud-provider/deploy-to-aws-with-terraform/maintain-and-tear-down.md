@@ -66,7 +66,7 @@ The module defaults to teardown-friendly settings, so example deployments can be
 | `db_delete_automated_backups` | `true` | `false` |
 | `s3_force_destroy` | `true` | `false` |
 
-All four are in-place changes on an existing deployment and don't force replacement. Apply the change before running `terraform destroy`: these settings take effect from the value already recorded in Terraform state, not from your configuration on disk, so a `terraform destroy` run straight after editing a `.tfvars` file still uses the old values.
+All four are in-place changes on an existing deployment and don't force replacement. Apply these settings before running `terraform destroy`. Terraform uses the values in state, not un-applied configuration. Editing a `.tfvars` file and immediately running destroy therefore still uses the old values.
 
 ## Related resources
 

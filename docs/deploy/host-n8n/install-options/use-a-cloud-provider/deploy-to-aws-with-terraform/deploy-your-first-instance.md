@@ -55,7 +55,7 @@ For the full comparison, including pod counts, database sizing, and reserved-ins
 
 To deploy a larger tier instead, point the module `source` in your `main.tf` at that example's subpath. [`examples/medium`](https://registry.terraform.io/modules/n8n-io/n8n/aws/0.5.0/examples/medium) takes the same inputs as `small`, and [`examples/large`](https://registry.terraform.io/modules/n8n-io/n8n/aws/0.5.0/examples/large) adds `certificate_arn` and `aurora_instance_class`.
 
-## Step 3: Create main.tf
+## Step 3: Create `main.tf`
 
 Create one file, `main.tf`, in your project folder. It references the registry's [small example](https://registry.terraform.io/modules/n8n-io/n8n/aws/0.5.0/examples/small) as a module, pinned to 0.5.0:
 

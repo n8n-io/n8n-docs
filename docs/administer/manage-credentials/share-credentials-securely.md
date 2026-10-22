@@ -74,7 +74,7 @@ People you share a credential with get the **Can use** role: they can run and pu
 The **Sharing** tab lists everyone with access to the credential, and every project that uses it:
 
 * **Shared projects:** members can use the credential, according to their [project role](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md).
-* **Projects that use it without a share:** a member added their personal credential to one of the project's workflows. The project has the **Can view** label, so its members can see the credential on the workflow but can't use or edit it, unless you shared the credential with them directly. To give the whole project access, select **Share**.
+* **Projects that use it without a share:** a member added their personal credential to one of the project's workflows. The project has the **Can view** label, so its members can see the credential on the workflow but can't use or edit it. Members you shared the credential with directly can still use it. To give the whole project access, select **Share**.
 
 Owners and Admins can use any credential in their own personal space without a share. To let them use the credential in team projects too, share it with them.
 

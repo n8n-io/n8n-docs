@@ -10,7 +10,7 @@ layout:
 
 # Use personal credentials in projects
 
-You can use your personal credentials in any team project you're a member of without sharing them. Only you, and people you share them with, can run workflows with them.
+You can use your personal credentials in any team project you're a member of without sharing them. Only you and people you share them with can run workflows with them.
 
 This page explains the levels of credential access, how personal credentials behave in team projects, what teammates see when a workflow uses someone else's credential, and who a workflow run acts as. To give other people or projects access to a credential, refer to [Share credentials securely](share-credentials-securely.md).
 
@@ -44,7 +44,7 @@ When you open the credential selector on a node, n8n groups the credentials you 
 
 In your personal space, the second group is **Available to everyone** instead.
 
-Only you, and people you share the credential with directly, can run workflows with your personal credential in that project. Other project members can see that the workflow uses it, but they can't run or publish the workflow with it. To let the whole project use the credential, [share it with the project](share-credentials-securely.md#share-a-credential).
+Only you and people you share the credential with directly can run workflows with your personal credential in that project. Other project members can see that the workflow uses it, but they can't run or publish the workflow with it. To let the whole project use the credential, [share it with the project](share-credentials-securely.md#share-a-credential).
 
 {% hint style="info" %}
 **Agents use project credentials only**

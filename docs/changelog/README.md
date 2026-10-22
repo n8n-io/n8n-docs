@@ -46,7 +46,7 @@ For guidance on major version upgrades, see [v3.0 breaking changes](v30-breaking
 
 **Released:** 2026-10-27 in n8n 2.46.0
 
-You can now select your own personal credentials in any team project you're a member of, without sharing them first. Every workflow run acts as a person, and can only use the credentials that person is allowed to use. Teammates you haven't shared it with can see that a workflow uses your credential, but they can't run or publish the workflow with it, and they can't see the execution data it produced. The credential selector groups credentials into **Available to you** and **Available in** _project name_.
+You can now select your own personal credentials in any team project you're a member of, without sharing them first. Every workflow run acts as a person, and can only use the credentials that person is allowed to use. Teammates who can't use your credential can see that a workflow uses it. They can't run or publish the workflow with it, or see the execution data it produced. The credential selector groups credentials into **Available to you** and **Available in** _project name_.
 
 After you upgrade, you may notice:
 

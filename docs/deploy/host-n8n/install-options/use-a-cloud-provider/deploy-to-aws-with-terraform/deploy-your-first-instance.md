@@ -71,7 +71,7 @@ module "n8n" {
   version = "0.5.0"
 
   n8n_domain      = "n8n.example.com"
-  route53_zone_id = "Z0123456789ABCDEFGHIJ"
+  route53_zone_id = "<hosted-zone-id>"
   n8n_license_key = var.n8n_license_key
 
   # Applied to every resource, for cost tracking and ownership.

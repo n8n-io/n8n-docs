@@ -38,6 +38,7 @@
   * [Tutorial: Create environments with source control](use-source-control-and-environments/tutorial-create-environments-with-source-control.md)
 * [Manage credentials](manage-credentials/README.md)
   * [Share credentials securely](manage-credentials/share-credentials-securely.md)
+  * [Use personal credentials in projects](manage-credentials/use-personal-credentials-in-projects.md)
   * [End-user credentials](manage-credentials/end-user-credentials.md)
   * [Credential overwrites](manage-credentials/credential-overwrites.md)
   * [Use external secret stores](manage-credentials/use-external-secret-stores.md)

@@ -11,7 +11,7 @@ layout:
 
 # Deprecated and versioned nodes <a href="#deprecated-and-versioned-nodes" id="deprecated-and-versioned-nodes"></a>
 
-n8n improves its node library over time. This page lists removed nodes (fully removed), deprecated nodes (retired but still functional), and versioned nodes (active with multiple versions available).
+n8n improves its node library over time. This page lists removed nodes (fully removed), deprecated nodes (retired but still functional), and versioned nodes (active with multiple versions available). For what Deprecated and Removed mean for any n8n feature, not just nodes, see [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#feature-maturity-preview-ga-deprecated-and-removed).
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
 

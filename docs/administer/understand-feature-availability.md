@@ -91,7 +91,7 @@ For nodes specifically, check [Deprecated and versioned nodes](https://app.gitbo
 
 Docs mark each status differently:
 
-* **Preview**: when a whole page covers a Preview feature, a **Preview** tag appears in the page header, but never in the navigation menu. The page or section also carries a **Preview status** hint, for example:
+* **Preview**: when a whole page covers a Preview feature, a **Preview** tag appears in the page header. The page or section also carries a **Preview status** hint, for example:
 
     {% hint style="info" %}
     **Preview status**

@@ -3,7 +3,7 @@
 * [Deploy](README.md)
 * [Use n8n Cloud](use-n8n-cloud/README.md)
   * [Try free then choose a plan](use-n8n-cloud/start-your-free-trial.md)
-  * [Use the admin dashboard](use-n8n-cloud/use-the-admin-dashboard.md)
+  * [Use the Cloud console](use-n8n-cloud/use-the-cloud-console.md)
   * [Update your version](use-n8n-cloud/update-your-version.md)
   * [Configure Cloud](use-n8n-cloud/configure-cloud/README.md)
     * [Set your timezone](use-n8n-cloud/configure-cloud/set-your-timezone.md)

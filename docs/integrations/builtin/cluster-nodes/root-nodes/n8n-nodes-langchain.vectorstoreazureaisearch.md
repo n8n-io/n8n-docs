@@ -346,7 +346,6 @@ For authentication troubleshooting including API key errors, refer to the [crede
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
 * [Azure AI Search Vector Search documentation](https://learn.microsoft.com/azure/search/vector-search-overview)
-* [LangChain Azure AI Search integration](https://js.langchain.com/docs/integrations/vectorstores/azure_aisearch)
 * [Azure AI Search REST API reference](https://learn.microsoft.com/rest/api/searchservice/)
 * [OData filter syntax for Azure AI Search](https://learn.microsoft.com/azure/search/search-query-odata-filter)
 

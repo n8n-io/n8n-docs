@@ -37,4 +37,4 @@ You can report bad community nodes to [security@n8n.io](mailto: security@n8n.io)
 
 ## Disable community nodes <a href="#disable-community-nodes" id="disable-community-nodes"></a>
 
-If you are self-hosting n8n, you can disable community nodes by setting `N8N_COMMUNITY_PACKAGES_ENABLED` to `false`. On n8n cloud, visit the [Cloud Admin Panel](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/use-the-admin-dashboard) and disable community nodes from there. See [troubleshooting](troubleshooting.md) for more information.
+If you are self-hosting n8n, you can disable community nodes by setting `N8N_COMMUNITY_PACKAGES_ENABLED` to `false`. On n8n Cloud, the instance owner can turn off **Verified community nodes** in **Instance settings** in the [n8n Cloud console](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/use-the-cloud-console). See [troubleshooting](troubleshooting.md) for more information.

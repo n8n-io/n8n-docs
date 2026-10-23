@@ -129,6 +129,7 @@ Homeserver
 howto
 HubSpot
 Humantic
+[Ii]dempotency
 Imperva
 indexable
 invalid
@@ -153,6 +154,7 @@ Kitemaker
 kubectl
 Kafka
 kafkajs
+Lakebase
 Lemlist
 Lenovo
 librdkafka
@@ -314,6 +316,7 @@ URIs
 URL
 URLencoded
 Venafi
+Vercel
 VERO
 Vhost
 VM

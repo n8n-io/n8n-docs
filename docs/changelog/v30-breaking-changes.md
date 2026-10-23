@@ -163,6 +163,14 @@ Version 1 of the **AI Agent** node supported several agent type modes, including
 
 n8n 3.0 changes how some nodes and credentials behave. These nodes stay available, but existing workflows can produce different results.
 
+### Edit Image node: Node versions 1 and 1.1 removed
+
+n8n 3.0 removes support for deprecated node versions 1 and 1.1 of the [Edit Image](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.editimage) node.
+
+Node version 2 uses a different image-processing library, so image output can change. The migration converts blur settings, but removes **Sigma**. Text placement can change. **Get Information** returns a normalized result. PNG and TIFF output ignores the **Quality** setting. Resize operations with zero or negative dimensions fail.
+
+**What to do:** Before you upgrade, go to **Settings > Migration Report** to identify affected workflows. Update each **Edit Image** node to node version 2 and test its output, especially workflows that blur or resize images, add text, read image information, or set PNG or TIFF quality.
+
 ### Always Output Data on nodes with several outputs
 
 With **[Always Output Data](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/workflow-components/work-with-nodes)** on, nodes with multiple outputs, for example [If](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.if) and [Switch](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.switch), now add an empty item only when every output is empty. Previously, each empty output got an empty item, so branches ran when they shouldn't have.

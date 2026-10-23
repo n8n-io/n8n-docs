@@ -74,7 +74,7 @@ The Chat user is a role for people in your organization who want to use workflow
 
 The Chat user role is available on:
 
-- **n8n Cloud:** All plans
+- **n8n Cloud:** Pro plans, Enterprise
 - **Self-hosted:** Business, Enterprise
 {% endhint %}
 

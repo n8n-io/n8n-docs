@@ -190,7 +190,7 @@ To find out what's available in a given version, use whichever of these matches 
 
 Your instance version appears at the bottom of the **Settings** sidebar. On n8n Cloud, **Updates & maintenance** also shows the version your workspace runs.
 
-![The Settings sidebar with the instance version, n8n 2.44.0, shown as a link at the bottom](.gitbook/assets/n8n-settings-version.png)
+![The Settings sidebar with the instance version, n8n 2.45.3, shown as a link at the bottom](.gitbook/assets/n8n-version.png)
 
 A feature that was added in a later version than yours doesn't appear in your n8n interface until you update.
 

@@ -268,6 +268,7 @@ Available channels:
 * **Slack**
 * **Telegram**
 * **Linear**
+* **Microsoft Teams**: see [Connect an agent to Microsoft Teams](agents-microsoft-teams.md)
 
 Open the **Channels** section on the agent and follow the setup for the channel you want. Each channel has its own connection and permission model.
 

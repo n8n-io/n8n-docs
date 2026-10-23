@@ -26,7 +26,7 @@ Configuring SAML using environment variables instead of the UI is available from
 
 ## Enable SAML <a href="#enable-saml" id="enable-saml"></a>
 
-1. In n8n, go to **Settings** > **SSO**.
+1. In n8n, go to **Settings** > **Authentication** > **Single sign-on (SSO)**.
 1. Make a note of the n8n **Redirect URL** and **Entity ID**.
 	* **Optional**: If your IdP allows you to set up SAML from imported metadata, navigate to the **Entity ID** URL and save the XML. 
 	* **Optional**: If you are running n8n behind a load balancer make sure you have `N8N_EDITOR_BASE_URL` configured. 
@@ -72,7 +72,7 @@ Role provisioning is available from n8n 1.122.2.
 
 #### Choose how roles are assigned <a href="#choose-how-roles-are-assigned" id="choose-how-roles-are-assigned"></a>
 
-In n8n, go to **Settings** > **SSO**. Use the **Role assignment** dropdown to choose how n8n assigns roles to users who sign in via SSO. The default is **Assigned manually in n8n**.
+In n8n, go to **Settings** > **Authentication** > **Single sign-on (SSO)**. Use the **Role assignment** dropdown to choose how n8n assigns roles to users who sign in via SSO. The default is **Assigned manually in n8n**.
 
 The options are:
 

@@ -64,19 +64,22 @@ Ask n8n AI offers a range of tools to support you:
 AI usage settings are available from n8n 2.7.0.
 {% endhint %}
 
-You can manage your AI usage settings by navigating to **Settings** > **AI Usage** in your n8n instance. Here, you can control what data is shared with Ask n8n AI.
+AI usage settings control what data n8n sends to Ask n8n AI and to [n8n Assistant](n8n-assistant.md). Where you find them depends on your instance:
 
-These settings are only available to the instance owners and administrators, and will apply to all users on the instance.
+* If your instance has the **Assistant** settings page, navigate to **Settings** > **Assistant** and go to the **Data sent to the model** section.
+* Otherwise, navigate to **Settings** > **AI usage**.
 
-![AI Usage settings page with the Send actual data values checkbox](../.gitbook/assets/ai_usage_settings.png)
+These settings are only available to the instance owners and administrators, and apply to all users on the instance.
 
-Choose whether to share actual workflow data (like node names, parameters, and structure) with Ask n8n AI. Disabling this option will limit the assistant's ability to provide context-aware help based on your workflows.
+![The Data sent to the model section on the Assistant settings page, with the Send field names and types and Send actual data values switches](../.gitbook/assets/ai_usage_settings.png)
 
-Since access to workflow data is essential for the AI Workflow builder to function, **disabling this option will also disable the AI Workflow builder feature**.
+n8n always sends field names and types (the schema) of your data. **Send actual data values** controls whether n8n also sends real values from your workflows and executions (like node parameters). While it's off, Ask n8n AI can't give context-aware help based on your workflows.
+
+Since access to workflow data is essential for the AI Workflow builder and n8n Assistant to function, **keeping this option off also disables the AI Workflow builder** and puts n8n Assistant in a limited mode, where it can't create or edit workflows.
 
 ### Disable sending data <a href="#disable-sending-data" id="disable-sending-data"></a>
 
-To stop sending actual data values to Ask n8n AI, turn off the **Send actual data values** checkbox on the **AI Usage** settings page.
+The **Send actual data values** option is deprecated. Once it's on, you can't turn it off in the settings. To keep it off on a self-hosted instance, set the `N8N_AI_ALLOW_SENDING_PARAMETER_VALUES` environment variable to `false` and restart n8n. The variable is deprecated too and will be removed in n8n 4.
 
 ## FAQs <a href="#faqs" id="faqs"></a>
 

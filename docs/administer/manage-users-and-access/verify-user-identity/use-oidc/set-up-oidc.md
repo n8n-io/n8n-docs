@@ -27,7 +27,7 @@ Configuring OIDC using environment variables instead of the UI is available from
 ## Setting up and enabling OIDC <a href="#setting-up-and-enabling-oidc" id="setting-up-and-enabling-oidc"></a>
 
 
-1. In n8n, go to **Settings** > **SSO**.
+1. In n8n, go to **Settings** > **Authentication** > **Single sign-on (SSO)**.
 1. Under **Select Authentication Protocol**, choose **OIDC** from the dropdown.
 1. Copy the **redirect URL** shown (for example, `https://yourworkspace.app.n8n.cloud/rest/sso/oidc/callback`).<br>
 
@@ -56,7 +56,7 @@ Role provisioning is available from n8n 1.122.2.
 
 #### Choose how roles are assigned <a href="#choose-how-roles-are-assigned" id="choose-how-roles-are-assigned"></a>
 
-In n8n, go to **Settings** > **SSO**. Use the **Role assignment** dropdown to choose how n8n assigns roles to users who sign in via SSO. The default is **Assigned manually in n8n**.
+In n8n, go to **Settings** > **Authentication** > **Single sign-on (SSO)**. Use the **Role assignment** dropdown to choose how n8n assigns roles to users who sign in via SSO. The default is **Assigned manually in n8n**.
 
 The options are:
 
@@ -224,7 +224,7 @@ Visual step-by-step guide for setting up OIDC with Okta
 	- Click **Create**.
 1. **Configure the application**:
 	- Go to the **Settings** tab of your new application.
-	- **Allowed Callback URLs**: Add your n8n redirect URL from **Settings** > **SSO** > **OIDC**.
+	- **Allowed Callback URLs**: Add your n8n redirect URL from **Settings** > **Authentication** > **Single sign-on (SSO)** > **OIDC**.
 	- **Allowed Web Origins**: Add your n8n base URL (for example, `https://yourworkspace.app.n8n.cloud`).
 	- Click **Save Changes**.
 1. **Get your credentials**:

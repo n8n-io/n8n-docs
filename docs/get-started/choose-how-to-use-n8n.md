@@ -120,7 +120,7 @@ Every self-hosted installation runs on the same underlying product. You can stic
 
 For the differences between editions and how to register or license an instance, see [Compare plans and editions](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/community-edition-features). For what each plan includes, see the [pricing page](https://n8n.io/pricing/).
 
-To register a Community edition instance for the extra free features, go to **Settings > Usage and plan** and select **Unlock**.
+To register a Community edition instance for the extra free features, go to **Settings > Plan & usage** and select **Unlock**.
 
 ## Which features need a paid plan or edition <a href="#which-features-need-a-paid-plan-or-edition" id="which-features-need-a-paid-plan-or-edition"></a>
 

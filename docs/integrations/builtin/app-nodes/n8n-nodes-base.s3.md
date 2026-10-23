@@ -38,7 +38,6 @@ Use the S3 node to automate work in non-AWS S3 storage and integrate S3 with oth
 Use the S3 node for non-AWS S3 solutions like:
 
 * [MinIO](https://min.io/)
-* [Neon Object Storage](https://neon.com/docs/storage/overview)
 * [Wasabi](https://wasabi.com/)
 * [Digital Ocean spaces](https://www.digitalocean.com/products/spaces)
 

@@ -66,7 +66,7 @@ This page outlines environment variables to configure your chosen database for y
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
-| `DB_SQLITE_POOL_SIZE` | Number | `3` | The number of parallel SQL read connections in the SQLite connection pool. Must be at least `1`. n8n opens the SQLite file in [WAL mode](https://www.sqlite.org/wal.html). |
+| `DB_SQLITE_POOL_SIZE` | Number | `3` | The number of parallel SQL read connections in the SQLite connection pool. Must be at least `1`. Setting it to `0` logs a warning and falls back to the default. n8n opens the SQLite file in [WAL mode](https://www.sqlite.org/wal.html). |
 | `DB_SQLITE_VACUUM_ON_STARTUP` | Boolean | `false` | Runs [VACUUM](https://www.sqlite.org/lang_vacuum.html) operation on startup to rebuild the database. Reduces file size and optimizes indexes. This is a long running blocking operation and increases start-up time. |
 
 ## How database connection recovery works <a href="#how-database-connection-recovery-works" id="how-database-connection-recovery-works"></a>

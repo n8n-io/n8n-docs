@@ -1,0 +1,19 @@
+docs/administer/manage-credentials/end-user-credentials.md
+  s_883165bd36071d::t_dc5ad851f96477 66,78
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "1e8da5c6f55984c3c35f05472ad9678ae63e5325",
+  "prompts": {},
+  "sessions": {
+    "s_883165bd36071d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "cde7b433-0c27-41f7-87cd-204bc3428804",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Phyllis Noester <phyllis.noester@n8n.io>"
+    }
+  }
+}

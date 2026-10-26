@@ -23,14 +23,14 @@ Environments are in Preview and may change in future releases. Try them on test 
 
 n8n stores promoted content in an `n8n/` folder at the root of the repository. It doesn't change anything outside that folder, so the repository can hold other files, such as CI configuration.
 
-## Direct commits and new branches
+## Direct commits and feature branches
 
 An environment that an instance promotes changes to does one of the following:
 
 - Commits directly to its branch.
-- Pushes each promote to a new branch named `n8n-promotion/<timestamp>`, based on its branch. n8n never force-pushes. The base branch must already exist on the Git host.
+- Pushes each promote to a feature branch named `n8n-promotion/<timestamp>`, based on its branch. n8n never force-pushes. The base branch must already exist on the Git host.
 
-Instances that apply from the environment read its branch, so they see changes from a new branch only after someone merges it.
+Instances that apply from the environment read its branch, so they see changes from a feature branch only after someone merges it.
 
 ## Providers
 

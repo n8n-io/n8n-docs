@@ -25,8 +25,8 @@ Environments are in Preview and may change in future releases. Try them on test 
 |---|---|
 | Authentication | SSH key, or username and access token |
 | Pick repositories and branches from a list | No. You enter the repository URL and branch. |
-| Push each promote to a new branch | Yes |
-| Promotion reviews | No. Someone merges the new branch on the Git host. |
+| Push each promote to a feature branch | Yes |
+| Promotion reviews | No. Someone merges the feature branch on the Git host. |
 
 ## Connect with an SSH key
 

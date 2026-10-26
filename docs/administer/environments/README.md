@@ -55,7 +55,7 @@ An environment is a stage in your process, such as staging or production. It sta
 - The environment the instance promotes changes to.
 - The environment the instance applies changes from, its source of truth.
 
-Each instance has at most one environment per direction. With Git-based promotion, an environment is a repository and branch, plus settings such as whether each promote opens a new branch or a merge request.
+Each instance has at most one environment per direction. With Git-based promotion, an environment is a repository and branch, plus settings such as whether each promote pushes a feature branch or opens a merge request.
 
 ### Promote and apply
 

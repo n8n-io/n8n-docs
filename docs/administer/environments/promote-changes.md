@@ -58,8 +58,8 @@ Promoting the whole instance sends every team project and overwrites the project
 The environment's settings decide what n8n does with the changes:
 
 - **Direct:** n8n commits to the environment's branch.
-- **New branch:** n8n pushes a new branch named `n8n-promotion/<timestamp>`, based on the environment's branch. Someone merges it on the Git host.
-- **New branch with a promotion review:** n8n also opens a promotion review. With GitLab, that's a merge request. See [Review promotions](review-promotions.md).
+- **Feature branch:** n8n pushes a feature branch named `n8n-promotion/<timestamp>`, based on the environment's branch. Someone merges it on the Git host.
+- **Feature branch with a promotion review:** n8n also opens a promotion review. With GitLab, that's a merge request. See [Review promotions](review-promotions.md).
 
 n8n uses your n8n name and email as the commit author.
 

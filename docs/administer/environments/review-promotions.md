@@ -26,7 +26,7 @@ Promotion reviews depend on the provider of the environment:
 | Provider | Promotion reviews |
 |---|---|
 | [GitLab](git-based-promotion/gitlab.md#promotion-reviews-with-merge-requests) | Yes, as merge requests |
-| [Generic Git](git-based-promotion/generic-git.md) | No. n8n can push each promote to a new branch, and someone merges it on the Git host. |
+| [Generic Git](git-based-promotion/generic-git.md) | No. n8n can push each promote to a feature branch, and someone merges it on the Git host. |
 
 Only GitLab supports promotion reviews.
 

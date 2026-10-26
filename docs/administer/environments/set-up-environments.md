@@ -35,28 +35,20 @@ On self-hosted n8n:
 
 ## Add an environment
 
+If the instance is connected to Environments (Classic), upgrade it first: go to **Settings** > **Environments (Classic)**, select **Upgrade**, then confirm. See [Switch from Environments (Classic)](switch-from-environments-classic.md).
+
 1. Go to **Settings** > **Environments**.
 2. Under **Promote changes to** or **Apply changes from**, select **Add environment**.
 3. Choose the provider type: **Generic Git** or **GitLab**.
 4. Connect the provider. Enter a **Name** and the authentication details for your Git host. See [Generic Git](git-based-promotion/generic-git.md) or [GitLab](git-based-promotion/gitlab.md).
 5. Enter an **Environment name**, such as `Production`.
 6. Choose the repository and **Branch**. For Generic Git, enter the **Repository URL**. For GitLab, pick the **Repository** from the list.
-7. Promote environments only: to push each promote to a new branch instead of the branch itself, turn on **Push to a new branch** (Generic Git) or **Open a merge request in GitLab** (GitLab).
+7. Promote environments only: to push each promote to a feature branch instead of the branch itself, turn on **Push to a new branch** (Generic Git) or **Open a merge request in GitLab** (GitLab).
 8. Select **Add environment**.
 
-n8n saves the environment and connects to the repository.
+n8n saves the environment and connects to the repository. The environment then shows **Connected**. If it shows **Not connected** or **Out of date**, select **Retry** or **Reconnect**. If that fails, see [Git-based promotion](git-based-promotion/README.md#troubleshooting).
 
 When you add the second environment on an instance with the same provider type, n8n reuses the first environment's provider, so you don't enter the authentication details again.
-
-## Check the connection
-
-Each environment shows its connection status in **Settings** > **Environments**:
-
-| Status | Meaning | Action |
-|---|---|---|
-| **Connected** | n8n can reach the repository and branch. | None |
-| **Out of date** | The repository or branch changed. | Select **Reconnect**. |
-| **Not connected** | n8n can't reach the repository. | Fix the cause, then select **Retry**. See [Git-based promotion](git-based-promotion/README.md#troubleshooting). |
 
 ## Edit or remove an environment
 
@@ -64,7 +56,9 @@ Open **Environment actions** on the environment, then select **Edit** or **Remov
 
 You can't change an environment's direction or its provider. To use a different provider, remove the environment and add it again.
 
-Removing an environment doesn't change the Git repository. If no other environment uses the same provider, n8n also deletes the provider's connection details.
+To change the authentication details, for example to replace an expired access token, edit the environment and select **Edit provider**. The new details apply to every environment that uses the provider.
+
+Removing an environment doesn't change the Git repository. If no other environment uses the same provider, n8n also deletes the provider's connection details. You can't approve the environment's open promotion reviews in n8n after you remove it, so merge or close them on the Git host.
 
 ## Protect an instance
 

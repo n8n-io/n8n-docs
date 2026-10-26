@@ -245,6 +245,8 @@ Microsoft Teams credentials use the following scopes by default:
 * `TeamsActivity.Send` (available from n8n 2.42.0)
 * `TeamMember.Read.All` (available from n8n 2.45.0)
 
+`TeamMember.Read.All` needs admin consent. A credential connected before n8n 2.45.0 requests the scope when you reconnect it, so a Microsoft Entra administrator must consent to it first.
+
 For the permission each Microsoft Teams Trigger event needs, refer to [Required scopes](../trigger-nodes/n8n-nodes-base.microsoftteamstrigger.md#required-scopes) in the Microsoft Teams Trigger documentation.
 
 ### Service-specific settings <a href="#service-specific-settings" id="service-specific-settings"></a>

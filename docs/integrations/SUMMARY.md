@@ -589,6 +589,7 @@
       * [MongoDB Chat Memory](builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymongochat.md)
       * [Redis Chat Memory](builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryredischat.md)
       * [Postgres Chat Memory](builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorypostgreschat.md)
+      * [Databricks Lakebase Chat Memory](builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorylakebasechat.md)
       * [Xata](builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryxata.md)
       * [Zep](builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memoryzep.md)
       * [Auto-fixing Output Parser](builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.outputparserautofixing.md)

@@ -123,7 +123,7 @@ When you select **n8n User Auth (OAuth2)**, a **Require Workflow Execute Permiss
 n8n is the OAuth2 authorization server for the webhook. How the caller gets a bearer token depends on the caller:
 
 * **A browser:** Open the webhook URL. n8n redirects you to the sign-in page and the consent screen, then runs the workflow. This works for GET requests only, and only when **OAuth2 Client** is **Auto-Detect** or **Browser (Virtual Client)**.
-* **A client that supports OAuth 2.1 discovery:** Send the request without a token. The 401 response carries a `WWW-Authenticate` header with a `resource_metadata` URL. Clients that support protected resource metadata, dynamic client registration, and PKCE use that URL to complete sign-in and consent without manual setup.
+* **A client that supports OAuth 2.1 discovery:** Set **OAuth2 Client** to **Bearer Token Only**, or use **Auto-Detect** for non-browser requests, then send the request without a token. The 401 response carries a `WWW-Authenticate` header with a `resource_metadata` URL. Clients that support protected resource metadata, dynamic client registration, and PKCE use that URL to complete sign-in and consent without manual setup.
 * **Your own script or service:** Complete the OAuth2 authorization code flow against the n8n instance:
   1. Read the authorization server metadata at `https://<your-n8n-url>/.well-known/oauth-authorization-server`. It lists the registration, authorization, and token endpoints.
   2. Register a client at the registration endpoint, or reuse a client you registered before.

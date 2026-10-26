@@ -118,7 +118,7 @@ The **OAuth2 Client** option in [Node options](#node-options) controls this beha
 
 When you select **n8n User Auth (OAuth2)**, a **Require Workflow Execute Permission** toggle appears. It is on by default. When it is on, the calling user must also have permission to execute the workflow in the project it belongs to. Users who are logged in but lack execute permission on the workflow can't trigger it. A request with a bearer token from such a user receives a 403 response.
 
-#### Calling a webhook that uses n8n User Auth (OAuth2) <a href="#calling-a-webhook-that-uses-n8n-user-auth-oauth2" id="calling-a-webhook-that-uses-n8n-user-auth-oauth2"></a>
+#### Calling a webhook that uses n8n User Auth (OAuth2)
 
 n8n is the OAuth2 authorization server for the webhook. How the caller gets a bearer token depends on the caller:
 

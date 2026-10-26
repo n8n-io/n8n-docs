@@ -51,7 +51,7 @@ Refer to the [OpenAI credentials documentation](../../credentials/openai.md) for
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [LangChains's OpenAI embeddings documentation](https://js.langchain.com/docs/integrations/text_embedding/openai/) for more information about the service.
+Refer to [LangChain's OpenAI embeddings documentation](https://docs.langchain.com/oss/javascript/integrations/embeddings/openai) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

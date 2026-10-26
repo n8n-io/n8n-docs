@@ -42,7 +42,7 @@ On this page, you'll find the node parameters for the Structured Output Parser n
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [LangChain's output parser documentation](https://js.langchain.com/docs/concepts/output_parsers) for more information about the service.
+Refer to [LangChain's structured output documentation](https://docs.langchain.com/oss/javascript/langchain/structured-output) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

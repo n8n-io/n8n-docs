@@ -56,7 +56,7 @@ Refer to the [Mistral Cloud credentials documentation](../../credentials/mistral
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [LangChains's Mistral documentation](https://js.langchain.com/docs/integrations/chat/mistral) for more information about the service.
+Refer to [LangChain's Mistral documentation](https://docs.langchain.com/oss/javascript/integrations/chat/mistral) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

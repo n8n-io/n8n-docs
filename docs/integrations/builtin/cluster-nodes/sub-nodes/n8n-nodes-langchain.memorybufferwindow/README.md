@@ -49,7 +49,7 @@ Configure these parameters to configure the node:
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [LangChain's Buffer Window Memory documentation](https://v03.api.js.langchain.com/classes/langchain.memory.BufferWindowMemory.html) for more information about the service.
+Refer to [LangChain's short-term memory documentation](https://docs.langchain.com/oss/javascript/langchain/short-term-memory) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

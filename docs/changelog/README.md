@@ -42,6 +42,56 @@ For guidance on major version upgrades, see [v3.0 breaking changes](v30-breaking
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
 
+## Use your personal credentials in team projects
+
+**Released:** 2026-10-27 in n8n 2.46.0
+
+You can now select your own personal credentials in any team project you're a member of, without sharing them first. Every workflow run acts as a person, and can only use the credentials that person is allowed to use. Teammates who can't use your credential can see that a workflow uses it. They can't run or publish the workflow with it, or see the execution data it produced. The credential selector groups credentials into **Available to you** and **Available in** _project name_.
+
+After you upgrade, you may notice:
+
+* **Disabled Execute and Publish buttons:** if a workflow uses someone else's credential that you can't use, n8n names the credential and its owner. You can still edit the workflow and switch to a credential you can use.
+* **Publish checks:** you can't publish a workflow with a credential you can't use. The check tells you which credential blocks it.
+* **Hidden execution data:** n8n hides the data of executions that used a credential you can't use, including data returned from sub-workflows.
+* **A clearer Sharing tab:** it lists people and projects together, shows projects that use the credential without a share as **Can view**, and lets you share with them in one step.
+
+Existing published workflows keep running. Learn more in [Use personal credentials in projects](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/use-personal-credentials-in-projects).
+
+## Durable scheduler on by default for Schedule Trigger nodes
+
+**Released:** 2026-10-20 in n8n 2.45
+
+Schedule Trigger nodes now run on the durable scheduler by default, on every instance, with no environment variable to set. The scheduler stores each run in the database before it's due, so a restart no longer drops pending runs. A run missed during downtime still fires within its grace period. Past that, the trigger's [misfire policy](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/durable-scheduler#misfire-policy) decides what happens. In a multi-main setup, one main claims each run, instead of a single leader firing them all.
+
+Existing Schedule Trigger nodes switch over on upgrade, without republishing. One timing detail changes: "every N seconds" and "every N minutes" schedules now run a steady N apart, counted from when you published the workflow. They no longer align to clock boundaries. Hourly, daily, weekly, monthly, and custom cron schedules fire as before in everyday use. They differ only in rare leap-year, 53rd-week, and daylight-saving edge cases, where the durable scheduler fixes an off-by-one-period error.
+
+You can keep the previous behavior while you adapt:
+
+* Set `N8N_SCHEDULER_TRIGGER_NODE_MODE=legacy` to keep clock-aligned timing on the durable scheduler.
+* Set `N8N_SCHEDULER_ENABLED=false` to return the whole instance to the in-memory scheduler.
+
+Both variables are now deprecated, and n8n logs a warning at startup if you set either one. A future version will remove them, along with the in-memory scheduler. This release also removes the Skip Durable Scheduler node setting and its `N8N_ENV_FEAT_SKIP_DURABLE_SCHEDULER` flag.
+
+Poll triggers and system tasks stay on their current schedulers. Learn more in the [durable scheduler documentation](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/durable-scheduler).
+
+## Control which nodes users can add and run, per instance or per project
+
+**Released:** 2026-10-13 in [n8n 2.44](release-notes.md#n8n244)
+
+You can now set rules that control which nodes users can add, publish, and run, either across the whole instance or within individual projects. Node type policies let instance and project admins enforce governance requirements through the public API without removing nodes from the instance entirely.
+
+Each policy is an ordered list of rules plus a default action. A rule can allow, deny, or delegate one node type or every node in a package. n8n evaluates the instance policy first. A deny there is final: no project can override it. An allow lets the project policy decide, so a project can only restrict further. A delegate blocks the node by default, but a project admin can turn it on for their team with an explicit allow rule. Without any policy, every node remains available.
+
+n8n checks policies when workflows are saved, published, and run, and when agents use tools in configuration or chat. CLI imports, source control pulls, and credential tests are checked too. In the editor, blocked nodes show a lock icon in search and their node details become read-only. If you try to publish or run a workflow that uses one, n8n refuses and lists each blocked node with a link to find it. Every block also sends an audit event to your log streaming destinations.
+
+To get started, create an API key with the `nodeTypePolicy:manage` scope and read the current policy with `GET /api/v1/node-type-policies/instance`. Add your rules, then send the whole policy back with `PUT`, including the `version` you read. Changes take effect within about one second.
+
+Learn more in the [Node Type Policies documentation](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/control-node-availability).
+
+{% hint style="info" %}
+**Availability:** Enterprise.
+{% endhint %}
+
 ## TypeSafe AI node for smarter workflow routing with Jev
 
 **Released:** 2026-09-30&#x20;
@@ -436,11 +486,11 @@ New [Oracle DB Vector Store](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/buil
 
 **Released:** 2026-05-19 in [n8n 2.22](release-notes.md#n8n222)
 
-Connect your agent to select MCP servers without setting up an [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpclient) and credential by hand. Pick a server from the nodes panel, sign in, and it's available to your agent.
+Connect your agent to select MCP servers without setting up an [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpClient) and credential by hand. Pick a server from the nodes panel, sign in, and it's available to your agent.
 
 Initial coverage includes some of the most-used services in the official MCP registry (Apify, Linear, monday.com, Notion, and PostHog), and we'll expand the list to cover more services soon.
 
-If you need to connect to an MCP server that isn't in the list, you can still use the [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpclient) with manual configuration.
+If you need to connect to an MCP server that isn't in the list, you can still use the [MCP Client node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcpClient) with manual configuration.
 
 {% embed url="https://youtu.be/RGhHFbLMXhQ" %}
 Connect to MCP servers with less setup

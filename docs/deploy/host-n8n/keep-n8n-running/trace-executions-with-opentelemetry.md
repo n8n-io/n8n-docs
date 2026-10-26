@@ -37,8 +37,10 @@ Watch an overview of OpenTelemetry tracing in n8n:
 
 When you turn on tracing, n8n exports two kinds of spans for each execution:
 
-- **`workflow.execute`**: One span per workflow execution. It records the workflow ID, name, version, node count, execution mode, status, and any error type.
-- **`node.execute`**: One span per node execution, nested inside its workflow span. It records the node ID, name, type, version, and the number of input and output items.
+- **`workflow.execute`**: One span per workflow execution. It records the workflow ID, name, version, project, node count, execution mode, status, and any error type.
+- **`node.execute`**: One span per node execution, nested inside its workflow span. It records the node ID, name, type, version, the number of input and output items, and the execution, workflow, and project it belongs to.
+
+n8n exports a span when it ends. To see a run while it's still going, turn on [start spans](#start-spans).
 
 Each span includes resource attributes that identify the n8n instance:
 
@@ -179,6 +181,25 @@ To stop n8n from injecting `traceparent` headers into outbound HTTP requests, se
 export N8N_OTEL_TRACES_INJECT_OUTBOUND=false
 ```
 
+## Start spans
+
+{% hint style="info" %}
+**Feature availability**
+
+Start spans are available from n8n 2.44.0.
+{% endhint %}
+
+A long-running workflow or node is invisible in your backend until its span ends. With start spans on, n8n also sends a 0 ms child span the moment the workflow or node starts. The start span carries the same attributes as its parent at that moment, so you know right away what's running, and in which workflow and project.
+
+| Start span | Parent | Setting | Environment variable |
+| :--------- | :----- | :------ | :------------------- |
+| `workflow.execute.started` | `workflow.execute` | **Send workflow start spans** | `N8N_OTEL_TRACES_EMIT_WORKFLOW_START_SPAN` |
+| `node.execute.started` | `node.execute` | **Send node start spans** | `N8N_OTEL_TRACES_EMIT_NODE_START_SPAN` |
+
+Both are off by default. Turn them on under **Settings > OpenTelemetry > Tracing**, or set the environment variables to `true`. Node start spans also need **Include node spans** (`N8N_OTEL_TRACES_INCLUDE_NODE_SPANS`) on. In queue mode, set the variables on the main instance and on every worker.
+
+To use the public API, call `PUT /api/v1/settings/otel` with `emitWorkflowStartSpan` and `emitNodeStartSpan`, using an API key with the `otel:manage` scope. This call replaces all OpenTelemetry settings. n8n rejects a body that leaves out a required field. If you leave out an optional field, `exporterProtocol`, `emitWorkflowStartSpan`, or `emitNodeStartSpan`, n8n resets it to its default.
+
 ## Crashed executions
 
 {% hint style="info" %}
@@ -293,7 +314,7 @@ Don't include secrets, personal data, or other sensitive values in attribute val
 
 n8n supports the following custom attribute levels:
 
-| Level | Configure in | Exported span | Attribute prefix |
+| Level | Configure in | Exported span | Default attribute prefix |
 | :---- | :----------- | :------------ | :--------------- |
 | Project | **Project settings** | `workflow.execute` | `n8n.project.custom.<key>` |
 | Workflow | **Workflow settings** | `workflow.execute` | `n8n.workflow.custom.<key>` |
@@ -351,11 +372,59 @@ async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
 }
 ```
 
-n8n prefixes each key with `n8n.node.custom.` on the exported span. Values must be strings, numbers, or boolean.
+By default, n8n prefixes each key with `n8n.node.custom.`. You can [change the attribute prefixes](#change-the-attribute-prefixes). Values must be strings, numbers, or boolean.
 
 This API isn't available from the Code node. It's intended for node authors who want to enrich spans with domain-specific data.
 
 If a node sets an attribute key here that's also configured as a [custom node span attribute](#add-node-span-attributes), the programmatic value takes precedence.
+
+### Change the attribute prefixes
+
+{% hint style="info" %}
+**Feature availability**
+
+Custom attribute prefixes are available from n8n 2.46.0.
+{% endhint %}
+
+n8n adds a prefix to custom attribute keys. To change or remove the prefix, set `N8N_OTEL_TRACES_CUSTOM_ATTRIBUTE_PREFIXES` to a JSON object. The object accepts these keys, each with a string value:
+
+| Key | Sets the prefix for | Default prefix |
+| :-- | :------------------ | :------------- |
+| `project` | Project attributes | `n8n.project.custom.` |
+| `workflow` | Workflow attributes | `n8n.workflow.custom.` |
+| `node` | Node attributes | `n8n.node.custom.` |
+
+An empty string removes the prefix. A key you leave out keeps its default prefix. Set the same value on the main instance, workers, and webhook processors.
+
+To remove both prefixes and use attribute names exactly as entered in the UI:
+
+```bash
+# A project attribute named team becomes team
+export N8N_OTEL_TRACES_CUSTOM_ATTRIBUTE_PREFIXES='{"project":"","node":""}'
+```
+
+Set custom prefixes:
+
+```bash
+# A project attribute named team becomes acme.project.team
+export N8N_OTEL_TRACES_CUSTOM_ATTRIBUTE_PREFIXES='{"project":"acme.project.","node":"acme.node."}'
+```
+
+Change only one prefix:
+
+```bash
+# A project attribute named team becomes acme.team
+# Node attributes keep their default prefix
+export N8N_OTEL_TRACES_CUSTOM_ATTRIBUTE_PREFIXES='{"project":"acme."}'
+```
+
+If the value isn't valid JSON, uses any other key, or has a non-string value, n8n logs a warning and uses the default prefixes for all levels.
+
+{% hint style="warning" %}
+**OpenTelemetry standard attributes**
+
+n8n doesn't check custom keys against the [OpenTelemetry semantic conventions](https://opentelemetry.io/docs/specs/semconv/). If your key matches a standard attribute, such as `user.id` or `http.request.method`, your backend reads your value as that attribute. Avoid standard keys unless your value has the standard meaning.
+{% endhint %}
 
 ## Try it out with Jaeger <a href="#try-it-out-with-jaeger" id="try-it-out-with-jaeger"></a>
 
@@ -400,6 +469,7 @@ Workflow and node spans include the following n8n-specific attributes.
 | `n8n.workflow.version_id` | Workflow version ID. |
 | `n8n.workflow.node_count` | Number of nodes in the workflow. Absent on a [rebuilt span](#tracked-and-rebuilt-spans) for a crashed execution. |
 | `n8n.project.id` | Project ID. Available from n8n 2.23.0. |
+| `n8n.project.name` | Project name. Team projects only: a personal project's name contains its owner's name and email, so n8n leaves it out. Available from n8n 2.44.0. |
 | `n8n.execution.id` | Execution ID. |
 | `n8n.execution.mode` | Execution mode (for example, `manual`, `webhook`, `trigger`, `retry`). |
 | `n8n.execution.status` | Final execution status, including `crashed` for a [crashed execution](#crashed-executions). |
@@ -424,6 +494,8 @@ Workflow and node spans include the following n8n-specific attributes.
 | `n8n.node.items.output` | Number of output items the node produced. |
 | `n8n.node.termination_reason` | Why a node span ended without a normal completion (for example, `workflow_cancelled` or `workflow_crashed`). |
 | `n8n.node.custom.<key>` | Custom attributes set through [node-level custom span attributes](#custom-span-attributes) in the node settings or `metadata.tracing` in custom node code. |
+
+From n8n 2.44.0, node spans also carry `n8n.execution.id`, `n8n.workflow.id`, `n8n.workflow.name`, `n8n.project.id`, and `n8n.project.name`, with the same values as their workflow span. To find every span of one execution in Jaeger, search for the tag `n8n.execution.id=<execution-id>`.
 
 When a node fails, n8n records an `exception` event on the span with the standard OpenTelemetry exception attributes (`exception.type`, `exception.message`, `exception.stacktrace`).
 
@@ -489,6 +561,7 @@ Check that:
 - You have an Enterprise license.
 - You set `N8N_OTEL_ENABLED` to `true`.
 - For node-level span attributes, `N8N_OTEL_TRACES_INCLUDE_NODE_SPANS` isn't set to `false`.
+- If you set `N8N_OTEL_TRACES_CUSTOM_ATTRIBUTE_PREFIXES`, search for the new key. n8n drops keys that match built-in attributes. Refer to [Change the attribute prefixes](#change-the-attribute-prefixes).
 
 ### A crashed execution has no span
 

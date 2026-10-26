@@ -52,7 +52,7 @@ Learn more about available embedding models in [Google VertexAI embeddings API d
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [LangChain's Google Generative AI embeddings documentation](https://js.langchain.com/docs/integrations/text_embedding/google_generativeai) for more information about the service.
+Refer to [LangChain's Google Vertex AI embeddings documentation](https://docs.langchain.com/oss/javascript/integrations/embeddings/google_vertex_ai) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

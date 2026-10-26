@@ -43,7 +43,14 @@ For self-hosted versions, n8n is neither a Controller nor a Processor, as we don
 
 ### Submitting an account deletion request <a href="#submitting-an-account-deletion-request" id="submitting-an-account-deletion-request"></a>
 
-Email [help@n8n.io](mailto:help@n8n.io) to make an account deletion request.
+On n8n Cloud, the instance owner can delete their account in the [n8n Cloud console](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/use-the-cloud-console):
+
+1. Select **Instance settings**.
+1. In the **Danger zone** section, select **Delete account**.
+1. If your account has an active subscription, n8n asks you to cancel it first. Select **Cancel subscription** and complete the cancellation.
+1. Type your account email address to confirm, then select **Delete account**.
+
+You can also email [help@n8n.io](mailto:help@n8n.io) to make an account deletion request.
 
 ### Sub-processors <a href="#sub-processors" id="sub-processors"></a>
 
@@ -80,7 +87,7 @@ n8n keeps telemetry pseudonymous wherever possible, and avoids collecting sensit
 
 | What we collect | Example | Why we collect it | Can you switch it off? |
 | --- | --- | --- | --- |
-| **Instance and configuration.** A code identifying your instance, the n8n version you run, your database and deployment type, selected configuration settings, and basic details of the server such as operating system, memory, and CPUs. | Deployment type `default`, database postgres, version `1.105.0` | To tell whether an n8n update has broken something that was working, and to understand how instances are configured in practice | Yes |
+| **Instance and configuration.** A code identifying your instance, the n8n version you run, your database and deployment type, selected configuration settings, and basic details of the server such as operating system, memory, and CPUs. This includes deployment artefact and version, runtime and infrastructure provider, database and cache provider, allocated CPU and memory resources, and periodic consolidated counts of n8n processes and their allocated resources. | Deployment type `default`, database postgres, version `1.105.0`, installed with `helm-chart/1.14.0` on Kubernetes, two workers with one CPU each | To tell whether an n8n update has broken something that was working, to understand how instances are configured in practice, and to set sensible defaults in the deployment templates we publish | Yes |
 | **Identifiers.** A code combining your instance and your user number, and a truncated IP address. The code does not contain your name or email.  | User `5678` on instance `abc123`. `12.214.31.144` is stored as `12.214.31.0` | To tell repeat activity apart from new activity, and to keep the service secure and stable | Yes |
 | **IP address.** A truncated IP address. The last part is removed, so what we store identifies a network rather than a device. On a self-hosted instance this is your server's address, not the address of the person at the browser. On n8n Cloud, see [If you use n8n Cloud](#if-you-use-n8n-cloud). We use it to work out the country an instance is in. | `12.214.31.144` is stored as `12.214.31.0` | To keep the service secure and stable, and to understand which countries n8n is used in | Yes |
 | **What you do in the product.** Creating, saving, running, and deleting workflows. The shape of your workflow, meaning which node types are connected to which, but not the information flowing through them. Which features and templates you use, and how you move around the interface. | "Workflow ran successfully in production for the first time" | To find where people get stuck, and to decide what to build next | Yes |
@@ -139,7 +146,7 @@ Everything above applies to n8n Cloud as well, with three differences.
 
 **You cannot switch telemetry off.** There is no opt-out for Cloud and no setting in the interface.
 
-**The IP address we see is different.** For anything your Cloud instance sends, the address belongs to our infrastructure rather than to you. For the Cloud dashboard in your browser, it is your network's address, truncated in the same way as above.
+**The IP address we see is different.** For anything your Cloud instance sends, the address belongs to our infrastructure rather than to you. For the Cloud console in your browser, it's your network's address, truncated in the same way as above.
 
 **We record sessions in the n8n interface.** On Cloud only, we capture what happens on screen while you use n8n, so we can see where the product is confusing. Credential values are never recorded. Recordings are deleted after 21 days. 
 
@@ -182,7 +189,7 @@ n8n deletes most internal application logs and logs tied to sub-processors withi
 
 #### PID deletion <a href="#pid-deletion" id="pid-deletion"></a>
 
-If you delete your n8n account from the Cloud dashboard, n8n deletes the workflow, credential, user, and execution data associated with your account on the same day, and removes it from backups within 90 days.
+If you delete your n8n account in the Cloud console, n8n deletes the workflow, credential, user, and execution data associated with your account on the same day, and removes it from backups within 90 days.
 
 If your account is closed without a deletion request, n8n deletes your customer data within 100 days of closure, with backups deleted within 90 days.
 

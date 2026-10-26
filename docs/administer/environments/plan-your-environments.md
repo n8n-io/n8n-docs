@@ -21,12 +21,14 @@ Environments are in Preview and may change in future releases. Try them on test 
 
 ## How instances and environments relate
 
-Each instance can have two environments, one per direction:
+You configure the environments of each instance on their own. Each instance can have two, one per direction:
 
 - The environment the instance promotes changes to.
 - The environment the instance applies changes from.
 
-Name each environment after the stage it stands for, such as Staging or Production. With [Git-based promotion](git-based-promotion/), each environment is a repository and branch. The instance that promotes to Production and the instance that applies from Production both point to the same repository and branch.
+With [Git-based promotion](git-based-promotion/), each environment has its own provider, repository, and branch, and none of these have to match across directions or instances. An instance can apply from one repository and promote to another, or use different branches of the same repository. Changes reach the next instance once they're on the branch it applies from, whether n8n commits them there directly or someone merges them in.
+
+Name each environment after the stage it stands for, such as Staging or Production. The patterns below are common setups, not the only ones.
 
 ## Development and production
 
@@ -58,7 +60,7 @@ Staging and Production can be two branches in one repository, as in the table, o
 To make sure production only applies changes someone reviewed, set the environment that promotes to Production to push each promote to a new branch. n8n then never commits directly to the branch production applies from:
 
 - With GitLab, n8n also opens a merge request, which you approve in n8n as a [promotion review](review-promotions.md).
-- With other Git providers, someone merges the new branch on the Git host.
+- With Generic Git, someone merges the new branch on the Git host.
 
 ## Protect the instances that only apply
 

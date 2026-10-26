@@ -159,10 +159,6 @@ Version 1 of the **AI Agent** node supported several agent type modes, including
 
 **What to do:** Update any workflows and templates that use version 1 of the [AI Agent](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent) node to the latest version. The latest version replaces all the removed modes with **Tools Agent**, and workflows already set to **Tools Agent** continue to behave the same after you update. For **SQL Agent** use cases, replace it with a [Postgres](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.postgres) or [MySQL](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.mysql) tool sub-node paired with a recent **AI Agent** node.
 
-## Behavior changes
-
-n8n 3.0 changes how some nodes and credentials behave. These nodes stay available, but existing workflows can produce different results.
-
 ### Edit Image node: Node versions 1 and 1.1 removed
 
 n8n 3.0 removes support for deprecated node versions 1 and 1.1 of the [Edit Image](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.editimage) node. Workflows that still use these versions fail with an error until you upgrade the node.
@@ -170,6 +166,10 @@ n8n 3.0 removes support for deprecated node versions 1 and 1.1 of the [Edit Imag
 Node version 2 uses a different image-processing library, so image output can change. The migration converts blur settings, but removes **Sigma**. Text placement can change. **Get Information** returns a normalized result. PNG and TIFF output ignores the **Quality** setting. Resize operations with zero or negative dimensions fail.
 
 **What to do:** Before you upgrade, go to **Settings > Migration Report** to identify affected workflows. Migrate them from the report, or update each **Edit Image** node to node version 2 by hand. Then test the output, especially workflows that blur or resize images, add text, read image information, or set PNG or TIFF quality.
+
+## Behavior changes
+
+n8n 3.0 changes how some nodes and credentials behave. These nodes stay available, but existing workflows can produce different results.
 
 ### Always Output Data on nodes with several outputs
 

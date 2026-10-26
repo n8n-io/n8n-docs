@@ -105,7 +105,7 @@ You can require authentication for any service calling your webhook URL. Choose 
 
 Refer to [Webhook credentials](../../credentials/webhook.md) for more information on setting up the Basic auth, Header auth, and JWT auth credential types.
 
-#### Using n8n User Auth (OAuth2) <a href="#using-n8n-user-auth-oauth2" id="using-n8n-user-auth-oauth2"></a>
+#### Using n8n User Auth (OAuth2)
 
 Only users logged in to this n8n instance can call the webhook. The caller must send an OAuth2 bearer token issued by this instance. n8n resolves the token to the calling user and runs the execution as that user. [End-user credentials](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/end-user-credentials) resolve to the calling user's connected accounts under this mode.
 

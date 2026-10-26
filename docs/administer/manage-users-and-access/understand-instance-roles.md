@@ -15,7 +15,7 @@ layout:
 
 Every user has one instance role. The instance role determines the user's permissions and access across the n8n instance.
 
-There are four built-in instance roles: Owner, Admin, Member, and Chat User. If these don't meet your needs, you can create [custom instance roles](set-permissions-and-roles-rbac/create-custom-instance-roles.md) with granular permissions.
+There are four built-in instance roles: Owner, Admin, Member, and Chat user. If these don't meet your needs, you can create [custom instance roles](set-permissions-and-roles-rbac/create-custom-instance-roles.md) with granular permissions.
 
 {% hint style="info" %}
 **Feature availability**
@@ -25,6 +25,9 @@ The **Admin** role is available on:
 - **n8n Cloud:** Pro, Enterprise
 - **Self-hosted:** Enterprise
 {% endhint %}
+
+{% hint style="info" %}
+**Feature availability**
 
 The **Chat user** role is available on:
 
@@ -68,16 +71,17 @@ The Chat user role is for people who only need to use n8n through Chat. Chat use
 
 **Chat users can:**
 
-Send messages in Chat.
-Create, edit, and delete their own Chat agents.
-Run the workflows and agents that are shared with them in Chat.
+- Send messages in Chat.
+- Create, edit, and delete their own Chat agents.
+- Run the workflows and agents that are shared with them in Chat.
 
 **Chat users can't:**
 
-Create, view, or edit workflows or credentials.
-Create projects or view projects they don't belong to.
-Create API keys.
-Use some Chat tool types. Refer to the Chat documentation for details.
+- Create, view, or edit workflows or credentials.
+- Create projects or view projects they don't belong to.
+- Create API keys.
+- Use some Chat tool types. Refer to the Chat documentation for details.
+
 When the Chat feature is enabled, n8n opens Chat for Chat users after they sign in.
 
 **Change a user's role to or from Chat user**

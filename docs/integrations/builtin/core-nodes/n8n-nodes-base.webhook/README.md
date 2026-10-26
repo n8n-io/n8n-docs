@@ -118,6 +118,21 @@ The **OAuth2 Client** option in [Node options](#node-options) controls this beha
 
 When you select **n8n User Auth (OAuth2)**, a **Require Workflow Execute Permission** toggle appears. It is on by default. When it is on, the calling user must also have permission to execute the workflow in the project it belongs to. Users who are logged in but lack execute permission on the workflow can't trigger it. A request with a bearer token from such a user receives a 403 response.
 
+#### Calling a webhook that uses n8n User Auth (OAuth2) <a href="#calling-a-webhook-that-uses-n8n-user-auth-oauth2" id="calling-a-webhook-that-uses-n8n-user-auth-oauth2"></a>
+
+n8n is the OAuth2 authorization server for the webhook. How the caller gets a bearer token depends on the caller:
+
+* **A browser:** Open the webhook URL. n8n redirects you to the sign-in page and the consent screen, then runs the workflow. This works for GET requests only, and only when **OAuth2 Client** is **Auto-Detect** or **Browser (Virtual Client)**.
+* **A client that supports OAuth 2.1 discovery:** Send the request without a token. The 401 response carries a `WWW-Authenticate` header with a `resource_metadata` URL. Clients that support protected resource metadata, dynamic client registration, and PKCE use that URL to complete sign-in and consent without manual setup.
+* **Your own script or service:** Complete the OAuth2 authorization code flow against the n8n instance:
+  1. Read the authorization server metadata at `https://<your-n8n-url>/.well-known/oauth-authorization-server`. It lists the registration, authorization, and token endpoints.
+  2. Register a client at the registration endpoint, or reuse a client you registered before.
+  3. Send the user to the authorization endpoint with PKCE (`S256`) and the `resource` parameter set to the webhook URL plus `?method=<HTTP method>`, for example `https://<your-n8n-url>/webhook/my-path?method=POST`. The user signs in and gives consent.
+  4. Exchange the authorization code at the token endpoint for an access token and a refresh token.
+  5. Call the webhook with the `Authorization: Bearer <access token>` header.
+
+A token is bound to the webhook trigger it was issued for. A token issued for another trigger, or for the instance's MCP server, receives a 401 response.
+
 ### Respond <a href="#respond" id="respond"></a>
 
 * **Immediately**: The Webhook node returns the response code and the message **Workflow got started**.

@@ -227,13 +227,13 @@ See [reference.md](reference.md) for full examples and rules.
   prose. Whole page → also set `status: preview` plus a primary `preview` tag
   (see Frontmatter's `tags` field, below).
 - **Enterprise readiness:** an `info` hint titled
-  `**Enterprise readiness: limited**` for a feature with Limited enterprise
+  `**Limited enterprise support**` for a feature with Limited enterprise
   support (some Enterprise capabilities don't cover it yet). Separate from
   Preview, so never fold the two together; stack the hints. An Enterprise ready
   feature carries nothing, so add no hint. Name the feature in the sentence
-  below the title, then list each Enterprise capability that doesn't cover it
-  yet with **Planned** or **Not planned**. List only the capabilities that
-  apply, and write "Not planned" rather than omitting a gap. No visual tag or
+  below the title, then list each Enterprise capability that applies to it with
+  its current support: **Full**, **Partial**, or **None**. List only the
+  capabilities that apply, and don't say whether n8n plans to close a gap. No visual tag or
   `status:` field. A feature not available on Enterprise at all gets a
   **Feature availability** hint instead. See [reference.md](reference.md) for
   the standard hint.

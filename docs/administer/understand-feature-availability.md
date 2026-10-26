@@ -136,15 +136,16 @@ A gap in Enterprise support doesn't make a feature Preview. For example, a featu
 
 Docs show nothing for an Enterprise ready feature, so a feature with no label is Enterprise ready.
 
-If a feature has Limited enterprise support, its page carries an **Enterprise readiness: limited** hint. The hint names the feature, lists each Enterprise capability that doesn't cover it yet, and says whether n8n plans to close the gap: **Planned** or **Not planned**. Not every capability applies to every feature, so the hint only lists the ones that do. For example, a feature without credentials doesn't need external secrets support.
+If a feature has Limited enterprise support, its page carries a **Limited enterprise support** hint. The hint names the feature and lists each Enterprise capability that applies to it, with the level of support right now: **Full**, **Partial**, or **None**.
 
 {% hint style="info" %}
-**Enterprise readiness: limited**
+**Limited enterprise support**
 
-The Example feature has Limited enterprise support. Some Enterprise capabilities don't cover it yet:
+The Example feature has Limited enterprise support. Current support for each Enterprise capability that applies to it:
 
-- **Log streaming:** Planned
-- **Environments:** Not planned
+- **SSO:** Full
+- **Log streaming:** Partial
+- **Environments:** None
 
 {% endhint %}
 

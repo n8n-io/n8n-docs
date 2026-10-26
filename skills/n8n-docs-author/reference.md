@@ -561,22 +561,22 @@ ready feature carries nothing in the docs, so don't add a hint for it. A
 feature that isn't available on Enterprise at all doesn't carry this label.
 That's a plan or platform limit, so use a **Feature availability** hint instead.
 
-**Page or section:** an `info` hint titled `**Enterprise readiness: limited**`,
+**Page or section:** an `info` hint titled `**Limited enterprise support**`,
 not `**Feature availability**` or `**Preview status**`. Name the feature in the
-sentence below, then list each Enterprise capability that doesn't cover it yet,
-with **Planned** or **Not planned** for each. List only the capabilities that
-apply to the feature (a feature without credentials doesn't need external
-secrets support). Write "Not planned" rather than omitting a gap n8n won't
-close.
+sentence below, then list each Enterprise capability that applies to it, with
+its current level of support: **Full**, **Partial**, or **None**. List only the
+capabilities that apply to the feature (a feature without credentials doesn't
+need external secrets support). Don't say whether n8n plans to close a gap.
 
 ```markdown
 {% hint style="info" %}
-**Enterprise readiness: limited**
+**Limited enterprise support**
 
-The Example feature has Limited enterprise support. Some Enterprise capabilities don't cover it yet:
+The Example feature has Limited enterprise support. Current support for each Enterprise capability that applies to it:
 
-- **Log streaming:** Planned
-- **Environments:** Not planned
+- **SSO:** Full
+- **Log streaming:** Partial
+- **Environments:** None
 
 {% endhint %}
 ```

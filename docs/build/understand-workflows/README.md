@@ -30,7 +30,7 @@ If it's your first time building a workflow, you may want to use the [quickstart
 ## Related resources
 
 * [Build](../)
-* [Build and manage agents](../build-and-manage-agents.md)
+* [Build and manage agents](../build-and-manage-agents/README.md)
 * [Ways of building workflows](../ways-of-building-workflows/README.md)
 * [Manage workflows](../manage-workflows/README.md)
 * [Flow logic](../flow-logic/README.md)

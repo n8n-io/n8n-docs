@@ -24,7 +24,7 @@ See [Build](../README.md) for other workflow-building topics.
 
 * [Build](../)
 * [Understand workflows](../understand-workflows/README.md)
-* [Build and manage agents](../build-and-manage-agents.md)
+* [Build and manage agents](../build-and-manage-agents/README.md)
 * [Ways of building workflows](../ways-of-building-workflows/README.md)
 * [Manage workflows](../manage-workflows/README.md)
 * [Flow logic](../flow-logic/README.md)

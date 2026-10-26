@@ -54,10 +54,6 @@ Refer to the [Redis credentials documentation](../../credentials/redis.md) for a
 **Feature availability**
 
 Redis query filters and the **Metadata Schema** option are available from node version 1.4 of the Redis Vector Store node. For earlier node versions, refer to [Metadata Filter](#metadata-filter).
-{% endhint %}
-
-{% hint style="warning" %}
-**Upgrade to node version 1.4**
 
 Existing Redis Vector Store nodes keep their node version, and their indexes keep working. To use node version 1.4, add a new Redis Vector Store node with a new index, then reimport your documents. Don't point a node version 1.4 node at an index that an earlier node version created. Its metadata will be missing, and filters will return wrong results.
 {% endhint %}

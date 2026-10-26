@@ -165,7 +165,7 @@ n8n 3.0 changes how some nodes and credentials behave. These nodes stay availabl
 
 ### Edit Image node: Node versions 1 and 1.1 removed
 
-n8n 3.0 removes support for deprecated node versions 1 and 1.1 of the [Edit Image](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.editimage) node.
+n8n 3.0 removes support for deprecated node versions 1 and 1.1 of the [Edit Image](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.editimage) node. Workflows that still use these versions fail with an error until you upgrade the node.
 
 Node version 2 uses a different image-processing library, so image output can change. The migration converts blur settings, but removes **Sigma**. Text placement can change. **Get Information** returns a normalized result. PNG and TIFF output ignores the **Quality** setting. Resize operations with zero or negative dimensions fail.
 

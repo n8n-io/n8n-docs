@@ -1,0 +1,19 @@
+docs/integrations/builtin/credentials/microsoft.md
+  s_980340ea709de9::t_32b7c9dd334c02 297,307,323,328,335
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "04af89f911ebce10fff358d15f942ca3d18ccd90",
+  "prompts": {},
+  "sessions": {
+    "s_980340ea709de9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "98e68c86-a728-4647-b52d-84745d1d0c16",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Csaba Tuncsik <csaba.tuncsik@gmail.com>"
+    }
+  }
+}

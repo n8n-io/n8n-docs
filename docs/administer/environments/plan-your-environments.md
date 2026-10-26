@@ -30,7 +30,7 @@ Name each environment after the stage it stands for, such as Staging or Producti
 
 ## Development and production
 
-TODO(diagram): development instance promotes to the Production environment (branch `main`), production instance applies from the Production environment.
+![The development instance promotes to the Production environment, and the production instance applies from it](../.gitbook/assets/environments-dev-prod.png)
 
 Use this pattern when one team builds on one instance and runs workflows on another.
 
@@ -41,7 +41,7 @@ Use this pattern when one team builds on one instance and runs workflows on anot
 
 ## Development, staging, and production
 
-TODO(diagram): development promotes to Staging, staging applies from Staging and promotes to Production, production applies from Production.
+![The staging instance applies from the Staging environment and promotes to the Production environment](../.gitbook/assets/environments-dev-staging-prod.png)
 
 Use this pattern when you test changes on a staging instance before they reach production. The staging instance has two environments: it applies changes from Staging and promotes changes to Production.
 

@@ -32,7 +32,7 @@ Environments are in Preview and may change in future releases. Try them on test 
 
 ## How environments work
 
-TODO(diagram): development instance, promote, Production environment (repository and branch), optional promotion review, apply, production instance.
+![Changes move from a development instance through an optional review to the Production environment, then to production](../.gitbook/assets/environments-how-it-works.png)
 
 A developer builds workflows on a development instance and promotes them to the Production environment. With Git-based promotion, that's a commit to a Git branch. If the environment requires a promotion review, someone approves the changes first. The production instance then applies the changes from the same environment.
 

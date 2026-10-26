@@ -133,7 +133,7 @@ The following options specify the names of the columns to store the vectors and 
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [LangChain's PGVector documentation](https://js.langchain.com/docs/integrations/vectorstores/pgvector) for more information about the service.
+Refer to [LangChain's PGVector documentation](https://docs.langchain.com/oss/javascript/integrations/vectorstores/pgvector) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

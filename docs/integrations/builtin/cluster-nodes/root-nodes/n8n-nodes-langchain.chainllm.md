@@ -81,7 +81,7 @@ For both the **Image** types, select the **Image Details** to control how the mo
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [LangChain's documentation on Basic LLM Chains](https://js.langchain.com/docs/tutorials/llm_chain/) for more information about the service.
+Refer to [LangChain's models documentation](https://docs.langchain.com/oss/javascript/langchain/models) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

@@ -154,6 +154,7 @@ Kitemaker
 kubectl
 Kafka
 kafkajs
+Lakebase
 Lemlist
 Lenovo
 librdkafka
@@ -315,6 +316,7 @@ URIs
 URL
 URLencoded
 Venafi
+Vercel
 VERO
 Vhost
 VM

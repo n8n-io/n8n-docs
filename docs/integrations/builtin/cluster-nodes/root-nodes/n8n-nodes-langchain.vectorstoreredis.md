@@ -144,7 +144,7 @@ You can use this with the [Get Many](n8n-nodes-langchain.vectorstoreredis.md#get
 
 ## Node options <a href="#node-options" id="node-options"></a>
 
-### Advanced Metadata Filter (v1.4+)
+### Advanced Metadata Filter (v1.4+) <a href="#advanced-metadata-filter-v14" id="advanced-metadata-filter-v14"></a>
 
 Available in node version 1.4 and later for the [Get Many](#get-many-parameters), [Retrieve Documents (As Vector Store for Chain/Tool)](#retrieve-documents-as-vector-store-for-chaintool-parameters), and [Retrieve Documents (As Tool for AI Agent)](#retrieve-documents-as-tool-for-ai-agent-parameters) operation modes.
 
@@ -162,7 +162,7 @@ The advanced metadata filter uses Redis query syntax, supporting Tag, Numeric, T
 
 For detailed syntax information, refer to [LangChain's Redis Vector Store advanced features documentation](https://docs.langchain.com/oss/javascript/integrations/vectorstores/redis#advanced-features) and [Redis Query Engine documentation](https://redis.io/docs/latest/develop/interact/search-and-query/query/).
 
-### Metadata Schema (v1.4+)
+### Metadata Schema (v1.4+) <a href="#metadata-schema-v14" id="metadata-schema-v14"></a>
 
 Available in node version 1.4 and later for the [Insert Documents](#insert-documents-parameters), [Get Many](#get-many-parameters), [Retrieve Documents (As Vector Store for Chain/Tool)](#retrieve-documents-as-vector-store-for-chaintool-parameters), and [Retrieve Documents (As Tool for AI Agent)](#retrieve-documents-as-tool-for-ai-agent-parameters) operation modes.
 
@@ -198,13 +198,13 @@ You can add an `options` object to customize field behavior:
 
 For more details on schema configuration, refer to [LangChain's Redis Vector Store documentation](https://docs.langchain.com/oss/javascript/integrations/vectorstores/redis#advanced-features).
 
-### Metadata Filter (Legacy)
+### Metadata Filter (Legacy) <a href="#metadata-filter-legacy" id="metadata-filter-legacy"></a>
 
 Available in node version 1.3 and earlier for the [Get Many](#get-many-parameters), [Retrieve Documents (As Vector Store for Chain/Tool)](#retrieve-documents-as-vector-store-for-chaintool-parameters), and [Retrieve Documents (As Tool for AI Agent)](#retrieve-documents-as-tool-for-ai-agent-parameters) operation modes.
 
 This is a simple comma-separated list filter. If you specify more than one metadata filter field, it performs an `OR` query—at least one of them must match.
 
-When inserting data, the metadata is set using the document loader. Refer to [Default Data Loader](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.documentdefaultdataloader.md) for more information on loading documents.
+When inserting data, the metadata is set using the document loader. Refer to [Default Data Loader](../sub-nodes/n8n-nodes-langchain.documentdefaultdataloader.md) for more information on loading documents.
 
 ### Redis Configuration Options <a href="#redis-configuration-options" id="redis-configuration-options"></a>
 

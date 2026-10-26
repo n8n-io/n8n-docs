@@ -100,7 +100,7 @@ You can require authentication for any service calling your webhook URL. Choose 
 * Basic auth
 * Header auth
 * JWT auth
-* n8n User Auth (OAuth2)
+* **n8n User Auth (OAuth2)**
 * None
 
 Refer to [Webhook credentials](../../credentials/webhook.md) for more information on setting up the Basic auth, Header auth, and JWT auth credential types.

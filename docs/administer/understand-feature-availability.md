@@ -132,6 +132,22 @@ The two statuses are independent. A feature can be GA and have Limited enterpris
 
 A gap in Enterprise support doesn't make a feature Preview. For example, a feature without multi-main support isn't in Preview, and users who don't run multi-main mode aren't affected.
 
+### Enterprise capabilities
+
+n8n assesses each feature against these Enterprise capabilities, where they apply to it:
+
+- **SSO**
+- **RBAC and project scoping**
+- **Data residency**
+- **Queue mode and multi-main**
+- **Environments and source control**
+- **Audit events and log streaming**
+- **OpenTelemetry tracing**
+- **External secrets**
+- **Public API**
+- **Enterprise-scale volumes**
+- **Policy coverage for new nodes, credentials, and resources**
+
 ### Enterprise readiness in the docs
 
 Docs show nothing for an Enterprise ready feature, so a feature with no label is Enterprise ready.

@@ -32,7 +32,7 @@ n8n Assistant has Limited enterprise support. Current support for each Enterpris
 
 - **RBAC and project scoping:** Partial
 - **Data residency:** Partial
-- **Multi-main mode:** Partial
+- **Queue mode and multi-main:** Partial
 - **Environments and source control:** Partial
 - **Audit events and log streaming:** None
 - **OpenTelemetry tracing:** None
@@ -40,6 +40,19 @@ n8n Assistant has Limited enterprise support. Current support for each Enterpris
 - **Public API:** None
 - **Enterprise-scale volumes:** None
 - **Policy coverage for new nodes, credentials, and resources:** None
+{% endhint %}
+
+{% hint style="info" %}
+**Limited enterprise support**
+
+n8n Assistant has Limited enterprise support. It partially supports these Enterprise capabilities:
+
+- **RBAC and project scoping**
+- **Data residency**
+- **Queue mode and multi-main**
+- **Environments and source control**
+
+n8n Assistant doesn't currently support the other [Enterprise capabilities](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#enterprise-capabilities).
 {% endhint %}
 
 n8n Assistant can make mistakes. Always review generated workflows before using them in production.

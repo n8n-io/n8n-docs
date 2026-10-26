@@ -36,7 +36,7 @@ Promotion reviews are a setting of the environment an instance promotes changes 
 
 ## Review and approve a promotion
 
-1. Select **Reviews** in the left menu. Promotion reviews have a **Promotion** badge.
+1. On the instance that promoted the changes, select **Reviews** in the left menu. Promotion reviews have a **Promotion** badge.
 2. Open the review. The **Changes** tab shows each changed workflow and dependency. **Before** is the environment's branch, and **After** is the review.
 3. Approve the review. For what approval does on your Git host, see the provider's page.
 

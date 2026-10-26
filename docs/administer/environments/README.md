@@ -44,7 +44,7 @@ Each environment usually runs on its own n8n instance.
 
 ![Changes move from a development instance through an optional review to the Production environment, then to production](../.gitbook/assets/environments-how-it-works.png)
 
-The development instance promotes changes to the Production environment. If the environment requires a promotion review, someone approves the changes first. The production instance then applies the changes from the same environment. With Git-based promotion, the Production environment is a Git branch, and promoting commits to it.
+The development instance promotes changes to the Production environment. If that environment requires a promotion review, someone approves the promoted changes on the development instance first, for example through a GitLab merge request. The production instance then applies the changes from the same environment. With Git-based promotion, the Production environment is a Git branch, and promoting commits to it.
 
 ## Concepts
 
@@ -74,7 +74,7 @@ Promote and apply use [n8n packages](https://app.gitbook.com/s/rPN1zU5jaYNvwH7Rz
 
 ### Promotion review
 
-A promotion review is an optional approval step. Promoted changes reach the environment only after someone approves them. Promotion reviews depend on the provider. See [Review promotions](review-promotions.md).
+A promotion review is an optional approval step. Promoted changes reach the environment only after someone approves them. You turn on promotion reviews in the settings of the environment an instance promotes changes to, and you approve them on that same instance. Promotion reviews depend on the provider. See [Review promotions](review-promotions.md).
 
 ### Promotion model
 

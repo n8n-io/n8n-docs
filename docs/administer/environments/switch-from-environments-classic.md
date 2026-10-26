@@ -21,7 +21,7 @@ Environments are in Preview and may change in future releases. Try them on test 
 
 ## Which version an instance uses
 
-- New instances start with Environments.
+- New instances with Environments available start on Environments.
 - Instances already connected to Environments (Classic) stay on it until you switch.
 
 ## Compare the versions
@@ -29,11 +29,11 @@ Environments are in Preview and may change in future releases. Try them on test 
 | | Environments (Classic) | Environments |
 |---|---|---|
 | Model | The instance pushes to and pulls from one branch. | The instance promotes to one environment and applies from another. Each can use a different repository and branch. |
-| Git hosts | Any Git host over SSH or HTTPS. | Any Git host through Generic Git, and GitLab with repository lists and merge requests. |
+| Git hosts | Any Git host over SSH or HTTPS. | Any Git host through Generic Git and GitLab with repository lists and merge requests. |
 | Reviews | On the Git host. | Promotion reviews in n8n, with GitLab. |
 | Selecting changes | You choose what to push. Pull brings in everything. | You choose workflows in both directions, per project, or promote and apply the whole instance. |
 | Dependencies | You select them. | n8n adds what the selected workflows use. |
-| Before changes land | Pull overwrites local changes. | Apply checks for blockers first and asks you to confirm destructive changes. |
+| Before changes land | Pull can overwrite local changes after you confirm. | Apply checks for blockers first and asks you to confirm destructive changes. |
 | Credentials | Stubs. | References to credentials that must exist on the target, or that you create during Apply. |
 | Who can use it | Instance owners and admins. Project admins can push. | Instance owners and admins. |
 | Personal projects | Included. | Not included. |
@@ -50,7 +50,7 @@ Nothing migrates from Environments (Classic). The two versions store content in 
 
 Try this on a test instance first. Your Classic setup stays connected in the background, so you can switch back.
 
-## Switch back
+## Switch back to Environments (Classic)
 
 1. Go to **Settings** > **Environments**.
 2. Select **Switch back**, then confirm.
@@ -65,5 +65,11 @@ Switching affects only this instance. You can upgrade again at any time.
 ## Related resources
 
 - [Environments](./)
+- [Plan your environments](plan-your-environments.md)
 - [Set up environments](set-up-environments.md)
+- [Promote changes](promote-changes.md)
+- [Apply changes](apply-changes.md)
+- [Review promotions](review-promotions.md)
+- [Git-based promotion](git-based-promotion/README.md)
+- [Known limitations](known-limitations.md)
 - [Environments (Classic)](../use-source-control-and-environments/)

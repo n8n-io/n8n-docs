@@ -1,5 +1,5 @@
 ---
-description: Apply changes from an environment to a project or to a whole n8n instance, resolve blockers, and learn what Apply changes on the instance.
+description: Apply changes from an environment to a project or to a whole n8n instance, resolve blockers, and see how Apply affects the instance.
 status: preview
 layout:
   description:
@@ -11,7 +11,7 @@ tags:
 
 # Apply changes
 
-Apply changes to bring workflows from the environment your instance applies changes from into the instance. You can apply selected workflows to one project, or make the whole instance match the environment.
+Applying changes brings workflows from an environment into your instance. You can apply selected workflows to one project, or make the whole instance match the environment.
 
 {% hint style="info" %}
 **Preview status**
@@ -19,11 +19,11 @@ Apply changes to bring workflows from the environment your instance applies chan
 Environments are in Preview and may change in future releases. Try them on test instances before you set them up for your production instances.
 {% endhint %}
 
-Before you start, [set up](set-up-environments.md) the environment this instance applies changes from.
+Before you start, [set up the environment](set-up-environments.md) this instance applies changes from.
 
 ## Apply workflows to a project
 
-Applying to a project changes only the workflows you select and what they use. It never deletes projects.
+Applying to a project changes only the workflows you select and what they use. It never deletes projects. All projects on an instance share tags, so renaming a tag renames it in every project.
 
 1. Open a team project. If the environment has changes for it, a badge with the number of incoming changes appears next to the project name.
 2. Select the badge. The **Changes to apply** page opens.
@@ -61,11 +61,11 @@ Before Apply writes anything, n8n checks the changes against the instance. A blo
 Apply asks you to confirm before it:
 
 - Removes or retypes data table columns. You can't restore the values in those columns. Rows and other columns stay.
-- Deletes projects, when you apply to the whole instance.
+- Deletes projects when you apply to the whole instance.
 
 ## What Apply changes on the instance
 
-Apply moves entities, such as workflows, credentials, and data table schemas. It doesn't move content, such as credential secrets or data table rows.
+Apply moves entities, such as workflows, links to credentials, and data table schemas. It doesn't move content, such as credential secrets or data table rows.
 
 | Resource | What Apply does |
 |---|---|
@@ -86,6 +86,10 @@ Promote and apply use [n8n packages](https://app.gitbook.com/s/rPN1zU5jaYNvwH7Rz
 ## Related resources
 
 - [Environments](./)
-- [Promote changes](promote-changes.md)
+- [Plan your environments](plan-your-environments.md)
 - [Set up environments](set-up-environments.md)
+- [Promote changes](promote-changes.md)
+- [Review promotions](review-promotions.md)
+- [Git-based promotion](git-based-promotion/README.md)
 - [Known limitations](known-limitations.md)
+- [Switch from Environments (Classic)](switch-from-environments-classic.md)

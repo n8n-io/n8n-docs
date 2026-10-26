@@ -11,7 +11,9 @@ tags:
 
 # Set up environments
 
-To set up environments on an instance, add the environment it promotes changes to, the environment it applies changes from, or both. Repeat this on each instance. To decide which environments each instance needs, see [Plan your environments](plan-your-environments.md).
+To set up environments on an instance, add the environment it promotes changes to, the environment it applies changes from, or both.
+
+Repeat this on each instance. To decide which environments each instance needs, see [Plan your environments](plan-your-environments.md).
 
 {% hint style="info" %}
 **Preview status**
@@ -23,7 +25,7 @@ Environments are in Preview and may change in future releases. Try them on test 
 
 - You're an instance owner or instance admin.
 - Your plan includes Environments. TODO(OPEN-2): confirm plans.
-- You have a Git repository and an account or token with write access to it. See your provider's page under [Git-based promotion](git-based-promotion/).
+- You have a Git repository and an SSH key, account, or token with access to it: write access to promote, read access to apply. See your provider's page under [Git-based promotion](git-based-promotion/).
 
 On self-hosted n8n:
 
@@ -76,4 +78,7 @@ Environments (Classic) uses the same setting. Turning it on or off changes it fo
 - [Plan your environments](plan-your-environments.md)
 - [Promote changes](promote-changes.md)
 - [Apply changes](apply-changes.md)
-- [Git-based promotion](git-based-promotion/)
+- [Review promotions](review-promotions.md)
+- [Git-based promotion](git-based-promotion/README.md)
+- [Known limitations](known-limitations.md)
+- [Switch from Environments (Classic)](switch-from-environments-classic.md)

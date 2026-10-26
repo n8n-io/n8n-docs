@@ -32,7 +32,7 @@ Only GitLab supports promotion reviews.
 
 ## Turn on promotion reviews
 
-Promotion reviews are a setting of the environment an instance promotes changes to. For GitLab, turn on **Open a merge request in GitLab** when you [add or edit the environment](set-up-environments.md#add-an-environment). Each promote then opens a new review.
+Promotion reviews are a setting of the environment an instance promotes changes to. For GitLab, turn on **Open a merge request in GitLab** when you [add or edit the environment](set-up-environments.md#add-an-environment). Each promote then opens a new review. If n8n can't open it, the promote still succeeds without a review.
 
 ## Review and approve a promotion
 
@@ -58,6 +58,12 @@ While a review for a project is open, you can't promote that project again. The 
 ## Related resources
 
 - [Environments](./)
+- [Plan your environments](plan-your-environments.md)
+- [Set up environments](set-up-environments.md)
 - [Promote changes](promote-changes.md)
+- [Apply changes](apply-changes.md)
+- [Git-based promotion](git-based-promotion/README.md)
+- [Known limitations](known-limitations.md)
+- [Switch from Environments (Classic)](switch-from-environments-classic.md)
 - [GitLab](git-based-promotion/gitlab.md)
 - [Workflow reviews](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/workflow-reviews)

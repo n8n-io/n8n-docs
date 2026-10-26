@@ -19,14 +19,14 @@ Promote changes to send workflows from your instance to the environment it promo
 Environments are in Preview and may change in future releases. Try them on test instances before you set them up for your production instances.
 {% endhint %}
 
-Before you start, [set up](set-up-environments.md) the environment this instance promotes changes to.
+Before you start, [set up the environment](set-up-environments.md) this instance promotes changes to.
 
 ## Promote workflows from a project
 
 1. Open a team project. If it has changes to promote, a badge with the number of changes appears next to the project name.
 2. Select the badge. The **Changes to promote** page opens.
 3. Select the workflows to promote. n8n selects the credentials, variables, data tables, and tags they use.
-4. Review the changes. Select **Show diff** on a workflow to compare the canvas **Before** and **After**. **Before** is the branch.
+4. Review the changes. Select **Show diff** on a workflow to compare the canvas **Before** and **After**. **Before** is the environment's branch.
 5. Select **Promote N changes**.
 6. Optional: enter a **Commit message**. If you leave it empty, n8n generates one.
 7. Select **Promote**.
@@ -42,7 +42,7 @@ If you edit a workflow while the page is open, select **Refresh** before you pro
 | **Renamed** | The workflow has a new name. |
 | **Moved** | The workflow is in a different folder. |
 | **Archived** | You archived the workflow. It stays archived on the branch. |
-| **Deleted** | You deleted the workflow or moved it to another project. Promoting removes it from the branch, and applying deletes it on the target instance. |
+| **Deleted** | You deleted the workflow. Promoting removes it from the branch, and applying deletes it on the target instance. |
 
 ## Promote the whole instance
 
@@ -82,6 +82,10 @@ A whole-instance promote fails if a workflow calls a sub-workflow in a personal 
 ## Related resources
 
 - [Environments](./)
+- [Plan your environments](plan-your-environments.md)
+- [Set up environments](set-up-environments.md)
 - [Apply changes](apply-changes.md)
 - [Review promotions](review-promotions.md)
+- [Git-based promotion](git-based-promotion/README.md)
 - [Known limitations](known-limitations.md)
+- [Switch from Environments (Classic)](switch-from-environments-classic.md)

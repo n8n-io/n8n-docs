@@ -128,7 +128,7 @@ To refer to every tier at once, write "All plans" or "All editions" rather than 
 | environment (where an instance promotes changes to or applies changes from) | promotion target, stage (as a noun for the configured object) |
 | promote, apply (the two promotion actions) | push, pull, deploy, sync (for Environments) |
 | provider (connects and authenticates n8n to a Git host) | Git connection, connection (for a provider) |
-| promotion review | merge request (except on GitLab-specific pages), pull request |
+| promotion review (the n8n approval step) | merge request or pull request (except when naming the Git host object) |
 | Git-based promotion | Git sync |
 
 Use "instance" for a running n8n system and "environment" for the configured object. Write "the staging instance applies changes from Staging", not "the staging environment is connected to two repositories".

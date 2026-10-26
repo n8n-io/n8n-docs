@@ -62,7 +62,7 @@ Promote and apply are the two promotion actions:
 - **Promote** sends changes from your instance to the environment.
 - **Apply** brings changes from the environment into your instance.
 
-You can promote or apply one project, choosing the workflows to include, or the whole instance. Promoting or applying the whole instance overwrites everything to match.
+You can promote or apply one project, choosing the workflows to include, or the whole instance. Promoting or applying the whole instance overwrites every team project to match, and applying it deletes projects that aren't in the environment.
 
 ### What you promote
 

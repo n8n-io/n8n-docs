@@ -62,10 +62,15 @@ To make sure production only applies changes someone reviewed, set the environme
 
 ## Protect the instances that only apply
 
-Turn on **Protected instance** on instances that only apply changes, such as production. Users then can't edit workflows there, so the instance stays in line with its environment. See [Set up environments](set-up-environments.md#protect-an-instance).
+Turn on **Protected instance** on instances that only apply changes, such as production. Nobody can then edit workflows on the instance, so it stays in line with its environment. See [Set up environments](set-up-environments.md#protect-an-instance).
 
 ## Related resources
 
 - [Environments](./)
 - [Set up environments](set-up-environments.md)
-- [Git-based promotion](git-based-promotion/)
+- [Promote changes](promote-changes.md)
+- [Apply changes](apply-changes.md)
+- [Review promotions](review-promotions.md)
+- [Git-based promotion](git-based-promotion/README.md)
+- [Known limitations](known-limitations.md)
+- [Switch from Environments (Classic)](switch-from-environments-classic.md)

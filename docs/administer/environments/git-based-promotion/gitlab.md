@@ -72,3 +72,4 @@ GitLab removes the data n8n needs to show a merge request's changes 14 days afte
 - [Git-based promotion](./)
 - [Generic Git](generic-git.md)
 - [Review promotions](../review-promotions.md)
+- [Set up environments](../set-up-environments.md)

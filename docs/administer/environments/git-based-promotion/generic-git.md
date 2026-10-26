@@ -35,9 +35,11 @@ Environments are in Preview and may change in future releases. Try them on test 
 3. Select **Continue**, then **Copy deploy key**.
 4. On your Git host, add the key to the repository as a deploy key with write access.
 
+Bitbucket Cloud only offers read-only repository access keys, so connect to Bitbucket Cloud with a username and access token instead.
+
 Use an SSH repository URL, such as `ssh://git@github.com/acme/n8n.git` or `git@github.com:acme/n8n.git`.
 
-To replace the key, edit the provider and select **Generate a new key**. The old key stops working, so add the new key to your Git host.
+To replace the key, edit the provider and select **Generate a new key**. Add the new key to your Git host, then remove the old key there.
 
 ## Connect with a username and access token
 

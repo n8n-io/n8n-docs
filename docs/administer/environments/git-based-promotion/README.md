@@ -25,7 +25,7 @@ n8n stores promoted content in an `n8n/` folder at the root of the repository. I
 
 ## Direct commits and new branches
 
-An environment that an instance promotes changes to either:
+An environment that an instance promotes changes to does one of the following:
 
 - Commits directly to its branch.
 - Pushes each promote to a new branch named `n8n-promotion/<timestamp>`, based on its branch. n8n never force-pushes. The base branch must already exist on the Git host.
@@ -38,7 +38,7 @@ A provider holds the details n8n uses to connect and authenticate to your Git ho
 
 | Feature | Generic Git | GitLab |
 |---|---|---|
-| Authentication | SSH key, or username and token | Access token |
+| Authentication | SSH key, or username and access token | Access token |
 | Pick repositories and branches from a list | No | Yes |
 | Promotion reviews | No | Yes, as merge requests |
 
@@ -46,9 +46,9 @@ GitHub, Bitbucket, and other Git hosts work through Generic Git, without reposit
 
 ## Self-hosted n8n
 
-- Each main instance keeps its own Git copy of each environment under the n8n folder.
+- Each main instance keeps its own Git copy of each environment in `<n8n-user-folder>/promotions/environments/`.
 - If your Git host is on an internal network, allow it in [SSRF protection](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/enable-ssrf-protection) with `N8N_SSRF_ALLOWED_HOSTNAMES` or `N8N_SSRF_ALLOWED_IP_RANGES`.
-- If your Git host uses a certificate from a private certificate authority, set `GIT_SSL_CAINFO` or `GIT_SSL_CAPATH` for Git, and add the certificate to the Node.js trust store for API calls.
+- If your Git host uses a certificate from a private certificate authority, set `GIT_SSL_CAINFO` or `GIT_SSL_CAPATH` for Git, and [configure custom certificate authorities](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/configuration-examples/configure-custom-ssl-certificate-authorities) for API calls.
 - To get detailed logs, set `N8N_LOG_SCOPES=promotions`.
 
 ## Troubleshooting
@@ -70,5 +70,10 @@ n8n hides the Git error details because they can contain secrets. Check:
 ## Related resources
 
 - [Environments](../)
+- [Plan your environments](../plan-your-environments.md)
 - [Set up environments](../set-up-environments.md)
+- [Promote changes](../promote-changes.md)
+- [Apply changes](../apply-changes.md)
 - [Review promotions](../review-promotions.md)
+- [Known limitations](../known-limitations.md)
+- [Switch from Environments (Classic)](../switch-from-environments-classic.md)

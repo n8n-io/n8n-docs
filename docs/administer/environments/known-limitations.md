@@ -23,11 +23,11 @@ Environments are in Preview and may change in future releases. Try them on test 
 
 ### Only instance owners and admins
 
-Only instance owners and instance admins can set up environments, promote, apply, and review promotions. Other roles can't use Environments.
+Only instance owners and instance admins can set up environments, promote, apply, and review promotions. Other roles, including project admins, can't do any of these.
 
 ### Environments apply to the whole instance
 
-Each instance has at most one environment per direction, and it covers all team projects. You can't give a project its own environment.
+Each instance has at most one environment it promotes changes to and one it applies changes from, and they cover all team projects. You can't give a project its own environment.
 
 ### Personal projects aren't promoted
 
@@ -62,7 +62,7 @@ If you only publish or unpublish a workflow, n8n doesn't show it as a change to 
 
 ### Applying the whole instance deletes projects
 
-Applying to the whole instance deletes projects that aren't on the branch, and everything in them. n8n asks you to confirm each deleted project. For day-to-day changes, apply to a project instead.
+Applying to the whole instance deletes projects that aren't on the branch, and everything in them. n8n lists the projects it deletes and asks you to confirm once. For day-to-day changes, apply to a project instead.
 
 ### Hidden credential values
 
@@ -91,6 +91,10 @@ In multi-main setups, n8n doesn't coordinate Git operations between main instanc
 ## Related resources
 
 - [Environments](./)
+- [Plan your environments](plan-your-environments.md)
+- [Set up environments](set-up-environments.md)
 - [Promote changes](promote-changes.md)
 - [Apply changes](apply-changes.md)
 - [Review promotions](review-promotions.md)
+- [Git-based promotion](git-based-promotion/README.md)
+- [Switch from Environments (Classic)](switch-from-environments-classic.md)

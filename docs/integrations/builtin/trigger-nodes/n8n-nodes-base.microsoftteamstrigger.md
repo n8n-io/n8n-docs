@@ -59,7 +59,7 @@ Each event subscribes to a Microsoft Graph resource and needs one of the delegat
 
 Listing teams in the node needs `Team.ReadBasic.All`, and listing channels needs `Channel.ReadBasic.All`. `ChannelMessage.Read.All` and `TeamMember.Read.All` need admin consent from a Microsoft Entra administrator. The `Team`, `Channel`, and `Chat` permissions don't.
 
-The **Teams OAuth2** credential covers every event by default. `TeamMember.Read.All` is one of its [default scopes for Microsoft Teams](../credentials/microsoft.md#default-scopes-for-microsoft-teams) from n8n 2.45.0. Its default `User.Read.All` and `Group.ReadWrite.All` scopes also authorise the team and channel lists and the New Channel subscription as higher privileged alternatives. The credential needs no extra grant for those. Both scopes need admin consent.
+The **Teams OAuth2** credential covers every event by default. `TeamMember.Read.All` is one of its [default scopes for Microsoft Teams](../credentials/microsoft.md#default-scopes-for-microsoft-teams) from n8n 2.45.0. Its default `User.Read.All` and `Group.ReadWrite.All` scopes also authorize the team and channel lists and the New Channel subscription as higher-privileged alternatives. The credential needs no extra grant for those. Both scopes need admin consent.
 
 A credential connected before n8n 2.45.0 requests `TeamMember.Read.All` when you reconnect it. A Microsoft Entra administrator must consent to the scope first, or the sign-in fails. A credential with **Custom Scopes** on keeps its own list: add the scope to **Enabled Scopes** and reconnect. On n8n versions before 2.45.0, enable **Custom Scopes** on the credential, add the scope to **Enabled Scopes**, and reconnect.
 
@@ -84,6 +84,8 @@ When you publish a workflow, the Microsoft Teams Trigger node creates a Microsof
 Renewal works only while your n8n instance is reachable. If a subscription expires while n8n is down, the trigger re-creates it on the next restart or republish.
 
 The trigger doesn't renew subscriptions for a workflow that has no stored subscription secret, for example after a loss of its static data or a workflow import. The subscriptions expire and the trigger stops receiving events. The instance log shows `Microsoft Teams Trigger: skipped lifecycle notifications: no stored secret, republish the workflow`. Republish the workflow to fix it.
+
+Renewal can also fail for other reasons, for example a Microsoft Graph rate limit, an expired refresh token, or revoked consent. The trigger doesn't retry, and the workflow shows no failed execution. The instance log shows `Microsoft Teams Trigger: failed to renew subscription` or `Microsoft Teams Trigger: failed to re-create subscription` with the error message. The subscription expires and the trigger stops receiving events. Restart n8n or republish the workflow to re-create the subscription.
 
 From n8n 2.45.1, lifecycle notifications (`reauthorizationRequired` and `subscriptionRemoved`) no longer reach the workflow as items. On earlier versions, every lifecycle notification started an execution. A workflow that filtered them with an [If node](../core-nodes/n8n-nodes-base.if.md) on `lifecycleEvent` can drop that branch.
 

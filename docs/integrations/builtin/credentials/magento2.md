@@ -1,16 +1,29 @@
 ---
 title: Magento 2 credentials
-description: Documentation for Magento 2 credentials. Use these credentials to authenticate Magento 2 in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Magento 2 credentials. Use these credentials to authenticate
+  Magento 2 in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Magento 2 credentials
+originalFilePath: integrations/builtin/credentials/magento2.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/magento2'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/magento2'
+layout:
+  description:
+    visible: false
 ---
 
-# Magento 2 credentials
+# Magento 2 credentials <a href="#magento-2-credentials" id="magento-2-credentials"></a>
 
 You can use these credentials to authenticate the following node:
 
-- [Magento 2](/integrations/builtin/app-nodes/n8n-nodes-base.magento2.md)
+- [Magento 2](../app-nodes/n8n-nodes-base.magento2.md)
 
-## Prerequisites
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 - Create a [Magento (Adobe Commerce)](https://business.adobe.com/products/commerce.html) account.
 - Set your store to **Allow OAuth Access Tokens to be used as standalone Bearer tokens**.
@@ -22,17 +35,17 @@ You can use these credentials to authenticate the following node:
         bin/magento config:set oauth/consumer/enable_integration_as_bearer 1
         ```
 
-This step is necessary until n8n updates the Magento 2 credentials to use OAuth. Refer to [Integration Tokens](https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-token/#integration-tokens) for more information.
+This step is necessary until n8n updates the Magento 2 credentials to use OAuth. Refer to [Integration Tokens](https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-token#integration-tokens) for more information.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API access token
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Magento's API documentation](https://developer.adobe.com/commerce/docs/) for more information about the service.
 
-## Using API access token
+## Using API access token <a href="#using-api-access-token" id="using-api-access-token"></a>
 
 To configure this credential, you'll need:
 

@@ -1,0 +1,35 @@
+---
+title: Understand source control and environments
+description: Understand how source control and environments work in n8n.
+contentType: overview
+hide:
+  - toc
+nodeTitle: Understand source control
+originalFilePath: source-control-environments/understand/index.md
+originalUrl: 'https://docs.n8n.io/source-control-environments/understand'
+url: >-
+  https://docs.n8n.io/administer/use-source-control-and-environments/understand-source-control
+layout:
+  description:
+    visible: false
+---
+
+# Understand source control and environments <a href="#understand-source-control-and-environments" id="understand-source-control-and-environments"></a>
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/2T2SmMUgiLyck7FDDwRD/" %}
+
+
+## Related resources
+
+* [Use source control and environments](./)
+* [Work with environments](work-with-environments.md)
+* [Use Git in n8n](use-git-in-n8n.md)
+* [Choose branching patterns](choose-branching-patterns.md)
+* [Set up source control](set-up-source-control.md)
+* [Push and pull changes](push-and-pull-changes.md)
+* [Compare versions](compare-versions.md)
+* [Move work between environments](move-work-between-environments.md)
+* [Use environments programmatically with the public API](use-environments-via-api.md)
+* [Tutorial: Create environments with source control](tutorial-create-environments-with-source-control.md)
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}

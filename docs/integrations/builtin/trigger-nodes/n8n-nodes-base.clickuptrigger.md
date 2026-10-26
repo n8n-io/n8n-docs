@@ -1,23 +1,42 @@
 ---
 title: ClickUp Trigger node documentation
-description: Learn how to use the ClickUp Trigger node in n8n. Follow technical documentation to integrate ClickUp Trigger node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the ClickUp Trigger node in n8n. Follow technical
+  documentation to integrate ClickUp Trigger node into your workflows.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: ClickUp Trigger node documentation
+originalFilePath: integrations/builtin/trigger-nodes/n8n-nodes-base.clickuptrigger.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.clickuptrigger
+url: >-
+  https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.clickuptrigger
+layout:
+  description:
+    visible: false
 ---
 
-# ClickUp Trigger node
+# ClickUp Trigger node <a href="#clickup-trigger-node" id="clickup-trigger-node"></a>
 
 [ClickUp](https://clickup.com/) is a cloud-based collaboration and project management tool suitable for businesses of all sizes and industries. Features include communication and collaboration tools, task assignments and statuses, alerts and a task toolbar.
 
-/// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/clickup.md).
-///
+{% hint style="info" %}
+**Credentials**
 
-///  note  | Examples and templates
+Refer to the [ClickUp credentials documentation](../credentials/clickup.md) for authentication information for this node.
+{% endhint %}
+
+{% hint style="info" %}
+**Examples and templates**
+
 For usage examples and templates to help you get started, refer to n8n's [ClickUp Trigger integrations](https://n8n.io/integrations/clickup-trigger/) page.
-///
+{% endhint %}
 
-## Events
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
+## Events <a href="#events" id="events"></a>
 
 * Key result
     * Created
@@ -46,9 +65,9 @@ For usage examples and templates to help you get started, refer to n8n's [ClickU
     * Time tracked updated
     * Updated
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for ClickUp. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.clickup.md).
+n8n provides an app node for ClickUp. Refer to the [ClickUp node documentation](../app-nodes/n8n-nodes-base.clickup.md) for more information.
 
 View [example workflows and related content](https://n8n.io/integrations/clickup-trigger/) on n8n's website.
 

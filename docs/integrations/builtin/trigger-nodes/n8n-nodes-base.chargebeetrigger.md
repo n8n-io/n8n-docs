@@ -1,22 +1,41 @@
 ---
 title: Chargebee Trigger node documentation
-description: Learn how to use the Chargebee Trigger node in n8n. Follow technical documentation to integrate Chargebee Trigger node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Chargebee Trigger node in n8n. Follow technical
+  documentation to integrate Chargebee Trigger node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Chargebee Trigger node documentation
+originalFilePath: integrations/builtin/trigger-nodes/n8n-nodes-base.chargebeetrigger.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.chargebeetrigger
+url: >-
+  https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.chargebeetrigger
+layout:
+  description:
+    visible: false
 ---
 
-# Chargebee Trigger node
+# Chargebee Trigger node <a href="#chargebee-trigger-node" id="chargebee-trigger-node"></a>
 
 [Chargebee](https://www.chargebee.com/) is a billing platform for subscription based SaaS and eCommerce businesses. Chargebee integrates with payment gateways to let you automate recurring payment collection along with invoicing, taxes, accounting, email notifications, SaaS Metrics and customer management.
 
-/// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/chargebee.md).
-///
+{% hint style="info" %}
+**Credentials**
 
-///  note  | Examples and templates
+Refer to the [Chargebee credentials documentation](../credentials/chargebee.md) for authentication information for this node.
+{% endhint %}
+
+{% hint style="info" %}
+**Examples and templates**
+
 For usage examples and templates to help you get started, refer to n8n's [Chargebee Trigger integrations](https://n8n.io/integrations/chargebee-trigger/) page.
-///
+{% endhint %}
 
-## Add webhook URL in Chargebee
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
+## Add webhook URL in Chargebee <a href="#add-webhook-url-in-chargebee" id="add-webhook-url-in-chargebee"></a>
 
 To add a Webhook URL in Chargebee:
 

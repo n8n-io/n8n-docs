@@ -1,0 +1,44 @@
+---
+description: Set up user management on n8n Cloud
+contentType: howto
+nodeTitle: Set up for Cloud
+originalFilePath: user-management/cloud-setup.md
+originalUrl: 'https://docs.n8n.io/user-management/cloud-setup'
+url: 'https://docs.n8n.io/administer/manage-users-and-access/set-up-for-cloud'
+layout:
+  description:
+    visible: false
+---
+
+# Set up user management on n8n Cloud <a href="#set-up-user-management-on-n8n-cloud" id="set-up-user-management-on-n8n-cloud"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+User management is available from n8n 0.195.0.
+{% endhint %}
+
+{% hint style="warning" %}
+**Irreversible upgrade**
+
+Once you upgrade your Cloud instance to an n8n version with user management, you can't downgrade your version.
+{% endhint %}
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
+## Step one: In-app setup <a href="#step-one-in-app-setup" id="step-one-in-app-setup"></a>
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/c0111xcskz1G8PKOQogB/" %}
+
+## Step two: Invite users <a href="#step-two-invite-users" id="step-two-invite-users"></a>
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/8qoOEjsLz4RnydVBogNy/" %}
+
+## Related resources
+
+* [Manage users and access](./)
+* [Add and remove users](add-and-remove-users.md)
+* [Understand instance roles](understand-instance-roles.md)
+* [Set permissions and roles (RBAC)](set-permissions-and-roles-rbac/README.md)
+* [Verify user identity](verify-user-identity/README.md)
+* [Follow best practices](follow-best-practices.md)

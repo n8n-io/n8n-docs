@@ -1,23 +1,38 @@
 ---
 title: GitLab node documentation
-description: Learn how to use the GitLab node in n8n. Follow technical documentation to integrate GitLab node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the GitLab node in n8n. Follow technical documentation to
+  integrate GitLab node into your workflows.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: GitLab node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.gitlab.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.gitlab'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.gitlab'
+layout:
+  description:
+    visible: false
 ---
 
-# GitLab node
+# GitLab node <a href="#gitlab-node" id="gitlab-node"></a>
 
 Use the GitLab node to automate work in GitLab, and integrate GitLab with other applications. n8n has built-in support for a wide range of GitLab features, including creating, updating, deleting, and editing issues, repositories, releases and users. 
 
 On this page, you'll find a list of operations the GitLab node supports and links to more resources.
 
-/// note | Credentials
-Refer to [GitLab credentials](/integrations/builtin/credentials/gitlab.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
---8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+Refer to [GitLab credentials](../credentials/gitlab.md) for guidance on setting up authentication.
+{% endhint %}
 
-## Operations
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * File
 	* Create
@@ -43,16 +58,26 @@ Refer to [GitLab credentials](/integrations/builtin/credentials/gitlab.md) for g
 * User
     * Returns the repositories of a user
 
-## Templates and examples
+## Working with subgroups and nested repositories
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'gitlab') ]]
+If your repository is located within nested GitLab groups or subgroups (for example, `https://gitlab.com/org/subgroup1/subgroup2/my-repo`), GitLab's API requires you to URL-encode the namespace path.
 
-## Related resources
+To configure the node for nested subgroups:
+
+1. **Project Owner**: Enter the full subgroup hierarchy up to the repository, replacing all forward slashes (`/`) with `%2F`. Example: `org%2Fsubgroup1%2Fsubgroup2`
+2. **Project Name**: Enter the project's repository slug. Example: `my-repo`
+
+
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
+
+
+[Browse GitLab node documentation integration templates](https://n8n.io/integrations/gitlab) or [search all templates](https://n8n.io/workflows/)
+
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [GitLab's documentation](https://docs.gitlab.com/ee/api/rest/) for more information about the service.
 
-n8n provides a trigger node for GitLab. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base.gitlabtrigger.md).
+n8n provides a trigger node for GitLab. Refer to the [GitLab Trigger node documentation](../trigger-nodes/n8n-nodes-base.gitlabtrigger.md) for more information.
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 

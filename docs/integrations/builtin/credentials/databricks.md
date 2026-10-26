@@ -1,30 +1,82 @@
 ---
 title: Databricks credentials
-description: Documentation for Databricks credentials. Use these credentials to authenticate Databricks in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Databricks credentials. Use these credentials to
+  authenticate Databricks in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Databricks credentials
+originalFilePath: integrations/builtin/credentials/databricks.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/databricks'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/databricks'
+layout:
+  description:
+    visible: false
 ---
 
-# Databricks credentials
+# Databricks credentials <a href="#databricks-credentials" id="databricks-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Databricks](/integrations/builtin/app-nodes/n8n-nodes-base.databricks.md)
+- [Databricks](../app-nodes/n8n-nodes-base.databricks.md)
+- [Databricks AI Agent](../cluster-nodes/root-nodes/n8n-nodes-langchain.databricksaiagent.md) (OAuth2 only, used for the MLflow trace export)
+- [Databricks Chat Model](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatdatabricks.md) (OAuth2 only)
+- [Databricks Genie One MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md) (OAuth2 with user login only)
+- [Databricks Lakebase Chat Memory](../cluster-nodes/sub-nodes/n8n-nodes-langchain.memorylakebasechat.md) (OAuth2 only)
+- [Databricks Trigger](../trigger-nodes/n8n-nodes-base.databrickstrigger.md)
+- [Databricks Vector Store](../cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoredatabricks/README.md) (OAuth2 only)
+- [Embeddings Databricks](../cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsdatabricks.md) (OAuth2 only)
 
-## Prerequisites
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 - A [Databricks](https://www.databricks.com/) workspace on AWS, Azure, or GCP.
-- A Databricks user account with sufficient permissions for the operations you want to perform.
+- For OAuth2 with user login: a Databricks account admin who can create a custom OAuth app connection in the account console.
+- For OAuth2 with a service principal: a Databricks admin who can create a service principal and generate an OAuth secret for it.
+- The [privileges](#required-databricks-privileges) the authenticating identity needs for the operations you want to run.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
-- Personal access token
-- OAuth2 (service principal)
+- [Personal access token](#using-a-personal-access-token): a token tied to one Databricks user. Supported by the Databricks node only, and not by its **Lakebase** resource.
+- [OAuth2 with user login](#using-oauth2-with-user-login): the credential is connected by signing in to a Databricks account in the browser. Operations run with that user's permissions and appear in Databricks audit logs under their identity. Each user can create their own credential to run workflows under their own account. Databricks recommends this for attended, interactive use.
+- [OAuth2 with a service principal](#using-oauth2-service-principal): n8n authenticates as a service principal with a client ID and secret, without user interaction. Databricks recommends this for unattended scenarios, such as fully automated production workflows.
 
-## Related resources
+## Required Databricks privileges
+
+The identity the credential authenticates as (the signed-in user or the service principal) needs these privileges in Databricks, depending on the operations you run:
+
+| Operations | Required privileges |
+|------------|--------------------|
+| All | The **Workspace access** entitlement |
+| Databricks SQL (Execute Query) | The **Databricks SQL access** entitlement and **CAN USE** on the SQL warehouse |
+| Job (Get, Get Run, Get Run Output) | **CAN VIEW** on the job |
+| Job (Run) | **CAN MANAGE RUN** on the job |
+| Lakebase | A Postgres role on the project's branch, granted to `authenticator`, with the table and function grants the operation needs. Refer to [Set up Lakebase for the Data API](#set-up-lakebase-for-the-data-api) |
+| Reading or writing Unity Catalog data | **USE CATALOG** on the catalog, **USE SCHEMA** on the schema, and **SELECT** on the tables or views you query. Functions and models also need **EXECUTE** |
+| Genie Agent (Databricks node) | **CAN RUN** on the Genie Agent and **CAN USE** on its SQL warehouse |
+| Genie One MCP server | **CAN RUN** on each Genie Agent that Genie One should answer from, and **CAN USE** on at least one SQL warehouse |
+| Model Serving (Query Endpoint) | **CAN QUERY** on the serving endpoint |
+| Unity AI Gateway model services (Databricks Chat Model, Embeddings Databricks) | **USE CATALOG** and **USE SCHEMA** on the catalog and schema that hold the model service, and **EXECUTE** on the model service. Databricks grants **EXECUTE** on the `system.ai` services to all users by default |
+| Searching a vector search index (Databricks Vector Store: Get Many, Retrieve Documents, Retrieve as Tool) | **USE CATALOG** on the catalog, **USE SCHEMA** on the schema, and **SELECT** on the index. **SELECT** on the source table of a Delta Sync index that syncs all of its columns lets the node list those columns. A self-managed index also needs the model service privileges above for the Embeddings Databricks node. **Metadata Filter** needs read access on the Vector Search endpoint |
+| Inserting documents (Databricks Vector Store: Insert Documents) | The privileges for searching, plus **MODIFY** on the index. Only Direct Access indexes accept inserts |
+| Exporting traces to MLflow (Databricks AI Agent) | **CAN EDIT** on the experiment. The default experiment the node creates under `/Shared` needs no extra grant, because all workspace users have **CAN MANAGE** on the `/Shared` folder by default |
+| Watching a job or pipeline (Databricks Trigger) | **CAN VIEW** on the job or pipeline |
+
+{% hint style="info" %}
+**New service principals start with no privileges**
+
+A freshly created service principal has no grants, so its first operations fail with permission errors that name the missing grant. Assign the privileges above before running workflows.
+{% endhint %}
+
+Refer to [Databricks entitlements](https://docs.databricks.com/aws/en/security/auth/entitlements), [Access control lists](https://docs.databricks.com/aws/en/security/auth/access-control/), and [Unity Catalog privileges](https://docs.databricks.com/aws/en/data-governance/unity-catalog/manage-privileges/privileges) for more information.
+
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Databricks' authentication documentation](https://docs.databricks.com/aws/en/dev-tools/auth/) for more information about the service.
 
-## Using a personal access token
+## Using a personal access token <a href="#using-a-personal-access-token" id="using-a-personal-access-token"></a>
 
 To configure this credential, you'll need:
 
@@ -41,13 +93,98 @@ To generate a personal access token:
 6. Copy the token and save it somewhere safe. You won't be able to view the token again after closing this dialog.
 7. Enter the token as the **Access Token** in your n8n credential.
 
-/// note | Token format
+{% hint style="info" %}
+**Token format**
+
 Personal access tokens start with `dapi`, for example `dapi1234abcd5678efgh`.
-///
+{% endhint %}
 
 Refer to [Databricks personal access token authentication](https://docs.databricks.com/en/dev-tools/auth/pat.html) for more information.
 
-## Using OAuth2 (service principal)
+## Using OAuth2 with user login
+
+This method uses the Databricks OAuth user-to-machine (U2M) flow. You connect the credential by signing in to Databricks in your browser, and operations run with your permissions. A shared credential runs as the user who connected it, so create separate credentials for separate identities.
+
+To configure this credential, you'll need:
+
+- A **Host**: The URL of your Databricks workspace (for example, `https://adb-1234567890123456.7.azuredatabricks.net`).
+- A **Client ID** and **Client Secret**: From a custom OAuth app connection a Databricks account admin creates in the account console.
+
+There are three steps to setting up this credential:
+
+1. [Create a custom OAuth app connection in Databricks](#create-a-custom-oauth-app-connection).
+2. Optionally [configure token lifetimes](#configure-token-lifetimes).
+3. [Set up the credential in n8n](#set-up-the-credential-in-n8n).
+
+{% hint style="info" %}
+**Account console access required**
+
+Creating a custom OAuth app connection requires the Databricks account console. Databricks Free Edition doesn't include account console access, so on Free Edition workspaces use a [service principal](#using-oauth2-service-principal) or a [personal access token](#using-a-personal-access-token) instead.
+{% endhint %}
+
+### Create a custom OAuth app connection
+
+A Databricks account admin needs to complete these steps:
+
+1. In n8n, open the Databricks credential and copy the **OAuth Redirect URL** (it has the form `https://<your-n8n-instance>/rest/oauth2-credential/callback`).
+2. Log in to the Databricks account console for your cloud ([AWS](https://accounts.cloud.databricks.com/), [Azure](https://accounts.azuredatabricks.net/), or [GCP](https://accounts.gcp.databricks.com/)) and select the **Settings** icon in the sidebar.
+3. On the **App connections** tab, select **Add connection**.
+4. Enter a name for the connection, for example `n8n`.
+5. Add the **OAuth Redirect URL** you copied from n8n as a redirect URL.
+6. Select the access scopes the connection needs. The **Databricks** node and the **Databricks Chat Model** node need **All APIs**. If the connection serves only the [Genie One MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md), select `genie` instead: the connection then can't reach other Databricks APIs, and users consent to a narrower grant. Databricks automatically allows the `offline_access` scope that n8n needs to stay connected. In n8n's testing, **All APIs** also covers the `genie` scope; if connecting the tile fails with a scope error, [add the `genie` scope](#add-the-genie-scope-for-the-genie-mcp-server).
+7. Enable client secret generation. n8n is a confidential client, so it needs a secret.
+8. Save the connection, then copy the **Client ID** and **Client Secret**. Databricks shows the secret only once.
+
+Share the client ID and secret with the n8n users who'll create credentials. All users reuse the same OAuth app connection, but each user creates and connects their own n8n credential to run with their own identity.
+
+Refer to [Enable or disable partner OAuth applications](https://docs.databricks.com/aws/en/integrations/enable-disable-oauth) for more information.
+
+### Add the genie scope for the Genie MCP server
+
+The [Databricks Genie One MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md) tile requests the `genie` and `offline_access` scopes. In n8n's testing, an app connection with **All APIs** satisfies the request without an explicit `genie` scope. On accounts where it doesn't, users see this error when they select **Connect my account** on the tile:
+
+```text
+access_denied: Scopes 'genie' are not assigned to the client <client-id>
+```
+
+To fix it, a Databricks account admin adds the `genie` scope to the app connection. If the connection's page in the account console offers `genie` in the **Add scope** picker, add it there. Otherwise, use the [Databricks CLI](https://docs.databricks.com/aws/en/dev-tools/cli/) authenticated against the account. The CLI update replaces the whole scope list, so include every scope the app needs. One app connection that serves the Databricks node, the Databricks Chat Model node, and the Genie One MCP server needs all three:
+
+```bash
+databricks account custom-app-integration update <integration-id> \
+	--json '{"scopes": ["all-apis", "genie", "offline_access"]}'
+```
+
+Find `<integration-id>` with `databricks account custom-app-integration list`, or on the connection's detail page in the account console. Refer to [Update Custom OAuth App Integration](https://docs.databricks.com/api/account/customappintegration/update) for the API reference.
+
+The Databricks consent screen shows the scopes assigned to the app connection, not the narrower set n8n requests. Users connecting the Genie One MCP server through an **All APIs** app see **All APIs** on the consent screen, even though the token n8n receives is scoped to `genie offline_access`.
+
+If the app connection serves only the Genie One MCP server, set the scopes to `["genie", "offline_access"]` instead. Users then see and consent to a narrower grant. The client also can't reach other Databricks APIs.
+
+### Configure token lifetimes
+
+The app connection's token access policy controls how long a user's connection to n8n stays valid:
+
+- **Access token TTL**: How long each access token lasts. Defaults to 60 minutes. n8n renews expired access tokens automatically using the refresh token, so you can keep the default.
+- **Refresh token TTL**: How long the refresh token lasts. Defaults to 10080 minutes (7 days), with a maximum of 129600 minutes (90 days). When the refresh token expires, the credential stops working until the user opens it in n8n and signs in again.
+
+Databricks account admins can also set an absolute session lifetime and single-use refresh tokens through the [account API or CLI](https://docs.databricks.com/aws/en/integrations/manage-oauth). An absolute session lifetime ends the session when it's reached, even if the refresh token is still valid.
+
+{% hint style="warning" %}
+**Short lifetimes force users to reconnect**
+
+A short refresh token TTL or absolute session lifetime means users must periodically re-open the credential in n8n and sign in again, and workflows using the credential fail in the meantime. For credentials that run scheduled workflows, set generous lifetimes or use a [service principal](#using-oauth2-service-principal) instead.
+{% endhint %}
+
+### Set up the credential in n8n
+
+1. Enter your workspace URL as the **Host**.
+2. Set **Grant Type** to **Authorization Code (User)**.
+3. Enter the **Client ID** and **Client Secret** from the custom OAuth app connection.
+4. Select **Connect my account** and sign in with your Databricks account.
+
+By default the credential requests the `all-apis` and `offline_access` scopes. The `offline_access` scope keeps the connection alive past one hour, so it's always included: if you enable **Custom Scopes** and remove it from the list, n8n adds it back automatically.
+
+## Using OAuth2 (service principal) <a href="#using-oauth2-service-principal" id="using-oauth2-service-principal"></a>
 
 This method uses a Databricks service principal with the OAuth M2M (machine-to-machine) flow. It's the recommended approach for automated workflows as it doesn't require user interaction.
 
@@ -62,7 +199,7 @@ There are two steps to setting up this credential:
 1. [Create a service principal and OAuth secret in Databricks](#create-a-service-principal-and-oauth-secret).
 2. [Set up the credential in n8n](#set-up-the-oauth2-credential).
 
-### Create a service principal and OAuth secret
+### Create a service principal and OAuth secret <a href="#create-a-service-principal-and-oauth-secret" id="create-a-service-principal-and-oauth-secret"></a>
 
 1. In the Databricks account console, select **User management**.
 2. Select **Service principals**, then select **Add service principal**.
@@ -72,17 +209,96 @@ There are two steps to setting up this credential:
 6. Set the secret's lifetime in days (maximum 730 days), then select **Generate**.
 7. Copy the displayed **Secret** and **Client ID** (the same as the application ID). The secret is shown only once.
 
-/// note | Workspace assignment
-The service principal must be assigned to the workspace it will access. Go to the **Permissions** tab and grant the required users or groups access to manage and use the service principal.
-///
+{% hint style="info" %}
+**Workspace assignment**
+
+The service principal must be assigned to the workspace it will access, with the **Workspace access** entitlement. A service principal that only exists at the account level fails with `invalid_client` from the workspace token endpoint, which looks like a wrong client secret. Go to the **Permissions** tab and grant the required users or groups access to manage and use the service principal.
+{% endhint %}
+
+{% hint style="warning" %}
+**OAuth secrets expire**
+
+Service principal secrets have a maximum lifetime of 730 days. When the secret expires, the credential stops working and workflows using it fail. Track the expiry date, generate a new secret before it's reached, and update the **Client Secret** in your n8n credential.
+{% endhint %}
 
 Refer to [Authorize service principal access to Databricks with OAuth](https://docs.databricks.com/en/dev-tools/auth/oauth-m2m.html) for more information.
 
-### Set up the OAuth2 credential
+### Set up the OAuth2 credential <a href="#set-up-the-oauth2-credential" id="set-up-the-oauth2-credential"></a>
 
 In your n8n credential:
 
 1. Set **Authentication** to **OAuth2**.
 2. Enter your workspace URL as the **Host**.
-3. Enter the **Client ID** you copied from the service principal.
-4. Enter the **Client Secret** you generated.
+3. Set **Grant Type** to **Client Credentials (Service Principal)**. This is the default.
+4. Enter the **Client ID** you copied from the service principal.
+5. Enter the **Client Secret** you generated.
+
+## Set up Lakebase for the Data API
+
+The **Lakebase** resource on the [Databricks node](../app-nodes/n8n-nodes-base.databricks.md#lakebase-operations) reads and writes rows over the Lakebase Data API. The API is off by default, and the identity the credential authenticates as needs a Postgres role before any operation works. Do these steps in this order. The steps have different scopes. You turn on the Data API and the OpenAPI specification once for each project. You create the Postgres role and grant it to `authenticator` once for each branch. You install the `databricks_auth` extension and grant privileges on tables and functions once for each database the node reaches.
+
+{% hint style="info" %}
+**The Data API doesn't accept personal access tokens**
+
+The node checks this before it calls the Data API, so a personal access token fails with `Lakebase requires OAuth2 authentication` rather than anything from Databricks. Set the node's **Authentication** to **OAuth2** and use [OAuth2 with user login](#using-oauth2-with-user-login) or [OAuth2 with a service principal](#using-oauth2-service-principal).
+{% endhint %}
+
+### Enable the Data API
+
+In Databricks, open the Lakebase project, then select **App Backend** > **Data API** > **Enable Data API**. There's no API or CLI for this step. Databricks creates the `authenticator` role that the grant below needs.
+
+The API exposes only the `public` schema by default. Add any other schema you want to reach in the same settings.
+
+### Turn on the OpenAPI specification
+
+In the same project, select **Data API** > **API** > **Advanced settings** > **OpenAPI specification**, then select **Follow privileges**. Select **Save** to apply the change, which then takes effect right away.
+
+The node reads this document to list tables, functions, a table's columns, and a function's arguments. Without it, the **Table**, **Function**, and column lists show an error, and the **Columns** and **Arguments** mappers stay empty with a notice. Each message names the same setting:
+
+```text
+Data API > API > Advanced settings > OpenAPI specification
+```
+
+**Follow privileges** lists only the objects the connected identity can use. **Ignore privileges** lists everything, including the internal tables and functions Databricks creates.
+
+### Create a Postgres role for the n8n identity
+
+Run this in the Lakebase SQL editor, as an identity that can manage the project:
+
+```sql
+CREATE EXTENSION IF NOT EXISTS databricks_auth;
+SELECT databricks_create_role('<identity>', 'SERVICE_PRINCIPAL');
+```
+
+`<identity>` is the service principal's application ID. For a user identity, pass the email address and `'USER'` instead.
+
+A Postgres extension belongs to one database. Run `CREATE EXTENSION` in every database the node reaches. The role covers the whole branch, not one database. Run `databricks_create_role` again on any branch that has no role for the identity. Without a role there, the Data API returns `invalid token permissions` (`PGRST301`).
+
+Create the role this way even if the identity already appears in the Databricks UI. The next step works only on a role created with `databricks_create_role`.
+
+### Grant the role to authenticator
+
+`<role>` is the identity you passed to `databricks_create_role`. Use the application ID for a service principal, or the email address for a user.
+
+```sql
+GRANT "<role>" TO authenticator;
+```
+
+Run this as the identity that created the role. No role reaches the Data API without this grant. Operations fail with `permission denied to set role` until you run it.
+
+Then grant the role what it needs on your data, the same as any other Postgres role. Run these in each database that holds a table or function the node uses:
+
+```sql
+GRANT USAGE ON SCHEMA <schema> TO "<role>";
+GRANT SELECT, INSERT, UPDATE, DELETE ON <table> TO "<role>";
+GRANT USAGE ON ALL SEQUENCES IN SCHEMA <schema> TO "<role>";
+GRANT EXECUTE ON FUNCTION <function>(<argument-types>) TO "<role>";
+```
+
+Schema `USAGE` matters for every schema except `public`. Without the sequence grant, an insert into a `serial` column fails with `permission denied for sequence`.
+
+{% hint style="warning" %}
+**Don't connect as the project owner**
+
+Databricks excludes the database owner from the Data API by design. The owner can't grant their own role to `authenticator`, and the grant fails with `permission denied to grant role`. Use an identity that doesn't own the project.
+{% endhint %}

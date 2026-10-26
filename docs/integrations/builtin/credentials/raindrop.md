@@ -1,28 +1,41 @@
 ---
 title: Raindrop credentials
-description: Documentation for Raindrop credentials. Use these credentials to authenticate Raindrop in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Raindrop credentials. Use these credentials to authenticate
+  Raindrop in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Raindrop credentials
+originalFilePath: integrations/builtin/credentials/raindrop.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/raindrop'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/raindrop'
+layout:
+  description:
+    visible: false
 ---
 
-# Raindrop credentials
+# Raindrop credentials <a href="#raindrop-credentials" id="raindrop-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Raindrop](/integrations/builtin/app-nodes/n8n-nodes-base.raindrop.md)
+- [Raindrop](../app-nodes/n8n-nodes-base.raindrop.md)
 
-## Prerequisites
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Raindrop](https://raindrop.io/) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - OAuth2
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Raindrop's API documentation](https://developer.raindrop.io/) for more information about the service.
 
-## Using OAuth
+## Using OAuth <a href="#using-oauth" id="using-oauth"></a>
 
 To configure this credential, you'll need:
 

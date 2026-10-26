@@ -1,0 +1,599 @@
+---
+title: OpenTelemetry tracing
+description: >-
+  Send workflow and node execution traces from n8n to an OpenTelemetry
+  collector.
+contentType: howto
+nodeTitle: Trace executions with OpenTelemetry
+originalFilePath: hosting/logging-monitoring/opentelemetry.md
+originalUrl: 'https://docs.n8n.io/hosting/logging-monitoring/opentelemetry'
+url: >-
+  https://docs.n8n.io/deploy/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry
+layout:
+  description:
+    visible: false
+status: preview
+tags:
+  - tag: preview
+    primary: true
+---
+
+# OpenTelemetry tracing <a href="#opentelemetry-tracing" id="opentelemetry-tracing"></a>
+{% hint style="info" %}
+**Preview status**
+
+OpenTelemetry tracing is in Preview from n8n 2.19.0 and may change in future releases. Avoid relying on it in production workflows. n8n plans to add OpenTelemetry-formatted metrics in a later release.
+{% endhint %}
+
+n8n can emit [OpenTelemetry](https://opentelemetry.io/) traces for workflow and node executions. Use these traces to monitor execution latency, debug failures, and track requests across services in your observability stack.
+
+Watch an overview of OpenTelemetry tracing in n8n:
+
+{% embed url="https://www.youtube.com/embed/xOi8K_-GLRM" %}
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
+## What you get <a href="#what-you-get" id="what-you-get"></a>
+
+When you turn on tracing, n8n exports two kinds of spans for each execution:
+
+- **`workflow.execute`**: One span per workflow execution. It records the workflow ID, name, version, project, node count, execution mode, status, and any error type.
+- **`node.execute`**: One span per node execution, nested inside its workflow span. It records the node ID, name, type, version, the number of input and output items, and the execution, workflow, and project it belongs to.
+
+n8n exports a span when it ends. To see a run while it's still going, turn on [start spans](#start-spans).
+
+Each span includes resource attributes that identify the n8n instance:
+
+- `service.name` (default `n8n`)
+- `service.version` (the n8n version)
+- `n8n.instance.id`
+- `n8n.instance.role` (for example, `main`, `worker`, or `webhook`)
+
+n8n also handles trace context propagation:
+
+- **Inbound**: If a webhook request includes a [W3C `traceparent` header](https://www.w3.org/TR/trace-context/), n8n uses it as the parent for the workflow span. This links the n8n workflow trace to the upstream caller.
+- **Outbound**: HTTP Request nodes (and other nodes that use the n8n HTTP helpers) can inject a `traceparent` header into outbound requests. Downstream services that support W3C trace context can therefore continue the trace.
+- **Sub-workflows**: A sub-workflow's span uses the parent workflow's span as its parent.
+- **Resumed workflows**: When a workflow resumes after a wait, the new span links back to the previous span using a span link.
+
+## Enable tracing in the UI <a href="#enable-tracing-in-the-ui" id="enable-tracing-in-the-ui"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+Configuring OpenTelemetry tracing from the UI is available from n8n 2.27.0. You need to be an instance owner or admin to configure OpenTelemetry in the UI.
+{% endhint %}
+
+Instead of setting environment variables, you can configure tracing from **Settings > OpenTelemetry**. n8n applies your changes without a restart, and reloads them across workers and webhook processors in [queue mode](../configure-n8n/scaling/enable-queue-mode.md).
+
+To configure tracing:
+
+1. Select **Settings > OpenTelemetry**.
+1. Turn on **Enable OpenTelemetry**.
+1. Under **Collector connection**, enter your **OTLP endpoint** and any other connection details.
+1. Under **Tracing**, set your sampling and span options.
+1. Select **Save settings**.
+
+To check that n8n can reach your collector, select **Send test trace** under **Verify configuration**. n8n sends a single test span and reports whether the collector accepted it. You can run this before or after you save.
+
+Each field maps to an environment variable, shown in the field's tooltip. For the full list, see [OpenTelemetry environment variables](../configure-n8n/basic-configuration/use-environment-variables/opentelemetry.md).
+
+{% hint style="info" %}
+**Environment variables take precedence**
+
+If you set an option with an environment variable, n8n uses that value and disables the matching field in the UI. To manage a setting from the UI, leave its environment variable unset. When n8n restarts, environment variables override the values saved in the UI.
+{% endhint %}
+
+## Enable tracing with environment variables <a href="#enable-tracing-with-environment-variables" id="enable-tracing-with-environment-variables"></a>
+
+Set the following environment variables on each n8n instance you want workflow tracing enabled (main, workers, and webhook processors):
+
+```bash
+export N8N_OTEL_ENABLED=true
+export N8N_OTEL_EXPORTER_OTLP_ENDPOINT=http://<your-collector-host>:4318
+```
+
+Restart n8n. The instance starts exporting spans over OTLP HTTP using the Protobuf encoding. To export over gRPC instead, refer to [Choose the OTLP protocol](#choose-the-otlp-protocol).
+
+n8n appends `/v1/traces` to the endpoint by default. Point `N8N_OTEL_EXPORTER_OTLP_ENDPOINT` at the base URL of your collector, not the traces path. The endpoint must be an `http://` or `https://` URL. If you set another scheme, or no scheme, n8n logs a warning and uses the default endpoint.
+
+If your collector needs authentication, set `N8N_OTEL_EXPORTER_OTLP_HEADERS` to a comma-separated list of `key=value` pairs:
+
+```bash
+export N8N_OTEL_EXPORTER_OTLP_HEADERS="authorization=Bearer <your-token>,x-tenant=acme"
+
+// For added protection - It is recommended to use the `_FILE` postfix if you are putting a token in here:
+export N8N_OTEL_EXPORTER_OTLP_HEADERS_FILE=/mnt/otel-headers
+```
+
+For the full list of supported variables, refer to [OpenTelemetry environment variables](../configure-n8n/basic-configuration/use-environment-variables/opentelemetry.md).
+
+{% hint style="info" %}
+**Queue mode**
+
+In [queue mode](../configure-n8n/scaling/enable-queue-mode.md), the OpenTelemetry variables must be set on all instances. Trace context is propagated between instances.
+{% endhint %}
+
+## Choose the OTLP protocol
+
+{% hint style="info" %}
+**Feature availability**
+
+The OTLP gRPC protocol, with the **Protocol** setting and the `N8N_OTEL_EXPORTER_OTLP_PROTOCOL` environment variable, is available from n8n 2.39.0.
+{% endhint %}
+
+n8n can export traces over two OTLP transports:
+
+- **`http/protobuf`** (default): OTLP over HTTP with Protobuf encoding. Collectors listen for it on port 4318 by convention. It works through proxies, ingresses, and firewalls that don't support HTTP/2, and it's simpler to debug.
+- **`grpc`**: OTLP over gRPC. Collectors listen for it on port 4317 by convention. HTTP/2 multiplexing and binary framing give it lower overhead per export. The difference matters most at high span volume. It needs HTTP/2 support end to end. Some proxies and load balancers require explicit configuration for HTTP/2.
+
+Keep the default `http/protobuf` unless your collector only accepts gRPC, or you export a high trace volume through infrastructure that supports HTTP/2.
+
+To select the protocol, set the **Protocol** field in **Settings > OpenTelemetry**, or set the environment variable:
+
+```bash
+export N8N_OTEL_EXPORTER_OTLP_PROTOCOL=grpc
+```
+
+The variable name and its values (`http/protobuf` and `grpc`) match the upstream [`OTEL_EXPORTER_OTLP_PROTOCOL`](https://opentelemetry.io/docs/specs/otel/protocol/exporter/) specification. As with the other fields in **Settings > OpenTelemetry**, n8n disables the **Protocol** field when you set the environment variable.
+
+### TLS
+
+The endpoint scheme controls TLS for both protocols. `https://` turns TLS on and `http://` turns it off. n8n doesn't accept a `grpc://` scheme.
+
+To trust a custom certificate authority, or to present a client certificate for mutual TLS (mTLS), use the upstream OpenTelemetry variables `OTEL_EXPORTER_OTLP_CERTIFICATE`, `OTEL_EXPORTER_OTLP_CLIENT_KEY`, and `OTEL_EXPORTER_OTLP_CLIENT_CERTIFICATE`. For the `http/protobuf` protocol, `NODE_EXTRA_CA_CERTS` also works. n8n has no setting of its own for certificates.
+
+### gRPC behavior
+
+The `grpc` protocol differs from `http/protobuf` in these ways:
+
+- **Include the port in the endpoint.** A gRPC endpoint without an explicit port connects to port 443, the gRPC default, not 4317. Write `http://<your-collector-host>:4317`.
+- **gRPC endpoints take no URL path.** n8n ignores the **Trace path** setting (`N8N_OTEL_EXPORTER_OTLP_TRACING_PATH`) and hides its row in the UI. n8n keeps the saved value and applies it again if you switch back to `http/protobuf`.
+- **Custom headers become gRPC metadata.** n8n converts the keys to lowercase. It skips entries that gRPC rejects, including `-bin`-suffixed keys with text values, and logs a warning instead of failing startup.
+- **The startup connectivity check waits for the gRPC channel to become ready.** A ready channel proves that n8n can open a TCP connection, complete the TLS handshake for `https://`, and establish an HTTP/2 connection. It doesn't prove that the endpoint serves OTLP. Use **Send test trace** in **Settings > OpenTelemetry** to confirm that the collector receives spans. The check doesn't block startup.
+
+## Sampling <a href="#sampling" id="sampling"></a>
+
+By default, n8n exports every trace. To reduce volume in busy instances, set `N8N_OTEL_TRACES_SAMPLE_RATE` to a value between `0` and `1`:
+
+```bash
+# Export 10% of traces <a href="#export-10percent-of-traces" id="export-10percent-of-traces"></a>
+export N8N_OTEL_TRACES_SAMPLE_RATE=0.1
+```
+
+n8n uses a trace ID ratio sampler, so the same trace ID is either fully sampled or fully dropped across all spans in the trace.
+
+{% hint style="info" %}
+By default, n8n only outputs traces for [production executions](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/understand-executions/types-of-executions). To output traces for all workflow executions, set `N8N_OTEL_TRACES_PRODUCTION_ONLY=false`.
+{% endhint %}
+
+## Reduce span volume <a href="#reduce-span-volume" id="reduce-span-volume"></a>
+
+Each node in a workflow produces its own span. For workflows with lots of nodes, this can produce more data than you need. To export only workflow-level spans, set:
+
+```bash
+export N8N_OTEL_TRACES_INCLUDE_NODE_SPANS=false
+```
+
+To stop n8n from injecting `traceparent` headers into outbound HTTP requests, set:
+
+```bash
+export N8N_OTEL_TRACES_INJECT_OUTBOUND=false
+```
+
+## Start spans
+
+{% hint style="info" %}
+**Feature availability**
+
+Start spans are available from n8n 2.44.0.
+{% endhint %}
+
+A long-running workflow or node is invisible in your backend until its span ends. With start spans on, n8n also sends a 0 ms child span the moment the workflow or node starts. The start span carries the same attributes as its parent at that moment, so you know right away what's running, and in which workflow and project.
+
+| Start span | Parent | Setting | Environment variable |
+| :--------- | :----- | :------ | :------------------- |
+| `workflow.execute.started` | `workflow.execute` | **Send workflow start spans** | `N8N_OTEL_TRACES_EMIT_WORKFLOW_START_SPAN` |
+| `node.execute.started` | `node.execute` | **Send node start spans** | `N8N_OTEL_TRACES_EMIT_NODE_START_SPAN` |
+
+Both are off by default. Turn them on under **Settings > OpenTelemetry > Tracing**, or set the environment variables to `true`. Node start spans also need **Include node spans** (`N8N_OTEL_TRACES_INCLUDE_NODE_SPANS`) on. In queue mode, set the variables on the main instance and on every worker.
+
+To use the public API, call `PUT /api/v1/settings/otel` with `emitWorkflowStartSpan` and `emitNodeStartSpan`, using an API key with the `otel:manage` scope. This call replaces all OpenTelemetry settings. n8n rejects a body that leaves out a required field. If you leave out an optional field, `exporterProtocol`, `emitWorkflowStartSpan`, or `emitNodeStartSpan`, n8n resets it to its default.
+
+## Crashed executions
+
+{% hint style="info" %}
+**Feature availability**
+
+Spans for crashed executions are available from n8n 2.42.0.
+{% endhint %}
+
+An execution is `crashed` when the n8n instance running it stopped without recording a result, for example after an out-of-memory kill or a container eviction. n8n marks the execution `crashed` later, once it notices the execution can't finish. Before n8n 2.42.0, these executions produced no span, so the error rate in your trace backend missed every platform failure. From n8n 2.42.0, a crashed execution produces one `workflow.execute` span.
+
+### Receive crashed spans
+
+The instance that notices the crash emits the span, not the instance that ran the execution. In [queue mode](../configure-n8n/scaling/enable-queue-mode.md), that's the main instance, so enable OpenTelemetry on the main instance, not only on the workers. In regular mode, the single main instance runs and checks its own executions, so the normal setup covers it.
+
+### Read a crashed span
+
+A crashed span carries the usual [workflow span attributes](#workflow-span-workflowexecute) plus:
+
+| Attribute | Value |
+| :-------- | :---- |
+| `n8n.execution.status` | `crashed` |
+| `n8n.execution.error_type` | `WorkflowCrashedError` |
+| `n8n.execution.crash.detector` | Which check found the crash. See [How n8n detects a crash](#how-n8n-detects-a-crash). |
+| `n8n.execution.reconstructed` | `false` when n8n ended the original span, `true` when it rebuilt one. See [Tracked and rebuilt spans](#tracked-and-rebuilt-spans). |
+
+The span has status error and an `exception` event.
+
+### How n8n detects a crash
+
+| Detector | Meaning |
+| :------- | :------ |
+| `stall` | Queue mode. The worker stopped renewing its job lock. |
+| `queue-recovery` | Queue mode. A periodic check found a running execution with no job in the queue. |
+| `startup-recovery` | n8n restarted and found an execution still marked as running. |
+| `start-failure` | The execution couldn't start. |
+| `workflow-deactivation` | Someone unpublished the workflow while it had executions in progress. |
+
+### Tracked and rebuilt spans
+
+The instance that starts an execution opens its `workflow.execute` span. If the same instance detects the crash, it ends that span in place with `n8n.execution.reconstructed=false`. The span keeps every attribute set at start. Node spans still open on that instance end with `n8n.node.termination_reason=workflow_crashed`.
+
+If a different instance detects the crash, for example after the main instance restarted, no open span exists. n8n rebuilds a `workflow.execute` span in the same trace from the trace context stored on the execution, with `n8n.execution.reconstructed=true`. A rebuilt span carries the workflow ID, workflow name, workflow version ID, project ID, project and workflow [custom span attributes](#custom-span-attributes), execution ID, execution mode, `n8n.execution.is_retry`, and `n8n.execution.retry_of`. It lacks:
+
+- `n8n.workflow.node_count`.
+- Node spans of its own. Node spans exported before the crash stay in the trace. The node that was running when the instance died has no span.
+- A span link to the previous span, when the execution had resumed from a wait.
+
+Its workflow custom attributes come from the workflow's current settings, not the version that ran.
+
+### Crashed execution caveats
+
+- **Duration is detection lag, not run time.** A crashed span ends when n8n detected the crash, not when the instance died. That's one to two minutes for `stall`, the next periodic check for `queue-recovery`, and the next restart for `startup-recovery`. Exclude spans with `n8n.execution.status=crashed` from latency metrics. Count them in error-rate metrics only.
+- **Rebuilt spans show a missing parent.** The stored trace context is the original span's ID, and OpenTelemetry can't reuse a span ID. The rebuilt span is a child of the span that never ended, so Jaeger and similar backends flag a missing parent. Expect the warning.
+- **Stalled queue jobs changed status.** Before n8n 2.42.0, a job whose worker died ended as `error`. From n8n 2.42.0 it ends as `crashed` with detector `stall`. Alerts that match only `n8n.execution.status=error` miss these.
+
+## Agent tracing <a href="#agent-tracing" id="agent-tracing"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+Agent tracing is available from n8n 2.33.0.
+{% endhint %}
+
+n8n can also emit detailed spans for agent runs built with the Agents feature, using the same tracer as workflow tracing. This covers agent runs started from a workflow, from chat integrations, and from scheduled tasks.
+
+{% hint style="warning" %}
+**Legacy AI Agent node**
+
+This section covers tracing for the new Agents feature. The older AI Agent (LangChain) node only produces the standard `node.execute` span like any other node. It doesn't emit the `gen_ai.*` agent-run or tool-call spans.
+{% endhint %}
+
+Agent tracing rides along with the rest of the OTel module. With `N8N_OTEL_ENABLED` turned on, add:
+
+```bash
+export N8N_AGENTS_TRACING_ENABLED=true
+```
+
+Set it to `false` to keep workflow and node spans while dropping agent spans.
+
+By default, agent tracing records prompts, tool arguments, responses, and tool results. To exclude sensitive input or output data:
+
+```bash
+export N8N_AGENTS_TRACING_RECORD_INPUTS=false
+export N8N_AGENTS_TRACING_RECORD_OUTPUTS=false
+```
+
+For the full list of variables, refer to [OpenTelemetry environment variables](../configure-n8n/basic-configuration/use-environment-variables/opentelemetry.md).
+
+### What you get <a href="#what-you-get-agents" id="what-you-get-agents"></a>
+
+Each agent run produces one root span, named `<agent name>.generate` or `<agent name>.stream` depending on whether the run streams its response. Each tool call the agent makes produces a nested `execute_tool <tool name>` span.
+
+These spans use the OpenTelemetry [GenAI semantic conventions](https://opentelemetry.io/docs/specs/semconv/gen-ai/) (`gen_ai.*` attributes), so they're readable in any OTLP backend, not just tools built for LangSmith.
+
+## Custom span attributes <a href="#custom-span-attributes" id="custom-span-attributes"></a>
+
+You can add custom attributes to project, workflow, and node spans. n8n exports each custom attribute as an OpenTelemetry span attribute to your configured observability backend.
+
+{% hint style="info" %}
+**Feature availability**
+
+Custom span attributes are available on:
+
+- **Self-hosted:** Enterprise
+
+They aren't available on n8n Cloud.
+
+Project and workflow custom span attributes are available from n8n 2.24.0. Node custom span attributes are available from n8n 2.22.0.
+{% endhint %}
+
+Don't include secrets, personal data, or other sensitive values in attribute values.
+
+n8n supports the following custom attribute levels:
+
+| Level | Configure in | Exported span | Default attribute prefix |
+| :---- | :----------- | :------------ | :--------------- |
+| Project | **Project settings** | `workflow.execute` | `n8n.project.custom.<key>` |
+| Workflow | **Workflow settings** | `workflow.execute` | `n8n.workflow.custom.<key>` |
+| Node | Node **Settings** tab | `node.execute` | `n8n.node.custom.<key>` |
+
+### Add project span attributes <a href="#add-project-span-attributes" id="add-project-span-attributes"></a>
+
+To add project-level span attributes:
+
+1. Open a project.
+1. Select **Project settings**.
+1. Under **Custom Span Attributes**, add one or more span attributes.
+1. Select **Save**.
+
+Use plain text for project attribute values.
+
+### Add workflow span attributes <a href="#add-workflow-span-attributes" id="add-workflow-span-attributes"></a>
+
+To add workflow-level span attributes:
+
+1. Open the workflow.
+1. Open **Workflow settings**.
+1. Under **Custom Span Attributes**, select **Configure**.
+1. Add one or more span attributes.
+1. Select **Save**.
+
+Use plain text for workflow attribute values.
+
+### Add node span attributes <a href="#add-node-span-attributes" id="add-node-span-attributes"></a>
+
+To add node-level span attributes:
+
+1. Open the node and select the **Settings** tab.
+1. Under **Custom Span Attributes**, select **Add Attribute**.
+1. Enter a **Key**. Keys must be plain text.
+1. Enter a **Value**. Values can be plain text or expressions, such as `={{ $json.environment }}`.
+
+Node attribute values must resolve to a string, number, or boolean.
+
+### Add attributes programmatically in a custom node <a href="#add-attributes-programmatically-in-a-custom-node" id="add-attributes-programmatically-in-a-custom-node"></a>
+
+If you're [building a custom node](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/overview), you can attach custom key-value pairs from code. Call `setMetadata` from the node's `execute` method:
+
+```typescript
+async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
+	this.setMetadata({
+		tracing: {
+			'llm.model': 'gpt-4o',
+			'llm.token.input': 1500,
+			'llm.token.output': 340,
+		},
+	});
+
+	return [this.getInputData()];
+}
+```
+
+By default, n8n prefixes each key with `n8n.node.custom.`. You can [change the attribute prefixes](#change-the-attribute-prefixes). Values must be strings, numbers, or boolean.
+
+This API isn't available from the Code node. It's intended for node authors who want to enrich spans with domain-specific data.
+
+If a node sets an attribute key here that's also configured as a [custom node span attribute](#add-node-span-attributes), the programmatic value takes precedence.
+
+### Change the attribute prefixes
+
+{% hint style="info" %}
+**Feature availability**
+
+Custom attribute prefixes are available from n8n 2.46.0.
+{% endhint %}
+
+n8n adds a prefix to custom attribute keys. To change or remove the prefix, set `N8N_OTEL_TRACES_CUSTOM_ATTRIBUTE_PREFIXES` to a JSON object. The object accepts these keys, each with a string value:
+
+| Key | Sets the prefix for | Default prefix |
+| :-- | :------------------ | :------------- |
+| `project` | Project attributes | `n8n.project.custom.` |
+| `workflow` | Workflow attributes | `n8n.workflow.custom.` |
+| `node` | Node attributes | `n8n.node.custom.` |
+
+An empty string removes the prefix. A key you leave out keeps its default prefix. Set the same value on the main instance, workers, and webhook processors.
+
+To remove both prefixes and use attribute names exactly as entered in the UI:
+
+```bash
+# A project attribute named team becomes team
+export N8N_OTEL_TRACES_CUSTOM_ATTRIBUTE_PREFIXES='{"project":"","node":""}'
+```
+
+Set custom prefixes:
+
+```bash
+# A project attribute named team becomes acme.project.team
+export N8N_OTEL_TRACES_CUSTOM_ATTRIBUTE_PREFIXES='{"project":"acme.project.","node":"acme.node."}'
+```
+
+Change only one prefix:
+
+```bash
+# A project attribute named team becomes acme.team
+# Node attributes keep their default prefix
+export N8N_OTEL_TRACES_CUSTOM_ATTRIBUTE_PREFIXES='{"project":"acme."}'
+```
+
+If the value isn't valid JSON, uses any other key, or has a non-string value, n8n logs a warning and uses the default prefixes for all levels.
+
+{% hint style="warning" %}
+**OpenTelemetry standard attributes**
+
+n8n doesn't check custom keys against the [OpenTelemetry semantic conventions](https://opentelemetry.io/docs/specs/semconv/). If your key matches a standard attribute, such as `user.id` or `http.request.method`, your backend reads your value as that attribute. Avoid standard keys unless your value has the standard meaning.
+{% endhint %}
+
+## Try it out with Jaeger <a href="#try-it-out-with-jaeger" id="try-it-out-with-jaeger"></a>
+
+You can send traces to a local [Jaeger](https://www.jaegertracing.io/) instance to see them in action.
+
+1. Save the following as `docker-compose.yml`:
+
+```yaml
+services:
+  jaeger:
+    image: jaegertracing/jaeger:latest
+    ports:
+      - "16686:16686" # UI
+      - "4317:4317"   # OTLP gRPC
+      - "4318:4318"   # OTLP HTTP
+```
+
+2. Start Jaeger:
+
+```bash
+docker compose up -d
+```
+
+3. Start n8n with tracing turned on and pointed at Jaeger. Refer to [starting n8n](https://github.com/n8n-io/n8n/blob/master/CONTRIBUTING.md) for setup details:
+
+```bash
+N8N_OTEL_ENABLED=true N8N_OTEL_EXPORTER_OTLP_ENDPOINT=http://127.0.0.1:4318 n8n start
+```
+
+5. Run a workflow, then open the Jaeger UI at [http://localhost:16686](http://localhost:16686) - Select "n8n" as service" and click "Find traces" to see the OpenTelemetry traces emitted by n8n.
+
+## Span attributes <a href="#span-attributes" id="span-attributes"></a>
+
+Workflow and node spans include the following n8n-specific attributes.
+
+### Workflow span (`workflow.execute`) <a href="#workflow-span-workflowexecute" id="workflow-span-workflowexecute"></a>
+
+| Attribute | Description |
+| :-------- | :---------- |
+| `n8n.workflow.id` | Workflow ID. |
+| `n8n.workflow.name` | Workflow name. |
+| `n8n.workflow.version_id` | Workflow version ID. |
+| `n8n.workflow.node_count` | Number of nodes in the workflow. Absent on a [rebuilt span](#tracked-and-rebuilt-spans) for a crashed execution. |
+| `n8n.project.id` | Project ID. Available from n8n 2.23.0. |
+| `n8n.project.name` | Project name. Team projects only: a personal project's name contains its owner's name and email, so n8n leaves it out. Available from n8n 2.44.0. |
+| `n8n.execution.id` | Execution ID. |
+| `n8n.execution.mode` | Execution mode (for example, `manual`, `webhook`, `trigger`, `retry`). |
+| `n8n.execution.status` | Final execution status, including `crashed` for a [crashed execution](#crashed-executions). |
+| `n8n.execution.is_retry` | `true` if the execution is a retry. |
+| `n8n.execution.retry_of` | The original execution ID, when the execution is a retry. |
+| `n8n.execution.error_type` | Error class name, set when the execution fails. `WorkflowCrashedError` on a crash. |
+| `n8n.execution.crash.detector` | Which check found the crash: `stall`, `queue-recovery`, `startup-recovery`, `start-failure`, or `workflow-deactivation`. See [How n8n detects a crash](#how-n8n-detects-a-crash). Available from n8n 2.42.0. |
+| `n8n.execution.reconstructed` | `true` when n8n rebuilt the span after a crash, `false` when it ended the original span. See [Tracked and rebuilt spans](#tracked-and-rebuilt-spans). Available from n8n 2.42.0. |
+| `n8n.continuation.reason` | Set on a span link when the workflow resumes after a wait. |
+| `n8n.project.custom.<key>` | Custom attributes set through [project-level custom span attributes](#custom-span-attributes). |
+| `n8n.workflow.custom.<key>` | Custom attributes set through [workflow-level custom span attributes](#custom-span-attributes). |
+
+### Node span (`node.execute`) <a href="#node-span-nodeexecute" id="node-span-nodeexecute"></a>
+
+| Attribute | Description |
+| :-------- | :---------- |
+| `n8n.node.id` | Node ID. |
+| `n8n.node.name` | Node name. |
+| `n8n.node.type` | Node type (for example, `n8n-nodes-base.httpRequest`). |
+| `n8n.node.type_version` | Node type version. |
+| `n8n.node.items.input` | Number of input items the node received. |
+| `n8n.node.items.output` | Number of output items the node produced. |
+| `n8n.node.termination_reason` | Why a node span ended without a normal completion (for example, `workflow_cancelled` or `workflow_crashed`). |
+| `n8n.node.custom.<key>` | Custom attributes set through [node-level custom span attributes](#custom-span-attributes) in the node settings or `metadata.tracing` in custom node code. |
+
+From n8n 2.44.0, node spans also carry `n8n.execution.id`, `n8n.workflow.id`, `n8n.workflow.name`, `n8n.project.id`, and `n8n.project.name`, with the same values as their workflow span. To find every span of one execution in Jaeger, search for the tag `n8n.execution.id=<execution-id>`.
+
+When a node fails, n8n records an `exception` event on the span with the standard OpenTelemetry exception attributes (`exception.type`, `exception.message`, `exception.stacktrace`).
+
+### Agent run span (`<agent name>.generate` or `<agent name>.stream`) <a href="#agent-run-span" id="agent-run-span"></a>
+
+| Attribute | Description |
+| :-------- | :---------- |
+| `gen_ai.operation.name` | Always `invoke_agent`. |
+| `gen_ai.agent.name` | Agent name. |
+| `gen_ai.request.model` | Model ID, as `<provider>/<model name>`, when known. |
+| `gen_ai.conversation.id` | Thread ID. |
+| `gen_ai.prompt` | Serialized prompt, tool count, and tool catalog. Omitted when `N8N_AGENTS_TRACING_RECORD_INPUTS` is `false`. |
+| `agent_id` | Agent ID. |
+| `project_id` | Project ID. |
+| `thread_id` | Thread ID. |
+| `source` | Where the run started (for example, `workflow`, or a chat integration name). |
+| `user_id` | User ID, when known. |
+| `model_id` | Model ID, as `<provider>/<model name>`, when known. |
+| `execution_id` | Execution ID, for workflow-triggered runs. |
+| `workflow_id` | Workflow ID, for workflow-triggered runs. |
+| `node_id` | Node ID, for workflow-triggered runs. |
+
+### Tool call span (`execute_tool <tool name>`) <a href="#tool-call-span" id="tool-call-span"></a>
+
+| Attribute | Description |
+| :-------- | :---------- |
+| `gen_ai.operation.name` | Always `execute_tool`. |
+| `gen_ai.tool.name` | Tool name. |
+| `gen_ai.tool.call.id` | Tool call ID. |
+| `gen_ai.agent.name` | Agent name. |
+| `gen_ai.tool.call.arguments` | Tool call arguments. Omitted when `N8N_AGENTS_TRACING_RECORD_INPUTS` is `false`. |
+| `gen_ai.tool.call.result` | Tool call result. Omitted when `N8N_AGENTS_TRACING_RECORD_OUTPUTS` is `false`. |
+
+## Troubleshooting <a href="#troubleshooting" id="troubleshooting"></a>
+
+### No traces appear in your backend <a href="#no-traces-appear-in-your-backend" id="no-traces-appear-in-your-backend"></a>
+
+If n8n can't reach the OTLP endpoint at startup, it logs an error:
+
+```
+Failed to connect to OpenTelemetry OTLP endpoint during startup
+```
+
+Check that:
+
+- `N8N_OTEL_ENABLED` is set to `true`.
+- `N8N_OTEL_EXPORTER_OTLP_ENDPOINT` points at the base URL of the collector (not the `/v1/traces` path).
+- The collector is reachable from the n8n container or host.
+- Any required `N8N_OTEL_EXPORTER_OTLP_HEADERS` (such as authentication tokens) are set.
+
+If you use the `grpc` protocol, also check that the endpoint includes an explicit port. Without one, n8n connects to port 443, not 4317.
+
+n8n logs OpenTelemetry diagnostics at `warn` level by default. Set `N8N_LOG_LEVEL=debug` to see more detail.
+
+### Startup connectivity error with gRPC and a private CA
+
+The startup connectivity check for the `grpc` protocol uses the default TLS trust store. It doesn't read `OTEL_EXPORTER_OTLP_CERTIFICATE`, `OTEL_EXPORTER_OTLP_CLIENT_KEY`, or `OTEL_EXPORTER_OTLP_CLIENT_CERTIFICATE`, while the exporter honors them. A collector behind a private certificate authority, or one that requires mTLS, can fail the check and log `Failed to connect to OpenTelemetry OTLP endpoint during startup` while exporting works. The check doesn't block startup. Use **Send test trace** in **Settings > OpenTelemetry** to confirm that the collector receives spans.
+
+### Custom span attributes are missing <a href="#custom-span-attributes-are-missing" id="custom-span-attributes-are-missing"></a>
+
+Check that:
+
+- You have an Enterprise license.
+- You set `N8N_OTEL_ENABLED` to `true`.
+- For node-level span attributes, `N8N_OTEL_TRACES_INCLUDE_NODE_SPANS` isn't set to `false`.
+- If you set `N8N_OTEL_TRACES_CUSTOM_ATTRIBUTE_PREFIXES`, search for the new key. n8n drops keys that match built-in attributes. Refer to [Change the attribute prefixes](#change-the-attribute-prefixes).
+
+### A crashed execution has no span
+
+Enable OpenTelemetry on the main instance. In queue mode, the main instance detects the crash and emits the span, so enabling it on the workers alone produces no crash spans. Set the same variables on every instance type so worker spans keep their parent context.
+
+The node that was running when the instance died has no span. Node spans exported before the crash stay in the trace. See [Crashed executions](#crashed-executions).
+
+### A rebuilt span shows a missing-parent warning
+
+n8n rebuilds the span from the trace context stored on the execution. That context is the ID of the original span, which never ended, and OpenTelemetry can't reuse a span ID. That makes the rebuilt span a child of a span the backend never received. Expect the warning. The span carries `n8n.execution.reconstructed=true`. See [Caveats](#crashed-execution-caveats).
+
+### Worker traces are missing parent context <a href="#worker-traces-are-missing-parent-context" id="worker-traces-are-missing-parent-context"></a>
+
+In queue mode, workers read the parent trace context from the database. If you only set the OpenTelemetry environment variables on the main instance, worker spans won't link to the parent workflow trace. Set the same variables on every instance type.
+
+### No agent spans appear <a href="#no-agent-spans-appear" id="no-agent-spans-appear"></a>
+
+Agent spans depend on the OTel module. Check that:
+
+- `N8N_OTEL_ENABLED` is set to `true`.
+- `N8N_AGENTS_TRACING_ENABLED` is set to `true`.
+
+With `N8N_OTEL_ENABLED` set to `false`, agent runs complete normally, but n8n emits no spans for them, even with `N8N_AGENTS_TRACING_ENABLED` set to `true`.
+
+## Related resources <a href="#related-resources" id="related-resources"></a>
+
+- [Keep n8n running](./)
+- [Logging in n8n](set-up-logging.md)
+- [Monitoring](monitor-n8n.md)
+- [Visualize metrics with Grafana](visualize-metrics-with-grafana.md)
+- [Back up and restore](backup-and-restore.md)
+- [Update n8n](update-n8n.md)
+- [OpenTelemetry environment variables](../configure-n8n/basic-configuration/use-environment-variables/opentelemetry.md)
+- [W3C Trace Context specification](https://www.w3.org/TR/trace-context/)
+- [OpenTelemetry Collector documentation](https://opentelemetry.io/docs/collector/)

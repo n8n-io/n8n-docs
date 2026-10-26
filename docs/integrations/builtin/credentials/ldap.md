@@ -1,16 +1,29 @@
 ---
 title: LDAP credentials
-description: Documentation for the LDAP credentials. Use these credentials to authenticate LDAP in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for the LDAP credentials. Use these credentials to authenticate
+  LDAP in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: LDAP credentials
+originalFilePath: integrations/builtin/credentials/ldap.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/ldap'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/ldap'
+layout:
+  description:
+    visible: false
 ---
 
-# LDAP credentials
+# LDAP credentials <a href="#ldap-credentials" id="ldap-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-* [LDAP](/integrations/builtin/core-nodes/n8n-nodes-base.ldap.md)
+* [LDAP](../core-nodes/n8n-nodes-base.ldap.md)
 
-## Prerequisites
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a server directory using Lightweight Directory Access Protocol (LDAP).
 
@@ -20,17 +33,19 @@ Some common LDAP providers include:
 * [Azure ADDS](https://learn.microsoft.com/en-us/azure/active-directory-domain-services/tutorial-configure-ldaps)
 * [Okta](https://help.okta.com/en-us/Content/Topics/Directory/LDAP-interface-connection-settings.htm)
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
-- LDAP server details
+- **LDAP server details**: Connect with a **Binding DN** and **Binding Password** using a simple bind.
 
-## Related resources
+n8n supports simple bind only. It doesn't support SASL binds, including GSSAPI and Kerberos. If your LDAP server requires Kerberos-based binding, common in Active Directory environments, you can't use this credential to connect to it.
+
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to your LDAP provider's own documentation for detailed information.
 
 For general LDAP information, refer to [Basic LDAP concepts](https://ldap.com/basic-ldap-concepts/) for a basic overview and [The LDAP Bind Operation](https://ldap.com/the-ldap-bind-operation/) for information on how the bind operation and authentication work.
 
-## Using LDAP server details
+## Using LDAP server details <a href="#using-ldap-server-details" id="using-ldap-server-details"></a>
 
 To configure this credential, you'll need:
 
@@ -42,5 +57,8 @@ To configure this credential, you'll need:
     - `None`
     - `TLS`
     - `STARTTLS`
-- _Optional:_ Enter a numeric value in seconds to set a **Connection Timeout**.
+- If you select `TLS` or `STARTTLS`, two more settings appear:
+    - **Ignore SSL/TLS Issues**: Turn this on to connect even when the SSL/TLS certificate check on your LDAP server fails.
+    - **CA Certificate**: Paste the certificate authority certificate for your LDAP server.
+- _Optional:_ Enter a numeric value in seconds to set the **Timeout**. The default is 300.
 

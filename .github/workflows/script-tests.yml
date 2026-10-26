@@ -1,0 +1,100 @@
+name: Script tests
+# Runs the network-free unit tests for .github/scripts helpers.
+on:
+  pull_request:
+    paths:
+      - .github/scripts/**
+      - .github/workflows/script-tests.yml
+      # test_check_internal_links reads the space-ID table out of this docs
+      # page, so a docs-only PR can break these tests. Without this path the
+      # break lands on main unseen and fails the next PR to touch a script,
+      # which is exactly how DOC-2351 happened. It changes a few times a year.
+      - docs/contribute/contribution-guide-for-n8n-docs/style-guide-for-n8n-docs.md
+      # check_internal_links now resolves space IDs from this generated file, and
+      # the tests assert the style-guide copy above still agrees with it.
+      # The auto-merge verdict tests also assert both generated indexes still parse
+      # and carry no degraded rows, so a PR that regenerates either must run them -
+      # otherwise the break lands on main unseen (DOC-2459).
+      - SPACE_INDEX.md
+      - REUSABLE_CONTENT_INDEX.md
+      # test_link_second_pass parses this to prove the second pass excludes exactly what
+      # lychee excludes, so an edit here can break the tests on its own.
+      - lychee.toml
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  gitbook-preview-links:
+    name: runner / gitbook-preview-links
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Run gitbook_preview_links tests
+        run: python3 .github/scripts/tests/test_gitbook_preview_links.py
+
+  check-internal-links:
+    name: runner / check-internal-links
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Run check_internal_links tests
+        run: python3 .github/scripts/tests/test_check_internal_links.py
+
+  check-gitbook-syntax:
+    name: runner / check-gitbook-syntax
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Run check_gitbook_syntax tests
+        run: python3 .github/scripts/tests/test_check_gitbook_syntax.py
+
+  check-docops-automations:
+    # Covers every auto-merge automation: the orchestrator plus one verdict module
+    # per flow (version snippet, reusable content index, space index).
+    name: runner / check-docops-automations
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Run check_version_snippet_pr tests
+        run: python3 .github/scripts/tests/test_check_version_snippet_pr.py
+      - name: Run check_reusable_index_pr tests
+        run: python3 .github/scripts/tests/test_check_reusable_index_pr.py
+      - name: Run check_space_index_pr tests
+        run: python3 .github/scripts/tests/test_check_space_index_pr.py
+      - name: Run docops_auto_merge tests
+        run: python3 .github/scripts/tests/test_docops_auto_merge.py
+
+  lychee-report:
+    name: runner / lychee-report
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Run lychee_report tests
+        run: python3 .github/scripts/tests/test_lychee_report.py
+
+  product-links-report:
+    name: runner / product-links-report
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Run product_links_report tests
+        run: python3 .github/scripts/tests/test_product_links_report.py
+
+  link-second-pass:
+    name: runner / link-second-pass
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Run link_second_pass tests
+        run: python3 .github/scripts/tests/test_link_second_pass.py
+      - name: Run internal_links_report tests
+        run: python3 .github/scripts/tests/test_internal_links_report.py

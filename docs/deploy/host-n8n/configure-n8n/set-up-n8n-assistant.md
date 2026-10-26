@@ -1,0 +1,475 @@
+---
+description: Set up n8n Assistant on self-hosted n8n using environment variables.
+status: preview
+tags:
+  - tag: preview
+    primary: true
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+---
+
+# Set up n8n Assistant
+
+{% hint style="info" %}
+**Feature availability**
+
+n8n Assistant is available on:
+
+- **n8n Cloud:** Starter, Pro
+- **Self-hosted:** Community, Registered Community, Business
+
+It isn't ready for n8n Cloud Enterprise or self-hosted Enterprise yet. If you're an Enterprise customer, contact your Customer Success Manager about preview access.
+{% endhint %}
+
+{% hint style="info" %}
+**Preview status**
+
+n8n Assistant is in Preview. It can make mistakes, and behavior may change while the feature is in development. Always review generated workflows before using them in production.
+{% endhint %}
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
+## What n8n Assistant needs
+
+Every self-hosted n8n Assistant setup needs three things:
+
+* **A model provider:** An API key for Anthropic, OpenAI, or OpenRouter.
+* **A sandbox (required):** An isolated environment where n8n Assistant runs code.
+* **A search provider (optional):** Lets n8n Assistant look things up on the web.
+
+How you provide the sandbox is the main decision. n8n's own bundled sandbox (`n8n-sandbox`) is a good fit for local development and testing. It's what the [one-line setup command](../install-options/one-line-setup.md) and [Docker Compose guide](../install-options/install-using-docker-compose.md) set up automatically. For production, use Daytona instead.
+
+[Pick your setup](#pick-your-setup) below based on how you installed n8n and where you're running it.
+
+### Before you start
+
+Make sure you have:
+
+* Access to configure environment variables for the n8n instance.
+* A recent version of n8n. Run the latest stable release or later; older versions may work, but newer is better.
+* An API key for a supported LLM provider: Anthropic, OpenAI, or OpenRouter.
+
+## Pick your setup
+
+| Setup | When to use this | Sandbox hosted by | Best for |
+| --- | --- | --- | --- |
+| [1. Already running the sandbox](#setup-1-already-running-the-sandbox-recommended-for-local-development) | You installed with the one-line setup command or the Docker Compose guide. | You (already done) | Local development and testing |
+| [2. Self-host the sandbox manually](#setup-2-self-host-the-sandbox-manually-advanced) | You're running n8n some other way and want to self-host the sandbox rather than use Daytona. | You | Local development and testing |
+| [3. Daytona (managed sandbox)](#setup-3-daytona-managed-sandbox-recommended-for-production) | You're deploying to production, or don't want to run sandbox containers yourself. | Daytona | Production |
+
+### Setup 1: Already running the sandbox (recommended for local development)
+
+If you installed n8n with the [one-line setup command](../install-options/one-line-setup.md) or built it by hand with the [Docker Compose guide](../install-options/install-using-docker-compose.md), the sandbox and search, using bundled SearXNG, are already running. All that's left is a model key.
+
+**What you need:** an LLM API key. Nothing else.
+
+**Steps:**
+
+The quickest way: open the editor, go to the instance's AI settings, and add your model key there. Prefer `.env`?  Use the steps below.
+
+1. Add your model key to `.env`:
+
+   ```bash
+   N8N_INSTANCE_AI_MODEL_API_KEY=sk-ant-xxx
+   ```
+
+2. Restart n8n.
+3. Open the editor and confirm n8n Assistant appears and responds.
+
+`N8N_INSTANCE_AI_MODEL` defaults to `anthropic/claude-opus-4-8`. Set it explicitly only if you want a different model (see [Choose a model provider](#choose-a-model-provider)).
+
+Prefer to watch? This [video guide](https://go.n8n.io/RZZWq1) covers the setup end to end, from the one-line install to selecting a provider and model in the editor.
+
+### Setup 2: Self-host the sandbox manually (advanced)
+
+Use this if you're configuring n8n outside of the one-line setup command or Docker Compose guide, and you want to run the sandbox yourself rather than hand it to Daytona.
+
+{% hint style="warning" %}
+This means hosting two extra containers yourself: the sandbox API and a privileged Docker-in-Docker runner, plus mutual TLS between them. Like setup 1, this uses `n8n-sandbox`, which is best suited to local development and testing. For production, use [Daytona](#setup-3-daytona-managed-sandbox-recommended-for-production) instead.
+{% endhint %}
+
+**What you need:**
+
+* The n8n Sandbox Service running and reachable from n8n. See the [Docker Compose guide](../install-options/install-using-docker-compose.md) for the full stack (`sandbox-certs`, `sandbox-api`, `sandbox-runner-1`) and its secrets.
+* An LLM API key.
+
+**Steps:**
+
+1. Stand up the sandbox stack (Docker Compose guide linked above).
+2. Point n8n at it:
+
+   ```bash
+   N8N_INSTANCE_AI_SANDBOX_ENABLED=true
+   N8N_INSTANCE_AI_SANDBOX_PROVIDER=n8n-sandbox
+   N8N_SANDBOX_SERVICE_URL=http://sandbox-api:8080
+   N8N_SANDBOX_SERVICE_API_KEY=my-sandbox-api-key
+   ```
+
+   | Variable | Description |
+   | --- | --- |
+   | `N8N_INSTANCE_AI_SANDBOX_ENABLED` | Set to `true`. |
+   | `N8N_INSTANCE_AI_SANDBOX_PROVIDER` | Set to `n8n-sandbox`. |
+   | `N8N_SANDBOX_SERVICE_URL` | URL of the sandbox API, reachable from n8n. |
+   | `N8N_SANDBOX_SERVICE_API_KEY` | Must match `SANDBOX_API_KEYS` on the API container. |
+
+3. Add your model key (see [Choose a model provider](#choose-a-model-provider)) and restart n8n.
+
+**Verify:**
+
+```bash
+curl http://<sandbox-api-host>:8080/healthz
+```
+
+Expected response: `{"status":"ok"}`
+
+**Notes:**
+
+* Replace `my-sandbox-api-key` with your own secret, and set matching registration-token and runner-key secrets on the API and runner containers. See the [Docker Compose guide](../install-options/install-using-docker-compose.md) for the full set of variables and how they connect.
+* `N8N_SANDBOX_SERVICE_API_KEY` must match a value in `SANDBOX_API_KEYS` on the sandbox API container.
+* The runner pulls its sandbox image on first use. For air-gapped setups, preload that image into the runner's inner Docker.
+* Hostnames matter. The certificates are issued for `sandbox-api` and `sandbox-runner-<n>`, so keep those service names or regenerate certificates with matching SANs.
+
+### Setup 3: Daytona (managed sandbox, recommended for production)
+
+Daytona creates sandboxes on demand instead of you hosting the containers yourself. It's the sandbox provider n8n recommends for production use.
+
+**What you need:** a Daytona account and API key, plus an LLM API key.
+
+**Steps:**
+
+1. Set these environment variables on your n8n instance:
+
+   ```bash
+   # Enable the module and choose a model
+   N8N_ENABLED_MODULES=instance-ai
+   N8N_INSTANCE_AI_MODEL=anthropic/claude-opus-4-8
+   N8N_INSTANCE_AI_MODEL_API_KEY=sk-ant-xxx
+
+   # Sandbox, required
+   N8N_INSTANCE_AI_SANDBOX_ENABLED=true
+   N8N_INSTANCE_AI_SANDBOX_PROVIDER=daytona
+   N8N_INSTANCE_AI_SANDBOX_IMAGE=daytonaio/sandbox:0.5.3-slim
+
+   # Daytona
+   DAYTONA_API_URL=https://app.daytona.io/api
+   DAYTONA_API_KEY=dtn_xxx
+
+   # Web search, recommended
+   INSTANCE_AI_BRAVE_SEARCH_API_KEY=BSA-xxx
+   ```
+
+   | Variable | Description |
+   | --- | --- |
+   | `N8N_ENABLED_MODULES` | Must include `instance-ai` to enable the module. |
+   | `N8N_INSTANCE_AI_MODEL` | Selects the LLM in `provider/model` format. Has a default (`anthropic/claude-opus-4-8`). Set it explicitly only if you want a different model. |
+   | `N8N_INSTANCE_AI_MODEL_API_KEY` | API key for the selected provider. |
+   | `N8N_INSTANCE_AI_SANDBOX_ENABLED` | Set to `true`. n8n Assistant requires a sandbox. |
+   | `N8N_INSTANCE_AI_SANDBOX_PROVIDER` | Set to `daytona`. |
+   | `N8N_INSTANCE_AI_SANDBOX_IMAGE` | Base container image for Daytona sandboxes. |
+   | `DAYTONA_API_URL` | Daytona API endpoint. |
+   | `DAYTONA_API_KEY` | Your Daytona API key. |
+   | `INSTANCE_AI_BRAVE_SEARCH_API_KEY` | Brave Search API key for web search. This variable intentionally doesn't use the `N8N_` prefix. |
+
+   Docker Compose example:
+
+   ```yaml
+   services:
+     n8n:
+       image: n8nio/n8n
+       environment:
+         N8N_ENABLED_MODULES: instance-ai
+         N8N_INSTANCE_AI_MODEL: anthropic/claude-opus-4-8
+         N8N_INSTANCE_AI_MODEL_API_KEY: sk-ant-xxx
+         N8N_INSTANCE_AI_SANDBOX_ENABLED: 'true'
+         N8N_INSTANCE_AI_SANDBOX_PROVIDER: daytona
+         N8N_INSTANCE_AI_SANDBOX_IMAGE: daytonaio/sandbox:0.5.3-slim
+         DAYTONA_API_URL: https://app.daytona.io/api
+         DAYTONA_API_KEY: dtn_xxx
+         INSTANCE_AI_BRAVE_SEARCH_API_KEY: BSA-xxx
+   ```
+
+2. Restart n8n, open the editor, and confirm n8n Assistant appears and responds.
+
+**Optional: tune the sandbox lifecycle**
+
+```bash
+N8N_INSTANCE_AI_SANDBOX_AUTO_STOP_MINUTES=15
+N8N_INSTANCE_AI_SANDBOX_AUTO_ARCHIVE_MINUTES=60
+N8N_INSTANCE_AI_SANDBOX_AUTO_DELETE_MINUTES=10080
+```
+
+{% hint style="info" %}
+By default, Daytona stops an idle sandbox after 15 minutes, archives a stopped sandbox after one hour, and deletes it after seven days. Change these settings with the variables above.
+{% endhint %}
+
+## Choose a model provider
+
+`N8N_INSTANCE_AI_MODEL` uses this format:
+
+```
+provider/model
+```
+
+Supported providers are:
+
+* `anthropic`
+* `openai`
+* `openrouter`
+
+For a hosted provider, start with `anthropic/claude-opus-4-8` or `openai/gpt-5.5`.
+
+Examples:
+
+```bash
+# Anthropic
+N8N_INSTANCE_AI_MODEL=anthropic/claude-opus-4-8
+
+# OpenAI
+N8N_INSTANCE_AI_MODEL=openai/gpt-5.5
+
+# OpenRouter
+N8N_INSTANCE_AI_MODEL=openrouter/deepseek/deepseek-v4-pro
+```
+
+Set `N8N_INSTANCE_AI_MODEL_API_KEY` to the API key for the provider you choose.
+
+If `N8N_INSTANCE_AI_MODEL_API_KEY` isn't set, n8n uses the provider's standard environment variable as a fallback:
+
+* `ANTHROPIC_API_KEY`
+* `OPENAI_API_KEY`
+* `OPENROUTER_API_KEY`
+
+### Use a local or custom OpenAI-compatible endpoint
+
+To use a local or custom OpenAI-compatible endpoint, set `N8N_INSTANCE_AI_MODEL_URL`.
+
+```bash
+N8N_INSTANCE_AI_MODEL_URL=http://localhost:1234/v1
+N8N_INSTANCE_AI_MODEL_API_KEY=optional-key
+```
+
+Some local servers don't require an API key.
+
+## Enable web search
+
+Web search lets n8n Assistant look things up on the web. It's optional, and the rest of n8n Assistant works without it.
+
+If you used the [one-line setup](../install-options/one-line-setup.md) or the [Docker Compose guide](../install-options/install-using-docker-compose.md), SearXNG is already bundled and running. No setup is needed unless you'd rather use Brave Search instead.
+
+```bash
+# Brave Search
+INSTANCE_AI_BRAVE_SEARCH_API_KEY=BSA-xxx
+
+# SearXNG
+N8N_INSTANCE_AI_SEARXNG_URL=http://searxng:8080
+```
+
+{% hint style="info" %}
+`INSTANCE_AI_BRAVE_SEARCH_API_KEY` intentionally doesn't use the `N8N_` prefix. Use the variable exactly as shown.
+{% endhint %}
+
+If you configure both, Brave Search takes priority over SearXNG. Free or unauthenticated providers, including SearXNG, can hit rate limits, so use Brave Search for a more reliable setup.
+
+If an instance admin selects a Brave Search or SearXNG credential in the AI settings UI, n8n uses that credential instead of these environment variables.
+
+## Enable instance context
+
+{% hint style="info" %}
+**Feature availability**
+
+The shared instance context flag and activity log retention settings documented here are available from n8n 2.41.0.
+{% endhint %}
+
+{% hint style="info" %}
+**Preview status**
+
+Instance context is in Preview and may change in future releases. n8n hasn't enabled instance context for all instances. Avoid relying on instance context for production work.
+{% endhint %}
+
+Instance context gives n8n Assistant a short summary of the project you open a conversation in. It includes workflows, recent changes, and execution results. It's optional, and the rest of n8n Assistant works without it. See [What n8n Assistant knows about your instance](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/n8n-assistant#what-n8n-assistant-knows-about-your-instance).
+
+The `114_instance_activity_context` PostHog flag controls it. n8n evaluates the flag for each instance, not for each user. The same flag controls activity recording, instance context in n8n Assistant, and the instance context tools on the [n8n MCP server](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server/mcp-server-tools-reference#instance-context).
+
+On a self-hosted instance, set `N8N_FEATURE_FLAG_OVERRIDES` to override the PostHog value. For example, add this value to your `.env` file. Preserve any other entries in the JSON object.
+
+```bash
+N8N_FEATURE_FLAG_OVERRIDES='{"114_instance_activity_context":true}'
+```
+
+Restart n8n to apply the change.
+
+| `N8N_FEATURE_FLAG_OVERRIDES` value | Result |
+| --- | --- |
+| `{"114_instance_activity_context":true}` | On, regardless of the PostHog value |
+| `{"114_instance_activity_context":false}` | Off, even when PostHog returns `true` |
+| No override for this flag | On only when PostHog returns `true`. Off otherwise |
+| Invalid JSON or invalid override data | n8n ignores the overrides and uses the PostHog value |
+
+If PostHog flag evaluation fails, the feature is off unless a valid override enables it.
+
+One flag controls both halves. With the flag off, n8n writes no activity entries and n8n Assistant reads no instance context.
+
+The activity log records that a change happened and which node types you added or removed in it. It never records parameter values. It reports what changed in a save, not what the project uses now. Node type counting reports current usage. It needs its own flag.
+
+Turning the flag off stops new activity recording and new instance context reads. The activity log tool is unavailable. Entries recorded earlier remain subject to these retention settings:
+
+| Variable | Default | Description |
+| --- | --- | --- |
+| `N8N_ACTIVITY_LOG_RETENTION_DAYS` | `0` | Days to keep activity entries. `0` disables age-based pruning. |
+| `N8N_ACTIVITY_LOG_MAX_ENTRIES` | `1000` | Maximum activity entries across all projects. `0` disables count-based pruning. |
+
+By default, n8n keeps the newest 1,000 activity entries across the instance. It doesn't remove entries based on age. An entry can remain indefinitely if the log stays below this limit.
+
+Pruning runs every hour and continues when the flag is off. Restart n8n after changing these environment variables.
+
+## Enable node type counting
+
+{% hint style="info" %}
+**Feature availability**
+
+Node type counting is available from n8n 2.39.0. Enable node type counting with the feature flag or environment variable below.
+{% endhint %}
+
+Node type counting lets n8n Assistant ask how many workflows in a project use each node type, so it can follow your conventions without reading every workflow. It's separate from instance context and has its own flag.
+
+The `109_instance_ai_node_usage` PostHog flag controls it. On a self-hosted instance, `N8N_INSTANCE_AI_NODE_USAGE_ENABLED` force-enables it:
+
+```bash
+N8N_INSTANCE_AI_NODE_USAGE_ENABLED=true
+```
+
+| Variable | Default | Description |
+| --- | --- | --- |
+| `N8N_INSTANCE_AI_NODE_USAGE_ENABLED` | `false` | Set to `true` to turn node type counting on, whatever the PostHog flag returns. |
+
+This variable only turns node type counting on. Setting it to `false`, or leaving it out, hands the decision back to the PostHog flag, so it isn't a way to keep the feature off.
+
+Node type counting reports counts of node types, never parameter values.
+
+## Enable agents
+
+You can [build and run agents on your instance](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents) with or without n8n Assistant. Agents are in Preview and available from n8n 2.32.3.
+
+{% hint style="info" %}
+**Feature availability**
+
+Agents are on by default on all self-hosted plans, including Enterprise.
+{% endhint %}
+
+You build agents manually with just the `agents` module: you pick the model, write the instructions, and attach the tools and skills yourself. n8n Assistant (`instance-ai`) is optional and adds AI-assisted building, where you describe an agent and n8n scaffolds it for you.
+
+To change the instance setting:
+
+1. Sign in as an instance owner or admin.
+2. Open **Settings > Agents**.
+3. Turn **Enable Agents** on or off.
+
+n8n saves this choice across restarts and license changes. The setting is separate from **Settings > Assistant**. Turning agents off blocks new runs and cancels queued messages for future runs. Active runs can finish. See [Enable or disable agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents#enable-or-disable-agents) for details.
+
+The `agents` module loads by default. If you disabled it with `N8N_DISABLED_MODULES`, remove `agents` from that list and restart n8n to restore the settings page. Module environment variables don't override the saved agents setting.
+
+### Shared sandbox and optional features
+
+Use **Settings > Agents > Shared sandbox** to [configure the sandbox connection](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents#configure-the-shared-sandbox). Agents and n8n Assistant use the same connection. Changes affect both features. You can configure it while either feature is off.
+
+The shared sandbox editor requires the `instance-ai` module, which also loads by default. If you excluded it with `N8N_DISABLED_MODULES`, remove it from that list and restart n8n. You can keep n8n Assistant off in **Settings > Assistant**. You can also configure the sandbox with environment variables.
+
+Enabling the shared sandbox also enables the agent knowledge base. For an environment-based setup, use these optional settings:
+
+```bash
+# Enable the agent knowledge base with your existing Daytona connection
+N8N_AGENTS_AI_SANDBOX_ENABLED=true
+N8N_INSTANCE_AI_SANDBOX_PROVIDER=daytona
+
+# Let channels reach your instance
+N8N_WEBHOOK_URL=https://<your-public-hostname>
+```
+
+| Variable | Description |
+| --- | --- |
+| `N8N_AGENTS_AI_SANDBOX_ENABLED` | Set to `true` to enable the knowledge base when the shared sandbox isn't already enabled. Requires a configured sandbox. Default: `false`. |
+| `N8N_INSTANCE_AI_SANDBOX_PROVIDER` | Shared sandbox provider for agents and n8n Assistant. Use `n8n-sandbox` or `daytona`. Default: `n8n-sandbox`. |
+| `N8N_WEBHOOK_URL` | Public, secure URL for your instance. Required to connect agents to channels such as Slack, Telegram, and Linear. Available from n8n 2.30.0; on earlier versions, use `WEBHOOK_URL`. |
+
+{% hint style="info" %}
+**Feature availability**
+
+The knowledge base needs a configured sandbox on self-hosted n8n. Without it, the rest of the agent still works. See [Pick your setup](#pick-your-setup) for sandbox options.
+{% endhint %}
+
+{% hint style="info" %}
+**Preview status**
+
+On self-hosted, the knowledge base is in Preview.
+{% endhint %}
+
+For a full deployment example, see [Installation options](../install-options/README.md). To create your first agent, see [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents).
+
+## Disable n8n Assistant
+
+To turn n8n Assistant off, use **Settings > Assistant**. To unload its module, add `instance-ai` to `N8N_DISABLED_MODULES` and restart n8n:
+
+```bash
+N8N_DISABLED_MODULES=instance-ai
+```
+
+Unloading `instance-ai` also removes the shared sandbox editor from **Settings > Agents**. You can still configure the sandbox with environment variables.
+
+## Troubleshooting
+
+If n8n Assistant doesn't appear or doesn't work, check for these issues.
+
+**General**
+
+* `N8N_DISABLED_MODULES` doesn't include `instance-ai`.
+* The model value uses `provider/model` format if you set `N8N_INSTANCE_AI_MODEL`.
+* The API key is valid for the selected provider.
+* `N8N_INSTANCE_AI_SANDBOX_ENABLED` is set to `true`.
+
+**Self-hosted sandbox (setup 2)**
+
+* `N8N_SANDBOX_SERVICE_API_KEY` matches `SANDBOX_API_KEYS` on the API container.
+* The sandbox health check returns `{"status":"ok"}`.
+* `N8N_SANDBOX_SERVICE_URL` is reachable from the n8n container.
+
+**Daytona (setup 3)**
+
+* `DAYTONA_API_URL` and `DAYTONA_API_KEY` are set.
+* Your Daytona account has capacity to create a new sandbox.
+
+**Web search**
+
+* `INSTANCE_AI_BRAVE_SEARCH_API_KEY` is set, or `N8N_INSTANCE_AI_SEARXNG_URL` is set.
+* If nothing is set, this is expected. Web search is optional and the rest of n8n Assistant still works.
+
+**Instance context**
+
+* The `114_instance_activity_context` flag is on for your instance. Set `N8N_FEATURE_FLAG_OVERRIDES` to `{"114_instance_activity_context":true}` to force it on.
+* Nothing changed in the project yet. The activity log only records changes made after the flag went on.
+* The project is empty, and nothing has run in it. n8n Assistant reports nothing rather than an empty summary.
+
+**Node type counting**
+
+* The `109_instance_ai_node_usage` flag is on, or `N8N_INSTANCE_AI_NODE_USAGE_ENABLED` has the value `true`.
+* Setting the variable to `false` doesn't keep the feature off. It hands the decision back to the flag.
+* It's independent of instance context. Turning instance context on doesn't turn node type counting on.
+
+## Related resources
+
+* [Configure n8n](./)

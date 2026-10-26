@@ -1,22 +1,41 @@
 ---
 title: Brevo Trigger node documentation
-description: Learn how to use the Brevo Trigger node in n8n. Follow technical documentation to integrate Brevo Trigger node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Brevo Trigger node in n8n. Follow technical documentation
+  to integrate Brevo Trigger node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Brevo Trigger node documentation
+originalFilePath: integrations/builtin/trigger-nodes/n8n-nodes-base.brevotrigger.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.brevotrigger
+url: >-
+  https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.brevotrigger
+layout:
+  description:
+    visible: false
 ---
 
-# Brevo Trigger node
+# Brevo Trigger node <a href="#brevo-trigger-node" id="brevo-trigger-node"></a>
 
 [Brevo](https://www.brevo.com/) is a digital marketing platform to help users grow their business.
 
-/// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/brevo.md).
-///
+{% hint style="info" %}
+**Credentials**
 
-///  note  | Examples and templates
+Refer to the [Brevo credentials documentation](../credentials/brevo.md) for authentication information for this node.
+{% endhint %}
+
+{% hint style="info" %}
+**Examples and templates**
+
 For usage examples and templates to help you get started, refer to n8n's [Brevo Trigger integrations](https://n8n.io/integrations/brevo-trigger/) page.
-///
+{% endhint %}
 
-## Events
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
+## Events <a href="#events" id="events"></a>
 
 * Email blocked
 * Email clicked
@@ -31,9 +50,9 @@ For usage examples and templates to help you get started, refer to n8n's [Brevo 
 * Email unique open
 * Email unsubscribed
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for Brevo. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.brevo.md).
+n8n provides an app node for Brevo. Refer to the [Brevo node documentation](../app-nodes/n8n-nodes-base.brevo.md) for more information.
 
 View [example workflows and related content](https://n8n.io/integrations/brevo-trigger/) on n8n's website.
 

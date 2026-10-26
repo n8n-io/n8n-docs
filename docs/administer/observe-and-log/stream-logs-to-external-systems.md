@@ -1,0 +1,423 @@
+---
+description: Stream events from n8n to your logging tools.
+contentType: howto
+nodeTitle: Stream logs to external systems
+originalFilePath: log-streaming.md
+originalUrl: 'https://docs.n8n.io/log-streaming'
+url: 'https://docs.n8n.io/administer/observe-and-log/stream-logs-to-external-systems'
+layout:
+  description:
+    visible: false
+---
+
+# Log streaming <a href="#log-streaming" id="log-streaming"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+Log Streaming is available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Enterprise
+{% endhint %}
+
+Log streaming allows you to send events from n8n to your own logging tools. This allows you to manage your n8n monitoring in your own alerting and logging processes.
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
+## Set up log streaming <a href="#set-up-log-streaming" id="set-up-log-streaming"></a>
+
+To use log streaming, you have to add a streaming destination.
+
+1. Navigate to **Settings** > **Log Streaming**.
+2. Select **Add new destination**.
+3. Choose your destination type. n8n opens the **New Event Destination** modal.
+4. In the **New Event Destination** modal, enter the configuration information for your event destination. These depend on the type of destination you're using.
+5. Select **Events** to choose which events to stream.
+6. Select **Save**.
+
+{% hint style="info" %}
+**Self-hosted users**
+
+If you self-host n8n, you can configure additional log streaming behavior using [Environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/logs#log-streaming). You can also manage destinations from environment variables, see [Configure log streaming destinations using environment variables](#configure-using-environment-variables).
+{% endhint %}
+
+## Per-process event log files <a href="#per-process-event-log-files" id="per-process-event-log-files"></a>
+
+n8n persists each emitted event to a local log file before forwarding it to streaming destinations. The file survives restarts and lets n8n re-emit events that weren't yet delivered.
+
+By default, n8n writes the event log to `<n8n-user-folder>/n8nEventLog.log`, with a `-worker` or `-webhook-processor` suffix on those processes. When a single n8n process owns the file, this default works as expected.
+
+{% hint style="warning" %}
+**Shared writable filesystems**
+
+If multiple n8n processes share one writable volume, for example [queue mode](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/enable-queue-mode) workers backed by a shared persistent volume on NFS or EFS, they must not write to the same event log file. Concurrent appends from multiple processes can interleave or corrupt the file, leading to recovery failures and lost events.
+{% endhint %}
+
+To avoid this, set [`N8N_EVENTBUS_LOGWRITER_LOGFULLPATH`](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/logs#log-streaming) on each process to a unique absolute path that ends in `.log`. n8n uses the configured path verbatim and doesn't append a process-type suffix, so your orchestrator owns uniqueness across processes.
+
+The companion variable [`N8N_EVENTBUS_LOGWRITER_MAXTOTALMESSAGESPERFILE`](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/logs#log-streaming) bounds how many lines n8n parses from a single event log file during recovery, so a corrupted file can't exhaust process memory.
+
+Notes:
+
+* Default behavior is unchanged when `N8N_EVENTBUS_LOGWRITER_LOGFULLPATH` isn't set.
+* When the variable is set, n8n doesn't auto-suffix the path. Each process must receive its own value.
+* If a shared `n8nEventLog-worker.log` file already exists from a previous deployment, quarantine it manually before opting in. n8n doesn't auto-delete legacy files.
+
+## Events <a href="#events" id="events"></a>
+
+The following events are available. You can choose which events to stream in **Settings** > **Log Streaming** > **Events**.
+
+* Workflow
+	* Started
+	* Success
+	* Failed
+	* Cancelled
+* Node executions
+	* Started
+	* Finished
+* Audit
+	* User login success
+	* User login failed
+	* User login email conflict
+	* User signed up
+	* User updated
+	* User deleted
+	* User invited
+	* User invitation accepted
+	* User re-invited
+	* User email failed
+	* User reset requested
+	* User reset
+	* User credentials created
+	* User credentials shared
+	* User credentials updated
+	* User credentials deleted
+	* User API created
+	* User API deleted
+	* User MFA enabled
+	* User MFA disabled
+	* User execution deleted
+	* Execution data revealed
+	* Execution data reveal failed
+	* Package installed
+	* Package updated
+	* Package deleted
+	* n8n package import success
+	* n8n package export success
+	* n8n package export failed
+	* n8n package import failed
+	* Workflow created
+	* Workflow deleted
+	* Workflow updated
+	* Workflow archived
+	* Workflow unarchived
+	* Workflow activated
+	* Workflow deactivated
+	* Workflow version updated
+    * Workflow executed
+	* Workflow waiting
+	* Workflow resumed
+	* Variable created
+	* Variable updated
+	* Variable deleted
+	* External secrets provider settings saved
+	* External secrets provider reloaded
+	* External secrets connection created
+	* External secrets connection updated
+	* External secrets connection deleted
+	* External secrets connection tested
+	* External secrets connection reloaded
+	* Personal publishing restricted enabled
+	* Personal publishing restricted disabled
+	* Personal sharing restricted enabled
+	* Personal sharing restricted disabled
+	* 2FA enforcement enabled
+	* 2FA enforcement disabled
+	* Token exchange succeeded
+	* Token exchange failed
+	* Token exchange embed login
+	* Token exchange embed login failed
+	* Token exchange identity linked
+	* Token exchange user provisioned
+	* Token exchange role updated
+	* Role mapping roles resolved
+	* Role mapping rule created
+	* Role mapping rule updated
+	* Role mapping rule deleted
+	* Role mapping rules bulk deleted
+	* MCP OAuth completed
+	* MCP tool called
+	* MCP access updated
+* Worker
+	* Started
+	* Stopped
+* AI node logs
+	* Memory get messages
+	* Memory added message
+	* Output parser parsed
+	* Retriever get relevant documents
+	* Embeddings embedded document
+	* Embeddings embedded query
+	* Document processed
+	* Text splitter split
+	* Tool called
+	* Vector store searched
+	* LLM generated
+	* LLM error
+	* Vector store populated
+	* Vector store updated
+* Runner
+	* Task requested
+	* Response received
+* Queue
+	* Job enqueued
+	* Job dequeued
+	* Job completed
+	* Job failed
+	* Job stalled
+
+Two sets of audit events mention packages, and they're unrelated. **Package installed**, **Package updated**, and **Package deleted** cover [community nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/community-nodes/installation-and-management) installed on the instance. The **n8n package** events cover [n8n packages](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages), the portable archives you use to move workflows between instances.
+
+### Workflow events
+
+The four **Workflow** events cover a single workflow execution's lifecycle.
+
+| Event name | Sent when |
+|---|---|
+| `n8n.workflow.started` | A workflow execution begins. |
+| `n8n.workflow.success` | A workflow execution finishes without an error. |
+| `n8n.workflow.failed` | A workflow execution finishes with an error. |
+| `n8n.workflow.cancelled` | Someone or something cancels a running execution. |
+
+To stream all four, subscribe your destination to `n8n.workflow`. In **Settings** > **Log Streaming** > **Events**, they appear in the **Workflow** group.
+
+Every event carries `executionId`, `workflowId`, and `workflowName`.
+
+`n8n.workflow.started`, `n8n.workflow.success`, and `n8n.workflow.failed` also carry:
+
+| Field | Description |
+|---|---|
+| `userId` | The user who owns the execution. Not present when n8n starts the execution itself, for example from a schedule trigger. |
+| `mode` | The execution mode, for example `trigger`, `manual`, `webhook`, or `retry`. |
+| `isManual` | `true` when someone starts the execution manually from the editor. |
+| `projectId`, `projectName` | The project the workflow belongs to, when it belongs to one. |
+
+`n8n.workflow.success` and `n8n.workflow.failed` also carry a `success` boolean: `true` on the success event, `false` on the failed event.
+
+`n8n.workflow.failed` additionally carries:
+
+| Field | Description |
+|---|---|
+| `lastNodeExecuted` | The name of the node that was running when the execution failed. |
+| `errorNodeType` | That node's type, for example `n8n-nodes-base.httpRequest`. |
+| `errorMessage` | The error message, as a string. |
+
+`n8n.workflow.cancelled` additionally carries `reason`, a string describing why the execution was cancelled.
+
+### MCP events
+
+{% hint style="info" %}
+**Feature availability**
+
+MCP audit events are available from n8n 2.34.0.
+{% endhint %}
+
+The three **MCP** audit events cover the instance MCP server, which you turn on in **Settings** > **Instance-level MCP**. They don't cover workflows that use the **MCP Server Trigger** node. See [Connect to n8n MCP server](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server) for the difference between the two.
+
+| Event name | Sent when |
+| --- | --- |
+| `n8n.audit.mcp.oauth.completed` | A user finishes authorizing an MCP client through OAuth. Carries `userId`, `clientId`, and `clientName`. |
+| `n8n.audit.mcp.tool.called` | An MCP client calls a tool. See the fields below. |
+| `n8n.audit.mcp.access.updated` | Someone turns instance MCP access on or off. Carries the acting user and the new `enabled` value. |
+
+To stream all three, subscribe your destination to `n8n.audit.mcp`. In **Settings** > **Log Streaming** > **Events**, they appear in the **Audit** group.
+
+`n8n.audit.mcp.tool.called` carries these fields:
+
+| Field | Description |
+| --- | --- |
+| `userId` | The user whose credentials the client authenticated with. |
+| `_email`, `_firstName`, `_lastName`, `globalRole` | That user's details. |
+| `toolName` | The tool that was called, for example `execute_workflow`. |
+| `workflowId` | The workflow the tool acted on, when it acts on one. |
+| `status` | `success` or `error`. |
+| `errorMessage` | Why the call failed. Only present when `status` is `error`. |
+| `authType` | `oauth` or `api_key`. `api_key` covers every bearer token that isn't an OAuth access token. `authType` is available from n8n 2.34.0.|
+| `clientId` | The OAuth client the call authenticated as, as registered with your instance. Present when `authType` is `oauth`. `clientId` is available from n8n 2.34.0. |
+| `clientName` | The name the client reports for itself. |
+
+To measure usage per client, group by `clientId`. It identifies one client registration, so it stays the same across every call that client makes, including after its token refreshes. Two installations of the same product register separately and get different values, so `clientId` counts registrations rather than products. `clientName` isn't verified and isn't unique, so don't use it as a key.
+
+Setting `anonymizeAuditMessages` on a destination masks the user's email and name. It doesn't mask `userId`, `authType`, or `clientId`, so you can still group and count by them.
+
+## Destinations <a href="#destinations" id="destinations"></a>
+
+n8n supports three destination types:
+
+* A syslog server
+* A generic webhook
+* A Sentry client
+
+## Configure using environment variables <a href="#configure-using-environment-variables" id="configure-using-environment-variables"></a>
+
+If you self-host n8n, you can manage log streaming destinations from environment variables instead of the UI. This is available from n8n 2.19.0. Set `N8N_LOG_STREAMING_MANAGED_BY_ENV` to `true` and provide your destinations as a JSON array in `N8N_LOG_STREAMING_DESTINATIONS`. n8n reapplies these on every startup and locks the **Log Streaming** UI as read-only. See [Manage instance settings using environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/manage-settings-using-environment-variables) for the full pattern.
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/JvN9TDUUWTwpWaT83YrH/" %}
+
+### Common fields <a href="#common-fields" id="common-fields"></a>
+
+Every destination accepts these fields, regardless of `type`.
+
+| Field | Type | Required | Description |
+| --- | --- | --- | --- |
+| `type` | `"webhook"` \| `"syslog"` \| `"sentry"` | Yes | Destination type. Determines which type-specific fields apply. |
+| `label` | string | No | Display name shown in the UI. |
+| `enabled` | boolean | No | Whether the destination forwards events. |
+| `subscribedEvents` | string[] | No | Event names or group prefixes to forward (for example `n8n.audit`, `n8n.workflow`). |
+| `anonymizeAuditMessages` | boolean | No | Strip sensitive payload data from `n8n.audit.*` events. |
+| `circuitBreaker` | object | No | Failure-protection settings. See [Circuit breaker](#circuit-breaker). |
+
+### Webhook <a href="#webhook" id="webhook"></a>
+
+| Field | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| `url` | string (URL) | Yes | - | Endpoint that receives the event payload. |
+| `method` | `"GET"` \| `"POST"` \| `"PUT"` | No | `"POST"` | HTTP method used for delivery. |
+| `sendQuery` | boolean | No | `false` | Whether to send query parameters. |
+| `specifyQuery` | `"keypair"` \| `"json"` | No | `"keypair"` | Format for query parameters when `sendQuery` is `true`. |
+| `queryParameters` | `{ parameters: [{ name, value }] }` | No | - | Query parameters as key/value pairs. Used when `specifyQuery` is `"keypair"`. |
+| `jsonQuery` | string | No | `""` | Query parameters as a JSON string. Used when `specifyQuery` is `"json"`. |
+| `sendHeaders` | boolean | No | `false` | Whether to send headers. |
+| `specifyHeaders` | `"keypair"` \| `"json"` | No | `"keypair"` | Format for headers when `sendHeaders` is `true`. |
+| `headerParameters` | `{ parameters: [{ name, value }] }` | No | - | Headers as key/value pairs. Used when `specifyHeaders` is `"keypair"`. |
+| `jsonHeaders` | string | No | `""` | Headers as a JSON string. Used when `specifyHeaders` is `"json"`. |
+| `options` | object | No | `{}` | Connection-level options. See [Webhook options](#webhook-options). |
+
+#### Webhook options <a href="#webhook-options" id="webhook-options"></a>
+
+| Field | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| `allowUnauthorizedCerts` | boolean | No | `false` | Ignore SSL certificate validation. |
+| `queryParameterArrays` | `"repeat"` \| `"brackets"` \| `"indices"` | No | `"brackets"` | Array format used in query parameters. Used when `sendQuery` is `true`. |
+| `redirect` | `{ redirect: { followRedirects, maxRedirects } }` | No | `{ redirect: {} }` | Follow HTTP redirects. `followRedirects` defaults to `false`; `maxRedirects` defaults to `21`. |
+| `proxy` | `{ proxy: { protocol, host, port } }` | No | `{ proxy: {} }` | HTTP/HTTPS proxy. `protocol` is `"https"` or `"http"`; `host` defaults to `"127.0.0.1"`; `port` defaults to `9000`. |
+| `timeout` | integer ≥ 1 (ms) | No | `5000` | Time to wait for the server to start the response before aborting. |
+| `socket` | `{ keepAlive, maxSockets, maxFreeSockets }` | No | `{ keepAlive: true, maxSockets: 50, maxFreeSockets: 5 }` | Socket pool configuration. `maxSockets` and `maxFreeSockets` are integers ≥ 1. |
+
+```json
+[
+  {
+    "type": "webhook",
+    "label": "Audit",
+    "subscribedEvents": ["n8n.audit", "n8n.workflow"],
+    "anonymizeAuditMessages": true,
+    "url": "https://hooks.example.com/n8n",
+    "method": "POST",
+    "sendHeaders": true,
+    "specifyHeaders": "keypair",
+    "headerParameters": {
+      "parameters": [
+        { "name": "Authorization", "value": "Bearer s3cret" }
+      ]
+    },
+    "options": {
+      "timeout": 5000,
+      "redirect": { "redirect": { "followRedirects": true, "maxRedirects": 5 } }
+    }
+  }
+]
+```
+
+### Syslog <a href="#syslog" id="syslog"></a>
+
+| Field | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| `host` | string | Yes | - | Syslog server hostname or IP. |
+| `port` | number | No | `514` | Syslog server port. |
+| `protocol` | `"udp"` \| `"tcp"` \| `"tls"` | No | `"udp"` | Transport protocol. |
+| `tlsCa` | string | When `protocol` is `"tls"` | `""` | PEM-formatted CA certificate used for the TLS connection. |
+| `facility` | number | No | `16` | Syslog facility code. Allowed values: `0` (Kernel), `1` (User), `3` (System), `13` (Audit), `14` (Alert), `16` to `23` (Local0 to Local7). |
+| `app_name` | string | No | `"n8n"` | Value used as the syslog `APP-NAME`. |
+
+```json
+[
+  {
+    "type": "syslog",
+    "label": "SIEM",
+    "subscribedEvents": ["n8n.audit", "n8n.workflow"],
+    "host": "syslog.example.com",
+    "port": 514,
+    "protocol": "tls",
+    "tlsCa": "-----BEGIN CERTIFICATE-----\n…\n-----END CERTIFICATE-----",
+    "facility": 16,
+    "app_name": "n8n"
+  }
+]
+```
+
+### Sentry <a href="#sentry" id="sentry"></a>
+
+| Field | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| `dsn` | string (URL) | Yes | - | Sentry DSN client key. |
+
+```json
+[
+  {
+    "type": "sentry",
+    "label": "Sentry prod",
+    "subscribedEvents": ["n8n.workflow"],
+    "dsn": "https://public@sentry.example.com/1"
+  }
+]
+```
+
+### Circuit breaker <a href="#circuit-breaker" id="circuit-breaker"></a>
+
+A circuit breaker temporarily stops delivery to a destination after repeated failures, preventing load on a struggling downstream service. Available on every destination type.
+
+| Field | Type | Required | Default | Description |
+| --- | --- | --- | --- | --- |
+| `maxFailures` | integer ≥ 1 | No | `5` | n8n stops sending requests to the destination once failures within `failureWindow` reach this number. |
+| `failureWindow` | integer ≥ 100 (ms) | No | `60000` | Sliding window for counting failures. Older failures expire. |
+
+```json
+{ "circuitBreaker": { "maxFailures": 3, "failureWindow": 30000 } }
+```
+
+### Complete example <a href="#complete-example" id="complete-example"></a>
+
+```bash
+N8N_LOG_STREAMING_MANAGED_BY_ENV=true
+N8N_LOG_STREAMING_DESTINATIONS='[
+  {
+    "type": "webhook",
+    "label": "Ops webhook",
+    "enabled": true,
+    "subscribedEvents": ["n8n.workflow", "n8n.audit"],
+    "anonymizeAuditMessages": true,
+    "url": "https://hooks.example.com/n8n",
+    "method": "POST",
+    "sendHeaders": true,
+    "specifyHeaders": "keypair",
+    "headerParameters": {
+      "parameters": [
+        { "name": "Authorization", "value": "Bearer s3cret" }
+      ]
+    },
+    "circuitBreaker": { "maxFailures": 5, "failureWindow": 60000 }
+  },
+  {
+    "type": "sentry",
+    "label": "Sentry prod",
+    "subscribedEvents": ["n8n.workflow"],
+    "dsn": "https://public@sentry.example.com/1"
+  }
+]'
+```
+
+## Related resources
+
+* [Observe and log](./)
+* [Track usage with Insights](track-usage-with-insights.md)

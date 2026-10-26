@@ -1,30 +1,43 @@
 ---
 title: Gmail
-description: Documentation for Gmail IMAP credentials. Use these credentials to authenticate Gmail IMAP in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Gmail IMAP credentials. Use these credentials to
+  authenticate Gmail IMAP in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: high
+nodeTitle: Gmail
+originalFilePath: integrations/builtin/credentials/imap/gmail.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/imap/gmail'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/imap/gmail'
+layout:
+  description:
+    visible: false
 ---
 
-# Gmail IMAP credentials
+# Gmail IMAP credentials <a href="#gmail-imap-credentials" id="gmail-imap-credentials"></a>
 
 Follow these steps to configure the IMAP credentials with a Gmail account.
 
-## Prerequisites
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 To follow these instructions, you must first:
 
 1. [Enable 2-step Verification](#enable-2-step-verification) on your Gmail account.
 2. [Generate an app password](#generate-an-app-password).
 
-### Enable 2-step Verification
+### Enable 2-step Verification <a href="#enable-2-step-verification" id="enable-2-step-verification"></a>
 
---8<-- "_snippets/integrations/builtin/credentials/email/gmail-two-step-verification.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/ysY7mHC9pN3kCUPncSi8/" %}
 
-### Generate an app password
+### Generate an app password <a href="#generate-an-app-password" id="generate-an-app-password"></a>
 
---8<-- "_snippets/integrations/builtin/credentials/email/gmail-app-password.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/rJn9WooD0IwP7abKawNZ/" %}
 
-## Set up the credential
+## Set up the credential <a href="#set-up-the-credential" id="set-up-the-credential"></a>
 
 To set up the IMAP credential with a Gmail account, use these settings:
 
@@ -35,4 +48,4 @@ To set up the IMAP credential with a Gmail account, use these settings:
 5. Turn on the **SSL/TLS** toggle.
 6. Check with your email administrator about whether to **Allow Self-Signed Certificates**.
 
-Refer to [Add Gmail to another client](https://support.google.com/mail/answer/7126229?hl=en) for more information. You may need to **Enable IMAP** if you're using a personal Google account before June 2024.
+Refer to [Add Gmail to another client](https://support.google.com/mail/answer/7126229?hl=en) for more information. For personal Google accounts, IMAP access is always enabled. Google removed the **Enable IMAP** / **Disable IMAP** toggle in January 2025. If you're using a Google Workspace account and IMAP doesn't work, check with your email administrator whether they allow IMAP access for your account.

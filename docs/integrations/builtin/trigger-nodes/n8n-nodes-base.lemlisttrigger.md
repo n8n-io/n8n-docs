@@ -1,24 +1,43 @@
 ---
 title: Lemlist Trigger node documentation
-description: Learn how to use the Lemlist Trigger node in n8n. Follow technical documentation to integrate Lemlist Trigger node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Lemlist Trigger node in n8n. Follow technical
+  documentation to integrate Lemlist Trigger node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Lemlist Trigger node documentation
+originalFilePath: integrations/builtin/trigger-nodes/n8n-nodes-base.lemlisttrigger.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.lemlisttrigger
+url: >-
+  https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.lemlisttrigger
+layout:
+  description:
+    visible: false
 ---
 
-# Lemlist Trigger node
+# Lemlist Trigger node <a href="#lemlist-trigger-node" id="lemlist-trigger-node"></a>
 
 [Lemlist](https://Lemlist.com) is an email outreach platform that allows you to automatically generate personalized images and videos and send personalized cold emails.
 
-/// note | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/lemlist.md).
-///
+{% hint style="info" %}
+**Credentials**
 
-///  note  | Examples and templates
+Refer to the [Lemlist credentials documentation](../credentials/lemlist.md) for authentication information for this node.
+{% endhint %}
+
+{% hint style="info" %}
+**Examples and templates**
+
 For usage examples and templates to help you get started, refer to n8n's [Lemlist Trigger integrations](https://n8n.io/integrations/lemlist-trigger/) page.
-///
+{% endhint %}
 
-## Events
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
 
-<!-- vale Vale.Spelling = NO -->
+## Events <a href="#events" id="events"></a>
+
+
 - *
 - Aircall Created
 - Aircall Done
@@ -67,4 +86,4 @@ For usage examples and templates to help you get started, refer to n8n's [Lemlis
 - Send Limit Reached
 - Skipped
 - Warmed
-<!-- vale Vale.Spelling = YES -->
+

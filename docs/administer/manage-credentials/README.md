@@ -1,0 +1,24 @@
+---
+layout:
+  description:
+    visible: false
+---
+# Manage credentials <a href="#manage-credentials" id="manage-credentials"></a>
+
+Store and share the authentication details your workflows need, without spreading secrets across your instance.
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
+## In this section
+
+* [Share credentials securely](share-credentials-securely.md): share credentials within an organization.
+* [End-user credentials](end-user-credentials.md): let each user connect their own account to a credential.
+* [Credential overwrites](credential-overwrites.md): set credential data globally on a self-hosted instance.
+* [Use external secret stores](use-external-secret-stores.md): use an external secrets vault with n8n.
+
+## Related resources
+
+* [Administer](../)
+* [Manage users and access](../manage-users-and-access/README.md)
+* [Use source control and environments](../use-source-control-and-environments/README.md)
+* [Observe and log](../observe-and-log/README.md)

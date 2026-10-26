@@ -1,0 +1,41 @@
+---
+description: Best practices for updating your self-hosted n8n
+title: Update self-hosted n8n
+contentType: explanation
+tags:
+  - update npm
+  - update docker
+hide:
+  - tags
+nodeTitle: Update n8n
+originalFilePath: hosting/installation/updating.md
+originalUrl: 'https://docs.n8n.io/hosting/installation/updating'
+url: 'https://docs.n8n.io/deploy/host-n8n/keep-n8n-running/update-n8n'
+layout:
+  description:
+    visible: false
+---
+
+# Update self-hosted n8n <a href="#update-self-hosted-n8n" id="update-self-hosted-n8n"></a>
+
+Keep your n8n version up to date to get the latest features and fixes.
+
+Some tips when updating:
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/1Q2X3RjU5o2jnRfcKzuN/" %}
+
+For instructions on how to update, refer to the documentation for your installation method:
+
+* [Installed with npm](../install-options/install-with-npm.md#updating)
+* [Installed with Docker or Docker Compose](../install-options/install-with-docker.md#updating)
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+
+## Related resources
+
+* [Keep n8n running](./)
+* [Set up logging](set-up-logging.md)
+* [Monitor n8n](monitor-n8n.md)
+* [Visualize metrics with Grafana](visualize-metrics-with-grafana.md)
+* [Back up and restore](backup-and-restore.md)
+* [Trace executions with OpenTelemetry](trace-executions-with-opentelemetry.md)

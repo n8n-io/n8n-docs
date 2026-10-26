@@ -1,0 +1,54 @@
+{
+  "total": 120,
+  "successful": 100,
+  "unknown": 0,
+  "unsupported": 0,
+  "timeouts": 1,
+  "redirects": 0,
+  "excludes": 16,
+  "errors": 3,
+  "cached": 5,
+  "error_map": {
+    "./docs/integrations/builtin/credentials/airtable.md": [
+      {
+        "url": "https://support.airtable.com/hc/en-us/articles/203255215-Formula-Field-Reference",
+        "status": {
+          "text": "Network error: Not Found",
+          "code": 404
+        }
+      },
+      {
+        "url": "https://www.npmjs.com/package/pg",
+        "status": {
+          "text": "403 Forbidden: Forbidden",
+          "code": 403
+        }
+      }
+    ],
+    "./docs/integrations/builtin/credentials/wise.md": [
+      {
+        "url": "https://n8n.io/integrations/netscaler-adc",
+        "status": "404 Not Found"
+      }
+    ]
+  },
+  "timeout_map": {
+    "./docs/integrations/builtin/credentials/wise.md": [
+      {
+        "url": "https://n8n.io/integrations/netscaler-adc",
+        "status": "404 Not Found"
+      }
+    ],
+    "docs/hosting/index.md": [
+      {
+        "url": "https://slow.example.com/",
+        "status": {
+          "text": "Timeout"
+        }
+      }
+    ]
+  },
+  "suggestion_map": {},
+  "excluded_map": {},
+  "duration_secs": 390
+}

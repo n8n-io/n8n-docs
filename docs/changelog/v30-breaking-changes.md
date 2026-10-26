@@ -169,7 +169,7 @@ n8n 3.0 removes support for deprecated node versions 1 and 1.1 of the [Edit Imag
 
 Node version 2 uses a different image-processing library, so image output can change. The migration converts blur settings, but removes **Sigma**. Text placement can change. **Get Information** returns a normalized result. PNG and TIFF output ignores the **Quality** setting. Resize operations with zero or negative dimensions fail.
 
-**What to do:** Before you upgrade, go to **Settings > Migration Report** to identify affected workflows. Update each **Edit Image** node to node version 2 and test its output, especially workflows that blur or resize images, add text, read image information, or set PNG or TIFF quality.
+**What to do:** Before you upgrade, go to **Settings > Migration Report** to identify affected workflows. Migrate them from the report, or update each **Edit Image** node to node version 2 by hand. Then test the output, especially workflows that blur or resize images, add text, read image information, or set PNG or TIFF quality.
 
 ### Always Output Data on nodes with several outputs
 

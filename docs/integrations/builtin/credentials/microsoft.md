@@ -294,7 +294,7 @@ Delegated permissions:
 * `SearchConfiguration.Read.All`
 * `SearchConfiguration.ReadWrite.All`
 
-## Microsoft Teams on Cloud: Admin approval
+## Microsoft Teams on Cloud: Admin approval <a href="#microsoft-teams-on-cloud-admin-approval" id="microsoft-teams-on-cloud-admin-approval"></a>
 
 On n8n Cloud, a Microsoft Entra administrator of your organization approves the managed Microsoft Teams credential's permissions once, before users who aren't administrators can connect or reconnect it.
 
@@ -304,7 +304,7 @@ Several of the [default scopes for Microsoft Teams](#default-scopes-for-microsof
 
 If you aren't an administrator and your tenant hasn't approved the permissions, Microsoft stops the sign-in at a **Need admin approval** or **Approval required** screen with no **Accept** button. The popup ends with an error such as `AADSTS65004`, and n8n never receives a token. The credential stays disconnected, so every node that uses it fails, not only the operations that need the missing permission. Reconnecting shows the same screen and fails the same way. The order matters: your administrator approves first, then you reconnect.
 
-If the screen offers **Request approval**, your tenant has Microsoft's [admin consent workflow](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/admin-consent-workflow-overview) enabled: enter a justification and send the request to your administrators. Otherwise, contact your Microsoft Entra administrator directly and point them to the steps below.
+If the screen offers **Request approval**, your tenant has Microsoft's [admin consent workflow](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/admin-consent-workflow-overview) enabled: enter a justification and send the request to your administrators. Otherwise, contact your Microsoft Entra administrator directly and ask them to follow the steps in [Approve the permissions for your organization](#approve-the-permissions-for-your-organization).
 
 ### Approve the permissions for your organization
 
@@ -320,19 +320,19 @@ Microsoft stores the consent in your tenant, not in n8n. You can delete the cred
 {% hint style="warning" %}
 **Granting consent in the Microsoft Entra admin center doesn't cover these permissions**
 
-n8n requests the Microsoft Teams permissions at sign-in instead of declaring them on its app registration. **Grant admin consent** on the app's **Permissions** page in the Microsoft Entra admin center only covers declared permissions, so it doesn't unblock the credential. Approve the permissions through the sign-in prompt as described above, or by approving a user's request in the [admin consent workflow](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/review-admin-consent-requests).
+n8n requests the Microsoft Teams permissions at sign-in instead of declaring them on its app registration. **Grant admin consent** on the app's **Permissions** page in the Microsoft Entra admin center only covers declared permissions, so it doesn't unblock the credential. [Approve the permissions through the sign-in prompt](#approve-the-permissions-for-your-organization), or approve a user's request in the [admin consent workflow](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/review-admin-consent-requests).
 {% endhint %}
 
 ### New scopes need a new approval
 
-n8n adds scopes to the Microsoft Teams credential over time, and the [default scopes for Microsoft Teams](#default-scopes-for-microsoft-teams) note the n8n release that added each newer scope. A credential you connected before that release keeps working with its old token, but the operations that need the new scope fail with a 403 error until you reconnect. If the new scope needs admin consent, the reconnect hits the approval screen again, even in a tenant that approved the credential before. The sequence is the same: your administrator approves the new permission as described above, then every user reconnects.
+n8n adds scopes to the Microsoft Teams credential over time, and the [default scopes for Microsoft Teams](#default-scopes-for-microsoft-teams) note the n8n release that added each newer scope. A credential you connected before that release keeps working with its old token, but the operations that need the new scope fail with a 403 error until you reconnect. If the new scope needs admin consent, the reconnect hits the approval screen again, even in a tenant that approved the credential before. The sequence is the same: your administrator [approves the new permission through the sign-in prompt](#approve-the-permissions-for-your-organization), then every user reconnects.
 
 ### Use your own app registration instead
 
 If your organization doesn't allow consent to n8n's shared app or wants to control the permissions itself, connect through your own Microsoft Entra app registration. This works on n8n Cloud too:
 
 1. In the credential, switch from **Managed OAuth2** to **Custom OAuth2**.
-2. [Register an application](#register-an-application) and add a [client secret](#generate-a-client-secret) or a [certificate](#authenticate-with-a-certificate), as described above. Use the **OAuth Redirect URL** the credential shows. On n8n Cloud, it's a shared n8n callback URL rather than your instance URL.
+2. [Register an application](#register-an-application) and add a [client secret](#generate-a-client-secret) or a [certificate](#authenticate-with-a-certificate). Use the **OAuth Redirect URL** the credential shows. On n8n Cloud, it's a shared n8n callback URL rather than your instance URL.
 3. Ask a Microsoft Entra administrator to grant admin consent on your app registration. Because your organization owns it, they can declare the permissions on it and approve them in the Microsoft Entra admin center, or sign in through n8n and select **Consent on behalf of your organization**. [Delegated access for organisation-wide Microsoft integrations](microsoftentra.md#delegated-access-for-organisation-wide-microsoft-integrations) in the Microsoft Entra credentials documentation covers the app registration and the consent steps in detail.
 
 The permissions that need admin consent still need an administrator, but on an app your organization controls. Enable **Custom Scopes** to trim the list to what your workflows use.

@@ -45,7 +45,7 @@ When building your logic, you'll use n8n's [Core nodes](https://app.gitbook.com/
 
 * [Build](../)
 * [Understand workflows](../understand-workflows/README.md)
-* [Build and manage agents](../build-and-manage-agents.md)
+* [Build and manage agents](../build-and-manage-agents/README.md)
 * [Ways of building workflows](../ways-of-building-workflows/README.md)
 * [Manage workflows](../manage-workflows/README.md)
 * [Work with data](../work-with-data/README.md)

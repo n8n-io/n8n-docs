@@ -64,7 +64,7 @@ While a promotion review for a project is open, you can't promote that project a
 
 ### Workflows or folders moved to another project
 
-Promote can't move workflows or folders between projects, or into a personal project. n8n names the item and both projects. Move the item back to its original project, then promote again. Moves within a project work.
+A project promote can't move workflows or folders between projects. n8n names the item and both projects. Use an instance promote instead. Moves within a project work, and moves into a personal project aren't supported.
 
 ### Workflows the export doesn't include
 

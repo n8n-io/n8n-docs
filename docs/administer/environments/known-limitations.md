@@ -11,7 +11,7 @@ tags:
 
 # Known limitations
 
-This page lists what Environments don't support yet, with workarounds where they exist. n8n updates it as it removes limitations.
+Environments are in Preview, and n8n is actively improving and extending them. Many of these limitations are temporary. Each entry names a workaround where one exists.
 
 {% hint style="info" %}
 **Preview status**
@@ -19,59 +19,63 @@ This page lists what Environments don't support yet, with workarounds where they
 Environments are in Preview and may change in future releases. Try them on test instances before you set them up for your production instances.
 {% endhint %}
 
-## Scope and access
+## Cross-project dependencies
 
-### Only instance owners and admins
+A project promote includes what its workflows use, but not sub-workflows from other projects. It only references them, so they must already exist on the target instance. This affects setups like a shared utility project whose sub-workflows many other projects call.
 
-Only instance owners and instance admins can set up environments, promote, apply, and review promotions. Other roles, including project admins, can't do any of these.
+**Workaround:** promote and apply the shared project first, or use an instance promote and instance apply, which include every team project and the dependencies between them. An instance promote fails if a workflow references a workflow in a personal project. Move that workflow into a team project first.
 
-### Environments apply to the whole instance
+## Moving workflows and folders between projects
 
-Each instance has at most one environment it promotes changes to and one it applies changes from, and they cover all team projects. You can't give a project its own environment.
+A project promote or project apply can't move workflows or folders from one project to another. Moves within a project work.
 
-### Personal projects aren't promoted
+**Workaround:** use an instance promote and instance apply. They move workflows and folders to the project that the branch holds them in, and keep their ID, version history, and executions.
 
-Promote covers team projects only. To promote a workflow, move it to a team project first.
+## Environments for individual projects
 
-### Agents aren't promoted
+Environments currently cover the whole instance. Environments for individual projects are planned.
 
-Environments promote workflows and what they use. Agents don't move between instances.
+## Roles
 
-## Workflows and dependencies
+Currently, only instance owners and instance admins can set up environments, promote, apply, and review promotions. Support for project roles is planned.
 
-### Sub-workflows in other projects
+## Git providers
 
-A project promote doesn't include sub-workflows from other projects. It only references them, and the promote isn't blocked. The sub-workflow must already exist on the target instance, so promote the project that owns it first. Otherwise the reference points nowhere, and publishing the calling workflow on the target can fail.
+Environments currently support Generic Git and GitLab. Support for GitHub and Bitbucket is planned.
 
-An instance promote fails if a workflow references a workflow outside the team projects, such as a sub-workflow or error workflow in a personal project. Move the referenced workflow into a team project, then promote again.
+**Workaround:** connect GitHub, Bitbucket, and other Git hosts with [Generic Git](git-based-promotion/generic-git.md). Promotion reviews aren't available there yet.
 
-### Moving workflows and folders between projects
+## Agents
 
-Promote and apply can't move workflows or folders from one project to another. Moves within a project work.
+Promote and apply don't include agents yet. Support is in development.
 
-### Workflow descriptions don't move
+## Personal projects
 
-Promote doesn't include the workflow description. Update it on the target instance.
+Promote and apply cover team projects only.
 
-## Apply
+**Workaround:** move the workflows you want to promote to a team project.
 
-### An instance apply deletes projects
+## Workflow descriptions
 
-An instance apply deletes projects that aren't on the branch, and everything in them. n8n lists the projects it deletes and asks you to confirm once. For day-to-day changes, use a project apply instead.
+Promote doesn't include a workflow's description.
 
-## Promotion reviews
+**Workaround:** update the description on the target instance.
 
-### Review status updates when you open Reviews
+## Updating an open promotion review
+
+You can't add changes to a promotion review after n8n opens it.
+
+**Workaround:** approve or close the review, then promote again to open a new one.
+
+## Promotion review status
 
 n8n updates the status of promotion reviews from the Git host when you open **Reviews**. Changes on the Git host don't appear in n8n until then.
 
-### You can't update an open review
+## GitLab approval rules
 
-You can't add changes to a promotion review after n8n opens it. To include more changes, approve or close the review, then promote again to open a new one.
+n8n opens and approves merge requests with the same GitLab token. GitLab approval rules that stop authors from approving their own merge requests block **Approve and merge**.
 
-### GitLab approval rules
-
-n8n opens and approves merge requests with the same GitLab token. GitLab approval rules that stop authors from approving their own merge requests block **Approve and merge**. See [Promotion reviews](promotion-reviews.md#n8n-acts-as-the-tokens-user).
+**Workaround:** adjust the approval rules, or merge on GitLab. See [Promotion reviews](promotion-reviews.md#n8n-acts-as-the-tokens-user).
 
 ## Related resources
 

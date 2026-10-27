@@ -41,7 +41,7 @@ Before Apply writes anything, n8n checks the changes against the instance. This 
 | **Missing** credential or variable | Select **Add credential** or **Add variable** and create it. For a credential, n8n pre-fills the fields that use expressions on the source. |
 | **No access** | The credential exists, but the project can't use it. Ask an admin to share it with the project. |
 | **Conflict** | The resource differs on the instance in a way Apply can't fix. Follow the message, then refresh. |
-| **Moved** | The workflow or folder is in another project on the branch. Apply can't move items between projects. Move it on the instance to match the branch. |
+| **Moved** | The workflow or folder is in another project on the branch. A project apply can't move items between projects. Move it on the instance to match the branch, or run an instance apply. |
 
 ## Confirm destructive changes
 

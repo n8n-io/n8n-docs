@@ -11,7 +11,7 @@ tags:
 
 # Apply changes
 
-Applying changes brings workflows from an environment into your instance. You can apply selected workflows to one project, or make the whole instance match the environment.
+Applying changes brings your work from an environment into your instance. A project apply brings selected changes into one team project. An instance apply makes the whole instance match the environment.
 
 {% hint style="info" %}
 **Preview status**
@@ -21,67 +21,78 @@ Environments are in Preview and may change in future releases. Try them on test 
 
 Before you start, [set up the environment](set-up-environments.md) this instance applies changes from.
 
-## Apply workflows to a project
+## Project apply
 
-Applying to a project changes only the workflows you select and what they use. It never deletes projects. All projects on an instance share tags, so renaming a tag renames it in every project.
+A project apply brings the changes you select into one team project. It never deletes projects. All projects on an instance share tags, so a tag rename applies in every project.
 
-1. Open a team project. If the environment has changes for it, a badge with the number of incoming changes appears next to the project name.
+1. Open a team project. If the environment has changes for it, a badge with a down arrow and the number of incoming changes appears next to the project name.
 2. Select the badge. The **Changes to apply** page opens.
-3. Select the workflows to apply. n8n selects the credentials, variables, data tables, and tags they use.
-4. Review the changes. Select **Show diff** on a workflow to compare the canvas **Before** and **After**. **Before** is this instance.
+3. Select the workflows to apply. n8n includes their dependencies, such as credentials, variables, data tables, and tags.
+4. Inspect the changes. Each resource shows what changed, such as **New**, **Modified**, **Renamed**, **Moved**, **Archived**, or **Deleted**. To compare a workflow visually, select **Show diff**. The diff viewer shows the canvas **Before** and **After**, where **Before** is this instance and **After** is the environment's branch.
 5. Check the **Blockers** tab and resolve any blockers. See [Resolve blockers](#resolve-blockers).
 6. Select **Apply N changes**, then confirm.
 
-## Apply to the whole instance
-
-{% hint style="danger" %}
-Applying to the whole instance overwrites every project to match the environment's branch. It deletes projects and content that aren't on the branch. You can't undo this.
-{% endhint %}
-
-Use this to bring an instance fully in line with its environment, for example a new production instance. For day-to-day changes, apply to a project instead. Before you apply to the whole instance, back up the instance or try the apply on a test instance first.
-
-1. Go to **Settings** > **Environments**.
-2. On the environment under **Apply changes from**, select **Apply**.
-3. Read the warning and select **Apply**.
-4. If n8n asks you to resolve blockers or review destructive changes, follow the dialog. To delete projects that aren't on the branch, confirm **Delete N projects and apply**.
-
 ## Resolve blockers
 
-Before Apply writes anything, n8n checks the changes against the instance. A blocker stops Apply until you resolve it. Apply changes nothing while blockers remain.
+Before Apply writes anything, n8n checks the changes against the instance. This happens for both project and instance applies. A blocker stops Apply until you resolve it, and Apply changes nothing while blockers remain.
 
 | Blocker | What to do |
 |---|---|
-| **Missing** credential or variable | Select **Add credential** or **Add variable** and create it. n8n doesn't create credentials or variables for you. |
+| **Missing** credential or variable | Select **Add credential** or **Add variable** and create it. For a credential, n8n pre-fills the fields that use expressions on the source. |
 | **No access** | The credential exists, but the project can't use it. Ask an admin to share it with the project. |
 | **Conflict** | The resource differs on the instance in a way Apply can't fix. Follow the message, then refresh. |
-| **Moved** | The folder or workflow is in a different place on the branch. Move it on the instance to match, or apply the whole instance. |
+| **Moved** | The folder or workflow is in a different place on the branch. Move it on the instance to match, or run an instance apply. |
 
 ## Confirm destructive changes
 
 Apply asks you to confirm before it:
 
-- Removes or retypes data table columns. You can't restore the values in those columns. Rows and other columns stay.
-- Deletes projects when you apply to the whole instance.
+- Removes or retypes data table columns. This deletes the values in those columns. Rows and other columns stay.
+- Deletes projects, in an instance apply.
+
+## Instance apply
+
+{% hint style="danger" %}
+An instance apply overwrites every project to match the environment's branch. It deletes projects and content that aren't on the branch. You can't undo this.
+{% endhint %}
+
+Use an instance apply to bring an instance fully in line with its environment, for example to seed a new production instance. For day-to-day changes, n8n recommends a project apply, which gives you finer control.
+
+1. Go to **Settings** > **Environments**.
+2. On the environment under **Apply changes from**, select **Apply**.
+3. Read the warning and select **Apply**.
+4. If n8n finds blockers or destructive changes, it opens a dialog. Resolve the blockers, review the changes, and confirm. To delete projects that aren't on the branch, confirm **Delete N projects and apply**.
 
 ## What Apply changes on the instance
 
-Apply moves entities, such as workflows, links to credentials, and data table schemas. It doesn't move content, such as credential secrets or data table rows.
+Apply brings over the structure of your work, such as workflows, folders, and data table schemas. It doesn't bring over stored content, such as literal credential secrets or data table rows. Agents aren't included yet.
 
 | Resource | What Apply does |
 |---|---|
-| Workflows | Creates or updates them. If you deleted a workflow on the source, Apply deletes it on the instance instead of archiving it. An archived workflow stays archived. Workflows get the published state they have on the source. If publishing fails, n8n reports it without failing the apply. |
-| Credentials | Links workflows to a credential with the same ID. The credential must exist on the instance, or you create it while you resolve blockers. Credential secrets never move. TODO(OPEN-22): confirm whether Apply overwrites existing credential values. |
+| Projects | An instance apply creates projects that are on the branch and, after you confirm, deletes projects that aren't. A project apply never creates or deletes projects. |
+| Folders | Creates, renames, and moves folders to match the branch. |
+| Workflows | Creates or updates them. If you deleted a workflow on the source, Apply deletes it on the instance instead of archiving it. An archived workflow stays archived. TODO(publish): align with the decision on published state. |
+| Credentials | Links workflows to the credential with the same ID. If it's missing, you create it while you resolve blockers. If it exists and belongs to the project you apply to, Apply updates its name and the fields that use expressions, and keeps every other value, such as secrets. |
 | Variables | The variable must exist on the instance. Apply keeps its existing value. |
-| Data tables | Creates or updates the schema. Rows never move. |
-| Tags | Creates or renames tags. All projects on an instance share tags, so a rename applies in every project. |
+| Data tables | Creates tables or updates their schema. Existing rows stay. Removing or retyping a column deletes only that column's values, after you confirm. |
+| Tags | Creates tags and renames them to match the branch. Apply never deletes tags. |
 
 Promote and apply use [n8n packages](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages) to export and import this content.
 
-## If Apply doesn't finish
+## If Apply stops
 
-- **Apply paused:** the branch changed after you loaded the changes. Nothing changed. Start Apply again.
-- **Couldn't apply:** some changes may already be on the instance, and n8n doesn't roll them back. Check the instance before you try again.
-- **Could not be published:** Apply finished, but some workflows didn't publish, for example because a credential is missing. Fix them and publish them on the instance.
+### The branch changed
+
+If someone changes the environment's branch after you load the changes, Apply stops before it writes anything. A project apply shows **The branch changed after the page loaded, so Apply didn't change anything.** An instance apply shows **Apply paused**. Check the latest changes, then apply again.
+
+### Couldn't apply
+
+If an instance apply fails, n8n shows **Couldn't apply to the instance** and **Some changes may already be applied**. n8n doesn't roll back the changes it already made. Check the instance, then apply again.
+
+If a project apply fails, n8n shows **Couldn't apply the changes** and one of these:
+
+- **Nothing changed:** fix the cause in the message, then try again.
+- **The request may have run:** the page now shows the latest changes. Check them before you apply again.
 
 ## Related resources
 

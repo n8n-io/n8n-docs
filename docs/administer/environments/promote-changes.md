@@ -1,5 +1,5 @@
 ---
-description: Promote workflows from a project, or every project on an n8n instance, to the environment the instance promotes changes to.
+description: Promote changes from a project or from a whole n8n instance to the environment the instance promotes changes to.
 status: preview
 layout:
   description:
@@ -21,12 +21,14 @@ Environments are in Preview and may change in future releases. Try them on test 
 
 Before you start, [set up the environment](set-up-environments.md) this instance promotes changes to.
 
-## Promote workflows from a project
+## Project promote
 
-1. Open a team project. If it has changes to promote, a badge with the number of changes appears next to the project name.
+A project promote sends the changes you select from one team project.
+
+1. Open a team project. If it has changes to promote, a badge with an up arrow and the number of changes appears next to the project name.
 2. Select the badge. The **Changes to promote** page opens.
-3. Select the workflows to promote. n8n includes the credentials, variables, data tables, and tags they use. Sub-workflows from other projects are only referenced, not included.
-4. Inspect the changes. Each resource shows what changed, such as **New**, **Modified**, **Renamed**, **Moved**, **Archived**, or **Deleted**. To compare a workflow visually, select **Show diff**. The diff viewer shows the canvas **Before** and **After**, where **Before** is the environment's branch.
+3. Select the workflows to promote. n8n includes their dependencies, such as credentials, variables, data tables, and tags. Sub-workflows from other projects are only referenced, not included.
+4. Inspect the changes. Each resource shows what changed, such as **New**, **Modified**, **Renamed**, **Moved**, **Archived**, or **Deleted**. To compare a workflow visually, select **Show diff**. The diff viewer shows the canvas **Before** and **After**, where **Before** is the environment's branch and **After** is this instance.
 5. Select **Promote N changes**.
 6. Optional: enter a **Commit message**. If you leave it empty, n8n generates one.
 7. Select **Promote**.
@@ -35,9 +37,9 @@ If you edit a workflow while the page is open, select **Refresh** before you pro
 
 Promoting a workflow marked **Deleted** removes it from the branch, and applying deletes it on the target instance. An archived workflow stays archived.
 
-## Promote the whole instance
+## Instance promote
 
-Promoting the whole instance sends every team project and overwrites the project content on the branch to match the instance. Personal projects aren't included.
+An instance promote sends every team project and overwrites the project content on the branch to match the instance. Personal projects aren't included.
 
 1. Go to **Settings** > **Environments**.
 2. On the environment under **Promote changes to**, select **Promote**.
@@ -62,13 +64,13 @@ While a promotion review for a project is open, you can't promote that project a
 
 ### Workflows moved to another project
 
-A project promote can't move workflows between projects. n8n shows: **These workflows moved to another project**. Promote the whole instance instead.
+A project promote can't move workflows between projects. n8n shows: **These workflows moved to another project**. Run an instance promote instead.
 
 ### Workflows the export doesn't include
 
 A project promote doesn't include sub-workflows from other projects. It only references them, and the promote isn't blocked. The sub-workflow must already exist on the target instance, so promote the project that owns it first. Otherwise the reference points nowhere, and publishing the calling workflow on the target can fail.
 
-A whole-instance promote fails if a workflow references a workflow outside the team projects, for example a sub-workflow or error workflow in a personal project, or a deleted workflow. n8n shows **workflow dependencies not included in the package. Export aborted.** Move the referenced workflow into a team project, or remove the reference, then promote again.
+An instance promote fails if a workflow references a workflow outside the team projects, for example a sub-workflow or error workflow in a personal project, or a deleted workflow. n8n shows **workflow dependencies not included in the package. Export aborted.** Move the referenced workflow into a team project, or remove the reference, then promote again.
 
 ## Related resources
 

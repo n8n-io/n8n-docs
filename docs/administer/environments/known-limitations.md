@@ -43,12 +43,12 @@ Environments promote workflows and what they use. Agents don't move between inst
 
 A project promote doesn't include sub-workflows from other projects. It only references them, and the promote isn't blocked. The sub-workflow must already exist on the target instance, so promote the project that owns it first. Otherwise the reference points nowhere, and publishing the calling workflow on the target can fail.
 
-A whole-instance promote fails if a workflow references a workflow outside the team projects, such as a sub-workflow or error workflow in a personal project. Move the referenced workflow into a team project, then promote again.
+An instance promote fails if a workflow references a workflow outside the team projects, such as a sub-workflow or error workflow in a personal project. Move the referenced workflow into a team project, then promote again.
 
 ### Moving workflows and folders
 
-- A project promote can't move a workflow to another project. Promote the whole instance instead.
-- Apply can't move a folder or workflow that already exists on the instance. Move it on the instance to match the branch, or apply the whole instance.
+- A project promote can't move a workflow to another project. Run an instance promote instead.
+- Apply can't move a folder or workflow that already exists on the instance. Move it on the instance to match the branch, or run an instance apply.
 
 ### Workflow descriptions don't move
 
@@ -60,9 +60,9 @@ If you only publish or unpublish a workflow, n8n doesn't show it as a change to 
 
 ## Apply
 
-### Applying the whole instance deletes projects
+### An instance apply deletes projects
 
-Applying to the whole instance deletes projects that aren't on the branch, and everything in them. n8n lists the projects it deletes and asks you to confirm once. For day-to-day changes, apply to a project instead.
+An instance apply deletes projects that aren't on the branch, and everything in them. n8n lists the projects it deletes and asks you to confirm once. For day-to-day changes, use a project apply instead.
 
 ### Hidden credential values
 

@@ -31,7 +31,7 @@ Environments are in Preview and may change in future releases. Try them on test 
 | Model | The instance pushes to and pulls from one branch. | The instance promotes to one environment and applies from another. Each can use a different repository and branch. |
 | Git hosts | Any Git host over SSH or HTTPS. | Any Git host through Generic Git and GitLab with repository lists and merge requests. |
 | Reviews | On the Git host. | Promotion reviews in n8n, with GitLab. |
-| Selecting changes | You choose what to push. Pull brings in everything. | You choose workflows in both directions, per project, or promote and apply the whole instance. |
+| Selecting changes | You choose what to push. Pull brings in everything. | You choose changes in both directions with a project promote or project apply, or use an instance promote or instance apply. |
 | Dependencies | You select them. | n8n adds what the selected workflows use. |
 | Before changes land | Pull can overwrite local changes after you confirm. | Apply checks for blockers first and asks you to confirm destructive changes. |
 | Credentials | Stubs. | References to credentials that must exist on the target, or that you create during Apply. |

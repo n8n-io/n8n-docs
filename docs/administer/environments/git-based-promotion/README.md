@@ -21,7 +21,7 @@ Environments are in Preview and may change in future releases. Try them on test 
 
 ## What n8n writes to the repository
 
-n8n stores promoted content in an `n8n/` folder at the root of the repository. It doesn't change anything outside that folder, so the repository can hold other files, such as CI configuration.
+n8n stores promoted content in an `n8n/` folder at the root of the repository. The folder holds an [n8n package](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages), which promote exports and apply imports with fixed settings chosen for promotion. n8n doesn't change anything outside that folder, so the repository can hold other files, such as CI configuration.
 
 ## Direct commits and feature branches
 

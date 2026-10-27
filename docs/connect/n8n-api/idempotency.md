@@ -20,8 +20,6 @@ Idempotency for the n8n API is available from n8n 2.45.0 on:
 It isn't available on the free trial.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 The header is optional. If you leave it off, each POST runs as usual.
 
 ## Send an idempotency key

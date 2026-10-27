@@ -22,8 +22,6 @@ layout:
 
 Create a [Dynatrace](https://www.dynatrace.com/signup/) account.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Dynatrace's API documentation](https://docs.dynatrace.com/docs/dynatrace-api) for more information about authenticating with the service.

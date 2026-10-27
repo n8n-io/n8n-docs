@@ -22,8 +22,6 @@ You can use these credentials to authenticate the following nodes:
 - [Webflow](../app-nodes/n8n-nodes-base.webflow.md)
 - [Webflow Trigger](../trigger-nodes/n8n-nodes-base.webflowtrigger.md)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 - Create a [Webflow](https://webflow.com/) account.

@@ -49,7 +49,7 @@ Use a fine-grained personal access token if your GitLab version supports them.
 |---|---|---|---|---|
 | **User** | **System Access** | **User** | Read | Check the token |
 | **User** | **Projects** | **Project** | Read | List repositories |
-| **Group and project** | **Repository** | **Branch** | Read | List branches |
+| **Group and project** | **Repository** | **Branch** | Create, Read, Delete | List branches, push feature branches, and delete them after a merge |
 | **Group and project** | **Repository** | **Code** | Download, Push | Read from and push to the repository |
 | **Group and project** | **Repository** | **Merge Request** | Create, Read, Approve, Merge | Open, approve, and merge promotion reviews |
 | **Group and project** | **Project Planning** | **Work Item** | Create | Add the approval note to the merge request |

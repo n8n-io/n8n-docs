@@ -41,9 +41,9 @@ Environments promote workflows and what they use. Agents don't move between inst
 
 ### Sub-workflows in other projects
 
-A project promote lists sub-workflows from other projects but doesn't promote them. Promote the project that owns the sub-workflow first.
+A project promote doesn't include sub-workflows from other projects. It only references them, and the promote isn't blocked. The sub-workflow must already exist on the target instance, so promote the project that owns it first. Otherwise the reference points nowhere, and publishing the calling workflow on the target can fail.
 
-A whole-instance promote fails if a workflow calls a sub-workflow in a personal project. Move the sub-workflow into a team project, then promote again.
+A whole-instance promote fails if a workflow references a workflow outside the team projects, such as a sub-workflow or error workflow in a personal project. Move the referenced workflow into a team project, then promote again.
 
 ### Moving workflows and folders
 
@@ -95,6 +95,6 @@ In multi-main setups, n8n doesn't coordinate Git operations between main instanc
 - [Set up environments](set-up-environments.md)
 - [Promote changes](promote-changes.md)
 - [Apply changes](apply-changes.md)
-- [Review promotions](review-promotions.md)
+- [Promotion reviews](promotion-reviews.md)
 - [Git-based promotion](git-based-promotion/README.md)
 - [Switch from Environments (Classic)](switch-from-environments-classic.md)

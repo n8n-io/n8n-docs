@@ -69,7 +69,7 @@ Switching affects only this instance. You can upgrade again at any time.
 - [Set up environments](set-up-environments.md)
 - [Promote changes](promote-changes.md)
 - [Apply changes](apply-changes.md)
-- [Review promotions](review-promotions.md)
+- [Promotion reviews](promotion-reviews.md)
 - [Git-based promotion](git-based-promotion/README.md)
 - [Known limitations](known-limitations.md)
 - [Environments (Classic)](../use-source-control-and-environments/)

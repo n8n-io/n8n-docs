@@ -74,7 +74,7 @@ Promote and apply use [n8n packages](https://app.gitbook.com/s/rPN1zU5jaYNvwH7Rz
 
 ### Promotion review
 
-A promotion review is an optional approval step. Promoted changes reach the environment only after someone approves them. You turn on promotion reviews in the settings of the environment an instance promotes changes to, and you approve them on that same instance. Promotion reviews depend on the provider. See [Review promotions](review-promotions.md).
+A promotion review is an optional approval step. Promoted changes reach the environment only after someone approves them. You turn on promotion reviews in the settings of the environment an instance promotes changes to, and you approve them on that same instance. Promotion reviews depend on the provider. See [Promotion reviews](promotion-reviews.md).
 
 ### Promotion model
 
@@ -94,7 +94,7 @@ Environments replace [Environments (Classic)](../use-source-control-and-environm
 - [Set up environments](set-up-environments.md): add providers and environments, and protect an instance.
 - [Promote changes](promote-changes.md): send a project or the whole instance to an environment.
 - [Apply changes](apply-changes.md): bring changes from an environment into a project or the whole instance.
-- [Review promotions](review-promotions.md): approve promoted changes before they reach the environment's branch.
+- [Promotion reviews](promotion-reviews.md): approve promoted changes before they reach the environment's branch.
 - [Git-based promotion](git-based-promotion/): how environments use Git, and the supported Git providers.
 - [Known limitations](known-limitations.md): what Environments don't support yet, and workarounds.
 - [Switch from Environments (Classic)](switch-from-environments-classic.md): compare the two versions and switch an instance.

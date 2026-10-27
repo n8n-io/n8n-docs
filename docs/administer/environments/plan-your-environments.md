@@ -59,12 +59,12 @@ Staging and Production can be two branches in one repository, as in the table, o
 
 To make sure production only applies changes someone reviewed, set the environment that promotes to Production to push each promote to a feature branch. n8n then never commits directly to the branch production applies from:
 
-- With GitLab, n8n also opens a merge request, which you approve in n8n as a [promotion review](review-promotions.md).
+- With GitLab, n8n also opens a merge request, which you approve in n8n as a [promotion review](promotion-reviews.md).
 - With Generic Git, someone merges the feature branch on the Git host.
 
 ## Protect the instances that only apply
 
-Turn on **Protected instance** on instances that only apply changes, such as production. Nobody can then edit workflows on the instance, so it stays in line with its environment. See [Set up environments](set-up-environments.md#protect-an-instance).
+Turn on **Protected instance** on instances that only apply changes, such as production. This stops people from editing workflows or creating resources there in the UI, so the instance stays in line with its environment. See [Set up environments](set-up-environments.md#protect-an-instance).
 
 ## Related resources
 
@@ -72,7 +72,7 @@ Turn on **Protected instance** on instances that only apply changes, such as pro
 - [Set up environments](set-up-environments.md)
 - [Promote changes](promote-changes.md)
 - [Apply changes](apply-changes.md)
-- [Review promotions](review-promotions.md)
+- [Promotion reviews](promotion-reviews.md)
 - [Git-based promotion](git-based-promotion/README.md)
 - [Known limitations](known-limitations.md)
 - [Switch from Environments (Classic)](switch-from-environments-classic.md)

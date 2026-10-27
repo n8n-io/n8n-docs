@@ -9,7 +9,7 @@ tags:
     primary: true
 ---
 
-# Review promotions
+# Promotion reviews
 
 A promotion review lets someone check and approve promoted changes before they reach the branch of the environment. Instances that apply from that environment get the changes only after approval.
 

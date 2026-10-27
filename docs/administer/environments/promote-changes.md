@@ -25,24 +25,15 @@ Before you start, [set up the environment](set-up-environments.md) this instance
 
 1. Open a team project. If it has changes to promote, a badge with the number of changes appears next to the project name.
 2. Select the badge. The **Changes to promote** page opens.
-3. Select the workflows to promote. n8n selects the credentials, variables, data tables, and tags they use.
-4. Review the changes. Select **Show diff** on a workflow to compare the canvas **Before** and **After**. **Before** is the environment's branch.
+3. Select the workflows to promote. n8n includes the credentials, variables, data tables, and tags they use. Sub-workflows from other projects are only referenced, not included.
+4. Inspect the changes. Each resource shows what changed, such as **New**, **Modified**, **Renamed**, **Moved**, **Archived**, or **Deleted**. To compare a workflow visually, select **Show diff**. The diff viewer shows the canvas **Before** and **After**, where **Before** is the environment's branch.
 5. Select **Promote N changes**.
 6. Optional: enter a **Commit message**. If you leave it empty, n8n generates one.
 7. Select **Promote**.
 
 If you edit a workflow while the page is open, select **Refresh** before you promote so the page shows your latest changes.
 
-### Change labels
-
-| Label | Meaning |
-|---|---|
-| **New** | The workflow isn't on the branch yet. |
-| **Modified** | The workflow, or something it uses, changed. |
-| **Renamed** | The workflow has a new name. |
-| **Moved** | The workflow is in a different folder. |
-| **Archived** | You archived the workflow. It stays archived on the branch. |
-| **Deleted** | You deleted the workflow. Promoting removes it from the branch, and applying deletes it on the target instance. |
+Promoting a workflow marked **Deleted** removes it from the branch, and applying deletes it on the target instance. An archived workflow stays archived.
 
 ## Promote the whole instance
 
@@ -59,25 +50,25 @@ The environment's settings decide what n8n does with the changes:
 
 - **Direct:** n8n commits to the environment's branch.
 - **Feature branch:** n8n pushes a feature branch named `n8n-promotion/<timestamp>`, based on the environment's branch. Someone merges it on the Git host.
-- **Feature branch with a promotion review:** n8n also opens a promotion review. With GitLab, that's a merge request. See [Review promotions](review-promotions.md).
+- **Feature branch with a promotion review:** n8n also opens a promotion review. With GitLab, that's a merge request. See [Promotion reviews](promotion-reviews.md).
 
-n8n uses your n8n name and email as the commit author.
+n8n sets the commit author to your n8n name and email. The Git host records the push, and any merge request, under the provider's account or token.
 
-## When you can't promote
+## What blocks a promote
 
 ### A review is open
 
-While a promotion review for a project is open, you can't promote that project again. Approve or close the review first. See [Review promotions](review-promotions.md).
+While a promotion review for a project is open, you can't promote that project again. This prevents merge conflicts between reviews. Approve or close the review first. See [Promotion reviews](promotion-reviews.md).
 
 ### Workflows moved to another project
 
 A project promote can't move workflows between projects. n8n shows: **These workflows moved to another project**. Promote the whole instance instead.
 
-### Sub-workflows outside the promoted projects
+### Workflows the export doesn't include
 
-A project promote lists sub-workflows from other projects but doesn't promote them. Promote the project that owns the sub-workflow first.
+A project promote doesn't include sub-workflows from other projects. It only references them, and the promote isn't blocked. The sub-workflow must already exist on the target instance, so promote the project that owns it first. Otherwise the reference points nowhere, and publishing the calling workflow on the target can fail.
 
-A whole-instance promote fails if a workflow calls a sub-workflow in a personal project, with the message **workflow dependencies not included in the package. Export aborted.** Move the sub-workflow into a team project, then promote again.
+A whole-instance promote fails if a workflow references a workflow outside the team projects, for example a sub-workflow or error workflow in a personal project, or a deleted workflow. n8n shows **workflow dependencies not included in the package. Export aborted.** Move the referenced workflow into a team project, or remove the reference, then promote again.
 
 ## Related resources
 
@@ -85,7 +76,7 @@ A whole-instance promote fails if a workflow calls a sub-workflow in a personal 
 - [Plan your environments](plan-your-environments.md)
 - [Set up environments](set-up-environments.md)
 - [Apply changes](apply-changes.md)
-- [Review promotions](review-promotions.md)
+- [Promotion reviews](promotion-reviews.md)
 - [Git-based promotion](git-based-promotion/README.md)
 - [Known limitations](known-limitations.md)
 - [Switch from Environments (Classic)](switch-from-environments-classic.md)

@@ -89,7 +89,7 @@ Promote and apply use [n8n packages](https://app.gitbook.com/s/rPN1zU5jaYNvwH7Rz
 - [Plan your environments](plan-your-environments.md)
 - [Set up environments](set-up-environments.md)
 - [Promote changes](promote-changes.md)
-- [Review promotions](review-promotions.md)
+- [Promotion reviews](promotion-reviews.md)
 - [Git-based promotion](git-based-promotion/README.md)
 - [Known limitations](known-limitations.md)
 - [Switch from Environments (Classic)](switch-from-environments-classic.md)

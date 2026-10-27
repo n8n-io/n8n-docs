@@ -62,7 +62,9 @@ Removing an environment doesn't change the Git repository. If no other environme
 
 ## Protect an instance
 
-On instances that only apply changes, such as production, turn on **Protected instance** in **Settings** > **Environments**. Users then can't edit workflows on the instance.
+On instances that only apply changes, such as production, turn on **Protected instance** in **Settings** > **Environments**.
+
+**Protected instance** stops people from editing workflows and creating resources in the UI, such as workflows, credentials, projects, folders, variables, and data tables. This prevents accidental manual changes. People can still edit existing credentials, variable values, and data table rows. The setting applies to the UI only: the public API still allows most changes.
 
 Environments (Classic) uses the same setting. Turning it on or off changes it for both.
 
@@ -72,7 +74,7 @@ Environments (Classic) uses the same setting. Turning it on or off changes it fo
 - [Plan your environments](plan-your-environments.md)
 - [Promote changes](promote-changes.md)
 - [Apply changes](apply-changes.md)
-- [Review promotions](review-promotions.md)
+- [Promotion reviews](promotion-reviews.md)
 - [Git-based promotion](git-based-promotion/README.md)
 - [Known limitations](known-limitations.md)
 - [Switch from Environments (Classic)](switch-from-environments-classic.md)

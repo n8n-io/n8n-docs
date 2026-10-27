@@ -30,7 +30,7 @@
   * [Set up environments](environments/set-up-environments.md)
   * [Promote changes](environments/promote-changes.md)
   * [Apply changes](environments/apply-changes.md)
-  * [Review promotions](environments/review-promotions.md)
+  * [Promotion reviews](environments/promotion-reviews.md)
   * [Git-based promotion](environments/git-based-promotion/README.md)
     * [Generic Git](environments/git-based-promotion/generic-git.md)
     * [GitLab](environments/git-based-promotion/gitlab.md)

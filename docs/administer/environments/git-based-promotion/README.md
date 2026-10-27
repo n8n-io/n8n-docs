@@ -74,6 +74,6 @@ n8n hides the Git error details because they can contain secrets. Check:
 - [Set up environments](../set-up-environments.md)
 - [Promote changes](../promote-changes.md)
 - [Apply changes](../apply-changes.md)
-- [Review promotions](../review-promotions.md)
+- [Promotion reviews](../promotion-reviews.md)
 - [Known limitations](../known-limitations.md)
 - [Switch from Environments (Classic)](../switch-from-environments-classic.md)

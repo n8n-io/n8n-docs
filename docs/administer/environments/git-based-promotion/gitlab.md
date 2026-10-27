@@ -39,7 +39,7 @@ For a self-managed GitLab instance on an internal network or with a private cert
 
 ## Promotion reviews with merge requests
 
-To review promotions, turn on **Open a merge request in GitLab** on the environment an instance promotes changes to. Each promote then pushes a feature branch and opens a merge request into the environment's branch. The merge request appears in n8n as a [promotion review](../review-promotions.md).
+To review promotions, turn on **Open a merge request in GitLab** on the environment an instance promotes changes to. Each promote then pushes a feature branch and opens a merge request into the environment's branch. The merge request appears in n8n as a [promotion review](../promotion-reviews.md).
 
 To approve, open the review in n8n and select **Approve and merge**. n8n approves the merge request on GitLab, merges it, and deletes its branch. You can't undo this.
 
@@ -71,5 +71,5 @@ GitLab removes the data n8n needs to show a merge request's changes 14 days afte
 
 - [Git-based promotion](./)
 - [Generic Git](generic-git.md)
-- [Review promotions](../review-promotions.md)
+- [Promotion reviews](../promotion-reviews.md)
 - [Set up environments](../set-up-environments.md)

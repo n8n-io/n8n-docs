@@ -131,7 +131,7 @@ A Databricks account admin needs to complete these steps:
 3. On the **App connections** tab, select **Add connection**.
 4. Enter a name for the connection, for example `n8n`.
 5. Add the **OAuth Redirect URL** you copied from n8n as a redirect URL.
-6. Select the access scopes the connection needs. The **Databricks** node and the **Databricks Chat Model** node need **All APIs**. If the connection serves only the [Genie One MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md), select `genie` instead: the connection then can't reach other Databricks APIs, and users consent to a narrower grant. Databricks automatically allows the `offline_access` scope that n8n needs to stay connected. In n8n's testing, **All APIs** also covers the `genie` scope; if connecting the tile fails with a scope error, [add the `genie` scope](#add-the-genie-scope-for-the-genie-mcp-server).
+6. Select the access scopes the connection needs. The **Databricks** node and the **Databricks Chat Model** node need **All APIs**. If the connection serves only the [Genie One MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md), select `ai-gateway` instead: the connection then can't reach other Databricks APIs, and users consent to a narrower grant. Databricks automatically allows the `offline_access` scope that n8n needs to stay connected. In n8n's testing, **All APIs** also covers the `ai-gateway` scope; if connecting the tile fails with a scope error, [add the `ai-gateway` scope](#add-the-ai-gateway-scope-for-the-genie-one-mcp-server).
 7. Enable client secret generation. n8n is a confidential client, so it needs a secret.
 8. Save the connection, then copy the **Client ID** and **Client Secret**. Databricks shows the secret only once.
 
@@ -139,26 +139,32 @@ Share the client ID and secret with the n8n users who'll create credentials. All
 
 Refer to [Enable or disable partner OAuth applications](https://docs.databricks.com/aws/en/integrations/enable-disable-oauth) for more information.
 
-### Add the genie scope for the Genie MCP server
+### Add the ai-gateway scope for the Genie One MCP server
 
-The [Databricks Genie One MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md) tile requests the `genie` and `offline_access` scopes. In n8n's testing, an app connection with **All APIs** satisfies the request without an explicit `genie` scope. On accounts where it doesn't, users see this error when they select **Connect my account** on the tile:
+The [Databricks Genie One MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md) tile calls Genie One through the AI Gateway endpoint of the workspace and requests the `ai-gateway` and `offline_access` scopes. In n8n's testing, an app connection with **All APIs** satisfies the request without an explicit `ai-gateway` scope. On accounts where it doesn't, users see this error when they select **Connect my account** on the tile:
 
 ```text
-access_denied: Scopes 'genie' are not assigned to the client <client-id>
+access_denied: Scopes 'ai-gateway' are not assigned to the client <client-id>
 ```
 
-To fix it, a Databricks account admin adds the `genie` scope to the app connection. If the connection's page in the account console offers `genie` in the **Add scope** picker, add it there. Otherwise, use the [Databricks CLI](https://docs.databricks.com/aws/en/dev-tools/cli/) authenticated against the account. The CLI update replaces the whole scope list, so include every scope the app needs. One app connection that serves the Databricks node, the Databricks Chat Model node, and the Genie One MCP server needs all three:
+To fix it, a Databricks account admin adds the `ai-gateway` scope to the app connection. If the connection's page in the account console offers `ai-gateway` in the **Add scope** picker, add it there. Otherwise, use the [Databricks CLI](https://docs.databricks.com/aws/en/dev-tools/cli/) authenticated against the account. The CLI update replaces the whole scope list, so include every scope the app needs. One app connection that serves the Databricks node, the Databricks Chat Model node, and the Genie One MCP server needs all three:
 
 ```bash
 databricks account custom-app-integration update <integration-id> \
-	--json '{"scopes": ["all-apis", "genie", "offline_access"]}'
+	--json '{"scopes": ["all-apis", "ai-gateway", "offline_access"]}'
 ```
 
 Find `<integration-id>` with `databricks account custom-app-integration list`, or on the connection's detail page in the account console. Refer to [Update Custom OAuth App Integration](https://docs.databricks.com/api/account/customappintegration/update) for the API reference.
 
-The Databricks consent screen shows the scopes assigned to the app connection, not the narrower set n8n requests. Users connecting the Genie One MCP server through an **All APIs** app see **All APIs** on the consent screen, even though the token n8n receives is scoped to `genie offline_access`.
+The Databricks consent screen shows the scopes assigned to the app connection, not the narrower set n8n requests. Users connecting the Genie One MCP server through an **All APIs** app see **All APIs** on the consent screen, even though the token n8n receives is scoped to `ai-gateway offline_access`.
 
-If the app connection serves only the Genie One MCP server, set the scopes to `["genie", "offline_access"]` instead. Users then see and consent to a narrower grant. The client also can't reach other Databricks APIs.
+If the app connection serves only the Genie One MCP server, set the scopes to `["ai-gateway", "offline_access"]` instead. Users then see and consent to a narrower grant. The client also can't reach other Databricks APIs.
+
+{% hint style="info" %}
+**App connections created before October 31, 2026**
+
+Before Databricks moved Genie One to its AI Gateway endpoint, the tile requested the `genie` scope. An app connection set up for that version still works for the Databricks node and the Databricks Chat Model node, but the tile needs `ai-gateway` added. Keeping `genie` on the connection does no harm. After the admin adds the scope, each user reconnects their Genie One credential so n8n receives a token with the new scope.
+{% endhint %}
 
 ### Configure token lifetimes
 

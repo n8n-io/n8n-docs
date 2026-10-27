@@ -1,0 +1,23 @@
+docs/administer/environments/promote-changes.md
+  s_8ec7bfed268277::t_f776c46769b2a0 30
+docs/administer/environments/plan-your-environments.md
+  s_8ec7bfed268277::t_f776c46769b2a0 67
+docs/administer/environments/apply-changes.md
+  s_8ec7bfed268277::t_f776c46769b2a0 26,30,72
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "d68de18a3d4ef50f1525dda7129b5ea090d2a101",
+  "prompts": {},
+  "sessions": {
+    "s_8ec7bfed268277": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b9ff11b4-095e-4619-830d-c574ab65583e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jan K. <jan.kalkan@n8n.io>"
+    }
+  }
+}

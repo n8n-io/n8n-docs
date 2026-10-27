@@ -245,7 +245,7 @@ SQLite is fine for trying things out, but for a production instance that must ha
 
 * `sandbox-runner-1` (`privileged: true`, Docker-in-Docker) is never exposed to the public internet. Treat it as equivalent to root on the host.
 * Nothing else runs on the same host or VM as the Compose stack. If code escapes the sandbox, it reaches everything on that host.
-* This setup isn't your production sandbox. For production, use the n8n sandbox service on Kubernetes with Sysbox, or Daytona. See [Set up n8n Assistant](../configure-n8n/set-up-n8n-assistant.md).
+* This setup isn't your production sandbox. For production, use the n8n sandbox service on Kubernetes with Sysbox. If a third party can process your workflow data, Daytona is a managed alternative. See [Set up n8n Assistant](../configure-n8n/set-up-n8n-assistant.md).
 * Only n8n's port is open on your cloud firewall.
 * `SANDBOX_API_KEYS`, the registration token, and the runner key are unique, not left as `change-me-...`, and rotated periodically.
 * `sandbox-api` and `sandbox-runner-1` do **not** use `env_file: .env`. Each only receives the specific variables it needs, explicitly, in its `environment` block. The model API key, Brave key, Postgres password, and n8n encryption key never reach the sandbox containers.

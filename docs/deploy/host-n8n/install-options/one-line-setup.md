@@ -93,7 +93,7 @@ If you're setting n8n up for a team or a production environment, consider a more
 {% hint style="warning" %}
 The bundled sandbox is for development and testing, not production. Its runner (`sandbox-runner-1`) runs with `privileged: true` and Docker-in-Docker, which gives weak isolation. If code escapes the sandbox, it reaches the host, so treat the runner as equivalent to root on the host.
 
-Run this setup on a dedicated machine or VM with nothing else on it, and never expose it to the internet. For production, see [Set up n8n Assistant](../configure-n8n/set-up-n8n-assistant.md) for the self-hosted option (the n8n sandbox service on Kubernetes with Sysbox) and the managed option (Daytona).
+Run this setup on a dedicated machine or VM with nothing else on it, and never expose it to the internet. For production, see [Set up n8n Assistant](../configure-n8n/set-up-n8n-assistant.md) for the self-hosted option (the n8n sandbox service on Kubernetes with Sysbox) and the managed option (Daytona, a third-party service that receives your workflow data).
 {% endhint %}
 
 ## Optional: Turn on n8n Assistant

@@ -53,7 +53,7 @@ Every self-hosted n8n Assistant setup needs three things:
 * **A sandbox (required):** An isolated environment where n8n Assistant runs code.
 * **A search provider (optional):** Lets n8n Assistant look things up on the web.
 
-How you provide the sandbox is the main decision. For self-hosted production, n8n recommends running the n8n sandbox service (`n8n-sandbox`) on Kubernetes with Sysbox runners. If you can send workflow data to a third party, Daytona is a managed alternative. The bundled sandbox that the [one-line setup command](../install-options/one-line-setup.md) and [Docker Compose guide](../install-options/install-using-docker-compose.md) set up automatically is for development and testing only, because its runner is privileged and gives weak isolation.
+How you provide the sandbox is the main decision. For self-hosted production, n8n recommends running the n8n sandbox service (`n8n-sandbox`) on Kubernetes with Sysbox runners. If you can send workflow data to a third party, Daytona is a managed alternative. The bundled sandbox that the [one-line setup command](../install-options/one-line-setup.md) and [Docker Compose guide](../install-options/install-using-docker-compose.md) set up automatically is for development and testing only. Its privileged runner gives weak isolation.
 
 [Pick your setup](#pick-your-setup) below based on how you installed n8n and where you're running it.
 
@@ -113,7 +113,7 @@ Provider notes:
 3. Add your model key (see [Choose a model provider](#choose-a-model-provider)) and restart n8n.
 
 {% hint style="warning" %}
-Some distributions, such as Talos and Bottlerocket, use an immutable root filesystem and can't run Sysbox. The quickstart describes a fallback that uses a privileged runner. That runner has the same weak isolation as the bundled sandbox in [setup 3](#setup-3-bundled-sandbox-for-development-and-testing): code that escapes the sandbox reaches the node. Use it only if your security team accepts that risk.
+Some distributions, such as Talos and Bottlerocket, use an immutable root filesystem and can't run Sysbox. The quickstart describes a fallback that uses a privileged runner. That runner has the same weak isolation as the bundled sandbox in [setup 3](#setup-3-bundled-sandbox-for-development-and-testing): code that escapes the sandbox reaches the node. Use it only on a dedicated node pool with no other workloads, keep it private, and proceed only if your security team accepts that risk.
 {% endhint %}
 
 ### Setup 2: Daytona (managed sandbox)

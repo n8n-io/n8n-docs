@@ -110,7 +110,7 @@ Notifications need email (SMTP) set up on your instance and an owner with an ema
 
 ### Mark a workflow as won't fix
 
-If you don't plan to fix a workflow, for example because it's obsolete, set its state to **Won't fix**. It then counts as resolved and no longer shows as open. Select **Reopen** to undo this.
+If you don't plan to fix a workflow, for example because it's obsolete, set its state to **Won't fix**. It then counts as resolved and no longer shows as open. Select **Reopen** to undo this. If you later fix the issue, n8n removes it from the report.
 
 ## Export the report
 
@@ -148,11 +148,12 @@ The file has one row for each issue. The instance totals repeat on every row, so
 1. **Start with the highest impact.** Fix **Upgrade blocked** and **Executions will fail** issues first, then **Executions might fail**, **Behavior changes**, and **Capability removed**.
 1. **Fix workflow issues.** Open each issue, migrate or edit the affected workflows, and test them in a development environment.
 1. **Fix instance issues.** Update environment variables and server configuration as each issue describes.
-1. **Verify.** Select **Refresh** to run a full scan. Confirm that no unresolved issues remain and that the compatibility count matches your total workflow count.
+1. **Verify.** Instance owners and admins select **Refresh** to run a full scan. Other users reload the report, which reflects the workflows they saved. Confirm that no unresolved issues remain and that the compatibility count matches your total workflow count.
 1. **Upgrade.** Upgrade to n8n 3.0.
 
 ## Related resources
 
+- [Changelog](./)
 - [v3.0 breaking changes](v30-breaking-changes.md)
 - [v2.0 migration tool](v20-migration-tool.md)
 - [v2.0 breaking changes](v20-breaking-changes.md)

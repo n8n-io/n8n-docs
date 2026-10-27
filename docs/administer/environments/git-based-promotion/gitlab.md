@@ -30,21 +30,29 @@ Environments are in Preview and may change in future releases. Try them on test 
 
 ## Create an access token
 
-Create one of these tokens in GitLab:
+n8n needs one GitLab token. Create either a classic access token or a fine-grained personal access token. Whichever you choose, the token's user needs at least the Developer role on the repository, because n8n only lists repositories where the user has that role. To merge promotion reviews into a protected branch, the user also needs a role that the branch protection allows to merge, which is Maintainer by default.
 
-- A personal, group, or project access token with the `api` and `write_repository` scopes. n8n recommends a group access token.
-- A fine-grained personal access token, if your GitLab version supports them, with these permissions:
+### Classic access token
 
-| Resource | Permissions | Access | n8n uses it to |
-|---|---|---|---|
-| User | Read | User | Check the token |
-| Project | Read | User | List repositories |
-| Branch | Read | Repository's project or group | List branches |
-| Code | Download, Push | Repository's project or group | Read from and push to the repository |
-| Merge Request | Create, Read, Approve, Merge | Repository's project or group | Open, approve, and merge promotion reviews |
-| Work Item | Create | Repository's project or group | Add the approval note to the merge request |
+Create a personal, group, or project access token with the `api` and `write_repository` scopes. n8n recommends a group access token.
 
-The token's user needs at least the Developer role on the repository. n8n only lists repositories where the user has that role. To merge promotion reviews into a protected branch, the user also needs a role that the branch protection allows to merge, which is Maintainer by default.
+### Fine-grained personal access token
+
+Use a fine-grained personal access token if your GitLab version supports them.
+
+1. In GitLab, go to **User settings** > **Personal access tokens** and generate a fine-grained token.
+2. Under **Group and project access**, select **Only specific groups or projects that I'm a member of**, and add the repository's project or its group.
+3. Under **Add resource permissions**, add every resource in the table below, and select its permissions. The token needs all of them. In the resource selector, each resource sits on a **Resource access** tab and in a category.
+4. Select **Generate token**, and copy the token.
+
+| Resource access tab | Category | Resource | Permissions | n8n uses it to |
+|---|---|---|---|---|
+| **User** | **System Access** | **User** | Read | Check the token |
+| **User** | **Projects** | **Project** | Read | List repositories |
+| **Group and project** | **Repository** | **Branch** | Read | List branches |
+| **Group and project** | **Repository** | **Code** | Download, Push | Read from and push to the repository |
+| **Group and project** | **Repository** | **Merge Request** | Create, Read, Approve, Merge | Open, approve, and merge promotion reviews |
+| **Group and project** | **Project Planning** | **Work Item** | Create | Add the approval note to the merge request |
 
 ## Set up the GitLab provider
 

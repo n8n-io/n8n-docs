@@ -48,9 +48,9 @@ The development instance promotes changes to the Production environment. If that
 
 ### Environment
 
-An environment is a stage your workflows go through, such as development, staging, or production. Each stage usually has its own n8n instance, with its own configuration, credentials, and data, so you can change and test workflows without affecting production.
+An environment is a stage that holds a version of your work, such as development, staging, or production. Each stage usually has its own n8n instance, with its own configuration, credentials, and data, so you can change and test workflows without affecting production.
 
-On each instance, you set up environments by promotion direction: the environment the instance promotes changes to, and the environment it applies changes from. The environment an instance applies from is that instance's source of truth. Each instance has at most one environment per direction.
+On each instance, you set up environments by promotion direction: the environment the instance promotes changes to, and the environment it applies changes from. The environment an instance applies from is that instance's source of truth. Each instance has at most one environment per direction. The instance you promote from is the source instance, and the instance you apply to is the target instance.
 
 With Git-based promotion, an environment is a repository and branch that holds the version of your work for that stage. Its settings decide whether each promote commits directly to the branch or pushes a feature branch, and with GitLab, whether it also opens a merge request.
 
@@ -75,7 +75,7 @@ A promotion review is an optional approval step in a promote. Promoted changes r
 
 ### Promotion model
 
-A promotion model is how changes travel between environments. n8n currently supports Git-based promotion, where changes travel through a Git repository. Other models, such as promoting directly from one instance to another, may follow, so the docs name the promotion model apart from the Git providers. See [Git-based promotion](git-based-promotion/README.md).
+A promotion model is how changes travel between environments. n8n currently supports Git-based promotion, where changes travel through a Git repository. Other models, such as promoting directly from one instance to another, may follow. See [Git-based promotion](git-based-promotion/README.md).
 
 ### Provider
 

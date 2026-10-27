@@ -11,7 +11,7 @@ tags:
 
 # Upgrade from Environments (Classic)
 
-Environments improve on and replace [Environments (Classic)](../use-source-control-and-environments/README.md), the earlier source control feature. Each instance uses one version at a time, and you can switch an instance between them while Environments are in Preview.
+Environments improve on and replace [Environments (Classic)](../use-source-control-and-environments/README.md), the earlier source control feature. Each instance uses either Classic or Environments, and you can switch back to Classic while Environments are in Preview.
 
 {% hint style="info" %}
 **Preview status**
@@ -19,16 +19,16 @@ Environments improve on and replace [Environments (Classic)](../use-source-contr
 Environments are in Preview and may change in future releases. Try them on test instances before you set them up for your production instances.
 {% endhint %}
 
-## Which version an instance uses
+## Which one an instance uses
 
-- New instances with Environments available start on the new version.
-- Instances already connected to Environments (Classic) stay on it until you upgrade them in **Settings** > **Environments (Classic)**.
+- New instances with Environments available start on Environments.
+- Instances already connected to Environments (Classic) stay on Classic until you upgrade them in **Settings** > **Environments (Classic)**.
 
-## Start fresh with Environments
+## What stays and what starts over
 
-The two versions store content in Git in different formats, and they aren't compatible. Nothing migrates from Environments (Classic), and you can't apply a Classic repository with Environments. Set up environments from scratch, with a new repository or branch.
+Upgrading doesn't change the workflows, credentials, variables, or data on your instances. Only the Git side starts over: Classic and Environments store content in Git in different formats, so you can't apply a Classic repository with Environments. Set up environments with a new repository or branch.
 
-## Compare the versions
+## Compare Classic and Environments
 
 | | Environments (Classic) | Environments |
 |---|---|---|
@@ -54,26 +54,36 @@ Environments don't cover everything Environments (Classic) does yet. Check these
 
 For everything Environments don't support yet, see [Known limitations](known-limitations.md).
 
-## Upgrade an instance
+## Upgrade your instances
 
-1. Go to **Settings** > **Environments (Classic)**.
-2. Select **Upgrade**, then confirm.
-3. [Set up environments](set-up-environments.md).
+Before you upgrade, stop or switch any CI pipelines that call the Classic endpoints of the public API. They keep working after the upgrade, because upgrading only changes what the UI shows.
 
-Try this on a test instance first. Your Classic setup stays connected in the background, so you can switch back.
+Upgrade the source instance first, then the target:
+
+1. On the source instance, go to **Settings** > **Environments (Classic)**, select **Upgrade**, and confirm.
+2. Set up the environment it promotes changes to, and promote. See [First promote and apply](set-up-environments.md#first-promote-and-apply).
+3. On the target instance, upgrade the same way, set up the environment it applies changes from, and apply.
+
+Try this on test instances first. Your Classic setup stays connected in the background, so you can switch back.
+
+## Upgrade an instance that Classic pulled to
+
+{% hint style="warning" %}
+Projects that Classic created on a target instance, such as production, have different IDs from the matching projects on the source instance. Apply matches projects by ID, so the first instance apply lists those projects under **Projects to delete** and creates the source's projects next to them.
+{% endhint %}
+
+Before you confirm, check every project under **Projects to delete**. Don't delete projects you still need. Try the upgrade on a copy of the target instance first. n8n is working on a smoother upgrade path for this case.
 
 ## Switch back to Environments (Classic)
 
 1. Go to **Settings** > **Environments**.
 2. Select **Switch back**, then confirm.
 
-Switching affects only this instance. You can upgrade again at any time.
+Switching back affects only this instance. You can upgrade again at any time.
 
-## Things to check when you switch
+## Things to check after you upgrade
 
-- **Protected instance** is one setting for both versions. Changing it in one version changes it in the other.
-- Switching only changes what the UI shows. The public API and CLI commands of the other version still work, so stop or switch any CI pipelines that call the Classic endpoints.
-- n8n doesn't accept the short SSH URL form `git@github.com:acme/n8n.git` that Classic accepts. Use the `ssh://` form. See [Generic Git](git-based-promotion/generic-git.md).
+- **Protected instance** is one setting for Classic and Environments. Changing it in one changes it in the other.
 
 ## Related resources
 

@@ -35,7 +35,7 @@ On self-hosted n8n:
 
 ## Add an environment
 
-Set up the source instance first. Add the environment it promotes changes to, and promote once. An environment only has something to apply after a promote, so the target instance's apply environment needs that first promote. An empty repository works for the first connect and for direct promotes. For feature-branch promotes, the environment's branch must already exist on the Git host.
+Set up the source instance first, and promote once before the target instance applies. See [First promote and apply](#first-promote-and-apply). An empty repository works for the first connect and for direct promotes. For feature-branch promotes, the environment's branch must already exist on the Git host.
 
 If the instance is connected to Environments (Classic), upgrade it first: go to **Settings** > **Environments (Classic)**, select **Upgrade**, then confirm. See [Upgrade from Environments (Classic)](upgrade-from-environments-classic.md).
 
@@ -51,6 +51,24 @@ If the instance is connected to Environments (Classic), upgrade it first: go to 
 n8n saves the environment and connects to the repository. The environment then shows **Connected**. If it shows **Not connected**, fix the cause and select **Retry**. If it shows **Out of date**, the repository or branch changed since n8n connected, so select **Reconnect**. If that fails, see [Git-based promotion](git-based-promotion/README.md#troubleshooting).
 
 When you add the second environment on an instance with the same provider type, n8n reuses the first environment's provider, so you don't enter the authentication details again.
+
+## First promote and apply
+
+To bring your work to a new target instance for the first time:
+
+1. On the source instance, [add the environment](#add-an-environment) it promotes changes to.
+2. Run an [instance promote](promote-changes.md#instance-promote). It sends every team project.
+3. If the environment pushes feature branches or opens promotion reviews, merge the feature branch or approve the review.
+4. On the target instance, add the environment it applies changes from, using the repository and branch you promoted to.
+5. Run an [instance apply](apply-changes.md#instance-apply). It creates every team project on the target and handles the dependencies between projects. When n8n asks, create the credentials and variables that don't exist on the target yet.
+6. Publish the workflows you want to run. Workflows that Apply creates arrive unpublished.
+7. Turn on [Protected instance](#protect-an-instance) on the target.
+
+Keep the source and target instances on the same n8n version.
+
+An instance apply overwrites every team project on the target and deletes team projects that aren't on the branch, so run it before people start working on the target. You can also promote and apply projects one by one. Start with the projects that others depend on, such as a project with shared sub-workflows or credentials. See [Cross-project dependencies](known-limitations.md#cross-project-dependencies).
+
+Personal projects aren't promoted. Before you start, move the workflows and credentials that team projects use out of personal projects and into team projects.
 
 ## Edit or remove an environment
 

@@ -9,9 +9,10 @@ tags:
     primary: true
 ---
 
+
 # Promotion reviews
 
-A promotion review lets someone check and approve promoted changes before they reach the branch of the environment. Instances that apply from that environment get the changes only after approval.
+A promotion review lets someone approve promoted changes on the source instance before they reach the branch of the environment. Instances that apply from that environment get the changes only after approval.
 
 {% hint style="info" %}
 **Preview status**
@@ -19,41 +20,50 @@ A promotion review lets someone check and approve promoted changes before they r
 Environments are in Preview and may change in future releases. Try them on test instances before you set them up for your production instances.
 {% endhint %}
 
-## Supported providers
-
-Promotion reviews depend on the provider of the environment:
-
-| Provider | Promotion reviews |
-|---|---|
-| [GitLab](git-based-promotion/gitlab.md#promotion-reviews-with-merge-requests) | Yes, as merge requests |
-| [Generic Git](git-based-promotion/generic-git.md) | No. n8n can push each promote to a feature branch, and someone merges it on the Git host. |
-
-Only GitLab supports promotion reviews.
+Only GitLab supports promotion reviews at the moment, using merge requests. Support for more Git providers and for reviews in n8n itself is planned. With [Generic Git](git-based-promotion/generic-git.md), n8n can push each promote to a feature branch, and someone merges it on the Git host manually.
 
 ## Turn on promotion reviews
 
-Promotion reviews are a setting of the environment an instance promotes changes to. For GitLab, turn on **Open a merge request in GitLab** when you [add or edit the environment](set-up-environments.md#add-an-environment). Each promote then opens a new review. If n8n can't open it, the promote still succeeds without a review.
+On the instance that promotes changes, edit the environment it promotes changes to and turn on **Open a merge request in GitLab**. See [Set up environments](set-up-environments.md#add-an-environment).
+
+Each promote then pushes a feature branch and opens a merge request into the environment's branch. The merge request appears in **Reviews** on the source instance. **Reviews** lists only merge requests that n8n opened.
 
 ## Review and approve a promotion
 
 1. On the instance that promoted the changes, select **Reviews** in the left menu. Promotion reviews have a **Promotion** badge.
 2. Open the review. The **Changes** tab shows each changed workflow and dependency. **Before** is the environment's branch, and **After** is the review.
-3. Approve the review. For what approval does on your Git host, see the provider's page.
+3. Select **Approve and merge**. n8n approves the merge request on GitLab, merges it, and deletes its branch. You can't undo this.
 
-Instance owners and instance admins can approve reviews. You can't approve a review you requested.
+Only instance owners and instance admins can see and approve promotion reviews.
+
+### When you can't approve and merge
+
+n8n disables **Approve and merge** when:
+
+- A reviewer requested changes on GitLab.
+- The merge request has conflicts.
+- Someone pushed new commits since you loaded the review.
+
+GitLab can also reject the merge, for example when a required pipeline hasn't passed. n8n then shows GitLab's message. Resolve the cause on GitLab, then reload **Reviews**.
+
+### n8n acts as the token's user
+
+n8n opens, approves, and merges merge requests as the GitLab user of the provider's access token, not as the n8n user who selects **Approve and merge**. n8n adds a note to the merge request with the name of the n8n user who approved it.
+
+Because the same GitLab user opens and approves the merge request, GitLab approval rules that stop authors from approving their own merge requests block **Approve and merge**. Adjust the approval rules, or merge on GitLab.
 
 ## Review states
 
 | State | Meaning |
 |---|---|
 | **Open** | The review waits for approval. |
-| **Changes requested** | A reviewer asked for changes on the Git host. |
+| **Changes requested** | A reviewer asked for changes on GitLab. |
 | **Merged** | The changes are on the environment's branch. |
 | **Closed** | Someone closed the review without merging it. |
 
 ## One open review per project
 
-While a review for a project is open, you can't promote that project again. The **Changes to promote** page shows **A review is open**. Approve or close the review, then promote again.
+While a review for a project is open, you can't promote that project again. This prevents merge conflicts between reviews. Approve or close the review, then promote again.
 
 ## Related resources
 

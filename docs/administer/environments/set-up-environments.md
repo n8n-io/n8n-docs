@@ -24,7 +24,7 @@ Environments are in Preview and may change in future releases. Try them on test 
 ## Prerequisites
 
 - You're an instance owner or instance admin.
-- Your plan includes Environments. TODO(OPEN-2): confirm plans.
+- Your instance is on an Enterprise plan.
 - You have a Git repository and an SSH key, account, or token with access to it: write access to promote, read access to apply. See your provider's page under [Git-based promotion](git-based-promotion/).
 
 On self-hosted n8n:
@@ -58,13 +58,13 @@ You can't change an environment's direction or its provider. To use a different 
 
 To change the authentication details, for example to replace an expired access token, edit the environment and select **Edit provider**. The new details apply to every environment that uses the provider.
 
-Removing an environment doesn't change the Git repository. If no other environment uses the same provider, n8n also deletes the provider's connection details. You can't approve the environment's open promotion reviews in n8n after you remove it, so merge or close them on the Git host.
+Removing an environment doesn't change the Git repository. If no other environment uses the same provider, n8n also deletes the provider's connection details.
 
 ## Protect an instance
 
 On instances that only apply changes, such as production, turn on **Protected instance** in **Settings** > **Environments**.
 
-**Protected instance** stops people from editing workflows and creating resources in the UI, such as workflows, credentials, projects, folders, variables, and data tables. This prevents accidental manual changes. People can still edit existing credentials, variable values, and data table rows. The setting applies to the UI only: the public API still allows most changes.
+**Protected instance** stops people from editing workflows and creating resources in the UI, such as workflows, credentials, projects, folders, variables, and data tables. This prevents accidental manual changes. People can still edit existing credentials, variable values, and data table rows, and create missing credentials and variables while they resolve Apply blockers. The setting applies to the UI only: the public API still allows most changes.
 
 Environments (Classic) uses the same setting. Turning it on or off changes it for both.
 

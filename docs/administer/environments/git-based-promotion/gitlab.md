@@ -39,33 +39,7 @@ For a self-managed GitLab instance on an internal network or with a private cert
 
 ## Promotion reviews with merge requests
 
-To review promotions, turn on **Open a merge request in GitLab** on the environment an instance promotes changes to. Each promote then pushes a feature branch and opens a merge request into the environment's branch. The merge request appears in n8n as a [promotion review](../promotion-reviews.md).
-
-To approve, open the review in n8n and select **Approve and merge**. n8n approves the merge request on GitLab, merges it, and deletes its branch. You can't undo this.
-
-### n8n acts as the token's user
-
-n8n opens, approves, and merges merge requests as the GitLab user of the access token, not as the n8n user who selects **Approve and merge**. n8n adds a note to the merge request with the name of the n8n user who approved it.
-
-Because the same GitLab user opens and approves the merge request, GitLab approval rules that stop authors from approving their own merge requests block **Approve and merge**. Adjust the approval rules or merge on GitLab.
-
-### When you can't approve and merge
-
-n8n disables **Approve and merge** when:
-
-- A reviewer requested changes on GitLab.
-- The merge request has conflicts.
-- Someone pushed new commits since you loaded the review.
-
-GitLab can also reject the merge, for example when a required pipeline hasn't passed. n8n then shows an error. Resolve the cause on GitLab, then reload **Reviews**.
-
-### Only merge requests opened by n8n
-
-**Reviews** lists only merge requests that n8n opened. If n8n can't open the merge request after a promote, the promote still succeeds, and n8n shows a warning. n8n doesn't create a promotion review.
-
-### Old reviews
-
-GitLab removes the data n8n needs to show a merge request's changes 14 days after someone merges or closes the merge request. After that, the **Changes** tab of the review may not load.
+To review promotions as merge requests, turn on **Open a merge request in GitLab** on the environment an instance promotes changes to. For how to review and approve them, see [Promotion reviews](../promotion-reviews.md).
 
 ## Related resources
 

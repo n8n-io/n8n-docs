@@ -25,7 +25,7 @@ Before you start, [set up the environment](set-up-environments.md) this instance
 
 A project apply brings the changes you select into one team project. If the project isn't on the instance yet, Apply creates it. A project apply never deletes projects. All projects on an instance share tags, so a tag rename applies in every project.
 
-1. Open a team project. If the environment has changes for it, a badge with a down arrow and the number of incoming changes appears next to the project name.
+1. Open a team project. Next to the project name, a badge with a down arrow shows the number of incoming changes.
 2. Select the badge. The **Changes to apply** page opens.
 3. Select the workflows to apply. n8n includes their dependencies, such as credentials, variables, data tables, and tags. To apply a project without workflows, such as an empty project, select the project itself. TODO(LIGO-1367): confirm the UI steps for a project that isn't on the instance yet.
 4. Inspect the changes. Each resource shows what changed, such as **New**, **Modified**, **Renamed**, **Moved**, **Archived**, or **Deleted**. To compare a workflow visually, select **Show diff**. The diff viewer shows the canvas **Before** and **After**, where **Before** is this instance and **After** is the environment's branch.
@@ -41,7 +41,7 @@ Before Apply writes anything, n8n checks the changes against the instance. This 
 | **Missing** credential or variable | Select **Add credential** or **Add variable** and create it. For a credential, n8n pre-fills the fields that use expressions on the source. |
 | **No access** | The credential exists, but the project can't use it. Ask an admin to share it with the project. |
 | **Conflict** | The resource differs on the instance in a way Apply can't fix. Follow the message, then refresh. |
-| **Moved** | The folder or workflow is in a different place on the branch. Move it on the instance to match, or run an instance apply. |
+| **Moved** | The workflow or folder is in another project on the branch. Apply can't move items between projects. Move it on the instance to match the branch. |
 
 ## Confirm destructive changes
 
@@ -87,7 +87,7 @@ If someone changes the environment's branch after you load the changes, Apply st
 
 ### Couldn't apply
 
-If an instance apply fails, n8n shows **Couldn't apply to the instance** and **Some changes may already be applied**. n8n doesn't roll back the changes it already made. Check the instance, then apply again.
+If an instance apply fails, n8n shows **Couldn't apply to the instance** and **Some changes may already be applied**. n8n doesn't roll back the changes it already made. Apply makes the instance match the branch, so you can run it again to finish.
 
 If a project apply fails, n8n shows **Couldn't apply the changes** and one of these:
 

@@ -25,7 +25,7 @@ Before you start, [set up the environment](set-up-environments.md) this instance
 
 A project promote sends the changes you select from one team project.
 
-1. Open a team project. If it has changes to promote, a badge with an up arrow and the number of changes appears next to the project name.
+1. Open a team project. Next to the project name, a badge with an up arrow shows the number of changes to promote.
 2. Select the badge. The **Changes to promote** page opens.
 3. Select the workflows to promote. n8n includes their dependencies, such as credentials, variables, data tables, and tags. Sub-workflows from other projects are only referenced, not included. To promote a project without workflows, such as an empty project, select the project itself.
 4. Inspect the changes. Each resource shows what changed, such as **New**, **Modified**, **Renamed**, **Moved**, **Archived**, or **Deleted**. To compare a workflow visually, select **Show diff**. The diff viewer shows the canvas **Before** and **After**, where **Before** is the environment's branch and **After** is this instance.
@@ -62,9 +62,9 @@ n8n sets the commit author to your n8n name and email. The Git host records the 
 
 While a promotion review for a project is open, you can't promote that project again. This prevents merge conflicts between reviews. Approve or close the review first. See [Promotion reviews](promotion-reviews.md).
 
-### Workflows moved to another project
+### Workflows or folders moved to another project
 
-A project promote can't move workflows between projects. n8n shows: **These workflows moved to another project**. Run an instance promote instead.
+Promote can't move workflows or folders between projects, or into a personal project. n8n names the item and both projects. Move the item back to its original project, then promote again. Moves within a project work.
 
 ### Workflows the export doesn't include
 

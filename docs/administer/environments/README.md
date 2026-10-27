@@ -18,8 +18,8 @@ Environments let you move your work, such as workflows and the credentials, vari
 
 Environments are available on:
 
-- **n8n Cloud:** TODO(OPEN-2): confirm plans.
-- **Self-hosted:** TODO(OPEN-2): confirm plans.
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Enterprise
 
 Only instance owners and instance admins can set up environments, promote, apply, and review promotions.
 {% endhint %}

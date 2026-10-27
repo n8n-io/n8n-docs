@@ -33,16 +33,16 @@ Environments are in Preview and may change in future releases. Try them on test 
 Create one of these tokens in GitLab:
 
 - A personal, group, or project access token with the `api` and `write_repository` scopes. n8n recommends a group access token.
-- A fine-grained personal access token, if your GitLab version supports them, with these permissions on the repository's project or group:
+- A fine-grained personal access token, if your GitLab version supports them, with these permissions:
 
-| Resource | Permissions | n8n uses it to |
-|---|---|---|
-| User | Read | Check the token |
-| Project | Read | List repositories |
-| Branch | Read | List branches |
-| Code | Download, Push | Read from and push to the repository |
-| Merge Request | Create, Read, Approve, Merge | Open, approve, and merge promotion reviews |
-| Work Item | Create | Add the approval note to the merge request |
+| Resource | Permissions | Access | n8n uses it to |
+|---|---|---|---|
+| User | Read | User | Check the token |
+| Project | Read | User | List repositories |
+| Branch | Read | Repository's project or group | List branches |
+| Code | Download, Push | Repository's project or group | Read from and push to the repository |
+| Merge Request | Create, Read, Approve, Merge | Repository's project or group | Open, approve, and merge promotion reviews |
+| Work Item | Create | Repository's project or group | Add the approval note to the merge request |
 
 The token's user needs at least the Developer role on the repository. n8n only lists repositories where the user has that role. To merge promotion reviews into a protected branch, the user also needs a role that the branch protection allows to merge, which is Maintainer by default.
 

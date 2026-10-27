@@ -50,7 +50,9 @@ The development instance promotes changes to the Production environment. If that
 
 An environment is a stage your workflows go through, such as development, staging, or production. Each stage usually has its own n8n instance, with its own configuration, credentials, and data, so you can change and test workflows without affecting production.
 
-On each instance, you set up environments by promotion direction: the environment the instance promotes changes to, and the environment it applies changes from, which is its source of truth. Each instance has at most one environment per direction. With Git-based promotion, an environment is a repository and branch that holds the version of your work for that stage, plus settings such as whether each promote commits directly to the environment's branch, pushes a feature branch, or opens a merge request.
+On each instance, you set up environments by promotion direction: the environment the instance promotes changes to, and the environment it applies changes from. The environment an instance applies from is that instance's source of truth. Each instance has at most one environment per direction.
+
+With Git-based promotion, an environment is a repository and branch that holds the version of your work for that stage. Its settings decide whether each promote commits directly to the branch or pushes a feature branch, and with GitLab, whether it also opens a merge request.
 
 ### Promote and apply
 
@@ -73,7 +75,7 @@ A promotion review is an optional approval step in a promote. Promoted changes r
 
 ### Promotion model
 
-A promotion model is how changes travel between environments. n8n currently supports Git-based promotion, where changes travel through a Git repository. Other models, such as promoting directly from one instance to another, may follow, so the docs name the promotion model apart from the Git providers. See [Git-based promotion](git-based-promotion/).
+A promotion model is how changes travel between environments. n8n currently supports Git-based promotion, where changes travel through a Git repository. Other models, such as promoting directly from one instance to another, may follow, so the docs name the promotion model apart from the Git providers. See [Git-based promotion](git-based-promotion/README.md).
 
 ### Provider
 
@@ -81,7 +83,7 @@ A provider holds the details n8n uses to connect and authenticate to a Git host,
 
 ## Environments and Environments (Classic)
 
-Environments replace [Environments (Classic)](../use-source-control-and-environments/), the earlier source control feature. An instance uses one or the other. See [Switch from Environments (Classic)](switch-from-environments-classic.md).
+Environments replace [Environments (Classic)](../use-source-control-and-environments/README.md), the earlier source control feature. An instance uses one or the other. See [Switch from Environments (Classic)](switch-from-environments-classic.md).
 
 ## In this section
 
@@ -90,7 +92,7 @@ Environments replace [Environments (Classic)](../use-source-control-and-environm
 - [Promote changes](promote-changes.md): send a project or the whole instance to an environment.
 - [Apply changes](apply-changes.md): bring changes from an environment into a project or the whole instance.
 - [Promotion reviews](promotion-reviews.md): approve promoted changes before they reach the environment's branch.
-- [Git-based promotion](git-based-promotion/): how environments use Git, and the supported Git providers.
+- [Git-based promotion](git-based-promotion/README.md): how environments use Git, and the supported Git providers.
 - [Known limitations](known-limitations.md): what Environments don't support yet, and workarounds.
 - [Switch from Environments (Classic)](switch-from-environments-classic.md): compare the two versions and switch an instance.
 

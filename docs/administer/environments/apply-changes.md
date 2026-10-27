@@ -38,7 +38,7 @@ Before Apply writes anything, n8n checks the changes against the instance. This 
 
 | Blocker | What to do |
 |---|---|
-| **Missing** credential or variable | Select **Add credential** or **Add variable** and create it. For a credential, n8n pre-fills the fields that use expressions on the source. |
+| **Missing** credential or variable | Select **Add credential** or **Add variable** and create it. For a credential, n8n pre-fills the fields that use expressions on the source. A credential owned by another project shows as a conflict instead. See [Cross-project dependencies](known-limitations.md#cross-project-dependencies). |
 | **No access** | The credential exists, but the project can't use it. Ask an admin to share it with the project. |
 | **Conflict** | The resource differs on the instance in a way Apply can't fix. Follow the message, then refresh. |
 | **Moved** | The workflow or folder is in another project on the branch. A project apply can't move items between projects. Move it on the instance to match the branch, or run an instance apply. |
@@ -70,7 +70,7 @@ Apply brings over the structure of your work, such as workflows, folders, and da
 | Resource | What Apply does |
 |---|---|
 | Projects | An instance apply creates projects that are on the branch and, after you confirm, deletes projects that aren't. A project apply creates the project if it isn't on the instance yet, and never deletes projects. |
-| Folders | Creates, renames, and moves folders to match the branch. |
+| Folders | Creates, renames, and moves folders within a project to match the branch. A project apply only changes folders that hold a selected workflow. |
 | Workflows | Creates or updates them. If you deleted a workflow on the source, Apply deletes it on the instance instead of archiving it. An archived workflow stays archived. Apply doesn't change whether a workflow is published. Publish or unpublish workflows on each instance. |
 | Credentials | Links workflows to the credential with the same ID. If it's missing, you create it while you resolve blockers. If it exists and belongs to the project you apply to, Apply updates its name and the fields that use expressions, and keeps every other value, such as secrets. |
 | Variables | The variable must exist on the instance. Apply keeps its existing value. |

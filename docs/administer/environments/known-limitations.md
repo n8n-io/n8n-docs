@@ -24,31 +24,31 @@ Environments are in Preview and may change in future releases. Try them on test 
 Workflows can use resources from outside their project: sub-workflows from another team project, and credentials that another project owns and shares with them. Data tables and project variables always belong to one project.
 
 - **Sub-workflows from another project:** a project promote only references them, so they must already exist on the target instance.
-- **Credentials owned by another project:** a project promote includes them, but a project apply can only use them if they already exist on the target instance. If they're missing, Apply blocks, and you can't create them from **Blockers**.
+- **Credentials owned by another project:** a project promote includes them, but a project apply can only use them if they already exist on the target instance and are shared with the project you apply to. If they're missing, Apply blocks, and you can't create them from **Blockers**.
 
-**Workaround:** promote and apply the project that owns the shared resources first, or use an instance promote and instance apply, which include every team project. Credentials owned by a personal project never travel. Move them to a team project on the source instance before you promote.
+**Workaround:** promote and apply the project that owns the shared resources first, or use an instance promote and instance apply, which include every team project. An instance apply overwrites every team project on the target, so see [Instance apply](apply-changes.md#instance-apply) first. Credentials owned by a personal project never travel. Move them to a team project on the source instance before you promote.
 
 ## Moving workflows and folders between projects
 
 A project promote or project apply can't move workflows or folders from one project to another. Moves within a project work.
 
-**Workaround:** use an instance promote and instance apply. They move workflows and folders to the project that the branch holds them in, and keep their ID, version history, and executions.
+**Workaround:** use an instance promote and instance apply. They move the existing workflows and folders on the target instance to the project that the branch holds them in, so they keep their ID, version history, and executions there. An instance apply overwrites every team project on the target, so see [Instance apply](apply-changes.md#instance-apply) first.
 
 ## Project-specific environments
 
 Environments currently cover the whole instance. Environments for individual projects are planned.
 
-## Roles
+## Roles that can use Environments
 
 Currently, only instance owners and instance admins can set up environments, promote, apply, and review promotions. Support for project roles is planned.
 
-## Git providers
+## Supported Git providers
 
-Environments currently support Generic Git and GitLab. Support for GitHub and Bitbucket is planned.
+Environments currently have two provider types: Generic Git and GitLab. Dedicated GitHub and Bitbucket providers are planned.
 
 **Workaround:** connect GitHub, Bitbucket, and other Git hosts with [Generic Git](git-based-promotion/generic-git.md). Promotion reviews aren't available there yet.
 
-## Agents
+## Agent support
 
 Promote and apply don't include agents yet. Support is in development.
 
@@ -66,9 +66,9 @@ Promote doesn't include a workflow's description.
 
 ## Updating an open promotion review
 
-You can't push changes to an open promotion review or its branch. For example, if a reviewer requests changes on GitLab, the review can't pick them up. Pushing changes to an open promotion review is planned.
+n8n can't push changes to an open promotion review. For example, if a reviewer requests changes on GitLab, a new promote can't add them to the review. Pushing changes to an open promotion review from n8n is planned.
 
-**Workaround:** close the merge request on GitLab, then promote again to open a new review. n8n can't close a review itself yet.
+**Workaround:** close the merge request on GitLab, open **Reviews** so n8n picks up the closed status, then promote again to open a new review. n8n can't close a review itself yet.
 
 ## Feature branch names
 

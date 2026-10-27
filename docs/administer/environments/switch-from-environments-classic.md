@@ -11,7 +11,7 @@ tags:
 
 # Switch from Environments (Classic)
 
-Environments replace [Environments (Classic)](../use-source-control-and-environments/), the earlier source control feature. Each instance uses one version at a time. You can switch an instance between them while Environments are in Preview.
+Environments replace [Environments (Classic)](../use-source-control-and-environments/README.md), the earlier source control feature. Each instance uses one version at a time. You can switch an instance between them while Environments are in Preview.
 
 {% hint style="info" %}
 **Preview status**
@@ -72,4 +72,4 @@ Switching affects only this instance. You can upgrade again at any time.
 - [Promotion reviews](promotion-reviews.md)
 - [Git-based promotion](git-based-promotion/README.md)
 - [Known limitations](known-limitations.md)
-- [Environments (Classic)](../use-source-control-and-environments/)
+- [Environments (Classic)](../use-source-control-and-environments/README.md)

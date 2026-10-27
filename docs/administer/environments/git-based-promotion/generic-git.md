@@ -35,7 +35,7 @@ Environments are in Preview and may change in future releases. Try them on test 
 3. Select **Continue**, then **Copy deploy key**.
 4. On your Git host, add the key to the repository as a deploy key with write access.
 
-Bitbucket Cloud only offers read-only repository access keys, so connect to Bitbucket Cloud with a username and access token instead.
+Bitbucket Cloud only offers read-only repository access keys, so connect to Bitbucket Cloud with a username and access token, or add the deploy key to a Bitbucket account instead of the repository.
 
 Use an SSH repository URL that starts with `ssh://`, such as `ssh://git@github.com/acme/n8n.git`.
 
@@ -53,7 +53,7 @@ You can't change the authentication method of a provider. To switch, create anot
 
 ## Finish the environment
 
-After you connect the provider, finish setting up the environment that uses it: enter the **Repository URL** and **Branch**, and choose whether to push each promote to a feature branch. See [Set up environments](../set-up-environments.md#add-an-environment).
+After you connect the provider, finish setting up the environment that uses it: enter the **Environment name**, **Repository URL**, and **Branch**. For an environment that an instance promotes changes to, also choose whether to push each promote to a feature branch. See [Set up environments](../set-up-environments.md#add-an-environment).
 
 ## Related resources
 

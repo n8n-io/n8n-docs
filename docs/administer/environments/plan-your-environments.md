@@ -21,12 +21,12 @@ Environments are in Preview and may change in future releases. Try them on test 
 
 ## How instances and environments relate
 
-You configure the environments of each instance on their own. Each instance can have two, one per direction:
+You configure the environments of each instance separately. Each instance can have two environments, one per direction:
 
 - The environment the instance promotes changes to.
 - The environment the instance applies changes from.
 
-With [Git-based promotion](git-based-promotion/), each environment has its own provider, repository, and branch, and none of these have to match across directions or instances. An instance can apply from one repository and promote to another, or use different branches of the same repository. Changes reach the next instance once they're on the branch it applies from, whether n8n commits them there directly or someone merges them in.
+With [Git-based promotion](git-based-promotion/README.md), each environment uses a provider, repository, and branch. They don't have to match across directions or instances, and several environments can share a provider. An instance can apply from one repository and promote to another, or use different branches of the same repository. Changes reach the next instance once they're on the branch it applies from, whether n8n commits them there directly or someone merges them in.
 
 Name each environment after the stage it stands for, such as Staging or Production. The patterns below are common setups, not the only ones.
 
@@ -64,9 +64,9 @@ To make sure production only applies changes someone reviewed, set the environme
 
 ## Set up a new target instance
 
-The easiest way to bring your work to a new target instance is an instance promote on the source instance, followed by an [instance apply](apply-changes.md#instance-apply) on the target. Together they create every team project on the target and handle the dependencies between projects. During the apply, n8n asks you to create the credentials and variables that don't exist on the target yet.
+The easiest way to bring your work to a new target instance is an instance promote on the source instance, followed by an [instance apply](apply-changes.md#instance-apply) on the target. Together they create every team project on the target and handle the dependencies between projects. If the environment pushes feature branches or opens promotion reviews, merge or approve the promote before you apply. During the apply, n8n asks you to create the credentials and variables that don't exist on the target yet.
 
-An instance apply overwrites the instance. It makes every team project match the environment's branch, and deletes team projects that aren't on it. Run it before people start working on the new instance.
+An instance apply overwrites every team project on the instance. It makes them match the environment's branch, and deletes team projects that aren't on it. Run it before people start working on the new instance.
 
 You can also promote and apply projects one by one. Start with the projects that others depend on, such as a project with shared sub-workflows or credentials, so those exist on the target first. See [Cross-project dependencies](known-limitations.md#cross-project-dependencies).
 

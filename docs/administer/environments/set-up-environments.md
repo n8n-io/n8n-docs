@@ -25,7 +25,7 @@ Environments are in Preview and may change in future releases. Try them on test 
 
 - You're an instance owner or instance admin.
 - Your instance is on an Enterprise plan.
-- You have a Git repository and an SSH key, account, or token with access to it: write access to promote, read access to apply. See your provider's page under [Git-based promotion](git-based-promotion/).
+- You have a Git repository and an SSH key, account, or token with access to it: write access to promote, read access to apply. See your provider's page under [Git-based promotion](git-based-promotion/README.md).
 
 On self-hosted n8n:
 
@@ -46,7 +46,7 @@ If the instance is connected to Environments (Classic), upgrade it first: go to 
 7. Promote environments only: to push each promote to a feature branch instead of the branch itself, turn on **Push to a new branch** (Generic Git) or **Open a merge request in GitLab** (GitLab).
 8. Select **Add environment**.
 
-n8n saves the environment and connects to the repository. The environment then shows **Connected**. If it shows **Not connected** or **Out of date**, select **Retry** or **Reconnect**. If that fails, see [Git-based promotion](git-based-promotion/README.md#troubleshooting).
+n8n saves the environment and connects to the repository. The environment then shows **Connected**. If it shows **Not connected**, fix the cause and select **Retry**. If it shows **Out of date**, select **Reconnect**. If that fails, see [Git-based promotion](git-based-promotion/README.md#troubleshooting).
 
 When you add the second environment on an instance with the same provider type, n8n reuses the first environment's provider, so you don't enter the authentication details again.
 

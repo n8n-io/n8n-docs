@@ -29,9 +29,11 @@ The tile uses a [Databricks OAuth2 credential](../../credentials/databricks.md#u
 - A chat model that calls tools reliably. n8n recommends the [Databricks Chat Model](n8n-nodes-langchain.lmchatdatabricks.md) node with Llama 3.3 70B or Qwen 3.5. Refer to [Choose a model for agents](n8n-nodes-langchain.lmchatdatabricks.md#choose-a-model-for-agents).
 
 {% hint style="warning" %}
-**Endpoint change on October 31, 2026**
+**Endpoint change on October 30, 2026**
 
-Databricks retires the beta Genie MCP endpoint on October 31, 2026 and serves Genie One through its AI Gateway endpoint instead. The tile now calls the AI Gateway endpoint, which needs the `ai-gateway` scope in place of `genie`. A credential connected before the change keeps a `genie` token that the new endpoint rejects with `Invalid scope, required scopes: ai-gateway`. To fix it, the admin adds the `ai-gateway` scope to the app connection, then each user opens their credential and selects **Connect my account** again. Refer to [Existing credential fails with an ai-gateway scope error](#existing-credential-fails-with-an-ai-gateway-scope-error).
+Databricks retires the beta Genie MCP endpoint on October 31, 2026 and serves Genie One through its AI Gateway endpoint instead. From October 30, 2026, the tile calls the AI Gateway endpoint, which needs the `ai-gateway` scope in place of `genie`. This applies to n8n Cloud and self-hosted instances alike, because the tile's endpoint comes from the MCP registry and not from the n8n version you run. A credential connected before the change keeps a `genie` token that the new endpoint rejects with `Invalid scope, required scopes: ai-gateway`.
+
+**What to do:** a Databricks account admin adds the `ai-gateway` scope to the app connection, then each user opens their credential and selects **Connect my account** again. Refer to [Existing credential fails with an ai-gateway scope error](#existing-credential-fails-with-an-ai-gateway-scope-error).
 {% endhint %}
 
 ## Connect Genie to an agent

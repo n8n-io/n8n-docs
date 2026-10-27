@@ -11,7 +11,7 @@ tags:
 
 # GitLab
 
-The GitLab provider connects an environment to a repository on GitLab.com or a self-managed GitLab instance. It lists your repositories and branches, and supports promotion reviews as merge requests.
+The GitLab provider connects an environment to a repository on GitLab.com or a self-managed GitLab instance. It lists your repositories and branches, and supports promotion reviews based on merge requests that you review visually in n8n.
 
 {% hint style="info" %}
 **Preview status**
@@ -26,14 +26,31 @@ Environments are in Preview and may change in future releases. Try them on test 
 | Authentication | Access token |
 | Pick repositories and branches from a list | Yes |
 | Push each promote to a feature branch | Yes, with a merge request |
-| Promotion reviews | Yes: GitLab merge requests synced to n8n, with a visual diff of the changes in **Reviews** |
+| Promotion reviews | Yes: GitLab merge requests synced to n8n, with a visual diff of the changes on the **Reviews** page |
 
-## Connect GitLab
+## Create an access token
 
-1. Create a personal, group, or project access token in GitLab with the `api` and `write_repository` scopes. n8n recommends a group access token. TODO(OPEN-9): confirm the required role (Developer or Maintainer).
-2. In the **Connect GitLab** dialog, enter a **Name**, the **GitLab base URL**, such as `https://gitlab.com` or `https://gitlab.example.com`, and the **Access token**.
-3. Select **Continue**.
-4. In the environment settings, pick the **Repository** and **Branch** from the lists.
+Create one of these tokens in GitLab:
+
+- A personal, group, or project access token with the `api` and `write_repository` scopes. n8n recommends a group access token.
+- A fine-grained personal access token, if your GitLab version supports them, with these permissions on the repository's project or group:
+
+| Resource | Permissions | n8n uses it to |
+|---|---|---|
+| User | Read | Check the token |
+| Project | Read | List repositories |
+| Branch | Read | List branches |
+| Code | Download, Push | Read from and push to the repository |
+| Merge Request | Create, Read, Approve, Merge | Open, approve, and merge promotion reviews |
+| Work Item | Create | Add the approval note to the merge request |
+
+The token's user needs at least the Developer role on the repository. n8n only lists repositories where the user has that role. To merge promotion reviews into a protected branch, the user also needs a role that the branch protection allows to merge, which is Maintainer by default.
+
+## Set up the GitLab provider
+
+1. In the **Connect GitLab** dialog, enter a **Name**, the **GitLab base URL**, such as `https://gitlab.com` or `https://gitlab.example.com`, and the **Access token**.
+2. Select **Continue**.
+3. In the environment settings, pick the **Repository** and **Branch** from the lists.
 
 For a self-managed GitLab instance on an internal network or with a private certificate authority, see [Git-based promotion](README.md#self-hosted-n8n).
 

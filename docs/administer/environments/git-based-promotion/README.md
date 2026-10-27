@@ -40,7 +40,7 @@ A provider holds the details n8n uses to connect and authenticate to your Git ho
 |---|---|---|
 | Authentication | SSH key, or username and access token | Access token |
 | Pick repositories and branches from a list | No | Yes |
-| Promotion reviews | No | Yes: GitLab merge requests synced to n8n, with a visual diff of the changes in **Reviews** |
+| Promotion reviews | No | Yes: GitLab merge requests synced to n8n, with a visual diff of the changes on the **Reviews** page |
 
 GitHub, Bitbucket, and other Git hosts work through Generic Git, without repository lists or promotion reviews.
 

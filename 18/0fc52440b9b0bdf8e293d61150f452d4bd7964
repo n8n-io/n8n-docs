@@ -1,0 +1,9 @@
+docs/administer/environments/plan-your-environments.md
+  ai_agent 71
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "180fc52440b9b0bdf8e293d61150f452d4bd7964",
+  "prompts": {}
+}

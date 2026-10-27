@@ -49,6 +49,18 @@ To replace the key, edit the provider and select **Generate a new key**. Add the
 
 Use an HTTPS repository URL without credentials in it, such as `https://github.com/acme/n8n.git`.
 
+### Access the token needs
+
+Generic Git only runs Git commands. It doesn't call your Git host's API. The token needs read and write access to the repository's code. If you push each promote to a feature branch, it also needs permission to create branches.
+
+Common Git hosts:
+
+| Git host | Username | Token |
+|---|---|---|
+| GitHub | Your GitHub username | Fine-grained personal access token for the repository with **Contents**: **Read and write**. This also covers creating branches. |
+| GitLab | Your GitLab username | Personal, group, or project access token with the `write_repository` scope. For a fine-grained personal access token, add **Code**: **Download**, **Push**, and **Branch**: **Create**. |
+| Bitbucket Cloud | Your Bitbucket username | API token with the `read:repository:bitbucket` and `write:repository:bitbucket` scopes. |
+
 You can't change the authentication method of a provider. To switch, create another provider.
 
 ## Finish the environment

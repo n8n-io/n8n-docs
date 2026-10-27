@@ -37,7 +37,7 @@ n8n gives you several ways to build a workflow, from typing a request in natural
 
 * [Build](../)
 * [Understand workflows](../understand-workflows/README.md)
-* [Build and manage agents](../build-and-manage-agents.md)
+* [Build and manage agents](../build-and-manage-agents/README.md)
 * [Manage workflows](../manage-workflows/README.md)
 * [Flow logic](../flow-logic/README.md)
 * [Work with data](../work-with-data/README.md)

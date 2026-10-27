@@ -42,6 +42,21 @@ For guidance on major version upgrades, see [v3.0 breaking changes](v30-breaking
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
 
+## Use your personal credentials in team projects
+
+**Released:** 2026-10-27 in n8n 2.46.0
+
+You can now select your own personal credentials in any team project you're a member of, without sharing them first. Every workflow run acts as a person, and can only use the credentials that person is allowed to use. Teammates who can't use your credential can see that a workflow uses it. They can't run or publish the workflow with it, or see the execution data it produced. The credential selector groups credentials into **Available to you** and **Available in** _project name_.
+
+After you upgrade, you may notice:
+
+* **Disabled Execute and Publish buttons:** if a workflow uses someone else's credential that you can't use, n8n names the credential and its owner. You can still edit the workflow and switch to a credential you can use.
+* **Publish checks:** you can't publish a workflow with a credential you can't use. The check tells you which credential blocks it.
+* **Hidden execution data:** n8n hides the data of executions that used a credential you can't use, including data returned from sub-workflows.
+* **A clearer Sharing tab:** it lists people and projects together, shows projects that use the credential without a share as **Can view**, and lets you share with them in one step.
+
+Existing published workflows keep running. Learn more in [Use personal credentials in projects](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/use-personal-credentials-in-projects).
+
 ## Durable scheduler on by default for Schedule Trigger nodes
 
 **Released:** 2026-10-20 in n8n 2.45

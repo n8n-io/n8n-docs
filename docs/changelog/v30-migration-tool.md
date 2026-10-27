@@ -71,6 +71,10 @@ Select the workflow count on an issue to open its detail page. The page lists ev
 - **Published:** Whether the workflow is live, and the date of its last update.
 - **Usage:** The number of executions and the date of the last run.
 
+To act on several workflows at once, select the checkbox next to each one. A bulk action bar appears with **Migrate**, **Notify owners**, **Mark won't fix**, **Reopen**, and **Clear selection**. Some actions only appear when they apply, for example **Migrate** for issues that n8n can migrate automatically.
+
+![The issue detail page for the Item Lists node removed issue, with two workflows selected and the bulk action bar showing Migrate, Notify owners, Mark won't fix, Reopen, and Clear selection](.gitbook/assets/n8n-v3-migration-report-detail.png)
+
 ### Find the workflows to fix first
 
 To narrow the list, use the search box, the sort menu, and the quick filters (**Assigned to me**, **Open**, **Won't fix**, **Unassigned**). Select **Filters** to filter by:

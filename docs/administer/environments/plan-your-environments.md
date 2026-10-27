@@ -64,7 +64,13 @@ To make sure production only applies changes someone reviewed, set the environme
 
 ## Set up a new target instance
 
-To bring projects to a new target instance, apply them one by one with a project apply, or run one [instance apply](apply-changes.md#instance-apply) to bring over every project at once. An instance apply overwrites everything on the instance, so run it before people work there.
+The easiest way to bring your work to a new target instance is an instance promote on the source instance, followed by an [instance apply](apply-changes.md#instance-apply) on the target. Together they create every team project on the target and handle the dependencies between projects. During the apply, n8n asks you to create the credentials and variables that don't exist on the target yet.
+
+An instance apply overwrites the instance. It makes every team project match the environment's branch, and deletes team projects that aren't on it. Run it before people start working on the new instance.
+
+Alternatively, promote and apply projects one by one. Start with the projects that others depend on, such as a project with shared sub-workflows or credentials, so those exist on the target first. See [Cross-project dependencies](known-limitations.md#cross-project-dependencies).
+
+Personal projects aren't promoted. Before you start, move the workflows and credentials that team projects use out of personal projects and into team projects.
 
 ## Protect the instances that only apply
 

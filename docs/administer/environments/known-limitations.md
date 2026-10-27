@@ -21,9 +21,12 @@ Environments are in Preview and may change in future releases. Try them on test 
 
 ## Cross-project dependencies
 
-Workflows can depend on another project, for example when they call sub-workflows from a shared utility project, or use its credentials or data tables. A project promote only references sub-workflows from other projects, so they must already exist on the target instance. A project apply also needs credentials from other projects to exist on the target instance.
+Workflows can use resources from outside their project: sub-workflows from another team project, and credentials that another project owns and shares with them. Data tables and project variables always belong to one project.
 
-**Workaround:** promote and apply the project that owns the shared resources first, or use an instance promote and instance apply, which include every team project and the dependencies between them. An instance promote fails if a workflow references a workflow in a personal project. Move that workflow into a team project first.
+- **Sub-workflows from another project:** a project promote only references them, so they must already exist on the target instance.
+- **Credentials owned by another project:** a project promote includes them, but a project apply can only use them if they already exist on the target instance. If they're missing, Apply blocks, and you can't create them from **Blockers**.
+
+**Workaround:** promote and apply the project that owns the shared resources first, or use an instance promote and instance apply, which include every team project. Credentials owned by a personal project never travel. Move them to a team project on the source instance before you promote.
 
 ## Moving workflows and folders between projects
 

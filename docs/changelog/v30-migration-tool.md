@@ -1,5 +1,6 @@
 ---
 description: Use the migration report in n8n to find the workflows and instance settings that need attention before you upgrade to n8n 3.0.
+contentType: reference
 layout:
   description:
     visible: false

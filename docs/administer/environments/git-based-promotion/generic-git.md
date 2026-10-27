@@ -26,7 +26,7 @@ Environments are in Preview and may change in future releases. Try them on test 
 | Authentication | SSH key, or username and access token |
 | Pick repositories and branches from a list | No. You enter the repository URL and branch. |
 | Push each promote to a feature branch | Yes |
-| Promotion reviews | No. Someone merges the feature branch on the Git host. |
+| Promotion reviews | No. Someone merges the feature branch on the Git host manually. |
 
 ## Connect with an SSH key
 
@@ -37,7 +37,7 @@ Environments are in Preview and may change in future releases. Try them on test 
 
 Bitbucket Cloud only offers read-only repository access keys, so connect to Bitbucket Cloud with a username and access token instead.
 
-Use an SSH repository URL, such as `ssh://git@github.com/acme/n8n.git` or `git@github.com:acme/n8n.git`.
+Use an SSH repository URL that starts with `ssh://`, such as `ssh://git@github.com/acme/n8n.git`.
 
 To replace the key, edit the provider and select **Generate a new key**. Add the new key to your Git host, then remove the old key there.
 
@@ -50,6 +50,10 @@ To replace the key, edit the provider and select **Generate a new key**. Add the
 Use an HTTPS repository URL without credentials in it, such as `https://github.com/acme/n8n.git`.
 
 You can't change the authentication method of a provider. To switch, create another provider.
+
+## Finish the environment
+
+After you connect the provider, finish setting up the environment that uses it: enter the **Repository URL** and **Branch**, and choose whether to push each promote to a feature branch. See [Set up environments](../set-up-environments.md#add-an-environment).
 
 ## Related resources
 

@@ -63,7 +63,7 @@ Because the same GitLab user opens and approves the merge request, GitLab approv
 
 ## One open review per project
 
-While a review for a project is open, you can't promote that project again. This prevents merge conflicts between reviews. Approve or close the review, then promote again.
+While a review for a project is open, you can't promote that project again, and you can't add changes to the open review. This prevents merge conflicts between reviews. Approve or close the review, then promote again.
 
 ## Related resources
 

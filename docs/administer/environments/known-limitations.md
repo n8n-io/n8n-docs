@@ -65,6 +65,10 @@ An instance apply deletes projects that aren't on the branch, and everything in 
 
 n8n updates the status of promotion reviews from the Git host when you open **Reviews**. Changes on the Git host don't appear in n8n until then.
 
+### You can't update an open review
+
+You can't add changes to a promotion review after n8n opens it. To include more changes, approve or close the review, then promote again to open a new one.
+
 ### GitLab approval rules
 
 n8n opens and approves merge requests with the same GitLab token. GitLab approval rules that stop authors from approving their own merge requests block **Approve and merge**. See [Promotion reviews](promotion-reviews.md#n8n-acts-as-the-tokens-user).

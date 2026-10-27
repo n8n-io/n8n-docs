@@ -62,6 +62,12 @@ To make sure production only applies changes someone reviewed, set the environme
 - With GitLab, n8n also opens a merge request, which you approve in n8n as a [promotion review](promotion-reviews.md).
 - With Generic Git, someone merges the feature branch on the Git host.
 
+## Set up a new target instance
+
+A project apply only works on projects that already exist on the instance. To create projects on a new target instance, run an [instance apply](apply-changes.md#instance-apply) once, before people work on it. After that, use project applies for day-to-day changes.
+
+A project you create later on the source also reaches the target only through an instance apply, which overwrites every other project too. Plan new projects with that in mind.
+
 ## Protect the instances that only apply
 
 Turn on **Protected instance** on instances that only apply changes, such as production. This stops people from editing workflows or creating resources there in the UI, so the instance stays in line with its environment. See [Set up environments](set-up-environments.md#protect-an-instance).

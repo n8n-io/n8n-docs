@@ -58,6 +58,16 @@ Promote doesn't include the workflow description. Update it on the target instan
 
 If you only publish or unpublish a workflow, n8n doesn't show it as a change to promote. Publish the workflow on the target instance, or make an edit and promote it.
 
+## Projects
+
+### New projects need an instance apply
+
+A project apply only works on projects that already exist on the target instance. To create a new project there, run an instance apply, which also overwrites every other project. Run it before people work on the target instance, for example when you set it up.
+
+### Project changes need a workflow
+
+A project promote or project apply needs at least one selected workflow. You can't promote an empty project, or a project change such as a rename, on its own.
+
 ## Apply
 
 ### An instance apply deletes projects

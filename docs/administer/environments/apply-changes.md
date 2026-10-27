@@ -69,9 +69,9 @@ Apply brings over the structure of your work, such as workflows, folders, and da
 
 | Resource | What Apply does |
 |---|---|
-| Projects | An instance apply creates projects that are on the branch and, after you confirm, deletes projects that aren't. A project apply never creates or deletes projects. |
+| Projects | An instance apply creates projects that are on the branch and, after you confirm, deletes projects that aren't. A project apply only works on a project that already exists on the instance, and never creates or deletes projects. |
 | Folders | Creates, renames, and moves folders to match the branch. |
-| Workflows | Creates or updates them. If you deleted a workflow on the source, Apply deletes it on the instance instead of archiving it. An archived workflow stays archived. TODO(publish): align with the decision on published state. |
+| Workflows | Creates or updates them. If you deleted a workflow on the source, Apply deletes it on the instance instead of archiving it. An archived workflow stays archived. Apply doesn't change whether a workflow is published. Publish or unpublish workflows on each instance. |
 | Credentials | Links workflows to the credential with the same ID. If it's missing, you create it while you resolve blockers. If it exists and belongs to the project you apply to, Apply updates its name and the fields that use expressions, and keeps every other value, such as secrets. |
 | Variables | The variable must exist on the instance. Apply keeps its existing value. |
 | Data tables | Creates tables or updates their schema. Existing rows stay. Removing or retyping a column deletes only that column's values, after you confirm. |

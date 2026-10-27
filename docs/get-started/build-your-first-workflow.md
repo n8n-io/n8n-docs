@@ -34,7 +34,7 @@ In this quick start, you’ll build a workflow that fetches the weather for Berl
 When it runs, your workflow produces a report like this:
 
 ```
-The temperature in berlin is 11.6°C. It's currently clear.
+The temperature in Berlin is 6.8 degrees C and it's currently cloudy.
 ```
 
 You’ll build it with n8n Assistant, which turns a prompt into a working workflow. That takes less than five minutes. If you’d rather build it node by node, an optional section at the end walks you through the same workflow by hand.
@@ -69,17 +69,18 @@ n8n Assistant is in Preview and may change in future releases. See [Use n8n Assi
 
 n8n Assistant builds workflows from prompts. You describe what you want, approve each step, and end up with a workflow you can open, edit, and publish.
 
-1. Log in to your n8n instance and select **Assistant** in the left menu.
+1. Log in to your n8n instance and select **New chat** in the left menu to talk to the n8n Assistant.
 
-    ![Assistant selected in the left menu, with the n8n Assistant chat box open](.gitbook/assets/build-your-first-workflow-assistant-01.png)
+    ![New chat selected in the left menu, with the n8n Assistant chat box open](.gitbook/assets/build-your-first-workflow-assistant-01.png)
 
-2. Enter this prompt and select the send arrow:
+2. Enter this prompt, or dictate it, and select the send arrow:
 
     ```
-    Build a workflow called Weather Log that runs every day at 8am:
-    - Get the weather for Berlin from https://mockingbird.n8n.io/v1/weather/berlin
-    - Add a report field that contains the city, temperature, and conditions e.g. The temperature in berlin is 10°C. It's currently overcast.
-    - Save the report to a new data table called weather_data with a report column
+    Build a workflow called "weather log" that runs every day at 8 a.m.
+    Get the weather for Berlin from https://mockingbird.n8n.io/v1/weather/berlin.
+    Add a report field that contains the city the temperature the conditions.
+    For example: The temperature in Berlin is 10 degrees. and it's currently overcast.
+    Then save the data to a new data table.
     ```
 
     ![The weather workflow prompt entered in the n8n Assistant chat box](.gitbook/assets/build-your-first-workflow-assistant-02.png)
@@ -90,19 +91,19 @@ n8n Assistant builds workflows from prompts. You describe what you want, approve
 
 3. Approve any prompts from n8n Assistant with **Allow once**. As it builds the workflow, you'll see the progress on the canvas to the right of the chat.
 
-    ![n8n Assistant asking the user for permission to create a data table](.gitbook/assets/build-your-first-workflow-assistant-03.png)
+    ![n8n Assistant asking the user for permission](.gitbook/assets/build-your-first-workflow-assistant-03.png)
 
-4. Approve a test run with **Yes, run and save one report** if prompted by n8n Assistant. Otherwise, ask n8n Assistant to run a test for you.
+4. Approve a run if prompted by n8n Assistant. Otherwise, ask n8n Assistant to run a test for you.
 
     ![n8n Assistant asking to run a live test, with the finished workflow on the canvas](.gitbook/assets/build-your-first-workflow-assistant-04.png)
 
 5. Select **Publish and enable the schedule** if prompted by n8n Assistant, as the workflow only runs at 8 AM every day once you publish it. Otherwise, ask n8n Assistant to publish it for you.
 
-    ![n8n Assistant asking whether to publish Weather Log and run it at 8 AM](.gitbook/assets/build-your-first-workflow-assistant-05.png)
+    ![User asking assistant to publish workflow](.gitbook/assets/build-your-first-workflow-assistant-05.png)
 
-6. Select the `weather_data` data table at the top of the right hand pane to check the workflow ran as intended. Otherwise, ask n8n Assistant to show you the data table.
+6. Select the `weather log` data table at the top of the right hand pane to check the workflow ran as intended. Otherwise, ask n8n Assistant to show you the data table.
 
-    ![Weather Data tab selected at the top of the right hand pane](.gitbook/assets/build-your-first-workflow-assistant-06.png)
+    ![Weather log tab selected at the top of the right hand pane](.gitbook/assets/build-your-first-workflow-assistant-06.png)
 
 7. Select **Personal** in the left menu to see the workflow. n8n Assistant saves all workflows under **Personal**.
 
@@ -110,14 +111,14 @@ n8n Assistant builds workflows from prompts. You describe what you want, approve
 
 ## What your workflow does
 
-Open **Weather Log** on the canvas and you'll see four [nodes](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/workflow-components/work-with-nodes), each doing one job and passing its result to the next:
+Open **weather log** on the canvas and you'll see four [nodes](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/workflow-components/work-with-nodes), each doing one job and passing its result to the next:
 
 | Node | What it does |
 | --- | --- |
-| **Every Day at 8am** | A [Schedule Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.scheduletrigger) that starts the workflow at 8 AM every day. |
-| **Get Berlin Weather** | An [HTTP Request](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest) node that fetches the weather from the Mockingbird API. |
-| **Add Weather Report** | An [Edit Fields (Set)](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.set) node that builds the `report` text, using an [expression](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/transform-data/expressions-for-data-transformation) to pull in the live weather values. |
-| **Save Weather Report** | A [Data table](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.datatable) node that inserts the report as a new row in `weather_data`. |
+| **Every day at 8am** | A [Schedule Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.scheduletrigger) that starts the workflow at 8 AM every day. |
+| **Get Berlin weather** | An [HTTP Request](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest) node that fetches the weather from the Mockingbird API. |
+| **Add weather report** | An [Edit Fields (Set)](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.set) node that builds the `report` text, using an [expression](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/transform-data/expressions-for-data-transformation) to pull in the live weather values. |
+| **Save weather leport** | A [Data table](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.datatable) node that inserts the report as a new row in the table. |
 
 {% hint style="info" %}
 n8n Assistant chooses the node names itself, so yours may differ from the ones above.
@@ -127,19 +128,15 @@ n8n Assistant chooses the node names itself, so yours may differ from the ones a
 
 n8n Assistant built the workflow for you. This section builds the same workflow by hand, one node at a time.
 
-You'll end up with a second workflow called `Weather Log Manual`, built from the same four nodes: **Every Day at 8am**, **Get Berlin Weather**, **Add Weather Report**, and **Save Weather Report**. It writes to the same `weather_data` table as **Weather Log**.
+You'll end up with a second workflow built from the same four nodes: **Every day at 8am**, **Get Berlin weather**, **Add weather report**, and **Save weather leport**. You'll also create a new data table in the process.
 
 ### 1. Create the workflow
 
-1. Select **Personal** in the left menu.
+1. Select **Personal** in the left menu followed by **Create workflow**. This opens the canvas, where you’ll build your workflow and spend most of this section.
 
-    ![Personal in the left menu](.gitbook/assets/build-your-first-workflow-optional-01-01.png)
+    ![Personal in the left menu and the create workflow button](.gitbook/assets/build-your-first-workflow-optional-01-01.png)
 
-2. Select **Create workflow** at the top right. This opens the canvas, where you’ll build your workflow and spend most of this section.
-
-    ![Create workflow button](.gitbook/assets/build-your-first-workflow-optional-01-02.png)
-
-3. Select the workflow’s name and change it to `Weather Log Manual`. Select anywhere on the canvas to save the name.
+2. Select the workflow’s name and change it to `Weather Log 2` (or something equally creative). Select anywhere on the canvas to save the name.
 
 ### 2. Run it at 8 AM every day
 
@@ -153,15 +150,13 @@ For this build, you'll set it to run at 8 AM every day. While you build, you’l
 
     ![On a schedule option](.gitbook/assets/build-your-first-workflow-optional-02-01.png)
 
-2. Select `8am` from the **Trigger at Hour** field in the Node details view.
+2. Select `8am` from the **Trigger at Hour** field in the Node details view. Click the X in the top right to close the window.
 
     ![Trigger at Hour set to 8 AM](.gitbook/assets/build-your-first-workflow-optional-02-02.png)
 
-3. Select **Schedule Trigger** at the top left and rename it to `Every Day at 8am`.
+3. Select the **Schedule Trigger** node and press space bar to open up the rename dialog box. Rename it to `Every day at 8am`.
 
     ![Renamed Schedule Trigger](.gitbook/assets/build-your-first-workflow-optional-02-03.png)
-
-4. Select the **x** at the top right to close the Node details view and return to the canvas.
 
 ### 3. Get the weather for Berlin
 
@@ -181,9 +176,11 @@ You’ve got your trigger, so it’s time to fetch the weather. The **HTTP Reque
     Mockingbird is a sample API with weather for about 40 European cities. Other cities return an error.
     {% endhint %}
 
-3. Select the node’s name at the top left and rename it to `Get Berlin Weather`, then select **Execute step**. You should see the weather for Berlin in the output, including the `city`, `temp_c`, and `condition` fields you’ll use in the next step.
+3. Press **Execute step**. You should see the weather for Berlin in the output, including the `city`, `temp_c`, and `condition` fields you’ll use in the next step.
 
     ![Berlin weather output](.gitbook/assets/build-your-first-workflow-optional-03-03.png)
+
+3. Rename the node to be `Get Berlin weather`.
 
 ### 4. Turn the weather into a report
 
@@ -191,7 +188,7 @@ You’ll use: **Edit Fields (Set)**
 
 Next, you’ll turn the weather data into a short report that anyone can read at a glance.
 
-1. Select **+** after **Get Berlin Weather**, select **Data transformation**, then select **Edit Fields (Set)**.
+1. Select **+** after **Get Berlin weather**, select **Data transformation**, then select **Edit Fields (Set)**.
 
     ![Edit Fields (Set) under Data transformation](.gitbook/assets/build-your-first-workflow-optional-04-01.png)
 
@@ -231,38 +228,39 @@ Next, you’ll turn the weather data into a short report that anyone can read at
 
     ![Value with city, temperature, and condition](.gitbook/assets/build-your-first-workflow-optional-04-04-02.png)
 
-5. Rename the node to `Add Weather Report` and click **Execute step**.
+5. Rename the node to `Add weather report` and click **Execute step**.
 
 ### 5. Save the data
 
 You’ll use: **Data table**
 
-You’ve fetched the data and formatted it, so now it’s time to store it. If n8n Assistant already created the `weather_data` [data table](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/data-tables), then move to step 4.
+You’ve fetched the data and formatted it, so now it’s time to store it. We'll create a data table in the process.
 
-To create the data table:
+1. Add a **Data table** node after **Add Weather Report** and select **Insert row** as the action.
 
-1. Click **Personal** in the left menu then click **Data tables**.
+    ![Insert row action](.gitbook/assets/build-your-first-workflow-optional-05-01.png)
 
-    ![Navigating to Data tables](.gitbook/assets/build-your-first-workflow-optional-05-01.png)
+2. Open the node, click on the drop down under **Data table** and select **Create new data table**:
 
-2. Click **Create data table**, name it `weather_data`, and click **Create**.
+    ![Create a new data table](.gitbook/assets/build-your-first-workflow-optional-05-02.png)
 
-    ![Create data table](.gitbook/assets/build-your-first-workflow-optional-05-02.png)
+A new browser tab will open.
 
-3. Click **Add Column**, enter `report` for **Name**, then click **Add Column** again. This gives you a column to store the weather report in.
+3. Enter `weather log 2` for the name of your data table (or something creative!), and click **Create**:
 
-    ![report column in the new data table](.gitbook/assets/build-your-first-workflow-optional-05-03.png)
+    ![Name the new data table](.gitbook/assets/build-your-first-workflow-optional-05-03.png)
 
-Back in the canvas:
+4. Click on **Add Column** on the top right and enter `report` before clicking **Add Column**. This will be the column the data from our `Add weather report` node gets saved to.
 
-4. Add a **Data table** node after **Add Weather Report** and select **Insert row** as the action.
+    ![Add a column to the new data table](.gitbook/assets/build-your-first-workflow-optional-05-04.png)
 
-    ![Insert row action](.gitbook/assets/build-your-first-workflow-optional-05-04.png)
+Navigate back to the workflow tab.
 
-5. Rename the node to `Save Weather Report`.
-6. Select `weather_data` from the **Data table** list and change **Mapping Column Mode** to **Map Automatically**. The `report` field from **Add Weather Report** has the same name as the column in the data table, so n8n maps them for you.
+5. Select `weather log 2` from the **Data table** list and change **Mapping Column Mode** to **Map Automatically**. The `report` field from **Add Weather Report** has the same name as the column in the data table, so n8n maps them for you.
 
-    ![Save Weather Report node with the data table selected and Map Automatically set](.gitbook/assets/build-your-first-workflow-optional-05-06.png)
+    ![Save Weather Report node with the data table selected and Map Automatically set](.gitbook/assets/build-your-first-workflow-optional-05-05.png)
+
+6. Rename the node to `Save weather log`.
 
 ### 6. Test and publish the workflow
 
@@ -272,11 +270,11 @@ Your workflow is complete. Test it, then publish it so it runs every day at 8 AM
 
     ![Successful workflow run](.gitbook/assets/build-your-first-workflow-optional-06-01.png)
 
-2. Select **Publish** in the Canvas header and follow the prompts to publish the workflow.
+2. Navigate to **Personal** > **Data tables** to see the second added row.
 
-3. Navigate to **Personal** > **Data tables** to see the second added row:
+3. Select **Publish** in the Canvas header and follow the prompts to publish the workflow.
 
-    ![New row in the data table](.gitbook/assets/build-your-first-workflow-optional-06-03.png)
+    ![Publish the workflow](.gitbook/assets/build-your-first-workflow-optional-06-03.png)
 
 ## Next steps
 

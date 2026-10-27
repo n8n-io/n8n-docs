@@ -11,7 +11,7 @@ tags:
 
 # Promote changes
 
-Promote changes to send workflows from your instance to the environment it promotes changes to. You can promote selected workflows from one project, or every project on the instance.
+Promote sends workflows and their dependencies from your instance to the environment it promotes changes to. You can promote selected workflows from one project, or every project on the instance.
 
 {% hint style="info" %}
 **Preview status**
@@ -27,13 +27,17 @@ A project promote sends the changes you select from one team project.
 
 1. Open a team project. Next to the project name, a badge with an up arrow shows the number of changes to promote.
 2. Select the badge. The **Changes to promote** page opens.
-3. Select the workflows to promote. n8n includes their dependencies, such as credentials, variables, data tables, and tags. Sub-workflows from other projects are only referenced, not included, so they must already exist on the target instance. See [Cross-project dependencies](known-limitations.md#cross-project-dependencies). To promote a project without workflows, such as an empty project, select the project itself.
+3. Select the workflows to promote. n8n includes their dependencies, such as credentials, variables, data tables, and tags.
 4. Inspect the changes. Each resource shows what changed, such as **New**, **Modified**, **Renamed**, **Moved**, **Archived**, or **Deleted**. To compare a workflow visually, select **Show diff**. The diff viewer shows the canvas **Before** and **After**, where **Before** is the environment's branch and **After** is this instance.
 5. Select **Promote N changes**.
 6. Optional: enter a **Commit message**. If you leave it empty, n8n generates one.
 7. Select **Promote**.
 
 If you edit a workflow while the page is open, select **Refresh** before you promote so the page shows your latest changes.
+
+Sub-workflows from other projects are only referenced, not included, so they must already exist on the target instance. See [Cross-project dependencies](known-limitations.md#cross-project-dependencies). To promote a project without workflows, such as an empty project, select the project itself.
+
+n8n never writes credential secrets, data table rows, or executions to the repository. Credentials travel as their ID, name, type, and the fields that use expressions.
 
 Promoting a workflow marked **Deleted** removes it from the branch, and applying deletes it on the target instance. An archived workflow stays archived.
 

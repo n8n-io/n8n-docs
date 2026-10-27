@@ -41,6 +41,7 @@ The two versions store content in Git in different formats, and they aren't comp
 | Credentials | Stubs without values. | Must exist on the target, or you create them during Apply, with expression values pre-filled. |
 | Who can use it | Instance owners and admins. Project admins can push. | Instance owners and admins. |
 | Personal projects | Included. | Not included. |
+| Automation | Source control endpoints in the public API. | Separate promotion endpoints in the public API. Classic's endpoints don't work with Environments. |
 
 ## Classic features Environments don't support yet
 
@@ -49,6 +50,7 @@ Environments don't cover everything Environments (Classic) does yet. Check these
 - **Personal projects:** Classic includes them. Environments promote team projects only.
 - **Project admins:** in Classic, project admins can push. In Environments, only instance owners and instance admins can promote and apply.
 - **Auto publish:** Classic can publish workflows when you pull. Apply doesn't change whether a workflow is published.
+- **Instance color:** Classic lets you set a color for the instance. Environments don't have this setting.
 
 For everything Environments don't support yet, see [Known limitations](known-limitations.md).
 
@@ -70,7 +72,8 @@ Switching affects only this instance. You can upgrade again at any time.
 ## Things to check when you switch
 
 - **Protected instance** is one setting for both versions. Changing it in one version changes it in the other.
-- Switching only changes what the UI shows. The public API and CLI commands of the other version still work, so stop any CI pipelines that call them.
+- Switching only changes what the UI shows. The public API and CLI commands of the other version still work, so stop or switch any CI pipelines that call the Classic endpoints.
+- n8n doesn't accept the short SSH URL form `git@github.com:acme/n8n.git` that Classic accepts. Use the `ssh://` form. See [Generic Git](git-based-promotion/generic-git.md).
 
 ## Related resources
 

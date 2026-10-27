@@ -26,7 +26,7 @@ Environments are in Preview and may change in future releases. Try them on test 
 | Authentication | Access token |
 | Pick repositories and branches from a list | Yes |
 | Push each promote to a feature branch | Yes, with a merge request |
-| Promotion reviews | Yes: GitLab merge requests synced to n8n, with a visual diff of the changes on the **Reviews** page |
+| Promotion reviews | Yes: GitLab merge requests synced to n8n, with a visual diff of the changes in **Reviews** |
 
 ## Create an access token
 
@@ -34,7 +34,7 @@ n8n needs one GitLab token. Create either a classic access token or a fine-grain
 
 ### Classic access token
 
-Create a personal, group, or project access token with the `api` and `write_repository` scopes. n8n recommends a group access token.
+Create a personal, group, or project access token with the `api` and `write_repository` scopes. n8n recommends a group access token, because it isn't tied to a person who might leave.
 
 ### Fine-grained personal access token
 
@@ -42,7 +42,7 @@ Use a fine-grained personal access token if your GitLab version supports them.
 
 1. In GitLab, go to **User settings** > **Personal access tokens** and generate a fine-grained token.
 2. Under **Group and project access**, select **Only specific groups or projects that I'm a member of**, and add the repository's project or its group.
-3. Under **Add resource permissions**, add every resource in the table below, and select its permissions. The token needs all of them. In the resource selector, each resource sits on a **Resource access** tab and in a category.
+3. Under **Add resource permissions**, add every resource in the following table, and select its permissions. The token needs all of them. In the resource selector, each resource sits on a **Resource access** tab and in a category.
 4. Select **Generate token**, and copy the token.
 
 | Resource access tab | Category | Resource | Permissions | n8n uses it to |

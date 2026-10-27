@@ -76,7 +76,7 @@ n8n names feature branches `n8n-promotion/<timestamp>`. You can't choose the nam
 
 ## Promotion review status
 
-n8n updates the status of promotion reviews from the Git host when you open the **Reviews** inbox. Changes on the Git host don't appear in n8n until then.
+n8n updates the status of promotion reviews from the Git host when you open **Reviews**. Changes on the Git host don't appear in n8n until then.
 
 ## GitLab approval rules
 

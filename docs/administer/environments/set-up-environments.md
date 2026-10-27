@@ -30,10 +30,12 @@ Environments are in Preview and may change in future releases. Try them on test 
 On self-hosted n8n:
 
 - Enable the `promotions` module with `N8N_ENABLED_MODULES=promotions`. TODO(OPEN-1): confirm the module and the `N8N_ENV_FEAT_PROMOTIONS` flag are still needed for the release.
-- Install `git` on the server that runs n8n.
+- The official Docker image includes `git`. On other installs, install `git` on the server that runs n8n.
 - Environments run on main instances only, not on workers.
 
 ## Add an environment
+
+Set up the source instance first. Add the environment it promotes changes to, and promote once. An environment only has something to apply after a promote, so the target instance's apply environment needs that first promote. An empty repository works for the first connect and for direct promotes. For feature-branch promotes, the environment's branch must already exist on the Git host.
 
 If the instance is connected to Environments (Classic), upgrade it first: go to **Settings** > **Environments (Classic)**, select **Upgrade**, then confirm. See [Upgrade from Environments (Classic)](upgrade-from-environments-classic.md).
 
@@ -46,7 +48,7 @@ If the instance is connected to Environments (Classic), upgrade it first: go to 
 7. Promote environments only: to push each promote to a feature branch instead of the branch itself, turn on **Push to a new branch** (Generic Git) or **Open a merge request in GitLab** (GitLab).
 8. Select **Add environment**.
 
-n8n saves the environment and connects to the repository. The environment then shows **Connected**. If it shows **Not connected**, fix the cause and select **Retry**. If it shows **Out of date**, select **Reconnect**. If that fails, see [Git-based promotion](git-based-promotion/README.md#troubleshooting).
+n8n saves the environment and connects to the repository. The environment then shows **Connected**. If it shows **Not connected**, fix the cause and select **Retry**. If it shows **Out of date**, the repository or branch changed since n8n connected, so select **Reconnect**. If that fails, see [Git-based promotion](git-based-promotion/README.md#troubleshooting).
 
 When you add the second environment on an instance with the same provider type, n8n reuses the first environment's provider, so you don't enter the authentication details again.
 
@@ -64,7 +66,7 @@ Removing an environment doesn't change the Git repository. If no other environme
 
 On instances that only apply changes, such as production, turn on **Protected instance** in **Settings** > **Environments**.
 
-**Protected instance** stops people from editing workflows and creating resources in the UI, such as workflows, credentials, projects, folders, variables, and data tables. This prevents accidental manual changes. People can still edit existing credentials, variable values, and data table rows, and create missing credentials and variables while they resolve Apply blockers. The setting applies to the UI only: the public API still allows most changes.
+**Protected instance** stops people from editing workflows and creating resources in the UI, such as workflows, credentials, projects, folders, variables, and data tables. This prevents accidental manual changes. People can still edit existing credentials, variable values, and data table rows, and create missing credentials and variables while they resolve Apply blockers. People can also still publish and unpublish workflows. The setting applies to the UI only: the public API still allows most changes.
 
 Environments (Classic) uses the same setting. Turning it on or off changes it for both.
 

@@ -83,7 +83,7 @@ A provider holds the details n8n uses to connect and authenticate to a Git host,
 
 ## Environments and Environments (Classic)
 
-Environments replace [Environments (Classic)](../use-source-control-and-environments/README.md), the earlier source control feature. An instance uses one or the other. See [Switch from Environments (Classic)](switch-from-environments-classic.md).
+Environments replace [Environments (Classic)](../use-source-control-and-environments/README.md), the earlier source control feature. An instance uses one or the other. See [Upgrade from Environments (Classic)](upgrade-from-environments-classic.md).
 
 ## In this section
 
@@ -94,7 +94,7 @@ Environments replace [Environments (Classic)](../use-source-control-and-environm
 - [Promotion reviews](promotion-reviews.md): approve promoted changes before they reach the environment's branch.
 - [Git-based promotion](git-based-promotion/README.md): how environments use Git, and the supported Git providers.
 - [Known limitations](known-limitations.md): what Environments don't support yet, and workarounds.
-- [Switch from Environments (Classic)](switch-from-environments-classic.md): compare the two versions and switch an instance.
+- [Upgrade from Environments (Classic)](upgrade-from-environments-classic.md): compare the two versions, upgrade an instance, and switch back.
 
 ## Related resources
 

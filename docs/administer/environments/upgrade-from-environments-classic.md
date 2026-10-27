@@ -1,5 +1,5 @@
 ---
-description: Compare Environments with Environments (Classic), and switch an n8n instance between the two versions.
+description: Compare Environments with Environments (Classic), upgrade an n8n instance, and switch back if needed.
 status: preview
 layout:
   description:
@@ -9,7 +9,7 @@ tags:
     primary: true
 ---
 
-# Switch from Environments (Classic)
+# Upgrade from Environments (Classic)
 
 Environments improve on and replace [Environments (Classic)](../use-source-control-and-environments/README.md), the earlier source control feature. Each instance uses one version at a time, and you can switch an instance between them while Environments are in Preview.
 
@@ -41,6 +41,16 @@ The two versions store content in Git in different formats, and they aren't comp
 | Credentials | Stubs without values. | Must exist on the target, or you create them during Apply, with expression values pre-filled. |
 | Who can use it | Instance owners and admins. Project admins can push. | Instance owners and admins. |
 | Personal projects | Included. | Not included. |
+
+## Classic features Environments don't support yet
+
+Environments don't cover everything Environments (Classic) does yet. Check these before you upgrade:
+
+- **Personal projects:** Classic includes them. Environments promote team projects only.
+- **Project admins:** in Classic, project admins can push. In Environments, only instance owners and instance admins can promote and apply.
+- **Auto publish:** Classic can publish workflows when you pull. Apply doesn't change whether a workflow is published.
+
+For everything Environments don't support yet, see [Known limitations](known-limitations.md).
 
 ## Upgrade an instance
 

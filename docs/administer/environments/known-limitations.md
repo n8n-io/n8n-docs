@@ -93,4 +93,4 @@ n8n opens and approves merge requests with the same GitLab token. GitLab approva
 - [Apply changes](apply-changes.md)
 - [Promotion reviews](promotion-reviews.md)
 - [Git-based promotion](git-based-promotion/README.md)
-- [Switch from Environments (Classic)](switch-from-environments-classic.md)
+- [Upgrade from Environments (Classic)](upgrade-from-environments-classic.md)

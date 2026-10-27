@@ -35,7 +35,7 @@
     * [Generic Git](environments/git-based-promotion/generic-git.md)
     * [GitLab](environments/git-based-promotion/gitlab.md)
   * [Known limitations](environments/known-limitations.md)
-  * [Switch from Environments (Classic)](environments/switch-from-environments-classic.md)
+  * [Upgrade from Environments (Classic)](environments/upgrade-from-environments-classic.md)
 * [Environments (Classic)](use-source-control-and-environments/README.md)
   * [Understand source control](use-source-control-and-environments/understand-source-control.md)
   * [Work with environments](use-source-control-and-environments/work-with-environments.md)

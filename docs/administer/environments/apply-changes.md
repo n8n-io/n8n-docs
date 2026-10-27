@@ -103,4 +103,4 @@ If a project apply fails, n8n shows **Couldn't apply the changes** and one of th
 - [Promotion reviews](promotion-reviews.md)
 - [Git-based promotion](git-based-promotion/README.md)
 - [Known limitations](known-limitations.md)
-- [Switch from Environments (Classic)](switch-from-environments-classic.md)
+- [Upgrade from Environments (Classic)](upgrade-from-environments-classic.md)

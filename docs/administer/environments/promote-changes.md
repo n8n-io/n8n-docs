@@ -79,4 +79,4 @@ An instance promote fails if a workflow references a workflow outside the team p
 - [Promotion reviews](promotion-reviews.md)
 - [Git-based promotion](git-based-promotion/README.md)
 - [Known limitations](known-limitations.md)
-- [Switch from Environments (Classic)](switch-from-environments-classic.md)
+- [Upgrade from Environments (Classic)](upgrade-from-environments-classic.md)

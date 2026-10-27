@@ -85,4 +85,4 @@ Turn on **Protected instance** on instances that only apply changes, such as pro
 - [Promotion reviews](promotion-reviews.md)
 - [Git-based promotion](git-based-promotion/README.md)
 - [Known limitations](known-limitations.md)
-- [Switch from Environments (Classic)](switch-from-environments-classic.md)
+- [Upgrade from Environments (Classic)](upgrade-from-environments-classic.md)

@@ -35,7 +35,7 @@ On self-hosted n8n:
 
 ## Add an environment
 
-If the instance is connected to Environments (Classic), upgrade it first: go to **Settings** > **Environments (Classic)**, select **Upgrade**, then confirm. See [Switch from Environments (Classic)](switch-from-environments-classic.md).
+If the instance is connected to Environments (Classic), upgrade it first: go to **Settings** > **Environments (Classic)**, select **Upgrade**, then confirm. See [Upgrade from Environments (Classic)](upgrade-from-environments-classic.md).
 
 1. Go to **Settings** > **Environments**.
 2. Under **Promote changes to** or **Apply changes from**, select **Add environment**.
@@ -77,4 +77,4 @@ Environments (Classic) uses the same setting. Turning it on or off changes it fo
 - [Promotion reviews](promotion-reviews.md)
 - [Git-based promotion](git-based-promotion/README.md)
 - [Known limitations](known-limitations.md)
-- [Switch from Environments (Classic)](switch-from-environments-classic.md)
+- [Upgrade from Environments (Classic)](upgrade-from-environments-classic.md)

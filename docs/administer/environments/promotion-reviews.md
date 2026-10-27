@@ -80,6 +80,6 @@ Because the same GitLab user opens and approves the merge request, GitLab approv
 - [Apply changes](apply-changes.md)
 - [Git-based promotion](git-based-promotion/README.md)
 - [Known limitations](known-limitations.md)
-- [Switch from Environments (Classic)](switch-from-environments-classic.md)
+- [Upgrade from Environments (Classic)](upgrade-from-environments-classic.md)
 - [GitLab](git-based-promotion/gitlab.md)
 - [Workflow reviews](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/workflow-reviews)

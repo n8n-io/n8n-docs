@@ -76,4 +76,4 @@ Check:
 - [Apply changes](../apply-changes.md)
 - [Promotion reviews](../promotion-reviews.md)
 - [Known limitations](../known-limitations.md)
-- [Switch from Environments (Classic)](../switch-from-environments-classic.md)
+- [Upgrade from Environments (Classic)](../upgrade-from-environments-classic.md)

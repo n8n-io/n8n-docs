@@ -59,9 +59,11 @@ Each event subscribes to a Microsoft Graph resource and needs one of the delegat
 
 Listing teams in the node needs `Team.ReadBasic.All`, and listing channels needs `Channel.ReadBasic.All`. `ChannelMessage.Read.All` and `TeamMember.Read.All` need admin consent from a Microsoft Entra administrator. The `Team`, `Channel`, and `Chat` permissions don't.
 
-From n8n 2.45.0, the **Teams OAuth2** credential covers every event by default: `TeamMember.Read.All` is one of its [default scopes for Microsoft Teams](../credentials/microsoft.md#default-scopes-for-microsoft-teams). Its default `User.Read.All` and `Group.ReadWrite.All` scopes are higher-privileged alternatives that also cover the team list, the channel list, and the New Channel subscription. The credential needs no extra grant for those. Both scopes need admin consent.
+From n8n 2.45.0, the **Teams OAuth2** credential covers every event by default: `TeamMember.Read.All` is one of its [default scopes for Microsoft Teams](../credentials/microsoft.md#default-scopes-for-microsoft-teams).
 
-A credential connected before n8n 2.45.0 requests `TeamMember.Read.All` when you reconnect it. A Microsoft Entra administrator must consent to the scope first, or the sign-in fails. If the credential uses **Custom Scopes**, add the scope to **Enabled Scopes** if it isn't there, then reconnect. Before n8n 2.45.0, turn on **Custom Scopes** (available from n8n 2.6.0) in the credential, add the scope to **Enabled Scopes**, and reconnect.
+The credential's default `User.Read.All` and `Group.ReadWrite.All` scopes are higher-privileged alternatives that also cover the team list, the channel list, and the **New Channel** subscription. The credential needs no extra grant for those. `User.Read.All` and `Group.ReadWrite.All` need admin consent.
+
+A credential connected before n8n 2.45.0 requests `TeamMember.Read.All` when you reconnect it. A Microsoft Entra administrator must consent to the scope before you reconnect, or the sign-in fails. Refer to [New scopes need a new approval](../credentials/microsoft.md#new-scopes-need-a-new-approval) in the Microsoft credentials documentation for how an administrator approves it on n8n Cloud. If the credential uses **Custom Scopes**, add the scope to **Enabled Scopes** if it isn't there, then reconnect. Before n8n 2.45.0, turn on **Custom Scopes** (available from n8n 2.6.0) in the credential, add the scope to **Enabled Scopes**, and reconnect.
 
 With the **Microsoft OAuth2 (Graph)** credential, enter the scopes in the credential's **Scope** field. Include `openid offline_access` so the credential can refresh its tokens. For example, to use every event with the least privileged scopes:
 

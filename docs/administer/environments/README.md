@@ -32,7 +32,7 @@ Environments are in Preview and may change in future releases. Try them on test 
 
 ## Why use environments
 
-Separate environments let you change workflows without breaking the ones in use. A common setup:
+Separate environments let you change workflows without breaking the ones running in production. A common setup:
 
 - **Development:** build and change workflows.
 - **Staging:** test changes before they go live.
@@ -48,9 +48,9 @@ The development instance promotes changes to the Production environment. If that
 
 ### Environment
 
-An environment is a stage your workflows go through, such as development, staging, or production. Each stage usually has its own n8n instance, with its own configuration, credentials, and data, so you can change and test workflows without affecting the ones in use.
+An environment is a stage your workflows go through, such as development, staging, or production. Each stage usually has its own n8n instance, with its own configuration, credentials, and data, so you can change and test workflows without affecting production.
 
-On each instance, you set up environments by direction: the environment the instance promotes changes to, and the environment it applies changes from, which is its source of truth. Each instance has at most one environment per direction. With Git-based promotion, an environment is a repository and branch that holds the version of your work for that stage, plus settings such as whether each promote pushes a feature branch or opens a merge request.
+On each instance, you set up environments by promotion direction: the environment the instance promotes changes to, and the environment it applies changes from, which is its source of truth. Each instance has at most one environment per direction. With Git-based promotion, an environment is a repository and branch that holds the version of your work for that stage, plus settings such as whether each promote commits directly to the environment's branch, pushes a feature branch, or opens a merge request.
 
 ### Promote and apply
 
@@ -63,13 +63,13 @@ A project promote or project apply covers one team project, and you choose the c
 
 ### What you promote
 
-Workflows are the main unit of promotion. When you select workflows, n8n adds what they use: credentials, variables, data tables, and tags.
+Workflows are the main unit of promotion. When you select workflows, n8n includes their dependencies: credentials, variables, data tables, and tags.
 
 Promote and apply use [n8n packages](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages) to export and import content. To learn what Apply changes on an instance, see [Apply changes](apply-changes.md#what-apply-changes-on-the-instance).
 
 ### Promotion review
 
-A promotion review is an optional approval step. Promoted changes reach the environment only after someone approves them. You turn on promotion reviews in the settings of the environment an instance promotes changes to, and you approve them on that same instance. Promotion reviews depend on the provider. See [Promotion reviews](promotion-reviews.md).
+A promotion review is an optional approval step in a promote. Promoted changes reach the environment only after someone approves them. You turn on promotion reviews in the settings of the environment an instance promotes changes to, and you approve them on that same instance. Support for promotion reviews depends on the provider. See [Promotion reviews](promotion-reviews.md).
 
 ### Promotion model
 
@@ -77,7 +77,7 @@ A promotion model is how changes travel between environments. n8n currently supp
 
 ### Provider
 
-A provider holds the details n8n uses to connect and authenticate to a Git host, such as an access token or an SSH key. Several environments can use the same provider. The Git provider type you choose decides which extra features you get, such as listing repositories and branches, or promotion reviews with GitLab merge requests.
+A provider holds the details n8n uses to connect and authenticate to a Git host, such as an access token or an SSH key. Several environments can use the same provider. The Git provider type you choose decides which extra features you get, such as listing the repositories and branches the provider can access, or promotion reviews with GitLab merge requests.
 
 ## Environments and Environments (Classic)
 

@@ -52,7 +52,7 @@ Use a fine-grained personal access token if your GitLab version supports them.
 | **Group and project** | **Repository** | **Branch** | Create, Read, Delete | List branches, push feature branches, and delete them after a merge |
 | **Group and project** | **Repository** | **Code** | Download, Push | Read from and push to the repository |
 | **Group and project** | **Repository** | **Merge Request** | Create, Read, Approve, Merge | Open, approve, and merge promotion reviews |
-| **Group and project** | **Project Planning** | **Work Item** | Create | Add the approval note to the merge request |
+| **Group and project** | **Project Planning** | **Work Item** | Create, Read | Add the approval note to the merge request, and read its comments |
 
 ## Set up the GitLab provider
 

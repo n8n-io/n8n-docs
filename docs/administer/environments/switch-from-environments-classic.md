@@ -11,7 +11,7 @@ tags:
 
 # Switch from Environments (Classic)
 
-Environments replace [Environments (Classic)](../use-source-control-and-environments/README.md), the earlier source control feature. Each instance uses one version at a time. You can switch an instance between them while Environments are in Preview.
+Environments improve on and replace [Environments (Classic)](../use-source-control-and-environments/README.md), the earlier source control feature. Each instance uses one version at a time, and you can switch an instance between them while Environments are in Preview.
 
 {% hint style="info" %}
 **Preview status**
@@ -21,26 +21,26 @@ Environments are in Preview and may change in future releases. Try them on test 
 
 ## Which version an instance uses
 
-- New instances with Environments available start on Environments.
-- Instances already connected to Environments (Classic) stay on it until you switch.
+- New instances with Environments available start on the new version.
+- Instances already connected to Environments (Classic) stay on it until you upgrade them in **Settings** > **Environments (Classic)**.
+
+## Start fresh with Environments
+
+The two versions store content in Git in different formats, and they aren't compatible. Nothing migrates from Environments (Classic), and you can't apply a Classic repository with Environments. Set up environments from scratch, with a new repository or branch.
 
 ## Compare the versions
 
 | | Environments (Classic) | Environments |
 |---|---|---|
-| Model | The instance pushes to and pulls from one branch. | The instance promotes to one environment and applies from another. Each can use a different repository and branch. |
-| Git hosts | Any Git host over SSH or HTTPS. | Any Git host through Generic Git and GitLab with repository lists and merge requests. |
-| Reviews | On the Git host. | Promotion reviews in n8n, with GitLab. |
-| Selecting changes | You choose what to push. Pull brings in everything. | You choose changes in both directions with a project promote or project apply, or use an instance promote or instance apply. |
-| Dependencies | You select them. | n8n adds what the selected workflows use. |
+| Model | The instance pushes to and pulls from one branch. | The instance promotes to one environment and applies from another. Each can use its own repository and branch. |
+| Git hosts | Any Git host over SSH or HTTPS. | Any Git host through Generic Git, as in Classic. GitLab adds repository and branch lists, and promotion reviews. |
+| Reviews | Manually on the Git host. | Promotion reviews in n8n with a visual diff, based on merge requests that n8n opens on GitLab. |
+| Selecting changes | You choose what to push. Pull brings in everything. | You choose changes in both directions with a project promote or project apply, or move everything with an instance promote or instance apply. |
+| Dependencies | You select workflows and data tables. n8n adds tags, and credential and variable stubs. | n8n includes what the selected workflows use. |
 | Before changes land | Pull can overwrite local changes after you confirm. | Apply checks for blockers first and asks you to confirm destructive changes. |
-| Credentials | Stubs. | References to credentials that must exist on the target, or that you create during Apply. |
+| Credentials | Stubs without values. | Must exist on the target, or you create them during Apply, with expression values pre-filled. |
 | Who can use it | Instance owners and admins. Project admins can push. | Instance owners and admins. |
 | Personal projects | Included. | Not included. |
-
-## What doesn't carry over
-
-Nothing migrates from Environments (Classic). The two versions store content in different formats, so set up environments from scratch. Use a new repository or branch for Environments.
 
 ## Upgrade an instance
 

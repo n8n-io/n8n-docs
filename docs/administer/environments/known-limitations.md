@@ -21,9 +21,9 @@ Environments are in Preview and may change in future releases. Try them on test 
 
 ## Cross-project dependencies
 
-A project promote includes what its workflows use, but not sub-workflows from other projects. It only references them, so they must already exist on the target instance. This affects setups like a shared utility project whose sub-workflows many other projects call.
+Workflows can depend on another project, for example when they call sub-workflows from a shared utility project, or use its credentials or data tables. A project promote only references sub-workflows from other projects, so they must already exist on the target instance. A project apply also needs credentials from other projects to exist on the target instance.
 
-**Workaround:** promote and apply the shared project first, or use an instance promote and instance apply, which include every team project and the dependencies between them. An instance promote fails if a workflow references a workflow in a personal project. Move that workflow into a team project first.
+**Workaround:** promote and apply the project that owns the shared resources first, or use an instance promote and instance apply, which include every team project and the dependencies between them. An instance promote fails if a workflow references a workflow in a personal project. Move that workflow into a team project first.
 
 ## Moving workflows and folders between projects
 
@@ -31,7 +31,7 @@ A project promote or project apply can't move workflows or folders from one proj
 
 **Workaround:** use an instance promote and instance apply. They move workflows and folders to the project that the branch holds them in, and keep their ID, version history, and executions.
 
-## Environments for individual projects
+## Project-specific environments
 
 Environments currently cover the whole instance. Environments for individual projects are planned.
 
@@ -63,13 +63,17 @@ Promote doesn't include a workflow's description.
 
 ## Updating an open promotion review
 
-You can't add changes to a promotion review after n8n opens it.
+You can't push changes to an open promotion review or its branch. For example, if a reviewer requests changes on GitLab, the review can't pick them up. Pushing changes to an open promotion review is planned.
 
-**Workaround:** approve or close the review, then promote again to open a new one.
+**Workaround:** close the merge request on GitLab, then promote again to open a new review. n8n can't close a review itself yet.
+
+## Feature branch names
+
+n8n names feature branches `n8n-promotion/<timestamp>`. You can't choose the name yet. Custom branch names are planned.
 
 ## Promotion review status
 
-n8n updates the status of promotion reviews from the Git host when you open **Reviews**. Changes on the Git host don't appear in n8n until then.
+n8n updates the status of promotion reviews from the Git host when you open the **Reviews** inbox. Changes on the Git host don't appear in n8n until then.
 
 ## GitLab approval rules
 

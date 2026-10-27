@@ -11,7 +11,7 @@ tags:
 
 # Environments
 
-Environments let you move your work, such as workflows and the credentials, variables, and data tables they use, through stages like development, staging, and production. You build and test changes in one environment, then promote them to the next.
+Environments let you move workflows and other n8n resources, such as credentials, variables, and data tables, through stages like development, staging, and production. You build and test changes in one environment, then promote them to the next.
 
 {% hint style="info" %}
 **Feature availability**
@@ -38,24 +38,19 @@ Separate environments let you change workflows without breaking the ones in use.
 - **Staging:** test changes before they go live.
 - **Production:** run the live workflows.
 
-Each environment usually runs on its own n8n instance.
-
 ## How environments work
 
 ![Changes move from a development instance through an optional review to the Production environment, then to production](../.gitbook/assets/environments-how-it-works.png)
 
-The development instance promotes changes to the Production environment. If that environment requires a promotion review, someone approves the promoted changes on the development instance first, for example through a GitLab merge request. The production instance then applies the changes from the same environment. With Git-based promotion, the Production environment is a Git branch, and promoting commits to it.
+The development instance promotes changes to the Production environment. If that environment requires a promotion review, someone approves the promoted changes on the development instance first, for example in a promotion review based on a GitLab merge request. The production instance then applies the changes from the same environment. With Git-based promotion, the Production environment is a Git branch, and promoting commits to it.
 
 ## Concepts
 
 ### Environment
 
-An environment is a stage in your process, such as staging or production. It stands for the instance at that stage, and holds the version of your work that the instance should run. On each instance, you define environments by direction:
+An environment is a stage your workflows go through, such as development, staging, or production. Each stage usually has its own n8n instance, with its own configuration, credentials, and data, so you can change and test workflows without affecting the ones in use.
 
-- The environment the instance promotes changes to.
-- The environment the instance applies changes from, its source of truth.
-
-Each instance has at most one environment per direction. With Git-based promotion, an environment is a repository and branch, plus settings such as whether each promote pushes a feature branch or opens a merge request.
+On each instance, you set up environments by direction: the environment the instance promotes changes to, and the environment it applies changes from, which is its source of truth. Each instance has at most one environment per direction. With Git-based promotion, an environment is a repository and branch that holds the version of your work for that stage, plus settings such as whether each promote pushes a feature branch or opens a merge request.
 
 ### Promote and apply
 

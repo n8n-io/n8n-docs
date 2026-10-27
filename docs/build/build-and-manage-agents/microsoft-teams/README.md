@@ -35,8 +35,8 @@ The Microsoft Teams channel lets people chat with an n8n agent in Teams direct m
 
 The Microsoft Teams channel is available on:
 
-* **n8n Cloud:** All plans
-* **Self-hosted:** All plans from n8n 2.32.3
+* **n8n Cloud:** All plans from n8n 2.46.0
+* **Self-hosted:** All plans from n8n 2.46.0
 {% endhint %}
 
 {% hint style="info" %}

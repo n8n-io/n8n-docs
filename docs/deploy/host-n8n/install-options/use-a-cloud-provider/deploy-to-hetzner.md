@@ -182,7 +182,7 @@ sudo docker compose stop
 
 n8n Assistant needs a sandbox to run code in. You can add the same sandbox stack used in the [Docker Compose guide](../install-using-docker-compose.md) to this setup. A few things are worth knowing before you start:
 
-* This sandbox is suitable for local development and testing. The stack below uses n8n's own bundled sandbox (`n8n-sandbox`). Since a DigitalOcean droplet with a public domain is often a real deployment, consider Daytona instead if this is going to production.
+* This sandbox is for development and testing only. The stack below uses n8n's own bundled sandbox (`n8n-sandbox`), whose runner runs with `privileged: true` and gives weak isolation. Since a Hetzner server with a public domain is often a real deployment, don't use this stack for production. Run nothing else on the server, and see [Set up n8n Assistant](../../configure-n8n/set-up-n8n-assistant.md) for production options.
 * **Resize if needed.** The sandbox runner uses Docker-in-Docker, which needs more headroom than n8n alone. Make sure you provision at least 4 GB RAM / 2 vCPU.
 * **No networking changes required.** Caddy only ever proxies n8n itself; the sandbox services stay internal to the Compose network and don't need DNS, firewall, or Caddyfile changes.
 

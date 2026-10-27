@@ -131,7 +131,7 @@ A Databricks account admin needs to complete these steps:
 3. On the **App connections** tab, select **Add connection**.
 4. Enter a name for the connection, for example `n8n`.
 5. Add the **OAuth Redirect URL** you copied from n8n as a redirect URL.
-6. Select the access scopes the connection needs. The **Databricks** node and the **Databricks Chat Model** node need **All APIs**. If the connection serves only the [Genie One MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md), select `ai-gateway` instead: the connection then can't reach other Databricks APIs, and users consent to a narrower grant. Databricks automatically allows the `offline_access` scope that n8n needs to stay connected. **All APIs** doesn't cover the `ai-gateway` scope, so a connection that serves the tile and the other nodes needs both. Refer to [Add the `ai-gateway` scope](#add-the-ai-gateway-scope-for-the-genie-one-mcp-server).
+6. Select the access scopes the connection needs. The **Databricks** node and the **Databricks Chat Model** node need **All APIs**. If the connection serves only the [Genie One MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md), select `ai-gateway` instead: the connection then can't reach other Databricks APIs, and users consent to a narrower grant. Databricks automatically allows the `offline_access` scope that n8n needs to stay connected. The **All APIs** option doesn't cover the `ai-gateway` scope, so a connection that serves the tile and the other nodes needs both. Refer to [Add the `ai-gateway` scope](#add-the-ai-gateway-scope-for-the-genie-one-mcp-server).
 7. Enable client secret generation. n8n is a confidential client, so it needs a secret.
 8. Save the connection, then copy the **Client ID** and **Client Secret**. Databricks shows the secret only once.
 
@@ -141,7 +141,7 @@ Refer to [Enable or disable partner OAuth applications](https://docs.databricks.
 
 ### Add the ai-gateway scope for the Genie One MCP server
 
-The [Databricks Genie One MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md) tile calls Genie One through the AI Gateway endpoint of the workspace and requests the `ai-gateway` and `offline_access` scopes. **All APIs** doesn't cover `ai-gateway`: in n8n's testing, an app connection with **All APIs** returned a token without the `ai-gateway` scope until the admin added that scope to the connection. Depending on the Databricks account, users see one of two errors. Either **Connect my account** on the tile fails with:
+The [Databricks Genie One MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md) tile calls Genie One through the AI Gateway endpoint of the workspace and requests the `ai-gateway` and `offline_access` scopes. The **All APIs** option doesn't cover `ai-gateway`: in n8n's testing, an app connection with **All APIs** returned a token without the `ai-gateway` scope until the admin added that scope to the connection. Depending on the Databricks account, users see one of two errors. Either **Connect my account** on the tile fails with:
 
 ```text
 access_denied: Scopes 'ai-gateway' are not assigned to the client <client-id>
@@ -167,9 +167,9 @@ The Databricks consent screen shows the scopes assigned to the app connection, n
 If the app connection serves only the Genie One MCP server, set the scopes to `["ai-gateway", "offline_access"]` instead. Users then see and consent to a narrower grant. The client also can't reach other Databricks APIs.
 
 {% hint style="info" %}
-**App connections created before October 31, 2026**
+**App connections created before October 30, 2026**
 
-Before Databricks moved Genie One to its AI Gateway endpoint, the tile requested the `genie` scope. An app connection set up for that version still works for the Databricks node and the Databricks Chat Model node, but the tile needs `ai-gateway` added. After the admin adds the scope, each user reconnects their Genie One credential so n8n receives a token with the new scope. Once every user has reconnected, remove `genie` from the connection unless another integration still uses the beta endpoint before Databricks retires it on October 31, 2026.
+Before the tile moved to the AI Gateway endpoint on October 30, 2026, it requested the `genie` scope. An app connection set up for that version still works for the Databricks node and the Databricks Chat Model node, but the tile needs `ai-gateway` added. After the admin adds the scope, each user reconnects their Genie One credential so n8n receives a token with the new scope. Once every user has reconnected, remove `genie` from the connection, unless another integration still calls the beta endpoint, which Databricks retires on October 31, 2026.
 {% endhint %}
 
 ### Configure token lifetimes

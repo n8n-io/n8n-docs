@@ -1,0 +1,41 @@
+docs/administer/environments/set-up-environments.md
+  s_8ec7bfed268277::t_ec39251d25bc54 65-67,77
+docs/administer/environments/promote-changes.md
+  s_8ec7bfed268277::t_ec39251d25bc54 28,67,69,71
+  s_8ec7bfed268277::t_764800098611a3 29,55,57,61
+  ai_agent 36
+docs/administer/environments/git-based-promotion/README.md
+  ai_agent 77
+docs/administer/environments/git-based-promotion/gitlab.md
+  ai_agent 42,74
+docs/administer/environments/apply-changes.md
+  ai_agent 92
+docs/administer/SUMMARY.md
+  ai_agent 33
+docs/administer/environments/known-limitations.md
+  s_8ec7bfed268277::t_ec39251d25bc54 44,46,98
+docs/administer/environments/switch-from-environments-classic.md
+  ai_agent 72
+docs/administer/environments/README.md
+  ai_agent 77,97
+docs/administer/environments/promotion-reviews.md
+  s_8ec7bfed268277::t_d9763090712b6c 12
+docs/administer/environments/plan-your-environments.md
+  s_8ec7bfed268277::t_ec39251d25bc54 62,67,75
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "6fdb6d96f3497a19e26f84f0ceabc5d292cd7d8a",
+  "prompts": {},
+  "sessions": {
+    "s_8ec7bfed268277": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b9ff11b4-095e-4619-830d-c574ab65583e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jan K. <jan.kalkan@n8n.io>"
+    }
+  }
+}

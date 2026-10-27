@@ -51,7 +51,7 @@ n8n recommends that owners create a second account with the **Member** role for 
 
 
 | Permission | Owner | Admin | Member | Chat user |
-| ---------- |------ | ----- | ------ | ---------
+| ---------- |------ | ----- | ------ | --------- |
 | Manage own email and password | ✅ | ✅ | ✅ | ✅ |
 | Manage own workflows | ✅ | ✅ | ✅ | ❌ |
 | View, create, and use tags | ✅ | ✅ | ✅ | ❌ |

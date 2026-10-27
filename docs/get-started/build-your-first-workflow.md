@@ -136,7 +136,7 @@ You'll end up with a second workflow built from the same four nodes: **Every day
 
     ![Personal in the left menu and the create workflow button](.gitbook/assets/build-your-first-workflow-optional-01-01.png)
 
-2. Select the workflow’s name and change it to `Weather Log 2` (or something equally creative). Select anywhere on the canvas to save the name.
+2. Select the workflow’s name and change it to `Weather Log 2` (or something more creative). Select anywhere on the canvas to save the name.
 
 ### 2. Run it at 8 AM every day
 
@@ -234,7 +234,7 @@ Next, you’ll turn the weather data into a short report that anyone can read at
 
 You’ll use: **Data table**
 
-You’ve fetched the data and formatted it, so now it’s time to store it. We'll create a data table in the process.
+You’ve fetched the data and formatted it, so now it’s time to store it. You'll create a data table in the process.
 
 1. Add a **Data table** node after **Add Weather Report** and select **Insert row** as the action.
 
@@ -250,7 +250,7 @@ A new browser tab will open.
 
     ![Name the new data table](.gitbook/assets/build-your-first-workflow-optional-05-03.png)
 
-4. Click on **Add Column** on the top right and enter `report` before clicking **Add Column**. This will be the column the data from our `Add weather report` node gets saved to.
+4. Click on **Add Column** on the top right and enter `report` before clicking **Add Column**. This will be the column the data from the `Add weather report` node gets saved to.
 
     ![Add a column to the new data table](.gitbook/assets/build-your-first-workflow-optional-05-04.png)
 

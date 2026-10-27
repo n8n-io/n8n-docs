@@ -73,6 +73,4 @@ Refer to the [Hugging Face credentials documentation](../../credentials/huggingf
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [LangChains's Hugging Face Inference Model documentation](https://js.langchain.com/docs/integrations/llms/huggingface_inference/) for more information about the service.
-
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}

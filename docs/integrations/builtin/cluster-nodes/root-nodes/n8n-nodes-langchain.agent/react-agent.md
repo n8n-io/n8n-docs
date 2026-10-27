@@ -96,7 +96,7 @@ Add text to append after the tools list at the start of the conversation when th
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to LangChain's [ReAct Agents](https://js.langchain.com/docs/concepts/agents/) documentation for more information.
+Refer to LangChain's [ReAct Agents](https://docs.langchain.com/oss/javascript/langchain/agents) documentation for more information.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 

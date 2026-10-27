@@ -40,7 +40,7 @@ The Tools Agent uses external tools[^1] and APIs to perform actions and retrieve
 
 This agent has an enhanced ability to work with tools and can ensure a standard output format.
 
-The Tools Agent implements [Langchain's tool calling](https://js.langchain.com/docs/concepts/tool_calling/) interface. This interface describes available tools and their schemas. The agent also has improved output parsing capabilities, as it passes the parser to the model as a formatting tool.
+The Tools Agent implements [LangChain's tool calling](https://docs.langchain.com/oss/javascript/langchain/tools) interface. This interface describes available tools and their schemas. The agent also has improved output parsing capabilities, as it passes the parser to the model as a formatting tool.
 
 Refer to [AI Agent](./README.md) for more information on the AI Agent node itself.
 

@@ -77,14 +77,14 @@ You can buy extra credits manually or set up auto top-up so n8n buys them for yo
 
 Each Cloud instance has one Assistant credit balance, shared by everyone who uses n8n Assistant on that instance. Included and extra credits both come from this shared balance.
 
-You can see the balance in the editor, in the credits menu of the n8n Assistant panel, and on the **Assistant credits** tab in the [Cloud admin dashboard](../use-the-admin-dashboard.md). The dashboard also shows your spend over time and which users use the most credits. Refer to [Track Assistant credit spend](track-assistant-credit-spend.md) for details.
+You can see the balance in the editor, in the credits menu of the n8n Assistant panel, and on the **Assistant credits** page in the [n8n Cloud console](../use-the-cloud-console.md). That page also shows your spend over time and which users use the most credits. Refer to [Track Assistant credit spend](track-assistant-credit-spend.md) for details.
 
 ## When your Assistant credits run out
 
 When your included credits and your extra credits are both used up, n8n Assistant pauses for everyone on the instance:
 
 - In the editor, n8n Assistant shows **You've run out of AI credits**, and you can't send new messages.
-- On the **Assistant credits** tab in the Cloud admin dashboard, a banner shows **The Assistant is paused for your workspace**.
+- On the **Assistant credits** page in the Cloud console, a banner shows **The Assistant is paused for your instance**.
 
 If your credits run out in the middle of a message, n8n lets that message finish rather than stopping it partway through. Your usage can go slightly past your balance as a result.
 
@@ -116,7 +116,7 @@ Assistant credits and Gateway credits are separate balances that pay for differe
 | What they don't pay for | AI model calls that your workflows or agents make when they run | n8n Assistant |
 | What your plan includes | A monthly allowance that resets on the first day of every month | A small one-time amount of free credit at sign-up |
 | Buying more | Extra credits, used only after your included credits run out | Top-ups that add to your balance |
-| Where you manage them | The **Assistant credits** tab in the Cloud admin dashboard | The **Gateway credits** tab in the Cloud admin dashboard |
+| Where you manage them | The **Assistant credits** page in the Cloud console | The **Gateway credits** page in the Cloud console |
 
 Topping up one doesn't add to the other. If n8n Assistant builds a workflow with a node that uses Gateway credits, running that node spends Gateway credits, not Assistant credits.
 
@@ -128,7 +128,7 @@ Self-hosted n8n doesn't use Assistant credits. On a self-hosted instance, n8n As
 
 - [Use n8n Cloud](../)
 - [Try free then choose a plan](../start-your-free-trial.md)
-- [Use the admin dashboard](../use-the-admin-dashboard.md)
+- [Use the Cloud console](../use-the-cloud-console.md)
 - [Update your version](../update-your-version.md)
 - [Configure Cloud](../configure-cloud/README.md)
 - [Gateway credits](../gateway-credits/README.md)

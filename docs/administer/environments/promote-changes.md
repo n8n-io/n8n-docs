@@ -27,7 +27,7 @@ A project promote sends the changes you select from one team project.
 
 1. Open a team project. If it has changes to promote, a badge with an up arrow and the number of changes appears next to the project name.
 2. Select the badge. The **Changes to promote** page opens.
-3. Select the workflows to promote. n8n includes their dependencies, such as credentials, variables, data tables, and tags. Sub-workflows from other projects are only referenced, not included.
+3. Select the workflows to promote. n8n includes their dependencies, such as credentials, variables, data tables, and tags. Sub-workflows from other projects are only referenced, not included. To promote a project without workflows, such as an empty project, select the project itself.
 4. Inspect the changes. Each resource shows what changed, such as **New**, **Modified**, **Renamed**, **Moved**, **Archived**, or **Deleted**. To compare a workflow visually, select **Show diff**. The diff viewer shows the canvas **Before** and **After**, where **Before** is the environment's branch and **After** is this instance.
 5. Select **Promote N changes**.
 6. Optional: enter a **Commit message**. If you leave it empty, n8n generates one.

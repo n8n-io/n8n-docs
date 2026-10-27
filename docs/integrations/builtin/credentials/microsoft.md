@@ -243,6 +243,9 @@ Microsoft Teams credentials use the following scopes by default:
 * `OnlineMeetings.ReadWrite` (available from n8n 2.39.0)
 * `TeamworkTag.Read` (available from n8n 2.41.0)
 * `TeamsActivity.Send` (available from n8n 2.42.0)
+* `TeamMember.Read.All` (available from n8n 2.45.0)
+
+`TeamMember.Read.All` needs admin consent. A credential connected before n8n 2.45.0 requests the scope when you reconnect it. A Microsoft Entra administrator must consent to the scope before you reconnect, or the sign-in fails, as described in [New scopes need a new approval](#new-scopes-need-a-new-approval). If the credential uses **Custom Scopes**, add the scope to **Enabled Scopes** if it isn't there, then reconnect.
 
 For the permission each Microsoft Teams Trigger event needs, refer to [Required scopes](../trigger-nodes/n8n-nodes-base.microsoftteamstrigger.md#required-scopes) in the Microsoft Teams Trigger documentation.
 

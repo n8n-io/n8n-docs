@@ -68,7 +68,7 @@ The easiest way to bring your work to a new target instance is an instance promo
 
 An instance apply overwrites the instance. It makes every team project match the environment's branch, and deletes team projects that aren't on it. Run it before people start working on the new instance.
 
-Alternatively, promote and apply projects one by one. Start with the projects that others depend on, such as a project with shared sub-workflows or credentials, so those exist on the target first. See [Cross-project dependencies](known-limitations.md#cross-project-dependencies).
+You can also promote and apply projects one by one. Start with the projects that others depend on, such as a project with shared sub-workflows or credentials, so those exist on the target first. See [Cross-project dependencies](known-limitations.md#cross-project-dependencies).
 
 Personal projects aren't promoted. Before you start, move the workflows and credentials that team projects use out of personal projects and into team projects.
 

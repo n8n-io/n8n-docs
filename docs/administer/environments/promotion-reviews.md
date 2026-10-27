@@ -30,7 +30,7 @@ Only instance owners and instance admins can see and approve promotion reviews.
 
 ## Supported providers
 
-Only GitLab supports promotion reviews at the moment, using merge requests. Support for more Git providers is planned, as well as promotion reviews that don't depend on a Git host. With [Generic Git](git-based-promotion/generic-git.md), n8n can push each promote to a feature branch, and someone merges it on the Git host manually.
+Only GitLab supports promotion reviews at the moment. n8n opens a merge request and syncs it to **Reviews**, where you see a visual diff of the changed workflows instead of the raw files. Support for more Git providers is planned, as well as promotion reviews that don't depend on a Git host. With [Generic Git](git-based-promotion/generic-git.md), n8n can push each promote to a feature branch, and someone merges it on the Git host manually.
 
 ## Promotion reviews with GitLab
 

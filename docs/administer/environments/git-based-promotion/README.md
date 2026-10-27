@@ -40,14 +40,14 @@ A provider holds the details n8n uses to connect and authenticate to your Git ho
 |---|---|---|
 | Authentication | SSH key, or username and access token | Access token |
 | Pick repositories and branches from a list | No | Yes |
-| Promotion reviews | No | Yes, as merge requests |
+| Promotion reviews | No | Yes: GitLab merge requests synced to n8n, with a visual diff of the changes in **Reviews** |
 
 GitHub, Bitbucket, and other Git hosts work through Generic Git, without repository lists or promotion reviews.
 
 ## Self-hosted n8n
 
 - Each main instance keeps its own Git copy of each environment in `<n8n-user-folder>/promotions/environments/`.
-- If your Git host is on an internal network, allow it in [SSRF protection](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/enable-ssrf-protection) with `N8N_SSRF_ALLOWED_HOSTNAMES` or `N8N_SSRF_ALLOWED_IP_RANGES`.
+- If your GitLab instance is on an internal network, allow it for GitLab API calls in [SSRF protection](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/enable-ssrf-protection) with `N8N_SSRF_ALLOWED_HOSTNAMES` or `N8N_SSRF_ALLOWED_IP_RANGES`.
 - If your Git host uses a certificate from a private certificate authority, set `GIT_SSL_CAINFO` or `GIT_SSL_CAPATH` for Git, and [configure custom certificate authorities](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/configuration-examples/configure-custom-ssl-certificate-authorities) for API calls.
 - To get detailed logs, set `N8N_LOG_SCOPES=promotions`.
 
@@ -55,7 +55,7 @@ GitHub, Bitbucket, and other Git hosts work through Generic Git, without reposit
 
 ### Could not complete the Git operation
 
-n8n hides the Git error details because they can contain secrets. Check:
+Check:
 
 - The authentication details in the provider are correct and haven't expired.
 - For SSH, the deploy key has write access.

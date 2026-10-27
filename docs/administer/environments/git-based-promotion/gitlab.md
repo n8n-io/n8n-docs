@@ -26,7 +26,7 @@ Environments are in Preview and may change in future releases. Try them on test 
 | Authentication | Access token |
 | Pick repositories and branches from a list | Yes |
 | Push each promote to a feature branch | Yes, with a merge request |
-| Promotion reviews | Yes, as merge requests |
+| Promotion reviews | Yes: GitLab merge requests synced to n8n, with a visual diff of the changes in **Reviews** |
 
 ## Connect GitLab
 

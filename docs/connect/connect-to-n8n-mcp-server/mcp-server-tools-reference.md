@@ -909,7 +909,7 @@ The response holds per-user data and n8n serves it uncached. Two users who read 
 `get_workflow_sdk_reference` is available from n8n 2.12.0.
 {% endhint %}
 
-Get the n8n Workflow SDK reference documentation including patterns, expression syntax, functions, rules, import syntax, guidelines, and design guidance.
+Get the n8n Workflow SDK reference documentation including patterns, expression syntax, functions, rules, import syntax, guidelines, and design guidance. For an introduction to the SDK and a worked example, refer to [Workflow SDK](../workflow-sdk/README.md).
 
 #### Parameters <a href="#parameters" id="parameters"></a>
 

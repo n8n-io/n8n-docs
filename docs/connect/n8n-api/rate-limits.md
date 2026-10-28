@@ -16,7 +16,7 @@ Rate limiting for the n8n API is available from n8n 2.45.0 on:
 
 - **Self-hosted:** All editions
 
-It's off by default.
+It's off by default. On n8n Cloud, rate limiting is off.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
@@ -31,10 +31,10 @@ n8n sorts each request into one of two types:
 
 | Type | Methods |
 | :--- | :------ |
-| Read | `GET`, `HEAD` |
+| Read | `GET` |
 | Write | `POST`, `PUT`, `PATCH`, `DELETE` |
 
-Reads and writes have separate limits. Many writes don't use up the limit for reads.
+Reads and writes have separate limits. Writes don't count toward read limits.
 
 ## The two limits
 
@@ -93,7 +93,7 @@ A rejected request doesn't count toward any limit. n8n doesn't run it.
 To stay under the limits and recover when you reach one:
 
 1. **Wait for `Retry-After`.** Don't send the request again before that number of seconds has passed. A retry that's too early gets another `429`.
-2. **Add a small random delay.** If several clients wait for the same time, they all retry at once. Add up to a few seconds of random delay to each retry.
+2. **Add a small random delay.** If several clients wait for the same time, they all retry at once. Add up to 5 seconds of random delay to each retry.
 3. **Watch `X-RateLimit-Remaining`.** When it gets close to 0, slow down until the time in `X-RateLimit-Reset`.
 4. **Spread out large jobs.** Don't send many requests at the same moment. Send them at a steady rate over the window.
 

@@ -31,6 +31,8 @@ layout:
 
 This guide walks through building your own Docker Compose setup by hand, including the sandbox stack that powers n8n Assistant. Use it if you want full control over your configuration, or need to fold n8n into an existing Compose project.
 
+The sandbox in this setup is for development and testing, not production. For production sandbox options, see [Set up n8n Assistant](../configure-n8n/set-up-n8n-assistant.md).
+
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
 
 If you just want n8n (and n8n Assistant) running quickly without writing any files yourself, use the [one-line setup](one-line-setup.md) instead. It sets up everything below automatically.
@@ -39,6 +41,10 @@ If you just want n8n (and n8n Assistant) running quickly without writing any fil
 
 * Docker Engine and Docker Compose v2. Run `docker compose version` to check.
 * At least 4 GB of RAM and 2 vCPUs. The sandbox that runs AI-generated code (`sandbox-runner-1`) uses Docker-in-Docker, which needs more headroom than a typical container.
+
+{% hint style="warning" %}
+`sandbox-runner-1` runs with `privileged: true` and Docker-in-Docker. That's weak isolation: code that escapes the sandbox reaches the host. Run this setup on a dedicated host or VM with nothing else on it.
+{% endhint %}
 
 {% hint style="info" %}
 **Windows users:** Use WSL, with either Docker Desktop (WSL2 backend) or Docker Engine installed directly in your Linux distribution. Keep your project folder inside the WSL filesystem (for example, `~/n8n`), not under `/mnt/c/...`. Bind mounts across that boundary are slow and can cause permission issues.
@@ -108,7 +114,7 @@ This defines every service you're setting up: n8n itself, the sandbox stack that
 | **sandbox-runner-1** | Does the actual work; a privileged Docker-in-Docker container that creates and runs the sandboxes. |
 | **searxng**          | Bundled web search backend for n8n Assistant.                                                      |
 
-This bundles n8n's own sandbox (`n8n-sandbox`), which is a good fit for local development and testing. For a production instance, n8n currently recommends Daytona as the sandbox provider instead. See [Set up n8n Assistant](../configure-n8n/set-up-n8n-assistant.md) for how to configure a Daytona sandbox.
+This bundles n8n's own sandbox (`n8n-sandbox`), which is for development and testing only. Its runner is privileged, so it gives weak isolation. For a production instance, n8n recommends the n8n sandbox service on Kubernetes with Sysbox runners. If a third party can process your workflow data, Daytona is a managed alternative. See [Set up n8n Assistant](../configure-n8n/set-up-n8n-assistant.md) for how to configure each option.
 
 There's no database service defined here. n8n falls back to its built-in SQLite database. The `n8n-data` volume in `get-n8n-compose.yml` stores the database and n8n's encryption key, so your data survives restarts and container recreation. For a production instance, swap in Postgres. See [Use PostgreSQL instead of SQLite](install-using-docker-compose.md#optional-use-postgresql-instead-of-sqlite) below.
 
@@ -238,6 +244,8 @@ SQLite is fine for trying things out, but for a production instance that must ha
 ## Security checklist
 
 * `sandbox-runner-1` (`privileged: true`, Docker-in-Docker) is never exposed to the public internet. Treat it as equivalent to root on the host.
+* Nothing else runs on the same host or VM as the Compose stack. If code escapes the sandbox, it reaches everything on that host.
+* This setup isn't your production sandbox. For production, use the n8n sandbox service on Kubernetes with Sysbox. If a third party can process your workflow data, Daytona is a managed alternative. See [Set up n8n Assistant](../configure-n8n/set-up-n8n-assistant.md).
 * Only n8n's port is open on your cloud firewall.
 * `SANDBOX_API_KEYS`, the registration token, and the runner key are unique, not left as `change-me-...`, and rotated periodically.
 * `sandbox-api` and `sandbox-runner-1` do **not** use `env_file: .env`. Each only receives the specific variables it needs, explicitly, in its `environment` block. The model API key, Brave key, Postgres password, and n8n encryption key never reach the sandbox containers.
@@ -266,7 +274,7 @@ flowchart LR
     class certs oneshot
 ```
 
-n8n sends code execution requests to `sandbox-api`, which hands them to `sandbox-runner-1`, which creates and runs the actual sandbox containers. `sandbox-certs` runs once at startup to generate the TLS certificates the other two need and then exits; everything else waits on it.
+n8n sends code execution requests to `sandbox-api`, which hands them to `sandbox-runner-1`, which creates and runs the actual sandbox containers. `sandbox-runner-1` is the privileged component. In the production setup, Sysbox runners on Kubernetes replace it. `sandbox-certs` runs once at startup to generate the TLS certificates the other two need and then exits; everything else waits on it.
 
 ## Related resources
 
@@ -275,3 +283,4 @@ n8n sends code execution requests to `sandbox-api`, which hands them to `sandbox
 * [Install with npm](install-with-npm.md)
 * [Install with Docker](install-with-docker.md)
 * [Use a cloud provider](use-a-cloud-provider/README.md)
+* [Set up n8n Assistant](../configure-n8n/set-up-n8n-assistant.md)

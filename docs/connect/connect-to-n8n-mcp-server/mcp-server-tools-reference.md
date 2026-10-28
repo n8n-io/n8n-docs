@@ -1939,7 +1939,7 @@ List the recorded sessions of an agent, newest first, with their status, origin,
 | `data[].failureCount` | `integer` | Number of failures in the session |
 | `data[].totalPromptTokens` | `integer` | Total prompt tokens the session used |
 | `data[].totalCompletionTokens` | `integer` | Total completion tokens the session used |
-| `data[].totalDuration` | `number` | Total run time of the session |
+| `data[].totalDuration` | `integer` | Total generation time of the session, in milliseconds |
 | `count` | `integer` | Number of sessions returned |
 | `nextCursor` | `string \| null` | Cursor for the next page, or `null` when no next page exists. Pass it back as `cursor` |
 

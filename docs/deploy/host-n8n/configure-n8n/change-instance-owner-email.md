@@ -30,7 +30,7 @@ Changing the owner email updates the existing instance owner account. It doesn't
 ## Change the owner email in the UI <a href="#change-the-owner-email-in-the-ui" id="change-the-owner-email-in-the-ui"></a>
 
 1. Log in as the instance owner.
-2. Go to **Settings** > **Personal**.
+2. Go to **Settings** > **Profile & preferences**.
 3. Update the **Email** field.
 4. Select **Save**.
 

@@ -28,7 +28,7 @@ Some settings require specific license features. Settings that aren't available 
 
 Security settings let you manage instance-wide security policies. You can enforce two-factor authentication for all users and control what users can do in their personal spaces.
 
-To access security settings, navigate to **Settings** > **Security**.
+To access security settings, navigate to **Settings** > **Policies**.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
 
@@ -44,7 +44,7 @@ You can require all users on your instance to set up two-factor authentication (
 
 To enforce 2FA:
 
-1. Navigate to **Settings** > **Security**.
+1. Navigate to **Settings** > **Policies**.
 2. In the **Enforce two-factor authentication** section, toggle the switch on.
 
 When you enable this setting:
@@ -66,7 +66,7 @@ Controls whether users can share workflows and credentials from their personal s
 
 To manage sharing:
 
-1. Navigate to **Settings** > **Security**.
+1. Navigate to **Settings** > **Policies**.
 2. In the **Personal Space** section, find **Sharing workflows and credentials**.
 3. Toggle the switch to enable or disable sharing.
 
@@ -81,7 +81,7 @@ Controls whether users can publish workflows from their personal space to make t
 
 To manage publishing:
 
-1. Navigate to **Settings** > **Security**.
+1. Navigate to **Settings** > **Policies**.
 2. In the **Personal Space** section, find **Publishing workflows**.
 3. Toggle the switch to enable or disable publishing.
 
@@ -113,7 +113,7 @@ With workflow reviews, teams can submit a workflow version for approval before p
 
 To enable workflow reviews:
 
-1. Navigate to **Settings** > **Security & policies**.
+1. Navigate to **Settings** > **Policies**.
 2. In the **Workflow reviews** section, turn on **Enable workflow reviews**.
 
 When the setting is off, users can't create or manage reviews. Turning the feature off also lifts the publish block for workflows that still have an open review. For how to submit, approve, and publish after you enable the feature, refer to [Workflow reviews](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/workflow-reviews).
@@ -135,7 +135,7 @@ Available from n8n 2.26.0.
 
 To enforce data redaction:
 
-1. Navigate to **Settings** > **Security**.
+1. Navigate to **Settings** > **Policies**.
 2. In the **Data redaction** section, toggle **Enforce data redaction** on.
 3. Under **Redact executions**, select the enforcement scope:
 	- **Production executions (Recommended)**: n8n redacts data from production executions in all workflows.

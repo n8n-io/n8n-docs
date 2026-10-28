@@ -22,7 +22,7 @@ To enable certain licensed features, you must first activate your license. You c
 In your n8n instance:
 
 1. Log in as **Admin** or **Owner**.
-1. Select **Settings** > **Usage and plan**.
+1. Select **Settings** > **Plan & usage**.
 1. Select **Enter activation key**.
 1. Paste in your license key.
 1. Select **Activate**.

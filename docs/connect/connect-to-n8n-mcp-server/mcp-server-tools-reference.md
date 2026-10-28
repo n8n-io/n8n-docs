@@ -18,9 +18,9 @@ layout:
 
 This page describes all tools exposed by the instance-level MCP server.
 
----
+From n8n 2.47.0, if the instance is protected (read-only), n8n blocks every tool that n8n doesn't annotate with `readOnlyHint: true`. The one exception is `execute_workflow` with `executionMode` set to `"production"`. A blocked call returns an error result with the message `This instance is protected. Use read-only operations or production workflow executions.`
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+---
 
 ## Workflow management <a href="#workflow-management" id="workflow-management"></a>
 
@@ -173,6 +173,7 @@ Execute a workflow by ID. Returns the execution ID immediately without waiting f
 - `execute_workflow` only picks a trigger automatically when the workflow has exactly one eligible trigger that doesn't require inputs, such as a Schedule Trigger or a Manual Trigger in manual mode.
 - `triggerNodeName` and the error-on-multiple-triggers behavior are available from n8n 2.36.0. Earlier versions execute a trigger without letting you specify which one when a workflow has more than one.
 - Executing workflows with multi-step forms or any kind of human-in-the-loop interactions isn't supported.
+- From n8n 2.47.0, on a protected (read-only) instance, `execute_workflow` runs only when `executionMode` is `"production"`. A `"manual"` execution returns the error `This instance is protected. Use read-only operations or production workflow executions.`
 
 ---
 

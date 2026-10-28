@@ -48,8 +48,6 @@ Refer to the [Redis credentials documentation](../../credentials/redis.md) for a
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 {% hint style="info" %}
 **Feature availability**
 

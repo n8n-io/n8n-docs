@@ -20,8 +20,6 @@ layout:
 
 Use the Debug Helper node to trigger different error types or generate random datasets to help test n8n workflows.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Operations <a href="#operations" id="operations"></a>
 
 Define the operation by selecting the **Category**:

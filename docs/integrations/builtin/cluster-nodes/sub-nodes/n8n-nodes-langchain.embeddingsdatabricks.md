@@ -32,8 +32,6 @@ The Embeddings Databricks node is in Preview from n8n 2.45.0 and may change in f
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Prerequisites
 
 - A Databricks workspace with Unity AI Gateway enabled.

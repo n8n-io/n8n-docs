@@ -75,11 +75,11 @@ Make sure you have:
 
 ### Setup 1: n8n sandbox service on Kubernetes with Sysbox (recommended for self-hosted production)
 
-The n8n sandbox service runs sandboxes in Sysbox runners on a Kubernetes cluster you control. Workflow data stays in your infrastructure, and the runners don't need `privileged: true`. This is the setup n8n recommends for self-hosted production.
+The n8n sandbox service runs sandboxes in Sysbox nodes on a Kubernetes cluster you control. Workflow data stays in your infrastructure, and the runners don't need `privileged: true`. This is the setup n8n recommends for self-hosted production.
 
 **What you need:**
 
-* A Kubernetes cluster, version 1.32 to 1.35.
+* A Kubernetes cluster, version 1.32 or later.
 * A dedicated Linux node pool for the sandbox runners, with Sysbox installed on it. Use Ubuntu worker nodes.
 * At least four CPUs and 4 GB RAM per node in that pool.
 * The `br_netfilter` kernel module loaded on those nodes.

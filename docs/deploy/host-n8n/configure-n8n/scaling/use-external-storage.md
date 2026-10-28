@@ -214,6 +214,8 @@ n8n records where each execution's data is stored, so switching modes is non-des
 
 n8n prunes execution data in S3 itself, using the standard [executions pruning](manage-execution-data.md#enable-executions-pruning) settings (the `EXECUTIONS_DATA_*` variables). Unlike binary data, execution data doesn't rely on an S3 lifecycle rule. Don't add a lifecycle rule for execution data, as it could delete data that n8n still references.
 
+If you deploy n8n on AWS using the [terraform-aws-n8n](https://github.com/n8n-io/terraform-aws-n8n) module, see [Configure Enterprise features on AWS](../../install-options/use-a-cloud-provider/deploy-to-aws-with-terraform/use-enterprise-features-on-aws.md#execution-data-in-s3) for the module-specific setup.
+
 ## Related resources
 
 * [Scaling](../scaling.md)

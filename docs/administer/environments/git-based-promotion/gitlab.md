@@ -64,7 +64,7 @@ For a self-managed GitLab instance on an internal network or with a private cert
 
 ## Promotion reviews with merge requests
 
-To review promotions as merge requests, turn on **Open a merge request in GitLab** on the environment an instance promotes changes to. For how to review and approve them, see [Promotion reviews with GitLab](../promotion-reviews.md#promotion-reviews-with-gitlab).
+To review promotions as merge requests, turn on **Open a merge request in GitLab** on the environment you promote to. For how to review and approve them, see [Promotion reviews with GitLab](../promotion-reviews.md#promotion-reviews-with-gitlab).
 
 ## Related resources
 

@@ -11,7 +11,7 @@ tags:
 
 # Set up environments
 
-To set up environments on an instance, add the environment it promotes changes to, the environment it applies changes from, or both.
+To set up environments on an instance, add the environment you promote to, the environment you apply from, or both.
 
 Repeat this on each instance. To decide which environments each instance needs, see [Plan your environments](plan-your-environments.md).
 
@@ -56,10 +56,10 @@ When you add the second environment on an instance with the same provider type, 
 
 To bring your work to a new target instance for the first time:
 
-1. On the source instance, [add the environment](#add-an-environment) it promotes changes to.
+1. On the source instance, [add the environment](#add-an-environment) you promote to.
 2. Run an [instance promote](promote-changes.md#instance-promote). It sends every team project.
 3. If the environment pushes feature branches or opens promotion reviews, merge the feature branch or approve the review.
-4. On the target instance, add the environment it applies changes from, using the same repository and branch as the source's environment.
+4. On the target instance, add the environment you apply from, using the same repository and branch as the source's environment.
 5. Run an [instance apply](apply-changes.md#instance-apply). It creates every team project on the target and handles the dependencies between projects. When n8n asks, create the credentials and variables that don't exist on the target yet.
 6. Publish the workflows you want to run. Workflows that Apply creates arrive unpublished.
 7. Turn on [Protected instance](#protect-an-instance) on the target.

@@ -57,7 +57,7 @@ Staging and Production can be two branches in one repository, as in the table, o
 
 ## Review changes before production
 
-To make sure production only applies changes someone reviewed, set the environment that promotes to Production to push each promote to a feature branch. n8n then never commits directly to the branch production applies from:
+To make sure production only applies changes someone reviewed, go to the instance that promotes to production and set its environment to push each promote to a feature branch. n8n then never commits directly to the branch production applies from:
 
 - With GitLab, n8n also opens a merge request, which you approve in n8n as a [promotion review](promotion-reviews.md).
 - With Generic Git, someone merges the feature branch on the Git host.

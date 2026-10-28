@@ -65,7 +65,7 @@ You can't change the authentication method of a provider. To switch, create anot
 
 ## Finish the environment
 
-After you connect the provider, finish setting up the environment that uses it: enter the **Environment name**, **Repository URL**, and **Branch**. For an environment that an instance promotes changes to, also choose whether to push each promote to a feature branch. See [Set up environments](../set-up-environments.md#add-an-environment).
+After you connect the provider, finish setting up the environment that uses it: enter the **Environment name**, **Repository URL**, and **Branch**. For an environment you promote to, also choose whether to push each promote to a feature branch. See [Set up environments](../set-up-environments.md#add-an-environment).
 
 ## Related resources
 

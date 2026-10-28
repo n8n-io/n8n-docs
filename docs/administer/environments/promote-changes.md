@@ -11,7 +11,7 @@ tags:
 
 # Promote changes
 
-Promote sends workflows and their dependencies from your instance to the environment it promotes changes to. You can promote selected workflows from one project, or every project on the instance.
+Promote sends workflows and their dependencies from your instance to the environment you promote to. You can promote selected workflows from one project, or every project on the instance.
 
 {% hint style="info" %}
 **Preview status**

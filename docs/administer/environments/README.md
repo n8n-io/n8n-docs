@@ -40,7 +40,7 @@ Separate environments let you change workflows without breaking the ones running
 
 ## How environments work
 
-![A development instance promotes changes, optionally after a review, to the Production environment, which the production instance applies](../.gitbook/assets/environments-how-it-works.png)
+![Example: changes move from the development instance, after an optional review, to the Production environment's Git branch, then to the production instance](../.gitbook/assets/environments-how-it-works.png)
 
 Changes move between instances through an environment:
 
@@ -67,7 +67,14 @@ Promote and apply are the two promotion actions:
 
 The instance you promote from is the source instance, and the instance you apply to is the target instance.
 
-A project promote or project apply covers one team project, and you choose the changes to include. An instance promote or instance apply covers every team project and overwrites them to match. An instance apply also deletes projects that aren't in the environment.
+You can promote or apply at two levels:
+
+- **Project:** promotes or applies one team project. You choose which changes to include.
+- **Instance:** promotes or applies every team project on the instance.
+
+{% hint style="warning" %}
+An instance apply overwrites every team project on the instance to match the environment. It also deletes projects that aren't in the environment.
+{% endhint %}
 
 ### What you promote
 
@@ -77,7 +84,7 @@ Promote and apply use [n8n packages](https://app.gitbook.com/s/rPN1zU5jaYNvwH7Rz
 
 ### Promotion review
 
-A promotion review is an optional approval step in a promote. Promoted changes reach the environment only after someone approves them. You turn on promotion reviews in the settings of the environment an instance promotes changes to, and you approve them on that same instance. Support for promotion reviews depends on the provider. See [Promotion reviews](promotion-reviews.md).
+A promotion review is an optional approval step in a promote. Promoted changes reach the environment only after someone approves them. You turn on promotion reviews in the settings of the environment you promote to, and you approve them on the instance you promote from. Support for promotion reviews depends on the provider. See [Promotion reviews](promotion-reviews.md).
 
 ### Promotion model
 

@@ -21,7 +21,7 @@ Environments are in Preview and may change in future releases. Try them on test 
 
 ## How promotion reviews work
 
-You turn on promotion reviews on the environment an instance promotes changes to. Each promote then opens a review instead of changing the environment's branch directly. Reviews appear in **Reviews** in the left menu of the source instance, where you inspect the changes and approve them.
+You turn on promotion reviews on the environment you promote to. Each promote then opens a review instead of changing the environment's branch directly. Reviews appear in **Reviews** in the left menu of the source instance, where you inspect the changes and approve them.
 
 While a review for a project is open, you can't promote that project again, and you can't add changes to the open review. This prevents merge conflicts between reviews. Approve or close the review, then promote again.
 
@@ -35,7 +35,7 @@ Only GitLab supports promotion reviews at the moment. n8n opens a merge request 
 
 ### Turn on promotion reviews
 
-On the instance that promotes changes, edit the environment it promotes changes to and turn on **Open a merge request in GitLab**. See [Set up environments](set-up-environments.md#add-an-environment).
+On the instance you promote from, edit the environment you promote to and turn on **Open a merge request in GitLab**. See [Set up environments](set-up-environments.md#add-an-environment).
 
 Each promote then pushes a feature branch and opens a merge request into the environment's branch. The merge request appears as a promotion review in **Reviews**. **Reviews** lists only merge requests that n8n opened.
 

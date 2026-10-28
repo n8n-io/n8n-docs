@@ -11,7 +11,7 @@ tags:
 
 # Environments
 
-Environments let you move workflows and other n8n resources, such as credentials, variables, and data tables, through stages like development, staging, and production. You build and test changes in one environment, then promote them to the next.
+Environments let you move workflows and other n8n resources, such as credentials, variables, and data tables, through the steps of your release process, such as development, staging, and production. You build and test changes on one instance, then promote them to the next step.
 
 {% hint style="info" %}
 **Feature availability**
@@ -40,19 +40,23 @@ Separate environments let you change workflows without breaking the ones running
 
 ## How environments work
 
-![Changes move from a development instance through an optional review to the Production environment, then to production](../.gitbook/assets/environments-how-it-works.png)
+![A development instance promotes changes, optionally after a review, to the Production environment, which the production instance applies](../.gitbook/assets/environments-how-it-works.png)
 
-The development instance promotes changes to the Production environment. If that environment requires a promotion review, someone approves the promoted changes on the development instance first, for example in a promotion review based on a GitLab merge request. The production instance then applies the changes from the same environment. With Git-based promotion, the Production environment is a Git branch, and promoting commits to it.
+Changes move between instances through an environment:
+
+1. On the development instance, you promote changes to the Production environment.
+2. Optional: if the environment requires a promotion review, someone approves the changes on the development instance before they reach the environment.
+3. On the production instance, you apply the changes from the Production environment.
+
+With Git-based promotion, the Production environment is a Git branch, and promoting commits to it.
 
 ## Concepts
 
 ### Environment
 
-An environment is a stage that holds a version of your work, such as development, staging, or production. Each stage usually has its own n8n instance, with its own configuration, credentials, and data, so you can change and test workflows without affecting production.
+Conceptually, an environment is a step in your release process, such as staging or production. It holds the version of your work for that step. You promote changes to an environment from one instance, and the instance that runs that step applies them. Promoting doesn't change that instance until it applies.
 
-On each instance, you set up environments by promotion direction: the environment the instance promotes changes to, and the environment it applies changes from. The environment an instance applies from is that instance's source of truth. Each instance has at most one environment per direction. The instance you promote from is the source instance, and the instance you apply to is the target instance.
-
-With Git-based promotion, an environment is a repository and branch that holds the version of your work for that stage. Its settings decide whether each promote commits directly to the branch or pushes a feature branch, and with GitLab, whether it also opens a merge request.
+Technically, with Git-based promotion, an environment is a branch in a remote Git repository. On the instance that promotes, the promote environment configuration points to that repository and branch, and defines how changes reach the branch, for example by pushing a feature branch or opening a merge request. On the instance that applies, the apply environment configuration points to the same repository and branch.
 
 ### Promote and apply
 
@@ -60,6 +64,8 @@ Promote and apply are the two promotion actions:
 
 - **Promote** sends changes from your instance to an environment.
 - **Apply** brings changes from an environment into your instance.
+
+The instance you promote from is the source instance, and the instance you apply to is the target instance.
 
 A project promote or project apply covers one team project, and you choose the changes to include. An instance promote or instance apply covers every team project and overwrites them to match. An instance apply also deletes projects that aren't in the environment.
 

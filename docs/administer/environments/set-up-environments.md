@@ -35,7 +35,7 @@ On self-hosted n8n:
 
 ## Add an environment
 
-Set up the source instance first, and promote once before the target instance applies. See [First promote and apply](#first-promote-and-apply). An empty repository works for the first connect and for direct promotes. For feature-branch promotes, the environment's branch must already exist on the Git host.
+Each instance promotes to at most one environment and applies from at most one. Set up the source instance first, and promote once before the target instance applies. See [First promote and apply](#first-promote-and-apply). An empty repository works for the first connect and for direct promotes. For feature-branch promotes, the environment's branch must already exist on the Git host.
 
 If the instance is connected to Environments (Classic), upgrade it first: go to **Settings** > **Environments (Classic)**, select **Upgrade**, then confirm. See [Upgrade from Environments (Classic)](upgrade-from-environments-classic.md).
 

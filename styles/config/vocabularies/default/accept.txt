@@ -129,6 +129,7 @@ Homeserver
 howto
 HubSpot
 Humantic
+[Ii]dempotency
 Imperva
 indexable
 invalid
@@ -153,6 +154,7 @@ Kitemaker
 kubectl
 Kafka
 kafkajs
+Lakebase
 Lemlist
 Lenovo
 librdkafka
@@ -177,6 +179,7 @@ Metabase
 [Mm]illicore
 Milvus('s)?
 Mindee
+MLflow
 [Mm]inimum
 Mocean
 [Mm]ultipart
@@ -313,6 +316,7 @@ URIs
 URL
 URLencoded
 Venafi
+Vercel
 VERO
 Vhost
 VM

@@ -24,8 +24,6 @@ layout:
 
 Here are some common errors and issues with the [Ollama Chat Model node](README.md) and steps to resolve or troubleshoot them.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Processing parameters <a href="#processing-parameters" id="processing-parameters"></a>
 
 The Ollama Chat Model node is a sub-node[^1]. Sub-nodes behave differently than other nodes when processing multiple items using expressions.
@@ -78,11 +76,33 @@ When configuring [Ollama credentials](../../../credentials/ollama.md), use `host
 
 ### If Ollama and n8n are running in separate Docker containers <a href="#if-ollama-and-n8n-are-running-in-separate-docker-containers" id="if-ollama-and-n8n-are-running-in-separate-docker-containers"></a>
 
-If both n8n and Ollama are running in Docker in separate containers, you can use Docker networking to connect them.
+Connect both containers to the same user-defined bridge network. For more information, refer to the Docker [bridge network driver documentation](https://docs.docker.com/engine/network/drivers/bridge/). The default Docker bridge network doesn't resolve container names. Using a container name on the default bridge can cause an `ENOTFOUND` error, even when Ollama is running.
 
-Configure Ollama to listen on all interfaces by binding to `0.0.0.0` inside of the container (the official images are already configured this way).
+Configure Ollama to listen on `0.0.0.0` inside its container. The official Ollama image already uses this setting.
 
-When configuring [Ollama credentials](../../../credentials/ollama.md), use the Ollama container's name as the host address instead of `localhost`. For example, if you call the Ollama container `my-ollama` and it listens on the default port 11434, you would set the base URL to `http://my-ollama:11434`.
+To connect existing containers, follow these steps. Replace `<ollama-container>` and `<n8n-container>` with the names of your existing containers. Run `docker ps` to find their names.
+
+1. Create a shared network:
+
+	```shell
+	docker network create n8n-ollama
+	```
+
+2. Connect the Ollama container:
+
+	```shell
+	docker network connect n8n-ollama <ollama-container>
+	```
+
+3. Connect the n8n container:
+
+	```shell
+	docker network connect n8n-ollama <n8n-container>
+	```
+
+4. In your [Ollama credentials](../../../credentials/ollama.md), set **Base URL** to `http://<ollama-container>:11434`. Replace `<ollama-container>` with your Ollama container's name. For example, for a container with the name `ollama`, use `http://ollama:11434`.
+
+Both containers must be running. Containers on the same network communicate directly, so you don't need to publish Ollama's port to the host.
 
 ### If Ollama and n8n are running in the same Docker container <a href="#if-ollama-and-n8n-are-running-in-the-same-docker-container" id="if-ollama-and-n8n-are-running-in-the-same-docker-container"></a>
 

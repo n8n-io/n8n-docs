@@ -35,6 +35,8 @@ From version 2 of the node, the **Authentication** dropdown offers three options
 
 If you connected a Teams OAuth2 credential before n8n 2.39.0, reconnect it so it picks up `OnlineMeetings.ReadWrite`. If the credential uses **Custom Scopes**, add the scope to **Enabled Scopes** instead.
 
+On n8n Cloud, the managed **Teams OAuth2** credential needs a Microsoft Entra administrator to approve its permissions for your organization before users who aren't administrators can connect or reconnect it, and again when n8n adds a scope that needs admin consent. Refer to [Microsoft Teams on Cloud: Admin approval](../credentials/microsoft.md#microsoft-teams-on-cloud-admin-approval) for the steps and for why reconnecting alone fails.
+
 Refer to [Microsoft credentials](../credentials/microsoft.md) for guidance on setting up authentication.
 {% endhint %}
 
@@ -47,8 +49,6 @@ If you're using a government cloud tenant (US Government, US Government DOD, or 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/sYWM3IB0LEL4RkPx8ndF/" %}
-
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
 
 ## Operations <a href="#operations" id="operations"></a>
 

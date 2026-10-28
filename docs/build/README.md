@@ -38,11 +38,11 @@ Learn the core building blocks, editor concepts, and workflow anatomy.
 
 <a href="understand-workflows/" class="button secondary">Open</a>
 
-[**Build and manage agents**](build-and-manage-agents.md)
+[**Build and manage agents**](build-and-manage-agents/README.md)
 
 Build agents alongside your workflows, then publish them for people to reach through chat, channels, and schedules.
 
-<a href="build-and-manage-agents.md" class="button secondary">Open</a>
+<a href="build-and-manage-agents/README.md" class="button secondary">Open</a>
 
 [**Ways of building workflows**](ways-of-building-workflows/README.md)
 
@@ -91,5 +91,3 @@ Move faster in the editor with workflow, canvas, and node shortcuts.
 <a href="keyboard-shortcuts.md" class="button secondary">Open</a>
 {% endcolumn %}
 {% endcolumns %}
-
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}

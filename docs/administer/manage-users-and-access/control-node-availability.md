@@ -30,8 +30,6 @@ Node type policies are available on:
 Node type policies are available from n8n 2.45.0.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 An instance owner or admin sets an instance policy. A project admin can then restrict their project further. You manage policies with the [n8n public API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/node-type-policy).
 
 ## How node type policies work
@@ -149,7 +147,7 @@ The `allow` rule is necessary. The project's `defaultAction: allow` doesn't turn
 
 ### Share one policy across scopes
 
-The `/node-type-policies/policies` and `/node-type-policies/scopes/<scope-id>/attachments` endpoints let instance admins reuse one set of rules in more than one project. Most setups don't need them. Refer to the [Endpoint reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/node-type-policy) for details.
+The `/node-type-policies/policies` and `/node-type-policies/scopes/<scope-id>/attachments` endpoints let instance admins reuse one set of rules in more than one project. Most setups don't need them. A `GET` on the attachments endpoint returns the attached policies and the `version` that the `PUT` needs. Refer to the [Endpoint reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/node-type-policy) for details.
 
 ## What users see when a node is blocked in the editor
 

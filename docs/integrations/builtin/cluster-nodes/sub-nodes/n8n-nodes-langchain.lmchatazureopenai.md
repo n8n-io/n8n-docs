@@ -35,14 +35,12 @@ Refer to the [Microsoft Foundry credentials documentation](../../credentials/azu
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 * **Authentication**: Choose **API Key** or **Azure Entra ID (OAuth2)**. Each option uses its own credential.
-* **Project**: Enter the name of the Microsoft Foundry project that owns the deployment. Foundry resources need this. Leave it empty for a classic Azure OpenAI resource.
+* **Project**: Enter the name of the Microsoft Foundry project that owns the deployment. Leave it empty to use the **Project** from the credential. A classic Azure OpenAI resource doesn't use it.
 * **Model (Deployment)**: Select the deployment to use to generate the completion.
-    * **From List**: Choose from the deployments in your project. The list shows chat deployments only. It needs a Microsoft Foundry credential and the **Project** field. Set **Project** first.
+    * **From List**: Choose from the deployments in your project. The list shows chat deployments only. It needs a Microsoft Foundry credential and a **Project**, in this field or in the credential. Set **Project** first.
     * **By ID**: Enter the deployment name. Use this for a classic Azure OpenAI credential, or for a deployment that isn't in the list.
 * **Model Family**: Choose the API family the deployment uses. Azure doesn't report this, so set it to match your deployment.
     * **OpenAI**: For GPT and other OpenAI-compatible models.
@@ -80,7 +78,7 @@ This node doesn't support the [`NO_PROXY` environment variable](https://app.gitb
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [LangChains's Azure OpenAI documentation](https://js.langchain.com/docs/integrations/chat/azure) for more information about the service.
+Refer to [LangChain's Azure OpenAI documentation](https://docs.langchain.com/oss/javascript/integrations/chat/azure) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

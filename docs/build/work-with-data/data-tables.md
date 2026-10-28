@@ -21,8 +21,6 @@ layout:
 
 Data tables integrate data storage within your n8n environment. Using data tables, you can save, manage, and interact with data directly in your workflows without relying on external database systems for scenarios such as:
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 - Persisting data across workflows in the same project
 - Storing markers to prevent duplicate runs or control workflow triggers
 - Reusing prompts or messages across workflows

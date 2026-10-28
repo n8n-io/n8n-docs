@@ -96,8 +96,6 @@ layout:
 `isEmpty()` isn't a null check. On a number it treats `0` as empty, so `{{ $json.count.isEmpty() }}` returns `true` for both a missing field and a field set to `0`. To test only for a missing value, compare directly, for example `{{ $json.count === null }}`, or use the **exists** operator in the **If** node.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 **Syntax:** _`Number`_.isEmpty()
 
 **Returns:** Boolean

@@ -37,8 +37,6 @@ It isn't ready for n8n Cloud Enterprise or self-hosted Enterprise yet. If you're
 n8n Assistant is in Preview. It can make mistakes, and behavior may change while the feature is in development. Always review generated workflows before using them in production.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## What n8n Assistant can help with
 
 You interact with n8n Assistant in a chat. It can use tools inside n8n to help you create and debug workflows.
@@ -46,7 +44,7 @@ You interact with n8n Assistant in a chat. It can use tools inside n8n to help y
 You can ask n8n Assistant to:
 
 - **Create workflows:** describe the automation you want, and n8n Assistant can generate a workflow.
-- **Build agents:** describe the agent you want, and n8n Assistant can suggest instructions, tools, and skills to add. Agents also run on self-hosted with the `agents` module. See [Build and manage agents](../build-and-manage-agents.md) and [Enable agents](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant#enable-agents).
+- **Build agents:** describe the agent you want, and n8n Assistant can suggest instructions, tools, and skills to add. Agents also run on self-hosted with the `agents` module. See [Build and manage agents](../build-and-manage-agents/README.md) and [Enable agents](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant#enable-agents).
 - **Connect MCP servers:** connect a server from the [MCP servers](../integrate-ai/mcp-servers.md) registry directly to the assistant, both to perform tasks and to gather context while it builds workflows for you.
 - **Work in your browser:** connect [Browser Use](n8n-assistant/browser-use.md) so n8n Assistant can browse sites, fill in forms, and set up credentials for you.
 - **Edit workflows:** ask it to change a workflow, add nodes, update logic, or adjust configuration.

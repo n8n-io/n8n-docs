@@ -22,8 +22,6 @@ You can use these credentials to authenticate the following nodes:
 
 * [Microsoft Entra ID](../app-nodes/n8n-nodes-base.microsoftentra.md)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 - Create a Microsoft Entra ID account or subscription.
@@ -189,7 +187,7 @@ The following scopes are required for each Microsoft integration as of March 202
 | **Microsoft OneDrive** | `openid`, `offline_access`, `Files.ReadWrite.All` |
 | **Microsoft Outlook** | `openid`, `offline_access`, `Contacts.Read`, `Contacts.ReadWrite`, `Calendars.Read`, `Calendars.Read.Shared`, `Calendars.ReadWrite`, `Mail.ReadWrite`, `Mail.ReadWrite.Shared`, `Mail.Send`, `Mail.Send.Shared`, `MailboxSettings.Read` |
 | **Microsoft SharePoint** | `openid`, `offline_access`, `Sites.Read.All` or `Sites.ReadWrite.All` |
-| **Microsoft Teams** | `openid`, `offline_access`, `User.Read.All`, `Group.ReadWrite.All`, `Chat.ReadWrite`, `ChannelMessage.Read.All`, `ChannelMessage.ReadWrite`, `OnlineMeetings.ReadWrite`, `TeamworkTag.Read`, `TeamsActivity.Send` |
+| **Microsoft Teams** | `openid`, `offline_access`, `User.Read.All`, `Group.ReadWrite.All`, `Chat.ReadWrite`, `ChannelMessage.Read.All`, `ChannelMessage.ReadWrite`, `OnlineMeetings.ReadWrite`, `TeamworkTag.Read`, `TeamsActivity.Send`, `TeamMember.Read.All` (available from n8n 2.45.0) |
 | **Microsoft To Do** | `openid`, `offline_access`, `Tasks.ReadWrite` |
 | **Microsoft Teams Trigger** | `openid`, `offline_access`, `Team.ReadBasic.All`, `Channel.ReadBasic.All`, `Chat.Read`, `ChannelMessage.Read.All`, plus `TeamMember.Read.All` for the New Team Member event. Refer to [Required scopes](../trigger-nodes/n8n-nodes-base.microsoftteamstrigger.md#required-scopes) in the Microsoft Teams Trigger documentation for the permission each event needs. |
 

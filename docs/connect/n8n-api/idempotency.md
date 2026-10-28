@@ -103,5 +103,6 @@ The idempotency header applies only to public API endpoints at `/api/v1`.
 * [n8n API](./)
 * [Authentication](authentication.md)
 * [Pagination](pagination.md)
+* [Rate limits](rate-limits.md)
 * [Use an API playground](use-an-api-playground.md)
 * [Endpoint reference](api-reference.md)

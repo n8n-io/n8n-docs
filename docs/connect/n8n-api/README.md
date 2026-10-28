@@ -42,6 +42,7 @@ n8n provides an [n8n API node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/bu
 * [Authentication](authentication.md): how to authenticate requests to the n8n API.
 * [Pagination](pagination.md): paginate large result sets.
 * [Idempotency](idempotency.md): retry a POST with an `Idempotency-Key` header.
+* [Rate limits](rate-limits.md): stay under the request limits and handle a `429` response.
 * [Use an API playground](use-an-api-playground.md): try out the API in a built-in playground (self-hosted n8n only).
 * [Endpoint reference](api-reference.md): the complete endpoint reference, generated from the OpenAPI specification.
 

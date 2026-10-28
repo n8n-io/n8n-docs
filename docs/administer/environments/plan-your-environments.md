@@ -21,14 +21,14 @@ Environments are in Preview and may change in future releases. Try them on test 
 
 ## How instances and environments relate
 
-You configure the environments of each instance separately. Each instance can have two environments, one per direction:
+Each instance belongs to one environment and promotes to the next. You configure this on each instance separately, with up to two environment configurations:
 
-- The environment the instance promotes changes to.
-- The environment the instance applies changes from.
+- **Apply:** the environment the instance belongs to. The instance applies changes from it.
+- **Promote:** the next environment. The instance promotes changes to it.
 
-With [Git-based promotion](git-based-promotion/README.md), each environment uses a provider, repository, and branch. They don't have to match across directions or instances, and several environments can share a provider. An instance can apply from one repository and promote to another, or use different branches of the same repository. Changes reach the next instance once they're on the branch it applies from, whether n8n commits them there directly or someone merges them in.
+With [Git-based promotion](git-based-promotion/README.md), each environment configuration uses a provider, repository, and branch. They don't have to match across directions or instances, and several configurations can share a provider. An instance can apply from one repository and promote to another, or use different branches of the same repository. Changes reach the next instance once they're on the branch it applies from, whether n8n commits them there directly or someone merges them in.
 
-Name each environment after the stage it stands for, such as Staging or Production. The patterns below are common setups, not the only ones.
+Name each environment after its step in your release process, such as Staging or Production. The patterns below are common setups, not the only ones.
 
 ## Development and production
 

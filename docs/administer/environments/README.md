@@ -48,15 +48,15 @@ Changes move between instances through an environment:
 2. Optional: if the environment requires a promotion review, someone approves the changes on the development instance before they reach the environment.
 3. On the production instance, you apply the changes from the Production environment.
 
-With Git-based promotion, the Production environment is a Git branch, and promoting commits to it.
+With Git-based promotion, promoting commits the changes to the Production environment's Git branch.
 
 ## Concepts
 
 ### Environment
 
-Conceptually, an environment is a step in your release process, such as staging or production. It holds the version of your work for that step. You promote changes to an environment from one instance, and the instance that runs that step applies them. Promoting doesn't change that instance until it applies.
+Conceptually, an environment is a step in your release process together with the instance that runs it, such as a staging or production instance. You promote changes to the next environment, and its instance applies them.
 
-Technically, with Git-based promotion, an environment is a branch in a remote Git repository. On the instance that promotes, the promote environment configuration points to that repository and branch, and defines how changes reach the branch, for example by pushing a feature branch or opening a merge request. On the instance that applies, the apply environment configuration points to the same repository and branch.
+Technically, with Git-based promotion, promoted changes wait in a branch of a remote Git repository until the instance applies them. On the instance that promotes, the promote environment configuration points to that repository and branch, and defines how changes reach the branch, for example by pushing a feature branch or opening a merge request. On the instance that applies, the apply environment configuration points to the same repository and branch.
 
 ### Promote and apply
 

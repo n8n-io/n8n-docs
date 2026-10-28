@@ -85,7 +85,7 @@
 <guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/41390</guid>
 <pubDate>Tue, 27 Oct 2026 00:00:00 GMT</pubDate>
 <category>n8n 3.0</category>
-<description>The logs view detail header now shows &quot;Answered by &lt;model&gt;&quot; next to the token count when viewing a chat model node, matching the label already shown in the NDV. The label is omitted when no model name is available in the run data. The tooltip text was also updated to clarify that the provider returns the model name.</description>
+<description>The logs view detail header now shows &quot;Answered by [model name]&quot; next to the token count when viewing a chat model node, matching the label already shown in the NDV. The label is omitted when no model name is available in the run data. The tooltip text was also updated to clarify that the provider returns the model name.</description>
 </item>
 <item>
 <title>Send users to the admin who can lift a type restriction</title>
@@ -189,7 +189,7 @@
 <guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/40988</guid>
 <pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
 <category>n8n 2.45</category>
-<description>The AI log view in the node details panel now shows which model actually answered a request, useful when a model router (e.g. Azure AI Foundry) picks a model different from the one configured on the node. An &quot;Answered by &lt;model&gt;&quot; item appears next to the token count in both the Rendered and JSON tabs, with a tooltip explaining it may differ from the node's configured model. It only shows when the run data includes a model name, such as for streaming chat model runs.</description>
+<description>The AI log view in the node details panel now shows which model actually answered a request, useful when a model router (e.g. Azure AI Foundry) picks a model different from the one configured on the node. An &quot;Answered by [model name]&quot; item appears next to the token count in both the Rendered and JSON tabs, with a tooltip explaining it may differ from the node's configured model. It only shows when the run data includes a model name, such as for streaming chat model runs.</description>
 </item>
 <item>
 <title>Publish agent modal and modal for warning about unpublished workflows</title>

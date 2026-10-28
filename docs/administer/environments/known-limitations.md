@@ -32,7 +32,7 @@ Workflows can use resources from outside their project: sub-workflows from anoth
 
 A project promote or project apply can't move workflows or folders from one project to another. Moves within a project work.
 
-**Workaround:** use an instance promote and instance apply. They move the existing workflows and folders on the target instance to the project that the branch holds them in, so they keep their ID, version history, and executions there. An instance apply overwrites every team project on the target, so see [Instance apply](apply-changes.md#instance-apply) first.
+**Workaround:** use an instance promote and instance apply. They move the existing workflows and folders on the target instance to the project that the branch holds them in, so workflows keep their ID, version history, and executions there. An instance apply overwrites every team project on the target, so see [Instance apply](apply-changes.md#instance-apply) first.
 
 ## Project-specific environments
 

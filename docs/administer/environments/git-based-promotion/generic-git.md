@@ -35,7 +35,7 @@ Environments are in Preview and may change in future releases. Try them on test 
 3. Select **Continue**, then **Copy deploy key**.
 4. On your Git host, add the key to the repository as a deploy key with write access.
 
-Bitbucket Cloud only offers read-only repository access keys, so connect to Bitbucket Cloud with a username and access token, or add the deploy key to a Bitbucket account instead of the repository.
+Bitbucket Cloud only offers read-only repository access keys, so connect to Bitbucket Cloud with a username and access token, or add the deploy key to a Bitbucket account instead of the repository. An account key gives n8n access to every repository that account can access, so use a dedicated account.
 
 Use an SSH repository URL that starts with `ssh://`, such as `ssh://git@github.com/acme/n8n.git`.
 
@@ -49,7 +49,7 @@ To replace the key, edit the provider and select **Generate a new key**. Add the
 
 Use an HTTPS repository URL without credentials in it, such as `https://github.com/acme/n8n.git`.
 
-### Access the token needs
+### What access the token needs
 
 Generic Git only runs Git commands. It doesn't call your Git host's API. The token needs read and write access to the repository's code. If you push each promote to a feature branch, it also needs permission to create branches.
 

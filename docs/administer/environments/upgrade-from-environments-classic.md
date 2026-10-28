@@ -19,7 +19,7 @@ Environments improve on and replace [Environments (Classic)](../use-source-contr
 Environments are in Preview and may change in future releases. Try them on test instances before you set them up for your production instances.
 {% endhint %}
 
-## Which one an instance uses
+## Which version an instance uses
 
 - New instances with Environments available start on Environments.
 - Instances already connected to Environments (Classic) stay on Classic until you upgrade them in **Settings** > **Environments (Classic)**.
@@ -35,8 +35,8 @@ Upgrading doesn't change the workflows, credentials, variables, or data on your 
 | Model | The instance pushes to and pulls from one branch. | The instance promotes to one environment and applies from another. Each can use its own repository and branch. |
 | Git hosts | Any Git host over SSH or HTTPS. | Any Git host through Generic Git, as in Classic. GitLab adds repository and branch lists, and promotion reviews. |
 | Reviews | Manually on the Git host. | Promotion reviews in n8n with a visual diff, based on merge requests that n8n opens on GitLab. |
-| Selecting changes | You choose what to push. Pull brings in everything. | You choose changes in both directions with a project promote or project apply, or move everything with an instance promote or instance apply. |
-| Dependencies | You select workflows and data tables. n8n adds tags, and credential and variable stubs. | n8n includes what the selected workflows use. |
+| Selecting changes | You choose what to push. Pull brings in everything. | You choose changes in both directions with a project promote or project apply, or move all team projects with an instance promote or instance apply. |
+| Dependencies | You select workflows, credentials, and data tables. n8n adds tags and variable stubs. | n8n includes what the selected workflows use. |
 | Before changes land | Pull can overwrite local changes after you confirm. | Apply checks for blockers first and asks you to confirm destructive changes. |
 | Credentials | Stubs without values. | Must exist on the target, or you create them during Apply, with expression values pre-filled. |
 | Who can use it | Instance owners and admins. Project admins can push. | Instance owners and admins. |
@@ -56,7 +56,7 @@ For everything Environments don't support yet, see [Known limitations](known-lim
 
 ## Upgrade your instances
 
-Before you upgrade, stop or switch any CI pipelines that call the Classic endpoints of the public API. They keep working after the upgrade, because upgrading only changes what the UI shows.
+Before you upgrade, stop or switch any CI pipelines that call the Classic endpoints of the public API. Upgrading only changes what the UI shows, so those endpoints keep running Classic push and pull. Switch them to the promotion endpoints.
 
 Upgrade the source instance first, then the target:
 
@@ -66,7 +66,7 @@ Upgrade the source instance first, then the target:
 
 Try this on test instances first. Your Classic setup stays connected in the background, so you can switch back.
 
-## Upgrade an instance that Classic pulled to
+## Upgrade a target instance that Classic pulled to
 
 {% hint style="warning" %}
 Projects that Classic created on a target instance, such as production, have different IDs from the matching projects on the source instance. Apply matches projects by ID, so the first instance apply lists those projects under **Projects to delete** and creates the source's projects next to them.

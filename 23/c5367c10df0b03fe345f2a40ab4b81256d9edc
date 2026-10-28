@@ -1,0 +1,19 @@
+docs/administer/manage-users-and-access/verify-user-identity/use-saml/troubleshoot-saml.md
+  s_73047f233c1ac5::t_07c006d5d6d66d 25
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "23c5367c10df0b03fe345f2a40ab4b81256d9edc",
+  "prompts": {},
+  "sessions": {
+    "s_73047f233c1ac5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "69d22485-9284-4be7-a24e-81c8ecec0f9e",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Andreas Fitzek <andreas.fitzek@n8n.io>"
+    }
+  }
+}

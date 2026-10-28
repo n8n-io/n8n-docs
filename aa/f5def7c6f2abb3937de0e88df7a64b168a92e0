@@ -1,0 +1,19 @@
+docs/administer/manage-users-and-access/control-node-availability.md
+  s_7cdb89f588e694::t_81f52df36fd238 154-163
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "aaf5def7c6f2abb3937de0e88df7a64b168a92e0",
+  "prompts": {},
+  "sessions": {
+    "s_7cdb89f588e694": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "63c871c4-efcd-480a-bd70-cb3b79991c02",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Olivier de Jong <olivier.dejong@n8n.io>"
+    }
+  }
+}

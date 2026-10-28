@@ -1,0 +1,21 @@
+docs/administer/environments/git-based-promotion/README.md
+  s_8ec7bfed268277::t_e31a409e59af73 43
+docs/administer/environments/git-based-promotion/gitlab.md
+  s_8ec7bfed268277::t_e31a409e59af73 14,29,31,33-53
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "1b95365fb8c5716efe641cbc9f7534e788979230",
+  "prompts": {},
+  "sessions": {
+    "s_8ec7bfed268277": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b9ff11b4-095e-4619-830d-c574ab65583e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jan K. <jan.kalkan@n8n.io>"
+    }
+  }
+}

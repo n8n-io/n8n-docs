@@ -1,0 +1,57 @@
+docs/administer/environments/git-based-promotion/gitlab.md
+  s_8ec7bfed268277::t_647a73d90db707 1-37,39-59,61-63,65-67,69-74
+  s_8ec7bfed268277::t_b4d7725dbc5eef 38
+  s_8ec7bfed268277::t_46c703f97f9b58 60
+  s_8ec7bfed268277::t_473f78c4f4c9ed 64,68
+docs/administer/environments/set-up-environments.md
+  s_8ec7bfed268277::t_473f78c4f4c9ed 71
+  s_8ec7bfed268277::t_8bdee9373b1438 1-70,72-79
+docs/administer/environments/promote-changes.md
+  s_8ec7bfed268277::t_c65852e7f0e2e0 1-87
+docs/contribute/contribution-guide-for-n8n-docs/terminology.md
+  s_8ec7bfed268277::t_4284c7b29f9577 127-134
+docs/administer/use-source-control-and-environments/README.md
+  s_8ec7bfed268277::t_850070265ebd3a 20-25
+docs/administer/SUMMARY.md
+  s_8ec7bfed268277::t_e1ae017b63c71e 28-39
+docs/administer/environments/plan-your-environments.md
+  s_8ec7bfed268277::t_99fc68379397a4 1-57,59-71
+  s_8ec7bfed268277::t_473f78c4f4c9ed 58
+docs/administer/environments/review-promotions.md
+  s_8ec7bfed268277::t_e6e92e9a85cec3 1-30,32-51,53-63
+  s_8ec7bfed268277::t_473f78c4f4c9ed 31,52
+docs/administer/environments/known-limitations.md
+  s_8ec7bfed268277::t_962e205e7507b3 1-13,15-68,70-76,78,84-96
+  s_8ec7bfed268277::t_70a75aa4533d7d 77,79-80,82-83
+  s_8ec7bfed268277::t_086b0c9998c59c 81
+  s_8ec7bfed268277::t_473f78c4f4c9ed 14,69
+docs/administer/environments/apply-changes.md
+  s_8ec7bfed268277::t_75fe742a43c9d3 1-62,64-71,73-75,77-91
+  s_8ec7bfed268277::t_473f78c4f4c9ed 63,72,76
+docs/administer/environments/switch-from-environments-classic.md
+  s_8ec7bfed268277::t_739808e978eddb 1-69
+docs/administer/environments/git-based-promotion/generic-git.md
+  s_8ec7bfed268277::t_7fd9a5eb2a48b0 1-56
+docs/administer/environments/README.md
+  s_8ec7bfed268277::t_6c09764a7a9a37 1-42,44-68,70-96
+  s_8ec7bfed268277::t_473f78c4f4c9ed 43
+  s_8ec7bfed268277::t_03f86ce49abe9f 69
+docs/administer/environments/git-based-promotion/README.md
+  s_8ec7bfed268277::t_12e1061df590b3 1-74
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "0406e7a967b275d3288807d8a942487c1eaa6c96",
+  "prompts": {},
+  "sessions": {
+    "s_8ec7bfed268277": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b9ff11b4-095e-4619-830d-c574ab65583e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jan K. <jan.kalkan@n8n.io>"
+    }
+  }
+}

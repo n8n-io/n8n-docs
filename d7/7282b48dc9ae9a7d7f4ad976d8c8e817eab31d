@@ -1,0 +1,23 @@
+docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglevertex.md
+  s_e99de54a53d3e4::t_ad4e7824daf3f7 37-40
+docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglevertex.md
+  s_e99de54a53d3e4::t_ad4e7824daf3f7 38-41
+docs/integrations/builtin/credentials/googlevertexai.md
+  s_e99de54a53d3e4::t_ad4e7824daf3f7 30-33,40,43-45,56
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d77282b48dc9ae9a7d7f4ad976d8c8e817eab31d",
+  "prompts": {},
+  "sessions": {
+    "s_e99de54a53d3e4": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a11e9d-276c-7820-8033-49b70e62dd41",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Robin Braumann <robin.braumann@n8n.io>"
+    }
+  }
+}

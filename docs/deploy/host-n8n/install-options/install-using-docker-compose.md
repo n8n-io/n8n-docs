@@ -31,8 +31,6 @@ layout:
 
 This guide walks through building your own Docker Compose setup by hand, including the sandbox stack that powers n8n Assistant. Use it if you want full control over your configuration, or need to fold n8n into an existing Compose project.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 If you just want n8n (and n8n Assistant) running quickly without writing any files yourself, use the [one-line setup](one-line-setup.md) instead. It sets up everything below automatically.
 
 ## What you need before you start

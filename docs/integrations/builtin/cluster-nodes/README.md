@@ -20,8 +20,6 @@ layout:
 
 Each cluster starts with one [root node](#user-content-fn-1)[^1].
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Sub-nodes <a href="#sub-nodes" id="sub-nodes"></a>
 
 Each root node can have one or more sub-nodes[^2] attached to it.

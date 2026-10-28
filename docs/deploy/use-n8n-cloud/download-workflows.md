@@ -15,8 +15,6 @@ layout:
 
 n8n Cloud instance owners can download their workflows from an n8n Cloud backup in the [n8n Cloud console](use-the-cloud-console.md). n8n creates backups automatically. They contain workflows only, never credentials.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## How to download workflows <a href="#how-to-download-workflows" id="how-to-download-workflows"></a>
 
 1. Open the [Cloud console](use-the-cloud-console.md).

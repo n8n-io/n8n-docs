@@ -22,8 +22,6 @@ From n8n 2.47.0, if the instance is protected (read-only), n8n blocks every tool
 
 ---
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Workflow management <a href="#workflow-management" id="workflow-management"></a>
 
 ### search_workflows <a href="#searchworkflows" id="searchworkflows"></a>

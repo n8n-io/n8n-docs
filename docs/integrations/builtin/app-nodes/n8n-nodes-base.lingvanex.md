@@ -27,8 +27,6 @@ On this page, you'll find a list of operations the LingvaNex node supports and l
 Refer to [LingvaNex credentials](../credentials/lingvanex.md) for guidance on setting up authentication.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Operations <a href="#operations" id="operations"></a>
 
 - Translate data

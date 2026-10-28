@@ -1,0 +1,25 @@
+docs/build/understand-workflows/understand-executions/README.md
+  s_93cde57f292ab5::t_0c2375cdb3d210 71,73,75
+docs/administer/manage-credentials/use-personal-credentials-in-projects.md
+  s_93cde57f292ab5::t_db7780f772f460 80,82
+  s_93cde57f292ab5::t_5ff01ed9ef028d 69
+  s_93cde57f292ab5::t_4bb2c631994b16 54,56,58
+docs/changelog/README.md
+  s_93cde57f292ab5::t_64d779f83c78b8 49,51,53-56
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "eb3cfb98efe6d1cf3253e89f29ccb25202d4e386",
+  "prompts": {},
+  "sessions": {
+    "s_93cde57f292ab5": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "a6177927-a004-4f7d-8a00-181a8df87c7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Yuliia Pominchuk <yuliia.pominchuk@n8n.io>"
+    }
+  }
+}

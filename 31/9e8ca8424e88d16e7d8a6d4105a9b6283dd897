@@ -1,0 +1,9 @@
+docs/administer/environments/git-based-promotion/gitlab.md
+  ai_agent 52
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "319e8ca8424e88d16e7d8a6d4105a9b6283dd897",
+  "prompts": {}
+}

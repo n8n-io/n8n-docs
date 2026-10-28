@@ -1,0 +1,11 @@
+docs/administer/environments/known-limitations.md
+  ai_agent 68-71
+docs/administer/environments/promotion-reviews.md
+  ai_agent 66
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "b06e14d8ec454e0672f06332efce85f40823d259",
+  "prompts": {}
+}

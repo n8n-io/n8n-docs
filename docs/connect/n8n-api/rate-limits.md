@@ -14,9 +14,8 @@ n8n can limit how many public API requests each API key makes. A request over a 
 
 Rate limiting for the n8n API is available from n8n 2.45.0 on:
 
-- **Self-hosted:** All editions
-
-It's off by default. On n8n Cloud, rate limiting is off.
+- **Self-hosted:** All editions. It's off by default.
+- **n8n Cloud:** Not available yet.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}

@@ -34,6 +34,7 @@
       * [Deploy to Google Kubernetes](host-n8n/install-options/use-a-cloud-provider/deploy-to-google-kubernetes.md)
       * [Deploy to OpenShift Local (CRC)](host-n8n/install-options/use-a-cloud-provider/deploy-to-openshift-local-crc.md)
       * [Use Docker Compose](host-n8n/install-options/use-a-cloud-provider/use-docker-compose.md)
+    * [Production requirements](host-n8n/install-options/production-requirements.md)
   * [Configure n8n](host-n8n/configure-n8n/README.md)
     * [Basic configuration](host-n8n/configure-n8n/basic-configuration.md)
       * [Use environment variables](host-n8n/configure-n8n/basic-configuration/use-environment-variables/README.md)

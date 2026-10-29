@@ -22,5 +22,3 @@ layout:
 * [Accessing linked items in the Code node](accessing-linked-items-in-the-code-node.md)
 * [Preserving linking in the Code node](preserving-linking-in-the-code-node.md)
 * [Item linking errors](item-linking-errors.md)
-
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}

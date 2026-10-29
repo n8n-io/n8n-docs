@@ -18,7 +18,7 @@ For security reasons, you may want to block your users from accessing or working
 
 Use the `NODES_EXCLUDE` environment variable to prevent your users from accessing specific nodes.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+To block nodes per project, or without restarting n8n, use [node type policies](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/control-node-availability) instead. `NODES_EXCLUDE` stops n8n from loading a node at all, so it's the stronger option for nodes that must never run.
 
 ## Exclude nodes <a href="#exclude-nodes" id="exclude-nodes"></a>
 

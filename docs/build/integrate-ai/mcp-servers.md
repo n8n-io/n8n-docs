@@ -11,11 +11,9 @@ n8n's node panel includes a registry of [Model Context Protocol (MCP)](https://m
 
 You can also connect MCP servers in the registry to [n8n Assistant](../ways-of-building-workflows/n8n-assistant.md).
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Add a registry server to an agent
 
-1. Open the tools panel on an [AI Agent](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) node in the canvas (by clicking on "Tool +"), or in [Build and manage agents](../build-and-manage-agents.md#add-tools) by clicking on "Add Tool".
+1. Open the tools panel on an [AI Agent](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/) node in the canvas (by clicking on "Tool +"), or in [Build and manage agents](../build-and-manage-agents/README.md#add-tools) by clicking on "Add Tool".
 2. Search for the service you want to connect with the search bar (such as Notion or Linear) or click the "MCP Servers" section to view all available servers.
 3. Select the server, then sign in when prompted.
 4. Choose which of the server's tools to expose to the agent with "Tools to include": all, a selected list, or all except a selected list.
@@ -26,7 +24,7 @@ n8n creates an [MCP credential](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/b
 
 The list of registry servers changes often. Browse the current list in the node panel instead of relying on a static list here.
 
-Some servers need setup on the provider's side before you can connect, and have their own page. Refer to [Databricks Genie MCP server](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie) for the OAuth scope an admin must add and the agent settings Genie needs. For Supabase, follow the [Supabase OAuth2 credential setup](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/supabase#using-oauth2), including the application permissions required by the Supabase MCP server.
+Some servers need setup on the provider's side before you can connect, and have their own page. Refer to [Databricks Genie One MCP server](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie) for the OAuth scope an admin must add and the agent settings Genie needs. For Supabase, follow the [Supabase OAuth2 credential setup](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/supabase#using-oauth2), including the application permissions required by the Supabase MCP server.
 
 If the server you want isn't in the registry yet, use the [MCP Client Tool](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp/) node to connect to any MCP server manually with its connection URL and credentials.
 

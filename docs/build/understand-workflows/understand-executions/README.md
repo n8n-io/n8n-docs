@@ -14,8 +14,6 @@ layout:
 
 An execution is a single run of a workflow.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## In this section
 
 * [Manual, partial, and production executions](types-of-executions.md): how manual, partial, and production executions differ.
@@ -67,6 +65,12 @@ n8n supports [adding custom data to executions](customize-executions-data.md).
 ## Execution data redaction <a href="#execution-data-redaction" id="execution-data-redaction"></a>
 
 You can redact execution data to protect sensitive information. Redaction hides the input and output data of workflow executions while preserving execution metadata like status, timing, and node names. Refer to [Execution data redaction](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/redact-execution-data) for details.
+
+## Execution data from credentials you can't use
+
+If an execution used a credential you can't use, n8n hides its data from you. You still see the execution's status and timing. This includes data that came back from a sub-workflow that used the credential, even when the parent workflow doesn't use it itself. The same rules apply to executions you read through the public API or the n8n MCP server.
+
+Refer to [Use personal credentials in projects](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/use-personal-credentials-in-projects#execution-data-from-credentials-you-cant-use) for details.
 
 ## Related resources
 

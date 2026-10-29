@@ -1,5 +1,5 @@
 ---
-description: Manage your n8n Cloud trial, plan, and instance, including the admin dashboard and updates.
+description: Manage your n8n Cloud trial, plan, and instance, including the n8n Cloud console and updates.
 layout:
   description:
     visible: false
@@ -8,18 +8,16 @@ layout:
 
 Manage your n8n Cloud trial, plan, and instance.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## In this section
 
 * [Try free then choose a plan](start-your-free-trial.md): start a free trial, then compare the Starter, Pro, and Enterprise plans.
-* [Use the admin dashboard](use-the-admin-dashboard.md): access the Cloud admin dashboard.
+* [Use the Cloud console](use-the-cloud-console.md): open the n8n Cloud console, where you manage your instance, plan, billing, and credits.
 * [Update your version](update-your-version.md): update your n8n version on Cloud.
 * [Configure Cloud](configure-cloud/README.md): set your timezone, find your IP addresses, and manage your data.
 * [Gateway credits](gateway-credits/README.md): use AI models and third-party services without provider accounts or API keys.
 * [Assistant credits](assistant-credits/README.md): understand the monthly n8n Assistant allowance in your plan and buy extra credits.
 * [Understand concurrency](understand-concurrency.md): how n8n Cloud handles concurrent executions.
-* [Download workflows](download-workflows.md): download workflows from n8n Cloud with the admin dashboard.
+* [Download workflows](download-workflows.md): download workflows from an n8n Cloud backup in the Cloud console.
 
 ## Related resources
 

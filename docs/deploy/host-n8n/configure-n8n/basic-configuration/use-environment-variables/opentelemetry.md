@@ -35,6 +35,7 @@ n8n can export workflow and node execution traces over OTLP to an OpenTelemetry 
 | `N8N_OTEL_EXPORTER_SERVICE_NAME` | String | `n8n` | Value of the `service.name` resource attribute on exported spans. | 2.19.0 |
 | `N8N_OTEL_TRACES_SAMPLE_RATE` | Number | `1.0` | Fraction of traces to export, between `0` and `1`. n8n uses a trace ID ratio sampler, so all spans in a trace are either sampled or dropped together. | 2.19.0 |
 | `N8N_OTEL_TRACES_INCLUDE_NODE_SPANS` | Boolean | `true` | Whether to emit a `node.execute` span for each node execution. Set to `false` to export workflow-level spans only. | 2.19.0 |
+| `N8N_OTEL_TRACES_CUSTOM_ATTRIBUTE_PREFIXES` | String | - | JSON object that changes or removes the prefix on custom span attribute keys, for example `{"project":"","node":""}`. Refer to [Change the attribute prefixes](../../../keep-n8n-running/trace-executions-with-opentelemetry.md#change-the-attribute-prefixes). | 2.46.0 |
 | `N8N_OTEL_TRACES_EMIT_WORKFLOW_START_SPAN` | Boolean | `false` | Whether to send a 0 ms `workflow.execute.started` span when a workflow execution starts. Refer to [Start spans](../../../keep-n8n-running/trace-executions-with-opentelemetry.md#start-spans). | 2.44.0 |
 | `N8N_OTEL_TRACES_EMIT_NODE_START_SPAN` | Boolean | `false` | Whether to send a 0 ms `node.execute.started` span when a node execution starts. Needs `N8N_OTEL_TRACES_INCLUDE_NODE_SPANS` set to `true`. Refer to [Start spans](../../../keep-n8n-running/trace-executions-with-opentelemetry.md#start-spans). | 2.44.0 |
 | `N8N_OTEL_TRACES_PRODUCTION_ONLY` | Boolean | `true` | Whether to export traces for [production executions](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/understand-executions/types-of-executions) only. Set to `false` to export traces for all workflow executions. | 2.25.2 |
@@ -43,8 +44,6 @@ n8n can export workflow and node execution traces over OTLP to an OpenTelemetry 
 | `N8N_AGENTS_TRACING_ENABLED` | Boolean | `true` | Whether agent runs emit OpenTelemetry spans. Inherits the endpoint, headers, sampling, and transport settings from `N8N_OTEL_*`. Spans have nowhere to go until you configure an OTel provider, so set this to `false` to run workflow tracing without agent spans. | 2.33.0 |
 | `N8N_AGENTS_TRACING_RECORD_INPUTS` | Boolean | `true` | Whether agent tracing records inputs, such as prompts and tool arguments. Set to `false` to exclude sensitive input data from traces. | 2.33.0 |
 | `N8N_AGENTS_TRACING_RECORD_OUTPUTS` | Boolean | `true` | Whether agent tracing records outputs, such as responses and tool results. Set to `false` to exclude sensitive output data from traces. | 2.33.0 |
-
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
 
 ## Related resources
 

@@ -39,8 +39,6 @@ You can use these credentials to authenticate the following nodes:
 * [Chat Ollama](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama/README.md)
 * [Embeddings Ollama](../cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsollama.md)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create and run an [Ollama](https://ollama.com/) instance with one user. Refer to the Ollama [Quick Start](https://github.com/ollama/ollama/blob/main/README.md#quickstart) for more information.
@@ -70,8 +68,6 @@ Refer to [How do I configure Ollama server?](https://github.com/ollama/ollama/bl
 
 ### Ollama and self-hosted n8n <a href="#ollama-and-self-hosted-n8n" id="ollama-and-self-hosted-n8n"></a>
 
-If you're self-hosting n8n on the same machine as Ollama, you may run into issues if they're running in different containers.
+If Ollama and n8n run in separate Docker containers, connect both containers to the same user-defined bridge network. Set **Base URL** to `http://<ollama-container>:11434`. Replace `<ollama-container>` with your Ollama container's name. For example, for a container with the name `ollama`, use `http://ollama:11434`.
 
-For this setup, open a specific port for n8n to communicate with Ollama by setting the `OLLAMA_ORIGINS` variable or adjusting `OLLAMA_HOST` to an address the other container can access.
-
-Refer to Ollama's [How can I allow additional web origins to access Ollama?](https://docs.ollama.com/faq#how-can-i-allow-additional-web-origins-to-access-ollama) for more information.
+For the setup steps, refer to [Ollama Chat Model node common issues](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatollama/common-issues.md#if-ollama-and-n8n-are-running-in-separate-docker-containers).

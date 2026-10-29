@@ -37,47 +37,41 @@ Upgrading doesn't change the workflows, credentials, variables, or data on your 
 | Git hosts | Any Git host over SSH or HTTPS. | Any Git host through Generic Git, as in Classic. GitLab adds repository and branch lists, and promotion reviews. |
 | Reviews | Manually on the Git host. | Promotion reviews in n8n with a visual diff, based on merge requests that n8n opens on GitLab. |
 | Selecting changes | You choose what to push. Pull brings in everything. | You choose changes in both directions with a project promote or project apply, or move all team projects with an instance promote or instance apply. |
-| Dependencies | You select workflows, credentials, and data tables. n8n adds tags and variable stubs. | n8n includes what the selected workflows use. |
+| Dependencies | You select workflows, credentials, and data tables. n8n adds tags and variable stubs. | n8n includes everything the selected workflows use. Selecting dependencies yourself is planned. |
 | Before changes land | Pull can overwrite local changes after you confirm. | Apply checks for blockers first and asks you to confirm destructive changes. |
 | Credentials | Stubs without values. | Must exist on the target, or you create them during Apply, with expression values pre-filled. |
-| Variables | Stubs without values. | Written to the repository with their values. Must exist on the target, or you create them during Apply, with the value pre-filled. |
-| Who can use it | Instance owners and admins. Project admins can push. | Instance owners and admins. |
+| Variables | Stubs without values. | Written to the repository with their values. n8n can't redact variable values, so keep secrets in credentials, not in variables. Must exist on the target, or you create them during Apply, with the value pre-filled. |
+| Who can use it | Instance owners and admins. Project admins can push. | Instance owners and admins. Support for project admins in project promotes and project applies is planned. |
 | Personal projects | Included. | Not included. |
-| Automation | Source control endpoints in the public API, and a pull command in the n8n CLI. | Promotion endpoints in the public API, and promotion commands in the n8n CLI. Classic's endpoints and commands don't work with Environments. |
+| Automation | Source control endpoints in the public API, and a pull command in the n8n CLI. | Promotion endpoints in the public API, and promotion commands in the n8n CLI. Classic's endpoints and commands are incompatible with Environments, so don't mix them. |
 
 ## Classic features Environments don't support yet
 
 Environments don't cover everything Environments (Classic) does yet. Check these before you upgrade:
 
 - **Personal projects:** Classic includes them. Environments promote team projects only.
-- **Project admins:** in Classic, project admins can push. In Environments, only instance owners and instance admins can promote and apply.
-- **Auto publish:** Classic can publish workflows when you pull. Apply doesn't change whether a workflow is published.
+- **Project admins:** in Classic, project admins can push. In Environments, only instance owners and instance admins can promote and apply. Support for project admins in project promotes and project applies is planned.
+- **Auto publish:** Classic can publish workflows when you pull. Apply doesn't change whether a workflow is published. Auto publish is planned.
 - **Instance color:** Classic lets you set a color for the instance. Environments don't have this setting.
-- **Credentials and data tables on their own:** Classic can push a credential or data table by itself. Environments promote them only as dependencies of a workflow.
+- **Selecting dependencies:** Classic lets you push credentials and data tables on their own. Environments include every dependency of the selected workflows, and you can't select dependencies yourself. Selecting dependencies is planned.
 - **Workflow descriptions:** Classic syncs them. Environments don't.
 - **Credential settings:** Classic syncs whether a credential is shared with all users and projects, and whether each user connects their own account to it. Environments don't, so set these options again on the target instance.
 
-For everything Environments don't support yet, see [Known limitations](known-limitations.md).
+{% hint style="info" %}
+Environments also have limitations that don't relate to Classic. See [Known limitations](known-limitations.md).
+{% endhint %}
 
 ## Upgrade your instances
 
-Before you upgrade, stop or switch any CI pipelines that call the Classic endpoints of the public API. Upgrading only changes what the UI shows, so those endpoints keep running Classic push and pull. Switch them to the promotion endpoints.
+Try this on test instances first. Your Classic setup stays connected in the background, so you can switch back.
+
+Before you upgrade, stop or switch any CI pipelines that call the Classic endpoints of the public API. Upgrading only changes what the UI shows, so those endpoints keep running Classic push and pull. Don't mix them with Environments, and switch your pipelines to the promotion endpoints. n8n plans to block the Classic endpoints on instances that use Environments.
 
 Upgrade the source instance first, then the target:
 
 1. On the source instance, go to **Settings** > **Environments (Classic)**, select **Upgrade**, and confirm.
 2. Set up the environment it promotes changes to, and promote. See [First promote and apply](set-up-environments.md#first-promote-and-apply).
-3. On the target instance, upgrade the same way, set up the environment it applies changes from, and apply.
-
-Try this on test instances first. Your Classic setup stays connected in the background, so you can switch back.
-
-## What happens to the content on the target instance
-
-Classic pull keeps the source's IDs for team projects, workflows, credentials, variables, and data tables. Apply matches projects, workflows, credentials, and data tables by ID too, so on a target instance that Classic pulled to, the first instance apply updates them in place. Workflows keep their version history and executions. Existing variables keep their values, and existing credentials keep their secrets.
-
-{% hint style="warning" %}
-Projects that someone created by hand on the target instance have different IDs from the projects with the same name on the source. The first instance apply creates the source's projects next to them and lists the hand-made ones under **Projects to delete**. Check that list before you confirm. You can't undo the deletion, so first move the workflows you still need into a project that stays.
-{% endhint %}
+3. On the target instance, upgrade the same way, set up the environment it applies changes from, and apply. Classic pull kept the source's IDs, so the first apply updates the existing content in place. See [Apply to an instance that already has content](set-up-environments.md#apply-to-an-instance-that-already-has-content).
 
 ## Switch back to Environments (Classic)
 

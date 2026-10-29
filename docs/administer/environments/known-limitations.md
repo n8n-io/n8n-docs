@@ -64,9 +64,9 @@ Promote doesn't include a workflow's description.
 
 **Workaround:** update the description on the target instance.
 
-## Credentials, variables, and data tables on their own
+## Selecting dependencies
 
-You can't select credentials, variables, or data tables on their own. They travel as dependencies of the selected workflows.
+n8n includes every credential, variable, data table, and tag that the selected workflows use. You can't select dependencies yourself, and you can't promote a credential, variable, or data table on its own. Selecting dependencies is planned.
 
 **Workaround:** promote a workflow that uses them.
 

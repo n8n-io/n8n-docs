@@ -40,7 +40,7 @@ Create a personal, group, or project access token with the `api` and `write_repo
 
 Use a fine-grained personal access token if your GitLab version supports them.
 
-1. In GitLab, select your avatar, then **Edit profile**. In the left sidebar, go to **Access** > **Personal access tokens**, and from the **Generate token** dropdown list, choose **Fine-grained token**.
+1. In GitLab, start a new fine-grained personal access token. See [Fine-grained personal access tokens](https://docs.gitlab.com/auth/tokens/fine_grained_access_tokens/) in the GitLab docs.
 2. Under **Group and project access**, select **Only specific groups or projects that I'm a member of**, and add the repository's project or its group.
 3. Under **Add resource permissions**, add every resource in the following table, and select its permissions. The token needs all of them. In the resource selector, each resource sits on a **Resource access** tab and in a category.
 4. Select **Generate token**, and copy the token.

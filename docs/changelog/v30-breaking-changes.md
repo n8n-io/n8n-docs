@@ -27,9 +27,16 @@ layout:
 
 # v3.0 Breaking changes
 
-n8n 3.0 is releasing soon, and with it come some important changes. This document highlights breaking changes and actions you should take to prepare for the transition. These updates improve security, simplify configuration, and remove legacy features.
 
-Before you upgrade, open the Migration Report at **Settings > Migration Report**. It lists the workflows and instance settings on your own instance that need attention, so you don't have to check every change on this page by hand.
+n8n 3.0 comes with some important changes. This document highlights breaking changes and actions you should take to prepare for the transition. These updates improve security, simplify configuration, and remove legacy features.
+
+{% hint style="info" %}
+**Early access release**
+
+n8n 3.0.0 is currently available as an early access release.
+{% endhint %}
+
+Before you upgrade, use the [n8n 3.0 migration tool](v30-migration-tool.md) at **Settings > Migration Report**. It lists the workflows and instance settings on your own instance that need attention, so you don't have to check every change on this page by hand.
 
 ## Deployment <a href="#deployment" id="deployment"></a>
 
@@ -158,6 +165,14 @@ n8n 3.0 removes the `$evaluateExpression()` convenience method from the [Code](h
 Version 1 of the **AI Agent** node supported several agent type modes, including **SQL Agent**, **Conversational Agent**, **OpenAI Functions Agent**, **Plan and Execute Agent**, and **ReAct Agent**. n8n 3.0 removes version 1 of the node, along with these modes.
 
 **What to do:** Update any workflows and templates that use version 1 of the [AI Agent](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent) node to the latest version. The latest version replaces all the removed modes with **Tools Agent**, and workflows already set to **Tools Agent** continue to behave the same after you update. For **SQL Agent** use cases, replace it with a [Postgres](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.postgres) or [MySQL](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.mysql) tool sub-node paired with a recent **AI Agent** node.
+
+### Edit Image node: Node versions 1 and 1.1 removed
+
+n8n 3.0 removes support for deprecated node versions 1 and 1.1 of the [Edit Image](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.editimage) node. Workflows that still use these versions fail with an error until you upgrade the node.
+
+Node version 2 uses a different image-processing library, so image output can change. The migration converts blur settings, but removes **Sigma**. Text placement can change. **Get Information** returns a normalized result. PNG and TIFF output ignores the **Quality** setting. Resize operations with zero or negative dimensions fail.
+
+**What to do:** Before you upgrade, go to **Settings > Migration Report** to identify affected workflows. Migrate them from the report, or update each **Edit Image** node to node version 2 by hand. Then test the output, especially workflows that blur or resize images, add text, read image information, or set PNG or TIFF quality.
 
 ## Behavior changes
 

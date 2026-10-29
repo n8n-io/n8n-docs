@@ -21,8 +21,6 @@ Too many concurrent executions can cause performance degradation and unresponsiv
 
 Any executions beyond the limits queue for later processing. These executions remain in the queue until concurrency capacity frees up, and are then processed in FIFO order. 
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Concurrency limits <a href="#concurrency-limits" id="concurrency-limits"></a>
 
 n8n limits the number of concurrent executions for Cloud instances according to their plan. Refer to [Pricing](https://n8n.io/pricing/) for details.
@@ -54,7 +52,7 @@ Concurrency in queue mode is a separate mechanism from concurrency in regular mo
 
 * [Use n8n Cloud](./)
 * [Try free then choose a plan](start-your-free-trial.md)
-* [Use the admin dashboard](use-the-admin-dashboard.md)
+* [Use the Cloud console](use-the-cloud-console.md)
 * [Update your version](update-your-version.md)
 * [Configure Cloud](configure-cloud/README.md)
 * [Gateway credits](gateway-credits/README.md)

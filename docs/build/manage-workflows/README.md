@@ -7,8 +7,6 @@ layout:
 
 Configure, tag, share, and maintain your workflows as they grow.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## In this section
 
 * [Configure workflow settings](configure-workflow-settings.md): manage settings for an individual workflow.
@@ -24,7 +22,7 @@ Configure, tag, share, and maintain your workflows as they grow.
 
 * [Build](../)
 * [Understand workflows](../understand-workflows/README.md)
-* [Build and manage agents](../build-and-manage-agents.md)
+* [Build and manage agents](../build-and-manage-agents/README.md)
 * [Ways of building workflows](../ways-of-building-workflows/README.md)
 * [Flow logic](../flow-logic/README.md)
 * [Work with data](../work-with-data/README.md)

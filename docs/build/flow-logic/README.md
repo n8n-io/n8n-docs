@@ -15,8 +15,6 @@ layout:
 
 n8n allows you to represent complex logic in your workflows.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## In this section <a href="#in-this-section" id="in-this-section"></a>
 
 * [Split with conditionals](split-with-conditionals.md): route items down different branches with the IF and Switch nodes.
@@ -45,7 +43,7 @@ When building your logic, you'll use n8n's [Core nodes](https://app.gitbook.com/
 
 * [Build](../)
 * [Understand workflows](../understand-workflows/README.md)
-* [Build and manage agents](../build-and-manage-agents.md)
+* [Build and manage agents](../build-and-manage-agents/README.md)
 * [Ways of building workflows](../ways-of-building-workflows/README.md)
 * [Manage workflows](../manage-workflows/README.md)
 * [Work with data](../work-with-data/README.md)

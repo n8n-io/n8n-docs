@@ -291,8 +291,6 @@ layout:
 
 Uses the workflow’s time zone (which can be changed in the workflow settings).
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 **Syntax:** **`$now`**
 
 **Returns:** DateTime

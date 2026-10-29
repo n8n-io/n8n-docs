@@ -31,8 +31,6 @@ Watch an overview of OpenTelemetry tracing in n8n:
 
 {% embed url="https://www.youtube.com/embed/xOi8K_-GLRM" %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## What you get <a href="#what-you-get" id="what-you-get"></a>
 
 When you turn on tracing, n8n exports two kinds of spans for each execution:
@@ -314,7 +312,7 @@ Don't include secrets, personal data, or other sensitive values in attribute val
 
 n8n supports the following custom attribute levels:
 
-| Level | Configure in | Exported span | Attribute prefix |
+| Level | Configure in | Exported span | Default attribute prefix |
 | :---- | :----------- | :------------ | :--------------- |
 | Project | **Project settings** | `workflow.execute` | `n8n.project.custom.<key>` |
 | Workflow | **Workflow settings** | `workflow.execute` | `n8n.workflow.custom.<key>` |
@@ -372,11 +370,59 @@ async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
 }
 ```
 
-n8n prefixes each key with `n8n.node.custom.` on the exported span. Values must be strings, numbers, or boolean.
+By default, n8n prefixes each key with `n8n.node.custom.`. You can [change the attribute prefixes](#change-the-attribute-prefixes). Values must be strings, numbers, or boolean.
 
 This API isn't available from the Code node. It's intended for node authors who want to enrich spans with domain-specific data.
 
 If a node sets an attribute key here that's also configured as a [custom node span attribute](#add-node-span-attributes), the programmatic value takes precedence.
+
+### Change the attribute prefixes
+
+{% hint style="info" %}
+**Feature availability**
+
+Custom attribute prefixes are available from n8n 2.46.0.
+{% endhint %}
+
+n8n adds a prefix to custom attribute keys. To change or remove the prefix, set `N8N_OTEL_TRACES_CUSTOM_ATTRIBUTE_PREFIXES` to a JSON object. The object accepts these keys, each with a string value:
+
+| Key | Sets the prefix for | Default prefix |
+| :-- | :------------------ | :------------- |
+| `project` | Project attributes | `n8n.project.custom.` |
+| `workflow` | Workflow attributes | `n8n.workflow.custom.` |
+| `node` | Node attributes | `n8n.node.custom.` |
+
+An empty string removes the prefix. A key you leave out keeps its default prefix. Set the same value on the main instance, workers, and webhook processors.
+
+To remove both prefixes and use attribute names exactly as entered in the UI:
+
+```bash
+# A project attribute named team becomes team
+export N8N_OTEL_TRACES_CUSTOM_ATTRIBUTE_PREFIXES='{"project":"","node":""}'
+```
+
+Set custom prefixes:
+
+```bash
+# A project attribute named team becomes acme.project.team
+export N8N_OTEL_TRACES_CUSTOM_ATTRIBUTE_PREFIXES='{"project":"acme.project.","node":"acme.node."}'
+```
+
+Change only one prefix:
+
+```bash
+# A project attribute named team becomes acme.team
+# Node attributes keep their default prefix
+export N8N_OTEL_TRACES_CUSTOM_ATTRIBUTE_PREFIXES='{"project":"acme."}'
+```
+
+If the value isn't valid JSON, uses any other key, or has a non-string value, n8n logs a warning and uses the default prefixes for all levels.
+
+{% hint style="warning" %}
+**OpenTelemetry standard attributes**
+
+n8n doesn't check custom keys against the [OpenTelemetry semantic conventions](https://opentelemetry.io/docs/specs/semconv/). If your key matches a standard attribute, such as `user.id` or `http.request.method`, your backend reads your value as that attribute. Avoid standard keys unless your value has the standard meaning.
+{% endhint %}
 
 ## Try it out with Jaeger <a href="#try-it-out-with-jaeger" id="try-it-out-with-jaeger"></a>
 
@@ -513,6 +559,7 @@ Check that:
 - You have an Enterprise license.
 - You set `N8N_OTEL_ENABLED` to `true`.
 - For node-level span attributes, `N8N_OTEL_TRACES_INCLUDE_NODE_SPANS` isn't set to `false`.
+- If you set `N8N_OTEL_TRACES_CUSTOM_ATTRIBUTE_PREFIXES`, search for the new key. n8n drops keys that match built-in attributes. Refer to [Change the attribute prefixes](#change-the-attribute-prefixes).
 
 ### A crashed execution has no span
 

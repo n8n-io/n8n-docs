@@ -24,8 +24,6 @@ layout:
 
 Create a [CrowdStrike](https://www.crowdstrike.com/en-us/) account.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Authentication methods <a href="#authentication-methods" id="authentication-methods"></a>
 
 - OAuth2

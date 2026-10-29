@@ -23,8 +23,6 @@ layout:
 
 This page describes n8n's data privacy practices.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## GDPR <a href="#gdpr" id="gdpr"></a>
 
 ### Data processing agreement <a href="#data-processing-agreement" id="data-processing-agreement"></a>
@@ -43,7 +41,14 @@ For self-hosted versions, n8n is neither a Controller nor a Processor, as we don
 
 ### Submitting an account deletion request <a href="#submitting-an-account-deletion-request" id="submitting-an-account-deletion-request"></a>
 
-Email [help@n8n.io](mailto:help@n8n.io) to make an account deletion request.
+On n8n Cloud, the instance owner can delete their account in the [n8n Cloud console](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/use-the-cloud-console):
+
+1. Select **Instance settings**.
+1. In the **Danger zone** section, select **Delete account**.
+1. If your account has an active subscription, n8n asks you to cancel it first. Select **Cancel subscription** and complete the cancellation.
+1. Type your account email address to confirm, then select **Delete account**.
+
+You can also email [help@n8n.io](mailto:help@n8n.io) to make an account deletion request.
 
 ### Sub-processors <a href="#sub-processors" id="sub-processors"></a>
 
@@ -139,7 +144,7 @@ Everything above applies to n8n Cloud as well, with three differences.
 
 **You cannot switch telemetry off.** There is no opt-out for Cloud and no setting in the interface.
 
-**The IP address we see is different.** For anything your Cloud instance sends, the address belongs to our infrastructure rather than to you. For the Cloud dashboard in your browser, it is your network's address, truncated in the same way as above.
+**The IP address we see is different.** For anything your Cloud instance sends, the address belongs to our infrastructure rather than to you. For the Cloud console in your browser, it's your network's address, truncated in the same way as above.
 
 **We record sessions in the n8n interface.** On Cloud only, we capture what happens on screen while you use n8n, so we can see where the product is confusing. Credential values are never recorded. Recordings are deleted after 21 days. 
 
@@ -182,7 +187,7 @@ n8n deletes most internal application logs and logs tied to sub-processors withi
 
 #### PID deletion <a href="#pid-deletion" id="pid-deletion"></a>
 
-If you delete your n8n account from the Cloud dashboard, n8n deletes the workflow, credential, user, and execution data associated with your account on the same day, and removes it from backups within 90 days.
+If you delete your n8n account in the Cloud console, n8n deletes the workflow, credential, user, and execution data associated with your account on the same day, and removes it from backups within 90 days.
 
 If your account is closed without a deletion request, n8n deletes your customer data within 100 days of closure, with backups deleted within 90 days.
 

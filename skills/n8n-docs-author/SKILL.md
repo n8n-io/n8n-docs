@@ -236,11 +236,12 @@ See [reference.md](reference.md) for full examples and rules.
   readiness (some Enterprise capabilities don't cover it yet). Separate from
   Preview, so never fold the two together; stack the hints. An Enterprise ready
   feature carries nothing, so add no hint. Name the feature in the first
-  sentence, list the Enterprise capabilities it's ready for (add **Full** or
+  sentence, list the Enterprise capabilities it supports (add **Full** or
   **Partial** after each name if levels differ; if they're all the same, say so
-  in the sentence), then say it isn't currently ready for the other Enterprise
-  capabilities, linking to the list. Say "readiness", not "support". Don't list
-  unsupported capabilities or say whether n8n plans to close a gap. No visual
+  in the sentence), then say other Enterprise capabilities either don't apply
+  or it doesn't support them yet, and link to the list in Understand feature
+  availability. Don't list unsupported or non-applicable capabilities or say
+  whether n8n plans to close a gap. No visual
   tag or `status:` field. A feature not available on Enterprise at all gets a
   **Feature availability** hint instead. See [reference.md](reference.md) for
   the standard hint.

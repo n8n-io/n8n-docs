@@ -560,29 +560,29 @@ not `**Feature availability**` or `**Preview status**`. Model it on the n8n
 Assistant page:
 
 - Name the feature in the first sentence.
-- List the Enterprise capabilities the feature is ready for, in a bullet list,
+- List the Enterprise capabilities the feature supports, in a bullet list,
   using the names from the [Enterprise capabilities](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#enterprise-capabilities)
   list.
 - If every listed capability has the same level of readiness, say so in the
-  sentence ("is partially ready for these Enterprise capabilities") and list the
+  sentence ("partially supports the following Enterprise capabilities") and list the
   names alone, as on the n8n Assistant page. If the levels differ, put **Full**
   or **Partial** after each name, as in the example below.
-- End with a sentence saying the feature isn't currently ready for the other
-  Enterprise capabilities, linking "Enterprise capabilities" to that list. Don't
-  list the unsupported capabilities, and don't say whether n8n plans to close a
-  gap.
-- Say "readiness", not "support", when you describe a capability's status.
+- End with a sentence saying other Enterprise capabilities either don't apply
+  to the feature or it doesn't support them yet, followed by "See [Understand
+  feature availability](link) for the full list of Enterprise capabilities."
+  Don't list the unsupported or non-applicable capabilities, and don't say
+  whether n8n plans to close a gap.
 
 ```markdown
 {% hint style="info" %}
 **Limited enterprise readiness**
 
-The Example feature has Limited enterprise readiness. Its readiness for the Enterprise capabilities it covers:
+The Example feature has Limited enterprise readiness. It supports the following Enterprise capabilities:
 
 - **SSO:** Full
 - **External secrets:** Partial
 
-The Example feature isn't currently ready for the other [Enterprise capabilities](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#enterprise-capabilities).
+Other Enterprise capabilities either don't apply to the Example feature or it doesn't support them yet. See [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#enterprise-capabilities) for the full list of Enterprise capabilities.
 {% endhint %}
 ```
 

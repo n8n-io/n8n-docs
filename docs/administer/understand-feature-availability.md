@@ -153,17 +153,17 @@ This is the full list of Enterprise capabilities. n8n assesses each feature agai
 
 Docs show nothing for an Enterprise ready feature, so a feature with no label is Enterprise ready.
 
-If a feature has Limited enterprise readiness, its page carries a **Limited enterprise readiness** hint. The hint names the feature and lists the Enterprise capabilities it's ready for, with its level of readiness right now: **Full** or **Partial**. It then says the feature isn't currently ready for the other Enterprise capabilities.
+If a feature has Limited enterprise readiness, its page carries a **Limited enterprise readiness** hint. The hint names the feature and lists the Enterprise capabilities it supports, with its level of readiness right now: **Full** or **Partial**. It then says the other Enterprise capabilities either don't apply to the feature or it doesn't support them yet, and links to the full list.
 
 {% hint style="info" %}
 **Limited enterprise readiness**
 
-The Example feature has Limited enterprise readiness. Its readiness for the Enterprise capabilities it covers:
+The Example feature has Limited enterprise readiness. It supports the following Enterprise capabilities:
 
 - **SSO:** Full
 - **External secrets:** Partial
 
-The Example feature isn't currently ready for the other [Enterprise capabilities](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#enterprise-capabilities).
+Other Enterprise capabilities either don't apply to the Example feature or it doesn't support them yet. See [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#enterprise-capabilities) for the full list of Enterprise capabilities.
 {% endhint %}
 
 A feature that isn't available on Enterprise at all doesn't carry this label. That's a plan or platform limit, see [Feature availability by plan](#feature-availability-by-plan).

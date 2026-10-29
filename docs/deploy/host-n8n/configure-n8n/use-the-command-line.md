@@ -162,7 +162,7 @@ Set the active status of a workflow by its ID to true:
 n8n update:workflow --id=<ID> --active=true
 ```
 
-This publishes the current version of the workflow, with the same checks and limits as [`publish:workflow`](use-the-command-line.md#publish-a-workflow).
+This publishes the current version of the workflow, with the same checks and limits as [`publish:workflow`](#publish-a-workflow).
 
 Set the active status to false for all the workflows:
 

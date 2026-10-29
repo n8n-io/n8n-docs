@@ -36,7 +36,7 @@ n8n 3.0 comes with some important changes. This document highlights breaking cha
 n8n 3.0.0 is currently available as an early access release.
 {% endhint %}
 
-Before you upgrade, open the Migration Report at **Settings > Migration Report**. It lists the workflows and instance settings on your own instance that need attention, so you don't have to check every change on this page by hand.
+Before you upgrade, use the [n8n 3.0 migration tool](v30-migration-tool.md) at **Settings > Migration Report**. It lists the workflows and instance settings on your own instance that need attention, so you don't have to check every change on this page by hand.
 
 ## Deployment <a href="#deployment" id="deployment"></a>
 

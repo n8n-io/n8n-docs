@@ -16,8 +16,6 @@ layout:
 
 Self-host with Docker Compose:
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 * [DigitalOcean](deploy-to-digital-ocean.md): self-host n8n on a DigitalOcean droplet with a real domain and automatic HTTPS.
 * [Heroku](deploy-to-heroku.md): self-host n8n on Heroku.
 * [Hetzner Cloud](deploy-to-hetzner.md): self-host n8n on a Hetzner Cloud server.

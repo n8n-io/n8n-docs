@@ -30,8 +30,6 @@ Here are some templates and examples for the [Remove Duplicates node](README.md)
 The examples included in this section are a sequence. Follow from one to another to avoid unexpected results.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Templates <a href="#templates" id="templates"></a>
 
 

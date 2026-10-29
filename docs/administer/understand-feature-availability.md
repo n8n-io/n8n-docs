@@ -163,7 +163,7 @@ The Example feature has Limited enterprise readiness. Its readiness for the Ente
 - **SSO:** Full
 - **External secrets:** Partial
 
-The Example feature isn't currently ready for the other [Enterprise capabilities](#enterprise-capabilities).
+The Example feature isn't currently ready for the other [Enterprise capabilities](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#enterprise-capabilities).
 {% endhint %}
 
 A feature that isn't available on Enterprise at all doesn't carry this label. That's a plan or platform limit, see [Feature availability by plan](#feature-availability-by-plan).

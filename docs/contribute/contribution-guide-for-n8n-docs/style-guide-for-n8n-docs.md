@@ -326,7 +326,7 @@ Follow the [numbers guidance](#numbers-dates-and-times), plus for n8n instance v
 
 ### Preview status
 
-For what Preview means, and how it differs from GA, deprecated, and removed, see [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#feature-maturity-preview-ga-deprecated-and-removed).
+A Preview feature may change in breaking ways, including API shapes, exports, node parameters, or execution outcomes, and n8n may remove it. Don't rely on it in production workflows. For the full lifecycle, see [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#feature-maturity-preview-ga-deprecated-and-removed).
 
 Capitalize "Preview" as the maturity label ("is in Preview", "a Preview feature", "In Preview from n8n 2.20.0"). Use "Preview", not "beta". Leave unrelated senses of the word (a link preview, a UI preview action) lowercase. Frontmatter and tag values stay lowercase (`status: preview`, `tag: preview`) as literal identifiers, not prose.
 
@@ -373,7 +373,7 @@ For what Enterprise ready and Limited enterprise readiness mean, and how they di
 
 Write "Enterprise ready" for a feature that meets every Enterprise requirement that applies to it, and "Limited enterprise readiness" (lowercase "enterprise", the literal label in the n8n interface) for one that doesn't. An Enterprise ready feature carries nothing in the docs, so don't add a hint for it. A feature that isn't available on Enterprise at all doesn't carry this label. That's a plan or platform limit, so use a **Feature availability** hint instead.
 
-**Page or section:** title the hint `**Limited enterprise readiness**`, not `**Feature availability**` or `**Preview status**`. Use the n8n Assistant page as the model:
+**Page or section:** title the hint `**Limited enterprise readiness**`, not `**Feature availability**` or `**Preview status**`.
 
 * Name the feature in the first sentence.
 * List the Enterprise capabilities the feature is ready for, in a bullet list. Use the names from the [Enterprise capabilities](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#enterprise-capabilities) list.

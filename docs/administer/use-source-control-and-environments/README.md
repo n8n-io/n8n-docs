@@ -20,7 +20,7 @@ layout:
 {% hint style="info" %}
 **New version available**
 
-These pages cover Environments (Classic). For the new version, in Preview and available on the same plans, see [Environments](../environments/README.md). To compare the versions and upgrade an instance, see [Upgrade from Environments (Classic)](../environments/upgrade-from-environments-classic.md).
+These pages cover Environments (Classic). For the new version, in Preview and available on Enterprise plans, see [Environments](../environments/README.md). To compare the versions and upgrade an instance, see [Upgrade from Environments (Classic)](../environments/upgrade-from-environments-classic.md).
 {% endhint %}
 
 n8n uses Git-based source control to support environments. Linking your n8n instances to a Git repository lets you create multiple n8n environments, backed by Git branches.

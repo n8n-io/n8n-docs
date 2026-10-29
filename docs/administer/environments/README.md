@@ -18,10 +18,8 @@ Environments let you move workflows and other n8n resources, such as credentials
 
 Environments are available on:
 
-- **n8n Cloud:** Business, Enterprise
-- **Self-hosted:** Business, Enterprise
-
-Every plan that includes Environments (Classic) also includes Environments.
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Enterprise
 
 Only instance owners and instance admins can set up environments, promote, apply, and review promotions.
 {% endhint %}

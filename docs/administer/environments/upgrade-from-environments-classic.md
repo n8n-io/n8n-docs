@@ -21,13 +21,13 @@ Environments are in Preview and may change in future releases. Try them on test 
 
 ## Which version an instance uses
 
-- New instances with Environments available start on Environments.
-- Instances already connected to Environments (Classic) stay on Classic until you upgrade them in **Settings** > **Environments (Classic)**.
-- Environments are available on every plan that includes Environments (Classic), so every instance on Classic can upgrade.
+- Environments are available on Enterprise plans. Other plans keep Environments (Classic).
+- Instances connected to Environments (Classic) stay on Classic until you upgrade them in **Settings** > **Environments (Classic)**.
+- Every other instance starts on Environments.
 
 ## What stays and what starts over
 
-Upgrading doesn't change the workflows, credentials, variables, or data on your instances. Only the Git side starts over: Classic and Environments store content in Git in different formats, so you can't apply a Classic repository with Environments. Set up environments with a new repository or branch.
+Upgrading doesn't change the workflows, credentials, variables, or data on your instances. Only the Git side starts over: Classic and Environments store content in Git in different formats, so Apply can't read what Classic pushed. While Environments can technically share a repository with Classic content, n8n recommends a new or empty repository or branch.
 
 ## Compare Classic and Environments
 
@@ -39,21 +39,22 @@ Upgrading doesn't change the workflows, credentials, variables, or data on your 
 | Selecting changes | You choose what to push. Pull brings in everything. | You choose changes in both directions with a project promote or project apply, or move all team projects with an instance promote or instance apply. |
 | Dependencies | You select workflows, credentials, and data tables. n8n adds tags and variable stubs. | n8n includes everything the selected workflows use. Selecting dependencies yourself is planned. |
 | Before changes land | Pull can overwrite local changes after you confirm. | Apply checks for blockers first and asks you to confirm destructive changes. |
-| Credentials | Stubs without values. | Must exist on the target, or you create them during Apply, with expression values pre-filled. |
-| Variables | Stubs without values. | Written to the repository with their values. n8n can't redact variable values, so keep secrets in credentials, not in variables. Must exist on the target, or you create them during Apply, with the value pre-filled. |
+| Credentials | Stubs without values. | Must exist on the target, or you create them during Apply. |
+| Variables | Stubs without values. | Written to the repository with their values. Must exist on the target, or you create them during Apply. |
 | Who can use it | Instance owners and admins. Project admins can push. | Instance owners and admins. Support for project admins in project promotes and project applies is planned. |
 | Personal projects | Included. | Not included. |
-| Automation | Source control endpoints in the public API, and a pull command in the n8n CLI. | Promotion endpoints in the public API, and promotion commands in the n8n CLI. Classic's endpoints and commands are incompatible with Environments, so don't mix them. |
+| Automation | Source control endpoints in the public API, and a pull command in the n8n CLI. | Promotion endpoints in the public API, and promotion commands in the n8n CLI. |
 
 ## Classic features Environments don't support yet
 
 Environments don't cover everything Environments (Classic) does yet. Check these before you upgrade:
 
-- **Personal projects:** Classic includes them. Environments promote team projects only.
+- **Personal projects:** Classic includes them. Environments promote team projects only, and support for personal projects isn't planned.
 - **Project admins:** in Classic, project admins can push. In Environments, only instance owners and instance admins can promote and apply. Support for project admins in project promotes and project applies is planned.
 - **Auto publish:** Classic can publish workflows when you pull. Apply doesn't change whether a workflow is published. Auto publish is planned.
 - **Instance color:** Classic lets you set a color for the instance. Environments don't have this setting.
 - **Selecting dependencies:** Classic lets you push credentials and data tables on their own. Environments include every dependency of the selected workflows, and you can't select dependencies yourself. Selecting dependencies is planned.
+- **Cross-project moves:** Classic pull moves workflows to the project they belong to in Git. A project promote or project apply can't move workflows or folders between projects, so use an instance promote and instance apply. See [Moving workflows and folders between projects](known-limitations.md#moving-workflows-and-folders-between-projects).
 - **Workflow descriptions:** Classic syncs them. Environments don't.
 - **Credential settings:** Classic syncs whether a credential is shared with all users and projects, and whether each user connects their own account to it. Environments don't, so set these options again on the target instance.
 

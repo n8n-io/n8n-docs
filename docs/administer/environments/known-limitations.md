@@ -66,7 +66,7 @@ Promote doesn't include a workflow's description.
 
 ## Selecting dependencies
 
-n8n includes every credential, variable, data table, and tag that the selected workflows use. You can't select dependencies yourself, and you can't promote a credential, variable, or data table on its own. Selecting dependencies is planned.
+n8n includes every credential, variable, data table, and tag that the selected workflows use, except credentials owned by a personal project. You can't select dependencies yourself, and you can't promote a credential, variable, data table, or tag on its own. Selecting dependencies is planned.
 
 **Workaround:** promote a workflow that uses them.
 

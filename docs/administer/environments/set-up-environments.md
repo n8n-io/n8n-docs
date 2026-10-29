@@ -24,7 +24,7 @@ Environments are in Preview and may change in future releases. Try them on test 
 ## Prerequisites
 
 - You're an instance owner or instance admin.
-- Your instance is on a Business or Enterprise plan.
+- Your instance is on an Enterprise plan.
 - You have a Git repository and a way to authenticate: n8n generates an SSH key that you add to the repository as a deploy key or to a Git account, or you use an account with an access token. You need write access to promote and read access to apply. See your provider's page under [Git-based promotion](git-based-promotion/README.md).
 
 On self-hosted n8n:
@@ -78,10 +78,10 @@ Apply matches projects, workflows, credentials, and data tables by ID. What the 
 The apply level decides what happens to content that isn't on the branch:
 
 - **Instance apply:** makes every team project match the branch. After you confirm, it deletes projects that aren't on the branch, such as projects created by hand.
-- **Project apply:** changes only the workflows you select in one project, and never deletes projects. Start with the projects that others depend on, such as a project with shared sub-workflows or credentials. See [Cross-project dependencies](known-limitations.md#cross-project-dependencies).
+- **Project apply:** changes only the workflows you select in one project and their dependencies, and never deletes projects. Start with the projects that others depend on, such as a project with shared sub-workflows or credentials. See [Cross-project dependencies](known-limitations.md#cross-project-dependencies).
 
 {% hint style="warning" %}
-You can't undo an instance apply. Before you confirm, check every project under **Projects to delete**, and move the workflows you still need into a project that stays. On a new target, run the instance apply before people start working there.
+You can't undo an instance apply. It deletes workflows that aren't on the branch, even in projects that stay, and it deletes the projects under **Projects to delete**. Before you confirm, review the changes, and download the workflows you still need. On a new target, run the instance apply before people start working there.
 {% endhint %}
 
 ## Edit or remove an environment

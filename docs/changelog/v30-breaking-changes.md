@@ -27,7 +27,14 @@ layout:
 
 # v3.0 Breaking changes
 
-n8n 3.0 is releasing soon, and with it come some important changes. This document highlights breaking changes and actions you should take to prepare for the transition. These updates improve security, simplify configuration, and remove legacy features.
+
+n8n 3.0 comes with some important changes. This document highlights breaking changes and actions you should take to prepare for the transition. These updates improve security, simplify configuration, and remove legacy features.
+
+{% hint style="info" %}
+**Early access release**
+
+n8n 3.0.0 is currently available as an early access release.
+{% endhint %}
 
 Before you upgrade, use the [n8n 3.0 migration tool](v30-migration-tool.md) at **Settings > Migration Report**. It lists the workflows and instance settings on your own instance that need attention, so you don't have to check every change on this page by hand.
 

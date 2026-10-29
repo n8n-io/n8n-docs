@@ -1017,6 +1017,10 @@ n8n 3.0 is a major release with breaking changes. Before you upgrade, read [n8n 
 
 **Released:** 2025-12-08
 
+{% hint style="warning" %}
+n8n 2.0 is a major release with breaking changes. Before you upgrade, read [n8n 2.0 breaking changes](v20-breaking-changes.md) and use the [migration tool](v20-migration-tool.md) to find the workflows and settings that need attention.
+{% endhint %}
+
 * [Automizy Node Remove Automizy node](https://github.com/n8n-io/n8n/pull/22471): The Automizy node and its credential type have been removed from n8n, as the Automizy service has been shut down. Workflows using the Automizy node will need to be updated to use an alternative service, since it is no longer available in n8n.
 * [Crowd.dev node Remove crowd.dev node](https://github.com/n8n-io/n8n/pull/22469): The crowd.dev node, crowd.dev Trigger node, and crowd.dev API credential have been removed from n8n, as the third-party crowd.dev service has been retired. Workflows using these nodes will no longer function and should be migrated away from crowd.dev integrations.
 * [Kitemaker node Remove Kitemaker node](https://github.com/n8n-io/n8n/pull/22470): The Kitemaker node and its credential have been removed from n8n, as the Kitemaker service has been retired by its provider. Workflows using the Kitemaker node will no longer function and should be migrated away from this integration.

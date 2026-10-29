@@ -163,7 +163,7 @@ The Example feature has Limited enterprise readiness. It supports the following 
 - **SSO:** Full
 - **External secrets:** Partial
 
-Other Enterprise capabilities either don't apply to the Example feature or it doesn't support them yet. See [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#enterprise-capabilities) for the full list of Enterprise capabilities.
+Other Enterprise capabilities either don't apply to the Example feature or it doesn't support them yet. See [Understand feature availability](#enterprise-capabilities) for the full list of Enterprise capabilities.
 {% endhint %}
 
 A feature that isn't available on Enterprise at all doesn't carry this label. That's a plan or platform limit, see [Feature availability by plan](#feature-availability-by-plan).

@@ -23,7 +23,7 @@ Environments are in Preview and may change in future releases. Try them on test 
 
 - New instances with Environments available start on Environments.
 - Instances already connected to Environments (Classic) stay on Classic until you upgrade them in **Settings** > **Environments (Classic)**.
-- Environments require an Enterprise plan. Instances on a Business or Startup plan stay on Environments (Classic) and don't show **Upgrade**.
+- Environments are available on every plan that includes Environments (Classic), so every instance on Classic can upgrade.
 
 ## What stays and what starts over
 
@@ -33,7 +33,6 @@ Upgrading doesn't change the workflows, credentials, variables, or data on your 
 
 | | Environments (Classic) | Environments |
 |---|---|---|
-| Plans | Business, Startup, and Enterprise. | Enterprise. |
 | Model | The instance pushes to and pulls from one branch. | The instance promotes to one environment and applies from another. Each can use its own repository and branch. |
 | Git hosts | Any Git host over SSH or HTTPS. | Any Git host through Generic Git, as in Classic. GitLab adds repository and branch lists, and promotion reviews. |
 | Reviews | Manually on the Git host. | Promotion reviews in n8n with a visual diff, based on merge requests that n8n opens on GitLab. |
@@ -41,7 +40,7 @@ Upgrading doesn't change the workflows, credentials, variables, or data on your 
 | Dependencies | You select workflows, credentials, and data tables. n8n adds tags and variable stubs. | n8n includes what the selected workflows use. |
 | Before changes land | Pull can overwrite local changes after you confirm. | Apply checks for blockers first and asks you to confirm destructive changes. |
 | Credentials | Stubs without values. | Must exist on the target, or you create them during Apply, with expression values pre-filled. |
-| Variables | Stubs without values. | Must exist on the target, or you create them during Apply, with the value from the source pre-filled. Variable values are written to the repository. |
+| Variables | Stubs without values. | Written to the repository with their values. Must exist on the target, or you create them during Apply, with the value pre-filled. |
 | Who can use it | Instance owners and admins. Project admins can push. | Instance owners and admins. |
 | Personal projects | Included. | Not included. |
 | Automation | Source control endpoints in the public API, and a pull command in the n8n CLI. | Promotion endpoints in the public API, and promotion commands in the n8n CLI. Classic's endpoints and commands don't work with Environments. |
@@ -55,8 +54,8 @@ Environments don't cover everything Environments (Classic) does yet. Check these
 - **Auto publish:** Classic can publish workflows when you pull. Apply doesn't change whether a workflow is published.
 - **Instance color:** Classic lets you set a color for the instance. Environments don't have this setting.
 - **Credentials and data tables on their own:** Classic can push a credential or data table by itself. Environments promote them only as dependencies of a workflow.
-- **Workflow descriptions:** Classic syncs them. Promote doesn't include them.
-- **Credential settings:** Classic syncs whether a credential is global or available to end users. Environments don't, so set these on the target instance.
+- **Workflow descriptions:** Classic syncs them. Environments don't.
+- **Credential settings:** Classic syncs whether a credential is shared with all users and projects, and whether each user connects their own account to it. Environments don't, so set these on the target instance.
 
 For everything Environments don't support yet, see [Known limitations](known-limitations.md).
 
@@ -74,10 +73,10 @@ Try this on test instances first. Your Classic setup stays connected in the back
 
 ## What happens to the content on the target instance
 
-Classic pull matches team projects, workflows, credentials, variables, and data tables by ID, so a target instance that Classic pulled to has the same IDs as the source. Apply matches projects, workflows, credentials, and data tables by ID too, so the first instance apply updates them in place, and workflows keep their version history and executions. Apply finds the existing variables by name, keeps their values, and keeps the credential secrets.
+Classic pull keeps the source's IDs for team projects, workflows, credentials, variables, and data tables. Apply matches projects, workflows, credentials, and data tables by ID too, so on a target instance that Classic pulled to, the first instance apply updates them in place. Workflows keep their version history and executions. Existing variables keep their values, and existing credentials keep their secrets.
 
 {% hint style="warning" %}
-Projects that someone created by hand on the target instance have different IDs from the projects with the same name on the source. The first instance apply creates the source's projects next to them and lists the hand-made ones under **Projects to delete**. Check that list before you confirm, and move anything you still need.
+Projects that someone created by hand on the target instance have different IDs from the projects with the same name on the source. The first instance apply creates the source's projects next to them and lists the hand-made ones under **Projects to delete**. Check that list before you confirm. You can't undo the deletion, so first move the workflows you still need into a project that stays.
 {% endhint %}
 
 ## Switch back to Environments (Classic)
@@ -90,6 +89,7 @@ Switching back affects only this instance. You can upgrade again at any time.
 ## Things to check after you upgrade
 
 - **Protected instance** is one setting for Classic and Environments. Changing it in one changes it in the other.
+- Variables now go to the repository with their values. Before your first promote, move any secrets from variables into credentials.
 - Classic accepts SSH repository URLs like `git@github.com:acme/n8n.git`. Environments need the `ssh://` form, such as `ssh://git@github.com/acme/n8n.git`.
 
 ## Related resources

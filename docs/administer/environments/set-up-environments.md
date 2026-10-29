@@ -24,7 +24,7 @@ Environments are in Preview and may change in future releases. Try them on test 
 ## Prerequisites
 
 - You're an instance owner or instance admin.
-- Your instance is on an Enterprise plan.
+- Your instance is on a Business or Enterprise plan.
 - You have a Git repository and a way to authenticate: n8n generates an SSH key that you add to the repository as a deploy key or to a Git account, or you use an account with an access token. You need write access to promote and read access to apply. See your provider's page under [Git-based promotion](git-based-promotion/README.md).
 
 On self-hosted n8n:
@@ -84,7 +84,20 @@ Removing an environment doesn't change the Git repository. If no other environme
 
 On instances that only apply changes, such as production, turn on **Protected instance** in **Settings** > **Environments**.
 
-**Protected instance** stops people from editing workflows and creating resources in the UI, such as workflows, credentials, projects, folders, variables, and data tables. It also blocks manual workflow runs and changes to data table columns. Triggers and schedules keep running. People can still edit existing credentials, variable values, and data table rows, create missing credentials and variables while they resolve Apply blockers, and publish and unpublish workflows. The instance can still promote and apply. The public API still allows most other changes.
+**Protected instance** stops people from doing these things in the UI:
+
+- Edit workflows, or create workflows, credentials, projects, folders, variables, or data tables.
+- Run workflows manually. Published workflows still run from their triggers.
+- Change data table columns.
+
+People can still:
+
+- Edit existing credentials, variable values, and data table rows.
+- Create missing credentials and variables while they resolve Apply blockers.
+- Publish and unpublish workflows.
+- Promote and apply.
+
+The public API still allows most other changes.
 
 Environments (Classic) uses the same setting. Turning it on or off changes it for both.
 

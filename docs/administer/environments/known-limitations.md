@@ -72,7 +72,7 @@ You can't select credentials, variables, or data tables on their own. They trave
 
 ## Credential settings
 
-Promote doesn't include whether a credential is global or available to end users.
+Promote doesn't include whether a credential is shared with all users and projects, or whether each user connects their own account to it.
 
 **Workaround:** set these on the target instance.
 

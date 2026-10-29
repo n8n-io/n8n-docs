@@ -1,5 +1,5 @@
 ---
-description: Understand what Preview, Limited enterprise support, GA, deprecated, and removed mean for n8n features, how n8n versioning works, and how plan, platform, and role limits apply.
+description: Understand what Preview, Limited enterprise readiness, GA, deprecated, and removed mean for n8n features, how n8n versioning works, and how plan, platform, and role limits apply.
 layout:
   description:
     visible: false
@@ -8,16 +8,17 @@ layout:
 # Understand feature availability
 
 Whether you have access to an n8n feature depends on your **plan**, **platform**, and **n8n version**.
-To what extent you can rely on it depends on its maturity status (**Preview**, **GA**, **deprecated**, or **removed**) and, for Enterprise setups, whether it is **Enterprise ready** or has **Limited enterprise support**.
+To what extent you can rely on it depends on its maturity status (**Preview**, **GA**, **deprecated**, or **removed**) and, for Enterprise setups, whether it is **Enterprise ready** or has **Limited enterprise readiness**.
 
 This page explains:
 
 * How platform and plan limits apply
 * What each maturity status means, and where it sits in a feature's lifecycle
-* What Limited enterprise support means, and how it differs from Preview
+* What Limited enterprise readiness means, and how it differs from Preview
+* How Preview and Limited enterprise readiness relate to Beta Features in your agreement
 * How n8n versioning works
 
-Each of these has its own label or hint in n8n docs, for example a **Feature availability** hint, a **Preview status** hint, or a **Limited enterprise support** hint, so you'll recognize the same information wherever a page states it.
+Each of these has its own label or hint in n8n docs, for example a **Feature availability** hint, a **Preview status** hint, or a **Limited enterprise readiness** hint, so you'll recognize the same information wherever a page states it.
 
 ## Feature availability by platform
 
@@ -109,20 +110,20 @@ Preview and Deprecated show as a label in the n8n interface. Preview labels appe
 
 A removed feature doesn't appear in the interface. If a workflow relied on it, check the breaking changes page for the version you updated to.
 
-## Enterprise readiness: Limited enterprise support
+## Enterprise readiness
 
-Separately from maturity, a feature can have **Limited enterprise support**. This status concerns [Enterprise plan](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/choose-how-to-use-n8n#decision-2-choose-a-plan-or-edition) admins. It tells them that some Enterprise capabilities don't cover the feature yet. These capabilities include SSO, RBAC, audit logging, environments, multi-main mode, external secrets, and the public API.
+Separately from maturity, a feature can have **Limited enterprise readiness**. This status concerns [Enterprise plan](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/choose-how-to-use-n8n#decision-2-choose-a-plan-or-edition) admins. It tells them that some Enterprise capabilities don't cover the feature yet. These capabilities include SSO, RBAC, audit logging, environments, multi-main mode, external secrets, and the public API.
 
 There are two states:
 
 * **Enterprise ready**: every Enterprise requirement that applies to the feature is met.
-* **Limited enterprise support**: at least one applicable Enterprise requirement isn't met yet.
+* **Limited enterprise readiness**: at least one applicable Enterprise requirement isn't met yet.
 
-### How Preview and Limited enterprise support differ
+### How Preview and Limited enterprise readiness differ
 
-The two statuses are independent. A feature can be GA and have Limited enterprise support, or be in Preview and fully Enterprise ready, although that combination is rare.
+The two statuses are independent. A feature can be GA and have Limited enterprise readiness, or be in Preview and fully Enterprise ready, although that combination is rare.
 
-| | Preview | Limited enterprise support |
+| | Preview | Limited enterprise readiness |
 |---|---|---|
 | **Question it answers** | Might n8n make breaking changes to this feature, or remove it? | Do all the Enterprise capabilities that apply to this feature work with it? |
 | **Who sees it** | Everyone | Enterprise admins |
@@ -130,7 +131,7 @@ The two statuses are independent. A feature can be GA and have Limited enterpris
 | **Where it appears** | The feature's own surface, its settings entry, docs, and API reference | Next to the admin toggle and in docs |
 | **When it's removed** | When n8n no longer plans breaking changes or removal | When every applicable Enterprise requirement is met |
 
-A gap in Enterprise support doesn't make a feature Preview. For example, a feature without multi-main support isn't in Preview, and users who don't run multi-main mode aren't affected.
+A gap in Enterprise readiness doesn't make a feature Preview. For example, a feature without multi-main support isn't in Preview, and users who don't run multi-main mode aren't affected.
 
 ### Enterprise capabilities
 
@@ -152,12 +153,12 @@ n8n assesses each feature against these Enterprise capabilities, where they appl
 
 Docs show nothing for an Enterprise ready feature, so a feature with no label is Enterprise ready.
 
-If a feature has Limited enterprise support, its page carries a **Limited enterprise support** hint. The hint names the feature and lists each Enterprise capability that applies to it, with the level of support right now: **Full**, **Partial**, or **None**.
+If a feature has Limited enterprise readiness, its page carries a **Limited enterprise readiness** hint. The hint names the feature and lists each Enterprise capability that applies to it, with the level of support right now: **Full**, **Partial**, or **None**.
 
 {% hint style="info" %}
-**Limited enterprise support**
+**Limited enterprise readiness**
 
-The Example feature has Limited enterprise support. Current support for each Enterprise capability that applies to it:
+The Example feature has Limited enterprise readiness. Current support for each Enterprise capability that applies to it:
 
 - **SSO:** Full
 - **Log streaming:** Partial
@@ -169,7 +170,13 @@ A feature that isn't available on Enterprise at all doesn't carry this label. Th
 
 ### Enterprise readiness in the product
 
-The n8n interface likewise shows nothing for an Enterprise ready feature. A feature with Limited enterprise support carries a **Limited enterprise support** label in the n8n interface, wherever you encounter its toggle. On Enterprise plans, a feature that's in Preview or has Limited enterprise support should be off by default. Admins turn it on from the settings page, or with an environment variable on self-hosted instances. The Preview and Limited enterprise support labels appear next to the toggle, so you can make an informed choice before you enable the feature.
+The n8n interface likewise shows nothing for an Enterprise ready feature. A feature with Limited enterprise readiness carries a **Limited enterprise readiness** label in the n8n interface, wherever you encounter its toggle. On Enterprise plans, a feature that's in Preview or has Limited enterprise readiness should be off by default. Admins turn it on from the settings page, or with an environment variable on self-hosted instances. The Preview and Limited enterprise readiness labels appear next to the toggle, so you can make an informed choice before you enable the feature.
+
+## How Preview and Limited enterprise readiness relate to Beta Features in your agreement
+
+Your agreement with n8n refers to "Beta Features". A feature labeled Preview or Limited enterprise readiness is a Beta Feature. n8n provides it as is, and you use it at your own risk until n8n removes the label.
+
+This is separate from the Beta release track on n8n Cloud, which only controls when your workspace receives new releases. See [Feature availability by n8n version](#feature-availability-by-n8n-version).
 
 ## Feature availability by n8n version
 

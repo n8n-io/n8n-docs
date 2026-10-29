@@ -548,20 +548,20 @@ The **Streaming response** option is in Preview and may change in future release
 
 ### Enterprise readiness
 
-A feature can have **Limited enterprise support**: some Enterprise capabilities
+A feature can have **Limited enterprise readiness**: some Enterprise capabilities
 (for example SSO, RBAC, audit logging, environments, multi-main mode, external
 secrets, and the public API) don't cover it yet. This is separate from Preview.
-A feature can be GA with Limited enterprise support, or in Preview and fully
-Enterprise ready. A gap in Enterprise support never makes a feature Preview.
+A feature can be GA with Limited enterprise readiness, or in Preview and fully
+Enterprise ready. A gap in Enterprise readiness never makes a feature Preview.
 
 Write "Enterprise ready" for a feature that meets every Enterprise requirement
-that applies to it, and "Limited enterprise support" (lowercase "enterprise",
+that applies to it, and "Limited enterprise readiness" (lowercase "enterprise",
 the literal label in the n8n interface) for one that doesn't. An Enterprise
 ready feature carries nothing in the docs, so don't add a hint for it. A
 feature that isn't available on Enterprise at all doesn't carry this label.
 That's a plan or platform limit, so use a **Feature availability** hint instead.
 
-**Page or section:** an `info` hint titled `**Limited enterprise support**`,
+**Page or section:** an `info` hint titled `**Limited enterprise readiness**`,
 not `**Feature availability**` or `**Preview status**`. Name the feature in the
 sentence below, then list each Enterprise capability that applies to it, with
 its current level of support: **Full**, **Partial**, or **None**. List only the
@@ -570,9 +570,9 @@ need external secrets support). Don't say whether n8n plans to close a gap.
 
 ```markdown
 {% hint style="info" %}
-**Limited enterprise support**
+**Limited enterprise readiness**
 
-The Example feature has Limited enterprise support. Current support for each Enterprise capability that applies to it:
+The Example feature has Limited enterprise readiness. Current support for each Enterprise capability that applies to it:
 
 - **SSO:** Full
 - **Log streaming:** Partial
@@ -583,10 +583,10 @@ The Example feature has Limited enterprise support. Current support for each Ent
 
 - Keep it separate from Preview status and Feature availability. If more than
   one applies, stack the hints rather than folding one into another.
-- No visual tag or frontmatter. Limited enterprise support isn't one of the
+- No visual tag or frontmatter. Limited enterprise readiness isn't one of the
   three allowed visual tags (see [Tags](#tags)), and there's no `status:` value
   for it, even when the whole page covers the feature.
-- Link to [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#enterprise-readiness-limited-enterprise-support)
+- Link to [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#enterprise-readiness)
   when a reader may need the definition.
 
 ---

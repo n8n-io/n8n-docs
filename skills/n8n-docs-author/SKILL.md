@@ -227,8 +227,8 @@ See [reference.md](reference.md) for full examples and rules.
   prose. Whole page → also set `status: preview` plus a primary `preview` tag
   (see Frontmatter's `tags` field, below).
 - **Enterprise readiness:** an `info` hint titled
-  `**Limited enterprise support**` for a feature with Limited enterprise
-  support (some Enterprise capabilities don't cover it yet). Separate from
+  `**Limited enterprise readiness**` for a feature with Limited enterprise
+  readiness (some Enterprise capabilities don't cover it yet). Separate from
   Preview, so never fold the two together; stack the hints. An Enterprise ready
   feature carries nothing, so add no hint. Name the feature in the sentence
   below the title, then list each Enterprise capability that applies to it with

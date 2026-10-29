@@ -26,26 +26,9 @@ n8n Assistant is available on:
 {% endhint %}
 
 {% hint style="info" %}
-**Limited enterprise support**
+**Limited enterprise readiness**
 
-n8n Assistant has Limited enterprise support. Current support for each Enterprise capability that applies to it:
-
-- **RBAC and project scoping:** Partial
-- **Data residency:** Partial
-- **Queue mode and multi-main:** Partial
-- **Environments and source control:** Partial
-- **Audit events and log streaming:** None
-- **OpenTelemetry tracing:** None
-- **External secrets:** None
-- **Public API:** None
-- **Enterprise-scale volumes:** None
-- **Policy coverage for new nodes, credentials, and resources:** None
-{% endhint %}
-
-{% hint style="info" %}
-**Limited enterprise support**
-
-n8n Assistant has Limited enterprise support. It partially supports these Enterprise capabilities:
+n8n Assistant has Limited enterprise readiness. It partially supports these Enterprise capabilities:
 
 - **RBAC and project scoping**
 - **Data residency**

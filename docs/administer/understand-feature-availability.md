@@ -174,7 +174,7 @@ The n8n interface likewise shows nothing for an Enterprise ready feature. A feat
 
 ## How Preview and Limited enterprise readiness relate to Beta Features in your agreement
 
-Your agreement with n8n refers to "Beta Features". A feature labeled Preview or Limited enterprise readiness is a Beta Feature. n8n provides it as is, and you use it at your own risk until n8n removes the label. Until then, n8n may change or discontinue it at any time. n8n may also start charging for it after the label is removed.
+Your agreement with n8n refers to "Beta Features". A feature labeled **Preview** or **Limited enterprise readiness** is a Beta Feature. n8n provides it as is, and you use it at your own risk until n8n removes the label. Until then, n8n may change or discontinue it at any time. n8n may also start charging for it after the label is removed.
 
 "Beta Features" are separate from the Beta release track on n8n Cloud, which only controls when your workspace receives new releases. See [Feature availability by n8n version](#feature-availability-by-n8n-version).
 

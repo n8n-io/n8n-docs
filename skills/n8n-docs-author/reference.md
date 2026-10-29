@@ -560,7 +560,7 @@ not `**Feature availability**` or `**Preview status**`. Model it on the n8n
 Assistant page:
 
 - Name the feature in the first sentence.
-- List the Enterprise capabilities the feature supports, in a bullet list,
+- List the Enterprise capabilities the feature is ready for, in a bullet list,
   using the names from the [Enterprise capabilities](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#enterprise-capabilities)
   list.
 - If every listed capability has the same level of readiness, say so in the

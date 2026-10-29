@@ -132,7 +132,7 @@ You can also configure this operation with these **Options**:
 
 Configure the node for this operation with the **Put Output File in Field** parameter. Enter the name of the field in the output data to contain the file.
 
-#### Convert to RFT options <a href="#convert-to-rft-options" id="convert-to-rft-options"></a>
+#### Convert to RTF options <a href="#convert-to-rft-options" id="convert-to-rft-options"></a>
 
 You can also configure this operation with these **Options**:
 

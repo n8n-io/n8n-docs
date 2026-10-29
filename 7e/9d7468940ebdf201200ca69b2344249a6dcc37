@@ -1,0 +1,25 @@
+docs/administer/environments/git-based-promotion/generic-git.md
+  s_8ec7bfed268277::t_4542a8d2c44a22 38,52
+docs/administer/environments/upgrade-from-environments-classic.md
+  s_8ec7bfed268277::t_4542a8d2c44a22 22,38-39,59,69
+docs/administer/environments/set-up-environments.md
+  s_8ec7bfed268277::t_4542a8d2c44a22 38,62
+docs/administer/environments/known-limitations.md
+  s_8ec7bfed268277::t_4542a8d2c44a22 35
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "7e9d7468940ebdf201200ca69b2344249a6dcc37",
+  "prompts": {},
+  "sessions": {
+    "s_8ec7bfed268277": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b9ff11b4-095e-4619-830d-c574ab65583e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jan K. <jan.kalkan@n8n.io>"
+    }
+  }
+}

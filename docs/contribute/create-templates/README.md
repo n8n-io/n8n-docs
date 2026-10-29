@@ -26,7 +26,7 @@ You need a [creator account](https://creators.n8n.io/register) to submit templat
 3. Test the workflow from start to finish, including the paths and inputs your instructions cover.
 4. [Export the workflow as JSON](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/export-and-import). Remove secrets, personal data, and references to your accounts or resources.
 5. Import that JSON into a fresh workflow. Follow your own setup instructions and check the output. Fix any missing setup steps or dependencies.
-6. Sign in to the [Creator Dashboard](https://creators.n8n.io/login) and submit the JSON.
+6. Sign in to the [Creator portal](https://creators.n8n.io/login) and submit the JSON.
 
 {% hint style="info" %}
 **AI assistance is welcome**

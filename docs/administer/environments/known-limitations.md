@@ -74,7 +74,7 @@ You can't select credentials, variables, or data tables on their own. They trave
 
 Promote doesn't include whether a credential is shared with all users and projects, or whether each user connects their own account to it.
 
-**Workaround:** set these on the target instance.
+**Workaround:** on the target instance, edit the credential and set these options again.
 
 ## Updating an open promotion review
 

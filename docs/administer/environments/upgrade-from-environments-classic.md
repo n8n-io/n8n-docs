@@ -55,7 +55,7 @@ Environments don't cover everything Environments (Classic) does yet. Check these
 - **Instance color:** Classic lets you set a color for the instance. Environments don't have this setting.
 - **Credentials and data tables on their own:** Classic can push a credential or data table by itself. Environments promote them only as dependencies of a workflow.
 - **Workflow descriptions:** Classic syncs them. Environments don't.
-- **Credential settings:** Classic syncs whether a credential is shared with all users and projects, and whether each user connects their own account to it. Environments don't, so set these on the target instance.
+- **Credential settings:** Classic syncs whether a credential is shared with all users and projects, and whether each user connects their own account to it. Environments don't, so set these options again on the target instance.
 
 For everything Environments don't support yet, see [Known limitations](known-limitations.md).
 

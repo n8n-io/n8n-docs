@@ -27,13 +27,14 @@ layout:
 
 # v3.0 Breaking changes
 
+
+n8n 3.0 comes with some important changes. This document highlights breaking changes and actions you should take to prepare for the transition. These updates improve security, simplify configuration, and remove legacy features.
+
 {% hint style="info" %}
 **Early access release**
 
-n8n 3.0.0 is currently available as an early access release. On n8n Cloud, n8n marks it as Beta (Early access). n8n releases a new 3.x patch version with each security release, and a new 3.x minor version weekly, at the same time as the 2.x minor versions.
+n8n 3.0.0 is currently available as an early access release.
 {% endhint %}
-
-n8n 3.0 comes with some important changes. This document highlights breaking changes and actions you should take to prepare for the transition. These updates improve security, simplify configuration, and remove legacy features.
 
 Before you upgrade, open the Migration Report at **Settings > Migration Report**. It lists the workflows and instance settings on your own instance that need attention, so you don't have to check every change on this page by hand.
 

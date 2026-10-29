@@ -112,7 +112,7 @@ A removed feature doesn't appear in the interface. If a workflow relied on it, c
 
 ## Enterprise readiness
 
-Separately from maturity, a feature can have **Limited enterprise readiness**. This status concerns [Enterprise plan](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/choose-how-to-use-n8n#decision-2-choose-a-plan-or-edition) admins. It tells them that some Enterprise capabilities don't cover the feature yet. These capabilities include SSO, RBAC, audit logging, environments, multi-main mode, external secrets, and the public API.
+Separately from maturity, a feature can have **Limited enterprise readiness**. This status concerns [Enterprise plan](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/choose-how-to-use-n8n#decision-2-choose-a-plan-or-edition) admins. It tells them that some Enterprise capabilities don't cover the feature yet. See [Enterprise capabilities](#enterprise-capabilities) for the full list.
 
 There are two states:
 
@@ -131,11 +131,11 @@ The two statuses are independent. A feature can be GA and have Limited enterpris
 | **Where it appears** | The feature's own surface, its settings entry, docs, and API reference | Next to the admin toggle and in docs |
 | **When it's removed** | When n8n no longer plans breaking changes or removal | When every applicable Enterprise requirement is met |
 
-A gap in Enterprise readiness doesn't make a feature Preview. For example, a feature without multi-main support isn't in Preview, and users who don't run multi-main mode aren't affected.
+A gap in Enterprise readiness doesn't make a feature Preview. For example, a feature without queue mode and multi-main support isn't in Preview, and users who don't run those modes aren't affected.
 
 ### Enterprise capabilities
 
-n8n assesses each feature against these Enterprise capabilities, where they apply to it:
+This is the full list of Enterprise capabilities. n8n assesses each feature against the ones that apply to it:
 
 - **SSO**
 - **RBAC and project scoping**
@@ -153,17 +153,17 @@ n8n assesses each feature against these Enterprise capabilities, where they appl
 
 Docs show nothing for an Enterprise ready feature, so a feature with no label is Enterprise ready.
 
-If a feature has Limited enterprise readiness, its page carries a **Limited enterprise readiness** hint. The hint names the feature and lists each Enterprise capability that applies to it, with the level of support right now: **Full**, **Partial**, or **None**.
+If a feature has Limited enterprise readiness, its page carries a **Limited enterprise readiness** hint. The hint names the feature and lists the Enterprise capabilities it's ready for, with its level of readiness right now: **Full** or **Partial**. It then says the feature isn't currently ready for the other Enterprise capabilities.
 
 {% hint style="info" %}
 **Limited enterprise readiness**
 
-The Example feature has Limited enterprise readiness. Current support for each Enterprise capability that applies to it:
+The Example feature has Limited enterprise readiness. Its readiness for the Enterprise capabilities it covers:
 
 - **SSO:** Full
-- **Log streaming:** Partial
-- **Environments:** None
+- **External secrets:** Partial
 
+The Example feature isn't currently ready for the other [Enterprise capabilities](#enterprise-capabilities).
 {% endhint %}
 
 A feature that isn't available on Enterprise at all doesn't carry this label. That's a plan or platform limit, see [Feature availability by plan](#feature-availability-by-plan).

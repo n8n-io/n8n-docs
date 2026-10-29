@@ -548,11 +548,8 @@ The **Streaming response** option is in Preview and may change in future release
 
 ### Enterprise readiness
 
-A feature can have **Limited enterprise readiness**: some Enterprise capabilities
-(for example SSO, RBAC, audit logging, environments, multi-main mode, external
-secrets, and the public API) don't cover it yet. This is separate from Preview.
-A feature can be GA with Limited enterprise readiness, or in Preview and fully
-Enterprise ready. A gap in Enterprise readiness never makes a feature Preview.
+For what Enterprise ready and Limited enterprise readiness mean, see
+[Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#enterprise-readiness).
 
 Write "Enterprise ready" for a feature that meets every Enterprise requirement
 that applies to it, and "Limited enterprise readiness" (lowercase "enterprise",
@@ -562,22 +559,33 @@ feature that isn't available on Enterprise at all doesn't carry this label.
 That's a plan or platform limit, so use a **Feature availability** hint instead.
 
 **Page or section:** an `info` hint titled `**Limited enterprise readiness**`,
-not `**Feature availability**` or `**Preview status**`. Name the feature in the
-sentence below, then list each Enterprise capability that applies to it, with
-its current level of support: **Full**, **Partial**, or **None**. List only the
-capabilities that apply to the feature (a feature without credentials doesn't
-need external secrets support). Don't say whether n8n plans to close a gap.
+not `**Feature availability**` or `**Preview status**`. Model it on the n8n
+Assistant page:
+
+- Name the feature in the first sentence.
+- List the Enterprise capabilities the feature is ready for, in a bullet list,
+  using the names from the [Enterprise capabilities](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#enterprise-capabilities)
+  list.
+- If every listed capability has the same level of readiness, say so in the
+  sentence ("is partially ready for these Enterprise capabilities") and list the
+  names alone, as on the n8n Assistant page. If the levels differ, put **Full**
+  or **Partial** after each name, as in the example below.
+- End with a sentence saying the feature isn't currently ready for the other
+  Enterprise capabilities, linking "Enterprise capabilities" to that list. Don't
+  list the unsupported capabilities, and don't say whether n8n plans to close a
+  gap.
+- Say "readiness", not "support", when you describe a capability's status.
 
 ```markdown
 {% hint style="info" %}
 **Limited enterprise readiness**
 
-The Example feature has Limited enterprise readiness. Current support for each Enterprise capability that applies to it:
+The Example feature has Limited enterprise readiness. Its readiness for the Enterprise capabilities it covers:
 
 - **SSO:** Full
-- **Log streaming:** Partial
-- **Environments:** None
+- **External secrets:** Partial
 
+The Example feature isn't currently ready for the other [Enterprise capabilities](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#enterprise-capabilities).
 {% endhint %}
 ```
 
@@ -586,8 +594,6 @@ The Example feature has Limited enterprise readiness. Current support for each E
 - No visual tag or frontmatter. Limited enterprise readiness isn't one of the
   three allowed visual tags (see [Tags](#tags)), and there's no `status:` value
   for it, even when the whole page covers the feature.
-- Link to [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#enterprise-readiness)
-  when a reader may need the definition.
 
 ---
 

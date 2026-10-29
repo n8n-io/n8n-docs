@@ -31,7 +31,7 @@ Enterprise teams often spend more time in this section. SSO, directory integrati
 {% endhint %}
 
 Before you plan an upgrade or check whether a feature applies to your instance, see [Understand feature availability](understand-feature-availability.md).
-The page explains Preview, GA, deprecated, and removed status, n8n versioning, and plan and platform limits.
+The page explains Preview, GA, deprecated, and removed status, Enterprise readiness, n8n versioning, and plan and platform limits.
 
 ### A typical administration workflow
 

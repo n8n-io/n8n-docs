@@ -230,11 +230,13 @@ See [reference.md](reference.md) for full examples and rules.
   `**Limited enterprise readiness**` for a feature with Limited enterprise
   readiness (some Enterprise capabilities don't cover it yet). Separate from
   Preview, so never fold the two together; stack the hints. An Enterprise ready
-  feature carries nothing, so add no hint. Name the feature in the sentence
-  below the title, then list each Enterprise capability that applies to it with
-  its current support: **Full**, **Partial**, or **None**. List only the
-  capabilities that apply, and don't say whether n8n plans to close a gap. No visual tag or
-  `status:` field. A feature not available on Enterprise at all gets a
+  feature carries nothing, so add no hint. Name the feature in the first
+  sentence, list the Enterprise capabilities it's ready for (add **Full** or
+  **Partial** after each name if levels differ; if they're all the same, say so
+  in the sentence), then say it isn't currently ready for the other Enterprise
+  capabilities, linking to the list. Say "readiness", not "support". Don't list
+  unsupported capabilities or say whether n8n plans to close a gap. No visual
+  tag or `status:` field. A feature not available on Enterprise at all gets a
   **Feature availability** hint instead. See [reference.md](reference.md) for
   the standard hint.
 - **Deprecation and removal:** a `warning` hint, same `**Feature availability**`

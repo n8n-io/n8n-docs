@@ -28,14 +28,14 @@ n8n Assistant is available on:
 {% hint style="info" %}
 **Limited enterprise readiness**
 
-n8n Assistant has Limited enterprise readiness. It partially supports these Enterprise capabilities:
+n8n Assistant has Limited enterprise readiness. It's partially ready for these Enterprise capabilities:
 
 - **RBAC and project scoping**
 - **Data residency**
 - **Queue mode and multi-main**
 - **Environments and source control**
 
-n8n Assistant doesn't currently support the other [Enterprise capabilities](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#enterprise-capabilities).
+n8n Assistant isn't currently ready for the other [Enterprise capabilities](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#enterprise-capabilities).
 {% endhint %}
 
 n8n Assistant can make mistakes. Always review generated workflows before using them in production.

@@ -218,9 +218,8 @@ See [reference.md](reference.md) for full examples and rules.
   title and box, even when it sits right next to an availability hint for the
   same feature. Name the feature or node in the sentence below it, not
   the title (never "this feature"), saying it may change and isn't for
-  production. Preview means n8n might still make breaking changes to the
-  feature or remove it. It isn't for bugs, missing options, unfinished UI, or
-  newness, and it's the same for every user regardless of plan or platform. Use "Preview", not "beta", for a feature's status — capitalize
+  production. For what Preview means, link to Understand feature availability
+  rather than explaining it. Use "Preview", not "beta", for a feature's status — capitalize
   it wherever it names the status ("is in Preview", "a Preview feature"), same
   as "Deprecated"/"Archived". Frontmatter and tag values stay lowercase
   (`status: preview`, `tag: preview`) since they're literal identifiers, not

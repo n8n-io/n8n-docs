@@ -172,10 +172,10 @@ A feature's availability and maturity can be limited in four ways:
 
 * **Plan or platform**: which n8n Cloud plan or self-hosted edition it's on.
 * **Version**: which n8n version introduced, deprecated, or removed it.
-* **Preview status**: whether n8n might still make breaking changes to it or remove it.
-* **Enterprise readiness**: whether every Enterprise capability that applies to it covers it yet.
+* **Preview status**: whether the feature is in Preview.
+* **Enterprise readiness**: whether the feature is Enterprise ready.
 
-[Plan/platform and version limits](#plan-platform-and-version-limits) share one documentation system. [Preview status](#preview-status) and [Enterprise readiness](#enterprise-readiness) work differently and are always documented separately.
+[Plan/platform and version limits](#plan-platform-and-version-limits) share one documentation system. [Preview status](#preview-status) and [Enterprise readiness](#enterprise-readiness) work differently and are always documented separately. For what each one means, see [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability).
 
 ### Plan, platform, and version limits
 
@@ -316,7 +316,9 @@ Follow the [numbers guidance](#numbers-dates-and-times), plus for n8n instance v
 
 ### Preview status
 
-A Preview feature works today, but n8n doesn't yet commit to keeping it stable, compatible, or available. n8n might make breaking changes to it, such as changing an API shape, export format, node parameters, or execution outcomes, or remove it. Preview isn't for bugs, missing options, unfinished UI, or newness: a GA feature can have those too. Preview is the same for every user, regardless of plan or platform. Capitalize "Preview" as the maturity label ("is in Preview", "a Preview feature", "In Preview from n8n 2.20.0"); use "Preview", not "beta". Leave unrelated senses of the word (a link preview, a UI preview action) lowercase. Frontmatter and tag values stay lowercase (`status: preview`, `tag: preview`) as literal identifiers, not prose.
+For what Preview means, and how it differs from GA, deprecated, and removed, see [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#feature-maturity-preview-ga-deprecated-and-removed).
+
+Capitalize "Preview" as the maturity label ("is in Preview", "a Preview feature", "In Preview from n8n 2.20.0"). Use "Preview", not "beta". Leave unrelated senses of the word (a link preview, a UI preview action) lowercase. Frontmatter and tag values stay lowercase (`status: preview`, `tag: preview`) as literal identifiers, not prose.
 
 **Page or section:** title the hint `**Preview status**`, not `**Feature availability**`. Stability and availability are different questions, so each gets its own hint rather than a second one with the availability hint's label. Name the node or feature in the sentence below, not the title (hints are skimmed independently of surrounding headings):
 

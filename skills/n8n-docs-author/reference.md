@@ -492,13 +492,10 @@ automatically updated from the codebase, so don't edit it by hand.
 
 ### Preview status
 
-A feature in Preview works today, but n8n doesn't yet commit to keeping it
-stable, compatible, or available. n8n might make breaking changes to it, such
-as changing an API shape, export format, node parameters, or execution
-outcomes, or remove it. Preview isn't for bugs, missing options, unfinished UI,
-or newness: a GA feature can have those too. Preview is the same for every
-user, regardless of plan or platform. "Preview"
-is a feature's maturity label, capitalized wherever it names that status ("is in
+For what Preview means, see
+[Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#feature-maturity-preview-ga-deprecated-and-removed).
+
+"Preview" is a feature's maturity label, capitalized wherever it names that status ("is in
 Preview", "a Preview feature"), same as "Deprecated"/"Archived". Use "Preview",
 not "beta". Frontmatter and tag values stay lowercase (`status: preview`,
 `tag: preview`) since they're literal identifiers, not prose.

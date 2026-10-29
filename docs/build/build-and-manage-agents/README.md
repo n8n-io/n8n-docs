@@ -163,16 +163,14 @@ In the **Capabilities** section enable **Web search** to let the agent look up c
 
 #### Bundle capabilities with skills
 
-A skill packages instructions with the tools needed for a specific task. Use skills when the agent handles several distinct tasks, each with its own steps.
+A skill is a set of instructions, with optional reference files, for one kind of task. Use skills when the agent handles several distinct tasks, each with its own steps.
 
 To add a skill:
 
 1. Open the **Skills** section and select **Add skill**.
-2. Give the skill a name and a short description.
-3. Pick the tools the skill can use.
-4. Write the instructions the agent should follow when it runs the skill.
+2. Search for an existing skill and select it, or select **Create skill** to write a new one.
 
-The agent picks the right skill based on the description and the current request.
+The agent picks the right skill based on the skill's description and the current request. To create, import, and manage skills, see [Skills](../agentic-context-management/skills.md).
 
 #### Upload knowledge
 

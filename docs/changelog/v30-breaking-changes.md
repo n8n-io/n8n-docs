@@ -92,7 +92,7 @@ n8n 3.0 removes older nodes, modes, and helpers that newer patterns have replace
 
 ### Removed nodes <a href="#removed-nodes" id="removed-nodes"></a>
 
-Workflows that use a removed node fail. Before you upgrade, **Settings > Migration Report** lists the affected workflows on your instance, and the [Deprecated and versioned nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/deprecated-nodes) page tracks the final version of every node listed here.
+Workflows that use a removed node fail when they run. If such a workflow is published, it doesn't activate when n8n 3.0 starts, so its triggers stop firing. Before you upgrade, **Settings > Migration Report** lists the affected workflows on your instance, and the [Deprecated and versioned nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/deprecated-nodes) page tracks the final version of every node listed here.
 
 - **Function** node (legacy)
 - **Function Item** node (legacy)
@@ -115,7 +115,7 @@ Workflows that use a removed node fail. Before you upgrade, **Settings > Migrati
 - **Motorhead** and **Zep** memory nodes
 - **Binary Input Loader**, **JSON Input Loader**, and **GitHub Document Loader** nodes
 - **In Memory Vector Store Insert**, **In Memory Vector Store Load**, **Pinecone: Insert**, **Pinecone: Load**, **Supabase: Insert**, **Supabase: Load**, **Zep Vector Store**, **Zep Vector Store: Insert**, and **Zep Vector Store: Load** nodes
-- **AI Transform** node: n8n automatically migrates existing nodes to [Code](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.code) nodes on upgrade, keeping the same generated JavaScript, so existing workflows keep working without changes. You can no longer add an **AI Transform** node. Write JavaScript directly in the **Code** node instead.
+- **AI Transform** node: You can no longer add or run an **AI Transform** node. To keep existing nodes working, migrate them to [Code](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.code) nodes from **Settings > Migration Report**. The migration keeps the generated JavaScript, so the workflow runs the same code. n8n doesn't migrate these nodes on upgrade. If an **AI Transform** node never generated code, the report can't migrate it, so replace it with a **Code** node by hand.
 - **What to do:** Migrate affected workflows to the current recommended alternatives before upgrading:
   - Replace **Function** and **Function Item** nodes with the [Code](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.code) node. Use **Run Once for All Items** mode in place of **Function**, and **Run Once for Each Item** mode in place of **Function Item**.
   - Replace the **Item Lists** node with the node matching the operation you use: [Split Out](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.splitout), [Aggregate](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.aggregate), [Sort](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.sort), [Limit](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.limit), [Remove Duplicates](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.removeduplicates), or [Summarize](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.summarize).
@@ -222,11 +222,11 @@ Turning the feature on used to be permanent. From n8n 2.40.3, you can turn it of
 
 ### Slack API credential requires the signing secret
 
-n8n 3.0 requires a signing secret on the **Slack API** credential. The [Slack Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.slacktrigger) node verifies incoming requests against it, and version 2 of the node makes the field required.
+n8n 3.0 requires a signing secret on the **Slack API** credential. The [Slack Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/trigger-nodes/n8n-nodes-base.slacktrigger) node verifies incoming requests against it. When a workflow with a **Slack Trigger** node is published or n8n starts, n8n checks the credential and stops the activation if the secret is missing.
 
 When you need to act depends on how you use the credential:
 
-- **Workflows with a Slack Trigger node:** Add the secret before you upgrade. Until you do, the workflow fails to publish and the trigger responds with a 401 error.
+- **Workflows with a Slack Trigger node:** Add the secret before you upgrade. Until you do, the workflow fails to publish. Already published workflows don't activate after the upgrade and stop receiving events.
 - **Every other Slack workflow:** Add the secret the next time you edit the credential.
 
 {% hint style="warning" %}
@@ -238,7 +238,7 @@ Workflows with a **Slack Trigger** node stop receiving events until the **Slack 
 **What to do:**
 
 1. In your Slack app settings, open **Basic Information** and copy the **Signing Secret**.
-2. Paste it into the **Slack API** [credential](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/slack) in n8n.
+2. Paste it into the **Signature Secret** field of the **Slack API** [credential](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/slack) in n8n.
 3. Publish the workflow again.
 
 ### Larger default SSRF block list
@@ -300,6 +300,8 @@ If `~/.n8n/binaryData` and `~/.n8n/storage` both exist, n8n 3.0 stops with an er
   - **What to do:** Remove the variable. Review the memory you give to workers, which now also handle manual executions. See [Enable queue mode](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/enable-queue-mode).
 - **`N8N_DB_PING_TIMEOUT` removed.** n8n no longer falls back to this variable.
   - **What to do:** Set `DB_PING_TIMEOUT_MS` instead. See the [database environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/database).
+- **`N8N_WORKFLOW_TAGS_DISABLED` removed.** Workflow tags are always on, and n8n ignores the variable. n8n kept your tag data while tags were off, so existing tags appear again in the editor and API after the upgrade.
+  - **What to do:** Remove the variable from your configuration.
 
 ## Retired capabilities <a href="#retired-capabilities" id="retired-capabilities"></a>
 

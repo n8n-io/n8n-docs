@@ -224,8 +224,8 @@ See [reference.md](reference.md) for full examples and rules.
   title and box, even when it sits right next to an availability hint for the
   same feature. Name the feature or node in the sentence below it, not
   the title (never "this feature"), saying it may change and isn't for
-  production. For what Preview means, see [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#feature-maturity-preview-ga-deprecated-and-removed).
-  rather than explaining it. Use "Preview", not "beta", for a feature's status — capitalize
+  production. Link to [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#feature-maturity-preview-ga-deprecated-and-removed)
+  for what Preview means rather than explaining it. Use "Preview", not "beta", for a feature's status — capitalize
   it wherever it names the status ("is in Preview", "a Preview feature"), same
   as "Deprecated"/"Archived". Frontmatter and tag values stay lowercase
   (`status: preview`, `tag: preview`) since they're literal identifiers, not

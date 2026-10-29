@@ -54,7 +54,7 @@ If the same owner is available on both instances (matching email), the owner rem
 
 If the original owner is a [project](../manage-users-and-access/set-permissions-and-roles-rbac/README.md):
 
-n8n tries to match the original project name to a project name on the new instance. If no matching project exists, n8n creates a new project with the name, assigns the current user as project owner, and imports the workflows and credentials to the project.
+n8n matches the project by its ID. If no project with that ID exists on the new instance, n8n creates one with the same ID and name, makes the user who pulls its admin, and imports the workflows and credentials to the project.
 
 ### Auto publish workflows on pull <a href="#auto-publish-workflows-on-pull" id="auto-publish-workflows-on-pull"></a>
 

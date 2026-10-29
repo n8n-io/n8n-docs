@@ -65,7 +65,7 @@ Promote and apply are the two promotion actions:
 - **Promote** sends changes from your instance to an environment.
 - **Apply** brings changes from an environment into your instance.
 
-The instance you promote from is the source instance, and the instance you apply to is the target instance.
+The instance that promotes is the source instance, and the instance that applies is the target instance.
 
 You can promote or apply at two levels:
 
@@ -78,13 +78,13 @@ An instance apply overwrites every team project on the instance to match the env
 
 ### What you promote
 
-Workflows are the main unit of promotion. When you select workflows, n8n includes their dependencies: credentials, variables, data tables, and tags. n8n never writes credential secrets, data table rows, or executions to the repository.
+Workflows are the main unit of promotion. When you select workflows, n8n includes their dependencies: credentials, variables, data tables, and tags. n8n never writes credential secrets, data table rows, or executions to the repository. Variables travel with their values.
 
 Promote and apply use [n8n packages](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages) to export and import content. To learn what Apply changes on an instance, see [Apply changes](apply-changes.md#what-apply-changes-on-the-instance).
 
 ### Promotion review
 
-A promotion review is an optional approval step in a promote. Promoted changes reach the environment only after someone approves them. You turn on promotion reviews in the settings of the environment you promote to, and you approve them on the instance you promote from. Support for promotion reviews depends on the provider. See [Promotion reviews](promotion-reviews.md).
+A promotion review is an optional approval step in a promote. Promoted changes reach the environment only after someone approves them. You turn on promotion reviews in the settings of the environment you promote to, and you approve them on the instance that promotes. Support for promotion reviews depends on the provider. See [Promotion reviews](promotion-reviews.md).
 
 ### Promotion model
 

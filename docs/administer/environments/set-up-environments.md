@@ -25,11 +25,11 @@ Environments are in Preview and may change in future releases. Try them on test 
 
 - You're an instance owner or instance admin.
 - Your instance is on an Enterprise plan.
-- You have a Git repository and an SSH key, account, or token with access to it: write access to promote, read access to apply. See your provider's page under [Git-based promotion](git-based-promotion/README.md).
+- You have a Git repository and a way to authenticate: n8n generates an SSH key that you add to the repository as a deploy key or to a Git account, or you use an account with an access token. You need write access to promote and read access to apply. See your provider's page under [Git-based promotion](git-based-promotion/README.md).
 
 On self-hosted n8n:
 
-- Enable the `promotions` module with `N8N_ENABLED_MODULES=promotions`. TODO(OPEN-1): confirm the module and the `N8N_ENV_FEAT_PROMOTIONS` flag are still needed for the release.
+- The `promotions` module loads by default on licensed instances. To turn Environments off, set `N8N_DISABLED_MODULES=promotions`.
 - The official Docker image includes `git`. On other installs, install `git` on the server that runs n8n.
 - Environments run on main instances only, not on workers.
 
@@ -84,7 +84,7 @@ Removing an environment doesn't change the Git repository. If no other environme
 
 On instances that only apply changes, such as production, turn on **Protected instance** in **Settings** > **Environments**.
 
-**Protected instance** stops people from editing workflows and creating resources in the UI, such as workflows, credentials, projects, folders, variables, and data tables. This prevents accidental manual changes. People can still edit existing credentials, variable values, and data table rows, and create missing credentials and variables while they resolve Apply blockers. People can also still publish and unpublish workflows. The setting applies to the UI only: the public API still allows most changes.
+**Protected instance** stops people from editing workflows and creating resources in the UI, such as workflows, credentials, projects, folders, variables, and data tables. It also blocks manual workflow runs and changes to data table columns. Triggers and schedules keep running. People can still edit existing credentials, variable values, and data table rows, create missing credentials and variables while they resolve Apply blockers, and publish and unpublish workflows. The instance can still promote and apply. The public API still allows most other changes.
 
 Environments (Classic) uses the same setting. Turning it on or off changes it for both.
 

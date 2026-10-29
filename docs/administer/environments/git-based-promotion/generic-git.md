@@ -37,7 +37,9 @@ Environments are in Preview and may change in future releases. Try them on test 
 
 Bitbucket Cloud only offers read-only repository access keys, so connect to Bitbucket Cloud with a username and access token, or add the deploy key to a Bitbucket account instead of the repository. An account key gives n8n access to every repository that account can access, so use a dedicated account.
 
-Use an SSH repository URL that starts with `ssh://`, such as `ssh://git@github.com/acme/n8n.git`.
+{% hint style="warning" %}
+Use an SSH repository URL that starts with `ssh://`, such as `ssh://git@github.com/acme/n8n.git`. The `git@github.com:acme/n8n.git` form that Environments (Classic) accepts doesn't work.
+{% endhint %}
 
 To replace the key, edit the provider and select **Generate a new key**. Add the new key to your Git host, then remove the old key there.
 

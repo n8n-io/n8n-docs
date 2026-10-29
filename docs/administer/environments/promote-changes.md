@@ -37,7 +37,7 @@ If you edit a workflow while the page is open, select **Refresh** before you pro
 
 Sub-workflows from other projects are only referenced, not included, so they must already exist on the target instance. See [Cross-project dependencies](known-limitations.md#cross-project-dependencies). To promote a project without workflows, such as an empty project, select the project itself.
 
-n8n never writes credential secrets, data table rows, or executions to the repository. Credentials travel as their ID, name, type, and the fields that use expressions.
+n8n never writes credential secrets, data table rows, or executions to the repository. Credentials travel as their ID, name, type, and the fields that use expressions. Variables travel with their values, so keep secrets in credentials, not in variables.
 
 Promoting a workflow marked **Deleted** removes it from the branch, and applying deletes it on the target instance. An archived workflow stays archived.
 

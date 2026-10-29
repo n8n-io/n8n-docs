@@ -20,8 +20,6 @@ layout:
 
 If you have another trigger in the workflow already, you have two potential starting points: that trigger and the [evaluation trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.evaluationtrigger). To make sure your workflow works as expected no matter which trigger executes, you will need to merge these branches together.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 <figure>
 <img src="../../.gitbook/assets/merging-trigger-branches.png" alt="">
 <figcaption>Logic to merge two trigger branches together so that they have the same data format and can be referenced from a single node.</figcaption>

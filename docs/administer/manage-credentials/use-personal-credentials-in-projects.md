@@ -14,8 +14,6 @@ You can use your personal credentials in any team project you're a member of wit
 
 This page explains the levels of credential access, how personal credentials behave in team projects, what teammates see when a workflow uses someone else's credential, and who a workflow run acts as. To give other people or projects access to a credential, refer to [Share credentials securely](share-credentials-securely.md).
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Key terms
 
 * **Personal credential:** a credential in your personal space, or a credential someone shared directly with you.

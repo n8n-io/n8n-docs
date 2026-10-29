@@ -22,8 +22,6 @@ You can use these credentials to authenticate the following nodes:
 - [Mailchimp](../app-nodes/n8n-nodes-base.mailchimp.md)
 - [Mailchimp Trigger](../trigger-nodes/n8n-nodes-base.mailchimptrigger.md)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Mailchimp](https://www.mailchimp.com/) account.

@@ -53,7 +53,7 @@ Apply asks you to confirm before it:
 ## Instance apply
 
 {% hint style="danger" %}
-An instance apply overwrites every project to match the environment's branch. It deletes projects and content that aren't on the branch. You can't undo this.
+An instance apply overwrites every project to match the environment's branch. It deletes projects and content that aren't on the branch. You can't undo this. Only run it after an instance promote from the source, or after you back up the instance.
 {% endhint %}
 
 Use an instance apply to bring an instance fully in line with its environment, for example to seed a new production instance. For day-to-day changes, n8n recommends a project apply, which gives you finer control.

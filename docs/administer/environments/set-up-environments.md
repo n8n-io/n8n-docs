@@ -81,7 +81,7 @@ The apply level decides what happens to content that isn't on the branch:
 - **Project apply:** changes only the workflows you select in one project and their dependencies, and never deletes projects. Start with the projects that others depend on, such as a project with shared sub-workflows or credentials. See [Cross-project dependencies](known-limitations.md#cross-project-dependencies).
 
 {% hint style="warning" %}
-You can't undo an instance apply. It deletes workflows that aren't on the branch, even in projects that stay, and it deletes the projects under **Projects to delete**. Before you confirm, review the changes, and download the workflows you still need. On a new target, run the instance apply before people start working there.
+You can't undo an instance apply. It treats the environment's branch as the source of truth for your team projects. It deletes projects that aren't on the branch, with everything in them, such as credentials and data table rows, and it deletes workflows that aren't on the branch, even in projects that stay. Only run an instance apply after an instance promote from the source, or after you back up the target. On a new target, run the instance apply before people start working there.
 {% endhint %}
 
 ## Edit or remove an environment

@@ -35,7 +35,7 @@ A project promote sends the changes you select from one team project.
 
 If you edit a workflow while the page is open, select **Refresh** before you promote so the page shows your latest changes.
 
-Sub-workflows from other projects are only referenced, not included, so they must already exist on the target instance. See [Cross-project dependencies](known-limitations.md#cross-project-dependencies). To promote a project without workflows, such as an empty project, select the project itself.
+Sub-workflows from other projects are only referenced, not included, so they must already exist on the target instance. See [Cross-project dependencies](known-limitations.md#cross-project-dependencies).
 
 n8n never writes credential secrets, data table rows, or executions to the repository. Credentials travel as their ID, name, type, and the fields that use expressions. Variables travel with their values. A variable is only a name and a value, so unlike a credential it has no secret part that n8n could leave out. Keep secrets in credentials, not in variables.
 

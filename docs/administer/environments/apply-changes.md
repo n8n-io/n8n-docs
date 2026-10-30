@@ -21,13 +21,21 @@ Environments are in Preview and may change in future releases. Try them on test 
 
 Before you start, [set up the environment](set-up-environments.md) this instance applies changes from.
 
+## Create missing projects
+
+A project apply needs the project on the instance to be available. When the environment's branch holds team projects that aren't on this instance yet, **Settings** > **Environments** shows them on the environment you apply from. An instance owner or admin selects the projects to create and chooses a project admin for each. n8n creates them empty, with the source's ID, name, icon, and description, and applies no content. Then open each project and run a [project apply](#project-apply).
+
+Don't create these projects by hand. A project you create by hand gets a different ID, so Apply doesn't match it, even when the names match, and the project still shows as missing.
+
+TODO(LIGO-1395): add the UI steps.
+
 ## Project apply
 
-A project apply brings the changes you select into one team project. If the project isn't on the instance yet, Apply creates it. A project apply never deletes projects. All projects on an instance share tags, so a tag rename applies in every project.
+A project apply brings the changes you select into one team project. The project must exist on the instance with the source's ID. See [Create missing projects](#create-missing-projects). A project apply never deletes projects. All projects on an instance share tags, so a tag rename applies in every project.
 
 1. Open a team project. Next to the project name, a badge with a down arrow shows the number of incoming changes.
 2. Select the badge. The **Changes to apply** page opens.
-3. Select the workflows to apply. n8n includes their dependencies, such as credentials, variables, data tables, and tags. To apply a project without workflows, such as an empty project, select the project itself. TODO(LIGO-1367): confirm the UI steps for a project that isn't on the instance yet.
+3. Select the workflows to apply. n8n includes their dependencies, such as credentials, variables, data tables, and tags.
 4. Inspect the changes. Each resource shows what changed, such as **New**, **Modified**, **Renamed**, **Moved**, **Archived**, or **Deleted**. To compare a workflow visually, select **Show diff**. The diff viewer shows the canvas **Before** and **After**, where **Before** is this instance and **After** is the environment's branch.
 5. Check the **Blockers** tab and resolve any blockers. See [Resolve blockers](#resolve-blockers).
 6. Select **Apply N changes**, then confirm.
@@ -69,7 +77,7 @@ Apply brings over the structure of your work, such as workflows, folders, and da
 
 | Resource | What Apply does |
 |---|---|
-| Projects | An instance apply creates projects that are on the branch and, after you confirm, deletes projects that aren't. A project apply creates the project if it isn't on the instance yet, and never deletes projects. |
+| Projects | An instance apply creates projects that are on the branch and, after you confirm, deletes projects that aren't. A project apply never creates or deletes projects. To create missing projects, see [Create missing projects](#create-missing-projects). |
 | Folders | Creates, renames, and moves folders within a project to match the branch. A project apply only changes folders that hold a selected workflow. |
 | Workflows | Creates or updates them. If you deleted a workflow on the source, Apply deletes it on the instance instead of archiving it. An archived workflow stays archived. Apply doesn't change whether a workflow is published. Workflows that Apply creates arrive unpublished, so publish them on the instance. |
 | Credentials | Links workflows to the credential with the same ID. If it's missing, you create it while you resolve blockers. If it exists and belongs to the project, Apply updates its name and the fields that use expressions, and keeps every other value, such as secrets. |

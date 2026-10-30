@@ -24,7 +24,7 @@ Environments are in Preview and may change in future releases. Try them on test 
 Workflows can use resources from outside their project: sub-workflows from another team project, and credentials that another project owns and shares with them. Data tables and project variables always belong to one project.
 
 - **Sub-workflows from another project:** a project promote only references them, so they must already exist on the target instance.
-- **Credentials owned by another project:** a project promote includes them, but a project apply can only use them if they already exist on the target instance and are shared with the project. If they're missing, Apply blocks, and you can't create them from **Blockers**.
+- **Credentials owned by another project:** a project promote includes them, but a project apply can only use them if they already exist on the target instance with the same ID, for example from an earlier apply of their project, and are shared with the project. If they're missing, Apply blocks, and you can't create them from **Blockers**.
 
 **Workaround:** promote and apply the project that owns the shared resources first, or use an instance promote and instance apply, which include every team project. An instance apply overwrites every team project on the target, so see [Instance apply](apply-changes.md#instance-apply) first. Credentials owned by a personal project never travel. Move them to a team project on the source instance before you promote.
 
@@ -63,6 +63,12 @@ Promote and apply cover team projects only.
 Promote doesn't include a workflow's description.
 
 **Workaround:** update the description on the target instance.
+
+## Projects without workflows
+
+A project promote needs at least one workflow, so you can't promote an empty project on its own.
+
+**Workaround:** use an instance promote, which includes every team project. Then, on the target, [create the missing project from the environment](apply-changes.md#create-missing-projects).
 
 ## Selecting dependencies
 

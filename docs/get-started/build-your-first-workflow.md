@@ -155,7 +155,7 @@ For this build, you'll set it to run at 8 AM every day. While you build, you’l
 
     ![On a schedule option](.gitbook/assets/build-your-first-workflow-optional-02-01.png)
 
-2. Select `8am` from the **Trigger at Hour** field in the Node details view. Select the X in the top right to close the window.
+2. Select `8am` from the **Trigger at Hour** field in the Node details view. Select the close button in the top right to close the window.
 
     ![Trigger at Hour set to 8 AM](.gitbook/assets/build-your-first-workflow-optional-02-02.png)
 

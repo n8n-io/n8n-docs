@@ -48,7 +48,7 @@ Use user login when the agent should run with your own Databricks permissions an
 
 1. Have a Databricks account admin [create a custom OAuth app connection](../../credentials/databricks.md#create-a-custom-oauth-app-connection) and share its client ID and secret with you.
 2. In the n8n credential, enter the workspace URL as the **Host**, set **Grant Type** to **Authorization Code (User)**, and enter the **Client ID** and **Client Secret**.
-3. Select **Connect my account** and sign in to Databricks.
+3. Select **Connect** and sign in to Databricks.
 4. Select the credential in the node. n8n refreshes the access token during long executions, so agents can run past the one-hour token lifetime.
 
 ## Node parameters
@@ -110,4 +110,4 @@ The node fails with `Databricks host must use https` because the credential's **
 
 ### Requests fail with 403 after the credential worked before
 
-For user-login credentials, the refresh token or the OAuth app's absolute session lifetime has expired. Open the credential in n8n and select **Connect my account** again. To avoid this for scheduled workflows, use a service principal or ask your admin to [extend the token lifetimes](../../credentials/databricks.md#configure-token-lifetimes).
+For user-login credentials, the refresh token or the OAuth app's absolute session lifetime has expired. Open the credential in n8n, select **Switch account**, and sign in again. To avoid this for scheduled workflows, use a service principal or ask your admin to [extend the token lifetimes](../../credentials/databricks.md#configure-token-lifetimes).

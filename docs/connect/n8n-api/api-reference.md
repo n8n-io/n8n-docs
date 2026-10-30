@@ -14,6 +14,8 @@ layout:
 
 This section is the complete endpoint reference for n8n's public REST API, generated from the OpenAPI specification. Use it to explore every available operation and view the parameters, request bodies, and response schemas.
 
+The reference matches the latest stable n8n release. If you run a beta version, newer endpoints might not appear here yet.
+
 {% hint style="info" %}
 **Feature availability**
 

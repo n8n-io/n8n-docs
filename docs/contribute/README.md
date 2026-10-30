@@ -49,7 +49,7 @@ The following video demonstrates the steps of sharing workflows on the community
 
 ## Contribute a workflow template <a href="#contribute-a-workflow-template" id="contribute-a-workflow-template"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mr8LBJxxxIAFYHNPNKU2/" %}
+Share a workflow that solves a practical problem in the [n8n template library](https://n8n.io/workflows/). See [Create workflow templates](create-templates/README.md) for quality requirements, testing, and submission steps.
 
 ## Build a node <a href="#build-a-node" id="build-a-node"></a>
 

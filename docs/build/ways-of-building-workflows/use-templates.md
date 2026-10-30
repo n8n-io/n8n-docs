@@ -29,7 +29,7 @@ If you use n8n's template library, this takes you to browse [Workflows on the n8
 
 ## Add your workflow to the n8n library <a href="#add-your-workflow-to-the-n8n-library" id="add-your-workflow-to-the-n8n-library"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mr8LBJxxxIAFYHNPNKU2/" %}
+To share your own workflow in the template library, follow [Create workflow templates](https://app.gitbook.com/s/6OmLnmci5kZDzdkzKREn/create-templates). The guide covers quality requirements, testing, documentation, and submission through the Creator Dashboard.
 
 ## Self-hosted n8n: Use your own library <a href="#self-hosted-n8n-use-your-own-library" id="self-hosted-n8n-use-your-own-library"></a>
 

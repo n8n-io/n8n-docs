@@ -217,22 +217,28 @@ To add a skill to an agent:
 
 An agent can use Global skills, the skills of its own project, and its own agent skills. The agent reads the description of each skill, and follows a skill's instructions when a request matches. See [Build and manage agents](../build-and-manage-agents/) for the rest of the agent setup.
 
-## Use skills in n8n Assistant and MCP clients
+## Use skills in n8n Assistant
 
 {% hint style="info" %}
 **Preview status**
 
-Skills in n8n Assistant, and loading skills automatically in MCP clients, are in Preview and may change in future releases. They aren't on every instance yet.
+Skills in n8n Assistant are in Preview and may change in future releases. They aren't on every instance yet.
 {% endhint %}
 
-Each skill has two settings in its edit dialog:
+To let n8n Assistant use a skill, turn on **Enable for n8n Assistant** in the skill's edit dialog. n8n Assistant reads Global skills and the skills of the project you opened the conversation in. It doesn't read skills that belong to one agent. In the skills list, the **n8n Assistant** badge shows which skills have this setting on.
 
-* **Enable for n8n Assistant**: n8n Assistant can use the skill. n8n Assistant reads Global skills and the skills of the project you opened the conversation in. It doesn't read skills that belong to one agent.
-* **Enable for MCP clients**: MCP clients that support the [MCP skills extension](https://modelcontextprotocol.io/seps/2640-skills-extension) load the skill automatically. The n8n MCP server offers the skill through the extension's `skills/list` and `skills/get` requests. This setting has no effect in MCP clients without the extension. With this setting off, MCP clients can still find and read the skill with the skill tools.
+## Use skills in MCP clients
 
-In the skills list, the **n8n Assistant** badge and the MCP icon show which skills have these settings on.
+An MCP client connected to the [n8n MCP server](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server) can work with skills in two ways:
 
-An MCP client connected to the [n8n MCP server](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server) can manage skills with these tools:
+* **Manage skills:** find, read, create, change, and delete skills with the skill tools. This works in every MCP client.
+* **Use skills:** load n8n skills and follow them, as the client does with its own skills. This works only in MCP clients that support the MCP skills extension, and only for skills that you turn on for MCP clients.
+
+The scopes and permissions of skills apply to MCP clients in both cases.
+
+### Manage skills with the skill tools
+
+The n8n MCP server has these skill tools:
 
 | Tool | What it does |
 | ---- | ------------ |
@@ -242,9 +248,21 @@ An MCP client connected to the [n8n MCP server](https://app.gitbook.com/s/r7wKI4
 | `update_skill` | Changes a skill. A content change creates a new version. |
 | `delete_skill` | Deletes a skill. n8n refuses while an agent uses it. |
 
-The scopes and permissions of skills apply to MCP clients too.
+The skill tools work for every skill you can see, whatever the setting **Enable for MCP clients** is. For each tool's parameters and output, see [Skills](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server/mcp-server-tools-reference#skills) in the MCP server tools reference.
 
-For each tool's parameters and output, see [Skills](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server/mcp-server-tools-reference#skills) in the MCP server tools reference.
+### Use skills in clients with the skills extension
+
+{% hint style="info" %}
+**Preview status**
+
+Using skills through the MCP skills extension is in Preview and may change in future releases. It isn't on every instance yet.
+{% endhint %}
+
+The [MCP skills extension](https://modelcontextprotocol.io/seps/2640-skills-extension) lets an MCP server offer skills to a client. The n8n MCP server supports it with the extension's `skills/list` and `skills/get` requests. A client that supports the extension lists the n8n skills next to its own skills, and loads a skill when a task matches its description.
+
+To offer a skill to these clients, turn on **Enable for MCP clients** in the skill's edit dialog. In the skills list, the MCP icon shows which skills have this setting on.
+
+In an MCP client without the extension, this setting has no effect. Use the skill tools in that client instead.
 
 ### MCP client permissions for skills
 

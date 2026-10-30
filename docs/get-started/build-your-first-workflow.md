@@ -131,7 +131,7 @@ n8n Assistant chooses the node names itself, so yours may differ from the ones a
 
 ## Optional: Build the workflow yourself
 
-n8n Assistant built the workflow for you. This section builds the same workflow by hand, one node at a time.
+This section builds the weather log workflow by hand, one node at a time, without n8n Assistant.
 
 You'll end up with a second workflow built from the same four nodes: **Every day at 8 AM**, **Get Berlin weather**, **Add weather report**, and **Save weather log**. You'll also create a new data table in the process.
 

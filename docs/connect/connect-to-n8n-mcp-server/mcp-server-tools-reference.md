@@ -2206,13 +2206,19 @@ Two OAuth scopes cover these tools:
 
 Each skill has one of three scopes:
 
-| Scope      | Who can use the skill                                                                 |
-| ---------- | ------------------------------------------------------------------------------------- |
-| `instance` | Agents in every project. Only instance owners and admins can write it.                |
-| `project`  | Agents in one project, team or personal. Project admins and editors can write it.     |
-| `agent`    | One agent only. MCP clients can read these skills but can't create them.              |
+| Scope      | Who can use the skill            | Who can write it                                    |
+| ---------- | -------------------------------- | --------------------------------------------------- |
+| `instance` | Agents in every project          | Instance owners and admins                          |
+| `project`  | Agents in one team project       | Project admins and project editors                  |
+| `project`  | Agents in one personal project   | The owner of the personal project                   |
+| `agent`    | One agent only                   | MCP clients can read these skills but can't create them |
 
-A skill holds a name of up to 128 characters, a description of up to 1,024 characters, instructions of up to 65,536 characters, and up to 20 Markdown references. Two skills in one scope can't have the same name.
+A skill has these limits:
+
+* Name: up to 128 characters. Two skills in one scope can't have the same name.
+* Description: up to 1,024 characters.
+* Instructions: up to 65,536 characters.
+* References: up to 20 Markdown files, each up to 65,536 characters, and up to 262,144 characters in total.
 
 Two fields depend on feature flags. `availableToAssistant` appears only when skills in n8n Assistant are on (`130_attach_skills_to_assistant`). `availableToMCP` appears only when the MCP skills extension is on (`128_mcp_skills_extension`). With the extension on, MCP clients that support skills also get the skills marked `availableToMCP` as skill resources.
 
@@ -2287,7 +2293,7 @@ Create a skill.
 | ---------------------- | --------- | -------- | ------------------------------------------------------------------------------------------------- |
 | `scope`                | `string`  | Yes      | `"project"`: one project can use the skill. `"instance"`: every project can use it.               |
 | `projectId`            | `string`  | No       | Required when `scope` is `"project"`. Get it from `search_projects`.                              |
-| `skill`                | `object`  | Yes      | The content: `name`, `description`, `instructions`, and optional `references` (array of `path` and `content`) |
+| `skill`                | `object`  | Yes      | The content: `name`, `description`, `instructions`, and optional `references` (array of `path` and `content`). See the limits at the start of this section. |
 | `availableToAssistant` | `boolean` | No       | Allow n8n Assistant to use the skill. Default: `false`. Only with `130_attach_skills_to_assistant`. |
 | `availableToMCP`       | `boolean` | No       | Serve the skill to MCP clients that support skills. Default: `false`. Only with `128_mcp_skills_extension`. |
 

@@ -33,7 +33,14 @@ A skill is a set of instructions, with optional reference files, that agents and
 {% hint style="info" %}
 **Feature availability**
 
-TODO: first n8n version and plans for skills and for importing skills from GitHub.
+Skills are available on:
+
+* **n8n Cloud:** Starter, Pro
+* **Self-hosted:** Community, Registered Community, Business
+
+Skills aren't available on n8n Cloud Enterprise or self-hosted Enterprise yet.
+
+Skills, including importing skills from GitHub, are available from n8n 2.47.0.
 {% endhint %}
 
 {% hint style="info" %}

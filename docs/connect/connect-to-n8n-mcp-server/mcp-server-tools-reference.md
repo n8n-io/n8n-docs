@@ -2186,7 +2186,7 @@ Remove a preference that an MCP client saved for the current user. Use it when t
 {% hint style="info" %}
 **Feature availability**
 
-TODO: first n8n version for the skill tools.
+The skill tools are available from n8n 2.47.0.
 {% endhint %}
 
 {% hint style="info" %}

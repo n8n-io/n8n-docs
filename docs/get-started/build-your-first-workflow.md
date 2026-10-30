@@ -39,6 +39,10 @@ The temperature in Berlin is 6.8 degrees C and it's currently cloudy.
 
 You’ll build it with n8n Assistant, which turns a prompt into a working workflow. That takes less than five minutes. If you’d rather build it node by node, an optional section at the end walks you through the same workflow by hand.
 
+You can also follow along with this video:
+
+{% embed url="https://www.youtube.com/embed/0BzaIm7Fwyo" %}
+
 Apart from n8n, you don’t need any coding experience. The weather data comes from Mockingbird, a sample-data service n8n provides for tutorials, so you’ll get similar results to this guide.
 
 ## Before you start

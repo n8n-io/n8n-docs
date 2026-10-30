@@ -7,7 +7,7 @@ layout:
 
 # Workflow template ideas
 
-Choose a specific user problem, then build a complete workflow that someone else can configure and reuse.
+This page lists use cases and suggested scopes you can build into workflow templates for the n8n template library.
 
 Use these ideas as starting points. You can submit other use cases, roles, and app combinations. An idea's inclusion here doesn't guarantee approval.
 

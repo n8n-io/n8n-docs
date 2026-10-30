@@ -34,7 +34,7 @@ In this quick start, you’ll build a workflow that fetches the weather for Berl
 When it runs, your workflow produces a report like this:
 
 ```
-The temperature in Berlin is 6.8°C. It's currently cloudy.
+The temperature in Berlin is 6.8 degrees C and it's currently cloudy.
 ```
 
 You’ll build it with n8n Assistant, which turns a prompt into a working workflow. That takes less than five minutes. If you’d rather build it node by node, an optional section at the end walks you through the same workflow by hand.
@@ -84,7 +84,7 @@ n8n Assistant builds workflows from prompts. You describe what you want, approve
     ```
     Build a workflow called Weather Log that runs every day at 8 AM:
     - Get the weather for Berlin from https://mockingbird.n8n.io/v1/weather/berlin
-    - Add a report field that contains the city, temperature, and conditions, for example, The temperature in Berlin is 10°C. It's currently overcast.
+    - Add a report field that contains the city, temperature, and conditions e.g. The temperature in berlin is 10°C. It's currently overcast.
     - Save the report to a new data table
     ```
 

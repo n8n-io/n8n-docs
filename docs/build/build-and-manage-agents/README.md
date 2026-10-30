@@ -107,7 +107,7 @@ Configure these parts of an agent in the Agent Builder:
 | **Instructions**   | The system prompt that describes the agent's role, tone, and constraints.                                       |
 | **Tools**          | Actions the agent can take: workflows, custom code, built-in n8n integrations, and [MCP servers](../integrate-ai/mcp-servers.md).                 |
 | **Web search**     | Lets the agent search the web for current information, using the model's native search tool or a fallback service. |
-| **Skills**         | Reusable behavior bundles that package instructions with the tools needed for a specific task.                  |
+| **Skills**         | Reusable instructions, with optional reference files, for a specific task.                                      |
 | **Channels**       | Places people can reach the agent, like Slack, Telegram, or Linear.                                             |
 | **Schedules**      | Tasks the agent runs on a recurring basis once published.                                                       |
 | **Sub-agents**     | Other published agents this agent can delegate work to.                                                         |
@@ -163,7 +163,7 @@ In the **Capabilities** section enable **Web search** to let the agent look up c
 
 #### Bundle capabilities with skills
 
-A skill is a set of instructions, with optional reference files, for one kind of task. Use skills when the agent handles several distinct tasks, each with its own steps.
+A skill is a set of instructions, with optional reference files, for a specific task. Use skills when the agent handles several distinct tasks, each with its own steps.
 
 To add a skill:
 

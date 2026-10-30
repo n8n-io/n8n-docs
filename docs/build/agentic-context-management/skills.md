@@ -28,7 +28,7 @@ tags:
 
 # Skills
 
-A skill is a set of instructions, with optional reference files, that agents and n8n Assistant follow for one kind of task. You manage skills in **Settings** > **Context** > **Skills**.
+A skill is a set of instructions, with optional reference files, that agents and n8n Assistant follow for a specific task. You manage skills in **Settings** > **Context** > **Skills**.
 
 {% hint style="info" %}
 **Feature availability**
@@ -40,7 +40,7 @@ Skills are available on:
 
 Skills aren't available on n8n Cloud Enterprise or self-hosted Enterprise yet.
 
-Skills, including importing skills from GitHub, are available from n8n 2.47.0.
+Skills are available from n8n 2.45.0. Managing skills from n8n Assistant, and the MCP skills extension on the n8n MCP server, are available from n8n 2.46.0. The **Enable for n8n Assistant** and **Enable for MCP clients** settings, and importing skills from GitHub, are available from n8n 2.47.0.
 {% endhint %}
 
 {% hint style="info" %}
@@ -53,7 +53,7 @@ Skills are part of agentic context management, which is in Preview and may chang
 
 ## What skills are for
 
-Use a skill for a procedure that agents and n8n Assistant follow for one kind of task, such as triaging a support ticket. An agent reads the description of each skill it can use. When a request matches a description, the agent follows that skill's instructions.
+Use a skill for a procedure that agents and n8n Assistant follow for a specific task, such as triaging a support ticket. An agent reads the description of each skill it can use. When a request matches a description, the agent follows that skill's instructions.
 
 * Use a [preference](preferences.md) for a rule that applies to every task, such as how to name nodes.
 * Use a skill for steps, checks, and reference material that only some tasks need.

@@ -2186,7 +2186,7 @@ Remove a preference that an MCP client saved for the current user. Use it when t
 {% hint style="info" %}
 **Feature availability**
 
-The skill tools are available from n8n 2.47.0.
+The skill tools are available from n8n 2.45.0. In n8n 2.45, the search tool has the name `search_skills`. The `availableToAssistant` and `availableToMCP` fields, and the MCP skills extension, are available from n8n 2.46.0.
 {% endhint %}
 
 {% hint style="info" %}
@@ -2195,7 +2195,7 @@ The skill tools are available from n8n 2.47.0.
 Skills are part of agentic context management, which is in Preview and may change in future releases.&#x20;
 {% endhint %}
 
-[Skills](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/agentic-context-management/skills) are instructions, with optional reference files, that agents and n8n Assistant follow for one kind of task. These tools let an MCP client find, read, create, change, and delete the skills the current user can reach. They don't attach a skill to an agent. Use `mutate_agent` for that.
+[Skills](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/agentic-context-management/skills) are instructions, with optional reference files, that agents and n8n Assistant follow for a specific task. MCP clients, such as Claude Code, can find, read, create, change, and delete the skills the current user has access to.
 
 Two OAuth scopes cover these tools:
 

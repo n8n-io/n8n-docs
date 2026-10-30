@@ -10,7 +10,7 @@ layout:
 
 # Databricks Genie One MCP server
 
-The **Databricks Genie One** tile in n8n's [MCP servers](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/mcp-servers) registry connects an AI agent to the [Genie One MCP server](https://docs.databricks.com/aws/en/agents/mcp-tools/genie-mcp) in your Databricks workspace. Genie One is the Databricks assistant for business users. It routes each question to the relevant Genie Agent in your workspace, or to other governed data assets when no agent matches, then generates and runs SQL to answer it. To call one specific Genie Agent (formerly a Genie space) by its **Agent ID**, use the [Databricks node](../../app-nodes/n8n-nodes-base.databricks.md) instead. The agent appends the **Powered by Databricks Genie** label to replies that used Genie One, and every answer links back to the conversation in Databricks. Refer to [Genie attribution](#genie-attribution) for which agents add the label and when they skip it.
+The **Databricks Genie One** tile in n8n's [MCP servers](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/mcp-servers) registry connects an AI agent to the [Genie One MCP server](https://docs.databricks.com/aws/en/agents/mcp-tools/genie-mcp) in your Databricks workspace, through the AI Gateway endpoint of the workspace. Genie One is the Databricks assistant for business users. It routes each question to the relevant Genie Agent in your workspace, or to other governed data assets when no agent matches, then generates and runs SQL to answer it. To call one specific Genie Agent (formerly a Genie space) by its **Agent ID**, use the [Databricks node](../../app-nodes/n8n-nodes-base.databricks.md) instead. The agent appends the **Powered by Databricks Genie** label to replies that used Genie One, and every answer links back to the conversation in Databricks. Refer to [Genie attribution](#genie-attribution) for which agents add the label and when they skip it.
 
 On this page, you'll find the prerequisites, setup steps, agent settings, and known issues for using Genie with an n8n agent.
 
@@ -22,9 +22,17 @@ The tile uses a [Databricks OAuth2 credential](../../credentials/databricks.md#u
 
 ## Prerequisites
 
-- A Databricks account admin has [created a custom OAuth app connection](../../credentials/databricks.md#create-a-custom-oauth-app-connection) whose scopes cover the tile's request. The tile requests the `genie` and `offline_access` scopes. An app connection with just those two scopes is the narrowest setup and n8n recommends it when the connection serves only Genie. **All APIs** also covers the request in n8n's testing. Use it only when the same app connection serves the Databricks node or the Databricks Chat Model node, which need it. If connecting fails with a `genie` scope error, the admin [adds the `genie` scope](../../credentials/databricks.md#add-the-genie-scope-for-the-genie-mcp-server) to the app connection.
-- You have **CAN RUN** on each Genie Agent that Genie One should answer from, and **CAN USE** on at least one SQL warehouse. Refer to [Required Databricks privileges](../../credentials/databricks.md#required-databricks-privileges).
+- A Databricks account admin has [created a custom OAuth app connection](../../credentials/databricks.md#create-a-custom-oauth-app-connection) whose scopes cover the tile's request. The tile requests the `ai-gateway` and `offline_access` scopes. An app connection with just those two scopes is the narrowest setup and n8n recommends it when the connection serves only Genie. The **All APIs** option doesn't cover `ai-gateway` in n8n's testing, so an app connection that also serves the Databricks node or the Databricks Chat Model node needs **All APIs** and `ai-gateway`. If connecting or running the agent fails with an `ai-gateway` scope error, the admin [adds the `ai-gateway` scope](../../credentials/databricks.md#add-the-ai-gateway-scope-for-the-genie-one-mcp-server) to the app connection, and you reconnect the credential.
+- You have **CAN RUN** on each Genie Agent that Genie One should answer from, **CAN USE** on at least one SQL warehouse, and **EXECUTE** on `system.ai.genie_one_mcp`. Refer to [Required Databricks privileges](../../credentials/databricks.md#required-databricks-privileges).
 - A chat model that calls tools reliably. n8n recommends the [Databricks Chat Model](n8n-nodes-langchain.lmchatdatabricks.md) node with Llama 3.3 70B or Qwen 3.5. Refer to [Choose a model for agents](n8n-nodes-langchain.lmchatdatabricks.md#choose-a-model-for-agents).
+
+{% hint style="warning" %}
+**Endpoint change on October 30, 2026**
+
+Databricks retires the beta Genie MCP endpoint on November 30, 2026, and serves Genie One through its AI Gateway endpoint instead. From October 30, 2026, the tile calls the AI Gateway endpoint, which needs the `ai-gateway` scope in place of `genie`. This applies to n8n Cloud and self-hosted instances alike, because the tile's endpoint comes from the MCP registry and not from the n8n version you run. Each instance picks up the change at its next registry refresh, within eight hours, or when it restarts. A credential connected before the change keeps a `genie` token that the new endpoint rejects with `Invalid scope, required scopes: ai-gateway`.
+
+**What to do:** A Databricks account admin adds the `ai-gateway` scope to the app connection. Then each user opens their credential, selects **Switch account**, and signs in with the same Databricks account. Refer to [Existing credential fails with an ai-gateway scope error](#existing-credential-fails-with-an-ai-gateway-scope-error).
+{% endhint %}
 
 ## Connect Genie to an agent
 
@@ -36,7 +44,7 @@ The Genie MCP server uses one authentication type, user login. The agent asks Ge
 4. Under **Credential to connect with**, select **Create new credential**.
 5. Enter your workspace URL as the **Host**, for example `https://adb-1234567890123456.7.azuredatabricks.net`.
 6. Enter the **Client ID** and **Client Secret** from the custom OAuth app connection your admin created.
-7. Select **Connect my account** and sign in to Databricks.
+7. Select **Connect** and sign in to Databricks.
 8. In **Tools to Include**, keep **All** so the agent can ask, poll, fetch results, and cancel. Refer to [Tools](#tools).
 9. Set the agent's **Max Iterations** option to 30 or more. Refer to [Configure the agent for Genie](#configure-the-agent-for-genie).
 
@@ -44,7 +52,7 @@ Send the agent a question about your data, for example "How many trips are in th
 
 ## Tools
 
-Genie One exposes four tools. Databricks routes each question to a Genie Agent, or to other workspace data when none matches, so there's no agent parameter. The table shows Databricks' short tool names. In n8n, the agent sees each name prefixed with the node's name, for example `Databricks_Genie_One_MCP_genie_ask` for the default node name. A node you renamed, or added before the tile was renamed, keeps its own name as the prefix, for example `Databricks_Genie_MCP_genie_ask`. Don't reference the short names in prompts.
+Genie One exposes four tools to n8n. Databricks routes each question to a Genie Agent, or to other workspace data when none matches, so there's no agent parameter. The table shows Databricks' short tool names. In n8n, the agent sees each name prefixed with the node's name, for example `Databricks_Genie_One_MCP_genie_ask` for the default node name. A node you renamed, or added before the tile was renamed, keeps its own name as the prefix, for example `Databricks_Genie_MCP_genie_ask`. Don't reference the short names in prompts.
 
 | Tool | What it does |
 |------|--------------|
@@ -52,6 +60,8 @@ Genie One exposes four tools. Databricks routes each question to a Genie Agent, 
 | `genie_poll_response` | Checks whether Genie has finished. Databricks recommends waiting 2 to 5 seconds between polls. |
 | `genie_get_query_result` | Fetches the full result rows of the SQL Genie ran, when the answer summary isn't enough. |
 | `genie_cancel_response` | Cancels a running Genie turn. |
+
+Databricks also lists `view_ask`, which it offers only to MCP Apps clients in place of `genie_ask`, so n8n's agent doesn't see it.
 
 ## Configure the agent for Genie
 
@@ -80,7 +90,7 @@ Databricks requires Genie-powered integrations to identify Genie. In n8n:
 
 ## Related resources
 
-- [Databricks credentials](../../credentials/databricks.md), including the `genie` scope setup for admins
+- [Databricks credentials](../../credentials/databricks.md), including the `ai-gateway` scope setup for admins
 - [Databricks Chat Model node](n8n-nodes-langchain.lmchatdatabricks.md)
 - [Databricks node](../../app-nodes/n8n-nodes-base.databricks.md) for calling a Genie Agent's REST API directly without an AI agent
 - [MCP servers](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai/mcp-servers) for how the registry works
@@ -88,15 +98,25 @@ Databricks requires Genie-powered integrations to identify Genie. In n8n:
 
 ## Common issues
 
-### Connect fails with a genie scope error
+### New credential fails with an ai-gateway scope error
 
-Selecting **Connect my account** fails with:
+On some Databricks accounts, selecting **Connect** in the credential fails with:
 
 ```text
-access_denied: Scopes 'genie' are not assigned to the client <client-id>
+access_denied: Scopes 'ai-gateway' are not assigned to the client <client-id>
 ```
 
-The custom OAuth app connection doesn't have the `genie` scope, and on this Databricks account **All APIs** doesn't stand in for it. A Databricks account admin needs to [add the `genie` scope](../../credentials/databricks.md#add-the-genie-scope-for-the-genie-mcp-server) to the app connection, in the account console's scope picker or with the Databricks CLI.
+On other Databricks accounts, connecting succeeds, but the agent fails as soon as it runs with `Invalid scope, required scopes: ai-gateway`, because n8n connects to Genie One to load its tools. In both cases the custom OAuth app connection doesn't have the `ai-gateway` scope, and the **All APIs** option doesn't stand in for it. A Databricks account admin needs to [add the `ai-gateway` scope](../../credentials/databricks.md#add-the-ai-gateway-scope-for-the-genie-one-mcp-server) to the app connection, in the account console's scope picker or with the Databricks CLI. Then reconnect the credential, so n8n receives a token with the new scope.
+
+### Existing credential fails with an ai-gateway scope error
+
+A credential that worked before makes the agent fail as soon as it runs, with:
+
+```text
+Could not connect to your MCP server. Authentication failed. Streamable HTTP error: Error POSTing to endpoint: Invalid scope, required scopes: ai-gateway
+```
+
+The credential holds a token with the `genie` scope from before the tile moved to the AI Gateway endpoint. Databricks issues only the scopes the app connection allows, so the fix has two parts: a Databricks account admin [adds the `ai-gateway` scope](../../credentials/databricks.md#add-the-ai-gateway-scope-for-the-genie-one-mcp-server) to the app connection, then you open the credential in n8n, select **Switch account**, and sign in again. Reconnecting before the admin adds the scope doesn't help: the consent screen can show `ai-gateway`, but the token n8n receives still lacks it and the same error returns.
 
 ### Max iterations reached
 

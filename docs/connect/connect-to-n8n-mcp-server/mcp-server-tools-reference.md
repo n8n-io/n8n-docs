@@ -2426,6 +2426,123 @@ Insert rows into an existing data table. Each row is an object mapping column na
 * Row values must be `string`, `number`, `boolean`, or `null`.
 * Column names in row objects must match existing column names in the data table.
 
+---
+
+## Skills extension <a href="#skills-extension" id="skills-extension"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+The skills extension is available from n8n 2.46.0.
+{% endhint %}
+
+{% hint style="info" %}
+**Configuration**
+
+The `128_mcp_skills_extension` PostHog flag controls the skills extension. n8n also needs the skills hub tools to be available on the instance, and your grant to allow the `get_skill` tool. If any of these conditions isn't met, the MCP server doesn't serve the extension.
+{% endhint %}
+
+The skills extension serves the skills hub to MCP clients that support the `io.modelcontextprotocol/skills` extension. The MCP server declares the extension under `extensions` in its capabilities, together with the `resources` capability.
+
+A client lists skills with `skills/list`, fetches one skill with `skills/get`, and reads skill files from the [skill file resource](#skill-file-resource). The extension only lists and reads the skills you can access.
+
+**Skill entry**
+
+`skills/list` and `skills/get` describe each skill with the same fields:
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `uri` | `string` | URI of the skill's `SKILL.md` file, in the form `skill://<skillId>/<name>/SKILL.md` |
+| `frontmatter` | `object` | The skill's `name` and `description` |
+| `frontmatter.name` | `string` | The skill name. n8n derives it from the skills hub name: it converts the name to lowercase, replaces each run of other characters with a hyphen, and trims it to 64 characters. If that gives an empty result, n8n derives the name from the skill ID instead |
+| `frontmatter.description` | `string` | The skill description |
+| `digest` | `string` | SHA-256 digest of the `SKILL.md` content, in the form `sha256:<hex>` |
+| `resources` | `array` | Every file of the skill: `SKILL.md` first, followed by its reference files |
+| `resources[].uri` | `string` | URI of the file. n8n URL-encodes each segment of a reference file path |
+| `resources[].digest` | `string` | SHA-256 digest of the file content, in the form `sha256:<hex>` |
+| `resources[].size` | `number` | Size of the file content in bytes, using UTF-8 |
+
+### skills/list <a href="#skillslist" id="skillslist"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+`skills/list` is available from n8n 2.46.0.
+{% endhint %}
+
+List the skills hub skills you can access, one page at a time.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `cursor` | `string` | No | Where to start the page. Pass the `nextCursor` value from the previous response. Must hold one to 15 digits. Omit it to read the first page |
+
+#### Output <a href="#output" id="output"></a>
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `skills` | `array` | Skill entries on this page. See [Skill entry](#skills-extension) for the fields |
+| `ttlMs` | `number` | Cache lifetime in milliseconds. Always `60000` |
+| `cacheScope` | `string` | Always `"private"` |
+| `nextCursor` | `string` | Pass this back as `cursor` to read the next page. Present only when more skills exist |
+
+---
+
+### skills/get <a href="#skillsget" id="skillsget"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+`skills/get` is available from n8n 2.46.0.
+{% endhint %}
+
+Fetch one skill by the URI of its `SKILL.md` file.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `uri` | `string` | Yes | The `SKILL.md` URI of the skill, in the form `skill://<skillId>/<name>/SKILL.md`, as returned in `uri` by `skills/list` |
+
+#### Output <a href="#output" id="output"></a>
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `skill` | `object` | The skill entry. See [Skill entry](#skills-extension) for the fields |
+| `ttlMs` | `number` | Cache lifetime in milliseconds. Always `0` |
+| `cacheScope` | `string` | Always `"private"` |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- If the URI doesn't match the `SKILL.md` form, if n8n can't find the skill, or if the name in the URI doesn't match the skill, the method returns an `InvalidParams` protocol error with the message `Unknown skill: <uri>`.
+
+---
+
+### Skill file resource <a href="#skill-file-resource" id="skill-file-resource"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+The skill file resource is available from n8n 2.46.0.
+{% endhint %}
+
+n8n serves each file of a skill, `SKILL.md` and its reference files, as a resource.
+
+| Property | Value |
+|----------|-------|
+| Name | `skill-file` |
+| URI template | `skill://{skillId}/{name}/{+path}` |
+| MIME type | `text/markdown` |
+| Content | The content of the file |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- n8n doesn't list skill files in the resource list. Read the file URIs from the `resources` field of a skill entry.
+- `SKILL.md` starts with YAML front matter that holds `name` and `description`, followed by the skill instructions.
+- If the skill has reference files, `SKILL.md` ends with a `## References` section that links each reference file by its relative path.
+- If n8n can't find the skill or the file, or if the name in the URI doesn't match the skill, the read returns a resource not found error.
+
 ## Related resources
 
 * [Connect to n8n MCP server](../connect-to-n8n-mcp-server.md)

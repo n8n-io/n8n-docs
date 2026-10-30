@@ -2211,7 +2211,7 @@ Each skill has one of three scopes:
 | `instance` | Agents in every project          | Instance owners and admins                          |
 | `project`  | Agents in one team project       | Project admins and project editors                  |
 | `project`  | Agents in one personal project   | The owner of the personal project                   |
-| `agent`    | One agent only                   | MCP clients can read these skills but can't create them |
+| `agent`    | One agent only                   | People who can edit the agent's project. MCP clients can't create these skills. |
 
 A skill has these limits:
 

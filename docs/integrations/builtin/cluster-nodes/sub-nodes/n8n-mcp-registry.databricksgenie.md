@@ -54,7 +54,7 @@ Send the agent a question about your data, for example "How many trips are in th
 
 ## Tools
 
-Genie One exposes four tools to n8n. Databricks lists a fifth, `view_ask`, that it offers only to MCP Apps clients in place of `genie_ask`, so n8n's agent doesn't see it. Databricks routes each question to a Genie Agent, or to other workspace data when none matches, so there's no agent parameter. The table shows Databricks' short tool names. In n8n, the agent sees each name prefixed with the node's name, for example `Databricks_Genie_One_MCP_genie_ask` for the default node name. A node you renamed, or added before the tile was renamed, keeps its own name as the prefix, for example `Databricks_Genie_MCP_genie_ask`. Don't reference the short names in prompts.
+Genie One exposes four tools to n8n. Databricks routes each question to a Genie Agent, or to other workspace data when none matches, so there's no agent parameter. The table shows Databricks' short tool names. In n8n, the agent sees each name prefixed with the node's name, for example `Databricks_Genie_One_MCP_genie_ask` for the default node name. A node you renamed, or added before the tile was renamed, keeps its own name as the prefix, for example `Databricks_Genie_MCP_genie_ask`. Don't reference the short names in prompts.
 
 | Tool | What it does |
 |------|--------------|
@@ -62,6 +62,8 @@ Genie One exposes four tools to n8n. Databricks lists a fifth, `view_ask`, that 
 | `genie_poll_response` | Checks whether Genie has finished. Databricks recommends waiting 2 to 5 seconds between polls. |
 | `genie_get_query_result` | Fetches the full result rows of the SQL Genie ran, when the answer summary isn't enough. |
 | `genie_cancel_response` | Cancels a running Genie turn. |
+
+Databricks also lists `view_ask`, which it offers only to MCP Apps clients in place of `genie_ask`, so n8n's agent doesn't see it.
 
 ## Configure the agent for Genie
 

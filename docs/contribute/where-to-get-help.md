@@ -37,7 +37,7 @@ When posting to the forum or emailing customer support, you'll get help faster i
 
 To collect basic information about your n8n instance:
 
-1. Select your name at the bottom of the left menu. If the left menu is collapsed, select your avatar.
+1. Select your name or avatar at the bottom of the left menu.
 2. Select **Help** > **About n8n**. The **About n8n** modal opens with your version and instance details.
 3. Select **Copy** next to **Debug information**.
 4. Include this information in your forum post or support email.

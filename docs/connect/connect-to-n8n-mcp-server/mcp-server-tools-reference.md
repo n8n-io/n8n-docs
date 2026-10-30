@@ -2220,7 +2220,7 @@ A skill has these limits:
 * Instructions: up to 65,536 characters.
 * References: up to 20 Markdown files, each up to 65,536 characters, and up to 262,144 characters in total.
 
-Two fields depend on feature flags. `availableToAssistant` appears only when skills in n8n Assistant are on (`130_attach_skills_to_assistant`). `availableToMCP` appears only when the MCP skills extension is on (`128_mcp_skills_extension`). With the extension on, MCP clients that support skills also get the skills marked `availableToMCP` as skill resources.
+Two fields depend on feature flags. `availableToAssistant` appears only when skills in n8n Assistant are on (`130_attach_skills_to_assistant`). `availableToMCP` appears only when the MCP skills extension is on (`128_mcp_skills_extension`). With the extension on, the n8n MCP server also offers the skills marked `availableToMCP` through the [MCP skills extension](https://modelcontextprotocol.io/seps/2640-skills-extension) (`skills/list` and `skills/get`). Only MCP clients that support the extension use it.
 
 ### search\_n8n\_skills
 

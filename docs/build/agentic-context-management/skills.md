@@ -85,8 +85,6 @@ A skill's scope decides who can use it. When you create a skill, you choose its 
 | **Personal project** | Only you | You |
 | One agent (shown as **{agent name} only**) | Only that agent | People who can edit the agent's project |
 
-You create a skill for one agent in the agent builder, not in settings. See [Use skills in agents](skills.md#use-skills-in-agents).
-
 To move a skill to another scope, open it and change its scope. You need permission to delete the skill in its current scope, because a move removes it from there. If an agent that uses the skill can't reach the new scope, n8n refuses the move.
 
 ## Create a skill
@@ -105,9 +103,7 @@ An uploaded `SKILL.md` must start with YAML frontmatter that has a `name` and a 
 
 ## Import skills from GitHub
 
-You can import skills from a GitHub repository instead of copying them by hand. n8n finds every skill in the repository, checks each one for security issues, and imports the skills you pick. n8n calls the imported skills synced skills. GitHub stays their source of truth, and you can't edit their content in n8n.
-
-A connected repository is a source. A source and all its skills have one scope. All skills that you import from one source get the scope that you pick for it.
+You can import skills from a GitHub repository instead of copying them by hand. n8n finds every skill in the repository, checks each one for security issues, and imports the skills you pick.
 
 ### GitHub links n8n accepts
 
@@ -170,8 +166,6 @@ To read a private repository, n8n needs a [GitHub credential](https://app.gitboo
 * An access token (personal access token, classic or fine-grained)
 * A GitHub App installation
 
-GitHub OAuth2 credentials don't work for skills yet. Support for them is coming in a later release. n8n only reads from github.com. A credential for a GitHub Enterprise server doesn't work.
-
 n8n stores the credential with the source and uses it again for later checks. The credential must belong to the scope of the source:
 
 | Scope of the source | Credentials you can pick |
@@ -207,7 +201,7 @@ n8n compares the repository, not the branch or the folder in the link:
 
 ### Work with synced skills
 
-A synced skill shows a **Synced from** banner with the name of its repository. To change the skill, select **Open in GitHub** and edit it there.
+A skill that you import from GitHub is a synced skill. It shows a **Synced from** banner with the name of its repository. To change the skill, select **Open in GitHub** and edit it there.
 
 You can attach a synced skill to agents, view its versions, download it, and delete it, as with any other skill. You can't edit its content in n8n or move it on its own. A synced skill moves only with its source.
 
@@ -234,7 +228,7 @@ Skills in n8n Assistant, and loading skills automatically in MCP clients, are in
 Each skill has two settings in its edit dialog:
 
 * **Enable for n8n Assistant**: n8n Assistant can use the skill. n8n Assistant reads Global skills and the skills of the project you opened the conversation in. It doesn't read skills that belong to one agent.
-* **Enable for MCP clients**: MCP clients that support skills load the skill automatically. With this setting off, MCP clients can still find and read the skill with the skill tools.
+* **Enable for MCP clients**: MCP clients that support the [MCP skills extension](https://modelcontextprotocol.io/seps/2640-skills-extension) load the skill automatically. The n8n MCP server offers the skill through the extension's `skills/list` and `skills/get` requests. This setting has no effect in MCP clients without the extension. With this setting off, MCP clients can still find and read the skill with the skill tools.
 
 In the skills list, the **n8n Assistant** badge and the MCP icon show which skills have these settings on.
 

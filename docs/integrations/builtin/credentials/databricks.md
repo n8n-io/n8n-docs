@@ -56,7 +56,7 @@ The identity the credential authenticates as (the signed-in user or the service 
 | Lakebase | A Postgres role on the project's branch, granted to `authenticator`, with the table and function grants the operation needs. Refer to [Set up Lakebase for the Data API](#set-up-lakebase-for-the-data-api) |
 | Reading or writing Unity Catalog data | **USE CATALOG** on the catalog, **USE SCHEMA** on the schema, and **SELECT** on the tables or views you query. Functions and models also need **EXECUTE** |
 | Genie Agent (Databricks node) | **CAN RUN** on the Genie Agent and **CAN USE** on its SQL warehouse |
-| Genie One MCP server | **CAN RUN** on each Genie Agent that Genie One should answer from, and **CAN USE** on at least one SQL warehouse |
+| Genie One MCP server | **CAN RUN** on each Genie Agent that Genie One should answer from, **CAN USE** on at least one SQL warehouse, and **EXECUTE** on `system.ai.genie_one_mcp`. Databricks grants **EXECUTE** on the `system.ai` services to all users by default |
 | Model Serving (Query Endpoint) | **CAN QUERY** on the serving endpoint |
 | Unity AI Gateway model services (Databricks Chat Model, Embeddings Databricks) | **USE CATALOG** and **USE SCHEMA** on the catalog and schema that hold the model service, and **EXECUTE** on the model service. Databricks grants **EXECUTE** on the `system.ai` services to all users by default |
 | Searching a vector search index (Databricks Vector Store: Get Many, Retrieve Documents, Retrieve as Tool) | **USE CATALOG** on the catalog, **USE SCHEMA** on the schema, and **SELECT** on the index. **SELECT** on the source table of a Delta Sync index that syncs all of its columns lets the node list those columns. A self-managed index also needs the model service privileges above for the Embeddings Databricks node. **Metadata Filter** needs read access on the Vector Search endpoint |
@@ -131,7 +131,7 @@ A Databricks account admin needs to complete these steps:
 3. On the **App connections** tab, select **Add connection**.
 4. Enter a name for the connection, for example `n8n`.
 5. Add the **OAuth Redirect URL** you copied from n8n as a redirect URL.
-6. Select the access scopes the connection needs. The **Databricks** node and the **Databricks Chat Model** node need **All APIs**. If the connection serves only the [Genie One MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md), select `ai-gateway` instead: the connection then can't reach other Databricks APIs, and users consent to a narrower grant. Databricks automatically allows the `offline_access` scope that n8n needs to stay connected. The **All APIs** option doesn't cover the `ai-gateway` scope, so a connection that serves the tile and the other nodes needs both. Refer to [Add the `ai-gateway` scope](#add-the-ai-gateway-scope-for-the-genie-one-mcp-server).
+6. Select the access scopes the connection needs. The **Databricks** node and the **Databricks Chat Model** node need **All APIs**. If the connection serves only the [Genie One MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md), select `ai-gateway` instead: the connection then can't call the Databricks REST APIs that **All APIs** covers, and users consent to a narrower grant. The `ai-gateway` scope still covers other AI Gateway services, such as the Databricks SQL MCP server, within the user's Unity Catalog permissions. Databricks automatically allows the `offline_access` scope that n8n needs to stay connected. The **All APIs** option doesn't cover the `ai-gateway` scope, so a connection that serves the tile and the other nodes needs both. Refer to [Add the `ai-gateway` scope](#add-the-ai-gateway-scope-for-the-genie-one-mcp-server).
 7. Enable client secret generation. n8n is a confidential client, so it needs a secret.
 8. Save the connection, then copy the **Client ID** and **Client Secret**. Databricks shows the secret only once.
 
@@ -141,13 +141,13 @@ Refer to [Enable or disable partner OAuth applications](https://docs.databricks.
 
 ### Add the ai-gateway scope for the Genie One MCP server
 
-The [Databricks Genie One MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md) tile calls Genie One through the AI Gateway endpoint of the workspace and requests the `ai-gateway` and `offline_access` scopes. The **All APIs** option doesn't cover `ai-gateway`: in n8n's testing, an app connection with **All APIs** returned a token without the `ai-gateway` scope until the admin added that scope to the connection. Depending on the Databricks account, users see one of two errors. Either **Connect my account** on the tile fails with:
+The [Databricks Genie One MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md) tile calls Genie One through the AI Gateway endpoint of the workspace and requests the `ai-gateway` and `offline_access` scopes. The **All APIs** option doesn't cover `ai-gateway`: in n8n's testing, an app connection with **All APIs** returned a token without the `ai-gateway` scope until the admin added that scope to the connection. Depending on the Databricks account, users see one of two errors. Either connecting the credential fails with:
 
 ```text
 access_denied: Scopes 'ai-gateway' are not assigned to the client <client-id>
 ```
 
-Or the connect succeeds and the first Genie tool call fails with:
+Or connecting succeeds, and the agent fails as soon as it runs with:
 
 ```text
 Invalid scope, required scopes: ai-gateway
@@ -162,14 +162,16 @@ databricks account custom-app-integration update <integration-id> \
 
 Find `<integration-id>` with `databricks account custom-app-integration list`, or on the connection's detail page in the account console. Refer to [Update Custom OAuth App Integration](https://docs.databricks.com/api/account/customappintegration/update) for the API reference.
 
-The Databricks consent screen shows the scopes assigned to the app connection, not the narrower set n8n requests. Users connecting the Genie One MCP server through an app that has **All APIs** and `ai-gateway` see both on the consent screen, even though the token n8n receives is scoped to `ai-gateway offline_access`.
+After the admin adds the scope, each user reconnects the credential they use with the tile, so n8n receives a token with the new scope. Refreshing the old token doesn't add it.
 
-If the app connection serves only the Genie One MCP server, set the scopes to `["ai-gateway", "offline_access"]` instead. Users then see and consent to a narrower grant. The client also can't reach other Databricks APIs.
+The Databricks consent screen doesn't show which scopes the token gets. In n8n's testing, it listed `ai-gateway` while the app connection didn't have that scope, and the token n8n received lacked it. To check the setup, look at the app connection's scopes in the account console.
 
-{% hint style="info" %}
-**App connections created before October 30, 2026**
+If the app connection serves only the Genie One MCP server, set the scopes to `["ai-gateway", "offline_access"]` instead. Users then see and consent to a narrower grant, which leaves out the Databricks REST APIs but not other AI Gateway services.
 
-Before the tile moved to the AI Gateway endpoint on October 30, 2026, it requested the `genie` scope. An app connection set up for that version still works for the Databricks node and the Databricks Chat Model node, but the tile needs `ai-gateway` added. After the admin adds the scope, each user reconnects their Genie One credential so n8n receives a token with the new scope. Once every user has reconnected, remove `genie` from the connection, unless another integration still calls the beta endpoint, which Databricks retires on October 31, 2026.
+{% hint style="warning" %}
+**App connections without the ai-gateway scope**
+
+Before the tile moved to the AI Gateway endpoint on October 30, 2026, it requested the `genie` scope. An app connection set up for the `genie` scope keeps working for the nodes it already served, but the tile needs `ai-gateway` added. After the admin adds the scope, each user reconnects their Genie One credential so n8n receives a token with the new scope. Once every user has reconnected, remove `genie` from the connection, unless another integration still calls the beta endpoint, which Databricks retires on November 30, 2026.
 {% endhint %}
 
 ### Configure token lifetimes
@@ -192,7 +194,7 @@ A short refresh token TTL or absolute session lifetime means users must periodic
 1. Enter your workspace URL as the **Host**.
 2. Set **Grant Type** to **Authorization Code (User)**.
 3. Enter the **Client ID** and **Client Secret** from the custom OAuth app connection.
-4. Select **Connect my account** and sign in with your Databricks account.
+4. Select **Connect** and sign in with your Databricks account.
 
 By default the credential requests the `all-apis` and `offline_access` scopes. The `offline_access` scope keeps the connection alive past one hour, so it's always included: if you enable **Custom Scopes** and remove it from the list, n8n adds it back automatically.
 

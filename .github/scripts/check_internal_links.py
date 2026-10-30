@@ -129,7 +129,7 @@ ASSET_EXTS = {
 # Markdown inline links [text](target) and HTML href/src attributes.
 # The target allows one level of balanced parens so filenames like
 # `(node-name).all.md` are captured whole instead of truncated at the inner `)`.
-MD_LINK_RE = re.compile(r"\[[^\]]*\]\(\s*(<[^>]+>|(?:[^()\s]+|\([^()]*\))+)")
+MD_LINK_RE = re.compile(r"\[[^\]]*\]\(\s*(<[^>]+>|(?:\\.|[^()\s\\]+|\([^()]*\))+)")
 HTML_ATTR_RE = re.compile(r"""(?:href|src)\s*=\s*["']([^"']+)["']""", re.IGNORECASE)
 MD_ESCAPE_RE = re.compile(r"\\([!-/:-@\[-`{-~])")
 # Reference definitions: [id]: target. The label's first char must not be `^`,
@@ -226,7 +226,7 @@ def iter_targets(text: str):
             yield i, m.group(1).strip()
         m = REF_DEF_RE.match(line)
         if m:
-            yield i, m.group(1).strip()
+            yield i, MD_ESCAPE_RE.sub(r"\1", m.group(1).strip())
 
 
 def classify_cross_space(target: str, src_rel: str):

@@ -1,7 +1,7 @@
 ---
 description: >-
   Export workflows, folders, or whole projects into a .n8np package, and control
-  how n8n handles sub-workflow dependencies.
+  how n8n handles workflow dependencies.
 status: preview
 layout:
   description:
@@ -75,17 +75,19 @@ An empty project exports as project metadata only, with no `workflows` list in t
 | `--output`, `-o` | File to write the package to. Defaults to `export.n8np` in the current directory. |
 | `--include-variable-values` | `true` (default) or `false`. Whether variable values are bundled. See [Variable values](#variable-values). |
 | `--include-tags` | `true` (default) or `false`. Whether the tags on the exported workflows are bundled. |
-| `--missing-workflow-dependency-policy` | `fail` (default), `include-in-package`, or `reference-only`. How n8n handles a sub-workflow you didn't name. See [Sub-workflow dependencies](#sub-workflow-dependencies). |
+| `--dependency-policy` | `fail` (default), `include-in-package`, or `reference-only`. How n8n handles a workflow the package depends on that you didn't name, such as a sub-workflow or an error workflow. See [Workflow dependencies](#workflow-dependencies). |
 
 {% hint style="info" %}
-The `n8n-cli package export` flags are shown here in kebab-case. `--help` prints the equivalent camelCase names (`--workflowId`, `--includeTags`, `--missingWorkflowDependencyPolicy`), and error messages use them too. Both spellings work.
+The `n8n-cli package export` flags are shown here in kebab-case. `--help` prints the equivalent camelCase names (`--workflowId`, `--includeTags`, `--dependencyPolicy`), and error messages use them too. Both spellings work.
 {% endhint %}
 
 `--output` overwrites an existing file without warning. n8n writes nothing when the export fails, so a failed run leaves the previous file in place.
 
-## Sub-workflow dependencies
+## Workflow dependencies
 
-If a workflow calls a sub-workflow, or names an error workflow, that's a dependency of the package. `--missing-workflow-dependency-policy` decides what n8n does when a dependency isn't in the set of IDs you named.
+If a workflow calls a sub-workflow, or names an error workflow, that's a dependency of the package. `--dependency-policy` decides what n8n does when a dependency isn't in the set of IDs you named.
+
+The policy only applies to workflows. It doesn't affect the credentials, data tables, variables, or tags the exported workflows use.
 
 | Value | What it does |
 |-------|--------------|
@@ -107,7 +109,7 @@ n8n-cli package export --workflow-id=wf7Kq2 --workflow-id=wf9Zx1 --output=triage
 
 # Or let n8n work it out
 n8n-cli package export --workflow-id=wf7Kq2 \
-	--missing-workflow-dependency-policy=include-in-package \
+	--dependency-policy=include-in-package \
 	--output=triage.n8np
 ```
 
@@ -165,7 +167,7 @@ Export needs no license feature. For the full matrix, see [Limits and permission
 
 | Status | Cause |
 |--------|-------|
-| `400` | A requested workflow, folder, or project doesn't exist, or you can't access it. Also mixing ID groups, passing no IDs, exceeding 300 IDs in a group, or a blocked export under `--missing-workflow-dependency-policy=fail` |
+| `400` | A requested workflow, folder, or project doesn't exist, or you can't access it. Also mixing ID groups, passing no IDs, exceeding 300 IDs in a group, or a blocked export under `--dependency-policy=fail` |
 | `403` | The API key is missing a scope it needs |
 
 A missing entity and an inaccessible one return the same `400` with the same message, so you can't use export to test whether an ID exists. Export never returns a `404`.

@@ -84,7 +84,7 @@ n8n Assistant builds workflows from prompts. You describe what you want, approve
     ```
     Build a workflow called Weather Log that runs every day at 8 AM:
     - Get the weather for Berlin from https://mockingbird.n8n.io/v1/weather/berlin
-    - Add a report field that contains the city, temperature, and conditions e.g. The temperature in berlin is 10°C. It's currently overcast.
+    - Add a report field that contains the city, temperature, and conditions e.g. The temperature in Berlin is 10°C. It's currently overcast.
     - Save the report to a new data table
     ```
 

@@ -44,6 +44,14 @@ Skills are part of agentic context management, which is in Preview and may chang
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
 
+## What skills are for
+
+Use a skill for a procedure that agents and n8n Assistant follow for one kind of task, such as triaging a support ticket. An agent reads the description of each skill it can use. When a request matches a description, the agent follows that skill's instructions.
+
+* Use a [preference](preferences.md) for a rule that applies to every task, such as how to name nodes.
+* Use a skill for steps, checks, and reference material that only some tasks need.
+* Keep instructions for the current task in your prompt.
+
 ## What a skill contains
 
 n8n skills follow the open [Agent Skills](https://agentskills.io/home) format. A skill is a folder with a `SKILL.md` file. The file holds the skill's name, a description of when to use the skill, and the instructions. See the [Agent Skills specification](https://agentskills.io/specification) for the full format.
@@ -235,6 +243,35 @@ An MCP client connected to the [n8n MCP server](https://app.gitbook.com/s/r7wKI4
 
 The scopes and permissions of skills apply to MCP clients too.
 
+For each tool's parameters and output, see [Skills](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server/mcp-server-tools-reference#skills) in the MCP server tools reference.
+
+### MCP client permissions for skills
+
+When you connect an MCP client with OAuth, n8n asks you to approve two permissions in the **Skills** group:
+
+| Permission on the consent screen | OAuth scope | Tools |
+| -------------------------------- | ----------- | ----- |
+| **List and read skills** | `skill:read` | `search_n8n_skills`, `get_skill` |
+| **Create, update and delete skills** | `skill:write` | `create_skill`, `update_skill`, `delete_skill`, `search_n8n_skills`, `get_skill` |
+
+If you connected a client before skills were on, reconnect it to grant these permissions. See [Reviewing and revoking client access](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server#revoking-client-access).
+
+## Create and change skills from n8n Assistant
+
+You can ask n8n Assistant to list, read, create, update, or delete skills, for example "Create a skill for triaging support tickets". n8n Assistant creates skills for a project or for the whole instance, and only where you have permission. It can't add a skill to an agent. Use the agent builder for that.
+
+Before n8n Assistant creates, updates, or deletes a skill, it asks you to approve the action. Select **Allow once** to approve one action. For creating and updating, you can also select **Always allow** to approve them for the rest of the session. n8n Assistant asks before each deletion.
+
+Instance owners and admins control these actions in **Settings** > **Assistant** > **Permissions**, in the **Skills** group:
+
+| Permission | Default |
+| ---------- | ------- |
+| **Create skills** | **Ask first** |
+| **Update skills** | **Ask first** |
+| **Delete skills** | **Ask first** |
+
+Set a permission to **Allow** to skip the approval, or to **Block** to stop n8n Assistant from doing the action. With **Block** set, n8n Assistant can still list and read skills.
+
 ## Skill versions
 
 Each save that changes a skill's content creates a new version. A save that changes nothing creates no version.
@@ -262,10 +299,39 @@ Each skill's options menu has these actions:
 
 n8n doesn't delete a skill that an agent uses. Remove the skill from each agent first, including agents in published versions. Deleting can't be undone.
 
+## Write effective skills
+
+* **Write the description for matching.** Agents pick a skill by its **When to use this skill** text. Name the tasks and the words that requests use, for example "Use when someone asks to triage a support ticket or set its priority."
+* **Cover one kind of task in each skill.** A narrow skill matches the right requests and is easier to update.
+* **Write the instructions as steps.** Say what to do, in which order, and what the result looks like.
+* **Move long material to references.** Put examples, tables, and policies in `references/` files, and name the file in the instructions where the agent needs it.
+
+## Turn on skills on a self-hosted instance
+
+Skills are part of the agents module, which is on by default. If you turned off the agents module with `N8N_DISABLED_MODULES`, skills are off too.
+
+n8n turns on three parts of skills step by step, with feature flags:
+
+| Flag | Turns on |
+| ---- | -------- |
+| `136_skill_sync` | [Import skills from GitHub](skills.md#import-skills-from-github) |
+| `130_attach_skills_to_assistant` | **Enable for n8n Assistant**, and skills in n8n Assistant |
+| `128_mcp_skills_extension` | **Enable for MCP clients**, and loading skills automatically in MCP clients |
+
+To turn them on yourself, set `N8N_FEATURE_FLAG_OVERRIDES`. For example, add this value to your `.env` file. Preserve any other entries in the JSON object.
+
+```bash
+N8N_FEATURE_FLAG_OVERRIDES='{"136_skill_sync":true,"130_attach_skills_to_assistant":true,"128_mcp_skills_extension":true}'
+```
+
+Restart n8n to apply the change. Each value must be the boolean `true`, not the string `"variant"`.
+
 ## Related resources
 
 * [Agentic context management](./)
 * [Preferences](preferences.md)
 * [Build and manage agents](../build-and-manage-agents/)
 * [Use n8n Assistant](../ways-of-building-workflows/n8n-assistant.md)
+* [Use n8n MCP server](../ways-of-building-workflows/connect-to-n8n-mcp-server.md)
 * [Connect to n8n MCP server](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server)
+* [MCP server tools reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server/mcp-server-tools-reference)

@@ -188,7 +188,8 @@ docs assistant) chunk on `##`/`###` headings.
 
 ## Feature availability
 
-Reference plan/platform limits, n8n versions, and Preview status consistently.
+Reference plan/platform limits, n8n versions, Preview status, and Enterprise
+readiness consistently.
 See [reference.md](reference.md) for full examples and rules.
 
 - **Two version types:** instance version (the n8n release, three-part semver
@@ -223,12 +224,27 @@ See [reference.md](reference.md) for full examples and rules.
   title and box, even when it sits right next to an availability hint for the
   same feature. Name the feature or node in the sentence below it, not
   the title (never "this feature"), saying it may change and isn't for
-  production. Use "Preview", not "beta", for a feature's status — capitalize
+  production. Link to [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#feature-maturity-preview-ga-deprecated-and-removed)
+  for what Preview means rather than explaining it. Use "Preview", not "beta", for a feature's status — capitalize
   it wherever it names the status ("is in Preview", "a Preview feature"), same
   as "Deprecated"/"Archived". Frontmatter and tag values stay lowercase
   (`status: preview`, `tag: preview`) since they're literal identifiers, not
   prose. Whole page → also set `status: preview` plus a primary `preview` tag
   (see Frontmatter's `tags` field, below).
+- **Enterprise readiness:** an `info` hint titled
+  `**Limited enterprise readiness**` for a feature with Limited enterprise
+  readiness (some Enterprise capabilities don't cover it yet). Separate from
+  Preview, so never fold the two together; stack the hints. An Enterprise ready
+  feature carries nothing, so add no hint. Name the feature in the first
+  sentence, list the Enterprise capabilities it supports (add **Full** or
+  **Partial** after each name if levels differ; if they're all the same, say so
+  in the sentence), then say other Enterprise capabilities either don't apply
+  or it doesn't support them yet, and link to the list in Understand feature
+  availability. Don't list unsupported or non-applicable capabilities or say
+  whether n8n plans to close a gap. No visual
+  tag or `status:` field. A feature not available on Enterprise at all gets a
+  **Feature availability** hint instead. See [reference.md](reference.md) for
+  the standard hint.
 - **Deprecation and removal:** a `warning` hint, same `**Feature availability**`
   title, using "from" for both ("deprecated from n8n 2.0", "removed from n8n 3.0";
   never "removed in"). Name the replacement and removal version if known.

@@ -52,6 +52,10 @@ For usage examples and templates to help you get started, refer to n8n's [Micros
 
 * Message Received
 
+## Options
+
+The trigger has an **Immutable IDs** option in the **Options** collection. Enable it when a workflow stores a message ID and must find the message after it moves to another folder. The option is off by default.
+
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
 n8n provides an app node for Microsoft Outlook. Refer to the [Microsoft Outlook node documentation](../app-nodes/n8n-nodes-base.microsoftoutlook.md) for more information.

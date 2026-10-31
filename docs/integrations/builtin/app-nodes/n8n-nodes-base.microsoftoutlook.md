@@ -95,6 +95,14 @@ If you're using a government cloud tenant (US Government, US Government DOD, or 
 	* Get
 	* Get Many
 
+## Options
+
+Most operations have an **Immutable IDs** option in the **Options** collection.
+
+Microsoft Graph changes the ID of an Outlook item when it moves to another folder or calendar. Enable **Immutable IDs** when a workflow stores an ID and must find the item after a move. The node sends `Prefer: IdType="ImmutableId"` with each Microsoft Graph request.
+
+The option is off by default. Refer to [Outlook immutable IDs](https://learn.microsoft.com/en-us/graph/outlook-immutable-id) for more information.
+
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/c0Jp2CWNEFSR2IfIVdlL/" %}
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>

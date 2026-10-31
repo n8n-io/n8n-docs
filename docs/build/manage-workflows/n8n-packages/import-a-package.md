@@ -33,14 +33,14 @@ Or call the endpoint directly. The archive goes in a multipart field named `pack
 curl -X POST 'https://n8n.example.com/api/v1/n8n-packages/import' \
 	-H "X-N8N-API-KEY: <your-api-key>" \
 	-F 'package=@triage.n8np' \
-	-F 'workflowConflictPolicy=new-version' \
+	-F 'conflictPolicy=new-version' \
 	-F 'projectId=<target-project-id>'
 ```
 
 For the full request and response schema, see the `N8nPackage` section of the [endpoint reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/api-reference).
 
 {% hint style="info" %}
-If you call the endpoint rather than using the CLI, the request must be `multipart/form-data`. Any other content type returns a `415`. `workflowConflictPolicy` is a required field, even though the CLI supplies it for you.
+If you call the endpoint rather than using the CLI, the request must be `multipart/form-data`. Any other content type returns a `415`. `conflictPolicy` is a required field, even though the CLI supplies it for you.
 
 Omit an option you don't want to set rather than sending it empty. A blank value for one of the policy or mode fields is rejected with a `400`. Only `projectId`, `folderId`, and `bindings` accept a blank value, which n8n treats as omitted.
 {% endhint %}
@@ -60,18 +60,26 @@ For a project package, `--project-id` and `--folder-id` are ignored without warn
 {% endhint %}
 
 {% hint style="info" %}
-Flags are shown in kebab-case throughout this page. `n8n-cli package import --help` prints the equivalent camelCase names (`--projectId`, `--workflowConflictPolicy`, `--tagConflictPolicy`), and error messages use them too. Both spellings work.
+Flags are shown in kebab-case throughout this page. `n8n-cli package import --help` prints the equivalent camelCase names (`--projectId`, `--conflictPolicy`, `--tagConflictPolicy`), and error messages use them too. Both spellings work.
 
-There's no `--conflict-policy`, no `--force`, and no `--dry-run`. The flag for workflow conflicts is `--workflow-conflict-policy`.
+There's no `--force` and no `--dry-run`.
 {% endhint %}
 
 ## Workflow options
 
+{% hint style="warning" %}
+**Feature availability**
+
+The workflow-specific policy flags are removed from n8n 3.0.1. Use `--conflict-policy`, `--id-policy`, and `--publishing-policy` instead of `--workflow-conflict-policy`, `--workflow-id-policy`, and `--workflow-publishing-policy`. The API fields are `conflictPolicy`, `idPolicy`, and `publishingPolicy`. The CLI and the API both reject the old names.
+
+The `new` ID policy is removed from n8n 3.0.1 too. Every new workflow keeps its package ID.
+{% endhint %}
+
 | Flag | Values | Description |
 |------|--------|-------------|
-| `--workflow-conflict-policy` | `new-version` (default), `fail`, `skip` | What to do when the workflow already exists on the target. `new-version` saves a new version of the existing workflow, `fail` refuses the whole import, `skip` leaves it alone and carries on. |
-| `--workflow-id-policy` | `source` (default), `new` | Whether an imported workflow keeps the package's ID or gets a fresh one. `source` suits promotion between instances. `new` suits importing the same package repeatedly into one instance, and records the package ID as the workflow's source ID. |
-| `--workflow-publishing-policy` | `preserve-published-state` (default), `match-source`, `publish-all`, `unpublish-all` | Whether imported workflows end up published. See [Publishing](#publishing). |
+| `--conflict-policy` | `new-version` (default), `fail`, `skip` | What to do when the workflow already exists on the target. `new-version` saves a new version of the existing workflow, `fail` refuses the whole import, `skip` leaves it alone and carries on. |
+| `--id-policy` | `source` (default and only value) | A new workflow keeps the package's ID. If a workflow that doesn't match already uses that ID anywhere on the instance, n8n refuses the import. A matched workflow keeps its ID on the target. |
+| `--publishing-policy` | `preserve-published-state` (default), `match-source`, `publish-all`, `unpublish-all` | Whether imported workflows end up published. See [Publishing](#publishing). |
 | `--missing-node-type-mode` | `fail` (default), `import-anyway` | What to do when a workflow uses a node type, or a node version, the target instance doesn't have. `fail` refuses before writing anything and lists every missing type with the workflows using it. `import-anyway` imports them, but they're never published. |
 
 n8n matches a package workflow to an existing one by the source workflow ID recorded on the target, falling back to a target workflow whose own ID equals the package's ID. That's what makes repeated promotion converge: the second import updates the workflow rather than creating a duplicate.
@@ -229,11 +237,11 @@ A successful import returns `200` with nine keys:
 | `variables` | Variable names, split into `matched`, `missing`, `created`, `stubbed`, and `updated`. Values never appear |
 | `tags` | Tag names, split into `matched`, `created`, `renamed`, `reconciled`, and `skipped` |
 
-A workflow's `localId` is its ID on the target instance: the package's ID under `--workflow-id-policy=source`, a fresh ID under `new`, and the existing workflow's ID when it was updated or skipped.
+A workflow's `localId` is its ID on the target instance: the package's ID for a new workflow, and the existing workflow's ID when it was updated or skipped.
 
 `publishing.state` is one of `published`, `unpublished`, `unchanged`, `blocked`, or `failed`. For what each means, see [Publishing outcomes](how-import-works.md#publishing-outcomes).
 
-Both workflows in the example are new, and the default `preserve-published-state` never publishes a new workflow, so each reports `unchanged`. To have new workflows arrive published, use `--workflow-publishing-policy=publish-all`, or `match-source` when they are specified as `published` in the package.
+Both workflows in the example are new, and the default `preserve-published-state` never publishes a new workflow, so each reports `unchanged`. To have new workflows arrive published, use `--publishing-policy=publish-all`, or `match-source` when they are specified as `published` in the package.
 
 ## Errors
 

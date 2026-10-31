@@ -34,7 +34,7 @@ Select **Help & resources** at the bottom of the sidebar for links to the help c
 ## Open the Cloud console from n8n
 
 1. Log in to your n8n instance as the instance owner.
-1. In the left menu, select **Admin Panel**. n8n opens the Cloud console.
+1. Select your name or avatar at the bottom of the left menu, then select **Cloud console**. n8n opens the Cloud console.
 
 ## Open the Cloud console with a magic link
 

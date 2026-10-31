@@ -2181,6 +2181,135 @@ Remove a preference that an MCP client saved for the current user. Use it when t
 
 ***
 
+## Skills hub <a href="#skills-hub" id="skills-hub"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+Skills hub tools are available from n8n 2.45.0, when the agents module is active and the skills hub is enabled on the instance.
+{% endhint %}
+
+These tools search, read, and create skills in the skills hub. A skill is a set of reusable instructions that agents can attach.
+
+Two scopes control access to these tools:
+
+- `skill:read` grants `search_skills` and `get_skill`.
+- `skill:write` grants `create_skill`, `update_skill`, and `delete_skill`, plus `search_skills` and `get_skill`.
+
+If the skills hub isn't available on the instance, n8n doesn't register these tools and doesn't advertise the `skill:read` and `skill:write` scopes.
+
+### search_skills <a href="#searchskills" id="searchskills"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+`search_skills` is available from n8n 2.45.0.
+{% endhint %}
+
+Search the skills hub for skills the current user can access.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Default | Description |
+|------|------|----------|---------|-------------|
+| `query` | `string` | No | | Filter by skill name or description (max 200 characters). n8n trims leading and trailing spaces |
+| `scope` | `string` | No | | Only return skills of this scope |
+| `projectId` | `string` | No | | Only return skills of this project |
+| `attachableToAgentId` | `string` | No | | Only return the skills this agent can attach. Don't combine it with `scope` or `projectId` |
+| `limit` | `integer` | No | `50` | Limit the number of results. Minimum 1 |
+| `skip` | `integer` | No | `0` | Number of skills to skip, for the next page |
+
+#### Output <a href="#output" id="output"></a>
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `count` | `integer` | Total number of skills that match the filters |
+| `skills` | `array` | List of matching skills |
+| `skills[].id` | `string` | The unique identifier of the skill |
+| `skills[].name` | `string` | The name of the skill |
+| `skills[].description` | `string` | The description of the skill |
+| `skills[].scope` | `string` | The scope of the skill |
+| `skills[].projectId` | `string` | The project the skill belongs to |
+| `skills[].projectName` | `string` | The name of the project the skill belongs to |
+| `skills[].agentId` | `string` | The ID of the agent linked to the skill |
+| `skills[].agentName` | `string` | The name of the agent linked to the skill |
+| `skills[].latestVersion` | `number` | The latest saved version of the skill |
+| `skills[].usedByAgents` | `number` | Number of agents that use the skill |
+| `skills[].canEdit` | `boolean` | Whether the current user can edit the skill |
+| `skills[].canDelete` | `boolean` | Whether the current user can delete the skill |
+| `skills[].updatedAt` | `string` | ISO timestamp when someone last updated the skill |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- Use `skip` and `limit` to page through the results.
+- Use `attachableToAgentId` to find skills you can attach to an agent with `mutate_agent`.
+
+---
+
+### get_skill <a href="#getskill" id="getskill"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+`get_skill` is available from n8n 2.45.0.
+{% endhint %}
+
+Read a skill with its instructions, references, `skillHash`, and the agents that use it.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `skillId` | `string` | Yes | The skill ID, as returned by `search_skills` |
+
+#### Output <a href="#output" id="output"></a>
+
+The response includes every `skills[]` field from `search_skills`, without the `skills[]` prefix, plus the following fields:
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `skill` | `object` | The skill body, including its instructions and references |
+| `skillHash` | `string` | Hash of the current skill content |
+| `usedBy` | `array` | The agents that use the skill |
+
+---
+
+### create_skill <a href="#createskill" id="createskill"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+`create_skill` is available from n8n 2.45.0.
+{% endhint %}
+
+Create a skill in the skills hub.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `scope` | `"project" \| "instance"` | Yes | `"project"` lets one project use the skill. `"instance"` lets every project use it |
+| `projectId` | `string` | No | The project to create the skill in. Required when `scope` is `"project"` |
+| `skill` | `object` | Yes | The skill body |
+
+#### Output <a href="#output" id="output"></a>
+
+On success, the response has the same fields as `get_skill`.
+
+When another skill already uses the name:
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `ok` | `boolean` | `false` |
+| `code` | `string` | `"skill_name_taken"` |
+| `message` | `string` | Explains that the skill name is already in use |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+- If the name is already in use, the tool returns `code: "skill_name_taken"` instead of creating the skill. Choose another name and retry.
+
+---
+
 ## Data tables <a href="#data-tables" id="data-tables"></a>
 
 ### search\_data\_tables <a href="#searchdatatables" id="searchdatatables"></a>

@@ -5,6 +5,7 @@
   * [Authentication](n8n-api/authentication.md)
   * [Pagination](n8n-api/pagination.md)
   * [Idempotency](n8n-api/idempotency.md)
+  * [Rate limits](n8n-api/rate-limits.md)
   * [Use an API playground](n8n-api/use-an-api-playground.md)
   * [Endpoint reference](n8n-api/api-reference.md)
   * ```yaml

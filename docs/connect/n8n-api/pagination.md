@@ -67,5 +67,6 @@ curl -X 'GET' \
 * [n8n API](./)
 * [Authentication](authentication.md)
 * [Idempotency](idempotency.md)
+* [Rate limits](rate-limits.md)
 * [Use an API playground](use-an-api-playground.md)
 * [Endpoint reference](api-reference.md)

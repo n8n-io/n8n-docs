@@ -141,4 +141,5 @@
     * [Use AI for parameters](integrate-ai/ai-examples/use-ai-for-parameters.md)
 * [Agentic context management](agentic-context-management/README.md)
   * [Preferences](agentic-context-management/preferences.md)
+  * [Skills](agentic-context-management/skills.md)
 * [Keyboard shortcuts](keyboard-shortcuts.md)

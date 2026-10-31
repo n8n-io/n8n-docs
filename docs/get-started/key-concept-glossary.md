@@ -126,7 +126,7 @@ Each n8n cluster node contains a single root node that defines the main function
 
 ### skill (n8n)
 
-A skill bundles instructions with the tools an agent needs for a specific task. Add a skill to an agent to reuse that behavior. Learn more: [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents#bundle-capabilities-with-skills).
+A skill is a set of instructions, with optional reference files, that agents and n8n Assistant follow for a specific task. n8n skills follow the open Agent Skills format. You can create skills in n8n or import them from GitHub. Skills are in Preview. Learn more: [Skills](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/agentic-context-management/skills).
 
 ### sub-agent (n8n)
 

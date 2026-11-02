@@ -38,7 +38,7 @@ On self-hosted n8n:
    - **All at once:** on the source, run an [instance promote](promote-changes.md#instance-promote). It sends every team project. On the target, run an [instance apply](apply-changes.md#instance-apply). It creates every team project and handles the dependencies between projects.
    - **Project by project:** on the source, run an instance promote, or a [project promote](promote-changes.md#project-promote) in each project. A project without workflows needs an instance promote. See [Promoting projects without workflows](known-limitations.md#promoting-projects-without-workflows). On the target, [add any missing projects](apply-changes.md#add-missing-projects), then run a [project apply](apply-changes.md#project-apply) in each. Start with the projects that others depend on, such as a project with shared sub-workflows or credentials.
 
-   If the environment pushes feature branches or opens promotion reviews, merge the feature branch or approve the review before you apply. When n8n asks, create the credentials and variables that don't exist on the target yet. If the target already has content, read [Apply to an instance that already has content](#apply-to-an-instance-that-already-has-content) first.
+   If the environment pushes feature branches or opens promotion reviews, merge the feature branch or approve and merge the review before you apply. When n8n asks, create the credentials and variables that don't exist on the target yet. If the target already has content, read [Apply to an instance that already has content](#apply-to-an-instance-that-already-has-content) first.
 4. Publish the workflows you want to run. Workflows that Apply creates arrive unpublished.
 5. [Protect the target instance](protect-a-production-instance.md).
 

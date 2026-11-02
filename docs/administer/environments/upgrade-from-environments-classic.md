@@ -58,7 +58,7 @@ Try this on test instances first. Your Classic setup stays connected in the back
 Before you start:
 
 1. Switch any CI pipelines that call the Classic endpoints of the public API to the promotion endpoints. Upgrading only changes the UI, so those endpoints keep running Classic push and pull. n8n plans to block them on instances that use Environments.
-2. On development and production, go to **Settings** > **Environments (Classic)**, select **Upgrade**, and confirm.
+2. On every instance, such as development and production, go to **Settings** > **Environments (Classic)**, select **Upgrade**, and confirm.
 3. Create a new repository or an empty branch for the Production environment.
 4. Add the environment configurations, as in [Development and production](plan-your-environments.md#development-and-production). Don't apply on production while the branch is empty.
 

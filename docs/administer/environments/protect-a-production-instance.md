@@ -8,7 +8,7 @@ layout:
 
 # Protect a production instance
 
-On instances that only apply changes, such as production, turn on **Protected instance** in **Settings** > **Environments**. The instance then only changes through Apply, so it stays in line with its environment.
+On instances that only apply changes, such as production, turn on **Protected instance** in **Settings** > **Environments**.
 
 {% hint style="info" %}
 **Preview status**
@@ -39,4 +39,9 @@ Environments (Classic) uses the same setting. Turning it on or off changes it fo
 - [Environments](./)
 - [Plan your environments](plan-your-environments.md)
 - [Your first promotion](first-promotion.md)
+- [Promote changes](promote-changes.md)
 - [Apply changes](apply-changes.md)
+- [Promotion reviews](promotion-reviews.md)
+- [Git-based promotion](git-based-promotion/README.md)
+- [Known limitations](known-limitations.md)
+- [Upgrade from Environments (Classic)](upgrade-from-environments-classic.md)

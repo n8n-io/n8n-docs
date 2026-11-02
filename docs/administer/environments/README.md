@@ -99,7 +99,7 @@ Environments replace [Environments (Classic)](../use-source-control-and-environm
 - [Your first promotion](first-promotion.md): bring your work to a new target instance for the first time.
 - [Promote changes](promote-changes.md): send a project or the whole instance to an environment.
 - [Apply changes](apply-changes.md): bring changes from an environment into a project or the whole instance.
-- [Protect a production instance](protect-a-production-instance.md): stop changes in the UI on instances that only apply.
+- [Protect a production instance](protect-a-production-instance.md): limit changes in the UI on instances that only apply.
 - [Promotion reviews](promotion-reviews.md): approve promoted changes before they reach the environment's branch.
 - [Git-based promotion](git-based-promotion/README.md): how environments use Git, and the supported Git providers.
 - [Known limitations](known-limitations.md): what Environments don't support yet, and workarounds.

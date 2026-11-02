@@ -4,9 +4,6 @@ status: preview
 layout:
   description:
     visible: false
-tags:
-  - tag: preview
-    primary: true
 ---
 
 # Promote changes
@@ -68,11 +65,11 @@ While a promotion review for a project is open, you can't promote that project a
 
 ### Workflows or folders moved to another project
 
-A project promote can't move workflows or folders between projects. n8n names the item and both projects. Use an instance promote instead. Moves within a project work, and moves into a personal project aren't supported.
+A project promote can't move workflows or folders between projects. n8n names the item and both projects. Use an instance promote instead. Moves within a project work, and moves into a personal project aren't supported. See [Moving workflows and folders between projects](known-limitations.md#moving-workflows-and-folders-between-projects).
 
-### Workflows outside the team projects
+### Workflows in personal projects
 
-An instance promote fails if a workflow references a workflow outside the team projects, for example a sub-workflow or error workflow in a personal project, or a deleted workflow. n8n shows **workflow dependencies not included in the package. Export aborted.** Move the referenced workflow into a team project, or remove the reference, then promote again.
+An instance promote fails if a workflow references a workflow in a personal project, such as a sub-workflow or error workflow. n8n shows **workflow dependencies not included in the package. Export aborted.** Move the referenced workflow into a team project, or remove the reference, then promote again. See [Personal projects](known-limitations.md#personal-projects).
 
 ## Related resources
 

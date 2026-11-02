@@ -4,9 +4,6 @@ status: preview
 layout:
   description:
     visible: false
-tags:
-  - tag: preview
-    primary: true
 ---
 
 # Plan your environments

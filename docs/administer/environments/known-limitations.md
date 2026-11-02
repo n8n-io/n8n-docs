@@ -4,9 +4,6 @@ status: preview
 layout:
   description:
     visible: false
-tags:
-  - tag: preview
-    primary: true
 ---
 
 # Known limitations
@@ -30,7 +27,7 @@ Workflows can use resources from outside their project: sub-workflows from anoth
 
 ## Moving workflows and folders between projects
 
-A project promote or project apply can't move workflows or folders from one project to another. Moves within a project work.
+A project promote or project apply can't move workflows or folders from one project to another. Moves within a project work. Support for moves in a project promote and project apply is planned.
 
 **Workaround:** use an instance promote and instance apply. They move the existing workflows and folders on the target instance to the project that the branch holds them in, so workflows keep their ID, version history, and executions there. An instance apply overwrites every team project on the target, so see [Instance apply](apply-changes.md#instance-apply) first.
 
@@ -64,11 +61,11 @@ Promote doesn't include a workflow's description.
 
 **Workaround:** update the description on the target instance.
 
-## Projects without workflows
+## Promoting projects without workflows
 
 A project promote needs at least one workflow, so you can't promote an empty project on its own.
 
-**Workaround:** use an instance promote, which includes every team project. Then, on the target, [create the missing project from the environment](apply-changes.md#create-missing-projects).
+**Workaround:** use an instance promote, which includes every team project. Then, on the target, [add the missing project from the environment](apply-changes.md#add-missing-projects).
 
 ## Selecting dependencies
 

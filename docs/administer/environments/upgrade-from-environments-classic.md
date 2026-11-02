@@ -4,9 +4,6 @@ status: preview
 layout:
   description:
     visible: false
-tags:
-  - tag: preview
-    primary: true
 ---
 
 # Upgrade from Environments (Classic)
@@ -49,7 +46,7 @@ Upgrading doesn't change the workflows, credentials, variables, or data on your 
 
 Environments don't cover everything Environments (Classic) does yet. Check these before you upgrade:
 
-- **Personal projects:** Classic includes them. Environments promote team projects only, and support for personal projects isn't planned.
+- **Personal projects:** Classic includes them. Environments promote team projects only.
 - **Project admins:** in Classic, project admins can push. In Environments, only instance owners and instance admins can promote and apply. Support for project admins in project promotes and project applies is planned.
 - **Auto publish:** Classic can publish workflows when you pull. Apply doesn't change whether a workflow is published. Auto publish is planned.
 - **Instance color:** Classic lets you set a color for the instance. Environments don't have this setting.

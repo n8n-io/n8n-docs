@@ -4,9 +4,6 @@ status: preview
 layout:
   description:
     visible: false
-tags:
-  - tag: preview
-    primary: true
 ---
 
 # Set up environments
@@ -57,12 +54,14 @@ When you add the second environment on an instance with the same provider type, 
 To bring your work to a target instance for the first time:
 
 1. On the source instance, [add the environment](#add-an-environment) you promote to.
-2. Run an [instance promote](promote-changes.md#instance-promote). It sends every team project.
-3. If the environment pushes feature branches or opens promotion reviews, merge the feature branch or approve the review.
-4. On the target instance, add the environment you apply from, using the same repository and branch as the source's environment.
-5. Run an [instance apply](apply-changes.md#instance-apply). It creates every team project on the target and handles the dependencies between projects. When n8n asks, create the credentials and variables that don't exist on the target yet. If the target already has content, read [Apply to an instance that already has content](#apply-to-an-instance-that-already-has-content) first.
-6. Publish the workflows you want to run. Workflows that Apply creates arrive unpublished.
-7. Turn on [Protected instance](#protect-an-instance) on the target.
+2. On the target instance, add the environment you apply from, using the same repository and branch as the source's environment.
+3. Bring your work over, all at once or project by project:
+   - **All at once:** on the source, run an [instance promote](promote-changes.md#instance-promote). It sends every team project. On the target, run an [instance apply](apply-changes.md#instance-apply). It creates every team project and handles the dependencies between projects.
+   - **Project by project:** on the source, run an instance promote, or a [project promote](promote-changes.md#project-promote) in each project. On the target, [add any missing projects](apply-changes.md#add-missing-projects), then run a [project apply](apply-changes.md#project-apply) in each. Start with the projects that others depend on, such as a project with shared sub-workflows or credentials.
+
+   If the environment pushes feature branches or opens promotion reviews, merge the feature branch or approve the review before you apply. When n8n asks, create the credentials and variables that don't exist on the target yet. If the target already has content, read [Apply to an instance that already has content](#apply-to-an-instance-that-already-has-content) first.
+4. Publish the workflows you want to run. Workflows that Apply creates arrive unpublished.
+5. Turn on [Protected instance](#protect-an-instance) on the target.
 
 Keep the source and target instances on the same n8n version.
 
@@ -77,8 +76,8 @@ Apply matches projects, workflows, credentials, and data tables by ID. What the 
 
 The apply level decides what happens to content that isn't on the branch:
 
+- **Project apply:** changes only the workflows you select in one project and their dependencies, and never deletes projects. Use it to keep the content on the target. If a project isn't on the target yet, an instance owner or admin [adds it from the environment](apply-changes.md#add-missing-projects) first, next to the instance **Apply** in **Settings** > **Environments**, so it keeps the source's ID. A project you create by hand gets a different ID, and Apply doesn't match it. Start with the projects that others depend on, such as a project with shared sub-workflows or credentials. See [Cross-project dependencies](known-limitations.md#cross-project-dependencies).
 - **Instance apply:** makes every team project match the branch. After you confirm, it deletes projects that aren't on the branch, such as projects created by hand.
-- **Project apply:** changes only the workflows you select in one project and their dependencies, and never deletes projects. If a project isn't on the target yet, an instance owner or admin [creates it from the environment](apply-changes.md#create-missing-projects) first, so it keeps the source's ID. A project you create by hand gets a different ID, and Apply doesn't match it. Start with the projects that others depend on, such as a project with shared sub-workflows or credentials. See [Cross-project dependencies](known-limitations.md#cross-project-dependencies).
 
 {% hint style="warning" %}
 You can't undo an instance apply. It treats the environment's branch as the source of truth for your team projects. It deletes projects that aren't on the branch, with everything in them, such as credentials and data table rows, and it deletes workflows that aren't on the branch, even in projects that stay. Only run an instance apply after an instance promote from the source, or after you back up the target. On a new target, run the instance apply before people start working there.
@@ -108,7 +107,7 @@ People can still:
 
 - Edit existing credentials, variable values, and data table rows.
 - Create missing credentials and variables while they resolve Apply blockers.
-- Create missing projects from the environment they apply from.
+- Add missing projects from the environment they apply from.
 - Publish and unpublish workflows.
 - Promote and apply.
 

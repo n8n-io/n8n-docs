@@ -182,6 +182,8 @@ env:
     N8N_LOG_LEVEL: debug
 ```
 
+The chart stores literal values in ConfigMaps, so anyone who can read ConfigMaps in the namespace can read them. Use a `secretKeyRef` for passwords and tokens. Kubernetes doesn't expand `$(VAR)` references in literal values, so write each value in full.
+
 The chart sets some variables itself from other values, for example `DB_POSTGRESDB_HOST` from `database.host`. If you set one of these in an `env` map, the installation fails, and the error names the value to set instead. To replace a variable the chart sets, use `chartEnvOverrides` with the same component keys. To load whole ConfigMaps or Secrets, list them under `envFrom`. For details, see [Environment variables](https://github.com/n8n-io/n8n-hosting/blob/main/charts/n8n/README.md#environment-variables) in the chart's README.
 
 ## Expose n8n with the Helm chart
@@ -311,11 +313,13 @@ In queue mode, you can scale each role on its own:
 
 | Goal | What to configure |
 | --- | --- |
-| Run more executions at the same time | `queueMode.workerReplicaCount` and `queueMode.workerConcurrency` |
+| Run more executions at the same time | `queueMode.workerReplicaCount`, and either `queueMode.workerConcurrency` or `executions.concurrency.productionLimit`, not both |
 | Handle production webhooks on separate pods | `webhookProcessor.enabled: true` and `webhookProcessor.replicaCount`. See [Route webhooks to webhook processors with the Helm chart](#route-webhooks-to-webhook-processors-with-the-helm-chart). |
 | Run more than one main pod (self-hosted Enterprise) | `multiMain.enabled: true`, at least two `multiMain.replicas`, `license.enabled: true` with `license.existingSecret.name` and `license.existingSecret.key`, and sticky sessions at the load balancer. With an NGINX Ingress controller, set `ingress.sticky.enabled: true`. |
 
 The chart refuses to run more than one main pod without multi-main mode, because each main pod would run every schedule and trigger on its own.
+
+If you scale workers with KEDA on the Redis queue length, KEDA only sees jobs that wait in Redis. With a high worker concurrency, workers take jobs off the queue at once, so a backlog can build up inside the workers where KEDA can't see it. Prefer adding workers over raising concurrency.
 
 For task runner settings, scaling with the built-in HPA or KEDA, and node placement, see the chart's [README](https://github.com/n8n-io/n8n-hosting/blob/main/charts/n8n/README.md) and [examples](https://github.com/n8n-io/n8n-hosting/tree/main/charts/n8n/examples).
 
@@ -365,10 +369,14 @@ The most common values changes are:
 | `securityContext.fsGroup`, `runAsUser`, and `runAsGroup` | The same fields under `podSecurityContext.shared` |
 | `securityContext.enabled` | Remove it. Replace `enabled: false` with `podSecurityContext.shared: null`. |
 | `N8N_PROXY_HOPS` in `env.shared`, `env.main`, or `env.webhookProcessor`, with an Ingress or route | Remove it, or move it to `chartEnvOverrides` under the same component |
+| `queueMode.workerConcurrency` together with `executions.concurrency.productionLimit` | Remove one. n8n already ran workers at `productionLimit`, so to keep your current concurrency, remove `workerConcurrency`. |
 
 Changes the render doesn't catch:
 
 * **Public URLs:** a core Secret that still holds `N8N_HOST`, `N8N_PORT`, and `N8N_PROTOCOL` still works, but n8n no longer receives them. If n8n built its URLs from them, set `editor.url`. Otherwise n8n shows webhook and OAuth callback URLs on `localhost`.
+* **Keys for rollback:** keep `N8N_HOST`, `N8N_PORT`, and `N8N_PROTOCOL` in your core Secret until you no longer need to roll back to chart 1.x. Chart 1.x pods can't start without them, including old pods that restart while the upgrade is in progress.
+* **Mixed versions during the upgrade:** old and new pods run side by side until the rollout finishes. An old pod that restarts in this window can fail to start, because chart 2.0 removes resources it reads. Upgrade in a low-traffic window, and avoid node drains until the release reports `deployed`.
+* **`$(VAR)` references:** literal values from `env` maps reach the pods through ConfigMaps, where Kubernetes doesn't expand `$(VAR)` references. A value such as `$(HTTP_PROXY)` that worked in an `extraEnv` list now arrives as that literal text.
 * **Task runners:** each worker pod, or the main pod in standalone mode, gains a task runner sidecar. To keep running code inside the n8n process, set `taskRunners.enabled: false`.
 * **Storage directory:** on first start, n8n 3.0 renames `/home/node/.n8n/binaryData` to `/home/node/.n8n/storage`. If both directories exist, n8n doesn't start. Move the contents of `binaryData` into `storage`, remove `binaryData`, and start n8n again.
 * **Restarts:** every pod restarts once during the upgrade. With persistence on a `ReadWriteOnce` volume, the main pod uses the `Recreate` strategy, so the upgrade has a short outage.
@@ -377,6 +385,8 @@ Changes the render doesn't catch:
 * **Security contexts:** a `podSecurityContext.<role>` block now merges over `podSecurityContext.shared` instead of replacing it. To remove a default field, such as a pinned user ID on OpenShift, set it to `null`.
 * **Network policy:** with `networkPolicy.enabled: true` and no `networkPolicy.egress` rules, the policy now allows all egress. Rules you set in `networkPolicy.ingress` or `networkPolicy.egress` now take effect and replace the chart's rules.
 * **Kubernetes access:** by default, the chart no longer creates a Role or mounts a service account token in n8n's pods, because n8n doesn't call the Kubernetes API. If a container you add needs the API, set `rbac.create: true` or `serviceAccount.automountServiceAccountToken: true`.
+
+To roll back to chart 1.x, also roll n8n back from 3.0 to 2.x. A Helm rollback doesn't reverse the database migrations that n8n 3.0 ran, so restore the database backup you took before the upgrade.
 
 For the full list, including S3 binary data, security contexts, and webhook URLs, see the chart's [upgrade guide](https://github.com/n8n-io/n8n-hosting/blob/main/charts/n8n/UPGRADING.md).
 

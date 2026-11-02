@@ -76,13 +76,23 @@ If you mount a volume directly at `/home/node/.n8n/binaryData`, for example with
 
 If both `binaryData` and `storage` exist, n8n doesn't start. To move the data on the chart's PersistentVolumeClaim:
 
-1. Stop the main Deployment, so the volume is free:
+1. Stop the main Deployment, and wait until Kubernetes deletes its pod, so the volume is free:
 
     ```bash
     kubectl scale deployment/n8n-main --replicas=0 --namespace <your-namespace>
+    kubectl wait pod --for=delete --timeout=120s --namespace <your-namespace> \
+    	--selector app.kubernetes.io/instance=n8n,app.kubernetes.io/component=main
     ```
 
-2. Save this Pod manifest as `n8n-storage-fix.yaml`. It mounts the claim with the same user and group as n8n:
+    If you set `hpa.main.enabled: true`, the HorizontalPodAutoscaler doesn't start the pod again. Kubernetes pauses autoscaling for a Deployment that you scale to zero.
+
+2. Find the name of the PersistentVolumeClaim. The chart names its claim after the release, for example `n8n`. With `persistence.existingClaim`, it's the name you set there:
+
+    ```bash
+    kubectl get pvc --namespace <your-namespace>
+    ```
+
+3. Save this Pod manifest as `n8n-storage-fix.yaml`, and replace `<your-pvc-name>` with the claim name. The manifest uses the chart's default user and group, 1000. If you changed `podSecurityContext.shared`, use the same `runAsUser` and `runAsGroup`. On OpenShift, where the platform assigns them, remove both lines:
 
     ```yaml
     apiVersion: v1
@@ -110,10 +120,10 @@ If both `binaryData` and `storage` exist, n8n doesn't start. To move the data on
       volumes:
         - name: data
           persistentVolumeClaim:
-            claimName: n8n
+            claimName: <your-pvc-name>
     ```
 
-3. Start the Pod, move the contents of `binaryData` into `storage`, and remove `binaryData`:
+4. Start the Pod, move the contents of `binaryData` into `storage`, and remove `binaryData`:
 
     ```bash
     kubectl apply -f n8n-storage-fix.yaml --namespace <your-namespace>
@@ -122,7 +132,7 @@ If both `binaryData` and `storage` exist, n8n doesn't start. To move the data on
     	sh -c 'cp -a /data/binaryData/. /data/storage/ && rm -rf /data/binaryData'
     ```
 
-4. Delete the Pod, and start the main Deployment again:
+5. Delete the Pod, and start the main Deployment again:
 
     ```bash
     kubectl delete pod/n8n-storage-fix --namespace <your-namespace>
@@ -140,7 +150,7 @@ A Helm rollback doesn't reverse the database migrations that n8n 3.0 ran. To rol
     kubectl scale deployment --selector app.kubernetes.io/instance=n8n --replicas=0 --namespace <your-namespace>
     ```
 
-    If KEDA or a HorizontalPodAutoscaler scales your Deployments, it can start pods again. Check with `kubectl get pods --namespace <your-namespace>` that no n8n pods run before you continue.
+    A HorizontalPodAutoscaler doesn't start pods for a Deployment you scale to zero. KEDA can start worker and webhook processor pods again. Check with `kubectl get pods --namespace <your-namespace>` that no n8n pods run before you continue.
 
 3. Restore the database and persistent volume backups you took before the upgrade.
 4. Find the last chart 1.x revision of the release in the `CHART` column:
@@ -155,7 +165,17 @@ A Helm rollback doesn't reverse the database migrations that n8n 3.0 ran. To rol
     helm rollback n8n <revision> --namespace <your-namespace>
     ```
 
-6. Check that every n8n Deployment runs again with `kubectl get deployments --namespace <your-namespace>`. Scale any Deployment that stays at zero replicas with `kubectl scale`.
+6. Check that every n8n Deployment runs again:
+
+    ```bash
+    kubectl get deployments --namespace <your-namespace>
+    ```
+
+    Scale any Deployment that stays at zero replicas back to the count in your chart 1.x values file, for example `replicaCount` for main or `queueMode.workerReplicaCount` for workers. Replace `<deployment-name>` and `<replica-count>`:
+
+    ```bash
+    kubectl scale deployment/<deployment-name> --replicas=<replica-count> --namespace <your-namespace>
+    ```
 
 ## Related resources
 

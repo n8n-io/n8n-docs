@@ -70,11 +70,11 @@ For the full list, including S3 binary data, security contexts, and webhook URLs
 
 ## Move binary data to the storage directory
 
-On first start, n8n 3.0 renames `/home/node/.n8n/binaryData` to `/home/node/.n8n/storage`. n8n 3.0 also removes `N8N_MIGRATE_FS_STORAGE_PATH`. With `persistence.enabled: true`, the chart mounts the whole `/home/node/.n8n` directory, so the rename needs no change to your values.
+On first start, n8n 3.0 renames `/home/node/.n8n/binaryData` to `/home/node/.n8n/storage`. n8n 3.0 also removes `N8N_MIGRATE_FS_STORAGE_PATH`. With `persistence.enabled: true`, the chart mounts the whole `/home/node/.n8n` directory, so the rename needs no change to your values. If your volume has no `binaryData` directory, nothing changes.
 
 If you mount a volume directly at `/home/node/.n8n/binaryData`, for example with `extraVolumes` and `extraVolumeMounts`, mount it at `/home/node/.n8n/storage` instead. To keep the old path, set `N8N_STORAGE_PATH` to it in `env.shared`.
 
-If both `binaryData` and `storage` exist, n8n doesn't start. To move the data on the chart's PersistentVolumeClaim:
+If both `binaryData` and `storage` exist when n8n 3.0 first starts, n8n doesn't start, and logs that it can't tell which directory holds your data. After a successful rename, n8n records the migration and doesn't check again. To move the data on the chart's PersistentVolumeClaim:
 
 1. Stop the main Deployment, and wait until Kubernetes deletes its pod, so the volume is free:
 

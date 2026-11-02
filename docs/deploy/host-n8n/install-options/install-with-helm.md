@@ -9,7 +9,7 @@ layout:
 
 The official n8n Helm chart installs self-hosted n8n on Kubernetes in queue mode or standalone mode.
 
-n8n maintains the chart in the [n8n-hosting repository](https://github.com/n8n-io/n8n-hosting/tree/main/charts/n8n) and publishes it to the OCI registry at `oci://ghcr.io/n8n-io/n8n-helm-chart/n8n`. This page covers a basic installation with chart 2.x, which installs n8n 3.x. For every configurable value, see the chart's [README](https://github.com/n8n-io/n8n-hosting/blob/main/charts/n8n/README.md) and [`values.yaml`](https://github.com/n8n-io/n8n-hosting/blob/main/charts/n8n/values.yaml).
+n8n maintains the chart in the [n8n-hosting repository](https://github.com/n8n-io/n8n-hosting/tree/main/charts/n8n) and publishes it to the OCI registry at `oci://ghcr.io/n8n-io/n8n-helm-chart/n8n`. This page covers a basic installation with chart 2.x, which installs n8n 3.x. For every configurable value, see the chart's [README](https://github.com/n8n-io/n8n-hosting/blob/main/charts/n8n/README.md) and [`values.yaml`](https://github.com/n8n-io/n8n-hosting/blob/main/charts/n8n/values.yaml). These links show the latest chart. To see the values of the version you install, open its [release tag](https://github.com/n8n-io/n8n-hosting/tags), for example `v2.0.0`.
 
 ## Prerequisites for the Helm chart
 
@@ -225,7 +225,7 @@ httpRoute:
     - <your-n8n-domain>
 ```
 
-The chart never creates the Gateway, and you configure TLS on the Gateway's listener. Install the Gateway API custom resource definitions before you install the chart. Use the route or the Ingress, not both: the installation fails if you enable both. For complete examples, see [Gateway API](https://github.com/n8n-io/n8n-hosting/blob/main/charts/n8n/README.md#gateway-api) in the chart's README.
+The chart never creates the Gateway, and you configure TLS on the Gateway's listener. If the Gateway runs in another namespace, set the listener's `allowedRoutes` to accept routes from the namespace you install n8n into. By default, a listener only accepts routes from its own namespace. Install the Gateway API custom resource definitions before you install the chart. Use the route or the Ingress, not both: the installation fails if you enable both. For complete examples, see [Gateway API](https://github.com/n8n-io/n8n-hosting/blob/main/charts/n8n/README.md#gateway-api) in the chart's README.
 
 ### Set n8n's public URLs with the Helm chart
 
@@ -244,7 +244,7 @@ Webhooks follow the editor URL unless you set `webhook.url`. To receive webhooks
 
 When you enable an Ingress or an `HTTPRoute`, the chart sets `N8N_PROXY_HOPS` to `1` on main and webhook processor pods. n8n then reads each client's IP address from the `X-Forwarded-For` header that the Ingress controller or Gateway adds, instead of using the proxy's address. IP allowlists on Webhook nodes and the addresses n8n logs depend on this. For background, see [Configure webhook URLs with a reverse proxy](../configure-n8n/basic-configuration/configuration-examples/configure-webhook-urls-with-reverse-proxy.md).
 
-If another proxy that adds its own hop sits in front of the Ingress controller or Gateway, such as a CDN or a cloud load balancer, raise the count with `chartEnvOverrides`. Setting `N8N_PROXY_HOPS` in `env.shared`, `env.main`, or `env.webhookProcessor` fails the installation. Without an Ingress or route, the chart doesn't set `N8N_PROXY_HOPS`, so set it in `env.shared` if a proxy of your own sits in front of n8n.
+If another proxy that adds its own hop sits in front of the Ingress controller or Gateway, such as a CDN or a cloud load balancer, raise the count with `chartEnvOverrides`. With an Ingress or route, setting `N8N_PROXY_HOPS` in `env.shared`, `env.main`, or `env.webhookProcessor` fails the installation. Without an Ingress or route, the chart doesn't set `N8N_PROXY_HOPS`, so set it in `env.shared` if a proxy of your own sits in front of n8n.
 
 ```yaml
 chartEnvOverrides:
@@ -303,7 +303,7 @@ Check that the pods start:
 kubectl get pods
 ```
 
-In queue mode, each worker pod runs two containers: n8n and the task runner sidecar.
+In queue mode with task runners on, which is the default, each worker pod runs two containers: n8n and the task runner sidecar. With `taskRunners.enabled: false`, each worker pod runs only the n8n container.
 
 To change the configuration later, edit `values.yaml` and run `helm upgrade` with the same chart version, as described in [Upgrade the Helm chart](#upgrade-the-helm-chart).
 
@@ -349,10 +349,10 @@ To upgrade:
 4. Read the changes in the following list that the render doesn't catch, and adjust your setup.
 5. Run `helm upgrade` with your values file, as shown in [Upgrade the Helm chart](#upgrade-the-helm-chart).
 
-To add the task runner token to an existing core Secret:
+To add the task runner token to an existing core Secret, replace `<your-core-secret>` with the name you set in `secretRefs.existingSecret`:
 
 ```bash
-kubectl patch secret n8n-core-secrets --type merge --patch-file /dev/stdin <<EOF
+kubectl patch secret <your-core-secret> --type merge --patch-file /dev/stdin <<EOF
 {"stringData":{"N8N_RUNNERS_AUTH_TOKEN":"$(openssl rand -base64 32)"}}
 EOF
 ```

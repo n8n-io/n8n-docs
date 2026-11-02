@@ -3,10 +3,6 @@ title: Work with Browser Use
 description: >-
   Connect the n8n Browser Use extension so n8n Assistant can work in your
   browser and set up credentials for you.
-status: preview
-tags:
-  - tag: preview
-    primary: true
 layout:
   description:
     visible: false
@@ -26,12 +22,6 @@ Browser Use is available on:
 - **n8n Cloud:** Starter, Pro
 
 It isn't available on self-hosted n8n.
-{% endhint %}
-
-{% hint style="info" %}
-**Preview status**
-
-Browser Use is part of n8n Assistant, which is in Preview. It can make mistakes, and behavior may change while the feature is in development.
 {% endhint %}
 
 ## What Browser Use can do

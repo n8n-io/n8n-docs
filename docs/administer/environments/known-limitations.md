@@ -18,7 +18,12 @@ Environments are in Preview and may change in future releases. Try them on test 
 
 ## Enterprise readiness
 
-Environments have **Limited enterprise readiness**. They don't support [multi-main setups](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/enable-queue-mode#multi-main-setup) yet. Support for multi-main is planned.
+Environments have **Limited enterprise readiness**. They don't yet support the following Enterprise capabilities:
+
+- **Multi-main:** Environments don't support [multi-main setups](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/enable-queue-mode#multi-main-setup). Support is planned.
+- **Log streaming:** promote, apply, and review events don't reach [log streaming](../observe-and-log/stream-logs-to-external-systems.md) destinations. Support is planned.
+- **Public API:** the public API doesn't cover promotion reviews. Support is planned.
+- **External secrets:** provider access tokens can't come from an [external secrets vault](../manage-credentials/use-external-secret-stores.md). Support is planned.
 
 ## Cross-project dependencies
 

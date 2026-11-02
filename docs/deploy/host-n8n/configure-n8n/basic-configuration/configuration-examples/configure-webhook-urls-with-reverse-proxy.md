@@ -69,10 +69,10 @@ Only set `N8N_INSECURE_DISABLE_FORM_HTML_SANDBOX` to `true` when all three condi
 * The webhook hostname serves only webhook and form paths. Configure your proxy so that the editor and n8n's internal REST API (`/rest`) aren't reachable on it. Users don't sign in to n8n through the webhook hostname.
 * n8n runs with `NODE_ENV=production`. The official n8n Docker image sets this for you. If you install n8n with npm, set it yourself. Without it, n8n runs in development mode and accepts cross-origin requests from any website.
 
-By default, n8n serves webhooks and forms on these paths. If you changed them with the [`N8N_ENDPOINT_*` variables](../use-environment-variables/endpoints.md), use your values instead:
+By default, n8n serves webhooks and forms on these paths. If you changed them with the [endpoint environment variables](../use-environment-variables/endpoints.md), use your values instead:
 
-* Forms: `/form/`, `/form-test/`, and `/form-waiting/`
-* Webhooks: `/webhook/`, `/webhook-test/`, and `/webhook-waiting/`
+* Forms: `/form/`, `/form-test/`, and `/form-waiting/`, set by `N8N_ENDPOINT_FORM`, `N8N_ENDPOINT_FORM_TEST`, and `N8N_ENDPOINT_FORM_WAIT`
+* Webhooks: `/webhook/`, `/webhook-test/`, and `/webhook-waiting/`, set by `N8N_ENDPOINT_WEBHOOK`, `N8N_ENDPOINT_WEBHOOK_TEST`, and `N8N_ENDPOINT_WEBHOOK_WAIT`
 
 With this setup, the browser doesn't send the n8n session cookie to the webhook hostname. A script on the form page can't send authenticated requests to n8n on the editor hostname.
 
@@ -91,9 +91,11 @@ export NODE_ENV=production
 export N8N_INSECURE_DISABLE_FORM_HTML_SANDBOX=true
 ```
 
+`N8N_WEBHOOK_URL` is available from n8n 2.30.0. On earlier versions, use `WEBHOOK_URL` instead.
+
 ### Test forms from the editor behind an authentication proxy
 
-From n8n X.Y.Z <!-- TODO: release that ships n8n-io/n8n#41107 -->, the editor opens test forms on a webhook hostname behind an authentication proxy. When you select **Execute workflow** or **Execute step** on a workflow with an **n8n Form Trigger** node, the editor opens the test form in a new window. If you aren't signed in to the proxy yet, the proxy's sign-in page shows first. After you sign in, the form loads.
+From n8n 2.27.0, the editor opens test forms on a webhook hostname behind an authentication proxy. When you select **Execute workflow** or **Execute step** on a workflow with an **n8n Form Trigger** node, the editor opens the test form in a new window. If you aren't signed in to the proxy yet, the proxy's sign-in page shows first. After you sign in, the form loads.
 
 On earlier versions, the editor doesn't open the test form in this setup. To test the form, open the **n8n Form Trigger** node, copy its **Test URL**, and open it in a new browser tab.
 

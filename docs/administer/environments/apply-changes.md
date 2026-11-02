@@ -16,7 +16,7 @@ Applying changes brings your work from an environment into your instance. A proj
 Environments are in Preview and may change in future releases. Try them on test instances before you set them up for your production instances.
 {% endhint %}
 
-Before you start, [set up the environment](set-up-environments.md) this instance applies changes from.
+Before you start, add the environment this instance applies changes from. See [Plan your environments](plan-your-environments.md).
 
 ## Add missing projects
 
@@ -114,7 +114,7 @@ If a project apply fails, n8n shows **Couldn't apply the changes** and one of th
 
 - [Environments](./)
 - [Plan your environments](plan-your-environments.md)
-- [Set up environments](set-up-environments.md)
+- [Your first promotion](first-promotion.md)
 - [Promote changes](promote-changes.md)
 - [Promotion reviews](promotion-reviews.md)
 - [Git-based promotion](git-based-promotion/README.md)

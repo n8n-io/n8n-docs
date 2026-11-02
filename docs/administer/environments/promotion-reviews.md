@@ -32,7 +32,7 @@ Only GitLab supports promotion reviews at the moment. n8n opens a merge request 
 
 ### Turn on promotion reviews
 
-On the instance that promotes, edit the environment you promote to and turn on **Open a merge request in GitLab**. See [Set up environments](set-up-environments.md#add-an-environment).
+On the instance that promotes, edit the environment you promote to and turn on **Open a merge request in GitLab**.
 
 Each promote then pushes a feature branch and opens a merge request into the environment's branch. The merge request appears as a promotion review in **Reviews**. **Reviews** lists only merge requests that n8n opened.
 
@@ -71,7 +71,6 @@ Because the same GitLab user opens and approves the merge request, GitLab approv
 
 - [Environments](./)
 - [Plan your environments](plan-your-environments.md)
-- [Set up environments](set-up-environments.md)
 - [Promote changes](promote-changes.md)
 - [Apply changes](apply-changes.md)
 - [Git-based promotion](git-based-promotion/README.md)

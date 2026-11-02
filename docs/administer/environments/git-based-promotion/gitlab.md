@@ -68,4 +68,4 @@ To review promotions as merge requests, turn on **Open a merge request in GitLab
 - [Git-based promotion](./)
 - [Generic Git](generic-git.md)
 - [Promotion reviews](../promotion-reviews.md)
-- [Set up environments](../set-up-environments.md)
+- [Plan your environments](../plan-your-environments.md)

@@ -1,5 +1,5 @@
 ---
-description: Compare Environments with Environments (Classic), upgrade an n8n instance, and switch back if needed.
+description: Compare Environments with Environments (Classic), migrate your n8n instances, and switch back if needed.
 status: preview
 layout:
   description:
@@ -16,22 +16,12 @@ Environments improve on and replace [Environments (Classic)](../use-source-contr
 Environments are in Preview and may change in future releases. Try them on test instances before you set them up for your production instances.
 {% endhint %}
 
-## Which version an instance uses
-
-- Environments are available on Enterprise plans. Other plans keep Environments (Classic).
-- Instances connected to Environments (Classic) stay on Classic until you upgrade them in **Settings** > **Environments (Classic)**.
-- Every other instance on an Enterprise plan starts on Environments.
-
-## What stays and what starts over
-
-Upgrading doesn't change the workflows, credentials, variables, or data on your instances. Only the Git side starts over: Classic and Environments store content in Git in different formats, so Apply can't read what Classic pushed. While Environments can technically share a repository with Classic content, n8n recommends a new or empty repository or branch.
-
 ## Compare Classic and Environments
 
 | | Environments (Classic) | Environments |
 |---|---|---|
 | Model | The instance pushes to and pulls from one branch. | The instance promotes to one environment and applies from another. Each can use its own repository and branch. |
-| Git hosts | Any Git host over SSH or HTTPS. | Any Git host through Generic Git, as in Classic. GitLab adds repository and branch lists, and promotion reviews. |
+| Git hosts | Any Git host over SSH or HTTPS. | Any Git host through Generic Git, as in Classic. GitLab adds repository and branch lists. |
 | Reviews | Manually on the Git host. | Promotion reviews in n8n with a visual diff, based on merge requests that n8n opens on GitLab. |
 | Selecting changes | You choose what to push. Pull brings in everything. | You choose changes in both directions with a project promote or project apply, or move all team projects with an instance promote or instance apply. |
 | Dependencies | You select workflows, credentials, and data tables. n8n adds tags and variable stubs. | n8n includes everything the selected workflows use. Selecting dependencies yourself is planned. |
@@ -59,17 +49,36 @@ Environments don't cover everything Environments (Classic) does yet. Check these
 Environments also have limitations that don't relate to Classic. See [Known limitations](known-limitations.md).
 {% endhint %}
 
-## Upgrade your instances
+## Migrate from Environments (Classic)
+
+Classic and Environments store content in Git in different formats, so Apply can't read what Classic pushed. Environments can technically share a repository with Classic content, but n8n recommends a new repository or an empty branch.
 
 Try this on test instances first. Your Classic setup stays connected in the background, so you can switch back.
 
-Before you upgrade, stop or switch any CI pipelines that call the Classic endpoints of the public API. Upgrading only changes what the UI shows, so those endpoints keep running Classic push and pull. Don't mix them with Environments, and switch your pipelines to the promotion endpoints. n8n plans to block the Classic endpoints on instances that use Environments.
+Before you start:
 
-Upgrade the source instance first, then the target:
+1. Switch any CI pipelines that call the Classic endpoints of the public API to the promotion endpoints. Upgrading only changes the UI, so those endpoints keep running Classic push and pull. n8n plans to block them on instances that use Environments.
+2. On development and production, go to **Settings** > **Environments (Classic)**, select **Upgrade**, and confirm.
+3. Create a new repository or an empty branch for the Production environment.
+4. Add the environment configurations, as in [Development and production](plan-your-environments.md#development-and-production). Don't apply on production while the branch is empty.
 
-1. On the source instance, go to **Settings** > **Environments (Classic)**, select **Upgrade**, and confirm.
-2. Set up the environment it promotes changes to, and promote. See [First promote and apply](set-up-environments.md#first-promote-and-apply).
-3. On the target instance, upgrade the same way, set up the environment it applies changes from, and apply. Classic pull kept the source's IDs, so the first apply updates the existing content in place. See [Apply to an instance that already has content](set-up-environments.md#apply-to-an-instance-that-already-has-content).
+Then fill the branch in one of two ways.
+
+### Start from development
+
+If development has no changes that you aren't ready to bring to production, follow [Your first promotion](first-promotion.md#promote-and-apply) from step 3.
+
+### Start from production
+
+If development has changes that aren't ready for production, fill the branch from production instead. The branch then matches production, and you promote changes from development when they're ready.
+
+![Migration from Environments (Classic): 1, the production instance runs one instance promote to the Production environment's Git branch. 2, the development instance promotes changes to the branch. 3, the production instance applies them.](../.gitbook/assets/environments-migrate-from-classic.png)
+
+1. On production, add a Production promote environment configuration, pointing to the same repository and branch, and run an [instance promote](promote-changes.md#instance-promote). Then remove the promote environment configuration from production.
+2. From then on, promote changes from development with a [project promote](promote-changes.md#project-promote) when they're ready. An instance promote would also send the changes that aren't ready.
+3. On production, [apply](apply-changes.md) the changes.
+
+In both cases, Classic pull kept the source's IDs, so Apply updates the content on production in place. Workflows keep their version history and executions, variables keep their values, and credentials keep their secrets. When you're done, [protect the production instance](protect-a-production-instance.md).
 
 ## Switch back to Environments (Classic)
 
@@ -78,17 +87,11 @@ Upgrade the source instance first, then the target:
 
 Switching back affects only this instance. You can upgrade again at any time.
 
-## Things to check after you upgrade
-
-- **Protected instance** is one setting for Classic and Environments. Changing it in one changes it in the other.
-- Variables now go to the repository with their values. Before your first promote, move any secrets from variables into credentials.
-- Classic accepts SSH repository URLs like `git@github.com:acme/n8n.git`. Environments need the `ssh://` form, such as `ssh://git@github.com/acme/n8n.git`.
-
 ## Related resources
 
 - [Environments](./)
 - [Plan your environments](plan-your-environments.md)
-- [Set up environments](set-up-environments.md)
+- [Your first promotion](first-promotion.md)
 - [Promote changes](promote-changes.md)
 - [Apply changes](apply-changes.md)
 - [Promotion reviews](promotion-reviews.md)

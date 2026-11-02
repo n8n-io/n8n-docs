@@ -16,7 +16,7 @@ Promote sends workflows and their dependencies from your instance to the environ
 Environments are in Preview and may change in future releases. Try them on test instances before you set them up for your production instances.
 {% endhint %}
 
-Before you start, [set up the environment](set-up-environments.md) this instance promotes changes to.
+Before you start, add the environment this instance promotes changes to. See [Plan your environments](plan-your-environments.md).
 
 ## Project promote
 
@@ -59,10 +59,6 @@ n8n sets the commit author to your n8n name and email. The Git host records the 
 
 ## What blocks a promote
 
-### A review is open
-
-While a promotion review for a project is open, you can't promote that project again. This prevents merge conflicts between reviews. Approve or close the review first. See [Promotion reviews](promotion-reviews.md).
-
 ### Workflows or folders moved to another project
 
 A project promote can't move workflows or folders between projects. n8n names the item and both projects. Use an instance promote instead. Moves within a project work, and moves into a personal project aren't supported. See [Moving workflows and folders between projects](known-limitations.md#moving-workflows-and-folders-between-projects).
@@ -75,7 +71,7 @@ An instance promote fails if a workflow references a workflow in a personal proj
 
 - [Environments](./)
 - [Plan your environments](plan-your-environments.md)
-- [Set up environments](set-up-environments.md)
+- [Your first promotion](first-promotion.md)
 - [Apply changes](apply-changes.md)
 - [Promotion reviews](promotion-reviews.md)
 - [Git-based promotion](git-based-promotion/README.md)

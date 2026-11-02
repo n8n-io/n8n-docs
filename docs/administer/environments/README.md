@@ -1,5 +1,5 @@
 ---
-description: Move workflows and what they use through development, staging, and production environments, and review changes before they reach production.
+description: Move workflows and what they use from development to production through environments.
 status: preview
 layout:
   description:
@@ -11,7 +11,7 @@ tags:
 
 # Environments
 
-Environments let you move workflows and other n8n resources, such as credentials, variables, and data tables, through the steps of your release process, such as development, staging, and production. You build and test changes on one instance, then promote them to the next step.
+Environments let you move workflows and other n8n resources, such as credentials, variables, and data tables, through the steps of your release process, such as development and production. You build and test changes on one instance, then promote them to the next step.
 
 {% hint style="info" %}
 **Feature availability**
@@ -35,7 +35,6 @@ Environments are in Preview and may change in future releases. Try them on test 
 Separate environments let you change workflows without breaking the ones running in production. A common setup:
 
 - **Development:** build and change workflows.
-- **Staging:** test changes before they go live.
 - **Production:** run the live workflows.
 
 ## How environments work
@@ -45,7 +44,7 @@ Separate environments let you change workflows without breaking the ones running
 Changes move between instances through an environment:
 
 1. On the development instance, you promote changes to the Production environment.
-2. Optional: if the environment requires a promotion review, someone approves the changes on the development instance before they reach the environment.
+2. Optional: someone approves the changes in a [promotion review](promotion-reviews.md) before they reach the environment.
 3. On the production instance, you apply the changes from the Production environment.
 
 With Git-based promotion, promoting commits the changes to the Production environment's Git branch.
@@ -82,17 +81,13 @@ Workflows are the main unit of promotion. When you select workflows, n8n include
 
 Promote and apply use [n8n packages](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages) to export and import content. To learn what Apply changes on an instance, see [Apply changes](apply-changes.md#what-apply-changes-on-the-instance).
 
-### Promotion review
-
-A promotion review is an optional approval step in a promote. Promoted changes reach the environment only after someone approves them. You turn on promotion reviews in the settings of the environment you promote to, and you approve them on the instance that promotes. Support for promotion reviews depends on the provider. See [Promotion reviews](promotion-reviews.md).
-
 ### Promotion model
 
 A promotion model is how changes travel between environments. n8n currently supports Git-based promotion, where changes travel through a Git repository. Other models, such as promoting directly from one instance to another, may follow. See [Git-based promotion](git-based-promotion/README.md).
 
 ### Provider
 
-A provider holds the details n8n uses to connect and authenticate to a Git host, such as an access token or an SSH key. Several environments can use the same provider. The Git provider type you choose decides which extra features you get, such as listing the repositories and branches the provider can access, or promotion reviews with GitLab merge requests.
+A provider holds the details n8n uses to connect and authenticate to a Git host, such as an access token or an SSH key. Several environments can use the same provider. The Git provider type you choose decides which extra features you get, such as listing the repositories and branches the provider can access.
 
 ## Environments and Environments (Classic)
 
@@ -101,13 +96,14 @@ Environments replace [Environments (Classic)](../use-source-control-and-environm
 ## In this section
 
 - [Plan your environments](plan-your-environments.md): choose how your instances and environments connect.
-- [Set up environments](set-up-environments.md): add providers and environments, and protect an instance.
+- [Your first promotion](first-promotion.md): bring your work to a new target instance for the first time.
 - [Promote changes](promote-changes.md): send a project or the whole instance to an environment.
 - [Apply changes](apply-changes.md): bring changes from an environment into a project or the whole instance.
+- [Protect a production instance](protect-a-production-instance.md): stop changes in the UI on instances that only apply.
 - [Promotion reviews](promotion-reviews.md): approve promoted changes before they reach the environment's branch.
 - [Git-based promotion](git-based-promotion/README.md): how environments use Git, and the supported Git providers.
 - [Known limitations](known-limitations.md): what Environments don't support yet, and workarounds.
-- [Upgrade from Environments (Classic)](upgrade-from-environments-classic.md): compare the two versions, upgrade an instance, and switch back.
+- [Upgrade from Environments (Classic)](upgrade-from-environments-classic.md): compare the two versions, migrate your instances, and switch back.
 
 ## Related resources
 

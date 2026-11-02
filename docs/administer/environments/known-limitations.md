@@ -103,7 +103,7 @@ n8n opens and approves merge requests with the same GitLab token. GitLab approva
 
 - [Environments](./)
 - [Plan your environments](plan-your-environments.md)
-- [Set up environments](set-up-environments.md)
+- [Your first promotion](first-promotion.md)
 - [Promote changes](promote-changes.md)
 - [Apply changes](apply-changes.md)
 - [Promotion reviews](promotion-reviews.md)

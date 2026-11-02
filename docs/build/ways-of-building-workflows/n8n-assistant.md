@@ -1,6 +1,5 @@
 ---
 title: Use n8n Assistant
-status: preview
 description: >-
   Use n8n Assistant to create, edit, test, and troubleshoot n8n workflows from a
   chat.
@@ -24,9 +23,6 @@ layout:
     visible: true
   anchors:
     visible: true
-tags:
-  - tag: preview
-    primary: true
 ---
 
 # Use n8n Assistant
@@ -44,14 +40,19 @@ n8n Assistant is available on:
 
 * **n8n Cloud:** Starter, Pro
 * **Self-hosted:** Community, Registered Community, Business
-
-It isn't ready for n8n Cloud Enterprise or self-hosted Enterprise yet. If you're an Enterprise customer, contact your Customer Success Manager about preview access.
 {% endhint %}
 
 {% hint style="info" %}
-**Preview status**
+**Limited enterprise readiness**
 
-n8n Assistant is in Preview. It can make mistakes, and behavior may change while the feature is in development. Always review generated workflows before using them in production.
+n8n Assistant has **Limited enterprise readiness**. It partially supports the following Enterprise capabilities:
+
+- **RBAC and project scoping**
+- **Data residency**
+- **Queue mode and multi-main**
+- **Environments and source control**
+
+It doesn't yet support all other relevant Enterprise capabilities.
 {% endhint %}
 
 ## What n8n Assistant can help with
@@ -231,11 +232,11 @@ When you enable web access, n8n Assistant asks for permission before accessing a
 
 Review the requested domain before you approve access.
 
-## Preview limitations
+## Limitations
 
-n8n Assistant is a Preview feature. Availability, supported actions, and behavior may change.
+Availability, supported actions, and behavior of n8n Assistant may change.
 
-During Preview:
+Be aware that:
 
 * n8n Assistant may not support some actions yet.
 * Some capabilities may roll out gradually.

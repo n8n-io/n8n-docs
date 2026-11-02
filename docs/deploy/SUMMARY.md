@@ -25,6 +25,7 @@
     * [Install with npm](host-n8n/install-options/install-with-npm.md)
     * [Install with Docker](host-n8n/install-options/install-with-docker.md)
     * [Install with Helm](host-n8n/install-options/install-with-helm.md)
+      * [Upgrade the Helm chart from 1.x to 2.0](host-n8n/install-options/install-with-helm/upgrade-the-helm-chart-from-1x-to-20.md)
     * [Use a cloud provider](host-n8n/install-options/use-a-cloud-provider/README.md)
       * [Deploy to Digital Ocean](host-n8n/install-options/use-a-cloud-provider/deploy-to-digital-ocean.md)
       * [Deploy to Heroku](host-n8n/install-options/use-a-cloud-provider/deploy-to-heroku.md)

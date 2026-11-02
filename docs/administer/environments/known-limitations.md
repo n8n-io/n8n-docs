@@ -16,6 +16,14 @@ Environments are in Preview, and n8n is actively improving and extending them. M
 Environments are in Preview and may change in future releases. Try them on test instances before you set them up for your production instances.
 {% endhint %}
 
+## Enterprise readiness
+
+Environments have **Limited enterprise readiness**. They don't yet support the following Enterprise capabilities:
+
+- **Multi-main:** Environments don't support [multi-main setups](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/enable-queue-mode#multi-main-setup). TODO(enterprise-readiness): confirm whether support is planned.
+
+TODO(enterprise-readiness): confirm the other open gaps from the Enterprise Readiness matrix with the feature team, for example audit logging and log streaming, and whether n8n plans to close each one.
+
 ## Cross-project dependencies
 
 Workflows can use resources from outside their project: sub-workflows from another team project, and credentials that another project owns and shares with them. Data tables and project variables always belong to one project.

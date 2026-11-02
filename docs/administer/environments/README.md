@@ -30,6 +30,16 @@ Only instance owners and instance admins can set up environments, promote, apply
 Environments are in Preview and may change in future releases. Try them on test instances before you set them up for your production instances.
 {% endhint %}
 
+{% hint style="info" %}
+**Limited enterprise readiness**
+
+Environments have **Limited enterprise readiness**. They don't yet support the following Enterprise capabilities:
+
+- **Multi-main**
+
+See [Enterprise readiness](known-limitations.md#enterprise-readiness).
+{% endhint %}
+
 ## Why use environments
 
 Separate environments let you change workflows without breaking the ones running in production. A common setup:

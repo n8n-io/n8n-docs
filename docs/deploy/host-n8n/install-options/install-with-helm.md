@@ -44,7 +44,7 @@ The chart reads n8n's core settings and passwords from Kubernetes Secrets that y
 
 The core Secret holds the encryption key that n8n uses for credentials, and the host, port, and protocol of your instance.
 
-First, generate the encryption key and store a copy outside the cluster, for example in your password manager or secrets store:
+First, generate the encryption key and store a copy outside the cluster, for example in your password manager or secrets store. The second command prints the key so you can copy it. The key then stays in your terminal output, so clear the terminal after you copy it, and don't run this command in a shared or recorded session:
 
 ```bash
 N8N_ENCRYPTION_KEY="$(openssl rand -base64 32)"

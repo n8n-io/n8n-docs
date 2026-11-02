@@ -339,7 +339,7 @@ A Helm rollback reapplies the previous release's Kubernetes manifests. It doesn'
 
 ## Upgrade from Helm chart 1.x to 2.0
 
-Chart 2.0 changes values keys and defaults, and moves n8n from 2.x to 3.0. A chart 1.x values file fails to render against chart 2.0 until you update it. Before you upgrade an existing chart 1.x release, follow [Upgrade the Helm chart from 1.x to 2.0](install-with-helm/upgrade-the-helm-chart-from-1x-to-20.md).
+Chart 2.0 changes values keys and defaults, and moves n8n from 2.x to 3.0. A chart 1.x values file that sets keys chart 2.0 retired fails to render until you update it. Before you upgrade an existing chart 1.x release, follow [Upgrade the Helm chart from 1.x to 2.0](install-with-helm/upgrade-the-helm-chart-from-1x-to-20.md).
 
 ## Related resources
 

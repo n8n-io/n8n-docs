@@ -13,6 +13,8 @@ Chart 2.0 changes values keys and defaults, and moves n8n from 2.x to 3.0. Befor
 
 This page covers moving an existing chart 1.x release to chart 2.0. For a new installation, and for upgrades within chart 2.x, see [Install with Helm](../install-with-helm.md).
 
+The commands on this page use the release name `n8n`, as in `helm install n8n`. If your release has another name, the Deployments, PersistentVolumeClaim, and label values change to match. Replace `<your-namespace>` with the namespace of your n8n release.
+
 ## Upgrade steps for Helm chart 2.0
 
 To upgrade from chart 1.x to 2.0:
@@ -26,7 +28,7 @@ To upgrade from chart 1.x to 2.0:
 To add the task runner token to an existing core Secret, replace `<your-core-secret>` with the name you set in `secretRefs.existingSecret`:
 
 ```bash
-kubectl patch secret <your-core-secret> --type merge --patch-file /dev/stdin <<EOF
+kubectl patch secret <your-core-secret> --namespace <your-namespace> --type merge --patch-file /dev/stdin <<EOF
 {"stringData":{"N8N_RUNNERS_AUTH_TOKEN":"$(openssl rand -base64 32)"}}
 EOF
 ```
@@ -53,10 +55,10 @@ Some chart 2.0 changes don't fail the render. Check each one before you upgrade 
 
 * **Public URLs:** a core Secret that still holds `N8N_HOST`, `N8N_PORT`, and `N8N_PROTOCOL` still works, but n8n no longer receives them. If n8n built its URLs from them, set `editor.url`. Otherwise n8n shows webhook and OAuth callback URLs on `localhost`.
 * **Keys for rollback:** keep `N8N_HOST`, `N8N_PORT`, and `N8N_PROTOCOL` in your core Secret until you no longer need to roll back to chart 1.x. Chart 1.x main and webhook processor pods can't start without them, including old pods that restart while the upgrade is in progress. A Helm rollback doesn't restore a Secret that you manage yourself.
-* **Mixed versions during the upgrade:** during rolling updates, old and new pods run side by side until the rollout finishes. An old pod that restarts in this window can fail to start, because chart 2.0 removes ConfigMap keys and a Secret it reads. Upgrade in a low-traffic window, and avoid node drains until every n8n Deployment finishes its rollout. Check with `kubectl rollout status deployment/<deployment-name>`. Helm can report `deployed` before the rollout finishes.
+* **Mixed versions during the upgrade:** during rolling updates, old and new pods run side by side until the rollout finishes. An old pod that restarts in this window can fail to start, because chart 2.0 removes ConfigMap keys and a Secret it reads. Upgrade in a low-traffic window, and avoid node drains until every n8n Deployment finishes its rollout. Helm can report `deployed` before the rollout finishes. Check each Deployment, for example `kubectl rollout status deployment/n8n-main` and `kubectl rollout status deployment/n8n-worker`.
 * **`$(VAR)` references:** literal values from `env` maps reach the pods through ConfigMaps, where Kubernetes doesn't expand `$(VAR)` references. A value such as `$(HTTP_PROXY)` that worked in an `extraEnv` list now arrives as that literal text.
 * **Task runners:** each worker pod, or the main pod in standalone mode, gains a task runner sidecar. To keep running code inside the n8n process, set `taskRunners.enabled: false`.
-* **Storage directory:** on first start, n8n 3.0 renames `/home/node/.n8n/binaryData` to `/home/node/.n8n/storage`. If both directories exist, n8n doesn't start. Move the contents of `binaryData` into `storage`, remove `binaryData`, and start n8n again.
+* **Storage directory:** on first start, n8n 3.0 renames `/home/node/.n8n/binaryData` to `/home/node/.n8n/storage`. See [Move binary data to the storage directory](#move-binary-data-to-the-storage-directory).
 * **Restarts:** every pod restarts once during the upgrade. With persistence on a `ReadWriteOnce` volume, the main pod uses the `Recreate` strategy, so the upgrade has a short outage.
 * **Helm 4:** if you installed the 1.x release with Helm 4, the first upgrade can fail with `spec.strategy.rollingUpdate: Forbidden`. Run that upgrade once with `--server-side=false`.
 * **Environment variable precedence:** ConfigMaps and Secrets you load with `envFrom` now override the values in the chart's ConfigMaps. In 1.x, the chart's variables won. Variables the chart reads from a Secret, such as the encryption key, still win. Check that they hold only the keys you mean to set.
@@ -66,11 +68,94 @@ Some chart 2.0 changes don't fail the render. Check each one before you upgrade 
 
 For the full list, including S3 binary data, security contexts, and webhook URLs, see the chart's [upgrade guide](https://github.com/n8n-io/n8n-hosting/blob/main/charts/n8n/UPGRADING.md).
 
+## Move binary data to the storage directory
+
+On first start, n8n 3.0 renames `/home/node/.n8n/binaryData` to `/home/node/.n8n/storage`. n8n 3.0 also removes `N8N_MIGRATE_FS_STORAGE_PATH`. With `persistence.enabled: true`, the chart mounts the whole `/home/node/.n8n` directory, so the rename needs no change to your values.
+
+If you mount a volume directly at `/home/node/.n8n/binaryData`, for example with `extraVolumes` and `extraVolumeMounts`, mount it at `/home/node/.n8n/storage` instead. To keep the old path, set `N8N_STORAGE_PATH` to it in `env.shared`.
+
+If both `binaryData` and `storage` exist, n8n doesn't start. To move the data on the chart's PersistentVolumeClaim:
+
+1. Stop the main Deployment, so the volume is free:
+
+    ```bash
+    kubectl scale deployment/n8n-main --replicas=0 --namespace <your-namespace>
+    ```
+
+2. Save this Pod manifest as `n8n-storage-fix.yaml`. It mounts the claim with the same user and group as n8n:
+
+    ```yaml
+    apiVersion: v1
+    kind: Pod
+    metadata:
+      name: n8n-storage-fix
+    spec:
+      securityContext:
+        runAsUser: 1000
+        runAsGroup: 1000
+        runAsNonRoot: true
+        seccompProfile:
+          type: RuntimeDefault
+      containers:
+        - name: shell
+          image: busybox:1.36
+          command: ["sleep", "3600"]
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop: ["ALL"]
+          volumeMounts:
+            - name: data
+              mountPath: /data
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: n8n
+    ```
+
+3. Start the Pod, move the contents of `binaryData` into `storage`, and remove `binaryData`:
+
+    ```bash
+    kubectl apply -f n8n-storage-fix.yaml --namespace <your-namespace>
+    kubectl wait pod/n8n-storage-fix --for=condition=Ready --namespace <your-namespace>
+    kubectl exec n8n-storage-fix --namespace <your-namespace> -- \
+    	sh -c 'cp -a /data/binaryData/. /data/storage/ && rm -rf /data/binaryData'
+    ```
+
+4. Delete the Pod, and start the main Deployment again:
+
+    ```bash
+    kubectl delete pod/n8n-storage-fix --namespace <your-namespace>
+    kubectl scale deployment/n8n-main --replicas=1 --namespace <your-namespace>
+    ```
+
 ## Roll back from Helm chart 2.0 to 1.x
 
-To roll back to chart 1.x after n8n 3.0 has started, also roll n8n back to the 2.x version you ran before. A Helm rollback doesn't reverse the database migrations that n8n 3.0 ran. Stop n8n, restore the database and persistent volume backups you took before the upgrade, then roll back to the previous chart and n8n versions.
+A Helm rollback doesn't reverse the database migrations that n8n 3.0 ran. To roll back to chart 1.x after n8n 3.0 has started:
 
-Chart 1.x main and webhook processor pods need `N8N_HOST`, `N8N_PORT`, and `N8N_PROTOCOL` in the core Secret. If you removed these keys, add them back before you roll back.
+1. If you removed `N8N_HOST`, `N8N_PORT`, and `N8N_PROTOCOL` from your core Secret, add them back. Chart 1.x main and webhook processor pods can't start without them.
+2. Stop n8n by scaling every n8n Deployment to zero:
+
+    ```bash
+    kubectl scale deployment --selector app.kubernetes.io/instance=n8n --replicas=0 --namespace <your-namespace>
+    ```
+
+    If KEDA or a HorizontalPodAutoscaler scales your Deployments, it can start pods again. Check with `kubectl get pods --namespace <your-namespace>` that no n8n pods run before you continue.
+
+3. Restore the database and persistent volume backups you took before the upgrade.
+4. Find the last chart 1.x revision of the release in the `CHART` column:
+
+    ```bash
+    helm history n8n --namespace <your-namespace>
+    ```
+
+5. Roll back to that revision. This restores the chart 1.x manifests and the n8n 2.x version they install:
+
+    ```bash
+    helm rollback n8n <revision> --namespace <your-namespace>
+    ```
+
+6. Check that every n8n Deployment runs again with `kubectl get deployments --namespace <your-namespace>`. Scale any Deployment that stays at zero replicas with `kubectl scale`.
 
 ## Related resources
 

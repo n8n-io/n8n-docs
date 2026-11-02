@@ -18,18 +18,6 @@ If your instances use Environments (Classic), start with [Migrate from Environme
 Environments are in Preview and may change in future releases. Try them on test instances before you set them up for your production instances.
 {% endhint %}
 
-## Prerequisites
-
-- You're an instance owner or instance admin.
-- Your instance is on an Enterprise plan.
-- You have a Git repository and a way to authenticate: n8n generates an SSH key that you add to the repository as a deploy key or to a Git account, or you use an account with an access token. You need write access to promote and read access to apply. See your provider's page under [Git-based promotion](git-based-promotion/README.md).
-
-On self-hosted n8n:
-
-- The `promotions` module loads by default on licensed instances. To turn Environments off, set `N8N_DISABLED_MODULES=promotions`.
-- The official Docker image includes `git`. On other installs, install `git` on the server that runs n8n.
-- Environments run on main instances only, not on workers.
-
 ## Promote and apply
 
 1. On the source instance, add the environment you promote to. See [Plan your environments](plan-your-environments.md).

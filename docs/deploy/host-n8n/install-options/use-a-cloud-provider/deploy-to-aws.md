@@ -20,6 +20,12 @@ AWS offers several ways suitable for hosting n8n, including EC2 (virtual machine
 
 This guide uses [EKS](https://aws.amazon.com/eks/) as the hosting option. Using Kubernetes requires some additional complexity and configuration, but is the best method for scaling n8n as demand changes.
 
+{% hint style="info" %}
+**Looking for a production-grade, highly available setup?**
+
+For a multi-main deployment with managed PostgreSQL, Redis, and autoscaling workers, see [Deploy to AWS with Terraform](deploy-to-aws-with-terraform/README.md).
+{% endhint %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 The steps in this guide use a mix of the AWS UI and [the eksctl CLI tool for EKS](https://eksctl.io).
@@ -203,6 +209,7 @@ kubectl delete -f .
 ## Related resources
 
 * [Use a cloud provider](./)
+* [Deploy to AWS with Terraform](deploy-to-aws-with-terraform/README.md)
 * [DigitalOcean](deploy-to-digital-ocean.md)
 * [Heroku](deploy-to-heroku.md)
 * [Hetzner Cloud](deploy-to-hetzner.md)

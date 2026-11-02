@@ -23,7 +23,7 @@ Environments are in Preview and may change in future releases. Try them on test 
 
 - Environments are available on Enterprise plans. Other plans keep Environments (Classic).
 - Instances connected to Environments (Classic) stay on Classic until you upgrade them in **Settings** > **Environments (Classic)**.
-- Every other instance starts on Environments.
+- Every other instance on an Enterprise plan starts on Environments.
 
 ## What stays and what starts over
 

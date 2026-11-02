@@ -23,7 +23,7 @@ Before you start, [set up the environment](set-up-environments.md) this instance
 
 ## Create missing projects
 
-A project apply needs the project on the instance to be available. When the environment's branch holds team projects that aren't on this instance yet, **Settings** > **Environments** shows them on the environment you apply from. An instance owner or admin selects the projects to create and chooses a project admin for each. n8n creates them empty, with the source's ID, name, icon, and description, and applies no content. Then open each project and run a [project apply](#project-apply).
+A project apply needs the project on the instance to be available. When the environment's branch holds team projects that aren't on this instance yet, **Settings** > **Environments** shows them on the environment you apply from. An instance owner or admin selects the projects to create and chooses a project admin for each. n8n creates them empty, with the source's ID, name, icon, and description, and applies no content. If a project has workflows on the branch, open it and run a [project apply](#project-apply).
 
 Don't create these projects by hand. A project you create by hand gets a different ID, so Apply doesn't match it, even when the names match, and the project still shows as missing.
 

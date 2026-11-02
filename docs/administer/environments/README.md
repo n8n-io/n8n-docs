@@ -33,11 +33,7 @@ Environments are in Preview and may change in future releases. Try them on test 
 {% hint style="info" %}
 **Limited enterprise readiness**
 
-Environments have **Limited enterprise readiness**. They don't yet support the following Enterprise capabilities:
-
-- **Multi-main**
-
-See [Enterprise readiness](known-limitations.md#enterprise-readiness).
+Environments have **Limited enterprise readiness**. They don't support multi-main setups yet. Support for multi-main is planned. See [Enterprise readiness](known-limitations.md#enterprise-readiness).
 {% endhint %}
 
 ## Why use environments

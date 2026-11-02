@@ -18,9 +18,7 @@ Environments are in Preview and may change in future releases. Try them on test 
 
 ## Enterprise readiness
 
-Environments have **Limited enterprise readiness**. They don't yet support the following Enterprise capabilities:
-
-- **Multi-main:** Environments don't support [multi-main setups](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/enable-queue-mode#multi-main-setup). Support for multi-main is planned.
+Environments have **Limited enterprise readiness**. They don't support [multi-main setups](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/enable-queue-mode#multi-main-setup) yet. Support for multi-main is planned.
 
 ## Cross-project dependencies
 

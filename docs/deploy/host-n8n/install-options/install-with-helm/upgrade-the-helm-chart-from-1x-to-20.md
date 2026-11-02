@@ -144,28 +144,42 @@ If both `binaryData` and `storage` exist, n8n doesn't start. To move the data on
 A Helm rollback doesn't reverse the database migrations that n8n 3.0 ran. To roll back to chart 1.x after n8n 3.0 has started:
 
 1. If you removed `N8N_HOST`, `N8N_PORT`, and `N8N_PROTOCOL` from your core Secret, add them back. Chart 1.x main and webhook processor pods can't start without them.
-2. Stop n8n by scaling every n8n Deployment to zero:
+2. If you set `keda.enabled: true`, pause KEDA and hold the workers and webhook processors at zero. Otherwise KEDA starts them again while you restore the backups:
+
+    ```bash
+    kubectl annotate scaledobject --selector app.kubernetes.io/instance=n8n --overwrite --namespace <your-namespace> \
+    	autoscaling.keda.sh/paused=true autoscaling.keda.sh/paused-replicas=0
+    ```
+
+3. Stop n8n by scaling every n8n Deployment to zero. A HorizontalPodAutoscaler doesn't start pods for a Deployment you scale to zero.
 
     ```bash
     kubectl scale deployment --selector app.kubernetes.io/instance=n8n --replicas=0 --namespace <your-namespace>
     ```
 
-    A HorizontalPodAutoscaler doesn't start pods for a Deployment you scale to zero. KEDA can start worker and webhook processor pods again. Check with `kubectl get pods --namespace <your-namespace>` that no n8n pods run before you continue.
+    Check with `kubectl get pods --namespace <your-namespace>` that no n8n pods run before you continue.
 
-3. Restore the database and persistent volume backups you took before the upgrade.
-4. Find the last chart 1.x revision of the release in the `CHART` column:
+4. Restore the database and persistent volume backups you took before the upgrade.
+5. Find the last chart 1.x revision of the release in the `CHART` column:
 
     ```bash
     helm history n8n --namespace <your-namespace>
     ```
 
-5. Roll back to that revision. This restores the chart 1.x manifests and the n8n 2.x version they install:
+6. Roll back to that revision. This restores the chart 1.x manifests and the n8n 2.x version they install:
 
     ```bash
     helm rollback n8n <revision> --namespace <your-namespace>
     ```
 
-6. Check that every n8n Deployment runs again:
+7. If you paused KEDA in step 2, resume it. The rollback keeps annotations you added by hand, so remove them:
+
+    ```bash
+    kubectl annotate scaledobject --selector app.kubernetes.io/instance=n8n --namespace <your-namespace> \
+    	autoscaling.keda.sh/paused- autoscaling.keda.sh/paused-replicas-
+    ```
+
+8. Check that every n8n Deployment runs again:
 
     ```bash
     kubectl get deployments --namespace <your-namespace>

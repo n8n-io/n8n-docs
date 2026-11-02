@@ -178,13 +178,14 @@ Connect each page to the others on its topic (see [Agent-friendly docs](agent-fr
 
 ## Feature availability
 
-A feature's availability can be limited in three ways:
+A feature's availability and maturity can be limited in four ways:
 
 * **Plan or platform**: which n8n Cloud plan or self-hosted edition it's on.
 * **Version**: which n8n version introduced, deprecated, or removed it.
-* **Preview status**: whether it's still stabilizing, may change, or isn't rolled out to everyone yet.
+* **Preview status**: whether the feature is in Preview.
+* **Enterprise readiness**: whether the feature is Enterprise ready.
 
-[Plan/platform and version limits](#plan-platform-and-version-limits) share one documentation system. [Preview status](#preview-status) works differently and is always documented separately.
+[Plan/platform and version limits](#plan-platform-and-version-limits) share one documentation system. [Preview status](#preview-status) and [Enterprise readiness](#enterprise-readiness) work differently and are always documented separately. For what each one means, see [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability).
 
 ### Plan, platform, and version limits
 
@@ -325,7 +326,9 @@ Follow the [numbers guidance](#numbers-dates-and-times), plus for n8n instance v
 
 ### Preview status
 
-A Preview feature is available but not yet complete or stable, and may change. Capitalize "Preview" as the maturity label ("is in Preview", "a Preview feature", "In Preview from n8n 2.20.0"); use "Preview", not "beta". Leave unrelated senses of the word (a link preview, a UI preview action) lowercase. Frontmatter and tag values stay lowercase (`status: preview`, `tag: preview`) as literal identifiers, not prose.
+A Preview feature may change in breaking ways, including API shapes, exports, node parameters, or execution outcomes, and n8n may remove it. Don't rely on it in production workflows. For the full lifecycle, see [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#feature-maturity-preview-ga-deprecated-and-removed).
+
+Capitalize "Preview" as the maturity label ("is in Preview", "a Preview feature", "In Preview from n8n 2.20.0"). Use "Preview", not "beta". Leave unrelated senses of the word (a link preview, a UI preview action) lowercase. Frontmatter and tag values stay lowercase (`status: preview`, `tag: preview`) as literal identifiers, not prose.
 
 **Page or section:** title the hint `**Preview status**`, not `**Feature availability**`. Stability and availability are different questions, so each gets its own hint rather than a second one with the availability hint's label. Name the node or feature in the sentence below, not the title (hints are skimmed independently of surrounding headings):
 
@@ -363,6 +366,35 @@ The Data table node is in Preview and may change in future releases.
 * **Tie to a version when helpful**: "In Preview from n8n 2.20.0".
 * **Keep separate from Feature availability.** If both apply, stack them (hint + hint, or sentence + sentence) rather than folding one into the other.
 * **An inline note needing more than one sentence**: promote to a page- or section-level hint instead.
+
+### Enterprise readiness
+
+For what Enterprise ready and Limited enterprise readiness mean, and how they differ from Preview, see [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#enterprise-readiness).
+
+Write "Enterprise ready" for a feature that meets every Enterprise requirement that applies to it, and "Limited enterprise readiness" (lowercase "enterprise", the literal label in the n8n interface) for one that doesn't. An Enterprise ready feature carries nothing in the docs, so don't add a hint for it. A feature that isn't available on Enterprise at all doesn't carry this label. That's a plan or platform limit, so use a **Feature availability** hint instead.
+
+**Page or section:** title the hint `**Limited enterprise readiness**`, not `**Feature availability**` or `**Preview status**`.
+
+* Name the feature in the first sentence.
+* List the Enterprise capabilities the feature supports, in a bullet list. Use the names from the [Enterprise capabilities](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#enterprise-capabilities) list.
+* If every listed capability has the same level of readiness, say so in the sentence ("partially supports the following Enterprise capabilities") and list the names alone, as on the n8n Assistant page. If the levels differ, put **Full** or **Partial** after each name, as in the example below.
+* End with a sentence saying other Enterprise capabilities either don't apply to the feature or it doesn't support them yet, followed by "See [Understand feature availability](link) for the full list of Enterprise capabilities." Don't list the unsupported or non-applicable capabilities, and don't say whether n8n plans to close a gap.
+
+```
+{% hint style="info" %}
+**Limited enterprise readiness**
+
+The Example feature has Limited enterprise readiness. It supports the following Enterprise capabilities:
+
+- **SSO:** Full
+- **External secrets:** Partial
+
+Other Enterprise capabilities either don't apply to the Example feature or it doesn't support them yet. See [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#enterprise-capabilities) for the full list of Enterprise capabilities.
+{% endhint %}
+```
+
+* **Keep separate from Preview status and Feature availability.** If more than one applies, stack the hints rather than folding one into another.
+* **No visual tag or frontmatter.** Limited enterprise readiness isn't one of the three allowed visual tags (see [Tags](#tags), under Frontmatter), and there's no `status:` value for it, even when the whole page covers the feature.
 
 ## Vale linting
 

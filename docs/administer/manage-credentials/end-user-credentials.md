@@ -125,5 +125,6 @@ A good practice is to create your end-user credentials (for example Gmail, Linea
 * [Share credentials securely](share-credentials-securely.md)
 * [Credential overwrites](credential-overwrites.md)
 * [Use external secret stores](use-external-secret-stores.md)
+* [Automatic OAuth client registration](automatic-oauth-client-registration.md)
 * [Create and edit credentials](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/create-and-edit-credentials)
 * [RBAC role types](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md)

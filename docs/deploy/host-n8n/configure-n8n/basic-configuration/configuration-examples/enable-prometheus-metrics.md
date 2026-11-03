@@ -34,8 +34,6 @@ Both `main` and `worker` instances are able to expose metrics.
 
 For guidance on connecting Grafana to Prometheus to visualize n8n metrics, refer to [Grafana](../../../keep-n8n-running/visualize-metrics-with-grafana.md).
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Queue metrics <a href="#queue-metrics" id="queue-metrics"></a>
 
 To enable queue metrics, set the `N8N_METRICS_INCLUDE_QUEUE_METRICS` env var to `true`. You can adjust the refresh rate with `N8N_METRICS_QUEUE_METRICS_INTERVAL`.
@@ -59,6 +57,8 @@ n8n_scaling_mode_queue_jobs_failed 0
 # TYPE n8n_scaling_mode_queue_jobs_waiting gauge <a href="#type-n8nscalingmodequeuejobswaiting-gauge" id="type-n8nscalingmodequeuejobswaiting-gauge"></a>
 n8n_scaling_mode_queue_jobs_waiting 0
 ```
+
+If you deploy n8n on AWS using the [terraform-aws-n8n](https://github.com/n8n-io/terraform-aws-n8n) module, see [Configure Enterprise features on AWS](../../../install-options/use-a-cloud-provider/deploy-to-aws-with-terraform/use-enterprise-features-on-aws.md#prometheus-metrics) for the module-specific setup, including Bull queue depth metrics.
 
 ## Related resources
 

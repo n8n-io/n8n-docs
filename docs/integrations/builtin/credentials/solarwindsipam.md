@@ -26,8 +26,6 @@ layout:
 
 Refer to [SolarWinds IPAM's API documentation](https://github.com/solarwinds/OrionSDK/wiki/REST) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Using Username & Password <a href="#using-username-and-password" id="using-username-and-password"></a>
 
 To configure this credential, you'll need a SolarWinds IPAM account and:

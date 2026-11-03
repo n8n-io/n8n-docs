@@ -30,8 +30,6 @@ End-user credentials are available on:
 End-user credentials are in Preview and may change in future releases. Don't rely on them in production workflows.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## What are end-user credentials
 
 When you create or edit a credential, select a **Credential type**:
@@ -63,7 +61,7 @@ You can mix fixed and end-user credentials across nodes in one workflow. For exa
 * **Team projects only:** You can only create end-user credentials in team projects, not in personal projects. This keeps them centrally managed, where an admin sets up the credential template, rather than individual users creating their own in personal projects.
 * **OAuth credentials only:** End-user credentials support OAuth-based credential types only.
 * **One connection per user:** Each user can connect a single account per end-user credential template.
-* **Supported triggers:** End-user credential resolution works with the manual trigger, [Chat Hub](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/chat-hub), the MCP Server Trigger, the [n8n Form Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.formtrigger), and the [Chat Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.chattrigger) with **Hosted Chat** only, not Embedded Chat/webhook mode. The Form Trigger and Chat Trigger resolve end-user credentials when they use **n8n User Auth** authentication, so each user runs the workflow with their own connected account.
+* **Supported triggers:** End-user credential resolution works with the manual trigger, [Chat Hub](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/chat-hub), the MCP Server Trigger, the [Webhook trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.webhook), the [n8n Form Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.formtrigger), and the [Chat Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.chattrigger). The Chat Trigger supports **Hosted Chat** only, not Embedded Chat/webhook mode. The Webhook trigger, Form Trigger, and Chat Trigger resolve end-user credentials when they use **n8n User Auth** authentication, so each user runs the workflow with their own connected account. In the Webhook node, this option is called **n8n User Auth (OAuth2)**.
 
 ## Create an end-user credential
 
@@ -75,7 +73,7 @@ You can mix fixed and end-user credentials across nodes in one workflow. For exa
 Users can now connect their own account to this credential. When a user runs a workflow that uses the credential, n8n prompts them to connect if they haven't already. Users with project access can also connect ahead of time from the n8n UI, by opening a node on the canvas or from the project's **Credentials** list.
 
 {% hint style="info" %}
-Some trigger nodes, such as the **MCP Server Trigger**, **Chat Trigger**, and **Form Trigger**, let you require that the triggering user has permission to execute the trigger. When you enable this, only users with a project role that allows workflow execution can trigger it. A user without that role can't connect their account.
+Some trigger nodes, such as the **MCP Server Trigger**, **Webhook**, **Chat Trigger**, and **Form Trigger**, let you require that the triggering user has permission to execute the trigger. When you enable this, only users with a project role that allows workflow execution can trigger it. A user without that role can't connect their account.
 {% endhint %}
 
 ## Connect your account

@@ -23,8 +23,6 @@ Log Streaming is available on:
 
 Log streaming allows you to send events from n8n to your own logging tools. This allows you to manage your n8n monitoring in your own alerting and logging processes.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Set up log streaming <a href="#set-up-log-streaming" id="set-up-log-streaming"></a>
 
 To use log streaming, you have to add a streaming destination.
@@ -416,6 +414,8 @@ N8N_LOG_STREAMING_DESTINATIONS='[
   }
 ]'
 ```
+
+If you deploy n8n on AWS using the [terraform-aws-n8n](https://github.com/n8n-io/terraform-aws-n8n) module, see [Configure Enterprise features on AWS](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/use-a-cloud-provider/deploy-to-aws-with-terraform/use-enterprise-features-on-aws#log-streaming) for the module-specific setup.
 
 ## Related resources
 

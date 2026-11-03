@@ -45,8 +45,6 @@ let binaryDataBufferItem = await this.helpers.getBinaryDataBuffer(0, 'data');
 
 You should always use the `getBinaryDataBuffer()` function, and avoid using older methods of directly accessing the buffer, such as targeting it with expressions like `items[0].binary.data.data`.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Related resources
 
 * [Code node cookbook](./)

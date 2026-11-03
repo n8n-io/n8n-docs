@@ -45,8 +45,6 @@ You can use the Webhook node as a trigger for a workflow when you want to receiv
 
 The webhook allows you to trigger workflows from services that don't have a dedicated app trigger node.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Workflow development process <a href="#workflow-development-process" id="workflow-development-process"></a>
 
 n8n provides different **Webhook URL**s for testing and production. The testing URL includes an option to **Listen for test event**. Refer to [Workflow development](workflow-development.md) for more information on building, testing, and shifting your Webhook node to production.
@@ -100,9 +98,38 @@ You can require authentication for any service calling your webhook URL. Choose 
 * Basic auth
 * Header auth
 * JWT auth
+* **n8n User Auth (OAuth2)**
 * None
 
-Refer to [Webhook credentials](../../credentials/webhook.md) for more information on setting up each credential type.
+Refer to [Webhook credentials](../../credentials/webhook.md) for more information on setting up the Basic auth, Header auth, and JWT auth credential types.
+
+#### Using n8n User Auth (OAuth2)
+
+Only users logged in to this n8n instance can call the webhook. The caller must send an OAuth2 bearer token issued by this instance. n8n resolves the token to the calling user and runs the execution as that user. [End-user credentials](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/end-user-credentials) resolve to the calling user's connected accounts under this mode.
+
+Requests without a bearer token are handled as follows:
+
+* A GET request from a browser is redirected to the n8n sign-in page. After the user signs in and gives consent, n8n redirects the browser back to the webhook URL and runs the workflow.
+* Any other request receives a 401 response. Only GET requests can be redirected.
+
+The **OAuth2 Client** option in [Node options](#node-options) controls this behavior.
+
+When you select **n8n User Auth (OAuth2)**, a **Require Workflow Execute Permission** toggle appears. It is on by default. When it is on, the calling user must also have permission to execute the workflow in the project it belongs to. Users who are logged in but lack execute permission on the workflow can't trigger it. A request with a bearer token from such a user receives a 403 response.
+
+#### Calling a webhook that uses n8n User Auth (OAuth2)
+
+n8n is the OAuth2 authorization server for the webhook. How the caller gets a bearer token depends on the caller:
+
+* **A browser:** Open the webhook URL. n8n redirects you to the sign-in page and the consent screen, then runs the workflow. This works for GET requests only, and only when **OAuth2 Client** is **Auto-Detect** or **Browser (Virtual Client)**.
+* **A client that supports OAuth 2.1 discovery:** Set **OAuth2 Client** to **Bearer Token Only**, or use **Auto-Detect** for non-browser requests, then send the request without a token. The 401 response carries a `WWW-Authenticate` header with a `resource_metadata` URL. Clients that support protected resource metadata, dynamic client registration, and PKCE use that URL to complete sign-in and consent without manual setup.
+* **Your own script or service:** Complete the OAuth2 authorization code flow against the n8n instance:
+  1. Read the authorization server metadata at `https://<your-n8n-url>/.well-known/oauth-authorization-server`. It lists the registration, authorization, and token endpoints.
+  2. Register a client at the registration endpoint, or reuse a client you registered before.
+  3. Send the user to the authorization endpoint with PKCE (`S256`) and the `resource` parameter set to the webhook URL plus `?method=<HTTP method>`, for example `https://<your-n8n-url>/webhook/my-path?method=POST`. The user signs in and gives consent.
+  4. Exchange the authorization code at the token endpoint for an access token and a refresh token.
+  5. Call the webhook with the `Authorization: Bearer <access token>` header.
+
+A token is bound to the webhook trigger it was issued for. A token issued for another trigger, or for the instance's MCP server, receives a 401 response.
 
 ### Respond <a href="#respond" id="respond"></a>
 
@@ -135,6 +162,7 @@ Select **Add Option** to view more configuration options. The available options 
 * **Ignore Bots**: Ignore requests from bots like link previewers and web crawlers.
 * **IP(s) Allowlist**: Enable this to limit who (or what) can invoke a Webhook trigger URL. Enter a comma-separated list of allowed IP addresses. Access from IP addresses outside the allowlist throws a 403 error. If left blank, all IP addresses can invoke the webhook trigger URL.
 * **No Response Body**: Enable this to prevent n8n sending a body with the response.
+* **OAuth2 Client**: How n8n handles a request without a bearer token when **Authentication** is **n8n User Auth (OAuth2)**. **Auto-Detect** (default) redirects browser navigations through the n8n sign-in page and requires a bearer token from everything else. **Bearer Token Only** always requires a bearer token and never redirects. **Browser (Virtual Client)** always redirects GET requests without a bearer token through the n8n sign-in page. Only GET requests can be redirected. Webhook nodes with a version below 2.2 keep the **Bearer Token Only** behavior until you set this option.
 * **Only Run If**: An expression evaluated against the incoming request. The workflow only runs if the expression returns `true`. Use `$json` to access the request as `{ body, headers, params, query }`. For example, `{{ $json.body.campaign_id === 'user-research-invite' }}`. Requests that don't match receive a 200 response without creating an execution. If the expression fails to evaluate, n8n logs a warning and lets the request through rather than blocking it. This runs after IP allowlist and authentication checks, and applies to both test and production webhook URLs.
 * **Raw Body**: Specify that the Webhook node will receive data in a raw format, such as JSON or XML.
 * **Response Content-Type**: Choose the format for the webhook body.
@@ -151,6 +179,7 @@ Select **Add Option** to view more configuration options. The available options 
 | Only Run If           | Any                                                                                   |
 | Property Name          | <p>Both:<br>Respond > When Last Node Finishes<br>Response Data > First Entry JSON</p> |
 | No Response Body       | Respond > Immediately                                                                 |
+| OAuth2 Client          | Authentication > n8n User Auth (OAuth2)                                               |
 | Raw Body               | Any                                                                                   |
 | Response Code          | Any except Respond > Using 'Respond to Webhook' Node                                  |
 | Response Content-Type  | <p>Both:<br>Respond > When Last Node Finishes<br>Response Data > First Entry JSON</p> |
@@ -190,7 +219,7 @@ The node has two [webhook URLs](#webhook-urls). The **test** URL works when you 
 
 ### How do I secure a webhook?
 
-Require authentication in [Supported authentication methods](#supported-authentication-methods). You can use Basic auth, Header auth, or JWT auth for any service calling the URL. You can also limit callers with the **IP(s) Allowlist** node option. Refer to [Webhook credentials](../../credentials/webhook.md).
+Require authentication in [Supported authentication methods](#supported-authentication-methods). You can use Basic auth, Header auth, or JWT auth for any service calling the URL, or n8n User Auth (OAuth2) to limit callers to logged-in users of this n8n instance. You can also limit callers with the **IP(s) Allowlist** node option. Refer to [Webhook credentials](../../credentials/webhook.md).
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 

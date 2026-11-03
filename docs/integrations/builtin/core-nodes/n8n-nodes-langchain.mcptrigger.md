@@ -59,8 +59,15 @@ Select **Test URL** or **Production URL** to toggle which URL n8n displays.
 You can require authentication for clients connecting to your MCP URL. Choose from:
 
 - None
+- **n8n User Auth (OAuth2)**: available on node version 2 and later. The caller has to give consent to use their n8n account.
 - Bearer auth
 - Header auth
+
+When you select **n8n User Auth (OAuth2)**, additional parameters appear. The available parameters depend on the node version:
+
+- **Require Workflow Execute Permission**: whether the triggering user must also have permission to execute the workflow in the project it belongs to. Enabled by default.
+- **Trusted Source Name or ID**: the identity provider whose access tokens can call this MCP server.
+- **Include User in Output**: available on node version 2.1 and later. Whether to include the calling user's ID, email, and name in the trigger output and in the request the connected tools receive. Enabled by default.
 
 Refer to the [HTTP request credentials](../credentials/httprequest.md) for more information on setting up each credential type.
 
@@ -69,6 +76,10 @@ Refer to the [HTTP request credentials](../credentials/httprequest.md) for more 
 By default, this field contains a randomly generated MCP URL path, to avoid conflicts with other MCP Server Trigger nodes. 
 
 You can manually specify a URL path, including adding route parameters. For example, you may need to do this if you use n8n to prototype an API and want consistent endpoint URLs.
+
+### Instructions
+
+Optional instructions sent to MCP clients when they connect. Clients that support server instructions typically add them to the model's system prompt. Use them for guidance that spans multiple tools, such as tool-choice rules or multi-step workflows.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 

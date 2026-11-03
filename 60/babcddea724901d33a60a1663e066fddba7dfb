@@ -1,0 +1,29 @@
+docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/license.md
+  h_c63dce324dfc7b 49
+docs/deploy/host-n8n/configure-n8n/manage-your-license.md
+  h_c63dce324dfc7b 34,37,40,45
+  s_a55e1728f78e6f::t_e1ec13e158416c 28,38-39,42-44,46-49
+  s_a55e1728f78e6f::t_209cba70b72613 50
+  h_c63dce324dfc7b 41
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "60babcddea724901d33a60a1663e066fddba7dfb",
+  "prompts": {},
+  "humans": {
+    "h_c63dce324dfc7b": {
+      "author": "konstantintieber <konstantin.tieber@n8n.io>"
+    }
+  },
+  "sessions": {
+    "s_a55e1728f78e6f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7f970cfe-4007-407e-b226-08b585d9aa44",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "konstantintieber <konstantin.tieber@n8n.io>"
+    }
+  }
+}

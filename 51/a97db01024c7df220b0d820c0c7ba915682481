@@ -1,0 +1,27 @@
+docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglevertex.md
+  s_e99de54a53d3e4::t_4077d0d23ecc20 30,37-38
+docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglevertex.md
+  s_e99de54a53d3e4::t_4077d0d23ecc20 31,38-39
+docs/integrations/SUMMARY.md
+  s_e99de54a53d3e4::t_4077d0d23ecc20 721
+docs/integrations/builtin/credentials/googlevertexai.md
+  s_e99de54a53d3e4::t_4077d0d23ecc20 1-20,22-58,60,62-68,70-72,74-76
+  s_e99de54a53d3e4::t_44518b67cfe575 21,59,69,73
+  s_e99de54a53d3e4::t_1e5a2a436d5830 61,77
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "51a97db01024c7df220b0d820c0c7ba915682481",
+  "prompts": {},
+  "sessions": {
+    "s_e99de54a53d3e4": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a11e9d-276c-7820-8033-49b70e62dd41",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Robin Braumann <robin.braumann@n8n.io>"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+docs/integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftteamstrigger.md
+  s_efddaa49afdd29::t_13981c605e0ed5 82,84,86-88,94,96-98,100-106
+  s_efddaa49afdd29::t_0047518a8cbfc3 64
+docs/integrations/builtin/credentials/microsoft.md
+  s_efddaa49afdd29::t_86b141b9180a02 248
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "dc79c2c2372c7abec7fb4b7b8531d6061a7bbfbe",
+  "prompts": {},
+  "sessions": {
+    "s_efddaa49afdd29": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ef8a93d7-cc54-4056-8234-adfac863ffe7",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Csaba Tuncsik <csaba.tuncsik@gmail.com>"
+    }
+  }
+}

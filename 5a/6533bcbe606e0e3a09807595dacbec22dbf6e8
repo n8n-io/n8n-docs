@@ -1,0 +1,28 @@
+docs/deploy/host-n8n/configure-n8n/basic-configuration/use-environment-variables/scheduler.md
+  s_e2fe0ca94f80a2::t_3a3731902981bf 40
+docs/deploy/host-n8n/configure-n8n/system-tasks.md
+  s_e2fe0ca94f80a2::t_cd3b1cdb9af56d 72
+  s_e2fe0ca94f80a2::t_627735a2418693 19,21-31,33,36-45,48,51-55
+  s_e2fe0ca94f80a2::t_8dbf723f32e20c 108
+  s_e2fe0ca94f80a2::t_0a1a0c824d2904 32,34-35
+  s_e2fe0ca94f80a2::t_b0e3343160078a 107
+  s_e2fe0ca94f80a2::t_23d79ed775e44c 84
+docs/deploy/host-n8n/configure-n8n/durable-scheduler.md
+  s_e2fe0ca94f80a2::t_d473407ffbac37 69
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "5a6533bcbe606e0e3a09807595dacbec22dbf6e8",
+  "prompts": {},
+  "sessions": {
+    "s_e2fe0ca94f80a2": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a078c24f-786a-4bf6-a02e-91d3443cdc86",
+        "model": "unknown"
+      },
+      "human_author": "Veljko Terzic <veljko.terzic@n8n.io>"
+    }
+  }
+}

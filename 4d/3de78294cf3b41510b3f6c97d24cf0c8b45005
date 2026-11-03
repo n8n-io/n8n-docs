@@ -1,0 +1,62 @@
+docs/administer/manage-users-and-access/set-permissions-and-roles-rbac/organize-work-in-projects.md
+  s_93cde57f292ab5::t_db712665a80730 110-115
+docs/administer/manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md
+  h_21437a83314767 77
+  s_93cde57f292ab5::t_4557ef7c9aa05f 78
+docs/build/understand-workflows/understand-executions/README.md
+  s_93cde57f292ab5::t_d6c9fac39b0221 72,74,76
+  s_93cde57f292ab5::t_631cf397bf7061 71,73,75
+docs/changelog/README.md
+  h_21437a83314767 47,55,58
+  s_93cde57f292ab5::t_137f9063748a92 49,51,53-54,56
+  s_93cde57f292ab5::t_8067217cdf57c0 45-46,48,50,52,57,59
+docs/administer/manage-credentials/use-personal-credentials-in-projects.md
+  s_93cde57f292ab5::t_6c3fb1c7d4597e 27
+  s_93cde57f292ab5::t_b70bf742c916bc 34
+  s_93cde57f292ab5::t_e4de38506e0577 80
+  s_93cde57f292ab5::t_ed6bdbab1cb72a 3-11
+  s_93cde57f292ab5::t_467c3393776033 54-56
+  s_93cde57f292ab5::t_6a774ca38a5d5e 13
+  h_21437a83314767 76,82
+  s_93cde57f292ab5::t_f8ec07dfa92fdb 69
+  s_93cde57f292ab5::t_5d6ec92f34649f 58
+  s_93cde57f292ab5::t_62a04348e45dc0 1-2
+  s_93cde57f292ab5::t_41a6d772361ef9 12
+  s_93cde57f292ab5::t_b16a82da2b7862 14-16,24-26
+  s_93cde57f292ab5::t_a9afa597220b3f 28-33
+  s_93cde57f292ab5::t_5db9887edaa120 35-37,51-53
+  s_93cde57f292ab5::t_adfac240fa8e11 57
+  s_93cde57f292ab5::t_aebb80f6f00271 59-61,66-68
+  h_21437a83314767 17-23,38-50,62-65,70-75,77-79,81,83-89
+docs/administer/SUMMARY.md
+  s_93cde57f292ab5::t_24c5debac96b5f 41
+docs/administer/manage-credentials/share-credentials-securely.md
+  s_93cde57f292ab5::t_c252b3868f49c4 42
+  s_93cde57f292ab5::t_e037ebf0e0723d 70,74,76
+  s_93cde57f292ab5::t_ec6eb1c6458c9f 77
+  s_93cde57f292ab5::t_7b4f6386727405 43-44
+  h_21437a83314767 79
+  s_93cde57f292ab5::t_1a53364be76fe2 71-73,75,78,80
+  s_93cde57f292ab5::t_530900bb570532 97
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "4d3de78294cf3b41510b3f6c97d24cf0c8b45005",
+  "prompts": {},
+  "humans": {
+    "h_21437a83314767": {
+      "author": "Yuliia Pominchuk <yuliia.pominchuk@n8n.io>"
+    }
+  },
+  "sessions": {
+    "s_93cde57f292ab5": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "a6177927-a004-4f7d-8a00-181a8df87c7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Yuliia Pominchuk <yuliia.pominchuk@n8n.io>"
+    }
+  }
+}

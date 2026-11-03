@@ -1,0 +1,9 @@
+docs/administer/environments/switch-from-environments-classic.md
+  ai_agent 14,24-29,35-39,41
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "53acf786b676d35a1dfa2243a6d90a2f24cd7880",
+  "prompts": {}
+}

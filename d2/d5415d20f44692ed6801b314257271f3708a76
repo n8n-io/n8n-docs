@@ -1,0 +1,44 @@
+docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsdatabricks.md
+  s_f0eb65f622ecc1::t_4909b3c3ed57dc 55
+  s_f0eb65f622ecc1::t_fd245e85aba5c5 76
+  s_f0eb65f622ecc1::t_4738626f1b7e07 115
+docs/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoredatabricks/README.md
+  s_f0eb65f622ecc1::t_3fbc78e50c4dfd 267
+  s_f0eb65f622ecc1::t_df065bbd5aed63 61
+  s_f0eb65f622ecc1::t_fcffd7e62e72a2 187
+  s_f0eb65f622ecc1::t_c21cdf246d4ca5 142-143
+  s_f0eb65f622ecc1::t_6035f70410fb5f 271-275
+  s_f0eb65f622ecc1::t_bfb0deccb06bad 44
+  s_f0eb65f622ecc1::t_d28bf4f71013ff 185
+  s_f0eb65f622ecc1::t_e804e7f54dfe1f 45-46
+  s_f0eb65f622ecc1::t_d4dfe67ec8e16f 162
+  s_f0eb65f622ecc1::t_4c2c678f1512cd 83
+  s_f0eb65f622ecc1::t_8270dd688cf97d 195
+docs/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.databricksaiagent.md
+  s_f0eb65f622ecc1::t_3e5f6df60ed583 77
+  s_f0eb65f622ecc1::t_0b0a8d27829f8c 87
+  s_f0eb65f622ecc1::t_15524f8b9dc348 92
+  s_f0eb65f622ecc1::t_33d88fc9d82f5b 65-68
+  s_f0eb65f622ecc1::t_58fa2c8859c1a3 36
+  s_f0eb65f622ecc1::t_b99897204fab37 16
+  s_f0eb65f622ecc1::t_875282d283fa92 55
+  s_f0eb65f622ecc1::t_f7c14ba8552bd2 61
+docs/integrations/builtin/credentials/databricks.md
+  s_f0eb65f622ecc1::t_d985c39a305574 59
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d2d5415d20f44692ed6801b314257271f3708a76",
+  "prompts": {},
+  "sessions": {
+    "s_f0eb65f622ecc1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e872a7ba-8ecf-4689-aed8-d0f9a3201d0c",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Csaba Tuncsik <csaba.tuncsik@gmail.com>"
+    }
+  }
+}

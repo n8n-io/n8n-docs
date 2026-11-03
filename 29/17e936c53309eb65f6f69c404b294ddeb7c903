@@ -1,0 +1,23 @@
+docs/administer/manage-users-and-access/verify-user-identity/use-saml/troubleshoot-saml.md
+  s_73047f233c1ac5::t_6227fb73b1d001 25-30
+docs/administer/observe-and-log/stream-logs-to-external-systems.md
+  s_73047f233c1ac5::t_521da891bba90e 82
+docs/administer/manage-users-and-access/verify-user-identity/use-saml/set-up-saml.md
+  s_73047f233c1ac5::t_01e229f2560077 59-65
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "2917e936c53309eb65f6f69c404b294ddeb7c903",
+  "prompts": {},
+  "sessions": {
+    "s_73047f233c1ac5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "69d22485-9284-4be7-a24e-81c8ecec0f9e",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Andreas Fitzek <andreas.fitzek@n8n.io>"
+    }
+  }
+}

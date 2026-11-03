@@ -1,0 +1,21 @@
+docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md
+  s_9eede8cb7d9e61::t_75ad7c4fdf49fc 45
+docs/integrations/builtin/credentials/azureopenai.md
+  s_9eede8cb7d9e61::t_b27e62b37ddc99 49,51
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "fa28c15f9f825a7c0f0508bcfefb4e92e81e9989",
+  "prompts": {},
+  "sessions": {
+    "s_9eede8cb7d9e61": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "5cedc78e-75ca-408d-aea0-b07f90cbad00",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Thanasis Gkliatis <thanasis.gkliatis@n8n.io>"
+    }
+  }
+}

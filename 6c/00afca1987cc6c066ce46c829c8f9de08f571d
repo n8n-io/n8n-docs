@@ -1,0 +1,25 @@
+docs/integrations/SUMMARY.md
+  s_74fc353a79c0bf::t_753a3e8d5d9cd4 780
+docs/integrations/builtin/app-nodes/n8n-nodes-base.microsoftsharepoint.md
+  s_74fc353a79c0bf::t_f09a5e5fdbd4dc 88,103
+docs/integrations/builtin/credentials/microsoftentraserviceprincipal.md
+  s_74fc353a79c0bf::t_3345edbb3e6439 67,83,116,176,220
+docs/integrations/builtin/credentials/microsoftentraserviceprincipal-sharepoint.md
+  s_74fc353a79c0bf::t_1a89abd786dcc8 1-183
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "6c00afca1987cc6c066ce46c829c8f9de08f571d",
+  "prompts": {},
+  "sessions": {
+    "s_74fc353a79c0bf": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "55c528c5-98ab-42b8-8487-789d12d6f9a8",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Csaba Tuncsik <csaba.tuncsik@gmail.com>"
+    }
+  }
+}

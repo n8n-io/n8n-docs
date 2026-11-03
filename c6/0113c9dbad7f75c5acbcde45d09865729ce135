@@ -1,0 +1,22 @@
+docs/integrations/builtin/credentials/microsoftentraserviceprincipal.md
+  s_98bc7dd7ab4e95::t_c51465528ae052 60,145-147,189-221,230,263
+docs/integrations/builtin/app-nodes/n8n-nodes-base.microsoftteams.md
+  s_98bc7dd7ab4e95::t_76286a045dd95c 111,113-114,121
+  s_98bc7dd7ab4e95::t_c51465528ae052 23,56-58,69,74-78,82,85,89,105-110,112,115-120,122-129,135-136,139
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "c60113c9dbad7f75c5acbcde45d09865729ce135",
+  "prompts": {},
+  "sessions": {
+    "s_98bc7dd7ab4e95": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9cf5d0be-865a-4ec7-a2a3-3d7ed1225e9a",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Csaba Tuncsik <csaba.tuncsik@gmail.com>"
+    }
+  }
+}

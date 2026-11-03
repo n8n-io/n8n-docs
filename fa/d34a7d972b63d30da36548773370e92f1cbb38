@@ -1,0 +1,41 @@
+docs/connect/SUMMARY.md
+  s_ea0081d262e97d::t_e6e2161deee222 7
+docs/connect/n8n-api/pagination.md
+  s_ea0081d262e97d::t_510421454b8221 71
+docs/connect/n8n-api/README.md
+  s_ea0081d262e97d::t_dbcfd79d6f740b 44
+  s_ea0081d262e97d::t_5bd86c8e1187ea 34
+styles/config/vocabularies/default/accept.txt
+  s_ea0081d262e97d::t_64c28d5b281dc0 131
+docs/connect/n8n-api/authentication.md
+  s_ea0081d262e97d::t_14943e0e7ccaa9 242
+docs/connect/n8n-api/idempotency.md
+  s_ea0081d262e97d::t_21a45130fb2864 31,45,49,51,57,59,63,103
+  s_ea0081d262e97d::t_6eb79f86282fc7 29
+  s_ea0081d262e97d::t_d8b86ab53e3070 2
+  s_ea0081d262e97d::t_548d367d1190d4 1,3-28,30,32-34,36-44,46-48,50,52-56,58,60-62,64-76,78-102,104,106-113
+  s_ea0081d262e97d::t_a41b71719f9393 77
+  s_ea0081d262e97d::t_313ad01d85b342 35
+  s_ea0081d262e97d::t_a1100df85066c8 105
+docs/connect/n8n-api/use-an-api-playground.md
+  s_ea0081d262e97d::t_18bc89e9b757af 93
+docs/connect/n8n-api/api-reference.md
+  s_ea0081d262e97d::t_24e820c8d6cd23 54
+  s_ea0081d262e97d::t_8052382c9cc336 37
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "fad34a7d972b63d30da36548773370e92f1cbb38",
+  "prompts": {},
+  "sessions": {
+    "s_ea0081d262e97d": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "f67764db-72f2-4bb7-9042-d3da1e1789cf",
+        "model": "grok-4.7"
+      },
+      "human_author": "Ali Elkhateeb <ali.elkhateeb@n8n.io>"
+    }
+  }
+}

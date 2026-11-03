@@ -1,0 +1,21 @@
+docs/integrations/builtin/app-nodes/n8n-nodes-base.microsoftteams.md
+  s_7b6f04f9b68fe6::t_07ca00d88b2c2a 32,96-102,136
+docs/integrations/builtin/credentials/microsoft.md
+  s_7b6f04f9b68fe6::t_07ca00d88b2c2a 238,240
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "30586583c645e1da7065451d1caf44d8a754f9a8",
+  "prompts": {},
+  "sessions": {
+    "s_7b6f04f9b68fe6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e5363118-7ef1-4e1a-955b-edec6b55bcc5",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Csaba Tuncsik <csaba.tuncsik@gmail.com>"
+    }
+  }
+}

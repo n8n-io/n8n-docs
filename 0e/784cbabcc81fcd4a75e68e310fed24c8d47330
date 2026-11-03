@@ -1,0 +1,9 @@
+docs/deploy/host-n8n/configure-n8n/durable-scheduler.md
+  ai_agent 115
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "0e784cbabcc81fcd4a75e68e310fed24c8d47330",
+  "prompts": {}
+}

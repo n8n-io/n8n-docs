@@ -1,0 +1,14 @@
+docs/privacy-and-security/README.md
+  h_63d8ce7f01339b 83
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f58f7c4789d4d2651f8c26a3b9dcacbd93cba9fb",
+  "prompts": {},
+  "humans": {
+    "h_63d8ce7f01339b": {
+      "author": "Thanasis Gkliatis <thanasis.gkliatis@n8n.io>"
+    }
+  }
+}

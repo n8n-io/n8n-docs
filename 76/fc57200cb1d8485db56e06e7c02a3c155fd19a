@@ -1,0 +1,22 @@
+docs/administer/environments/plan-your-environments.md
+  s_8ec7bfed268277::t_ab9127926e4584 33
+  s_8ec7bfed268277::t_2efd02774764e7 44
+docs/administer/environments/README.md
+  s_8ec7bfed268277::t_2efd02774764e7 35
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "76fc57200cb1d8485db56e06e7c02a3c155fd19a",
+  "prompts": {},
+  "sessions": {
+    "s_8ec7bfed268277": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b9ff11b4-095e-4619-830d-c574ab65583e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jan K. <jan.kalkan@n8n.io>"
+    }
+  }
+}

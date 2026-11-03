@@ -1,0 +1,9 @@
+docs/changelog/README.md
+  ai_agent 51
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "f9457bd31e72450948ada8dcca65259df8bc01f4",
+  "prompts": {}
+}

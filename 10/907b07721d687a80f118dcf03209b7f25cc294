@@ -1,0 +1,26 @@
+skills/n8n-docs-author/SKILL.md
+  h_ed1b2d65e81e8e 29,31,33,35
+  s_ea0081d262e97d::t_b9e936efd96d00 4-9
+  h_ed1b2d65e81e8e 34,324
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "10907b07721d687a80f118dcf03209b7f25cc294",
+  "prompts": {},
+  "humans": {
+    "h_ed1b2d65e81e8e": {
+      "author": "Ali Elkhateeb <ali.elkhateeb@n8n.io>"
+    }
+  },
+  "sessions": {
+    "s_ea0081d262e97d": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "f67764db-72f2-4bb7-9042-d3da1e1789cf",
+        "model": "grok-4.7"
+      },
+      "human_author": "Ali Elkhateeb <ali.elkhateeb@n8n.io>"
+    }
+  }
+}

@@ -1,0 +1,61 @@
+docs/administer/use-source-control-and-environments/push-and-pull-changes.md
+  s_dca4e48e8b9c12::t_de9766261d8ccf 57
+docs/administer/environments/set-up-environments.md
+  s_dca4e48e8b9c12::t_dc33ea8a9912bf 87
+  s_dca4e48e8b9c12::t_a29ace8a57c317 32
+  s_8ec7bfed268277::t_5659bb1e03de25 28
+docs/administer/environments/known-limitations.md
+  s_dca4e48e8b9c12::t_3cb015465d716d 67-68,70-78
+  s_dca4e48e8b9c12::t_3561f5564f8ac5 69
+  s_8ec7bfed268277::t_527e22c9f06919 27
+docs/administer/use-source-control-and-environments/README.md
+  s_dca4e48e8b9c12::t_50ebd9cf5e70c8 23
+docs/administer/environments/README.md
+  s_dca4e48e8b9c12::t_7a1388af4fb5ce 81
+  s_8ec7bfed268277::t_527e22c9f06919 68,87
+docs/administer/environments/apply-changes.md
+  s_8ec7bfed268277::t_527e22c9f06919 75
+  s_dca4e48e8b9c12::t_6b8fb2ba59b504 76
+  s_dca4e48e8b9c12::t_1c2d7ef3b4d9dd 41
+docs/administer/environments/upgrade-from-environments-classic.md
+  s_dca4e48e8b9c12::t_71537e08ba8261 93
+  s_dca4e48e8b9c12::t_5514ade6d20691 36
+  s_dca4e48e8b9c12::t_75b9e52c91af47 57-59
+  s_dca4e48e8b9c12::t_7b2efc76bfbdf8 44
+  s_dca4e48e8b9c12::t_b8a6086916b8f5 47
+  s_dca4e48e8b9c12::t_bf60def06ddfae 26
+  s_dca4e48e8b9c12::t_3c7fdb446cb648 77
+  s_dca4e48e8b9c12::t_c95e33306b729f 75,80
+docs/contribute/contribution-guide-for-n8n-docs/terminology.md
+  s_8ec7bfed268277::t_527e22c9f06919 128-129,134
+docs/administer/environments/git-based-promotion/generic-git.md
+  s_dca4e48e8b9c12::t_8a40312528f78c 40-42
+docs/administer/environments/promotion-reviews.md
+  s_8ec7bfed268277::t_1a4fb0a8961ba6 38
+docs/administer/environments/promote-changes.md
+  s_dca4e48e8b9c12::t_c2bd9d9e667522 40
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "f935b8bc786e2a5d19693b70791f1f8ab4a962ad",
+  "prompts": {},
+  "sessions": {
+    "s_8ec7bfed268277": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b9ff11b4-095e-4619-830d-c574ab65583e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jan K. <jan.kalkan@n8n.io>"
+    },
+    "s_dca4e48e8b9c12": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "683b5066-5da2-4a28-a7c7-4012bc578101",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Jan K. <jan.kalkan@n8n.io>"
+    }
+  }
+}

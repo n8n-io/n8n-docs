@@ -1,0 +1,19 @@
+docs/privacy-and-security/README.md
+  s_ba1be1827e1f0b::t_01cd8b6c3f7344 188,190,194-196
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "19b3ed7876bded0c1f9515b43ec5457a25a660c6",
+  "prompts": {},
+  "sessions": {
+    "s_ba1be1827e1f0b": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "01a0b432-ffc8-7104-91c6-d65245c45c32",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Marc Littlemore <marc@n8n.io>"
+    }
+  }
+}

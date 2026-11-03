@@ -74,7 +74,7 @@ On first start, n8n 3.0 renames `/home/node/.n8n/binaryData` to `/home/node/.n8n
 
 If you mount a volume directly at `/home/node/.n8n/binaryData`, for example with `extraVolumes` and `extraVolumeMounts`, mount it at `/home/node/.n8n/storage` instead. To keep the old path, set `N8N_STORAGE_PATH` to it in `env.shared`.
 
-If both `binaryData` and `storage` exist when n8n 3.0 first starts, n8n doesn't start, and logs that it can't tell which directory holds your data. After a successful rename, n8n records the migration and doesn't check again. To move the data on the chart's PersistentVolumeClaim:
+If both `binaryData` and `storage` exist when n8n 3.0 first starts, n8n doesn't start, and logs that it can't tell which directory holds your data. n8n only checks this on its first start with 3.0. If a `binaryData` directory appears later, for example because you copy files from an older backup into the volume, n8n ignores it without an error, and doesn't use the files in it. Move its contents into `storage` with the same steps. To move the data on the chart's PersistentVolumeClaim:
 
 1. Stop the main Deployment, and wait until Kubernetes deletes its pod, so the volume is free:
 

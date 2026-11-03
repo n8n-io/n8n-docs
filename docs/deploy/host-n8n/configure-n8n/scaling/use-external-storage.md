@@ -32,8 +32,6 @@ It isn't available on n8n Cloud.
 
 n8n can store binary data and execution data produced by workflow executions externally. This feature is useful to avoid relying on the database or filesystem for storing large amounts of data.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Storing n8n's binary data in S3 <a href="#storing-n8ns-binary-data-in-s3" id="storing-n8ns-binary-data-in-s3"></a>
 
 n8n supports [AWS S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html) as an external store for binary data produced by workflow executions. You can use other S3-compatible services like Cloudflare R2 and Backblaze B2, but n8n doesn't officially support these.
@@ -215,6 +213,8 @@ workflows/{workflowId}/executions/{executionId}/execution_data/bundle.json
 n8n records where each execution's data is stored, so switching modes is non-destructive. Older executions stay readable from the database or filesystem, and if you later switch back to another mode, executions stored in S3 stay readable as long as the bucket remains configured.
 
 n8n prunes execution data in S3 itself, using the standard [executions pruning](manage-execution-data.md#enable-executions-pruning) settings (the `EXECUTIONS_DATA_*` variables). Unlike binary data, execution data doesn't rely on an S3 lifecycle rule. Don't add a lifecycle rule for execution data, as it could delete data that n8n still references.
+
+If you deploy n8n on AWS using the [terraform-aws-n8n](https://github.com/n8n-io/terraform-aws-n8n) module, see [Configure Enterprise features on AWS](../../install-options/use-a-cloud-provider/deploy-to-aws-with-terraform/use-enterprise-features-on-aws.md#execution-data-in-s3) for the module-specific setup.
 
 ## Related resources
 

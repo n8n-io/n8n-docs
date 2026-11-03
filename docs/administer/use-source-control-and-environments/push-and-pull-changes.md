@@ -20,8 +20,6 @@ This document assumes some familiarity with Git concepts and terminology. Refer 
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/sVOSvjfqJPLqOGb1x77B/" %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Fetch other people's work <a href="#fetch-other-peoples-work" id="fetch-other-peoples-work"></a>
 
 {% hint style="info" %}
@@ -54,7 +52,7 @@ If the same owner is available on both instances (matching email), the owner rem
 
 If the original owner is a [project](../manage-users-and-access/set-permissions-and-roles-rbac/README.md):
 
-n8n tries to match the original project name to a project name on the new instance. If no matching project exists, n8n creates a new project with the name, assigns the current user as project owner, and imports the workflows and credentials to the project.
+n8n matches the project by its ID. If no project with that ID exists on the new instance, n8n creates one with the same ID and name. The user who pulls becomes its project admin. n8n then imports the workflows and credentials into the project.
 
 ### Auto publish workflows on pull <a href="#auto-publish-workflows-on-pull" id="auto-publish-workflows-on-pull"></a>
 

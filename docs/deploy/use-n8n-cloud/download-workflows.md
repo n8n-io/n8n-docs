@@ -1,6 +1,6 @@
 ---
 title: Download workflows
-description: How to download workflows from n8n Cloud with the admin dashboard.
+description: How to download workflows from an n8n Cloud backup in the n8n Cloud console.
 contentType: howto
 nodeTitle: Download workflows
 originalFilePath: manage-cloud/download-workflows.md
@@ -13,18 +13,20 @@ layout:
 
 # Download workflows <a href="#download-workflows" id="download-workflows"></a>
 
-n8n Cloud instance owners can download workflows from the most recent backup.
-
-You can do this with the [Cloud admin dashboard](use-the-admin-dashboard.md).
-
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+n8n Cloud instance owners can download their workflows from an n8n Cloud backup in the [n8n Cloud console](use-the-cloud-console.md). n8n creates backups automatically. They contain workflows only, never credentials.
 
 ## How to download workflows <a href="#how-to-download-workflows" id="how-to-download-workflows"></a>
 
-1. [Log in to n8n](https://app.n8n.cloud/magic-link).
-1. Select **Admin Dashboard** to open the dashboard.
-1. In the **Manage** section, select the **Export** tab.
-1. Select **Download Workflows**.
+1. Open the [Cloud console](use-the-cloud-console.md).
+1. In the sidebar, select **Export**. n8n opens the **Data export** page.
+1. In **Workflow backups**, use the **Backup** dropdown to choose which backup to export. If only one backup exists, n8n shows it instead of a dropdown.
+1. Select **Download workflows**. The export opens in a new tab.
+
+The **Latest backup** card on the **Overview** page shows when n8n created your most recent backup. Select **Download** on that card to go to the **Export** page.
+
+If your instance is new or has been offline for a long time, it might not have any backups yet. In that case, the **Export** page shows **No backups available yet**.
+
+Workflow export isn't available yet for instances that n8n hosts on PostgreSQL. For these instances, the **Export** page shows **Export is unavailable for this instance**, with a link to create a support ticket so n8n support can export your workflows.
 
 ## Accessing workflows after your free trial <a href="#accessing-workflows-after-your-free-trial" id="accessing-workflows-after-your-free-trial"></a>
 
@@ -34,7 +36,7 @@ You have **90 days** to download your workflows after your free trial ends. Afte
 
 * [Use n8n Cloud](./)
 * [Try free then choose a plan](start-your-free-trial.md)
-* [Use the admin dashboard](use-the-admin-dashboard.md)
+* [Use the Cloud console](use-the-cloud-console.md)
 * [Update your version](update-your-version.md)
 * [Configure Cloud](configure-cloud/README.md)
 * [Gateway credits](gateway-credits/README.md)

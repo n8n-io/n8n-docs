@@ -24,8 +24,6 @@ layout:
 
 Create a [Filescan](https://www.filescan.io/auth/signup/) account.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Filescan's API documentation](https://www.filescan.io/api/docs) for more information about authenticating with the service.

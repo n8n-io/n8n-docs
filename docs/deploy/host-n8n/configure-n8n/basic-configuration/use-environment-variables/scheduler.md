@@ -29,15 +29,13 @@ Turn on Prometheus metrics for the durable scheduler with `N8N_METRICS_INCLUDE_S
 The durable scheduler is available from n8n 2.36.0. Earlier versions back to n8n 2.32.0 include it as a Preview feature.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Enable the scheduler <a href="#enable-vars" id="enable-vars"></a>
 
 | Variable | Type | Default | Description |
 | :------- | :--- | :------ | :---------- |
 | `N8N_SCHEDULER_ENABLED` | Boolean | `true` | Whether to use the durable scheduler. Defaults to `true` from n8n 2.45.0 (`false` in earlier versions). Set to `false` to use the in-memory scheduler. Requires `N8N_USE_WORKFLOW_PUBLICATION_SERVICE`, also on by default, to take over Schedule Trigger nodes. Deprecated from n8n 2.45.0: a future version will remove this variable and the in-memory scheduler. |
 | `N8N_SCHEDULER_POLL_TRIGGERS_ENABLED` | Boolean | `false` | Whether the durable scheduler also takes over polling triggers (trigger nodes with a Poll Times parameter). Requires `N8N_SCHEDULER_ENABLED` and `N8N_USE_WORKFLOW_PUBLICATION_SERVICE`. Available from n8n 2.33.0. |
-| `N8N_SCHEDULER_SYSTEM_TASKS_ENABLED` | Boolean | `false` | Whether the durable scheduler runs n8n's internal maintenance jobs instead of the leader main's in-process timers. n8n moves these jobs to the durable scheduler one release at a time, and in n8n 2.40.0 no job uses it yet. Requires `N8N_SCHEDULER_ENABLED`. Set the same value on every main, and give every main the same `N8N_SCHEDULER_ENABLED`. A main with either flag off removes the durable schedules for these jobs at startup. Available from n8n 2.40.0. |
+| `N8N_SCHEDULER_SYSTEM_TASKS_ENABLED` | Boolean | `false` | Whether the durable scheduler runs n8n's internal maintenance jobs instead of the leader main's in-process timers. Requires `N8N_SCHEDULER_ENABLED`. Give every main the same value for both variables, and run the same n8n version on every main. A main with either flag off removes the durable schedules for these jobs at startup. Use it from n8n 2.45.0, the first version that runs every system task on the durable scheduler. See [System tasks](../../system-tasks.md#run-system-tasks-on-the-durable-scheduler). |
 
 n8n 2.45.0 removes `N8N_ENV_FEAT_SKIP_DURABLE_SCHEDULER` and the **Skip Durable Scheduler** node setting. To use the in-memory scheduler for all Schedule Trigger nodes, set `N8N_SCHEDULER_ENABLED=false` and restart n8n. See [Use the in-memory scheduler](../../durable-scheduler.md#use-the-in-memory-scheduler).
 
@@ -129,7 +127,6 @@ Controls how the scheduler overlaps its background passes and spreads database l
 
 | Variable | Type | Default | Description |
 | :------- | :--- | :------ | :---------- |
-| `N8N_SCHEDULER_MIN_INTERVAL` | Number | `0` | The smallest gap, in seconds, allowed between consecutive runs of the same schedule. n8n slows a schedule set to run more often down to this gap. Defaults to `0`, which disables the limit and honors whatever interval each schedule specifies. Set it to stop a runaway every-second schedule from overloading the instance. |
 | `N8N_SCHEDULER_TRIGGER_NODE_MODE` | Enum (`legacy`, `new`) | `new` | How a Schedule Trigger node's "every N seconds" and "every N minutes" schedules fire. `new` spaces runs a steady N apart from workflow publication. It's the default from n8n 2.45.0. `legacy` keeps clock-aligned timing matching the in-memory scheduler and is the default in earlier versions. Only affects second and minute intervals. Deprecated from n8n 2.45.0: a future version will remove this variable and the `legacy` mode. See [Schedule Trigger timing](../../durable-scheduler.md#trigger-node-mode). |
 | `N8N_SCHEDULER_MISFIRE_GRACE` | Number | `60` | How late, in seconds, a run may start and still count as on time. A run later than this counts as missed, and its trigger's misfire policy decides what happens to it and to any backlog behind it. This is the default a schedule inherits; from n8n 2.36.0, a Schedule Trigger node can set its own grace period instead. Should exceed `N8N_SCHEDULER_EXECUTOR_INTERVAL` and be at least `N8N_SCHEDULER_MATERIALIZATION_WINDOW`; n8n warns at startup if it doesn't. Capped at 30 days. See [Misfire policy](../../durable-scheduler.md#misfire-policy). Available from n8n 2.34.0. |
 

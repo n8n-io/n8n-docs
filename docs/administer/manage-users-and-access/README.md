@@ -16,15 +16,13 @@ User management in n8n allows you to invite people to work in your n8n instance.
 
 * Login and password management
 * Adding and removing users
-* Three built-in [instance roles](understand-instance-roles.md): **Owner**, **Admin**, and **Member** (**Admin** is available on n8n Cloud Pro, Enterprise, and self-hosted Enterprise), plus custom instance roles
+* Four built-in [instance roles](understand-instance-roles.md): **Owner**, **Admin**,  **Member**, and **Chat user** (**Admin** and **Chat user** are available on n8n Cloud Pro, Enterprise, and self-hosted Enterprise), plus custom instance roles
 
 {% hint style="info" %}
 **Privacy**
 
 The user management feature doesn't send personal information, such as email or username, to n8n.
 {% endhint %}
-
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
 
 ## Setup guides <a href="#setup-guides" id="setup-guides"></a>
 
@@ -36,7 +34,8 @@ This section includes guides to configuring [LDAP](verify-user-identity/connect-
 
 * [Set up for Cloud](set-up-for-cloud.md): set up user management on n8n Cloud.
 * [Add and remove users](add-and-remove-users.md): delete users and resend pending invitations.
-* [Understand instance roles](understand-instance-roles.md): the built-in Owner, Admin, and Member roles.
+* [Understand instance roles](understand-instance-roles.md): the built-in Owner, Admin, Member, and Chat user roles.
+* [Control node availability](control-node-availability.md): block or allow nodes for the instance or a project.
 * [Set permissions and roles (RBAC)](set-permissions-and-roles-rbac/README.md): control access at the instance and project level.
 * [Verify user identity](verify-user-identity/README.md): require two-factor auth, or connect LDAP, SAML, or OIDC.
 * [Follow best practices](follow-best-practices.md): user management best practices.

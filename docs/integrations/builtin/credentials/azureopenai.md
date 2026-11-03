@@ -23,8 +23,6 @@ You can use these credentials to authenticate the following nodes:
 - [Microsoft Foundry Chat Model](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md)
 - [Microsoft Foundry Embeddings](../cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsazureopenai.md)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 These credentials were previously called **Azure OpenAI credentials** (API key) and **Azure Entra ID (Azure Active Directory) API** (Entra ID).
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
@@ -46,7 +44,13 @@ Refer to [Azure OpenAI's API documentation](https://learn.microsoft.com/en-us/az
 Both credential types have an **Endpoint Type** setting. It sets which Azure endpoint the nodes call.
 
 * **Classic**: Use this for an Azure OpenAI resource at `*.openai.azure.com`. The credential needs a **Resource Name** and an **API Version**. You can also enter an optional **Endpoint**.
-* **Microsoft Foundry**: Use this for a Microsoft Foundry resource at `*.services.ai.azure.com`. The credential needs the full **Endpoint** URL, for example `https://<resource>.services.ai.azure.com/openai/v1`.
+* **Microsoft Foundry**: Use this for a Microsoft Foundry resource at `*.services.ai.azure.com`. The credential needs the full **Endpoint** URL, for example `https://<resource>.services.ai.azure.com/openai/v1`. You can also enter an optional [**Project**](#project).
+
+### Project
+
+The **Project** field is optional. It shows only for the **Microsoft Foundry** endpoint type. Enter the name of the Microsoft Foundry project that owns your deployments. The project overview page in the Foundry portal shows the name.
+
+n8n uses the project to list your deployments. In the Chat Model node, the node's own **Project** field overrides this value. Leave the node field empty to use the project from the credential.
 
 Some Chat Model node features need the **Microsoft Foundry** endpoint type: the deployment list, Claude models, and the Responses API. Refer to [Microsoft Foundry Chat Model](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatazureopenai.md) for details.
 
@@ -59,7 +63,7 @@ To configure this credential, you'll need:
 - For the **Classic** endpoint type:
     - A **Resource Name**: the **Name** you give the resource.
     - The **API Version** the credentials should use. See the [Azure OpenAI API preview lifecycle documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/api-version-deprecation) for more information about API versioning in Azure OpenAI.
-- For the **Microsoft Foundry** endpoint type: the full **Endpoint** URL of your resource.
+- For the **Microsoft Foundry** endpoint type: the full **Endpoint** URL of your resource, and an optional **Project**.
 
 To get the information above, create and deploy a resource:
 

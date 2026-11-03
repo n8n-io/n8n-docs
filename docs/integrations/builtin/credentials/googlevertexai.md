@@ -14,8 +14,6 @@ You can use these credentials with the following nodes:
 * [Google Vertex Chat Model](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglevertex.md)
 * [Embeddings Google Vertex](../cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglevertex.md)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Prerequisites
 
 * A [Google Cloud](https://cloud.google.com/) account.
@@ -49,7 +47,7 @@ Select **Save** to save the credential.
 
 ### Select a project
 
-The project list uses the service account's access, rather than your personal Google account. Google returns projects for which the service account has the `resourcemanager.projects.get` permission. Refer to [Google's project search documentation](https://cloud.google.com/resource-manager/reference/rest/v3/projects/search).
+The project list uses the service account's access, rather than your personal Google account. Google returns projects for which the service account has the `resourcemanager.projects.get` permission. Refer to [Google's project search documentation](https://docs.cloud.google.com/resource-manager/reference/rest/v3/projects/search).
 
 If the project list is empty or fails to load, select **Custom** and enter the **Project ID**. Project lookup is optional. The service account still needs Vertex AI access in the selected project.
 

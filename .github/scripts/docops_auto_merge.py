@@ -6,19 +6,23 @@ Gate -> verdict -> arm GitHub's native auto-merge, or close / escalate. Called b
 (no `pull_request` trigger) and passes a token minted for the **n8n-assistant GitHub
 App** in GH_TOKEN, so the approval and merge act as the App - not github-actions[bot].
 
+Generic across automations: pick one with `--flow <name>`. Everything that differs
+between them (marker, branch pattern, files, verdict function, check-run name) lives
+in docops_automations.py, so this file never needs to know which flow it is running.
+
 What GitHub owns now (so this script doesn't): waiting for required checks, the
 branch-up-to-date requirement, and the merge itself. We only decide, approve (as the
 App), and `gh pr merge --auto`. The async merge is reported back later by the sweep.
 
-Never runs PR-head code: PR file contents are read through the API as data, and the
-verdict is a pure function imported from check_version_snippet_pr.py.
+Never runs PR-head code: PR file contents are read through the API as data, and each
+verdict is a pure function from a check_*_pr.py module.
 
 Exit codes: 0 = handled (armed / closed / ignored); 3 = escalated (visibly red).
 
-Config comes from the environment (see the workflow):
-  GH_REPO, SNIPPET_PATH, MARKER, BRANCH_RE, ALLOWED_AUTHORS,
-  REQUIRED_CHECKS (comma-sep, only these failing escalate),
-  WEBHOOK_URL / WEBHOOK_USER / WEBHOOK_PASSWORD (optional outcome POST), RUN_URL.
+Config comes from the profile, with optional environment overrides (see the workflow):
+  GH_REPO (required), ALLOWED_AUTHORS, REQUIRED_CHECKS (comma-sep, only these
+  failing escalate), WEBHOOK_URL / WEBHOOK_USER / WEBHOOK_PASSWORD (optional
+  outcome POST), RUN_URL.
 GH_TOKEN is consumed by `gh` from the environment.
 """
 
@@ -32,9 +36,11 @@ import sys
 import urllib.request
 from pathlib import Path
 
-# Import the pure verdict function directly (same directory).
+# Import the automation profiles (same directory). Each profile carries its own pure
+# verdict function; nothing version-snippet-specific is imported here.
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from check_version_snippet_pr import evaluate, STABLE_RE, BETA_RE  # noqa: E402
+from docops_automations import (  # noqa: E402
+    DEFAULT_ALLOWED_AUTHORS, DEFAULT_REQUIRED_CHECKS, PROFILES, get_profile)
 
 NPM_DIST_TAGS = "https://registry.npmjs.org/-/package/n8n/dist-tags"
 
@@ -43,11 +49,6 @@ LABEL_BLOCKED = "status:do-not-merge"
 # Merged-sweep idempotency is a hidden PR comment, not a label, so we don't add any
 # DocOps-specific labels to the repo (only the pre-existing status:* ones are reused).
 OUTCOME_MARKER = "<!-- docops:outcome-sent -->"
-
-APPROVE_BODY = (
-    "Automated version-snippet update: the two version numbers were verified against "
-    "npm dist-tags. Auto-merges once all required checks pass."
-)
 
 # --------------------------------------------------------------------- pure helpers
 # These are deliberately free of I/O so they can be unit-tested.
@@ -65,7 +66,7 @@ def gate_reason(pr, marker, allowed_authors, branch_re):
     head = pr.get("head") or {}
     ref = head.get("ref", "")
     if not branch_re.match(ref):
-        return f"branch '{ref}' is not a snippet branch"
+        return f"branch '{ref}' does not match this automation's branch pattern"
     if (head.get("repo") or {}).get("full_name") != os.environ.get("GH_REPO"):
         return "head is a fork"
     if pr.get("draft"):
@@ -75,9 +76,9 @@ def gate_reason(pr, marker, allowed_authors, branch_re):
     return None
 
 
-def only_snippet_changed(files, snippet_path):
-    """True iff the change touches exactly the snippet file and nothing else."""
-    return files == [snippet_path]
+def only_expected_files_changed(files, paths):
+    """True iff the change touches exactly the automation's files and nothing else."""
+    return sorted(f for f in files if f.strip()) == sorted(paths)
 
 
 def action_for_verdict(verdict):
@@ -90,19 +91,20 @@ def action_for_verdict(verdict):
 
 
 def linear_key_from_branch(ref):
-    m = re.match(r"(doc-[0-9]+)-", ref or "")
+    """DOC key from a branch name.
+
+    Two shapes are in use and both must parse, or the outcome webhook silently stops
+    closing Linear tickets: the version-snippet flow builds `doc-2269-update-version-
+    snippet`, while the DocFather index flows take Linear's own branch name,
+    `docfather/doc-2456` (no trailing slug).
+    """
+    m = re.search(r"\b(doc-[0-9]+)\b", ref or "", re.IGNORECASE)
     return m.group(1).upper() if m else ""
 
 
 def slack_ts_from_body(body):
     m = re.search(r"docops:slack-ts=([0-9.]+)", body or "")
     return m.group(1) if m else ""
-
-
-def value_from_snippet(text, regex):
-    """The version value on a snippet line, or '' (reuses the verdict script's regexes)."""
-    m = regex.search(text or "")
-    return m.group(2) if m else ""
 
 
 # --------------------------------------------------------------------- gh / http I/O
@@ -126,8 +128,8 @@ def changed_files(repo, pr):
     return [l for l in out.splitlines() if l.strip()]
 
 
-def get_snippet(repo, path, ref):
-    """Return the decoded snippet at `ref`, or None on any failure."""
+def get_file(repo, path, ref):
+    """Return the decoded file contents at `ref`, or None on any failure."""
     r = gh(["api", f"repos/{repo}/contents/{path}?ref={ref}", "--jq", ".content"],
            check=False)
     if r.returncode != 0 or not r.stdout.strip():
@@ -178,9 +180,11 @@ def comment(repo, pr, body):
     gh(["pr", "comment", str(pr), "-R", repo, "-b", body], check=False)
 
 
-def report_check(repo, head_sha, conclusion, title, summary):
+def report_check(repo, cfg, head_sha, conclusion, title, summary):
+    # The name must be unique per automation: two flows reporting on the same head
+    # SHA under one name would overwrite each other's result.
     gh(["api", "-X", "POST", f"repos/{repo}/check-runs",
-        "-f", "name=DocOps / auto-merge", "-f", f"head_sha={head_sha}",
+        "-f", f"name={cfg['check_name']}", "-f", f"head_sha={head_sha}",
         "-f", "status=completed", "-f", f"conclusion={conclusion}",
         "-f", f"output[title]={title}", "-f", f"output[summary]={summary}"], check=False)
 
@@ -217,8 +221,8 @@ def post_outcome(ctx, verdict, reason="", failing=""):
         return False
 
 
-def escalate(repo, ctx, verdict, reason, failing=""):
-    report_check(repo, ctx.get("head_sha", ""), "failure", verdict, reason)
+def escalate(repo, cfg, ctx, verdict, reason, failing=""):
+    report_check(repo, cfg, ctx.get("head_sha", ""), "failure", verdict, reason)
     add_label(repo, ctx["pr"], LABEL_BLOCKED)
     comment(repo, ctx["pr"],
             f"\U0001F6D1 DocOps auto-merge: **{verdict}** - {reason}. "
@@ -249,32 +253,39 @@ def handle_pr(repo, cfg, pr):
     }
 
     files = changed_files(repo, pr)
-    if not only_snippet_changed(files, cfg["snippet_path"]):
-        escalate(repo, ctx, "escalate",
-                 f"changed files are not exactly the version snippet ({' '.join(files)})")
+    if not only_expected_files_changed(files, cfg["paths"]):
+        escalate(repo, cfg, ctx, "escalate",
+                 f"changed files are not exactly {', '.join(cfg['paths'])} "
+                 f"({' '.join(files)})")
         return True
 
-    base_text = get_snippet(repo, cfg["snippet_path"], "main")
-    head_text = get_snippet(repo, cfg["snippet_path"], head["sha"])
+    path = cfg["content_path"]
+    base_text = get_file(repo, path, "main")
+    head_text = get_file(repo, path, head["sha"])
     if base_text is None or head_text is None:
-        escalate(repo, ctx, "escalate", "could not fetch/decode the snippet (base or head)")
+        escalate(repo, cfg, ctx, "escalate",
+                 f"could not fetch/decode {path} (base or head)")
         return True
 
-    npm_stable, npm_beta = npm_dist_tags()
-    if not npm_stable or not npm_beta:
-        escalate(repo, ctx, "escalate", "could not read npm dist-tags (stable/beta)")
-        return True
-
-    v = evaluate(base_text, head_text, npm_stable, npm_beta)
-    ctx["base"], ctx["head"], ctx["npm"] = v["base"], v["head"], v["npm"]
+    v = cfg["verdict"](base_text, head_text, {"npm_dist_tags": npm_dist_tags})
+    for key in ("base", "head", "npm"):
+        if key in v:
+            ctx[key] = v[key]
     verdict, vreason = v["verdict"], v["reason"]
-    log(pr, f"verdict={verdict} ({vreason}) base={v['base']} head={v['head']} npm={v['npm']}")
+    detail = " ".join(f"{k}={v[k]}" for k in ("base", "head", "npm") if k in v)
+    log(pr, f"verdict={verdict} ({vreason}){' ' + detail if detail else ''}")
 
     action = action_for_verdict(verdict)
     if action == "close":
-        report_check(repo, ctx["head_sha"], "neutral", "close_outdated", vreason)
+        if not cfg["supports_close"]:
+            # No automation but the version snippet has a meaningful "this PR improves
+            # nothing" state; reaching it elsewhere means the verdict is wrong.
+            escalate(repo, cfg, ctx, "escalate",
+                     f"verdict '{verdict}' is not supported by this automation")
+            return True
+        report_check(repo, cfg, ctx["head_sha"], "neutral", "close_outdated", vreason)
         comment(repo, pr,
-                f"\U0001F5D1️ Closing: docs already at stable "
+                f"\U0001F5D1\ufe0f Closing: docs already at stable "
                 f"`{v['base']['stable']}` / beta `{v['base']['beta']}`. "
                 f"A fresh PR opens automatically if npm moves.")
         add_label(repo, pr, LABEL_OUTDATED)
@@ -284,29 +295,29 @@ def handle_pr(repo, cfg, pr):
         return False
 
     if action == "escalate":
-        escalate(repo, ctx, "escalate", vreason)
+        escalate(repo, cfg, ctx, "escalate", vreason)
         return True
 
     # action == "arm": a failing REQUIRED check means a human should look, not auto-merge.
     failing = failed_required_checks(repo, pr, cfg["required"])
     if failing:
-        escalate(repo, ctx, "checks_failed",
+        escalate(repo, cfg, ctx, "checks_failed",
                  f"required check failed: {', '.join(failing)}", failing=failing[0])
         return True
 
-    arm_auto_merge(repo, ctx)
+    arm_auto_merge(repo, cfg, ctx)
     return False
 
 
-def arm_auto_merge(repo, ctx):
+def arm_auto_merge(repo, cfg, ctx):
     """Approve as the App and enable native auto-merge. Idempotent.
     No label is added: the merged-sweep finds these PRs by branch + marker, not a label."""
     pr = ctx["pr"]
     if not already_approved(repo, pr):
-        r = gh(["pr", "review", str(pr), "-R", repo, "--approve", "-b", APPROVE_BODY],
-               check=False)
+        r = gh(["pr", "review", str(pr), "-R", repo, "--approve",
+                "-b", cfg["approve_body"]], check=False)
         if r.returncode != 0:
-            escalate(repo, ctx, "escalate",
+            escalate(repo, cfg, ctx, "escalate",
                      "App approval failed - check the n8n-assistant token/permissions")
             return
     # Enable auto-merge; tolerate "already enabled". GitHub merges when green + up to date.
@@ -342,16 +353,16 @@ def outcome_already_sent(repo, pr):
 
 
 def announce_merged(repo, cfg):
-    """Report snippet PRs that native auto-merge already merged, so the outcome webhook
-    fires (Slack success + Supabase; Linear usually already closed via its own GitHub
+    """Report PRs that native auto-merge already merged, so the outcome webhook fires
+    (Slack success + Supabase; Linear usually already closed via its own GitHub
     integration). Detection = fixed title + branch + body marker; dedupe = a hidden PR
     comment. No repo labels are used, created, or required."""
-    # The search is already narrowed to snippet PRs by their fixed title (~1/day), and
-    # `gh pr list --limit` paginates internally up to the cap. 500 keeps well over a year
-    # of them retryable, so an undelivered outcome cannot age out of the window in
-    # practice (that would need the webhook down for hundreds of snippet PRs).
+    # The search is already narrowed to this automation's PRs by their fixed title
+    # (~1/day), and `gh pr list --limit` paginates internally up to the cap. 500 keeps
+    # well over a year of them retryable, so an undelivered outcome cannot age out of
+    # the window in practice (that would need the webhook down for hundreds of PRs).
     merged = gh_json(["pr", "list", "-R", repo, "--state", "merged",
-                      "--search", "in:title Update latest and next version numbers",
+                      "--search", cfg["merged_title_search"],
                       "--limit", "500",
                       "--json", "number,headRefName,body,mergeCommit"]) or []
     for p in merged:
@@ -361,15 +372,14 @@ def announce_merged(repo, cfg):
             continue
         if outcome_already_sent(repo, p["number"]):
             continue
-        head_main = get_snippet(repo, cfg["snippet_path"], "main") or ""
         ctx = {
             "pr": p["number"], "head_sha": (p.get("mergeCommit") or {}).get("oid", ""),
             "branch": p.get("headRefName", ""),
             "linear_key": linear_key_from_branch(p.get("headRefName", "")),
             "slack_ts": slack_ts_from_body(p.get("body")),
-            "head": {"stable": value_from_snippet(head_main, STABLE_RE),
-                     "beta": value_from_snippet(head_main, BETA_RE)},
         }
+        if cfg["merged_extra"]:
+            ctx.update(cfg["merged_extra"](lambda path, ref: get_file(repo, path, ref)))
         if not post_outcome(ctx, "merged",
                             "auto-merged by GitHub once required checks passed"):
             # Not delivered: leave no marker so the next sweep retries this PR.
@@ -388,23 +398,31 @@ def announce_merged(repo, cfg):
 
 # --------------------------------------------------------------------- entrypoint
 
-def load_cfg():
-    return {
-        "snippet_path": os.environ["SNIPPET_PATH"],
-        "marker": os.environ["MARKER"],
-        "branch_re": re.compile(os.environ["BRANCH_RE"]),
-        "allowed": {a.strip() for a in os.environ["ALLOWED_AUTHORS"].split(",") if a.strip()},
-        "required": {c.strip() for c in os.environ.get("REQUIRED_CHECKS", "").split(",") if c.strip()},
-    }
+def load_cfg(flow):
+    """Profile for `flow`, with environment overrides for the two deployment-specific
+    values. Everything else is a property of the automation, not of where it runs."""
+    profile = get_profile(flow)
+    env_authors = os.environ.get("ALLOWED_AUTHORS", "")
+    env_checks = os.environ.get("REQUIRED_CHECKS", "")
+    cfg = dict(profile)
+    cfg["flow"] = flow
+    cfg["allowed"] = ({a.strip() for a in env_authors.split(",") if a.strip()}
+                      or set(DEFAULT_ALLOWED_AUTHORS))
+    cfg["required"] = ({c.strip() for c in env_checks.split(",") if c.strip()}
+                       or set(DEFAULT_REQUIRED_CHECKS))
+    return cfg
 
 
 def main():
-    ap = argparse.ArgumentParser(description="DocOps version-snippet auto-merge.")
+    ap = argparse.ArgumentParser(description="DocOps auto-merge orchestrator.")
+    ap.add_argument("--flow", required=True, choices=sorted(PROFILES),
+                    help="which automation to run")
     ap.add_argument("--pr", help="evaluate a single PR number (else sweep open PRs)")
     args = ap.parse_args()
 
     repo = os.environ["GH_REPO"]
-    cfg = load_cfg()
+    cfg = load_cfg(args.flow)
+    print(f"flow={args.flow} marker={cfg['marker']}", flush=True)
 
     escalated = False
     if args.pr:

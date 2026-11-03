@@ -62,11 +62,10 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Related resources
 
 * [n8n API](./)
 * [Authentication](authentication.md)
+* [Idempotency](idempotency.md)
 * [Use an API playground](use-an-api-playground.md)
 * [Endpoint reference](api-reference.md)

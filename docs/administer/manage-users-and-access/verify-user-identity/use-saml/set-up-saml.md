@@ -22,8 +22,6 @@ layout:
 Configuring SAML using environment variables instead of the UI is available from n8n 2.18.0. See [SSO environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/sso).
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Enable SAML <a href="#enable-saml" id="enable-saml"></a>
 
 1. In n8n, go to **Settings** > **SSO**.
@@ -56,7 +54,13 @@ The steps to configure the IdP vary depending on your chosen IdP. These are some
 | User email       | URI Reference | `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress` |
 | User First Name  | URI Reference | `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/firstname`    |
 | User Last Name   | URI Reference | `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/lastname`     |
-| User Email       | URI Reference | `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn`          |
+| User principal name (unique per user) | URI Reference | `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn`          |
+
+{% hint style="warning" %}
+**userPrincipalName must be unique per user**
+
+n8n uses the `upn` claim value as the key that links a SAML identity to an n8n account. Give each user a distinct value, such as their login or email. If your IdP sends the same value for more than one person, they all sign in to the same n8n account. Don't set the claim name (`http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn`) as the value for every user.
+{% endhint %}
 
 ### Instance and project access provisioning <a href="#instance-and-project-access-provisioning" id="instance-and-project-access-provisioning"></a>
 

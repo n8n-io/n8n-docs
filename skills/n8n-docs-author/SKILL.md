@@ -1,12 +1,8 @@
 ---
 name: n8n-docs-author
 description: >-
-  Authors and reviews n8n documentation pages following the n8n docs style and
-  contribution guides. Use when writing new doc pages, editing existing docs,
-  reviewing doc PRs, or checking content against the style guide. Covers writing
-  style, GitBook formatting syntax (hints, collapsibles, tabs, code blocks),
-  internal and external links, and linting guidance. Use when asked to write or
-  edit docs, or to review content against the style guide.
+  Writes, edits, and reviews customer-facing n8n documentation pages in the n8n-docs repo,
+  following the style guide, contribution guide, and terminology. Use when drafting a page, editing docs, reviewing a docs PR, or checking content against the style guide. Covers audience, plain language, page structure and links, feature availability, frontmatter, and GitBook syntax.
 ---
 
 # n8n docs author
@@ -23,6 +19,16 @@ distills them so you can act quickly, but defer to the guides when in doubt:
 The n8n Docs site is built with [GitBook](https://www.gitbook.com/). Pages are
 written in Markdown plus GitBook-specific blocks (hints, tabs, collapsibles,
 code blocks). Use GitBook syntax, not MkDocs/Material syntax.
+
+## Audience
+
+Write for people who use, operate, or build on n8n, not for n8n's own internal engineers.
+
+Include what the reader does and sees: controls, settings, fields, error messages, limits, and behavior that affects what they've built.
+
+Include an implementation detail only when the reader needs it to act, choose between options, or troubleshoot. For example, how execution data is stored matters on a self-hosting page and not on a node reference page. Otherwise leave it out.
+
+Tickets, PRs, and design docs are sources of facts, not templates for the page. Keep what the reader needs and drop the rest.
 
 ## Modes
 
@@ -223,6 +229,8 @@ See [reference.md](reference.md) for full examples and rules.
   (`status: preview`, `tag: preview`) since they're literal identifiers, not
   prose. Whole page → also set `status: preview` plus a primary `preview` tag
   (see Frontmatter's `tags` field, below).
+  For a section where every page is Preview, tag only the section's top page.
+  The subpages keep `status: preview` and the Preview hint.
 - **Deprecation and removal:** a `warning` hint, same `**Feature availability**`
   title, using "from" for both ("deprecated from n8n 2.0", "removed from n8n 3.0";
   never "removed in"). Name the replacement and removal version if known.

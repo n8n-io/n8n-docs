@@ -454,6 +454,35 @@ N8N_OTEL_ENABLED=true N8N_OTEL_EXPORTER_OTLP_ENDPOINT=http://127.0.0.1:4318 n8n 
 
 5. Run a workflow, then open the Jaeger UI at [http://localhost:16686](http://localhost:16686) - Select "n8n" as service" and click "Find traces" to see the OpenTelemetry traces emitted by n8n.
 
+## Send traces to LangWatch
+
+You can also send traces to [LangWatch](https://langwatch.ai/), an observability platform for LLM and agent applications. Runs built with n8n's Agents feature emit spans with the OpenTelemetry GenAI semantic conventions (`gen_ai.*` attributes), so agent runs and tool calls show up in LangWatch alongside the workflow and node spans. The legacy AI Agent node doesn't emit `gen_ai.*` spans, so its runs appear as standard node spans only.
+
+1. In LangWatch, open your project settings and copy your API key.
+2. Set the following environment variables on each n8n instance (main, workers, and webhook processors) and restart n8n. Store the key in a file instead of the header variable: create the file (for example `/mnt/otel-headers`) with a single line, `authorization=Bearer <your-langwatch-api-key>`, and point n8n at it with the `_FILE` variant:
+
+```bash
+export N8N_OTEL_ENABLED=true
+export N8N_OTEL_EXPORTER_OTLP_ENDPOINT=https://app.langwatch.ai/api/otel
+export N8N_OTEL_EXPORTER_OTLP_HEADERS_FILE=/mnt/otel-headers
+```
+
+If you set the header directly instead, include the `Bearer` scheme:
+
+```bash
+export N8N_OTEL_EXPORTER_OTLP_HEADERS="authorization=Bearer <your-langwatch-api-key>"
+```
+
+3. Run a workflow or an agent, then open your project in LangWatch to see the traces.
+
+{% hint style="warning" %}
+**Use the base endpoint, not the full traces URL**
+
+Point `N8N_OTEL_EXPORTER_OTLP_ENDPOINT` at `https://app.langwatch.ai/api/otel`. n8n appends `/v1/traces` to the endpoint itself, so spans land on `https://app.langwatch.ai/api/otel/v1/traces`. If you paste the full traces URL from the LangWatch OpenTelemetry guide, n8n appends the path a second time and the export fails.
+{% endhint %}
+
+For more detail on how LangWatch receives OpenTelemetry data, refer to the [LangWatch OpenTelemetry guide](https://langwatch.ai/docs/integration/opentelemetry/guide).
+
 ## Span attributes <a href="#span-attributes" id="span-attributes"></a>
 
 Workflow and node spans include the following n8n-specific attributes.

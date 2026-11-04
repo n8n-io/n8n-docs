@@ -91,7 +91,7 @@ The quickest way: open the editor, go to the instance's AI settings, and add you
 2. Restart n8n.
 3. Open the editor and confirm n8n Assistant appears and responds.
 
-`N8N_INSTANCE_AI_MODEL` defaults to `anthropic/claude-opus-4-8`. Set it explicitly only if you want a different model (see [Choose a model provider](#choose-a-model-provider)).
+`N8N_INSTANCE_AI_MODEL` defaults to `anthropic/claude-opus-5-5`. Set it explicitly only if you want a different model (see [Choose a model provider](#choose-a-model-provider)).
 
 Prefer to watch? This [video guide](https://go.n8n.io/RZZWq1) covers the setup end to end, from the one-line install to selecting a provider and model in the editor.
 
@@ -157,7 +157,7 @@ Daytona creates sandboxes on demand instead of you hosting the containers yourse
    ```bash
    # Enable the module and choose a model
    N8N_ENABLED_MODULES=instance-ai
-   N8N_INSTANCE_AI_MODEL=anthropic/claude-opus-4-8
+   N8N_INSTANCE_AI_MODEL=anthropic/claude-opus-5-5
    N8N_INSTANCE_AI_MODEL_API_KEY=sk-ant-xxx
 
    # Sandbox, required
@@ -176,7 +176,7 @@ Daytona creates sandboxes on demand instead of you hosting the containers yourse
    | Variable | Description |
    | --- | --- |
    | `N8N_ENABLED_MODULES` | Must include `instance-ai` to enable the module. |
-   | `N8N_INSTANCE_AI_MODEL` | Selects the LLM in `provider/model` format. Has a default (`anthropic/claude-opus-4-8`). Set it explicitly only if you want a different model. |
+   | `N8N_INSTANCE_AI_MODEL` | Selects the LLM in `provider/model` format. Has a default (`anthropic/claude-opus-5-5`). Set it explicitly only if you want a different model. |
    | `N8N_INSTANCE_AI_MODEL_API_KEY` | API key for the selected provider. |
    | `N8N_INSTANCE_AI_SANDBOX_ENABLED` | Set to `true`. n8n Assistant requires a sandbox. |
    | `N8N_INSTANCE_AI_SANDBOX_PROVIDER` | Set to `daytona`. |
@@ -193,7 +193,7 @@ Daytona creates sandboxes on demand instead of you hosting the containers yourse
        image: n8nio/n8n
        environment:
          N8N_ENABLED_MODULES: instance-ai
-         N8N_INSTANCE_AI_MODEL: anthropic/claude-opus-4-8
+         N8N_INSTANCE_AI_MODEL: anthropic/claude-opus-5-5
          N8N_INSTANCE_AI_MODEL_API_KEY: sk-ant-xxx
          N8N_INSTANCE_AI_SANDBOX_ENABLED: 'true'
          N8N_INSTANCE_AI_SANDBOX_PROVIDER: daytona
@@ -231,13 +231,13 @@ Supported providers are:
 * `openai`
 * `openrouter`
 
-For a hosted provider, start with `anthropic/claude-opus-4-8` or `openai/gpt-5.5`.
+For a hosted provider, start with `anthropic/claude-opus-5-5` or `openai/gpt-5.5`.
 
 Examples:
 
 ```bash
 # Anthropic
-N8N_INSTANCE_AI_MODEL=anthropic/claude-opus-4-8
+N8N_INSTANCE_AI_MODEL=anthropic/claude-opus-5-5
 
 # OpenAI
 N8N_INSTANCE_AI_MODEL=openai/gpt-5.5

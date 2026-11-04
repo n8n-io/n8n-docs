@@ -138,6 +138,8 @@ Get detailed information about a specific workflow, including trigger details.
 * Includes active version details if the workflow is published.
 * Includes user permission scopes and whether the workflow can be executed by the current user.
 * Use `triggerInfo` to understand how supported trigger nodes can be invoked.
+* From n8n 2.47.0, if n8n can't read the credential of a webhook that uses header or JWT authentication, `triggerInfo` still states that the webhook requires authentication. It asks the user for the header name and value, or for the JWT credentials. Earlier versions report that webhook as open.
+* From n8n 2.47.0, a failed header authentication credential lookup no longer fails the whole `get_workflow_details` call.
 * Use `detailLevel: "execution"` when you only need to run the workflow with `execute_workflow`. It omits the node graph, which keeps the response small.
 
 ***

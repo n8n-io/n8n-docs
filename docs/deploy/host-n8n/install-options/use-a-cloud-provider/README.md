@@ -19,6 +19,7 @@ Self-host with Docker Compose:
 * [DigitalOcean](deploy-to-digital-ocean.md): self-host n8n on a DigitalOcean droplet with a real domain and automatic HTTPS.
 * [Heroku](deploy-to-heroku.md): self-host n8n on Heroku.
 * [Hetzner Cloud](deploy-to-hetzner.md): self-host n8n on a Hetzner Cloud server.
+* [Easypanel](deploy-to-easypanel.md): self-host n8n on your own server using Easypanel's one-click deployment template.
 
 Self-host with Google Cloud Run (with access to n8n workflow tools for Google Workspace, for example Gmail and Drive):
 

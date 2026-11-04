@@ -221,17 +221,18 @@ Test a workflow using pin data to bypass external services. Trigger nodes, nodes
 
 #### Output <a href="#output" id="output"></a>
 
-| Field         | Type             | Description                                                                                                                                 |
-| ------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `executionId` | `string \| null` | The test execution ID                                                                                                                       |
-| `status`      | `string`         | The status of the test execution. One of: `"success"`, `"error"`, `"running"`, `"waiting"`, `"canceled"`, `"crashed"`, `"new"`, `"unknown"` |
-| `error`       | `string`         | Error message if the execution failed                                                                                                       |
+| Field         | Type             | Description                                                                                                                                                                |
+| ------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `executionId` | `string \| null` | The test execution ID                                                                                                                                                      |
+| `status`      | `string`         | The status of the test execution. One of: `"success"`, `"error"`, `"running"`, `"waiting"`, `"canceled"`, `"crashed"`, `"new"`, `"unknown"`                                |
+| `error`       | `string`         | Error message if the execution failed. From n8n 2.47.0, n8n applies execution data redaction to this message. Earlier versions return the error message without redaction. |
 
 #### Notes <a href="#notes" id="notes"></a>
 
 * Can be used to test workflow logic without setting up credentials or hitting external services.
 * This tool executes workflows synchronously (waits for execution to finish).
 * Has an enforced MCP execution timeout, five minutes by default. Use `timeout` to raise it, up to 60 minutes.
+* From n8n 2.47.0, if execution data redaction applies to you, `error` holds the redacted error instead of the original message. If n8n can't complete the redaction check, `error` holds `Error details hidden because the execution data redaction check failed`.
 
 ***
 

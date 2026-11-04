@@ -52,4 +52,5 @@ To experiment with live calls, use the [built-in API playground](use-an-api-play
 * [Authentication](authentication.md)
 * [Pagination](pagination.md)
 * [Idempotency](idempotency.md)
+* [Rate limits](rate-limits.md)
 * [Use an API playground](use-an-api-playground.md)

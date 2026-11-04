@@ -96,3 +96,4 @@ To unshare a credential:
 * [End-user credentials](end-user-credentials.md)
 * [Credential overwrites](credential-overwrites.md)
 * [Use external secret stores](use-external-secret-stores.md)
+* [Automatic OAuth client registration](automatic-oauth-client-registration.md)

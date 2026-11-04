@@ -192,9 +192,9 @@ There are 12 reasons an import can be blocked. Each appears in the `issues` arra
 
 | Type | Kinds | What it means |
 |------|-------|---------------|
-| `workflow-conflict` | | The workflow exists on the target and `--workflow-conflict-policy` is `fail` |
-| `workflow-id-conflict` | | Under `--workflow-id-policy=source`, that workflow ID is already used somewhere on the instance, including in another project and including archived workflows |
-| `workflow-folder-conflict` | | The existing workflow lives in a different folder than the import would put it in. This refuses the import even under `--workflow-conflict-policy=skip` |
+| `workflow-conflict` | | The workflow exists on the target and `--conflict-policy` is `fail` |
+| `workflow-id-conflict` | | The package ID of a new workflow is already used somewhere on the instance, including in another project and including archived workflows |
+| `workflow-folder-conflict` | | The existing workflow lives in a different folder than the import would put it in. This refuses the import even under `--conflict-policy=skip` |
 | `project-conflict` | `fail-policy` | The project exists and `--project-conflict-policy` is `fail` |
 | `folder-conflict` | `parent-mismatch`, `id-in-other-project`, `fail-policy` | The first two refuse whatever the policy |
 | `credential-unresolved` | `not_found`, `unknown_type`, `source_not_found`, `type_mismatch` | Only `not_found` can be resolved by a placeholder credential |

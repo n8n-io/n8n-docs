@@ -45,7 +45,7 @@ Run the same n8n version on all main processes, workers, and any webhook process
 
 If you run [task runners in external mode](../configure-n8n/set-up-task-runners.md#setting-up-external-mode), the `n8nio/runners` image version must match the `n8nio/n8n` image version. Update both together.
 
-If you plan to turn on webhook response offloading as part of the update, the order matters. Refer to [Turn on offloading during an upgrade](../configure-n8n/scaling/enable-queue-mode.md#turn-on-offloading-during-an-upgrade).
+If you plan to turn on webhook response offloading as part of the update, upgrade every main process and webhook processor first. Then set `N8N_WEBHOOK_RESPONSE_RELAY_OFFLOAD_ENABLED` on your workers. Refer to [Turn on offloading during an upgrade](../configure-n8n/scaling/enable-queue-mode.md#turn-on-offloading-during-an-upgrade) for details.
 
 ### How n8n runs database migrations during an update
 

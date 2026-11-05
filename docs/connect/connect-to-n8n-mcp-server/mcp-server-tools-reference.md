@@ -729,6 +729,41 @@ List credentials the current user can access. Use this to find a credential ID b
 
 ***
 
+### update\_credential\_description <a href="#updatecredentialdescription" id="updatecredentialdescription"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+`update_credential_description` is available from n8n 2.47.0.
+{% endhint %}
+
+Update the description of a credential. Use `list_credentials` to find the credential ID first.
+
+#### Parameters <a href="#parameters" id="parameters"></a>
+
+| Name           | Type     | Required | Description                                                     |
+| -------------- | -------- | -------- | --------------------------------------------------------------- |
+| `credentialId` | `string` | Yes      | The ID of the credential to update, from `list_credentials`     |
+| `description`  | `string` | Yes      | The new description for the credential                          |
+
+#### Output <a href="#output" id="output"></a>
+
+| Field     | Type      | Description                                      |
+| --------- | --------- | ------------------------------------------------ |
+| `success` | `boolean` | `true` when n8n saved the new description        |
+| `error`   | `string`  | Why the update failed. Present only on failure   |
+
+#### Notes <a href="#notes" id="notes"></a>
+
+* Requires the `credential:update` scope.
+* Only available when credential descriptions are enabled on the instance. On instances with credential descriptions disabled, n8n doesn't expose this tool.
+* The tool replaces the credential's existing description. Calling it again with the same description gives the same result.
+* If the update fails, the tool returns `success: false` and the reason in `error`.
+* The MCP client can read credential descriptions with `list_credentials`. Don't include API keys, passwords, or tokens in a description.
+* The tool isn't read-only, so n8n blocks it on a protected (read-only) instance.
+
+***
+
 ## Instance context <a href="#instance-context" id="instance-context"></a>
 
 {% hint style="info" %}

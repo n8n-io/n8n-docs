@@ -276,6 +276,12 @@ def main():
           [t for _, t in cil.iter_targets("[ref]: page-one.md\n")] == ["page-one.md"])
     check("filenames with parens are captured whole",
           [t for _, t in cil.iter_targets("[x]((node-name).all.md)")] == ["(node-name).all.md"])
+    check("escaped parens in an inline link are unescaped",
+          [t for _, t in cil.iter_targets(r"[x](\(node-name\).all.md)")] == ["(node-name).all.md"])
+    check("an escaped closing paren doesn't end an inline link",
+          [t for _, t in cil.iter_targets(r"[x](a\).md)")] == ["a).md"])
+    check("escaped parens in a reference definition are unescaped",
+          [t for _, t in cil.iter_targets("[ref]: \\(node-name\\).all.md\n")] == ["(node-name).all.md"])
 
     # --- space_of -------------------------------------------------------------
     check("space_of reads the top-level folder", cil.space_of(A) == "spacea")

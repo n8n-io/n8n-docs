@@ -221,6 +221,7 @@ Check that the preference's scope covers the project you're working in. In n8n A
 ## Related resources
 
 * [Agentic context management](./)
+* [Skills](skills.md)
 * [Use n8n Assistant](../ways-of-building-workflows/n8n-assistant.md)
 * [Use n8n MCP server](../ways-of-building-workflows/connect-to-n8n-mcp-server.md)
 * [Connect to n8n MCP server](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server)

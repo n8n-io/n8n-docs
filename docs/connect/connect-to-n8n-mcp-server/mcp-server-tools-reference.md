@@ -2181,6 +2181,178 @@ Remove a preference that an MCP client saved for the current user. Use it when t
 
 ***
 
+## Skills
+
+{% hint style="info" %}
+**Feature availability**
+
+The skill tools are available from n8n 2.45.0. In n8n 2.45, the search tool has the name `search_skills`. The `availableToAssistant` and `availableToMCP` fields, and the MCP skills extension, are available from n8n 2.46.0.
+{% endhint %}
+
+{% hint style="info" %}
+**Preview status**
+
+Skills are part of agentic context management, which is in Preview and may change in future releases.&#x20;
+{% endhint %}
+
+[Skills](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/agentic-context-management/skills) are instructions, with optional reference files, that agents and n8n Assistant follow for a specific task. MCP clients, such as Claude Code, can find, read, create, change, and delete the skills the current user has access to.
+
+Two OAuth scopes cover these tools:
+
+| OAuth scope   | Consent screen label                 | Tools                                                                            |
+| ------------- | ------------------------------------ | -------------------------------------------------------------------------------- |
+| `skill:read`  | **List and read skills**             | `search_n8n_skills`, `get_skill`                                                 |
+| `skill:write` | **Create, update and delete skills** | `create_skill`, `update_skill`, `delete_skill`, `search_n8n_skills`, `get_skill` |
+
+Each skill has one of three scopes:
+
+| Scope      | Who can use the skill            | Who can write it                                    |
+| ---------- | -------------------------------- | --------------------------------------------------- |
+| `instance` | Agents in every project          | Instance owners and admins                          |
+| `project`  | Agents in one team project       | Project admins and project editors                  |
+| `project`  | Agents in one personal project   | The owner of the personal project                   |
+| `agent`    | One agent only                   | People who can edit the agent's project. MCP clients can't create these skills. |
+
+A skill has these limits:
+
+* Name: up to 128 characters. Two skills in one scope can't have the same name.
+* Description: up to 1,024 characters.
+* Instructions: up to 65,536 characters.
+* References: up to 20 Markdown files, each up to 65,536 characters, and up to 262,144 characters in total.
+
+Two fields depend on feature flags. `availableToAssistant` appears only when skills in n8n Assistant are on (`130_attach_skills_to_assistant`). `availableToMCP` appears only when the MCP skills extension is on (`128_mcp_skills_extension`). With the extension on, the n8n MCP server also offers the skills marked `availableToMCP` through the [MCP skills extension](https://modelcontextprotocol.io/seps/2640-skills-extension) (`skills/list` and `skills/get`). Only MCP clients that support the extension use it.
+
+### search\_n8n\_skills
+
+Search the skills the current user can see.
+
+#### Parameters
+
+| Name                  | Type     | Required | Description                                                                         |
+| --------------------- | -------- | -------- | ----------------------------------------------------------------------------------- |
+| `query`               | `string` | No       | Filter by skill name or description. Up to 200 characters.                          |
+| `scope`               | `string` | No       | Only skills of this scope. One of: `"instance"`, `"project"`, `"agent"`.            |
+| `projectId`           | `string` | No       | Only skills of this project                                                         |
+| `attachableToAgentId` | `string` | No       | Only the skills this agent can use. Don't combine it with `scope` or `projectId`.   |
+| `limit`               | `number` | No       | Skills to return, from 1 to 100. Default: 50.                                       |
+| `skip`                | `number` | No       | Skills to skip, for the next page. Default: 0.                                      |
+
+#### Output
+
+| Field                         | Type      | Description                                                                          |
+| ----------------------------- | --------- | ------------------------------------------------------------------------------------ |
+| `count`                       | `number`  | Total number of matching skills                                                      |
+| `skills`                      | `array`   | The skills on this page                                                              |
+| `skills[].id`                 | `string`  | Skill ID. Pass it to `get_skill`, `update_skill`, or `delete_skill`.                 |
+| `skills[].name`               | `string`  | Skill name                                                                           |
+| `skills[].description`        | `string`  | When to use the skill                                                                |
+| `skills[].scope`              | `string`  | One of: `"instance"`, `"project"`, `"agent"`                                         |
+| `skills[].projectId`          | `string`  | The project of a project skill, or the project of the agent of an agent skill        |
+| `skills[].projectName`        | `string`  | Name of that project                                                                 |
+| `skills[].agentId`            | `string`  | Set for an agent skill: the only agent that can use it                               |
+| `skills[].agentName`          | `string`  | Name of that agent                                                                   |
+| `skills[].availableToAssistant` | `boolean` | Whether n8n Assistant can use the skill. Only with `130_attach_skills_to_assistant`. |
+| `skills[].availableToMCP`     | `boolean` | Whether MCP clients load the skill automatically. Only with `128_mcp_skills_extension`. |
+| `skills[].latestVersion`      | `number`  | Number of the latest version                                                         |
+| `skills[].usedByAgents`       | `number`  | Number of agents that use the skill                                                  |
+| `skills[].canEdit`            | `boolean` | Whether the current user can change the skill                                        |
+| `skills[].canDelete`          | `boolean` | Whether the current user can delete the skill                                        |
+| `skills[].updatedAt`          | `string`  | Time of the last change                                                              |
+
+***
+
+### get\_skill
+
+Read one skill with its instructions, references, `skillHash`, and the agents that use it.
+
+#### Parameters
+
+| Name      | Type     | Required | Description                         |
+| --------- | -------- | -------- | ----------------------------------- |
+| `skillId` | `string` | Yes      | The skill ID from `search_n8n_skills` |
+
+#### Output
+
+The fields of one `search_n8n_skills` item, plus:
+
+| Field       | Type     | Description                                                                                                  |
+| ----------- | -------- | ------------------------------------------------------------------------------------------------------------ |
+| `skill`     | `object` | The content: `name`, `description`, `instructions`, and `references` (an array of `path` and `content`)     |
+| `skillHash` | `string` | Hash of the current content. Pass it to `update_skill` as `baseSkillHash`.                                   |
+| `usedBy`    | `object` | The agents that use the skill: `drafts`, `pins` (published versions), and `hiddenAgents` (agents in projects the user can't read) |
+
+***
+
+### create\_skill
+
+Create a skill.
+
+#### Parameters
+
+| Name                   | Type      | Required | Description                                                                                       |
+| ---------------------- | --------- | -------- | ------------------------------------------------------------------------------------------------- |
+| `scope`                | `string`  | Yes      | `"project"`: one project can use the skill. `"instance"`: every project can use it.               |
+| `projectId`            | `string`  | No       | Required when `scope` is `"project"`. Get it from `search_projects`.                              |
+| `skill`                | `object`  | Yes      | The content: `name`, `description`, `instructions`, and optional `references` (array of `path` and `content`). See the limits at the start of this section. |
+| `availableToAssistant` | `boolean` | No       | Allow n8n Assistant to use the skill. Default: `false`. Only with `130_attach_skills_to_assistant`. |
+| `availableToMCP`       | `boolean` | No       | Serve the skill to MCP clients that support skills. Default: `false`. Only with `128_mcp_skills_extension`. |
+
+#### Output
+
+A created skill, with the fields that `get_skill` returns. If n8n refuses the create, the result has `ok: false`, a `code`, and a `message`:
+
+* `skill_name_taken`: the scope already has a skill with this name. Choose another name.
+
+***
+
+### update\_skill
+
+Change a skill. Pass only the fields to change. A change to the content creates a new version. A change to only `availableToAssistant` or `availableToMCP` keeps the version.
+
+#### Parameters
+
+| Name                   | Type      | Required | Description                                                                                   |
+| ---------------------- | --------- | -------- | --------------------------------------------------------------------------------------------- |
+| `skillId`              | `string`  | Yes      | The skill to change                                                                           |
+| `baseSkillHash`        | `string`  | Yes      | `skillHash` from `get_skill`. n8n refuses the update if the skill changed since.              |
+| `name`                 | `string`  | No       | New name                                                                                      |
+| `description`          | `string`  | No       | New description                                                                               |
+| `instructions`         | `string`  | No       | New instructions                                                                              |
+| `references`           | `array`   | No       | New references. Replaces all references.                                                      |
+| `scope`                | `string`  | No       | Moves the skill. One of: `"project"`, `"instance"`. Refused if an agent that uses the skill can't use it in the new scope. |
+| `projectId`            | `string`  | No       | Required when `scope` is `"project"`                                                          |
+| `availableToAssistant` | `boolean` | No       | Only with `130_attach_skills_to_assistant`                                                    |
+| `availableToMCP`       | `boolean` | No       | Only with `128_mcp_skills_extension`                                                          |
+
+#### Output
+
+The skill after the change, without its content. If n8n refuses the update, the result has `ok: false`, the `skillId`, and a `code`:
+
+* `stale_skill`: the skill changed since the client read it. The result has the new `skillHash`. Call `get_skill` before you retry.
+* `skill_name_taken`: the scope already has a skill with this name.
+* `skill_synced`: the skill comes from GitHub, and n8n keeps it read-only. Change it in GitHub.
+
+***
+
+### delete\_skill
+
+Delete a skill permanently. n8n refuses while an agent uses the skill.
+
+#### Parameters
+
+| Name      | Type     | Required | Description         |
+| --------- | -------- | -------- | ------------------- |
+| `skillId` | `string` | Yes      | The skill to delete |
+
+#### Output
+
+| Field     | Type      | Description                        |
+| --------- | --------- | ---------------------------------- |
+| `deleted` | `boolean` | `true` when n8n deleted the skill  |
+| `skillId` | `string`  | The ID the call asked for          |
+
+***
+
 ## Data tables <a href="#data-tables" id="data-tables"></a>
 
 ### search\_data\_tables <a href="#searchdatatables" id="searchdatatables"></a>

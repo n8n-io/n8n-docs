@@ -233,11 +233,17 @@ S3 key-prefix filters and Azure `prefixMatch` filters match from the start of th
 
 ### Expire binary data when execution data stays in the database or filesystem
 
-If execution data stays in the database or on the filesystem, n8n doesn't write new execution data to the bucket or container. A lifecycle rule for the whole bucket or container can then expire binary data, within these limits:
+If execution data stays in the database or on the filesystem, n8n doesn't write new execution data to the bucket or container. A lifecycle rule scoped to the `workflows/` prefix can then expire binary data from executions:
+
+* **S3:** set the rule's prefix filter to `workflows/`.
+* **Azure:** set `prefixMatch` to `<container-name>/workflows/`. Without a `prefixMatch`, the rule applies to all blobs in the storage account, not only the container.
+
+This approach has these limits:
 
 * The bucket or container can still hold execution data from an earlier setup. Switching `N8N_EXECUTION_DATA_STORAGE_MODE` doesn't move existing execution data. A lifecycle rule can delete data that n8n still references, so check for `execution_data/` objects before you add the rule.
 * Lifecycle rules use object timestamps, not execution completion times. n8n measures execution age from when the execution finished, and it can write binary data earlier. Setting the expiry age to match `EXECUTIONS_DATA_MAX_AGE` doesn't guarantee that binary data stays available for every execution that n8n keeps. A shorter age can delete binary data for executions that n8n still keeps.
 * [Executions pruning](manage-execution-data.md#enable-executions-pruning) skips annotated executions and executions with the `new`, `running`, or `waiting` status. These executions can stay in n8n longer than any expiry age, and lose their binary data when the rule expires it.
+* Not all binary data comes from executions. n8n stores chat hub and agent attachments in the same bucket or container, under the `chat-hub/` and `agents/` prefixes. These files don't depend on execution age, and n8n still references them. A rule for the whole bucket or container also expires them, so scope the rule to `workflows/`.
 
 ### Expire binary data when execution data is also in object storage
 

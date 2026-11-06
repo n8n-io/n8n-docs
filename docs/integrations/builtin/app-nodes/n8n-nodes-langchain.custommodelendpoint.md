@@ -48,12 +48,12 @@ The node drops messages with empty content, and won't call the gateway with noth
 
 Headers for this request only. Values accept expressions, so they can differ per item:
 
-```
+```text
 Name:  x-request-source
 Value: {{ $json.department }}
 ```
 
-Headers your gateway needs on every call belong on the credential instead, as **Gateway Headers**. n8n encrypts those, and sends them on the model list and the OAuth2 token request too.
+Headers your gateway needs on every call belong on the credential instead, as **Gateway Headers**. n8n encrypts those and sends them on the model list as well. They don't travel on the OAuth2 token request.
 
 ### Extra Body
 
@@ -110,7 +110,7 @@ Use this option to control the randomness of the sampling process. A higher temp
 
 ### Seed
 
-Ask the provider to sample deterministically. Not every provider honours it.
+Ask the provider to sample deterministically. Not every provider honors it.
 
 ### Stop Sequences
 
@@ -139,11 +139,13 @@ The node reports token usage into the execution metadata, the same as the other 
 
 ## Templates and examples
 
-[Browse Custom Model Endpoint node documentation integration templates](https://n8n.io/integrations/custom-model-endpoint) or [search all templates](https://n8n.io/workflows/)
+[Search all templates](https://n8n.io/workflows/) for workflows you can adapt.
 
 ## Related resources
 
 Refer to the [OpenAI API reference](https://platform.openai.com/docs/api-reference/chat) for the request and response format these endpoints follow.
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 
 To move an existing workflow from the OpenAI node with a Base URL override, see [Moving from the OpenAI node with a custom Base URL](../credentials/custommodelendpoint.md#moving-from-the-openai-node-with-a-custom-base-url).
 
@@ -151,13 +153,21 @@ To move an existing workflow from the OpenAI node with a Base URL override, see 
 
 Here are some common errors and issues with the Custom Model Endpoint node and steps to resolve or troubleshoot them.
 
-### The model isn't in the list
+### `This gateway does not publish a model list`
 
 The gateway doesn't serve a compatible `GET /models`. Switch **Model** to **By ID** and type the name your gateway uses.
 
+### `This node has no message to send`
+
+Every **Messages** row has empty **Content**. The node drops empty rows and won't call the gateway with nothing to send.
+
+### `The credential has no usable Base URL`
+
+**Base URL** on the credential is empty, or isn't an absolute `http` or `https` URL.
+
 ### The gateway doesn't recognise the model name
 
-Gateways name models differently. Check the name against your gateway's own catalogue rather than the provider's.
+Gateways name models differently. Check the name against your gateway's own catalog rather than the provider's.
 
 ### Tool calling does nothing
 

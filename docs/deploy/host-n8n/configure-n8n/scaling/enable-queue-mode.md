@@ -266,7 +266,7 @@ n8n only offloads the response body. It measures the rest of the response, its h
 
 ### Turn on offloading during an upgrade
 
-Only a main instance running n8n 2.34.0 or later reads an offloaded body. An older one returns the storage reference to the client instead of the response body. Upgrade every main and webhook instance first, then set `N8N_WEBHOOK_RESPONSE_RELAY_OFFLOAD_ENABLED` on your workers. A worker with the variable unset sends every response inline and fails one above the limit.
+Only main and webhook instances running n8n 2.34.0 or later fully handle an offloaded body. An older instance still streams the body to the client, but it sends status code `200` instead of the one the **Respond to Webhook** node sets, and it leaves the stored body in storage. Upgrade every main and webhook instance first, then set `N8N_WEBHOOK_RESPONSE_RELAY_OFFLOAD_ENABLED` on your workers. A worker with the variable unset sends every response inline and fails one above the limit.
 
 ### Troubleshoot large webhook responses
 

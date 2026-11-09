@@ -75,6 +75,31 @@ check("payload: 429 counts as blocked, not broken",
       rate_limited["totals"]["errors"] == 0 and rate_limited["totals"]["blocked"] == 1)
 check("payload: exit code passed through", payload["lychee_exit_code"] == 2)
 
+# DOC-2568: a GitHub outage returned 504 to anonymous requests and the sweep called 181
+# live links broken. Gateway errors are "not verifiable", like a WAF refusal.
+outage = lr.build_payload({"error_map": {
+    "./docs/changelog/release-notes-0.x.md": [
+        {"url": "https://github.com/aarongut", "status": {"code": 504, "text": "Gateway Timeout"}},
+        {"url": "https://github.com/curryy", "status": {"code": 502, "text": "Bad Gateway"}},
+        {"url": "https://github.com/mertmit", "status": {"code": 503, "text": "Service Unavailable"}}],
+    "./docs/integrations/builtin/credentials/halopsa.md": [
+        {"url": "https://halopsa.com/guides/article/?kbid=1737", "status": {"code": 404, "text": "Not Found"}},
+        {"url": "https://example.com/broken", "status": {"code": 500, "text": "Internal Server Error"}}]}}, ctx)
+check("payload: 502/503/504 count as not verifiable, not broken",
+      outage["totals"]["blocked"] == 3
+      and {f["status"] for f in outage["blocked"]} == {502, 503, 504})
+check("payload: 404 and 500 still count as broken",
+      outage["totals"]["errors"] == 2
+      and sorted(f["status"] for f in outage["failures"]) == [404, 500])
+check("payload: no gateway error left in failures",
+      all(f["status"] not in lr.SERVER_ERROR_STATUSES for f in outage["failures"]))
+outage_summary = lr.summary_markdown(outage)
+check("summary: names the server errors inside the not-verifiable bucket",
+      "Broken: 2" in outage_summary
+      and "server errors (502/503/504), usually a host outage: 3" in outage_summary)
+check("summary: no server-error line when there are none",
+      "server errors" not in lr.summary_markdown(rate_limited))
+
 # fallback to fail_map (older lychee) and errors derived from the map when the counter is absent
 old = {"total": 5, "fail_map": {"./docs/a.md": [{"url": "https://x/1", "status": "500 Internal Server Error"}]}}
 old_payload = lr.build_payload(old, ctx)
@@ -224,6 +249,7 @@ summary = lr.summary_markdown(payload)
 check("summary: mentions counts (Broken = rows in the table)", "Checked: 120" in summary and "Broken: 3" in summary)
 check("summary: lists pages with counts", "airtable.md` | 1" in summary)
 check("summary: reports the blocked bucket separately", "Blocked by the host" in summary and "not verifiable): 1" in summary)
+check("summary: the blocked label names the server errors too", "502/503/504, not verifiable" in summary)
 check("summary: missing report explained", "did not produce a report" in lr.summary_markdown(missing))
 
 # --- BLOCKED_STATUSES, which exists twice -------------------------------------------
@@ -237,6 +263,31 @@ check("blocked statuses: link_second_pass.py still declares the set where we can
 check("blocked statuses: the two copies have not drifted",
       bool(_m) and {int(x) for x in _m.group(1).replace(" ", "").strip(",").split(",")}
       == set(lr.BLOCKED_STATUSES))
+
+# --- main(): dry run --------------------------------------------------------------
+# A manual run with send_report=false must build the report and never POST it. The
+# webhook URL points at a closed local port: a POST attempt would fail and return 1.
+import os
+import tempfile
+
+with tempfile.TemporaryDirectory() as tmp:
+    saved = dict(os.environ)
+    os.environ.update({
+        "REPORT": str(FIXTURE), "QUALITY_REPORT": str(Path(tmp) / "none.json"),
+        "PAYLOAD_OUT": str(Path(tmp) / "out" / "payload.json"), "DRY_RUN": "true",
+        "WEBHOOK_URL": "http://127.0.0.1:9/never", "EXIT_CODE": "2"})
+    os.environ.pop("GITHUB_STEP_SUMMARY", None)
+    try:
+        rc = lr.main()
+        written = json.loads((Path(tmp) / "out" / "payload.json").read_text(encoding="utf-8"))
+        check("dry run: exits 0 without posting", rc == 0)
+        check("dry run: writes the payload it would have sent",
+              written["totals"]["errors"] == payload["totals"]["errors"])
+        os.environ["DRY_RUN"] = "false"
+        check("dry run off: still tries to post (and fails on the closed port)", lr.main() == 1)
+    finally:
+        os.environ.clear()
+        os.environ.update(saved)
 
 # --- report ------------------------------------------------------------------------
 failed = [name for name, ok in checks if not ok]

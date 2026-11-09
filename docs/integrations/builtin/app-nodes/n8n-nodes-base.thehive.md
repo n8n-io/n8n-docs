@@ -55,5 +55,5 @@ n8n provides a trigger node for TheHive. Refer to the [TheHive Trigger node docu
 
 Refer to TheHive's documentation for more information about the service:
 
-* [Version 3](https://docs.thehive-project.org/thehive/legacy/thehive3/api/)
-* [Version 4](https://docs.thehive-project.org/cortex/api/api-guide/)
+* Version 3: The TheHive 3 API docs are no longer online. Refer to the [current TheHive API documentation](https://docs.strangebee.com/thehive/api-docs/).
+* [Version 4](https://docs.strangebee.com/cortex/api/api-guide/)

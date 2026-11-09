@@ -22,8 +22,6 @@ export N8N_USER_FOLDER=/home/jim/n8n
 ```
 Refer to [Environment variables reference](../use-environment-variables/deployment.md) for more information on this variable.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Related resources
 
 * [Configuration examples](./)

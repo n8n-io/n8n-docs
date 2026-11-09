@@ -30,8 +30,6 @@ The **Project Viewer** role is available on:
 
 Within projects, there are three user roles: Admin, Editor, and Viewer. These roles control what the user can do in a project. A user can have different roles within different projects.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Project Admin <a href="#project-admin" id="project-admin"></a>
 
 A Project Admin role has the highest level of permissions. Project admins can:
@@ -73,6 +71,8 @@ n8n has two levels of roles. [Instance roles](../understand-instance-roles.md) c
 | Manage project secret vaults | ✅* | ❌ | ❌ |
 
 \* Requires **Enable external secrets for project roles** to be enabled by an instance owner or admin. Refer to [Access for project roles](../../manage-credentials/use-external-secret-stores.md#access-for-project-roles). The **Enable external secrets for project roles** setting is available from n8n 2.13.0.
+
+Project roles apply to the credentials the project holds. A project role doesn't let you use another member's personal credential in a project workflow. Only the credential's owner, or people they share it with, can run or publish with it. Refer to [Use personal credentials in projects](../../manage-credentials/use-personal-credentials-in-projects.md).
 
 [Variables](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/code-in-n8n/define-custom-variables) and [tags](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/tag-workflows) aren't affected by RBAC: they're global across the n8n instance.
 

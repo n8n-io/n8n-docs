@@ -75,8 +75,6 @@ layout:
 
 If the string also contains other content, try using <code>extractEmail()</code> or <code>extractUrl()</code> first.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 **Syntax:** _`String`_.extractDomain()
 
 **Returns:** String

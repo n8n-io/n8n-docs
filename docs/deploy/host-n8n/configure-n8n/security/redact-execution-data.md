@@ -48,8 +48,6 @@ When you enable redaction, execution metadata (status, timing, node names) remai
 
 You can configure redaction per workflow, or [enforce it instance-wide](redact-execution-data.md#instance-level-enforcement) so that every workflow redacts execution data.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Why use execution data redaction <a href="#why-use-execution-data-redaction" id="why-use-execution-data-redaction"></a>
 
 Workflows often process data that the workflow builder or viewers shouldn't have access to outside of n8n. Common scenarios include:
@@ -92,7 +90,7 @@ There are two independent toggles that control redaction:
 
 Instance owners and admins can enforce redaction for all workflows on the instance instead of relying on each workflow's individual settings. Enforcement sets a minimum redaction policy (a "floor") that applies everywhere.
 
-To enable enforcement, navigate to **Settings** > **Security** and configure the **Data redaction** section. Refer to [Security settings](manage-security-policies.md#enforce-execution-data-redaction) for the step-by-step instructions.
+To enable enforcement, navigate to **Settings** > **Policies** and configure the **Data redaction** section. Refer to [Security settings](manage-security-policies.md#enforce-execution-data-redaction) for the step-by-step instructions.
 
 ### Enforcement scope <a href="#enforcement-scope" id="enforcement-scope"></a>
 

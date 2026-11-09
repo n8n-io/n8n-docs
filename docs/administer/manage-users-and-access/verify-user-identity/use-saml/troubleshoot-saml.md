@@ -28,8 +28,6 @@ n8n links each SAML identity to an n8n account by the `userPrincipalName` (`upn`
 
 n8n emits an `n8n.audit.user.login.emailConflict` audit event when a SAML login resolves to an existing user whose email differs from the asserted email. Stream it to catch this case. See [Log streaming](../../../observe-and-log/stream-logs-to-external-systems.md#events).
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Related resources
 
 * [Use SAML](./)

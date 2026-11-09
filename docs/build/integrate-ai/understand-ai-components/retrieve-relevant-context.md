@@ -24,8 +24,6 @@ layout:
 
 [Retrieval-Augmented Generation (RAG)](#user-content-fn-1)[^1] is a technique that improves AI responses by combining language models with external data sources. Instead of relying solely on the model's internal training data, RAG systems retrieve relevant documents to ground[^2] responses in up-to-date, domain-specific, or proprietary knowledge. RAG workflows typically rely on vector stores to manage and search this external data efficiently.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## What is a vector store? <a href="#what-is-a-vector-store" id="what-is-a-vector-store"></a>
 
 A [vector store](#user-content-fn-3)[^3] is a special database designed to store and search high-dimensional vectors: numerical representations of text, images, or other data. When you upload a document, the vector store splits it into chunks and converts each chunk into a vector using an [embedding model](#user-content-fn-4)[^4].

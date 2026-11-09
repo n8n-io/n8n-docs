@@ -30,8 +30,6 @@ Node type policies are available on:
 Node type policies are available from n8n 2.45.0.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 An instance owner or admin sets an instance policy. A project admin can then restrict their project further. You manage policies with the [n8n public API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/node-type-policy).
 
 ## How node type policies work
@@ -165,7 +163,7 @@ When a node is blocked in a project, users in that project see:
 - **Tool picker:** blocked nodes appear at the end of the list with a lock. Users can't add them. Chat Hub tools work the same way.
 - **Chat:** n8n refuses a call to a blocked tool and marks the step as restricted. The agent tells the user what it couldn't do.
 - **Save and publish:** n8n refuses to save an agent that adds a blocked tool, and refuses to publish an agent that uses one.
-- **AI builders:** the **Agent Builder** can suggest a blocked node. n8n then refuses the save. The same applies to n8n Assistant for Enterprise customers with preview access.
+- **AI builders:** the **Agent Builder** can suggest a blocked node. n8n then refuses the save. The same applies to n8n Assistant, which has Limited enterprise readiness.
 
 ## Workflows that already use a blocked node
 

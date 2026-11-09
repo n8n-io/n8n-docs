@@ -16,8 +16,6 @@ layout:
 
 Contains the unique ID of the current workflow execution.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 {% tabs %}
 {% tab title="JavaScript" %}
 ```js

@@ -30,12 +30,10 @@ Custom roles (instance and project) are available on:
 
 RBAC in n8n lets you control access at two levels:
 
-* **Instance roles**: determine what a user can do across the entire instance. Built-in instance roles are Owner, Admin, and Member. You can also create custom instance roles for more granular control. Refer to [Instance roles](../understand-instance-roles.md).
+* **Instance roles**: determine what a user can do across the entire instance. Built-in instance roles are Owner, Admin, Member, and Chat user. You can also create custom instance roles for more granular control. Refer to [Instance roles](../understand-instance-roles.md).
 * **Project roles**: determine what a user can do within a specific project. You group workflows and credentials into projects, and a user can have different project roles in different projects. Refer to [See available roles](see-available-roles.md).
 
 This section provides guidance on setting up and using RBAC in n8n.
-
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
 
 ## In this section
 

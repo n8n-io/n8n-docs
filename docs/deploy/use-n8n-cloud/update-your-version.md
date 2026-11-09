@@ -45,8 +45,6 @@ When you change a setting, a bar appears at the bottom of the page with the numb
 
 Select **Discard all** to undo your unsaved changes.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## n8n version
 
 The **n8n version** dropdown sets the version your instance runs. To compare versions before you change, select **Open changelog**.

@@ -36,7 +36,7 @@ In [queue mode](../configure-n8n/scaling/enable-queue-mode.md), main processes, 
 ### Before you update an instance in queue mode
 
 * Take a [full backup](backup-and-restore.md), including the database and the encryption key. If n8n can't revert a migration that the update applies, you need this backup to return to the previous version.
-* Note the newest migration in the `migrations` table of your database, so you know where to stop if you roll back. If you set `DB_TABLE_PREFIX`, the table name starts with that prefix. For example, run `SELECT name FROM migrations ORDER BY id DESC LIMIT 1;`.
+* Note the newest migration in the `migrations` table of your database, so you know where to stop if you roll back. For example, with no table prefix, run `SELECT name FROM migrations ORDER BY id DESC LIMIT 1;`. If you set `DB_TABLE_PREFIX`, replace `migrations` with the prefixed table name.
 * Read the [release notes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/release-notes) for every version after your current one, up to and including the target version.
 * If you deploy with the [n8n Helm chart](https://github.com/n8n-io/n8n-hosting/tree/main/charts/n8n), check whether the target n8n version needs a newer chart version. The chart has its own version number, separate from the n8n version it deploys.
 
@@ -66,6 +66,7 @@ Changing the image tag or Helm release back to the older version doesn't reverse
 		1. Keep every other n8n process stopped. Run `n8n db:revert` with the newer n8n version and your existing database configuration, for example as a one-off container from the newer image. Each run reverts only the most recent migration.
 		2. Check the output of the command:
 			* If the output starts with `Cancelled command`, or says n8n couldn't find the migration's code, n8n didn't revert the migration. `n8n db:revert` exits with status 0 in these cases, so you can't rely on the exit status.
+			* If the output shows `Error reverting last migration`, the command failed and exits with a non-zero status. Fix the error before you repeat the step.
 			* Otherwise, n8n reverted one migration.
 		3. Check the `migrations` table in your database. It lists the migrations n8n has run. If you set `DB_TABLE_PREFIX`, the table name starts with that prefix.
 		4. Repeat steps 1 to 3 until the newest migration in the table is the one you noted before updating.

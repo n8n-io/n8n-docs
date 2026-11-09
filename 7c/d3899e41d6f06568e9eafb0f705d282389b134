@@ -1,0 +1,23 @@
+docs/build/manage-workflows/n8n-packages/README.md
+  s_481a47571961f9::t_73af229d650f5e 32,48,67
+docs/build/manage-workflows/n8n-packages/how-import-works.md
+  s_481a47571961f9::t_73af229d650f5e 103,105,167,218,233-235,239
+docs/build/manage-workflows/n8n-packages/limits-and-permissions.md
+  s_481a47571961f9::t_73af229d650f5e 76,93-96,111,117
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "7cd3899e41d6f06568e9eafb0f705d282389b134",
+  "prompts": {},
+  "sessions": {
+    "s_481a47571961f9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "febba625-4573-4933-b74b-d2ec2e270f37",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jan K. <jan.kalkan@n8n.io>"
+    }
+  }
+}

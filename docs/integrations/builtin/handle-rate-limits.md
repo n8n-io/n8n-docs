@@ -81,7 +81,7 @@ Use the Batching option to control how many requests the node sends before pausi
 
 1. In the HTTP Request node, select **Add Option** > **Batching**.
 2. Set **Items per Batch** to the number of input items to process in each batch. Each input item generates a separate HTTP request.
-3. Set **Batch Interval (ms)** to introduce a delay between batches. For example, set **Batch Interval (ms)** to `1000` to wait one second between batches.
+3. Set **Batch Interval (ms)** to introduce a delay between batches. For example, set **Batch Interval (ms)** to `1000` to wait 1 second between batches.
 
 ### Paginate results <a href="#paginate-results" id="paginate-results"></a>
 

@@ -1,0 +1,19 @@
+docs/changelog/release-notes.md
+  s_7bb689d09afa62::t_618452082bce24 53,186
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "63bf60eff088afe54e7c7ff67428a155f90ed99f",
+  "prompts": {},
+  "sessions": {
+    "s_7bb689d09afa62": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ba522aff-a196-4ca1-9cba-fa30c8d14a08",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Csaba Tuncsik <csaba.tuncsik@gmail.com>"
+    }
+  }
+}

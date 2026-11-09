@@ -1,0 +1,21 @@
+docs/connect/connect-to-n8n-mcp-server/mcp-server-tools-reference.md
+  s_3046727174c737::t_75533f750aaf7d 1919-1920
+  s_3046727174c737::t_eaca40dd4cfc31 1929,1931-1942,1944
+  s_3046727174c737::t_9f41637ee0d43a 1902,1912,1924,1946,1954,1964,1972,1976
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "65c6311376d8dee9b710b69c7bf5becce53c33f9",
+  "prompts": {},
+  "sessions": {
+    "s_3046727174c737": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "557ebda1-e517-4b90-8c61-cb252c85fe53",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Svetoslav Dekov <svetoslav.dekov@n8n.io>"
+    }
+  }
+}

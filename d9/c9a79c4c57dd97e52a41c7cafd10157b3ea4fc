@@ -1,0 +1,19 @@
+docs/connect/n8n-api/idempotency.md
+  s_ea0081d262e97d::t_a786f17b2b977f 51
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d9c9a79c4c57dd97e52a41c7cafd10157b3ea4fc",
+  "prompts": {},
+  "sessions": {
+    "s_ea0081d262e97d": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "f67764db-72f2-4bb7-9042-d3da1e1789cf",
+        "model": "grok-4.7"
+      },
+      "human_author": "Ali Elkhateeb <ali.elkhateeb@n8n.io>"
+    }
+  }
+}

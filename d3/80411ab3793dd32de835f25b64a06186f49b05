@@ -1,0 +1,35 @@
+docs/administer/manage-credentials/share-credentials-securely.md
+  s_93cde57f292ab5::t_233dc460caf4ad 70
+  s_93cde57f292ab5::t_633397a5f3db2d 72
+  s_93cde57f292ab5::t_73f78f1464aeee 77
+docs/administer/manage-users-and-access/set-permissions-and-roles-rbac/organize-work-in-projects.md
+  s_93cde57f292ab5::t_23593e696a3266 110
+  s_93cde57f292ab5::t_5e8ecfeb816497 114
+  s_93cde57f292ab5::t_ce6050ce570999 112
+docs/administer/manage-credentials/use-personal-credentials-in-projects.md
+  s_93cde57f292ab5::t_3d75ecaad345fc 13
+  s_93cde57f292ab5::t_511599019ffb20 32
+  s_93cde57f292ab5::t_05b5a2ab5ed411 43,45
+  s_93cde57f292ab5::t_891314407df2a5 47
+  s_93cde57f292ab5::t_7a04b2a2925cfa 88-89
+  s_93cde57f292ab5::t_cd04d67a858ebe 70
+  s_93cde57f292ab5::t_94972c375c3995 46
+docs/changelog/README.md
+  s_93cde57f292ab5::t_d0db1473ae41c9 49
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d380411ab3793dd32de835f25b64a06186f49b05",
+  "prompts": {},
+  "sessions": {
+    "s_93cde57f292ab5": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "a6177927-a004-4f7d-8a00-181a8df87c7c",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Yuliia Pominchuk <yuliia.pominchuk@n8n.io>"
+    }
+  }
+}

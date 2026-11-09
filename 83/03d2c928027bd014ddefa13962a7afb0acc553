@@ -1,0 +1,25 @@
+docs/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.databricksaiagent.md
+  s_f0eb65f622ecc1::t_a7e73d81698796 75
+  s_f0eb65f622ecc1::t_ff1c96b9d7dd43 40
+  s_f0eb65f622ecc1::t_36d80a4dab7a20 92
+  s_f0eb65f622ecc1::t_663c654d13516e 87
+docs/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoredatabricks/README.md
+  s_f0eb65f622ecc1::t_df31ca09b4409f 194
+  s_f0eb65f622ecc1::t_5e954edbd07055 143
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "8303d2c928027bd014ddefa13962a7afb0acc553",
+  "prompts": {},
+  "sessions": {
+    "s_f0eb65f622ecc1": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e872a7ba-8ecf-4689-aed8-d0f9a3201d0c",
+        "model": "claude-fable-5-1"
+      },
+      "human_author": "Csaba Tuncsik <csaba.tuncsik@gmail.com>"
+    }
+  }
+}

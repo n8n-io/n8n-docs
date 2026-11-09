@@ -1,0 +1,21 @@
+skills/n8n-docs-author/SKILL.md
+  s_ea0081d262e97d::t_8768087a4ce660 4-7
+  s_ea0081d262e97d::t_5b5300d7f5d9c8 28-29,31-35
+  s_ea0081d262e97d::t_b998c4b97e332d 30
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "6b0363d3ccf8123df22119e073e191539022210a",
+  "prompts": {},
+  "sessions": {
+    "s_ea0081d262e97d": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "f67764db-72f2-4bb7-9042-d3da1e1789cf",
+        "model": "grok-4.7"
+      },
+      "human_author": null
+    }
+  }
+}

@@ -1,0 +1,19 @@
+docs/integrations/builtin/core-nodes/n8n-nodes-base.webhook/README.md
+  s_8284db9a525a57::t_9e99d9ccfebcc6 121
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f78a6559afd44ffb6e0ffc898762ef611595302f",
+  "prompts": {},
+  "sessions": {
+    "s_8284db9a525a57": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_8284db9a525a57",
+        "model": "unknown"
+      },
+      "human_author": "Phyllis Noester <phyllis.noester@n8n.io>"
+    }
+  }
+}

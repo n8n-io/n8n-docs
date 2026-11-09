@@ -187,10 +187,9 @@ Directory names are for humans reading the archive. n8n identifies entities by t
 
 The manifest is an index. It tells n8n what's in the package and what the target instance has to supply, so an import can fail fast without reading every file.
 
-These four fields are always present:
+These three fields are always present:
 
 * `packageFormatVersion`: the version of the package format, currently the string `"1"`.
-* `exportedAt`: when n8n created the package, as an ISO 8601 timestamp.
 * `sourceN8nVersion`: the n8n version that created the package.
 * `sourceId`: an identifier for the instance that created the package.
 
@@ -221,7 +220,6 @@ A full manifest for a workflow package holding two workflows:
 ```json
 {
 	"packageFormatVersion": "1",
-	"exportedAt": "2026-08-04T09:14:02.117Z",
 	"sourceN8nVersion": "2.34.0",
 	"sourceId": "f9e1e962bba26edf357042c12f367dab17f4c63ec368e1f39cbf7ce43c8b9f8b",
 
@@ -303,9 +301,7 @@ The exception is data table column IDs. From n8n 2.44.0, an exported data table 
 
 ## Comparing packages in a pipeline
 
-The archive is deterministic: file timestamps are fixed at the Unix epoch, permissions are fixed, and gzip runs in portable mode. Two exports of identical content produce identical bytes in the container.
-
-The one exception is `manifest.json`, which carries a fresh `exportedAt` on every export. Two exports of unchanged content aren't byte-identical because of that field alone. If you checksum packages to detect change in a pipeline, exclude `exportedAt` from the comparison, or you'll see drift on every run.
+The archive is deterministic: file timestamps are fixed at the Unix epoch, permissions are fixed, and gzip runs in portable mode. Two exports of identical content from the same instance and n8n version produce identical bytes, so you can checksum packages to detect change in a pipeline.
 
 ## Read next
 

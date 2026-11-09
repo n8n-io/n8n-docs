@@ -197,8 +197,7 @@ A successful import returns `200` with a summary of what it did:
 {
 	"package": {
 		"sourceN8nVersion": "2.34.0",
-		"sourceId": "f9e1e962bba26edf357042c12f367dab17f4c63ec368e1f39cbf7ce43c8b9f8b",
-		"exportedAt": "2026-08-04T09:14:02.117Z"
+		"sourceId": "f9e1e962bba26edf357042c12f367dab17f4c63ec368e1f39cbf7ce43c8b9f8b"
 	},
 	"agents": [],
 	"counts": { "agents": { "created": 0, "updated": 0, "skipped": 0 } },
@@ -226,7 +225,7 @@ A successful import returns `200` with a summary of what it did:
 
 | Key | What it holds |
 |-----|---------------|
-| `package` | The source instance's n8n version, instance ID, and export timestamp, copied from the manifest |
+| `package` | The source instance's n8n version and instance ID, copied from the manifest |
 | `agents` | One row per agent. Empty for a package without agents. See [The import response](export-and-import-agents.md#the-import-response) for agents |
 | `counts` | The number of agents `created`, `updated`, and `skipped` |
 | `workflows` | One row per workflow, with its `status` of `created`, `updated`, or `skipped`, and its `publishing` outcome |

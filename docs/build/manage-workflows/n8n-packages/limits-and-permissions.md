@@ -92,6 +92,8 @@ Both endpoints authenticate with an API key, and the import is attributed to tha
 | `folder:create` and `folder:update` | The package contains folders |
 | `workflow:delete` | The import archives or restores an existing workflow, or `--folder-conflict-policy` is `overwrite` |
 | `folder:delete` | `--folder-conflict-policy` is `overwrite` |
+| `workflow:activate` | The import actually publishes a workflow, including a republish under the default `--publishing-policy=preserve-published-state` |
+| `workflow:deactivate` | The import actually unpublishes a workflow under `--publishing-policy=match-source` or `unpublish-all` |
 | `project:create` and `project:update` | The package is a project package, whether or not it creates a project |
 | `credential:create` | The import actually creates a credential under `--credential-missing-mode=create-with-values` |
 | `credential:update` | The import actually changes a credential under `--credential-conflict-policy=overwrite` |
@@ -104,9 +106,9 @@ Both endpoints authenticate with an API key, and the import is attributed to tha
 
 An import with agents also needs agent and skill scopes, depending on what it creates, updates, and publishes. See [Permissions for import](export-and-import-agents.md#permissions-for-import).
 
-The credential scopes, `dataTable:update`, and the variable and tag scopes are judged from what the import will really write, so a package that references tags or variables which all already match needs neither scope. The rest are judged from what the package declares, which means `dataTable:create` is required even when every referenced table already exists.
+The publishing scopes, the credential scopes, `dataTable:update`, and the variable and tag scopes are judged from what the import will really write, so a package that references tags or variables which all already match needs neither scope. The rest are judged from what the package declares, which means `dataTable:create` is required even when every referenced table already exists.
 
-A member-role API key can't import a project package, can't import a package containing folders, and can't create or overwrite variables: `project:create`, `project:update`, `folder:create`, `folder:update`, `variable:create`, and `variable:update` are owner and admin scopes. Members can hold `workflow:export`, `workflow:import`, `project:export`, `variable:list`, `credential:create`, `credential:update`, `dataTable:create`, `dataTable:update`, `tag:create`, and `tag:update`, so a member can bundle variable values on export.
+A member-role API key can't import a project package, because `project:create` and `project:update` are owner and admin scopes. Members can hold every other scope in these tables.
 
 API key scopes are checked on top of your own permissions, not instead of them. On export you can only take what you can read, so n8n checks your access to each workflow, folder, project, and credential. On import it checks your permission to write to the target project. A credential you can't read is recorded as a requirement rather than bundled, so a partial view of an instance produces a package that says plainly what the target has to supply.
 

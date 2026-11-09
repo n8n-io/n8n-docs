@@ -194,7 +194,7 @@ Configure this operation with these parameters:
   * `connections`
   * `settings`
 
-Refer to the [n8n API | Update a workflow documentation](https://docs.n8n.io/api/api-reference/#tag/Workflow/paths/~1workflows~1%7Bid%7D/put) for more information.
+Refer to the [n8n API | Update a workflow documentation](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/build-and-run/workflows) for more information.
 
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 

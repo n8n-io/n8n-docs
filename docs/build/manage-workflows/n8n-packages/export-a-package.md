@@ -79,6 +79,7 @@ An empty project exports as project metadata only, with no `workflows` list in t
 | `--output`, `-o` | File to write the package to. Defaults to `export.n8np` in the current directory. |
 | `--include-variable-values` | `true` (default) or `false`. Whether variable values are bundled. See [Variable values](#variable-values). |
 | `--include-tags` | `true` (default) or `false`. Whether the tags on the exported workflows are bundled. |
+| `--credential-export-policy` | `expression-values-only` (default) or `no-values`. Whether credential fields set by an expression are bundled. See [Credential values](#credential-values). |
 | `--dependency-policy` | `fail` (default), `include-in-package`, or `reference-only`. How n8n handles a workflow or agent the package depends on that you didn't name, such as a sub-workflow, an error workflow, or a sub-agent. See [Workflow dependencies](#workflow-dependencies). |
 
 {% hint style="info" %}
@@ -132,6 +133,12 @@ Bundling values needs the `variable:list` API key scope, but only when the expor
 n8n finds variable references by scanning node parameters and workflow settings for `$vars.NAME`, `$vars['NAME']`, and `$vars["NAME"]`.
 
 An export is blocked when one variable name would resolve to two different variables in the same package, because the package can only carry one of them.
+
+## Credential values
+
+By default, a bundled credential carries the fields whose value is an n8n expression, such as `={{ $secrets.apiKey }}`. Literal values never travel, and neither do OAuth tokens. With `--credential-export-policy=no-values`, each credential file holds only the credential's ID, name, and type.
+
+Expression values let the target instance create a working credential that reads its secrets from its own store. To use them, import with `--credential-missing-mode=create-with-values`. See [Credentials](how-import-works.md#credentials).
 
 ## Tags
 

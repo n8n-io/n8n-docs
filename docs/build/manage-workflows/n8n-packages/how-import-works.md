@@ -64,11 +64,11 @@ Two things aren't rewritten. A reference set by an expression is left untouched,
 
 ## Credentials
 
-No credential data travels in a package, so every credential reference has to be resolved against the target instance. n8n resolves each one in this order:
+A package carries at most a credential's [expression values](export-a-package.md#credential-values), never its secrets, so every credential reference has to be resolved against the target instance. n8n resolves each one in this order:
 
 1. An explicit [binding](import-a-package.md#bindings), if you gave one for that credential.
 2. Otherwise, the `--credential-matching-mode` rules.
-3. Otherwise, `--credential-missing-mode` decides whether to create an empty placeholder or refuse the import.
+3. Otherwise, `--credential-missing-mode` decides whether to create an empty placeholder, create the credential from the package's expression values, or refuse the import.
 
 Whichever route it takes, n8n checks the type. A credential of the wrong type refuses the import, and tells you both the type the node needs and the type the credential actually is. That applies to explicit bindings too.
 
@@ -94,7 +94,17 @@ Under the default `--credential-missing-mode=create-stub`, a reference n8n can't
 
 A workflow using a placeholder credential is never published, whatever the publishing policy says. Fill in the credential, then publish the workflow.
 
+Under `--credential-missing-mode=create-with-values`, n8n creates the credential from the expression values bundled in the package instead. A credential the package carries no values for still becomes an empty placeholder. When the package confirms it carries all the source credential's data, n8n lists the credential under `credentials.seeded`. Otherwise, it lists it under `credentials.incomplete`, and the workflows using it aren't published until you fill it in.
+
 Some credential problems refuse the import even under `create-stub`, because a placeholder wouldn't help: a credential type the instance doesn't have installed, a binding pointing at a credential of the wrong type, and a binding for a credential the package doesn't declare.
+
+### Existing credentials
+
+By default, n8n never changes a credential it matched. With `--credential-conflict-policy=overwrite`, it writes the package's name and expression values to the matched credential, and keeps every other stored value, including secrets and the OAuth connection. It lists the credential under `credentials.updated`. With `fail`, n8n refuses the import when `overwrite` would change a credential.
+
+`overwrite` only changes credentials owned by a project the import writes to: the target project, or every project in a project package. Any other matched credential, such as a shared or global one, is used as it is. Managed credentials, credentials resolved per end user, and instance-level credentials never change.
+
+Under `overwrite` and `fail`, you need permission to update every matched credential the import could change, even when its values are the same, because n8n compares the stored values. To reuse such a credential without that permission, use `keep-existing`. Every policy leaves a credential alone when the package's values match.
 
 ## Variables
 
@@ -174,7 +184,7 @@ Every workflow in the response carries a `publishing.state`:
 | `blocked` | n8n refused to publish it. `blockedReason` says why |
 | `failed` | Publishing was attempted and failed. `error` says why |
 
-`blockedReason` is either `stub-credential` or `missing-node-type`. A workflow blocked for both reports `missing-node-type`, because that one means it physically can't run.
+`blockedReason` is `stub-credential`, `incomplete-credential`, or `missing-node-type`. A workflow blocked for a credential and a missing node type reports `missing-node-type`, because that one means it physically can't run.
 
 `blocked` means nothing is live. If the workflow already had a published version and the new one can't be published, you get `unchanged` with a `skippedPublishReason` instead, and the older version keeps serving traffic. So "never published" refers to the version you just imported, not to the workflow.
 
@@ -188,7 +198,7 @@ n8n only compares paths it can read literally: the node has to be enabled, and i
 
 ## Why an import is refused
 
-There are 12 reasons an import can be blocked. Each appears in the `issues` array with a `type`, and some carry a `kind` narrowing it further:
+Each reason an import can be blocked appears in the `issues` array with a `type`, and some carry a `kind` narrowing it further:
 
 | Type | Kinds | What it means |
 |------|-------|---------------|
@@ -198,6 +208,9 @@ There are 12 reasons an import can be blocked. Each appears in the `issues` arra
 | `project-conflict` | `fail-policy` | The project exists and `--project-conflict-policy` is `fail` |
 | `folder-conflict` | `parent-mismatch`, `id-in-other-project`, `fail-policy` | The first two refuse whatever the policy |
 | `credential-unresolved` | `not_found`, `unknown_type`, `source_not_found`, `type_mismatch` | Only `not_found` can be resolved by a placeholder credential |
+| `credential-conflict` | `differs`, `divergent` | `differs`: the package would change a matched credential and `--credential-conflict-policy` is `fail`. `divergent`: under `overwrite`, two package credentials with different names or values match the same credential |
+| `credential-update-forbidden` | | Under `--credential-conflict-policy=overwrite` or `fail`, you don't have permission to update a matched credential |
+| `credential-policy-violation` | | An instance policy refuses a credential the import would create or update, such as a credential type the instance doesn't allow |
 | `data-table-unresolved` | `missing`, `id-conflict`, `name-conflict`, `schema-incompatible`, `module-disabled`, `permission-denied` | Under `overwrite-non-destructive`, `schema-incompatible` means a change would remove or retype a column, and lists those columns |
 | `tag-unresolved` | `rename-drift`, `name-collision`, `invalid-name`, `invalid-id`, `permission-denied` | |
 | `variable-unresolved` | | A referenced variable doesn't resolve and `--variable-missing-mode` is `must-preexist` |
@@ -205,7 +218,7 @@ There are 12 reasons an import can be blocked. Each appears in the `issues` arra
 | `variable-limit-exceeded` | | The new variables would exceed the instance's variable limit |
 | `missing-node-type` | | A workflow uses a node type or version the instance doesn't have, under `--missing-node-type-mode=fail` |
 
-The HTTP status depends on the kind of problem. The response is a `409` if any issue is conflict-shaped: a workflow, project, folder, or variable conflict, a data table ID or name conflict, or tag rename drift or name collision. Everything else is a `422`. A mixed set containing one conflict returns `409` for the whole response.
+The HTTP status depends on the kind of problem. The response is a `409` if any issue is conflict-shaped: a workflow, project, folder, credential, or variable conflict, a data table ID or name conflict, or tag rename drift or name collision. Everything else is a `422`. A mixed set containing one conflict returns `409` for the whole response.
 
 Some failures are reported on their own rather than batched with the rest, because they stop n8n before it can plan: a missing license feature, a missing API key scope, and a malformed package.
 

@@ -203,7 +203,7 @@ Last comes `requirements`, which lists what the workflows and agents need to run
 
 | Section | Entry shape | Notes |
 |---------|-------------|-------|
-| `credentials` | `{ id, name, type, usedBy }` | n8n never exports credential data, so a credential requirement always means the target has to supply it |
+| `credentials` | `{ id, name, type, usedBy }` | A bundled credential carries at most its [expression values](export-a-package.md#credential-values), so the target has to supply the credential unless the import creates it from those values |
 | `dataTables` | `{ id, name, usedBy }` | The schema itself is in the bundled `data-table.json` |
 | `workflows` | `{ id, name, usedBy }` | Sub-workflow and error workflow references, and workflows an agent uses as tools. `name` is optional, because a referenced workflow may not be one the exporting user can see |
 | `agents` | `{ id, name, usedBy }` | Sub-agents an agent uses. `name` is optional, for the same reason |

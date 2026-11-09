@@ -89,7 +89,7 @@ n8n always writes imported workflows unpublished, then applies the publishing po
 | `publish-all` | Publish every imported workflow. Needs `workflow:publish` on the target project. |
 | `unpublish-all` | New workflows stay drafts, and updated workflows are unpublished. |
 
-Two things override the policy. A workflow that uses a placeholder credential is never published, and neither is one using a node type the instance doesn't have. n8n reports those as `blocked` with the reason. An archived workflow is never published either.
+Two things override the policy. A workflow that uses a placeholder or incomplete credential is never published, and neither is one using a node type the instance doesn't have. n8n reports those as `blocked` with the reason. An archived workflow is never published either.
 
 Agents follow the same policy, and a channel that still needs setup also stops an agent from being published. See [Publishing](export-and-import-agents.md#publishing) for agents.
 
@@ -113,7 +113,8 @@ A package containing folders needs a license that supports folders.
 | Flag | Values | Description |
 |------|--------|-------------|
 | `--credential-matching-mode` | `id-only` (default), `name-and-type`, `type-only` | How n8n finds the target credential for a reference in the package. |
-| `--credential-missing-mode` | `create-stub` (default), `must-preexist` | What to do when a reference can't be resolved. `create-stub` creates an empty placeholder credential in the target project, and the workflow imports but can't be published. `must-preexist` refuses the import. |
+| `--credential-missing-mode` | `create-stub` (default), `create-with-values`, `must-preexist` | What to do when a reference can't be resolved. `create-stub` creates an empty placeholder credential in the target project, and the workflow imports but can't be published. `create-with-values` creates the credential from the [expression values](export-a-package.md#credential-values) bundled in the package. `must-preexist` refuses the import. |
+| `--credential-conflict-policy` | `keep-existing` (default), `overwrite`, `fail` | What to do when a reference matches an existing credential and the package has a different name or different values for it. `keep-existing` leaves the credential alone. `overwrite` writes the package's name and expression values to it. `fail` refuses the import. |
 
 In every mode, n8n only considers credentials you can read and that the target project can use, plus global credentials. A credential you can't read is never a candidate, including under `id-only`, which is the usual reason a matching ID doesn't match.
 
@@ -216,7 +217,7 @@ A successful import returns `200` with a summary of what it did:
 		"workflows": { "wf7Kq2": "wf7Kq2", "wf9Zx1": "wf9Zx1" },
 		"credentials": { "crLin44": "crLin44" }
 	},
-	"credentials": { "matched": ["crLin44"], "stubbed": [] },
+	"credentials": { "matched": ["crLin44"], "stubbed": [], "seeded": [], "incomplete": [], "updated": [] },
 	"dataTables": { "matched": 0, "created": 1, "updated": 0 },
 	"variables": { "matched": [], "missing": [], "created": ["slackChannelId"], "stubbed": [], "updated": [] },
 	"tags": { "matched": [], "created": ["prod"], "renamed": [], "reconciled": [], "skipped": [] }
@@ -232,7 +233,7 @@ A successful import returns `200` with a summary of what it did:
 | `folders` | One row per folder, with a `status` of `created` or `skipped` |
 | `projects` | One row per project, with a `status` of `created`, `updated`, or `skipped`. Empty for workflow and folder packages |
 | `bindings` | Source ID to target ID maps for workflows, agents, and credentials. Only the `credentials` map can be passed back on a later import |
-| `credentials` | Source credential IDs, split into `matched` and `stubbed` |
+| `credentials` | Source credential IDs, split into `matched`, `stubbed`, `seeded`, `incomplete`, and `updated` |
 | `dataTables` | The number of data tables `matched`, `created`, and `updated`. `updated` counts tables changed under `overwrite` or `overwrite-non-destructive` |
 | `variables` | Variable names, split into `matched`, `missing`, `created`, `stubbed`, and `updated`. Values never appear |
 | `tags` | Tag names, split into `matched`, `created`, `renamed`, `reconciled`, and `skipped` |

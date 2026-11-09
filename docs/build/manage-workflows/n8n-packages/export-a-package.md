@@ -155,7 +155,7 @@ An export is blocked when one variable name would resolve to two different varia
 
 ## Credential values
 
-By default, a bundled credential carries the fields whose value is an n8n expression, such as `={{ $secrets.apiKey }}`. Literal values never travel, and neither do OAuth tokens. With `--credential-export-policy=no-values`, each credential file holds only the credential's ID, name, and type.
+By default, a bundled credential carries the fields whose value is an n8n expression, such as `={{ $secrets.apiKey }}`. It also carries a toggle or option, such as an SSL mode or an auth type, when that setting decides whether one of those fields shows, so the field stays visible on the target. No other value typed in directly travels, and neither do OAuth tokens. With `--credential-export-policy=no-values`, each credential file holds only the credential's ID, name, and type.
 
 Expression values let the target instance create a working credential that reads its secrets from its own store. To use them, import with `--credential-missing-mode=create-with-values`. See [Credentials](how-import-works.md#credentials).
 

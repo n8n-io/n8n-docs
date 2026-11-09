@@ -76,7 +76,7 @@ There's no `--force` and no `--dry-run`.
 
 n8n matches a package workflow to an existing one by the source workflow ID recorded on the target, falling back to a target workflow whose own ID equals the package's ID. That's what makes repeated promotion converge: the second import updates the workflow rather than creating a duplicate.
 
-These options apply to agents too. For how n8n matches agents, and what happens to their skills and channels, see [Export and import agents](export-and-import-agents.md).
+These options apply to agents too.
 
 ### Publishing
 
@@ -91,7 +91,7 @@ n8n always writes imported workflows unpublished, then applies the publishing po
 
 Two things override the policy. A workflow that uses a placeholder or incomplete credential is never published, and neither is one using a node type the instance doesn't have. n8n reports those as `blocked` with the reason. An archived workflow is never published either.
 
-Agents follow the same policy, and a channel that still needs setup also stops an agent from being published. See [Publishing](export-and-import-agents.md#publishing) for agents.
+Agents follow the same policy, and a channel that still needs setup also stops an agent from being published.
 
 Publishing can also fail without failing the import, most often when two workflows want the same webhook path. See [Publishing outcomes](how-import-works.md#publishing-outcomes).
 
@@ -272,7 +272,7 @@ A successful import returns `200` with a summary of what it did:
 | Key | What it holds |
 |-----|---------------|
 | `package` | The source instance's n8n version and instance ID, copied from the manifest |
-| `agents` | One row per agent. Empty for a package without agents. See [The import response](export-and-import-agents.md#the-import-response) for agents |
+| `agents` | One row per agent. Empty for a package without agents. |
 | `counts` | The number of agents `created`, `updated`, and `skipped` |
 | `workflows` | One row per workflow, with its `status` of `created`, `updated`, or `skipped`, whether it's archived, and its `publishing` outcome |
 | `removedWorkflows` | Workflows that `--folder-conflict-policy=overwrite` removed, each with a `deletion` of `archived` or `deleted`. A `hard-delete` n8n can't finish yet reports `archived` |
@@ -347,6 +347,5 @@ A refused import emits no success event. Log streaming events carry IDs but no c
 * [n8n packages](./)
 * [Package format](package-format.md)
 * [Export a package](export-a-package.md)
-* [Export and import agents](export-and-import-agents.md)
 * [How import works](how-import-works.md)
 * [Limits and permissions](limits-and-permissions.md)

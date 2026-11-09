@@ -104,7 +104,7 @@ Both endpoints authenticate with an API key, and the import is attributed to tha
 | `tag:create` | The import actually creates a tag |
 | `tag:update` | The import actually renames or reconciles a tag |
 
-An import with agents also needs agent and skill scopes, depending on what it creates, updates, and publishes. See [Permissions for import](export-and-import-agents.md#permissions-for-import).
+An import with agents also needs agent and skill scopes, depending on what it creates, updates, and publishes.
 
 The same scopes apply when you [import a selection from a project package](import-a-package.md#import-a-selection-from-a-project-package).
 
@@ -148,5 +148,4 @@ For what each event's payload holds, see [Events](export-a-package.md#events) on
 * [Package format](package-format.md)
 * [Export a package](export-a-package.md)
 * [Import a package](import-a-package.md)
-* [Export and import agents](export-and-import-agents.md)
 * [How import works](how-import-works.md)

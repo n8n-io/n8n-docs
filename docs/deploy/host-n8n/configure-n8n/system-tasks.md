@@ -12,8 +12,6 @@ System tasks are the recurring maintenance jobs n8n runs on itself: pruning old 
 
 This page explains how system tasks run and which Prometheus metrics they expose, so you can tell that they still run, and how well.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## How system tasks run
 
 Each system task has its own cadence, either a fixed interval or a cron schedule, and runs in one of three modes. The `mode` label on the metrics below tells you which one:

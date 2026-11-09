@@ -141,6 +141,24 @@ The endpoint scheme controls TLS for both protocols. `https://` turns TLS on and
 
 To trust a custom certificate authority, or to present a client certificate for mutual TLS (mTLS), use the upstream OpenTelemetry variables `OTEL_EXPORTER_OTLP_CERTIFICATE`, `OTEL_EXPORTER_OTLP_CLIENT_KEY`, and `OTEL_EXPORTER_OTLP_CLIENT_CERTIFICATE`. For the `http/protobuf` protocol, `NODE_EXTRA_CA_CERTS` also works. n8n has no setting of its own for certificates.
 
+### Proxy
+
+{% hint style="info" %}
+**Feature availability**
+
+Trace export through a proxy with the `http/protobuf` protocol is available from n8n 2.48.0.
+{% endhint %}
+
+With the `http/protobuf` protocol, n8n sends trace exports through the proxy in `HTTP_PROXY`, `HTTPS_PROXY`, or `ALL_PROXY`, like its other outbound traffic. Refer to [Deployment environment variables](../configure-n8n/basic-configuration/use-environment-variables/deployment.md) for these variables. The certificate variables from [TLS](#tls) still apply.
+
+If your collector runs inside your network, for example as a sidecar or in the same cluster, and the proxy can't reach it, add the collector host to `NO_PROXY`. n8n doesn't skip the proxy for any host on its own, including `localhost`:
+
+```bash
+export NO_PROXY=otel-collector,localhost
+```
+
+The `grpc` protocol uses the proxy support of the gRPC library instead. It reads only the lowercase variables: `grpc_proxy`, `https_proxy`, `http_proxy`, `no_grpc_proxy`, and `no_proxy`.
+
 ### gRPC behavior
 
 The `grpc` protocol differs from `http/protobuf` in these ways:
@@ -542,6 +560,7 @@ Check that:
 - `N8N_OTEL_ENABLED` is set to `true`.
 - `N8N_OTEL_EXPORTER_OTLP_ENDPOINT` points at the base URL of the collector (not the `/v1/traces` path).
 - The collector is reachable from the n8n container or host.
+- If you set proxy variables, the proxy can reach the collector, or the collector host is in `NO_PROXY`. Refer to [Proxy](#proxy).
 - Any required `N8N_OTEL_EXPORTER_OTLP_HEADERS` (such as authentication tokens) are set.
 
 If you use the `grpc` protocol, also check that the endpoint includes an explicit port. Without one, n8n connects to port 443, not 4317.

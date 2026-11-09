@@ -42,23 +42,30 @@ Exporting by workflow ID gives you loose workflows, with everything they depend 
 triage.n8np
 ├── manifest.json
 ├── workflows/
-│   ├── triage-inbound/
-│   │   └── workflow.json
-│   └── send-email/
-│       └── workflow.json
+│   ├── triage-inbound-wf7Kq2/
+│   │   ├── workflow.json
+│   │   └── workflow-metadata.json
+│   └── send-email-wf9Zx1/
+│       ├── workflow.json
+│       └── workflow-metadata.json
 ├── credentials/
-│   └── linear-api/
+│   └── linear-api-crLin44/
 │       └── credential.json
 ├── variables/
-│   └── slackchannelid/
+│   └── slackchannelid-vaSl03/
 │       └── variable.json
 ├── data-tables/
-│   └── countries/
+│   └── countries-dtCn12/
 │       └── data-table.json
 └── tags/
-    └── prod/
+    └── prod-tgPr01/
         └── tag.json
 ```
+
+Each workflow directory holds two files:
+
+* `workflow.json`: the workflow itself.
+* `workflow-metadata.json`: the ID of the exported version, and of the version published on the source if there is one. Import uses it to apply the [publishing policy](import-a-package.md#publishing). Keeping the version IDs out of `workflow.json` means publishing a workflow doesn't change its `workflow.json`.
 
 ### Folder package
 
@@ -68,23 +75,25 @@ Exporting by folder ID keeps the folder tree. A folder's workflows sit in a `wor
 in-progress.n8np
 ├── manifest.json
 ├── folders/
-│   ├── to-production/
+│   ├── to-production-fdToProd/
 │   │   └── folder.json            # an empty folder is just the shell
-│   └── in-progress/
+│   └── in-progress-fdInProg/
 │       ├── folder.json
 │       ├── workflows/
-│       │   └── triage-inbound/
-│       │       └── workflow.json
-│       └── nested/
+│       │   └── triage-inbound-wf7Kq2/
+│       │       ├── workflow.json
+│       │       └── workflow-metadata.json
+│       └── nested-fdNest01/
 │           ├── folder.json
 │           └── workflows/
-│               └── playground/
-│                   └── workflow.json
+│               └── playground-wfPlay1/
+│                   ├── workflow.json
+│                   └── workflow-metadata.json
 ├── credentials/
-│   └── linear-api/
+│   └── linear-api-crLin44/
 │       └── credential.json
 └── tags/
-    └── prod/
+    └── prod-tgPr01/
         └── tag.json
 ```
 
@@ -96,39 +105,41 @@ Exporting by project ID adds a namespacing layer. Several projects can travel in
 team-ligo.n8np
 ├── manifest.json
 ├── projects/
-│   └── team-ligo/
+│   └── team-ligo-prTeam9/
 │       ├── project.json
 │       ├── workflows/                    # workflows at the project root
-│       │   └── triage-inbound/
-│       │       └── workflow.json
+│       │   └── triage-inbound-wf7Kq2/
+│       │       ├── workflow.json
+│       │       └── workflow-metadata.json
 │       ├── folders/
-│       │   └── in-progress/
+│       │   └── in-progress-fdInProg/
 │       │       ├── folder.json
 │       │       └── workflows/
-│       │           └── send-email/
-│       │               └── workflow.json
+│       │           └── send-email-wf9Zx1/
+│       │               ├── workflow.json
+│       │               └── workflow-metadata.json
 │       ├── credentials/                  # owned by this project
-│       │   └── linear-api/
+│       │   └── linear-api-crLin44/
 │       │       └── credential.json
 │       ├── variables/                    # scoped to this project
-│       │   └── slackchannelid/
+│       │   └── slackchannelid-vaSl03/
 │       │       └── variable.json
 │       └── data-tables/
-│           └── countries/
+│           └── countries-dtCn12/
 │               └── data-table.json
 ├── credentials/                          # a global credential
-│   └── shared-smtp/
+│   └── shared-smtp-crSmtp1/
 │       └── credential.json
 ├── variables/                            # a global variable
-│   └── region/
+│   └── region-vaRg02/
 │       └── variable.json
 └── tags/                                 # always global
-    └── prod/
+    └── prod-tgPr01/
         └── tag.json
 ```
 
 {% hint style="info" %}
-In a project package, where a variable sits decides where it's created. A variable under `projects/<project-slug>/variables/` is created in that project. One at the top level is created globally. This is why `--variable-parent-policy` is rejected for project packages: the layout already decided.
+In a project package, where a variable sits decides where it's created. A variable under `projects/<project-directory>/variables/` is created in that project. One at the top level is created globally. This is why `--variable-parent-policy` is rejected for project packages: the layout already decided.
 {% endhint %}
 
 ## Agents and skills
@@ -159,17 +170,16 @@ The manifest lists agents and skills in its `agents` and `skills` entry lists.
 
 ## Directory naming
 
-Each entity gets a directory named after a slug of its name, holding one JSON file. Slugging lowercases the name, drops every character that isn't a letter a to z, a digit, whitespace, or a hyphen, then turns whitespace runs into single hyphens:
+Each entity gets a directory named `<slug>-<id>`: a slug of its name, then a hyphen, then its ID on the source instance. Slugging lowercases the name, drops every character that isn't a letter a to z, a digit, whitespace, or a hyphen, turns whitespace runs and repeated hyphens into a single hyphen, and trims hyphens from both ends:
 
-| Entity name | Directory |
-|-------------|-----------|
-| `Triage inbound` | `triage-inbound` |
-| `Linear api` | `linear-api` |
-| `slackChannelId` | `slackchannelid` |
-| `Q4 报告` | `q4` |
-| `報告` | `workflow` |
+| Entity name | ID | Directory |
+|-------------|----|-----------|
+| `Triage inbound` | `wf7Kq2` | `triage-inbound-wf7Kq2` |
+| `slackChannelId` | `vaSl03` | `slackchannelid-vaSl03` |
+| `Q4 报告` | `wfQ4r1` | `q4-wfQ4r1` |
+| `報告` | `wfBg02` | `workflow-wfBg02` |
 
-The last row shows the fallback: when nothing survives slugging, n8n uses the entity type as the name (`workflow`, `folder`, `project`, `credential`, `variable`, `data-table`, or `tag`). Names that slug identically get a numeric suffix starting at 2, so a second `Triage inbound` becomes `triage-inbound-2`.
+The last row shows the fallback: when nothing survives slugging, n8n uses the entity type as the slug (`workflow`, `agent`, `skill`, `folder`, `project`, `credential`, `variable`, `data-table`, or `tag`). Because the ID is part of the directory name, two entities with the same name still get separate directories.
 
 Directory names are for humans reading the archive. n8n identifies entities by the IDs in the manifest and the JSON files, never by the directory name.
 
@@ -216,20 +226,20 @@ A full manifest for a workflow package holding two workflows:
 	"sourceId": "f9e1e962bba26edf357042c12f367dab17f4c63ec368e1f39cbf7ce43c8b9f8b",
 
 	"workflows": [
-		{ "id": "wf7Kq2", "name": "Triage inbound", "target": "workflows/triage-inbound" },
-		{ "id": "wf9Zx1", "name": "Send email", "target": "workflows/send-email" }
+		{ "id": "wf7Kq2", "name": "Triage inbound", "target": "workflows/triage-inbound-wf7Kq2" },
+		{ "id": "wf9Zx1", "name": "Send email", "target": "workflows/send-email-wf9Zx1" }
 	],
 	"credentials": [
-		{ "id": "crLin44", "name": "Linear api", "target": "credentials/linear-api" }
+		{ "id": "crLin44", "name": "Linear api", "target": "credentials/linear-api-crLin44" }
 	],
 	"dataTables": [
-		{ "id": "dtCn12", "name": "countries", "target": "data-tables/countries" }
+		{ "id": "dtCn12", "name": "countries", "target": "data-tables/countries-dtCn12" }
 	],
 	"variables": [
-		{ "id": "vaSl03", "name": "slackChannelId", "target": "variables/slackchannelid" }
+		{ "id": "vaSl03", "name": "slackChannelId", "target": "variables/slackchannelid-vaSl03" }
 	],
 	"tags": [
-		{ "id": "tgPr01", "name": "prod", "target": "tags/prod" }
+		{ "id": "tgPr01", "name": "prod", "target": "tags/prod-tgPr01" }
 	],
 
 	"requirements": {

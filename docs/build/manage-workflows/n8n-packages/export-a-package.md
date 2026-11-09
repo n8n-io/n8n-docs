@@ -77,6 +77,7 @@ An empty project exports as project metadata only, with no `workflows` list in t
 | `--folder-id` | Folder ID to include, with everything nested inside it. Repeat to export several. |
 | `--project-id`, `-p` | Project ID to include. Repeat to export several. Can't be combined with `--workflow-id`, `--agent-id`, or `--folder-id`. |
 | `--output`, `-o` | File to write the package to. Defaults to `export.n8np` in the current directory. |
+| `--version-policy` | `latest` (default), `published-strict`, `prefer-published`, or `ignore-unpublished`. Which version of each workflow and agent n8n exports. See [Workflow versions](#workflow-versions). |
 | `--include-variable-values` | `true` (default) or `false`. Whether variable values are bundled. See [Variable values](#variable-values). |
 | `--include-tags` | `true` (default) or `false`. Whether the tags on the exported workflows are bundled. |
 | `--include-archived-workflows` | `false` (default) or `true`. Whether folder and project exports include their archived workflows. |
@@ -122,6 +123,23 @@ n8n-cli package export --workflow-id=wf7Kq2 \
 {% hint style="warning" %}
 On a project export, `include-in-package` can pull in projects you didn't ask for. A dependency owned by another project brings that project's shell and folder chain into the archive. The CLI's summary counts the projects you named rather than the projects in the archive, so it under-reports when this happens. Extract the archive or read the manifest to see what you actually got.
 {% endhint %}
+
+## Workflow versions
+
+`--version-policy` decides which version of each workflow travels in the package:
+
+| Value | What it does |
+|-------|--------------|
+| `latest` (default) | Export the current draft |
+| `published-strict` | Export the published version. Abort the export if a workflow has none, and list up to 20 of them |
+| `prefer-published` | Export the published version, or the draft for a workflow that isn't published |
+| `ignore-unpublished` | Export the published version, and leave out workflows that aren't published |
+
+The policy only picks the nodes and connections. A workflow's name, settings, and tags always come from its current draft. The same policy applies to agents.
+
+An archived workflow has no published version, so it always exports its draft, whatever the policy.
+
+A dependency that `ignore-unpublished` leaves out counts as missing. Under `--dependency-policy=fail` or `include-in-package`, the export aborts. Under `reference-only`, n8n records it in `requirements.workflows`.
 
 ## Variable values
 
@@ -180,7 +198,7 @@ Export needs no license feature. For the full matrix, see [Limits and permission
 
 | Status | Cause |
 |--------|-------|
-| `400` | A requested workflow, agent, folder, or project doesn't exist, or you can't access it. Also mixing ID groups, passing no IDs, exceeding 300 IDs in a group, or a blocked export under `--dependency-policy=fail` |
+| `400` | A requested workflow, agent, folder, or project doesn't exist, or you can't access it. Also mixing ID groups, passing no IDs, exceeding 300 IDs in a group, or a blocked export under `--dependency-policy=fail` or `--version-policy=published-strict` |
 | `403` | The API key is missing a scope it needs |
 
 A missing entity and an inaccessible one return the same `400` with the same message, so you can't use export to test whether an ID exists. Export never returns a `404`.

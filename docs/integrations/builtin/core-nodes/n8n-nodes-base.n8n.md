@@ -52,7 +52,7 @@ This node doesn't support SSL. If your server requires an SSL connection, use th
 {% hint style="info" %}
 **Rate limits**
 
-From n8n 2.47.0, an instance can limit requests to the n8n API. When the limits are on, the node fails with a `429` response if a run sends too many requests. To send fewer requests at a time, add **Batching** in **Request Options**. Refer to [API rate limits](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/rate-limits#calls-from-an-n8n-workflow).
+From n8n 2.47.0, your instance can limit requests to the n8n public API. When the limits are on and your workflow sends too many requests, this node fails with a `429` response. To send fewer requests at a time, add **Batching** in **Request Options**. Refer to [API rate limits](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/rate-limits#calls-from-an-n8n-workflow).
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}

@@ -36,6 +36,7 @@ In [queue mode](../configure-n8n/scaling/enable-queue-mode.md), main processes, 
 ### Before you update an instance in queue mode
 
 * Take a [full backup](backup-and-restore.md), including the database and the encryption key. If n8n can't revert a migration that the update applies, you need this backup to return to the previous version.
+* Note the newest migration in the `migrations` table of your database, so you know where to stop if you roll back. If you set `DB_TABLE_PREFIX`, the table name starts with that prefix. For example, run `SELECT name FROM migrations ORDER BY id DESC LIMIT 1;`.
 * Read the [release notes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/release-notes) for every version after your current one, up to and including the target version.
 * If you deploy with the [n8n Helm chart](https://github.com/n8n-io/n8n-hosting/tree/main/charts/n8n), check whether the target n8n version needs a newer chart version. The chart has its own version number, separate from the n8n version it deploys.
 
@@ -61,8 +62,16 @@ Changing the image tag or Helm release back to the older version doesn't reverse
 
 1. Stop every n8n process: main processes, workers, any webhook processors, and external task runners.
 2. Return the database to its state before the update, in one of two ways:
-	* Revert the migrations the update applied. Run `n8n db:revert` with the newer n8n version and your existing database configuration, for example as a one-off container from the newer image. Keep the other processes stopped. Each run reverts the most recent migration only. The `migrations` table in your database lists the migrations n8n has run. If you set `DB_TABLE_PREFIX`, the table name starts with that prefix. Repeat the command once for each migration the update applied, and stop when the newest migration in the table is one from before the update. `n8n db:revert` exits with status 0 even when it doesn't revert a migration, so check the output after each run. If the output starts with `Cancelled command`, or says n8n couldn't find the migration's code, n8n didn't revert the migration. If you can't tell which migrations the update applied, or n8n can't revert one of them, restore the backup instead.
-	* Restore the database from the backup you took before updating. See [Restore the full instance](backup-and-restore.md#restore-the-full-instance).
+	* **Revert the migrations the update applied.**
+		1. Keep every other n8n process stopped. Run `n8n db:revert` with the newer n8n version and your existing database configuration, for example as a one-off container from the newer image. Each run reverts only the most recent migration.
+		2. Check the output of the command:
+			* If the output starts with `Cancelled command`, or says n8n couldn't find the migration's code, n8n didn't revert the migration. `n8n db:revert` exits with status 0 in these cases, so you can't rely on the exit status.
+			* Otherwise, n8n reverted one migration.
+		3. Check the `migrations` table in your database. It lists the migrations n8n has run. If you set `DB_TABLE_PREFIX`, the table name starts with that prefix.
+		4. Repeat steps 1 to 3 until the newest migration in the table is the one you noted before updating.
+
+		If you didn't note the newest migration before updating, or n8n can't revert one of them, restore the backup instead.
+	* **Restore the database from the backup** you took before updating. Refer to [Restore the full instance](backup-and-restore.md#restore-the-full-instance).
 3. After the database is back in its state before the update, start every process with the older n8n version. If you run external task runners, return them to the matching older `n8nio/runners` version too.
 
 ## Related resources

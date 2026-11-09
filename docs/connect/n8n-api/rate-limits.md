@@ -37,7 +37,7 @@ Reads and writes have separate limits. Writes don't count toward read limits.
 Each request counts toward two limits at the same time:
 
 - **All endpoints:** one count for the API key across every endpoint.
-- **Each endpoint:** a separate count for the API key on each endpoint. An endpoint is a method and a path. For example, `GET /api/v1/workflows/{id}` is one endpoint for every workflow ID.
+- **Each endpoint:** a separate count for the API key on each endpoint. An endpoint is a method and a path. For example, `GET /api/v1/workflows/{workflowId}` is one endpoint for every workflow ID.
 
 n8n rejects a request when it's over either limit. Each limit has a window in seconds. The count starts again when the window ends.
 

@@ -73,7 +73,7 @@ Packages are only reachable through the [n8n API](https://app.gitbook.com/s/r7wK
 
 ## API key scopes
 
-Both endpoints authenticate with an API key, and the import is attributed to that key's user.
+The package endpoints authenticate with an API key, and the import is attributed to that key's user.
 
 ### Export
 
@@ -90,10 +90,10 @@ Both endpoints authenticate with an API key, and the import is attributed to tha
 |-------|-------------|
 | `workflow:import` | The package contains workflows |
 | `folder:create` and `folder:update` | The package contains folders |
-| `workflow:delete` | The import archives or restores an existing workflow, `--folder-conflict-policy` is `overwrite`, or `--deleted-workflow-ids` names a workflow |
-| `folder:delete` | `--folder-conflict-policy` is `overwrite` |
-| `workflow:activate` | The import actually publishes a workflow, including a republish under the default `--publishing-policy=preserve-published-state` |
-| `workflow:deactivate` | The import actually unpublishes a workflow under `--publishing-policy=match-source` or `unpublish-all` |
+| `workflow:delete` | The import archives or restores an existing workflow, the folder conflict policy is `overwrite`, or `--deleted-workflow-ids` names a workflow |
+| `folder:delete` | The folder conflict policy is `overwrite`, set directly or through `--project-conflict-policy=overwrite` |
+| `workflow:activate` | The import plans to publish a workflow, including a republish under the default `--publishing-policy=preserve-published-state` |
+| `workflow:deactivate` | The import plans to unpublish a workflow under `--publishing-policy=match-source` or `unpublish-all` |
 | `project:create` and `project:update` | The package is a project package, whether or not it creates a project |
 | `credential:create` | The import actually creates a credential under `--credential-missing-mode=create-with-values` |
 | `credential:update` | The import actually changes a credential under `--credential-conflict-policy=overwrite` |
@@ -108,13 +108,13 @@ An import with agents also needs agent and skill scopes, depending on what it cr
 
 The same scopes apply when you [import a selection from a project package](import-a-package.md#import-a-selection-from-a-project-package).
 
-The publishing scopes, the credential scopes, `dataTable:update`, and the variable and tag scopes are judged from what the import will really write, so a package that references tags or variables which all already match needs neither scope. The rest are judged from what the package declares, which means `dataTable:create` is required even when every referenced table already exists.
+The publishing scopes, the credential scopes, `dataTable:update`, and the variable and tag scopes are judged from what the import will really write, so a package that references tags or variables which all already match needs neither scope. The rest are judged from what the package declares and the options you pass. For a workflow or folder package, that means `dataTable:create` is required even when every referenced table already exists.
 
 A member-role API key can't import a project package, because `project:create` and `project:update` are owner and admin scopes. Members can hold every other scope in these tables.
 
 API key scopes are checked on top of your own permissions, not instead of them. On export you can only take what you can read, so n8n checks your access to each workflow, folder, project, and credential. On import it checks your permission to write to the target project. A credential you can't read is recorded as a requirement rather than bundled, so a partial view of an instance produces a package that says plainly what the target has to supply.
 
-Missing permission to create a tag, or to create or change a data table, is reported as a blocking issue rather than a `403`. See [Why an import is refused](how-import-works.md#why-an-import-is-refused).
+If your role doesn't let you create a tag, or create or change a data table, n8n reports a blocking issue rather than a `403`. A missing API key scope is a `403`. See [Why an import is refused](how-import-works.md#why-an-import-is-refused).
 
 ## Variable limit
 

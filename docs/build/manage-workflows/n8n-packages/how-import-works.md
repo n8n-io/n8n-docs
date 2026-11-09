@@ -100,9 +100,9 @@ Some credential problems refuse the import even under `create-stub`, because a p
 
 ### Existing credentials
 
-By default, n8n never changes a credential it matched. With `--credential-conflict-policy=overwrite`, it writes the package's name and expression values to the matched credential, and keeps every other stored value, including secrets and the OAuth connection. It lists the credential under `credentials.updated`. With `fail`, n8n refuses the import when `overwrite` would change a credential.
+By default, n8n never changes a credential it matched. With `--credential-conflict-policy=overwrite`, it writes the package's name and expression values to the matched credential, and keeps every other stored value, such as secrets. It lists the credential under `credentials.updated`. With `fail`, n8n refuses the import when `overwrite` would change a credential.
 
-`overwrite` only changes credentials owned by a project the import writes to: the target project, or every project in a project package. Any other matched credential, such as a shared or global one, is used as it is. Managed credentials, credentials resolved per end user, and instance-level credentials never change.
+`overwrite` only changes credentials owned by a project the import writes to: the target project, or every project in a project package. Any other matched credential, such as one shared into the project or owned by another project, is used as it is. Managed credentials, credentials resolved per end user, and instance-level credentials never change.
 
 Under `overwrite` and `fail`, you need permission to update every matched credential the import could change, even when its values are the same, because n8n compares the stored values. To reuse such a credential without that permission, use `keep-existing`. Every policy leaves a credential alone when the package's values match.
 
@@ -164,7 +164,7 @@ Import never deletes a tag. If tags are switched off on the target instance, all
 
 Two folder conflicts refuse the import whatever the policy, because both would mean moving a folder rather than merging into it: a folder ID that exists in a different project, and an existing folder sitting under a different parent than the import would place it.
 
-`--folder-conflict-policy=overwrite` makes each project match the package. n8n removes the workflows the package doesn't contain, from the project root and from the folders the package defines. Then it removes the folders the package doesn't define, but only once they're empty, so workflows in a folder that only exists on the target stay. By default, n8n archives a removed workflow, so you can restore it. With `--overwrite-deletion-policy=hard-delete`, it deletes the workflow and its executions permanently. If you can't delete something the import would remove, n8n refuses the import rather than removing only part of it.
+`--folder-conflict-policy=overwrite` makes each project match the package. n8n removes the workflows the package neither contains nor references as a sub-workflow, from the project root and from the folders the package defines. Then it removes the folders the package doesn't define, but only once they're empty, so workflows in a folder that only exists on the target stay. By default, n8n archives a removed workflow, so you can restore it. With `--overwrite-deletion-policy=hard-delete`, it deletes the workflow and its executions permanently. If you can't delete something the import would remove, n8n refuses the import rather than removing only part of it.
 
 For project packages, n8n creates the project shells first, then runs the same machinery once per project. If a package project's ID matches a personal project on the target, the import is refused with a `403`: that's never something a conflict policy can merge.
 
@@ -215,7 +215,7 @@ Each reason an import can be blocked appears in the `issues` array with a `type`
 | `workflow-removal-forbidden` | | `--folder-conflict-policy=overwrite` or `--deleted-workflow-ids` would remove a workflow you don't have permission to delete |
 | `workflow-removal-conflict` | | In a selection import, a selected workflow's target ID is also in `--deleted-workflow-ids` |
 | `folder-removal-forbidden` | | `--folder-conflict-policy=overwrite` would remove a folder you don't have permission to delete |
-| `workflow-folder-conflict` | | The existing workflow lives in a different folder than the import would put it in. This refuses the import even under `--conflict-policy=skip` |
+| `workflow-folder-conflict` | | The existing workflow lives in a different folder than the import would put it in, and `--conflict-policy=new-version` would update it |
 | `project-conflict` | `fail-policy` | The project exists and `--project-conflict-policy` is `fail` |
 | `folder-conflict` | `parent-mismatch`, `id-in-other-project`, `fail-policy` | The first two refuse whatever the policy |
 | `credential-unresolved` | `not_found`, `unknown_type`, `source_not_found`, `type_mismatch` | Only `not_found` can be resolved by a placeholder credential |
@@ -230,11 +230,13 @@ Each reason an import can be blocked appears in the `issues` array with a `type`
 | `policy-violation` | | An instance policy refuses a workflow in the package. n8n refuses the whole import rather than skipping the workflow, because other workflows may reference it |
 | `missing-node-type` | | A workflow uses a node type or version the instance doesn't have, under `--missing-node-type-mode=fail` |
 
-The HTTP status depends on the kind of problem. The response is a `409` if any issue is conflict-shaped: a workflow, workflow lineage, workflow removal, project, folder, credential, or variable conflict, a data table ID or name conflict, or tag rename drift or name collision. Everything else is a `422`. A mixed set containing one conflict returns `409` for the whole response.
+Imports with agents can also return `agent-conflict`, `agent-invalid`, `agent-dependency-unresolved`, and `agent-policy-violation`.
+
+The HTTP status depends on the kind of problem. The response is a `409` if any issue is conflict-shaped: any type ending in `-conflict`, a data table ID or name conflict, or tag rename drift or name collision. Everything else is a `422`. A mixed set containing one conflict returns `409` for the whole response.
 
 Some failures are reported on their own rather than batched with the rest, because they stop n8n before it can plan: a missing license feature, a missing API key scope, and a malformed package.
 
-Missing permission to create a tag, or to create or change a data table, isn't a `403`. It comes back as a `permission-denied` blocking issue naming the scope it needed.
+If your role doesn't let you create a tag, or create or change a data table, that's not a `403`. It comes back as a `permission-denied` blocking issue naming the permission it needed. A missing API key scope is always a `403`.
 
 ## Read next
 

@@ -29,7 +29,7 @@ An n8n package is a single file that holds a slice of your n8n instance: some wo
 
 A package is a gzipped tar archive with the `.n8np` extension. Inside it, each entity is a small JSON file, and a `manifest.json` lists what's in the package and what the target instance has to supply. See [Package format](package-format.md) for the full layout.
 
-Packages are an API feature. You export and import them through the [n8n API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api), or through the [n8n CLI](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-cli), which wraps the same two endpoints. There's no way to export or import a package from the n8n editor.
+Packages are an API feature. You export and import them through the [n8n API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api), or through the [n8n CLI](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-cli), which wraps the same endpoints. There's no way to export or import a package from the n8n editor.
 
 ## Three package shapes
 
@@ -45,7 +45,7 @@ You can combine workflows, agents, and folders in one export, and a project pack
 
 | Travels | Doesn't travel |
 |---------|----------------|
-| Workflows: nodes, connections, settings, published state, archived state | Credential secrets and configuration |
+| Workflows: nodes, connections, settings, published state, archived state | Credential secrets and values typed in directly |
 | Folders and their nesting | Data table rows |
 | Projects: name, description, icon | Executions and execution history |
 | Credential references: ID, name, type, and fields set by an expression | Users, project members, roles, and sharing |
@@ -64,7 +64,7 @@ Use packages when you need a repeatable, automatable way to move work between in
 
 * **Promote between environments.** Push workflows from development to staging to production as part of a pipeline. Repeated imports update in place rather than creating duplicates, so the same command works the first time and every time after.
 * **Migrate to a new instance.** Move a project, its folders, and its workflows in one file.
-* **Share work without sharing secrets.** Hand a workflow to another team knowing no credential data is in the file.
+* **Share work without sharing secrets.** Hand a workflow to another team knowing no credential secrets are in the file.
 * **Back up structure.** Keep a copy of the workflows and structure you'd need to rebuild, though a package isn't a full backup: no execution data travels.
 
 ## Quick start

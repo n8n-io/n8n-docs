@@ -56,7 +56,7 @@ When you enable Retry On Fail, the node automatically tries the request again if
 1. Open the node.
 2. Select **Settings**.
 3. Enable the **Retry On Fail** toggle.
-4. Configure the retry settings. For example, if the API allows one request per second, set **Wait Between Tries (ms)** to `1000` to wait one second between retries.
+4. Configure the retry settings. For example, if the API allows one request per second, set **Wait Between Tries (ms)** to `1000` to wait 1 second between retries.
 
 **Retry On Fail limitations:** **Wait Between Tries** is limited to 5000 ms (5 seconds), and **Max Tries** is limited to five. The HTTP Request node doesn't automatically honor the API's `Retry-After` response header. For rate limits requiring longer delays, use batching or combine Loop Over Items with a Wait node to control request frequency.
 

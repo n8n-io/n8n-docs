@@ -134,6 +134,15 @@ HTML_ATTR_RE = re.compile(r"""(?:href|src)\s*=\s*["']([^"']+)["']""", re.IGNOREC
 # Reference definitions: [id]: target. The label's first char must not be `^`,
 # so Markdown footnote definitions ([^1]: some text) aren't treated as links.
 REF_DEF_RE = re.compile(r"^\s{0,3}\[(?:[^^\]][^\]]*)\]:\s*(\S+)")
+# CommonMark backslash escape: a backslash before any ASCII punctuation character
+# stands for that character alone. Link targets must escape parentheses, so the
+# file `(node-name).all.md` is written `\(node-name\).all.md` (DOC-2570).
+MD_ESCAPE_RE = re.compile(r"\\([!-/:-@\[-`{-~])")
+
+
+def unescape_md(target: str) -> str:
+    """Drop Markdown backslash escapes, so `\\(x\\).md` names the file `(x).md`."""
+    return MD_ESCAPE_RE.sub(r"\1", target)
 
 
 def blank_gitbook_native(text: str) -> str:
@@ -492,7 +501,9 @@ def classify(md_file: Path, src_rel: str, target: str):
         return None if result == "unknown" else result
 
     # Strip anchor and query.
-    path_part = target.split("#", 1)[0].split("?", 1)[0].strip()
+    # The path is a filename on disk, so drop Markdown escapes before any lookup.
+    # Messages keep `target` as written, so a finding still matches the source.
+    path_part = unescape_md(target.split("#", 1)[0].split("?", 1)[0].strip())
     anchor = target.split("#", 1)[1].strip() if "#" in target else None
 
     # Skip: external, mailto/other schemes, protocol-relative, pure anchors,

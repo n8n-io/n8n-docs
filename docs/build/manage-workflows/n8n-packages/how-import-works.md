@@ -33,7 +33,7 @@ An import runs in two phases. First n8n plans it: it reads the package, works ou
 There's no rollback. n8n has no database transaction around an import, so its promise that a refused import writes nothing covers the problems it can predict, not every possible failure. If something unexpected goes wrong while an import is being written, such as a dropped database connection, whatever was already written stays on the instance, and there's no cleanup afterward. Checking first makes this rare, not impossible.
 {% endhint %}
 
-Import never deletes a project, data table, or tag. It only removes workflows and folders under `--folder-conflict-policy=overwrite`. See [Folders and projects](#folders-and-projects). Under `--data-table-schema-conflict-policy=overwrite`, it can remove columns from a data table. See [Data tables](#data-tables).
+Import never deletes a project, data table, or tag. It only removes workflows and folders under `--folder-conflict-policy=overwrite`, and workflows you name in `--deleted-workflow-ids` when you [import a selection](import-a-package.md#import-a-selection-from-a-project-package). See [Folders and projects](#folders-and-projects). Under `--data-table-schema-conflict-policy=overwrite`, it can remove columns from a data table. See [Data tables](#data-tables).
 
 ## Write order
 

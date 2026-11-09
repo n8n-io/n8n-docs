@@ -65,7 +65,7 @@ triage.n8np
 Each workflow directory holds two files:
 
 * `workflow.json`: the workflow itself.
-* `workflow-metadata.json`: the ID of the exported version, and of the version published on the source if there is one. Import uses it to apply the [publishing policy](import-a-package.md#publishing). Keeping the version IDs out of `workflow.json` means publishing a workflow doesn't change its `workflow.json`.
+* `workflow-metadata.json`: the ID of the exported version, and of the version published on the source if there is one. Import uses it to apply the [publishing policy](import-a-package.md#publishing).
 
 ### Folder package
 
@@ -166,8 +166,6 @@ support.n8np
         └── credential.json
 ```
 
-The manifest lists agents and skills in its `agents` and `skills` entry lists.
-
 ## Directory naming
 
 Each entity gets a directory named `<slug>-<id>`: a slug of its name, then a hyphen, then its ID on the source instance. Slugging lowercases the name, drops every character that isn't a letter a to z, a digit, whitespace, or a hyphen, turns whitespace runs and repeated hyphens into a single hyphen, and trims hyphens from both ends:
@@ -208,7 +206,7 @@ Last comes `requirements`, which lists what the workflows and agents need to run
 | `credentials` | `{ id, name, type, usedBy }` | A bundled credential carries at most its [expression values](export-a-package.md#credential-values), so the target has to supply the credential unless the import creates it from those values |
 | `dataTables` | `{ id, name, usedBy }` | The schema itself is in the bundled `data-table.json` |
 | `workflows` | `{ id, name, usedBy }` | Sub-workflow and error workflow references, and workflows an agent uses as tools. `name` is optional, because a referenced workflow may not be one the exporting user can see |
-| `agents` | `{ id, name, usedBy }` | Sub-agents an agent uses. `name` is optional, for the same reason |
+| `agents` | `{ id, name, usedBy }` | Sub-agents an agent uses. `name` is only present when the sub-agent is in the package |
 | `variables` | `{ name, usedBy }` | Name only. There's no ID, because `$vars.<name>` resolves by name at runtime |
 | `tags` | `{ id, name, usedBy }` | Only workflows use tags |
 | `nodeTypes` | `{ type, typeVersion, usedBy }` | Every node type and version the workflows and agents' node tools use. Read it to tell whether a target instance can import the package, since it needs all of them installed. n8n re-derives the same list on import rather than trusting this one |

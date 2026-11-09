@@ -42,7 +42,7 @@ For the full request and response schema, see the `N8nPackage` section of the [e
 {% hint style="info" %}
 If you call the endpoint rather than using the CLI, the request must be `multipart/form-data`. Any other content type returns a `415`. `conflictPolicy` is a required field, even though the CLI supplies it for you.
 
-Omit an option you don't want to set rather than sending it empty. A blank value for one of the policy or mode fields is rejected with a `400`. Only `projectId`, `folderId`, and `bindings` accept a blank value, which n8n treats as omitted.
+n8n treats a blank value as omitted and uses the default. The exception is `conflictPolicy`: a blank value is rejected with a `400`.
 {% endhint %}
 
 ## Where the contents land
@@ -76,8 +76,6 @@ There's no `--force` and no `--dry-run`.
 
 n8n matches a package workflow to an existing one by the source workflow ID recorded on the target, falling back to a target workflow whose own ID equals the package's ID. That's what makes repeated promotion converge: the second import updates the workflow rather than creating a duplicate.
 
-These options apply to agents too.
-
 ### Publishing
 
 n8n always writes imported workflows unpublished, then applies the publishing policy in a single pass at the end of the import, once everything exists.
@@ -100,8 +98,7 @@ Publishing can also fail without failing the import, most often when two workflo
 | Flag | Values | Description |
 |------|--------|-------------|
 | `--folder-conflict-policy` | `merge`, `fail`, `overwrite` | What to do when a folder in the package already exists in the target project. Defaults to the `--project-conflict-policy` value, and to `merge` for workflow and folder packages. `merge` reuses the existing folder and merges the package's contents into it, leaving its name as it is. `fail` refuses the import. `overwrite` also removes what the package doesn't contain. See [Folders and projects](how-import-works.md#folders-and-projects). |
-| `--project-conflict-policy` | `merge` (default), `fail`, `overwrite` | Project packages only. What to do when a project in the package already exists. `merge` leaves the project's details alone and adds the package's contents. `overwrite` also replaces its name, description, and icon, leaving anything the package doesn't carry as it is. `fail` refuses the import. |
-
+| `--project-conflict-policy` | `merge` (default), `fail`, `overwrite` | Project packages only. What to do when a project in the package already exists. `merge` leaves the project's details alone and adds the package's contents. `overwrite` also replaces its name, description, and icon, leaving anything the package doesn't carry as it is. Because `--folder-conflict-policy` defaults to this value, `overwrite` also removes workflows the package doesn't contain, unless you set `--folder-conflict-policy=merge`. `fail` refuses the import. |
 | `--overwrite-deletion-policy` | `archive` (default), `hard-delete` | How `--folder-conflict-policy=overwrite` removes a workflow. `archive` archives it, so you can restore it. `hard-delete` deletes it and its executions permanently. |
 
 `--project-conflict-policy` is ignored for workflow and folder packages. `--folder-conflict-policy=overwrite` only works on project packages, together with `--project-conflict-policy=overwrite`.
@@ -116,7 +113,7 @@ A package containing folders needs a license that supports folders.
 |------|--------|-------------|
 | `--credential-matching-mode` | `id-only` (default), `name-and-type`, `type-only` | How n8n finds the target credential for a reference in the package. |
 | `--credential-missing-mode` | `create-stub` (default), `create-with-values`, `must-preexist` | What to do when a reference can't be resolved. `create-stub` creates an empty placeholder credential in the target project, and the workflow imports but can't be published. `create-with-values` creates the credential from the [expression values](export-a-package.md#credential-values) bundled in the package. `must-preexist` refuses the import. |
-| `--credential-conflict-policy` | `keep-existing` (default), `overwrite`, `fail` | What to do when a reference matches an existing credential and the package has a different name or different values for it. `keep-existing` leaves the credential alone. `overwrite` writes the package's name and expression values to it. `fail` refuses the import. |
+| `--credential-conflict-policy` | `keep-existing` (default), `overwrite`, `fail` | What to do when a reference matches an existing credential and the package has a different name or different values for it. `keep-existing` leaves the credential alone. `overwrite` writes the package's name and expression values to it. `fail` refuses the import. See [Existing credentials](how-import-works.md#existing-credentials). |
 
 In every mode, n8n only considers credentials you can read and that the target project can use, plus global credentials. A credential you can't read is never a candidate, including under `id-only`, which is the usual reason a matching ID doesn't match.
 
@@ -209,23 +206,23 @@ n8n-cli package import-selection --file=team-ligo.n8np \
 	--deleted-workflow-ids=wfOld01
 ```
 
-Or call `POST /api/v1/n8n-packages/import-selection` with the same multipart form as `/import`. Send `selectedWorkflowIds` and `deletedWorkflowIds` as JSON arrays in text fields, such as `["wf7Kq2","wf9Zx1"]`.
+Or call `POST /api/v1/n8n-packages/import-selection` with a multipart form, with the archive in `package`. It only accepts the fields for the flags below, and rejects the other `/import` fields with a `400`. Send `selectedWorkflowIds` and `deletedWorkflowIds` as JSON arrays in text fields, such as `["wf7Kq2","wf9Zx1"]`.
 
 A project package can hold several projects, so `--selected-project-id` names the one to take workflows from. n8n writes them into the project with the same ID on the target, and creates that project if it doesn't exist. Workflows in neither list, and other projects, stay as they are.
 
 | Flag | Description |
 |------|-------------|
-| `--selected-project-id` | The project in the package to take workflows from. The target project has the same ID. Required. |
+| `--selected-project-id` | The project in the package to take workflows from. Required. |
 | `--selected-workflow-ids` | Workflow IDs in the package to import. Comma-separate them, or repeat the flag. |
-| `--deleted-workflow-ids` | Workflow IDs on the target to remove. n8n ignores an ID that doesn't exist. |
+| `--deleted-workflow-ids` | Workflow IDs in the target project to remove. n8n ignores an ID that isn't in that project. |
 | `--conflict-policy` | `new-version` (default), `fail`, or `skip`. Works as on a full import. |
 | `--overwrite-deletion-policy` | `archive` (default) or `hard-delete`. How n8n removes the workflows in `--deleted-workflow-ids`. |
 
 The other options have fixed values:
 
 * **Folders:** n8n merges every folder of the selected project, including folders with no selected workflows.
-* **Credentials and variables:** they must already exist on the target, and n8n doesn't change them.
-* **Data tables:** n8n matches them by ID and creates missing ones. An incompatible schema refuses the import.
+* **Credentials and variables:** they must already exist on the target, credentials with the same ID, and n8n doesn't change them.
+* **Data tables:** n8n matches them by ID and creates missing ones. Any schema difference refuses the import.
 * **Tags:** n8n creates missing tags and skips conflicting ones.
 * **Publishing:** n8n follows `match-source`.
 
@@ -275,7 +272,7 @@ A successful import returns `200` with a summary of what it did:
 | `agents` | One row per agent. Empty for a package without agents. |
 | `counts` | The number of agents `created`, `updated`, and `skipped` |
 | `workflows` | One row per workflow, with its `status` of `created`, `updated`, or `skipped`, whether it's archived, and its `publishing` outcome |
-| `removedWorkflows` | Workflows that `--folder-conflict-policy=overwrite` removed, each with a `deletion` of `archived` or `deleted`. A `hard-delete` n8n can't finish yet reports `archived` |
+| `removedWorkflows` | Workflows the import removed under `--folder-conflict-policy=overwrite` or `--deleted-workflow-ids`, each with a `deletion` of `archived` or `deleted`. A `hard-delete` n8n can't finish yet reports `archived` |
 | `removedFolders` | Folders that `--folder-conflict-policy=overwrite` removed |
 | `folders` | One row per folder, with a `status` of `created` or `skipped` |
 | `projects` | One row per project, with a `status` of `created`, `updated`, or `skipped`. Empty for workflow and folder packages |

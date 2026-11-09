@@ -99,8 +99,8 @@ The policy only applies to workflows and agents. It doesn't affect the credentia
 | Value | What it does |
 |-------|--------------|
 | `fail` (default) | Abort the export and list what's missing, up to 20 IDs |
-| `include-in-package` | Walk the dependency graph and add the missing workflows to the package |
-| `reference-only` | Leave them out, and record them in `requirements.workflows` as workflows the target instance must already have |
+| `include-in-package` | Walk the dependency graph and add the missing workflows and agents to the package |
+| `reference-only` | Leave them out, and record them in `requirements.workflows` or `requirements.agents` as entities the target instance must already have |
 
 **`fail` and `include-in-package` follow the whole chain.** If workflow A calls B and B calls C, exporting A and B still fails on C. Only `reference-only` stops at direct references, on the assumption that a referenced workflow and its own dependencies already exist on the target together.
 
@@ -135,11 +135,11 @@ On a project export, `include-in-package` can pull in projects you didn't ask fo
 | `prefer-published` | Export the published version, or the draft for a workflow that isn't published |
 | `ignore-unpublished` | Export the published version, and leave out workflows that aren't published |
 
-The policy only picks the nodes and connections. A workflow's name, settings, and tags always come from its current draft. The same policy applies to agents.
+For a workflow, the policy only picks the nodes and connections. Its name, settings, and tags always come from its current draft. The policy applies to agents too.
 
 An archived workflow has no published version, so it always exports its draft, whatever the policy.
 
-A dependency that `ignore-unpublished` leaves out counts as missing. Under `--dependency-policy=fail` or `include-in-package`, the export aborts. Under `reference-only`, n8n records it in `requirements.workflows`.
+A dependency that `ignore-unpublished` leaves out counts as missing. Under `--dependency-policy=fail` or `include-in-package`, the export aborts. Under `reference-only`, n8n records it in the manifest's `requirements`.
 
 ## Variable values
 
@@ -198,7 +198,7 @@ Export needs no license feature. For the full matrix, see [Limits and permission
 
 | Status | Cause |
 |--------|-------|
-| `400` | A requested workflow, agent, folder, or project doesn't exist, or you can't access it. Also mixing ID groups, passing no IDs, exceeding 300 IDs in a group, or a blocked export under `--dependency-policy=fail` or `--version-policy=published-strict` |
+| `400` | A requested workflow, agent, folder, or project doesn't exist, or you can't access it. Also mixing ID groups, passing no IDs, exceeding 300 IDs in a group, or an export blocked by `--dependency-policy` or `--version-policy=published-strict` |
 | `403` | The API key is missing a scope it needs |
 
 A missing entity and an inaccessible one return the same `400` with the same message, so you can't use export to test whether an ID exists. Export never returns a `404`.

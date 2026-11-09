@@ -48,13 +48,13 @@ You can combine workflows, agents, and folders in one export, and a project pack
 | Workflows: nodes, connections, settings, published state, archived state | Credential secrets and configuration |
 | Folders and their nesting | Data table rows |
 | Projects: name, description, icon | Executions and execution history |
-| Credential references: ID, name, and type only | Users, project members, roles, and sharing |
+| Credential references: ID, name, type, and fields set by an expression | Users, project members, roles, and sharing |
 | Data table schemas: column IDs, names, and types | Pinned data and workflow static data |
 | Variables: name and type, and the value unless you exclude it | Workflow version history |
 | Tags | Whether a workflow is marked as a favorite |
 | Agents: definition, custom tools, schedules, skills, and channel settings | Agent channel connections, sessions, and knowledge base files |
 
-**Credential secrets never travel.** A credential file in a package holds exactly three fields: ID, name, and type. Non-secret configuration such as a host, base URL, or region lives in the same encrypted store as the secret, so it doesn't travel either. On import, n8n matches each reference to a credential that already exists on the target instance, or creates an empty placeholder for you to fill in.
+**Credential secrets never travel.** A credential file in a package holds the credential's ID, name, and type. By default, it also holds the fields set by an n8n expression, such as `={{ $secrets.apiKey }}`, but never a value typed in directly, whether it's a secret or a setting such as a host or region. See [Credential values](export-a-package.md#credential-values). On import, n8n matches each reference to a credential that already exists on the target instance, or creates one for you to fill in.
 
 **Data table rows never travel.** Only the schema does. An imported data table starts empty.
 

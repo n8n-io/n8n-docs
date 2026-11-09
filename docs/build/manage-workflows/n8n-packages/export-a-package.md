@@ -73,7 +73,7 @@ An empty project exports as project metadata only, with no `workflows` list in t
 | Flag | Description |
 |------|-------------|
 | `--workflow-id`, `-w` | Workflow ID to include. Repeat to export several. |
-| `--agent-id` | Agent ID to include. Repeat to export several. |
+| `--agent-id` | Agent ID to include. Repeat to export several. See [Export and import agents](export-and-import-agents.md). |
 | `--folder-id` | Folder ID to include, with everything nested inside it. Repeat to export several. |
 | `--project-id`, `-p` | Project ID to include. Repeat to export several. Can't be combined with `--workflow-id`, `--agent-id`, or `--folder-id`. |
 | `--output`, `-o` | File to write the package to. Defaults to `export.n8np` in the current directory. |
@@ -94,7 +94,7 @@ The `n8n-cli package export` flags are shown here in kebab-case. `--help` prints
 
 If a workflow calls a sub-workflow, or names an error workflow, that's a dependency of the package. `--dependency-policy` decides what n8n does when a dependency isn't in the set of IDs you named.
 
-The policy only applies to workflows and agents. It doesn't affect the credentials, data tables, variables, or tags they use. An agent's sub-agents and the workflows it uses as tools count as dependencies too.
+The policy only applies to workflows and agents. It doesn't affect the credentials, data tables, variables, or tags they use. For an agent's sub-agents and workflow tools, see [Agent dependencies](export-and-import-agents.md#agent-dependencies).
 
 | Value | What it does |
 |-------|--------------|
@@ -232,5 +232,6 @@ Telemetry events emit counts to keep the data anonymized.
 * [n8n packages](./)
 * [Package format](package-format.md)
 * [Import a package](import-a-package.md)
+* [Export and import agents](export-and-import-agents.md)
 * [How import works](how-import-works.md)
 * [Limits and permissions](limits-and-permissions.md)

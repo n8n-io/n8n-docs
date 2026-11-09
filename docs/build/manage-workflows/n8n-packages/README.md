@@ -94,6 +94,7 @@ n8n checks the whole package before it writes anything. If something would block
 * [Package format](package-format.md): what's inside a `.n8np` file, the three package shapes, and the manifest.
 * [Export a package](export-a-package.md): export workflows, folders, or whole projects into a package.
 * [Import a package](import-a-package.md): import a package and control where its contents land.
+* [Export and import agents](export-and-import-agents.md): move agents with their skills, custom tools, and schedules, and connect their channels on the target.
 * [How import works](how-import-works.md): how n8n checks a package and resolves its dependencies before writing it.
 * [Limits and permissions](limits-and-permissions.md): size limits, license features, and API key scopes.
 

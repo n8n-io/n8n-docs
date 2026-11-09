@@ -144,7 +144,7 @@ In a project package, where a variable sits decides where it's created. A variab
 
 ## Agents and skills
 
-[Agents](../../build-and-manage-agents/README.md) sit next to workflows. In a workflow or folder package, each agent has a directory under the top-level `agents/`. In a project package, an agent sits under its project, in `projects/<project-directory>/agents/`. Each agent directory holds two files:
+[Agents](export-and-import-agents.md) sit next to workflows. In a workflow or folder package, each agent has a directory under the top-level `agents/`. In a project package, an agent sits under its project, in `projects/<project-directory>/agents/`. Each agent directory holds two files:
 
 * `agent.json`: the agent's definition, with its custom tools and schedules.
 * `agent-metadata.json`: the ID of the exported version, and of the version published on the source if there is one. Import uses it to apply the [publishing policy](import-a-package.md#publishing).
@@ -316,5 +316,6 @@ The archive is deterministic: file timestamps are fixed at the Unix epoch, permi
 * [n8n packages](./)
 * [Export a package](export-a-package.md)
 * [Import a package](import-a-package.md)
+* [Export and import agents](export-and-import-agents.md)
 * [How import works](how-import-works.md)
 * [Limits and permissions](limits-and-permissions.md)

@@ -178,7 +178,7 @@ export N8N_OTEL_TRACES_INCLUDE_NODE_SPANS=false
 {% hint style="info" %}
 **Feature availability**
 
-Sending the `baggage` header on outbound requests, and the `OTEL_PROPAGATORS` environment variable, are available from n8n 2.47.0.
+Sending the `baggage` header on outbound requests and the `OTEL_PROPAGATORS` environment variable are available from n8n 2.47.0.
 {% endhint %}
 
 **Send outbound trace headers** decides whether n8n adds any tracing header to outbound requests. It's on by default. Set it under **Settings > OpenTelemetry**, or with the `N8N_OTEL_TRACES_INJECT_OUTBOUND` environment variable. As with the other fields in **Settings > OpenTelemetry**, n8n disables the field when you set the environment variable.
@@ -618,7 +618,7 @@ Check that:
 
 Check that:
 
-- `N8N_OTEL_ENABLED` is set to `true`.
+- OpenTelemetry is enabled in **Settings > OpenTelemetry**, or `N8N_OTEL_ENABLED` is set to `true`.
 - **Send outbound trace headers** is on, and `N8N_OTEL_TRACES_INJECT_OUTBOUND` isn't set to `false`.
 - `OTEL_PROPAGATORS` is unset or includes `baggage`.
 - You restarted n8n after changing `OTEL_PROPAGATORS`.

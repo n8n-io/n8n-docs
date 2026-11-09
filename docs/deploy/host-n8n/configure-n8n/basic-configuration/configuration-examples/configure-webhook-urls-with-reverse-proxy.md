@@ -33,7 +33,7 @@ Refer to [Environment variables reference](../use-environment-variables/endpoint
 
 If you also run n8n's [instance-level MCP server](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server) behind the same reverse proxy, make sure it forwards the [MCP request headers](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server#mcp-request-headers) too.
 
-## Serve forms from a separate host behind an authentication proxy
+## Serve forms from a separate hostname behind an authentication proxy
 
 {% hint style="info" %}
 **Feature availability**
@@ -41,7 +41,7 @@ If you also run n8n's [instance-level MCP server](https://app.gitbook.com/s/r7wK
 `N8N_INSECURE_DISABLE_FORM_HTML_SANDBOX` is available from n8n 2.15.0.
 {% endhint %}
 
-Some authentication proxies, such as Google Identity-Aware Proxy, use a session cookie. To put n8n forms behind such a proxy, serve webhooks and forms from their own hostname. Then set [`N8N_INSECURE_DISABLE_FORM_HTML_SANDBOX`](../use-environment-variables/security.md) to `true`.
+Some authentication proxies, such as Google Identity-Aware Proxy, use a session cookie. To put n8n forms behind such a proxy, serve webhooks and forms from their own hostname. Then set [`N8N_INSECURE_DISABLE_FORM_HTML_SANDBOX`](../use-environment-variables/security.md) to `true`. Ensure the conditions in [When it's safe to disable the form sandbox](#when-its-safe-to-disable-the-form-sandbox) are met.
 
 The setting applies to every page that n8n serves as a form:
 

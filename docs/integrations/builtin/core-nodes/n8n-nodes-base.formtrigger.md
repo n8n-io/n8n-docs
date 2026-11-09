@@ -187,7 +187,7 @@ You can use one of the following options to add authentication to your form:
 
 The n8n Form Trigger automatically sanitizes HTML content in the **Form Description** field and **Custom HTML** form elements to prevent security vulnerabilities. While HTML is supported for formatting, certain tags and attributes are restricted.
 
-n8n also serves form pages in a browser sandbox, so the browser doesn't send cookies when someone submits the form. If you self-host n8n and put forms behind an authentication proxy that uses a session cookie, refer to [Serve forms from a separate host behind an authentication proxy](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/configuration-examples/configure-webhook-urls-with-reverse-proxy#serve-forms-from-a-separate-host-behind-an-authentication-proxy).
+n8n also serves form pages in a browser sandbox, so the browser doesn't send cookies when someone submits the form. If you self-host n8n and put forms behind an authentication proxy that uses a session cookie, refer to [Serve forms from a separate hostname behind an authentication proxy](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/configuration-examples/configure-webhook-urls-with-reverse-proxy#serve-forms-from-a-separate-hostname-behind-an-authentication-proxy).
 
 ### Allowed HTML Tags <a href="#allowed-html-tags" id="allowed-html-tags"></a>
 

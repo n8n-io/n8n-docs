@@ -50,7 +50,7 @@ Each span includes resource attributes that identify the n8n instance:
 n8n also handles trace context propagation:
 
 - **Inbound**: If a webhook request includes a [W3C `traceparent` header](https://www.w3.org/TR/trace-context/), n8n uses it as the parent for the workflow span. This links the n8n workflow trace to the upstream caller. From n8n 2.47.0, n8n also reads a [`baggage` header](https://www.w3.org/TR/baggage/). It reads the header only to forward it, so **Send outbound trace headers** has to be on. Refer to [Forward caller baggage](#forward-caller-baggage).
-- **Outbound**: HTTP Request nodes (and other nodes that use the n8n HTTP helpers) can add `traceparent`, `tracestate`, and `baggage` headers to outbound requests. Downstream services that support W3C trace context can therefore continue the trace. Refer to [Outbound trace headers](#outbound-trace-headers).
+- **Outbound**: HTTP Request nodes (and other nodes that use the n8n HTTP helpers) can add `traceparent`, `tracestate`, and `baggage` headers to outbound requests. Downstream services that support W3C trace context can continue the trace. Refer to [Outbound trace headers](#outbound-trace-headers).
 - **Sub-workflows**: A sub-workflow's span uses the parent workflow's span as its parent.
 - **Resumed workflows**: When a workflow resumes after a wait, the new span links back to the previous span using a span link.
 
@@ -231,6 +231,7 @@ How n8n handles the entries:
 - n8n drops entries past the OpenTelemetry limits: 180 entries, 4,096 bytes for a single entry, and 8,192 bytes in total. A dropped entry never reaches the downstream service.
 - n8n saves the entries on the execution, so they survive a [queue mode](../configure-n8n/scaling/enable-queue-mode.md) worker and a resume after a Wait node.
 - n8n forwards the entries without recording them. A `tenant.id` entry goes out on the headers but never appears as a [span attribute](#span-attributes).
+- An `otel.configure` external hook can add entries of its own. Those win over the caller's when both set the same key.
 
 ## Start spans
 

@@ -31,8 +31,6 @@ When using the Webhook node on localhost on a [self-hosted](https://app.gitbook.
 * [npm with tunnel](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/install-with-npm#n8n-with-tunnel)
 * [Docker with tunnel](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/install-with-docker#n8n-with-tunnel)
 
-<video src="/_video/integrations/builtin/core-nodes/webhook/webhook-node-intro.mp4" controls width="100%"></video>
-
 ## Production workflows <a href="#production-workflows" id="production-workflows"></a>
 
 When your workflow is ready, switch to using the **Production** webhook URL. You can then publish your workflow, and n8n runs it automatically when an external service calls the webhook URL.

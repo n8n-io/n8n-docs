@@ -65,8 +65,8 @@ N8N_RUNNERS_AUTH_TOKEN=change-me-runner-auth-token
 
 # Sandbox service secrets — pick your own values
 SANDBOX_API_KEYS=change-me-api-key
-SANDBOX_API_RUNNER_REGISTRATION_TOKEN=change-me-registration-token
-SANDBOX_API_RUNNER_API_KEY=change-me-runner-key
+SANDBOX_RUNNER_REGISTRATION_TOKEN=change-me-registration-token
+SANDBOX_RUNNER_API_KEYS=change-me-runner-key
 
 # Must match a value in SANDBOX_API_KEYS above — this is how n8n authenticates to the sandbox
 N8N_SANDBOX_SERVICE_API_KEY=change-me-api-key
@@ -108,7 +108,7 @@ This defines every service you're setting up: n8n itself, the sandbox stack that
 
 This bundles n8n's own sandbox (`n8n-sandbox`), which is a good fit for local development and testing. For a production instance, n8n currently recommends Daytona as the sandbox provider instead. See [Set up n8n Assistant](../configure-n8n/set-up-n8n-assistant.md) for how to configure a Daytona sandbox.
 
-There's no database service defined here. n8n falls back to its built-in SQLite database, stored inside the container unless you mount a volume for it. For a production instance, swap in Postgres. See [Use PostgreSQL instead of SQLite](install-using-docker-compose.md#optional-use-postgresql-instead-of-sqlite) below.
+There's no database service defined here. n8n falls back to its built-in SQLite database. The `n8n-data` volume in `get-n8n-compose.yml` stores the database and n8n's encryption key, so your data survives restarts and container recreation. For a production instance, swap in Postgres. See [Use PostgreSQL instead of SQLite](install-using-docker-compose.md#optional-use-postgresql-instead-of-sqlite) below.
 
 ## Step 5: Start everything
 

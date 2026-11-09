@@ -106,6 +106,14 @@ The Form Trigger node has two URLs: **Test URL** and **Production URL**. n8n dis
 
 Set a custom slug for the form.
 
+{% hint style="info" %}
+**Feature availability**
+
+**Form Path** is a main parameter in node version 2.1 and earlier. From node version 2.2, it's optional and you set it in [Node options](#node-options).
+
+If you create or update the workflow using the API or by editing its JSON, set the slug in `parameters.options.path`. On node version 2.2 and later, n8n ignores a top-level `parameters.path` when it loads the workflow. The form URL then ends in the webhook ID instead.
+{% endhint %}
+
 ### Form Title <a href="#form-title" id="form-title"></a>
 
 Enter the title for your form. n8n displays the **Form Title** as the webpage title and main `h1` title on the form.
@@ -150,7 +158,7 @@ Select **Add Option** to view more configuration options:
 
 - **Append n8n Attribution**: Turn off to hide the **Form automated with n8n** attribute at the bottom of the form.
 * **Button Label**: The label to use for your form's submit button. n8n displays the **Button Label** as the name of the submit button.
-* **Form Path**: The final segment of the form's URL, for both testing and production. Replaces the automatically generated UUID as the final component.
+* **Form Path**: The final segment of the form's URL, for both testing and production. Replaces the automatically generated UUID as the final component. Available from node version 2.2. In earlier versions, **Form Path** is a main parameter (refer to [Form Path](#form-path)).
 * **Ignore Bots**: Turn on to ignore requests from bots like link previewers and web crawlers.
 * **Include User in Output**: Only relevant when **Authentication** is set to **n8n User Auth**. Turn off to exclude the submitting user's ID, email, first name, and last name from the node's output (turned on by default).
 * **Use Workflow Timezone**: Turn on to use the timezone in the [Workflow settings](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/configure-workflow-settings) instead of UTC (default). This affects the value of the `submittedAt` timestamp in the node output.

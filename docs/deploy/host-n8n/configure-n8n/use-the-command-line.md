@@ -72,14 +72,25 @@ n8n execute --id <ID>
 You can publish or unpublish a workflow using the CLI. In n8n 2.0, the [previous active/inactive toggle](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v20-breaking-changes) was replaced by a publish/unpublish model. Use `publish:workflow` and `unpublish:workflow` to change a workflow's published state from the CLI.
 
 {% hint style="info" %}
-**Restart required**
+**When changes take effect**
 
-These commands operate on your n8n database. If you execute them while n8n is running, the changes don't take effect until you restart n8n.
+These commands change your n8n database. When a running n8n applies the change depends on your setup:
+
+- If `N8N_USE_WORKFLOW_PUBLICATION_SERVICE` is on (the default), the running instance applies the change without a restart. It checks for changes every 15 seconds by default. If n8n isn't running, it applies the change when it starts.
+- Otherwise, restart n8n to apply the change.
 {% endhint %}
 
 ### Publish a workflow <a href="#publish-a-workflow" id="publish-a-workflow"></a>
 
 Use `publish:workflow` to publish a workflow by its ID. You can optionally publish a specific historical version by passing its `versionId`.
+
+`publish:workflow` runs the same checks as publishing from the editor, such as node validation and webhook path conflicts. If the workflow fails a check, the command doesn't publish it and prints the reason.
+
+{% hint style="warning" %}
+**Republishing a published workflow**
+
+If `N8N_USE_WORKFLOW_PUBLICATION_SERVICE` is `false`, `publish:workflow` refuses to publish a workflow that's already published. Unpublish the workflow first, publish it again, and then restart n8n.
+{% endhint %}
 
 Command flags:
 
@@ -150,6 +161,8 @@ Set the active status of a workflow by its ID to true:
 ```bash
 n8n update:workflow --id=<ID> --active=true
 ```
+
+This publishes the current version of the workflow, with the same checks and limits as [`publish:workflow`](#publish-a-workflow).
 
 Set the active status to false for all the workflows:
 

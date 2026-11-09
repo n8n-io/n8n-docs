@@ -1,5 +1,6 @@
 ABCorp
 accessors?
+ACLs?
 Adalo
 [Aa]ddon
 [Aa]gent
@@ -84,10 +85,12 @@ Dropcontact
 Dynatrace
 eksctl
 [Ee]mbeddable
+else's
 Emelia
 [Ee]nqueued?
 Entra
 [Ee]num
+ePO's
 ERPNext
 [Ee]rroring
 ESLint
@@ -126,6 +129,7 @@ Homeserver
 howto
 HubSpot
 Humantic
+[Ii]dempotency
 Imperva
 indexable
 invalid
@@ -143,12 +147,14 @@ JumpCloud
 Keap
 Kerberos
 Keycloak
+keytab
 Kibana
 Kimi
 Kitemaker
 kubectl
 Kafka
 kafkajs
+Lakebase
 Lemlist
 Lenovo
 librdkafka
@@ -173,6 +179,7 @@ Metabase
 [Mm]illicore
 Milvus('s)?
 Mindee
+MLflow
 [Mm]inimum
 Mocean
 [Mm]ultipart
@@ -309,6 +316,7 @@ URIs
 URL
 URLencoded
 Venafi
+Vercel
 VERO
 Vhost
 VM
@@ -336,3 +344,6 @@ Zoho
 Zscaler
 endhint
 iCalendar
+[Ww]alkthrough
+[Ss]ubpath
+[Aa]utoscaling

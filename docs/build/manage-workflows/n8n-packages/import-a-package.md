@@ -121,9 +121,15 @@ For the ranking rules and the full resolution order, see [Credentials](how-impor
 |------|--------|-------------|
 | `--data-table-matching-mode` | `by-id` (default and only value) | Match the target-project table with the same ID. Never falls back to matching by name. |
 | `--data-table-missing-mode` | `create` (default), `must-preexist`, `do-nothing` | What to do when a referenced table isn't in the target project. `create` creates it from the package schema, keeping the source ID, with no rows. `must-preexist` refuses the import. `do-nothing` skips creation. |
-| `--data-table-schema-conflict-policy` | `keep-existing` (default), `fail` | How strictly a matched table's schema is compared. `keep-existing` tolerates extra columns the target table has of its own. `fail` refuses those too. |
+| `--data-table-schema-conflict-policy` | `keep-existing` (default), `fail`, `overwrite`, `overwrite-non-destructive` | What to do when a matched table's schema differs from the package. `keep-existing` tolerates extra columns the target table has of its own. `fail` refuses those too. `overwrite` changes the target table to match the package. `overwrite-non-destructive` does the same, but refuses the import when a change removes or retypes a column. |
 
-Every column in the package must exist on a matched target table with the same name and type. A missing column or a type mismatch refuses the import under both schema policies. Neither policy ever changes the target table, so package columns are never added to it.
+Under `keep-existing` and `fail`, every column in the package must exist on a matched target table with the same name and type. A missing column or a type mismatch refuses the import, and a column renamed on the source counts as missing. Neither policy changes the target table, so package columns are never added to it.
+
+`overwrite` adds, removes, renames, retypes, and reorders columns, and renames the table. Rows and other columns are kept. Removing or retyping a column removes the values in that column. Renaming a column keeps its values. The changes apply to every workflow that uses the table.
+
+`overwrite-non-destructive` makes the same changes, but stops the import when a change removes or retypes a column. Nothing is written. A column the target table has and the package doesn't counts as removed.
+
+For more on each policy, see [Data tables](how-import-works.md#data-tables).
 
 A matched table is schema-checked even under `--data-table-missing-mode=do-nothing`. That option governs absence, not comparison.
 
@@ -181,7 +187,7 @@ n8n returns the bindings it used in the response. Save the `credentials` map and
 
 ## The import response
 
-A successful import returns `200` with eight keys:
+A successful import returns `200` with nine keys:
 
 ```json
 {
@@ -205,6 +211,7 @@ A successful import returns `200` with eight keys:
 		"credentials": { "crLin44": "crLin44" }
 	},
 	"credentials": { "matched": ["crLin44"], "stubbed": [] },
+	"dataTables": { "matched": 0, "created": 1, "updated": 0 },
 	"variables": { "matched": [], "missing": [], "created": ["slackChannelId"], "stubbed": [], "updated": [] },
 	"tags": { "matched": [], "created": ["prod"], "renamed": [], "reconciled": [], "skipped": [] }
 }
@@ -218,10 +225,9 @@ A successful import returns `200` with eight keys:
 | `projects` | One row per project, with a `status` of `created`, `updated`, or `skipped`. Empty for workflow and folder packages |
 | `bindings` | Source ID to target ID maps for workflows and credentials. Only the `credentials` map can be passed back on a later import |
 | `credentials` | Source credential IDs, split into `matched` and `stubbed` |
+| `dataTables` | The number of data tables `matched`, `created`, and `updated`. `updated` counts tables changed under `overwrite` or `overwrite-non-destructive` |
 | `variables` | Variable names, split into `matched`, `missing`, `created`, `stubbed`, and `updated`. Values never appear |
 | `tags` | Tag names, split into `matched`, `created`, `renamed`, `reconciled`, and `skipped` |
-
-There's no data table summary in the response.
 
 A workflow's `localId` is its ID on the target instance: the package's ID under `--workflow-id-policy=source`, a fresh ID under `new`, and the existing workflow's ID when it was updated or skipped.
 

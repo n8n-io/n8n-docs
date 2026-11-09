@@ -232,11 +232,37 @@ A full manifest for a workflow package holding two workflows:
 }
 ```
 
+## `data-table.json`
+
+Each data table file holds the table's schema. Rows never travel.
+
+```json
+{
+	"id": "dtCn12",
+	"name": "countries",
+	"columns": [
+		{ "id": "dcNm01", "name": "name", "type": "string", "index": 0 },
+		{ "id": "dcCd02", "name": "code", "type": "string", "index": 1 }
+	]
+}
+```
+
+| Field | Description |
+|-------|-------------|
+| `id` | The table's ID on the source instance. A table the import creates keeps it |
+| `name` | The table's name |
+| `columns` | One entry per column, with its `id`, `name`, `type`, and `index` (its position in the table) |
+| `columns[].id` | The column's ID on the source instance. Missing in packages exported before n8n 2.44.0 |
+
+Column IDs let an import recognize a renamed column, so the column keeps its values. Packages exported before n8n 2.44.0 don't carry column IDs, so n8n pairs their columns by name, and a renamed column counts as a destructive change. See [Data tables](how-import-works.md#data-tables).
+
 ## Version compatibility
 
 `packageFormatVersion` is currently `"1"`. An n8n instance imports a package only when the version matches exactly. There's no compatibility window and no migration path: a package declaring any other version is rejected with a `400` before anything is written.
 
 `sourceN8nVersion` is recorded for information only. Nothing compares it against the target instance, so a package moves freely between instances running different n8n versions as long as the format version matches, and as long as the target has the node types the workflows use.
+
+The exception is data table column IDs. From n8n 2.44.0, an exported data table carries column IDs, and an older instance rejects a package with column IDs with a `400`. Upgrade the importing instance first.
 
 ## Comparing packages in a pipeline
 

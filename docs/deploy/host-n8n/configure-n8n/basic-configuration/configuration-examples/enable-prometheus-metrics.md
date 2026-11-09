@@ -58,6 +58,8 @@ n8n_scaling_mode_queue_jobs_failed 0
 n8n_scaling_mode_queue_jobs_waiting 0
 ```
 
+If you deploy n8n on AWS using the [terraform-aws-n8n](https://github.com/n8n-io/terraform-aws-n8n) module, see [Configure Enterprise features on AWS](../../../install-options/use-a-cloud-provider/deploy-to-aws-with-terraform/use-enterprise-features-on-aws.md#prometheus-metrics) for the module-specific setup, including Bull queue depth metrics.
+
 ## Related resources
 
 * [Configuration examples](./)

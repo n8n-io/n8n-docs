@@ -17,6 +17,13 @@ layout:
 
 # Flow node <a href="#flow-node" id="flow-node"></a>
 
+
+{% hint style="warning" %}
+**Feature availability**
+
+The Flow service has shut down and its API no longer responds, so the Flow and Flow Trigger nodes can't connect to it. Workflows using these nodes will fail. Remove them or switch to another service.
+{% endhint %}
+
 Use the Flow node to automate work in Flow, and integrate Flow with other applications. n8n has built-in support for a wide range of Flow features, including creating, updating, and getting tasks.
 
 On this page, you'll find a list of operations the Flow node supports and links to more resources.

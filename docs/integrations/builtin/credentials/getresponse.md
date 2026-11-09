@@ -63,9 +63,9 @@ GetResponse doesn't accept the localhost callback URL. Follow the steps below to
 ```sh
 ngrok http 5678
 ```
-2. Run the following command in a new terminal. Replace `<YOUR-NGROK-URL>` with the URL that you got from the previous step.
+2. Run the following command in a new terminal. Replace `<YOUR-NGROK-URL>` with the URL that you got from the previous step. `N8N_WEBHOOK_URL` is available from n8n 2.30.0; on earlier versions, use `WEBHOOK_URL`.
 ```sh
-export WEBHOOK_URL=<YOUR-NGROK-URL>
+export N8N_WEBHOOK_URL=<YOUR-NGROK-URL>
 ```
 3. Follow the [Using OAuth2](#using-oauth2) instructions to configure your credentials, using this URL as your **Redirect URL**.
 

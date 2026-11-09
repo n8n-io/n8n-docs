@@ -77,6 +77,7 @@ The following events are available. You can choose which events to stream in **S
 * Audit
 	* User login success
 	* User login failed
+	* User login email conflict
 	* User signed up
 	* User updated
 	* User deleted
@@ -413,6 +414,8 @@ N8N_LOG_STREAMING_DESTINATIONS='[
   }
 ]'
 ```
+
+If you deploy n8n on AWS using the [terraform-aws-n8n](https://github.com/n8n-io/terraform-aws-n8n) module, see [Configure Enterprise features on AWS](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/use-a-cloud-provider/deploy-to-aws-with-terraform/use-enterprise-features-on-aws#log-streaming) for the module-specific setup.
 
 ## Related resources
 

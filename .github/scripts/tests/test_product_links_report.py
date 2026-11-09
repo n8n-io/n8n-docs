@@ -505,5 +505,108 @@ class TestSummary(unittest.TestCase):
         self.assertIn("docs.n8n.io links in n8n-io/n8n", out)
 
 
+class TestDeclaresHiddenNode(unittest.TestCase):
+    """A hidden node's docs page is not expected to exist yet (DOC-2380)."""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.dir = Path(self.tmp.name)
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def test_hidden_flag_in_the_node_ts(self):
+        src = "\tdescription = {\n\t\tname: 'x',\n\t\thidden: true,\n\t};\n"
+        f = self.dir / "X.node.ts"
+        f.write_text(src)
+        self.assertTrue(plr.declares_hidden_node(f, src))
+
+    def test_visible_node_ts(self):
+        src = "\tdescription = {\n\t\tname: 'x',\n\t};\n"
+        f = self.dir / "X.node.ts"
+        f.write_text(src)
+        self.assertFalse(plr.declares_hidden_node(f, src))
+
+    def test_hidden_false_is_not_hidden(self):
+        src = "\t\thidden: false,\n"
+        f = self.dir / "X.node.ts"
+        f.write_text(src)
+        self.assertFalse(plr.declares_hidden_node(f, src))
+
+    def test_node_json_defers_to_its_twin_ts(self):
+        """The SharePoint Trigger shape: flag in the `.ts`, URL in the `.json`."""
+        (self.dir / "X.node.ts").write_text("\t\thidden: true,\n")
+        j = self.dir / "X.node.json"
+        body = '{"resources": {"primaryDocumentation": [{"url": "https://docs.n8n.io/x/"}]}}'
+        j.write_text(body)
+        self.assertTrue(plr.declares_hidden_node(j, body))
+
+    def test_node_json_with_a_visible_twin(self):
+        (self.dir / "X.node.ts").write_text("\t\tname: 'x',\n")
+        j = self.dir / "X.node.json"
+        j.write_text("{}")
+        self.assertFalse(plr.declares_hidden_node(j, "{}"))
+
+    def test_node_json_with_no_twin_is_treated_as_visible(self):
+        """Better to report a link we cannot classify than to drop it silently."""
+        j = self.dir / "Orphan.node.json"
+        j.write_text("{}")
+        self.assertFalse(plr.declares_hidden_node(j, "{}"))
+
+    def test_an_ordinary_source_file_is_never_hidden(self):
+        """`hidden: true` only means a hidden node inside a `.node.*` file."""
+        src = "const style = { hidden: true };\n"
+        f = self.dir / "widget.vue"
+        f.write_text(src)
+        self.assertFalse(plr.declares_hidden_node(f, src))
+
+
+class TestScanSkipsHiddenNodes(unittest.TestCase):
+    """End to end: a hidden node's dead docs URL never reaches the findings."""
+
+    def setUp(self):
+        self.docs_tmp = tempfile.TemporaryDirectory()
+        self.docs = Path(self.docs_tmp.name)
+        (self.docs / plr.ROOT_SPACE).mkdir()
+
+    def tearDown(self):
+        self.docs_tmp.cleanup()
+
+    def test_hidden_node_ts_is_skipped(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            src = Path(tmp)
+            (src / "pkg").mkdir(parents=True)
+            (src / "pkg" / "Hidden.node.ts").write_text(
+                "\t\tdocumentationUrl: 'https://docs.n8n.io/no-such-page/',\n"
+                "\t\thidden: true,\n")
+            findings, totals = plr.scan(src, live=False, docs_root=self.docs)
+        self.assertEqual(findings, [])
+        self.assertEqual(totals["hidden_nodes"], 1)
+        self.assertEqual(totals["unique_urls"], 0)
+
+    def test_hidden_node_json_is_skipped_via_its_twin(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            src = Path(tmp)
+            (src / "pkg").mkdir(parents=True)
+            (src / "pkg" / "Hidden.node.ts").write_text("\t\thidden: true,\n")
+            (src / "pkg" / "Hidden.node.json").write_text(
+                '{"resources": {"primaryDocumentation":'
+                ' [{"url": "https://docs.n8n.io/no-such-page/"}]}}')
+            findings, totals = plr.scan(src, live=False, docs_root=self.docs)
+        self.assertEqual(findings, [])
+        self.assertEqual(totals["hidden_nodes"], 1)
+
+    def test_a_visible_node_is_still_reported(self):
+        """The pin that matters: the skip must not swallow real findings."""
+        with tempfile.TemporaryDirectory() as tmp:
+            src = Path(tmp)
+            (src / "pkg").mkdir(parents=True)
+            (src / "pkg" / "Visible.node.ts").write_text(
+                "\t\tdocumentationUrl: 'https://docs.n8n.io/no-such-page/',\n")
+            findings, totals = plr.scan(src, live=False, docs_root=self.docs)
+        self.assertEqual(totals["hidden_nodes"], 0)
+        self.assertEqual([f["kind"] for f in findings], ["unresolved-path"])
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

@@ -1,0 +1,22 @@
+docs/build/manage-workflows/n8n-packages/how-import-works.md
+  ai_agent 212
+  s_481a47571961f9::t_6338a80412abab 229
+docs/build/manage-workflows/n8n-packages/export-a-package.md
+  s_481a47571961f9::t_6338a80412abab 80,127-143,201
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "a9d64d6bc0d82b798dfbca0f158bddec9ba8aad1",
+  "prompts": {},
+  "sessions": {
+    "s_481a47571961f9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "febba625-4573-4933-b74b-d2ec2e270f37",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jan K. <jan.kalkan@n8n.io>"
+    }
+  }
+}

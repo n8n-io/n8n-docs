@@ -43,6 +43,7 @@
     * [Package format](manage-workflows/n8n-packages/package-format.md)
     * [Export a package](manage-workflows/n8n-packages/export-a-package.md)
     * [Import a package](manage-workflows/n8n-packages/import-a-package.md)
+    * [Export and import agents](manage-workflows/n8n-packages/export-and-import-agents.md)
     * [How import works](manage-workflows/n8n-packages/how-import-works.md)
     * [Limits and permissions](manage-workflows/n8n-packages/limits-and-permissions.md)
   * [Share with others](manage-workflows/share-with-others.md)

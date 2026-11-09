@@ -39,7 +39,7 @@ Each request counts toward two limits at the same time:
 - **All endpoints:** one count for the API key across every endpoint.
 - **Each endpoint:** a separate count for the API key on each endpoint. An endpoint is a method and a path. For example, `GET /api/v1/workflows/{workflowId}` is one endpoint for every workflow ID.
 
-n8n rejects a request when it's over either limit. Each limit has a window in seconds. The count starts again when the window ends.
+n8n rejects a request when accepting it would go over either limit. Each limit has a window in seconds. The count starts again when the window ends.
 
 | Limit | Default | Window |
 | :---- | :------ | :----- |
@@ -66,7 +66,7 @@ The headers aren't present when rate limiting is off, or when the request doesn'
 
 ## When you reach a limit
 
-A request over a limit gets this response:
+A request over a limit gets a response like this:
 
 ```http
 HTTP/1.1 429 Too Many Requests
@@ -97,7 +97,7 @@ To stay under the limits and recover when you reach one:
 
 An n8n workflow can call the n8n API of its own instance, for example with the **n8n** node or the **HTTP Request** node. A node runs once for each item, so a list of 1,000 items sends about 1,000 requests at once. These nodes don't wait for `Retry-After`, and the node fails on a `429`.
 
-To stay under the limits, open the node's **Options**, add **Batching**, and set **Items per Batch** and **Batch Interval (ms)**. For example, five items each second sends 300 requests a minute, which is below every default limit.
+To stay under the limits, add **Batching** to the node. In the **n8n** node, it's in **Request Options**. In the **HTTP Request** node, it's in **Options**. Then set **Items per Batch** and **Batch Interval (ms)**. For example, five items each second sends 300 requests a minute, which is below every default limit.
 
 **Retry On Fail** doesn't fix a `429`. It waits at most 5 seconds between tries, which is often inside the same window, and it runs the node again for every item.
 
@@ -108,7 +108,7 @@ A retried POST can create a duplicate if the first request already succeeded. Se
 An instance owner or admin can turn on and change the limits in three ways:
 
 - In the n8n settings
-- With the n8n API
+- With the n8n public API
 - With environment variables, on a self-hosted instance
 
 A change in the settings or with the API applies at once. You don't need to restart n8n.
@@ -129,7 +129,7 @@ At least one limit must have a value to turn on rate limiting.
 
 To turn off rate limiting, turn off **Enable API key rate limits**.
 
-### With the n8n API
+### With the n8n public API
 
 Use these endpoints. The API key needs the `securitySettings:manage` scope.
 

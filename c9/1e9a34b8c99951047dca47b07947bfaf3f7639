@@ -1,0 +1,9 @@
+docs/administer/environments/git-based-promotion/generic-git.md
+  ai_agent 29,40,54-56
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "c91e9a34b8c99951047dca47b07947bfaf3f7639",
+  "prompts": {}
+}

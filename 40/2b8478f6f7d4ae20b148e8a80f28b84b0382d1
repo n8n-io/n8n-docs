@@ -1,0 +1,47 @@
+docs/administer/environments/protect-a-production-instance.md
+  s_8ec7bfed268277::t_b7b7da27697741 1-42
+docs/administer/environments/promote-changes.md
+  s_8ec7bfed268277::t_9e707e0012638f 19,74
+docs/administer/environments/upgrade-from-environments-classic.md
+  s_8ec7bfed268277::t_c4d8cf742f6046 52-54,58-65,67,69-75,79,81
+  s_8ec7bfed268277::t_898b70d1596d58 77-78
+  s_8ec7bfed268277::t_9e707e0012638f 2,24,80,94
+docs/administer/environments/git-based-promotion/generic-git.md
+  s_8ec7bfed268277::t_9e707e0012638f 69
+docs/administer/environments/apply-changes.md
+  s_8ec7bfed268277::t_9e707e0012638f 19,117
+docs/administer/environments/plan-your-environments.md
+  s_8ec7bfed268277::t_4e8c6c4dfc44dd 21,26,42,57,61,65,70-71
+  s_8ec7bfed268277::t_55363d4141f3f4 41,55
+docs/administer/environments/git-based-promotion/README.md
+  s_8ec7bfed268277::t_9e707e0012638f 70
+docs/administer/SUMMARY.md
+  s_8ec7bfed268277::t_9e707e0012638f 30,33
+docs/administer/environments/promotion-reviews.md
+  s_8ec7bfed268277::t_9e707e0012638f 35
+docs/administer/environments/first-promotion.md
+  s_8ec7bfed268277::t_c4d8cf742f6046 13
+  s_8ec7bfed268277::t_b7b7da27697741 2,9,11,33,35,43,51,68
+docs/administer/environments/git-based-promotion/gitlab.md
+  s_8ec7bfed268277::t_9e707e0012638f 71
+docs/administer/environments/README.md
+  s_8ec7bfed268277::t_9e707e0012638f 2,14,47,90,99,102,106
+docs/administer/environments/known-limitations.md
+  s_8ec7bfed268277::t_9e707e0012638f 106
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "402b8478f6f7d4ae20b148e8a80f28b84b0382d1",
+  "prompts": {},
+  "sessions": {
+    "s_8ec7bfed268277": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b9ff11b4-095e-4619-830d-c574ab65583e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jan K. <jan.kalkan@n8n.io>"
+    }
+  }
+}

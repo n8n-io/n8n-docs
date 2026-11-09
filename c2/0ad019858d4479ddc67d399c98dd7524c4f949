@@ -1,0 +1,21 @@
+docs/deploy/host-n8n/configure-n8n/use-the-command-line.md
+  s_122c352d9bbc34::t_61f3b05073c7be 75,77-80
+  s_122c352d9bbc34::t_696779de6ee5d2 87-94
+  s_122c352d9bbc34::t_1f2dcbfbc0d3ab 165-166
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "c20ad019858d4479ddc67d399c98dd7524c4f949",
+  "prompts": {},
+  "sessions": {
+    "s_122c352d9bbc34": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "85dd6495-03bc-44d8-8c1c-c118edc05fd0",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Veljko Terzic <veljko.terzic@n8n.io>"
+    }
+  }
+}

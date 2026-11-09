@@ -1,0 +1,19 @@
+docs/integrations/builtin/trigger-nodes/n8n-nodes-base.microsoftteamstrigger.md
+  s_7bb689d09afa62::t_d02136b74c7a51 64
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f3866f4b02590c1abeeb9876144529509533d09f",
+  "prompts": {},
+  "sessions": {
+    "s_7bb689d09afa62": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ba522aff-a196-4ca1-9cba-fa30c8d14a08",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Csaba Tuncsik <csaba.tuncsik@gmail.com>"
+    }
+  }
+}

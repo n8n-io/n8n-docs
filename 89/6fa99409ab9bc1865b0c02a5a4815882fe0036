@@ -1,0 +1,22 @@
+docs/administer/environments/README.md
+  s_8ec7bfed268277::t_0490b58035771c 14,45,51,53
+docs/administer/environments/known-limitations.md
+  s_8ec7bfed268277::t_0490b58035771c 24,26,34,66,68-72
+  ai_agent 76
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "896fa99409ab9bc1865b0c02a5a4815882fe0036",
+  "prompts": {},
+  "sessions": {
+    "s_8ec7bfed268277": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b9ff11b4-095e-4619-830d-c574ab65583e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jan K. <jan.kalkan@n8n.io>"
+    }
+  }
+}

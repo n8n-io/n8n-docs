@@ -1,0 +1,11 @@
+docs/administer/environments/README.md
+  ai_agent 47,77
+docs/administer/environments/review-promotions.md
+  ai_agent 39
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "777e2c8b312b0c31b120a0a8f18fb23848e989e9",
+  "prompts": {}
+}

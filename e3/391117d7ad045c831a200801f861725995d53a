@@ -1,0 +1,43 @@
+docs/administer/environments/set-up-environments.md
+  s_8ec7bfed268277::t_272af7e2f51e57 14-16,28,81-84
+docs/administer/environments/git-based-promotion/generic-git.md
+  ai_agent 38
+  s_8ec7bfed268277::t_272af7e2f51e57 39,42
+docs/administer/environments/known-limitations.md
+  s_8ec7bfed268277::t_272af7e2f51e57 26,30,65,94-95,99-100
+docs/administer/environments/apply-changes.md
+  s_8ec7bfed268277::t_272af7e2f51e57 2,14,22,64,68,89,91-93,95
+  ai_agent 26
+docs/administer/environments/review-promotions.md
+  s_8ec7bfed268277::t_272af7e2f51e57 35,61-62,64-67
+docs/administer/environments/git-based-promotion/gitlab.md
+  s_8ec7bfed268277::t_272af7e2f51e57 75
+docs/administer/environments/git-based-promotion/README.md
+  s_8ec7bfed268277::t_272af7e2f51e57 28,41,49,51,73,75-76,78-79
+docs/administer/environments/promote-changes.md
+  s_8ec7bfed268277::t_272af7e2f51e57 22,29,45,85-86,89,91
+docs/administer/environments/switch-from-environments-classic.md
+  s_8ec7bfed268277::t_272af7e2f51e57 24,32,36,53,68,70-74
+docs/contribute/contribution-guide-for-n8n-docs/terminology.md
+  s_8ec7bfed268277::t_272af7e2f51e57 131
+docs/administer/environments/README.md
+  s_8ec7bfed268277::t_272af7e2f51e57 65
+docs/administer/environments/plan-your-environments.md
+  s_8ec7bfed268277::t_272af7e2f51e57 65,71-76
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "e3391117d7ad045c831a200801f861725995d53a",
+  "prompts": {},
+  "sessions": {
+    "s_8ec7bfed268277": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b9ff11b4-095e-4619-830d-c574ab65583e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jan K. <jan.kalkan@n8n.io>"
+    }
+  }
+}

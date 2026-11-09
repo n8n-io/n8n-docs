@@ -1,0 +1,32 @@
+docs/administer/environments/apply-changes.md
+  s_8ec7bfed268277::t_d29bcfb7da4c1c 28,44,90
+docs/administer/environments/promote-changes.md
+  s_8ec7bfed268277::t_d29bcfb7da4c1c 28,65,67
+docs/administer/environments/README.md
+  s_8ec7bfed268277::t_d29bcfb7da4c1c 21-22
+docs/administer/environments/known-limitations.md
+  s_8ec7bfed268277::t_d29bcfb7da4c1c 48,50,68,70
+docs/administer/environments/set-up-environments.md
+  s_8ec7bfed268277::t_d29bcfb7da4c1c 27,61,67
+docs/administer/environments/git-based-promotion/gitlab.md
+  s_8ec7bfed268277::t_69d5a8a9b5dfc8 42
+docs/administer/environments/promotion-reviews.md
+  s_8ec7bfed268277::t_d9763090712b6c 28
+  s_8ec7bfed268277::t_69d5a8a9b5dfc8 12,15,23,27,29,35-51,53,60,66
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "26448b380691deca1c3ba3113a602ced78fd2316",
+  "prompts": {},
+  "sessions": {
+    "s_8ec7bfed268277": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b9ff11b4-095e-4619-830d-c574ab65583e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jan K. <jan.kalkan@n8n.io>"
+    }
+  }
+}

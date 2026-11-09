@@ -1,0 +1,21 @@
+docs/integrations/builtin/credentials/microsoft.md
+  s_7bb689d09afa62::t_01abd8730823e5 246
+docs/changelog/release-notes.md
+  s_7bb689d09afa62::t_171f3d916a3e86 53
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "38d19a49893897b3a7e85e09a6258453705001aa",
+  "prompts": {},
+  "sessions": {
+    "s_7bb689d09afa62": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ba522aff-a196-4ca1-9cba-fa30c8d14a08",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Csaba Tuncsik <csaba.tuncsik@gmail.com>"
+    }
+  }
+}

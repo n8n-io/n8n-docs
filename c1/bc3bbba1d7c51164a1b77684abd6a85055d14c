@@ -1,0 +1,40 @@
+docs/administer/environments/known-limitations.md
+  s_8ec7bfed268277::t_59089b0ff270f9 96
+docs/administer/environments/plan-your-environments.md
+  s_8ec7bfed268277::t_59089b0ff270f9 88
+docs/administer/environments/set-up-environments.md
+  s_8ec7bfed268277::t_59089b0ff270f9 38,80
+docs/administer/use-source-control-and-environments/README.md
+  ai_agent 23
+docs/administer/environments/apply-changes.md
+  s_8ec7bfed268277::t_59089b0ff270f9 106
+docs/administer/environments/README.md
+  s_8ec7bfed268277::t_59089b0ff270f9 86
+  ai_agent 97
+docs/administer/environments/upgrade-from-environments-classic.md
+  s_8ec7bfed268277::t_59089b0ff270f9 2,12,45-54
+docs/administer/SUMMARY.md
+  s_8ec7bfed268277::t_59089b0ff270f9 38
+docs/administer/environments/promotion-reviews.md
+  s_8ec7bfed268277::t_59089b0ff270f9 83
+docs/administer/environments/git-based-promotion/README.md
+  s_8ec7bfed268277::t_59089b0ff270f9 79
+docs/administer/environments/promote-changes.md
+  s_8ec7bfed268277::t_59089b0ff270f9 82
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "c1bc3bbba1d7c51164a1b77684abd6a85055d14c",
+  "prompts": {},
+  "sessions": {
+    "s_8ec7bfed268277": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b9ff11b4-095e-4619-830d-c574ab65583e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jan K. <jan.kalkan@n8n.io>"
+    }
+  }
+}

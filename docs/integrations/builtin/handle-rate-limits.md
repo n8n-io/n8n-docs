@@ -77,7 +77,7 @@ The HTTP Request node has built-in settings for handling rate limits and large a
 
 ### Batch requests <a href="#batch-requests" id="batch-requests"></a>
 
-Use the Batching option to control how many requests the node sends before pausing. The Batch Interval setting controls the delay between batches.
+Use the **Batching** option to control how many requests the node sends before pausing. The **Batch Interval** setting controls the delay between batches.
 
 1. In the HTTP Request node, select **Add Option** > **Batching**.
 2. Set **Items per Batch** to the number of input items to process in each batch. Each input item generates a separate HTTP request.

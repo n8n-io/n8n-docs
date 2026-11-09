@@ -192,6 +192,47 @@ A bound credential that can't be resolved always refuses the import, even under 
 
 n8n returns the bindings it used in the response. Save the `credentials` map and pass it back as `--bindings='{"credentials":{...}}'` on a later import to keep the mapping stable. The response also carries a `workflows` map, which is informational: sending it back is rejected with a `400`.
 
+## Import a selection from a project package
+
+`import-selection` imports chosen workflows from one project in a package, and can remove workflows from the target project in the same call. It only accepts a [project package](package-format.md#project-package), the kind you get by exporting with `--project-id`, and refuses a package with agents.
+
+```bash
+# Import two workflows from the project
+n8n-cli package import-selection --file=team-ligo.n8np \
+	--selected-project-id=prTeam9 \
+	--selected-workflow-ids=wf7Kq2,wf9Zx1
+
+# Import one workflow and remove another
+n8n-cli package import-selection --file=team-ligo.n8np \
+	--selected-project-id=prTeam9 \
+	--selected-workflow-ids=wf7Kq2 \
+	--deleted-workflow-ids=wfOld01
+```
+
+Or call `POST /api/v1/n8n-packages/import-selection` with the same multipart form as `/import`. Send `selectedWorkflowIds` and `deletedWorkflowIds` as JSON arrays in text fields, such as `["wf7Kq2","wf9Zx1"]`.
+
+A project package can hold several projects, so `--selected-project-id` names the one to take workflows from. n8n writes them into the project with the same ID on the target, and creates that project if it doesn't exist. Workflows in neither list, and other projects, stay as they are.
+
+| Flag | Description |
+|------|-------------|
+| `--selected-project-id` | The project in the package to take workflows from. The target project has the same ID. Required. |
+| `--selected-workflow-ids` | Workflow IDs in the package to import. Comma-separate them, or repeat the flag. |
+| `--deleted-workflow-ids` | Workflow IDs on the target to remove. n8n ignores an ID that doesn't exist. |
+| `--conflict-policy` | `new-version` (default), `fail`, or `skip`. Works as on a full import. |
+| `--overwrite-deletion-policy` | `archive` (default) or `hard-delete`. How n8n removes the workflows in `--deleted-workflow-ids`. |
+
+The other options have fixed values:
+
+* **Folders:** n8n merges every folder of the selected project, including folders with no selected workflows.
+* **Credentials and variables:** they must already exist on the target, and n8n doesn't change them.
+* **Data tables:** n8n matches them by ID and creates missing ones. An incompatible schema refuses the import.
+* **Tags:** n8n creates missing tags and skips conflicting ones.
+* **Publishing:** n8n follows `match-source`.
+
+The response has the same shape as a full import, with removed workflows in `removedWorkflows`.
+
+For the scopes it needs, see [Limits and permissions](limits-and-permissions.md#import).
+
 ## The import response
 
 A successful import returns `200` with a summary of what it did:

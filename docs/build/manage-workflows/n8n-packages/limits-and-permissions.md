@@ -90,7 +90,7 @@ Both endpoints authenticate with an API key, and the import is attributed to tha
 |-------|-------------|
 | `workflow:import` | The package contains workflows |
 | `folder:create` and `folder:update` | The package contains folders |
-| `workflow:delete` | The import archives or restores an existing workflow, or `--folder-conflict-policy` is `overwrite` |
+| `workflow:delete` | The import archives or restores an existing workflow, `--folder-conflict-policy` is `overwrite`, or `--deleted-workflow-ids` names a workflow |
 | `folder:delete` | `--folder-conflict-policy` is `overwrite` |
 | `workflow:activate` | The import actually publishes a workflow, including a republish under the default `--publishing-policy=preserve-published-state` |
 | `workflow:deactivate` | The import actually unpublishes a workflow under `--publishing-policy=match-source` or `unpublish-all` |
@@ -105,6 +105,8 @@ Both endpoints authenticate with an API key, and the import is attributed to tha
 | `tag:update` | The import actually renames or reconciles a tag |
 
 An import with agents also needs agent and skill scopes, depending on what it creates, updates, and publishes. See [Permissions for import](export-and-import-agents.md#permissions-for-import).
+
+The same scopes apply when you [import a selection from a project package](import-a-package.md#import-a-selection-from-a-project-package).
 
 The publishing scopes, the credential scopes, `dataTable:update`, and the variable and tag scopes are judged from what the import will really write, so a package that references tags or variables which all already match needs neither scope. The rest are judged from what the package declares, which means `dataTable:create` is required even when every referenced table already exists.
 

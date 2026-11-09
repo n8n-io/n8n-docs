@@ -212,7 +212,8 @@ Each reason an import can be blocked appears in the `issues` array with a `type`
 | `workflow-lineage-conflict` | | The target project has more than one workflow imported from the same package workflow, so n8n can't tell which one to update. If only one of them isn't archived, n8n updates that one |
 | `workflow-id-conflict` | | The package ID of a new workflow is already used somewhere on the instance, including in another project and including archived workflows |
 | `workflow-archive-forbidden` | | The import would archive or restore an existing workflow, and you don't have permission to delete it |
-| `workflow-removal-forbidden` | | `--folder-conflict-policy=overwrite` would remove a workflow you don't have permission to delete |
+| `workflow-removal-forbidden` | | `--folder-conflict-policy=overwrite` or `--deleted-workflow-ids` would remove a workflow you don't have permission to delete |
+| `workflow-removal-conflict` | | In a selection import, a selected workflow's target ID is also in `--deleted-workflow-ids` |
 | `folder-removal-forbidden` | | `--folder-conflict-policy=overwrite` would remove a folder you don't have permission to delete |
 | `workflow-folder-conflict` | | The existing workflow lives in a different folder than the import would put it in. This refuses the import even under `--conflict-policy=skip` |
 | `project-conflict` | `fail-policy` | The project exists and `--project-conflict-policy` is `fail` |
@@ -229,7 +230,7 @@ Each reason an import can be blocked appears in the `issues` array with a `type`
 | `policy-violation` | | An instance policy refuses a workflow in the package. n8n refuses the whole import rather than skipping the workflow, because other workflows may reference it |
 | `missing-node-type` | | A workflow uses a node type or version the instance doesn't have, under `--missing-node-type-mode=fail` |
 
-The HTTP status depends on the kind of problem. The response is a `409` if any issue is conflict-shaped: a workflow, workflow lineage, project, folder, credential, or variable conflict, a data table ID or name conflict, or tag rename drift or name collision. Everything else is a `422`. A mixed set containing one conflict returns `409` for the whole response.
+The HTTP status depends on the kind of problem. The response is a `409` if any issue is conflict-shaped: a workflow, workflow lineage, workflow removal, project, folder, credential, or variable conflict, a data table ID or name conflict, or tag rename drift or name collision. Everything else is a `422`. A mixed set containing one conflict returns `409` for the whole response.
 
 Some failures are reported on their own rather than batched with the rest, because they stop n8n before it can plan: a missing license feature, a missing API key scope, and a malformed package.
 

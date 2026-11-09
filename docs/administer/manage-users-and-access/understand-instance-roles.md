@@ -64,8 +64,6 @@ n8n recommends that owners create a second account with the **Member** role for 
 | Add and remove users | ✅ | ✅ | ❌ | ❌ |
 | Access the n8n Cloud console | ✅ | ❌ | ❌ | ❌ |
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Chat user role
 The Chat user role is for people who only need to use n8n through Chat. Chat users can't build workflows or access other n8n features.
 

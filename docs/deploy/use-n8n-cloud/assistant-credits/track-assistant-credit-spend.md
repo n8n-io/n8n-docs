@@ -13,8 +13,6 @@ The **Assistant credits** page in the n8n Cloud console shows your [Assistant cr
 
 You can also check your balance in the editor, from the n8n Assistant panel.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Balance
 
 The balance card shows how many credits you have available, split into two parts:

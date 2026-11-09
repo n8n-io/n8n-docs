@@ -16,8 +16,6 @@ The n8n Cloud console at [app.n8n.cloud](https://app.n8n.cloud) is where the ins
 
 Only the instance owner can open the Cloud console. Other users on the instance work in the n8n editor and don't have access to it.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Pages in the Cloud console
 
 The left sidebar of the Cloud console has these pages:

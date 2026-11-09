@@ -14,13 +14,17 @@ layout:
 
 This hosting guide shows you how to self-host n8n with Amazon Web Services (AWS). It uses n8n with Postgres as a database backend using Kubernetes to manage the necessary resources and reverse proxy.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Hosting options <a href="#hosting-options" id="hosting-options"></a>
 
 AWS offers several ways suitable for hosting n8n, including EC2 (virtual machines), and EKS (containers running with Kubernetes).
 
 This guide uses [EKS](https://aws.amazon.com/eks/) as the hosting option. Using Kubernetes requires some additional complexity and configuration, but is the best method for scaling n8n as demand changes.
+
+{% hint style="info" %}
+**Looking for a production-grade, highly available setup?**
+
+For a multi-main deployment with managed PostgreSQL, Redis, and autoscaling workers, see [Deploy to AWS with Terraform](deploy-to-aws-with-terraform/README.md).
+{% endhint %}
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
@@ -205,6 +209,7 @@ kubectl delete -f .
 ## Related resources
 
 * [Use a cloud provider](./)
+* [Deploy to AWS with Terraform](deploy-to-aws-with-terraform/README.md)
 * [DigitalOcean](deploy-to-digital-ocean.md)
 * [Heroku](deploy-to-heroku.md)
 * [Hetzner Cloud](deploy-to-hetzner.md)

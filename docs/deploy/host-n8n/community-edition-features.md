@@ -53,8 +53,6 @@ An **edition** is the variant of the self-hosted software you run: Community, Re
 Exact features per plan and edition can change. For the current breakdown, see the [pricing page](https://n8n.io/pricing/). This page explains what the plans and editions are and the main differences between them, not the full feature list.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Community edition <a href="#community-edition" id="community-edition"></a>
 
 The Community edition includes almost the complete feature set of n8n. It doesn't include these features:
@@ -85,11 +83,11 @@ To register a new Community edition instance, select the option during your init
 To register an existing Community edition instance:
 
 1. Select the **three dots icon** <img src="../.gitbook/assets/three-dots-horizontal (1).png" alt="three dots icon" data-size="line"> in the lower-left corner.
-2. Select **Settings** and then **Usage and plan**.
+2. Select **Settings** and then **Plan & usage**.
 3. Select **Unlock** to enter your email and then select **Send me a free license key**.
 4. Check your email for the account you entered.
 
-Once you have a license key, activate it by selecting the button in the license email, or by going to **Options > Settings > Usage and plan** and selecting **Enter activation key**.
+Once you have a license key, activate it by selecting the button in the license email, or by going to **Options > Settings > Plan & usage** and selecting **Enter activation key**.
 
 ## Business and Enterprise plans <a href="#business-and-enterprise-editions" id="business-and-enterprise-editions"></a>
 

@@ -20,8 +20,6 @@ To change the instance timezone:
 1. In the **Runtime** section, select the timezone you want from the **Time zone** dropdown. You can type to search the list.
 1. Select **Save and restart** in the bar at the bottom of the page. Your instance restarts to apply the change, and is offline until the restart completes.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Related resources
 
 * [Configure Cloud](./)

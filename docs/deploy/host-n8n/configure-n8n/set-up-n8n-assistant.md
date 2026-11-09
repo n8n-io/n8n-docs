@@ -1,9 +1,5 @@
 ---
 description: Set up n8n Assistant on self-hosted n8n using environment variables.
-status: preview
-tags:
-  - tag: preview
-    primary: true
 layout:
   width: default
   title:
@@ -33,17 +29,20 @@ n8n Assistant is available on:
 
 - **n8n Cloud:** Starter, Pro
 - **Self-hosted:** Community, Registered Community, Business
-
-It isn't ready for n8n Cloud Enterprise or self-hosted Enterprise yet. If you're an Enterprise customer, contact your Customer Success Manager about preview access.
 {% endhint %}
 
 {% hint style="info" %}
-**Preview status**
+**Limited enterprise readiness**
 
-n8n Assistant is in Preview. It can make mistakes, and behavior may change while the feature is in development. Always review generated workflows before using them in production.
+n8n Assistant has **Limited enterprise readiness**. It partially supports the following Enterprise capabilities:
+
+- **RBAC and project scoping**
+- **Data residency**
+- **Queue mode and multi-main**
+- **Environments and source control**
+
+It doesn't yet support all other relevant Enterprise capabilities.
 {% endhint %}
-
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
 
 ## What n8n Assistant needs
 

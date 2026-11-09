@@ -19,8 +19,6 @@ You can run n8n in different modes depending on your needs. The queue mode provi
 n8n doesn't support queue mode with binary data storage in filesystem. If your workflows need to persist binary data in queue mode, you can use [S3 external storage](use-external-storage.md).
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## How it works <a href="#how-it-works" id="how-it-works"></a>
 
 When running in queue mode, you have multiple n8n instances set up, with one main instance receiving workflow information (such as triggers) and the worker instances performing the executions. 
@@ -336,6 +334,8 @@ If needed, you can adjust the leader key options:
 | ------ | ------ | ----- |
 | `multiMainSetup.ttl:10` | `N8N_MULTI_MAIN_SETUP_KEY_TTL=10` | Time to live (in seconds) for leader key in multi-main setup. |
 | `multiMainSetup.interval:3` | `N8N_MULTI_MAIN_SETUP_CHECK_INTERVAL=3` | Interval (in seconds) for leader check in multi-main setup. |
+
+For a reference multi-main deployment on AWS, including worker autoscaling and Redis high availability, see [Scale and run at high availability on AWS](../../install-options/use-a-cloud-provider/deploy-to-aws-with-terraform/scale-and-run-at-high-availability.md).
 
 
 

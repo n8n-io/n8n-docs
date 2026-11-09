@@ -29,8 +29,6 @@ Refer to [Databricks credentials](../credentials/databricks.md) for guidance on 
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Operations <a href="#operations" id="operations"></a>
 
 * Databricks SQL
@@ -422,6 +420,6 @@ Refer to [Set up Lakebase for the Data API](../credentials/databricks.md#set-up-
 
 Refer to [Databricks' REST API documentation](https://docs.databricks.com/api/) for details about their API.
 
-To use Databricks with AI agents, refer to the [Databricks Chat Model](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatdatabricks.md), [Databricks Vector Store](../cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoredatabricks/README.md), [Embeddings Databricks](../cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsdatabricks.md), and [Databricks AI Agent](../cluster-nodes/root-nodes/n8n-nodes-langchain.databricksaiagent.md) nodes, and the [Databricks Genie One MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md).
+To use Databricks with AI agents, refer to the [Databricks Chat Model](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatdatabricks.md), [Databricks Vector Store](../cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoredatabricks/README.md), [Embeddings Databricks](../cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsdatabricks.md), [Databricks AI Agent](../cluster-nodes/root-nodes/n8n-nodes-langchain.databricksaiagent.md), and [Databricks Lakebase Chat Memory](../cluster-nodes/sub-nodes/n8n-nodes-langchain.memorylakebasechat.md) nodes, and the [Databricks Genie One MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md).
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

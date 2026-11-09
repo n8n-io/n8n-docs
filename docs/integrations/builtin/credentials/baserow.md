@@ -22,8 +22,6 @@ You can use these credentials to authenticate the following node:
 
 - [Baserow](../app-nodes/n8n-nodes-base.baserow.md)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Baserow](https://baserow.io/) account on any hosted Baserow instance or a self-hosted instance.

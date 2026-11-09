@@ -21,8 +21,6 @@ layout:
 
 n8n provides keyboard shortcuts for some actions.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Workflow controls <a href="#workflow-controls" id="workflow-controls"></a>
  
  - **Ctrl/Cmd** + **Alt** + **n**: create new workflow
@@ -111,7 +109,7 @@ The Command Bar provides quick access to actions and navigation throughout n8n. 
 
 * [Build](./)
 * [Understand workflows](understand-workflows/README.md)
-* [Build and manage agents](build-and-manage-agents.md)
+* [Build and manage agents](build-and-manage-agents/README.md)
 * [Ways of building workflows](ways-of-building-workflows/README.md)
 * [Manage workflows](manage-workflows/README.md)
 * [Flow logic](flow-logic/README.md)

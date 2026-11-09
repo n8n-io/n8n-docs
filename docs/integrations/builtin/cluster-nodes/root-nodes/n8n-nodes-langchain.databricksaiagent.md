@@ -29,8 +29,6 @@ Refer to [Databricks credentials](../../credentials/databricks.md) for guidance 
 The Databricks AI Agent node is in Preview from n8n 2.45.0 and may change in future releases. Avoid relying on it in production workflows.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Prerequisites
 
 To run the agent, you need a chat model sub-node with its own credential, such as the [Databricks Chat Model](../sub-nodes/n8n-nodes-langchain.lmchatdatabricks.md) node. To export traces, you also need:

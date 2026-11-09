@@ -131,6 +131,32 @@ team-ligo.n8np
 In a project package, where a variable sits decides where it's created. A variable under `projects/<project-slug>/variables/` is created in that project. One at the top level is created globally. This is why `--variable-parent-policy` is rejected for project packages: the layout already decided.
 {% endhint %}
 
+## Agents and skills
+
+[Agents](export-and-import-agents.md) sit next to workflows. In a workflow or folder package, each agent has a directory under the top-level `agents/`. In a project package, an agent sits under its project, in `projects/<project-directory>/agents/`. Each agent directory holds two files:
+
+* `agent.json`: the agent's definition, with its custom tools and schedules.
+* `agent-metadata.json`: the ID of the exported version, and of the version published on the source if there is one. Import uses it to apply the [publishing policy](import-a-package.md#publishing).
+
+Each skill an exported agent uses gets its own directory with a `skill.json`, holding the skill's content and whether it's a project or an instance skill. A project skill sits under its project when that project is in the package. Every other skill sits in the top-level `skills/`:
+
+```
+support.n8np
+├── manifest.json
+├── agents/
+│   └── support-triage-agSup01/
+│       ├── agent.json
+│       └── agent-metadata.json
+├── skills/
+│   └── refund-policy-skRf01/
+│       └── skill.json
+└── credentials/
+    └── openai-account-crOai01/
+        └── credential.json
+```
+
+The manifest lists agents and skills in its `agents` and `skills` entry lists.
+
 ## Directory naming
 
 Each entity gets a directory named after a slug of its name, holding one JSON file. Slugging lowercases the name, drops every character that isn't a letter a to z, a digit, whitespace, or a hyphen, then turns whitespace runs into single hyphens:
@@ -158,25 +184,26 @@ These four fields are always present:
 * `sourceN8nVersion`: the n8n version that created the package.
 * `sourceId`: an identifier for the instance that created the package.
 
-Then come the entry lists, one per entity type that's present: `workflows`, `folders`, `projects`, `credentials`, `dataTables`, `variables`, and `tags`. A list is left out entirely when it would be empty. Every entry has the same three fields:
+Then come the entry lists, one per entity type that's present: `workflows`, `agents`, `skills`, `folders`, `projects`, `credentials`, `dataTables`, `variables`, and `tags`. A list is left out entirely when it would be empty. Every entry has the same three fields:
 
 * `id`: the entity's ID on the source instance.
 * `name`: the entity's name.
 * `target`: the directory holding the entity's JSON file, relative to the package root.
 
-Last comes `requirements`, which lists what the workflows need to run on the target instance. It has up to six sections, and each entry carries `usedByWorkflows`, the IDs of the workflows that need it:
+Last comes `requirements`, which lists what the workflows and agents need to run on the target instance. It has up to seven sections. Each entry carries `usedBy`, the workflows and agents that need it, each as `{ "kind": "workflow", "id": "<id>" }` or `{ "kind": "agent", "id": "<id>" }`:
 
 | Section | Entry shape | Notes |
 |---------|-------------|-------|
-| `credentials` | `{ id, name, type, usedByWorkflows }` | n8n never exports credential data, so a credential requirement always means the target has to supply it |
-| `dataTables` | `{ id, name, usedByWorkflows }` | The schema itself is in the bundled `data-table.json` |
-| `workflows` | `{ id, name, usedByWorkflows }` | Sub-workflow and error workflow references. `name` is optional, because a referenced workflow may not be one the exporting user can see |
-| `variables` | `{ name, usedByWorkflows }` | Name only. There's no ID, because `$vars.<name>` resolves by name at runtime |
-| `tags` | `{ id, name, usedByWorkflows }` | |
-| `nodeTypes` | `{ type, typeVersion, usedByWorkflows }` | Every node type and version the workflows use. Read it to tell whether a target instance can import the package, since it needs all of them installed. n8n re-derives the same list from the workflows on import rather than trusting this one |
+| `credentials` | `{ id, name, type, usedBy }` | n8n never exports credential data, so a credential requirement always means the target has to supply it |
+| `dataTables` | `{ id, name, usedBy }` | The schema itself is in the bundled `data-table.json` |
+| `workflows` | `{ id, name, usedBy }` | Sub-workflow and error workflow references, and workflows an agent uses as tools. `name` is optional, because a referenced workflow may not be one the exporting user can see |
+| `agents` | `{ id, name, usedBy }` | Sub-agents an agent uses. `name` is optional, for the same reason |
+| `variables` | `{ name, usedBy }` | Name only. There's no ID, because `$vars.<name>` resolves by name at runtime |
+| `tags` | `{ id, name, usedBy }` | Only workflows use tags |
+| `nodeTypes` | `{ type, typeVersion, usedBy }` | Every node type and version the workflows and agents' node tools use. Read it to tell whether a target instance can import the package, since it needs all of them installed. n8n re-derives the same list on import rather than trusting this one |
 
 {% hint style="warning" %}
-`requirements` lists what the workflows need, which isn't the same as what the package contains. `requirements.workflows` lists every static workflow reference, including sub-workflows that are bundled in the package. A credential the exporting user can't read appears in `requirements.credentials` with no matching file. Don't read `requirements` as an inventory of the archive; read the entry lists for that.
+`requirements` lists what the workflows and agents need, which isn't the same as what the package contains. `requirements.workflows` lists every static workflow reference, including sub-workflows that are bundled in the package. A credential the exporting user can't read appears in `requirements.credentials` with no matching file. Don't read `requirements` as an inventory of the archive; read the entry lists for that.
 {% endhint %}
 
 A full manifest for a workflow package holding two workflows:
@@ -207,26 +234,26 @@ A full manifest for a workflow package holding two workflows:
 
 	"requirements": {
 		"credentials": [
-			{ "id": "crLin44", "name": "Linear api", "type": "linearApi", "usedByWorkflows": ["wf7Kq2"] }
+			{ "id": "crLin44", "name": "Linear api", "type": "linearApi", "usedBy": [{ "kind": "workflow", "id": "wf7Kq2" }] }
 		],
 		"dataTables": [
-			{ "id": "dtCn12", "name": "countries", "usedByWorkflows": ["wf7Kq2"] }
+			{ "id": "dtCn12", "name": "countries", "usedBy": [{ "kind": "workflow", "id": "wf7Kq2" }] }
 		],
 		"workflows": [
-			{ "id": "wf9Zx1", "name": "Send email", "usedByWorkflows": ["wf7Kq2"] }
+			{ "id": "wf9Zx1", "name": "Send email", "usedBy": [{ "kind": "workflow", "id": "wf7Kq2" }] }
 		],
 		"variables": [
-			{ "name": "slackChannelId", "usedByWorkflows": ["wf7Kq2"] }
+			{ "name": "slackChannelId", "usedBy": [{ "kind": "workflow", "id": "wf7Kq2" }] }
 		],
 		"tags": [
-			{ "id": "tgPr01", "name": "prod", "usedByWorkflows": ["wf7Kq2"] }
+			{ "id": "tgPr01", "name": "prod", "usedBy": [{ "kind": "workflow", "id": "wf7Kq2" }] }
 		],
 		"nodeTypes": [
-			{ "type": "n8n-nodes-base.formTrigger", "typeVersion": 2.5, "usedByWorkflows": ["wf7Kq2"] },
-			{ "type": "n8n-nodes-base.linear", "typeVersion": 1, "usedByWorkflows": ["wf7Kq2"] },
-			{ "type": "n8n-nodes-base.executeWorkflow", "typeVersion": 1.2, "usedByWorkflows": ["wf7Kq2"] },
-			{ "type": "n8n-nodes-base.dataTable", "typeVersion": 1, "usedByWorkflows": ["wf7Kq2"] },
-			{ "type": "n8n-nodes-base.emailSend", "typeVersion": 2.1, "usedByWorkflows": ["wf9Zx1"] }
+			{ "type": "n8n-nodes-base.formTrigger", "typeVersion": 2.5, "usedBy": [{ "kind": "workflow", "id": "wf7Kq2" }] },
+			{ "type": "n8n-nodes-base.linear", "typeVersion": 1, "usedBy": [{ "kind": "workflow", "id": "wf7Kq2" }] },
+			{ "type": "n8n-nodes-base.executeWorkflow", "typeVersion": 1.2, "usedBy": [{ "kind": "workflow", "id": "wf7Kq2" }] },
+			{ "type": "n8n-nodes-base.dataTable", "typeVersion": 1, "usedBy": [{ "kind": "workflow", "id": "wf7Kq2" }] },
+			{ "type": "n8n-nodes-base.emailSend", "typeVersion": 2.1, "usedBy": [{ "kind": "workflow", "id": "wf9Zx1" }] }
 		]
 	}
 }
@@ -281,5 +308,6 @@ The one exception is `manifest.json`, which carries a fresh `exportedAt` on ever
 * [n8n packages](./)
 * [Export a package](export-a-package.md)
 * [Import a package](import-a-package.md)
+* [Export and import agents](export-and-import-agents.md)
 * [How import works](how-import-works.md)
 * [Limits and permissions](limits-and-permissions.md)

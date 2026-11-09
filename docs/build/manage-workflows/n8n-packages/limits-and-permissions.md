@@ -42,7 +42,7 @@ If you're importing large packages, raise `N8N_PAYLOAD_SIZE_MAX` first. Raising 
 
 A few more limits apply to an import request and aren't configurable: exactly one file per request, and 64 KB per option field, which is the practical cap on a `--bindings` value.
 
-Export caps IDs at 300 per group, counted separately for workflow, folder, and project IDs. See [Choose what to export](export-a-package.md#choose-what-to-export).
+Export caps IDs at 300 per group, counted separately for workflow, agent, folder, and project IDs. See [Choose what to export](export-a-package.md#choose-what-to-export).
 
 ## Archive validation
 
@@ -69,7 +69,7 @@ Importing a project package also needs a license that supports team projects.
 
 A missing license feature returns a `403` naming the feature.
 
-Packages are only reachable through the [n8n API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api), so the API has to be enabled on the instance. To stop packages moving in or out of an instance, [disable the public API](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/disable-the-public-api), or don't issue API keys carrying the `workflow:export` and `workflow:import` scopes.
+Packages are only reachable through the [n8n API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api), so the API has to be enabled on the instance. To stop packages moving in or out of an instance, [disable the public API](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/disable-the-public-api), or don't issue API keys carrying the `workflow:export`, `agent:export`, `project:export`, `workflow:import`, and `agent:import` scopes.
 
 ## API key scopes
 
@@ -80,14 +80,15 @@ Both endpoints authenticate with an API key, and the import is attributed to tha
 | Scope | Needed when |
 |-------|-------------|
 | `workflow:export` | You name workflow or folder IDs. Folders use the workflow scope |
-| `project:export` | You name project IDs |
+| `agent:export` | You name agent IDs |
+| `project:export` | You name project IDs, including for the agents in those projects |
 | `variable:list` | Variable values are bundled and the workflows reference at least one variable |
 
 ### Import
 
 | Scope | Needed when |
 |-------|-------------|
-| `workflow:import` | Always |
+| `workflow:import` | The package contains workflows |
 | `folder:create` and `folder:update` | The package contains folders |
 | `project:create` and `project:update` | The package is a project package, whether or not it creates a project |
 | `dataTable:create` | The package references data tables and `--data-table-missing-mode` is `create` |
@@ -96,6 +97,8 @@ Both endpoints authenticate with an API key, and the import is attributed to tha
 | `variable:update` | The import actually overwrites a variable |
 | `tag:create` | The import actually creates a tag |
 | `tag:update` | The import actually renames or reconciles a tag |
+
+An import with agents also needs agent and skill scopes, depending on what it creates, updates, and publishes. See [Permissions for import](export-and-import-agents.md#permissions-for-import).
 
 `dataTable:update` and the last four are judged from what the import will really write, so a package that references tags or variables which all already match needs neither scope. The rest are judged from what the package declares, which means `dataTable:create` is required even when every referenced table already exists.
 
@@ -137,4 +140,5 @@ For what each event's payload holds, see [Events](export-a-package.md#events) on
 * [Package format](package-format.md)
 * [Export a package](export-a-package.md)
 * [Import a package](import-a-package.md)
+* [Export and import agents](export-and-import-agents.md)
 * [How import works](how-import-works.md)

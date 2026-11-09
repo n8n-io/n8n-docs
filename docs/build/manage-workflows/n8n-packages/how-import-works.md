@@ -19,7 +19,7 @@ tags:
 n8n packages are in Preview. Import behavior may change in future releases.
 {% endhint %}
 
-This page covers what n8n does with an [n8n package](README.md) once you've called [import](import-a-package.md): how it decides whether the import can go ahead, and how it resolves each kind of entity.
+This page covers what n8n does with an [n8n package](README.md) once you've called [import](import-a-package.md): how it decides whether the import can go ahead, and how it resolves each kind of entity. For agents, their skills, and their channels, see [Export and import agents](export-and-import-agents.md).
 
 ## Check everything, then write
 
@@ -223,4 +223,5 @@ Missing permission to create a tag, or to create or change a data table, isn't a
 * [Package format](package-format.md)
 * [Export a package](export-a-package.md)
 * [Import a package](import-a-package.md)
+* [Export and import agents](export-and-import-agents.md)
 * [Limits and permissions](limits-and-permissions.md)

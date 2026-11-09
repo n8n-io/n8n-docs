@@ -1,7 +1,7 @@
 ---
 description: >-
-  Export workflows, folders, or whole projects into a .n8np package, and control
-  how n8n handles workflow dependencies.
+  Export workflows, agents, folders, or whole projects into a .n8np package, and
+  control how n8n handles their dependencies.
 status: preview
 layout:
   description:
@@ -53,15 +53,18 @@ n8n-cli package export --folder-id=fdInProg --output=in-progress.n8np
 # A workflow and a folder together
 n8n-cli package export --workflow-id=wf7Kq2 --folder-id=fdInProg --output=mixed.n8np
 
+# A workflow and an agent together
+n8n-cli package export --workflow-id=wf7Kq2 --agent-id=agSup01 --output=support.n8np
+
 # Two whole projects
 n8n-cli package export --project-id=prTeam9 --project-id=prOps3 --output=teams.n8np
 ```
 
-Workflow and folder IDs can be combined. Project IDs can't be combined with either, because a project package has a different shape. Mixing the two groups returns a `400`.
+Workflow, agent, and folder IDs can be combined. Project IDs can't be combined with any of them, because a project package has a different shape. Mixing the two groups returns a `400`.
 
 A folder always brings its nested folders and their workflows. If you name a workflow that's also inside a folder you named, it's exported once, inside the folder.
 
-n8n caps each group of IDs at 300. That's per group, so one export can name 300 workflows and 300 folders. Exceeding the cap returns a `400`, and the CLI doesn't catch it before sending the request.
+n8n caps each group of IDs at 300. That's per group, so one export can name 300 workflows, 300 agents, and 300 folders. Exceeding the cap returns a `400`, and the CLI doesn't catch it before sending the request.
 
 An empty project exports as project metadata only, with no `workflows` list in the manifest.
 
@@ -70,12 +73,13 @@ An empty project exports as project metadata only, with no `workflows` list in t
 | Flag | Description |
 |------|-------------|
 | `--workflow-id`, `-w` | Workflow ID to include. Repeat to export several. |
+| `--agent-id` | Agent ID to include. Repeat to export several. See [Export and import agents](export-and-import-agents.md). |
 | `--folder-id` | Folder ID to include, with everything nested inside it. Repeat to export several. |
-| `--project-id`, `-p` | Project ID to include. Repeat to export several. Can't be combined with `--workflow-id` or `--folder-id`. |
+| `--project-id`, `-p` | Project ID to include. Repeat to export several. Can't be combined with `--workflow-id`, `--agent-id`, or `--folder-id`. |
 | `--output`, `-o` | File to write the package to. Defaults to `export.n8np` in the current directory. |
 | `--include-variable-values` | `true` (default) or `false`. Whether variable values are bundled. See [Variable values](#variable-values). |
 | `--include-tags` | `true` (default) or `false`. Whether the tags on the exported workflows are bundled. |
-| `--dependency-policy` | `fail` (default), `include-in-package`, or `reference-only`. How n8n handles a workflow the package depends on that you didn't name, such as a sub-workflow or an error workflow. See [Workflow dependencies](#workflow-dependencies). |
+| `--dependency-policy` | `fail` (default), `include-in-package`, or `reference-only`. How n8n handles a workflow or agent the package depends on that you didn't name, such as a sub-workflow, an error workflow, or a sub-agent. See [Workflow dependencies](#workflow-dependencies). |
 
 {% hint style="info" %}
 The `n8n-cli package export` flags are shown here in kebab-case. `--help` prints the equivalent camelCase names (`--workflowId`, `--includeTags`, `--dependencyPolicy`), and error messages use them too. Both spellings work.
@@ -87,7 +91,7 @@ The `n8n-cli package export` flags are shown here in kebab-case. `--help` prints
 
 If a workflow calls a sub-workflow, or names an error workflow, that's a dependency of the package. `--dependency-policy` decides what n8n does when a dependency isn't in the set of IDs you named.
 
-The policy only applies to workflows. It doesn't affect the credentials, data tables, variables, or tags the exported workflows use.
+The policy only applies to workflows and agents. It doesn't affect the credentials, data tables, variables, or tags they use. For an agent's sub-agents and workflow tools, see [Agent dependencies](export-and-import-agents.md#agent-dependencies).
 
 | Value | What it does |
 |-------|--------------|
@@ -142,10 +146,10 @@ If the source instance sets `N8N_WORKFLOW_TAGS_DISABLED=true`, tags are left out
 A successful export returns the archive as `application/gzip`, with an `X-N8n-Export-Counts` header carrying the real per-entity counts:
 
 ```
-X-N8n-Export-Counts: {"workflows":2,"folders":0,"credentials":1,"dataTables":1,"variables":1,"tags":1}
+X-N8n-Export-Counts: {"agents":0,"workflows":2,"folders":0,"credentials":1,"dataTables":1,"variables":1,"tags":1}
 ```
 
-These are the counts of what ended up in the archive, after folder contents and any auto-included sub-workflows, so they don't have to match the number of IDs you asked for. The header has no `projects` key. The CLI prints a summary built from it.
+These are the counts of what ended up in the archive, after folder contents and any auto-included sub-workflows and sub-agents, so they don't have to match the number of IDs you asked for. The header has no `projects` key. The CLI prints a summary built from it.
 
 `credentials` counts bundled credential files, so a credential you can't read is recorded as a requirement without adding to the count. `variables` counts bundled variable files rather than referenced names.
 
@@ -156,10 +160,11 @@ The download file name is always `export.n8np`, whatever you exported. The CLI w
 Export needs an API key with:
 
 * `workflow:export`, when you name workflow or folder IDs. Folders use the workflow scope.
-* `project:export`, when you name project IDs.
+* `agent:export`, when you name agent IDs.
+* `project:export`, when you name project IDs, including for the agents in those projects.
 * `variable:list`, when values are bundled and the workflows reference at least one variable.
 
-On top of the API key, you can only export what you can read: n8n checks your own access to each workflow, folder, project, and credential as it builds the package. A credential you can't read is recorded as a requirement rather than bundled.
+On top of the API key, you can only export what you can read: n8n checks your own access to each workflow, agent, folder, project, and credential as it builds the package. A credential you can't read is recorded as a requirement rather than bundled.
 
 Export needs no license feature. For the full matrix, see [Limits and permissions](limits-and-permissions.md).
 
@@ -167,7 +172,7 @@ Export needs no license feature. For the full matrix, see [Limits and permission
 
 | Status | Cause |
 |--------|-------|
-| `400` | A requested workflow, folder, or project doesn't exist, or you can't access it. Also mixing ID groups, passing no IDs, exceeding 300 IDs in a group, or a blocked export under `--dependency-policy=fail` |
+| `400` | A requested workflow, agent, folder, or project doesn't exist, or you can't access it. Also mixing ID groups, passing no IDs, exceeding 300 IDs in a group, or a blocked export under `--dependency-policy=fail` |
 | `403` | The API key is missing a scope it needs |
 
 A missing entity and an inaccessible one return the same `400` with the same message, so you can't use export to test whether an ID exists. Export never returns a `404`.
@@ -183,7 +188,7 @@ Every export emits an event on both the log streaming and telemetry paths, so yo
 | `n8n.audit.n8n-package.export.success` | The export succeeded |
 | `n8n.audit.n8n-package.export.failed` | The export failed |
 
-The success event carries the user and the `workflowIds`, `folderIds`, and `projectIds` that actually ended up in the package, so it reflects folder contents and auto-included sub-workflows rather than what you asked for. Each list is present only when it isn't empty.
+The success event carries the user and the `workflowIds`, `agentIds`, `folderIds`, and `projectIds` that actually ended up in the package, so it reflects folder contents and auto-included dependencies rather than what you asked for. Each list is present only when it isn't empty.
 
 The failure event carries the user, the IDs requested, and a `reason` of `access-denied`, `entity-not-found`, `blocked`, or `validation`.
 
@@ -201,5 +206,6 @@ Telemetry events emit counts to keep the data anonymized.
 * [n8n packages](./)
 * [Package format](package-format.md)
 * [Import a package](import-a-package.md)
+* [Export and import agents](export-and-import-agents.md)
 * [How import works](how-import-works.md)
 * [Limits and permissions](limits-and-permissions.md)

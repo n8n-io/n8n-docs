@@ -65,16 +65,18 @@ Flags are shown in kebab-case throughout this page. `n8n-cli package import --he
 There's no `--force` and no `--dry-run`.
 {% endhint %}
 
-## Workflow options
+## Workflow and agent options
 
 | Flag | Values | Description |
 |------|--------|-------------|
-| `--conflict-policy` | `new-version` (default), `fail`, `skip` | What to do when the workflow already exists on the target. `new-version` saves a new version of the existing workflow, `fail` refuses the whole import, `skip` leaves it alone and carries on. |
-| `--id-policy` | `source` (default and only value) | A new workflow keeps the package's ID. If a workflow that doesn't match already uses that ID anywhere on the instance, n8n refuses the import. A matched workflow keeps its ID on the target. |
-| `--publishing-policy` | `preserve-published-state` (default), `match-source`, `publish-all`, `unpublish-all` | Whether imported workflows end up published. See [Publishing](#publishing). |
-| `--missing-node-type-mode` | `fail` (default), `import-anyway` | What to do when a workflow uses a node type, or a node version, the target instance doesn't have. `fail` refuses before writing anything and lists every missing type with the workflows using it. `import-anyway` imports them, but they're never published. |
+| `--conflict-policy` | `new-version` (default), `fail`, `skip` | What to do when a workflow or agent already exists on the target. `new-version` saves a new version of the existing workflow, or updates the existing agent, `fail` refuses the whole import, `skip` leaves it alone and carries on. |
+| `--id-policy` | `source` (default and only value) | A new workflow or agent keeps the package's ID. If a workflow or agent that doesn't match already uses that ID anywhere on the instance, n8n refuses the import. A matched workflow or agent keeps its ID on the target. |
+| `--publishing-policy` | `preserve-published-state` (default), `match-source`, `publish-all`, `unpublish-all` | Whether imported workflows and agents end up published. See [Publishing](#publishing). |
+| `--missing-node-type-mode` | `fail` (default), `import-anyway` | What to do when a workflow, or an agent's node tool, uses a node type or node version the target instance doesn't have. `fail` refuses before writing anything and lists every missing type with the workflows and agents using it. `import-anyway` imports them, but they're never published. |
 
 n8n matches a package workflow to an existing one by the source workflow ID recorded on the target, falling back to a target workflow whose own ID equals the package's ID. That's what makes repeated promotion converge: the second import updates the workflow rather than creating a duplicate.
+
+These options apply to agents too. For how n8n matches agents, and what happens to their skills and channels, see [Export and import agents](export-and-import-agents.md).
 
 ### Publishing
 
@@ -88,6 +90,8 @@ n8n always writes imported workflows unpublished, then applies the publishing po
 | `unpublish-all` | New workflows stay drafts, and updated workflows are unpublished. |
 
 Two things override the policy. A workflow that uses a placeholder credential is never published, and neither is one using a node type the instance doesn't have. n8n reports those as `blocked` with the reason. An archived workflow is never published either.
+
+Agents follow the same policy, and a channel that still needs setup also stops an agent from being published. See [Publishing](export-and-import-agents.md#publishing) for agents.
 
 Publishing can also fail without failing the import, most often when two workflows want the same webhook path. See [Publishing outcomes](how-import-works.md#publishing-outcomes).
 
@@ -187,7 +191,7 @@ n8n returns the bindings it used in the response. Save the `credentials` map and
 
 ## The import response
 
-A successful import returns `200` with nine keys:
+A successful import returns `200` with a summary of what it did:
 
 ```json
 {
@@ -196,6 +200,8 @@ A successful import returns `200` with nine keys:
 		"sourceId": "f9e1e962bba26edf357042c12f367dab17f4c63ec368e1f39cbf7ce43c8b9f8b",
 		"exportedAt": "2026-08-04T09:14:02.117Z"
 	},
+	"agents": [],
+	"counts": { "agents": { "created": 0, "updated": 0, "skipped": 0 } },
 	"workflows": [
 		{ "sourceWorkflowId": "wf9Zx1", "localId": "wf9Zx1", "name": "Send email",
 			"projectId": "prProd4", "parentFolderId": null,
@@ -207,6 +213,7 @@ A successful import returns `200` with nine keys:
 	"folders": [],
 	"projects": [],
 	"bindings": {
+		"agents": {},
 		"workflows": { "wf7Kq2": "wf7Kq2", "wf9Zx1": "wf9Zx1" },
 		"credentials": { "crLin44": "crLin44" }
 	},
@@ -220,10 +227,12 @@ A successful import returns `200` with nine keys:
 | Key | What it holds |
 |-----|---------------|
 | `package` | The source instance's n8n version, instance ID, and export timestamp, copied from the manifest |
+| `agents` | One row per agent. Empty for a package without agents. See [The import response](export-and-import-agents.md#the-import-response) for agents |
+| `counts` | The number of agents `created`, `updated`, and `skipped` |
 | `workflows` | One row per workflow, with its `status` of `created`, `updated`, or `skipped`, and its `publishing` outcome |
 | `folders` | One row per folder, with a `status` of `created` or `skipped` |
 | `projects` | One row per project, with a `status` of `created`, `updated`, or `skipped`. Empty for workflow and folder packages |
-| `bindings` | Source ID to target ID maps for workflows and credentials. Only the `credentials` map can be passed back on a later import |
+| `bindings` | Source ID to target ID maps for workflows, agents, and credentials. Only the `credentials` map can be passed back on a later import |
 | `credentials` | Source credential IDs, split into `matched` and `stubbed` |
 | `dataTables` | The number of data tables `matched`, `created`, and `updated`. `updated` counts tables changed under `overwrite` or `overwrite-non-destructive` |
 | `variables` | Variable names, split into `matched`, `missing`, `created`, `stubbed`, and `updated`. Values never appear |
@@ -244,9 +253,9 @@ A refused import returns every problem it found, not just the first:
 	"message": "Import blocked: 2 issue(s) must be resolved before the package can be imported.",
 	"issues": [
 		{ "type": "missing-node-type", "nodeType": "@acme/cool-node", "typeVersion": 3,
-			"usedByWorkflows": ["wf7Kq2"] },
+			"usedBy": [{ "kind": "workflow", "id": "wf7Kq2" }] },
 		{ "type": "credential-unresolved", "kind": "not_found", "sourceId": "crLin44",
-			"usedByWorkflows": ["wf7Kq2"] }
+			"usedBy": [{ "kind": "workflow", "id": "wf7Kq2" }] }
 	]
 }
 ```
@@ -274,7 +283,7 @@ Every import emits an event on both the log streaming and telemetry paths, so yo
 | `n8n.audit.n8n-package.import.success` | The import succeeded |
 | `n8n.audit.n8n-package.import.failed` | The import failed |
 
-The success event carries the user, the projects and folder the contents landed in, the workflows that were written, every option the import ran with, the source instance ID and format version from the package, and the credential IDs split into matched, created, and updated. Skipped workflows are left out. A package holding several projects still emits one event.
+The success event carries the user, the projects and folder the contents landed in, the workflows and agents that were written, every option the import ran with, the source instance ID and format version from the package, and the credential IDs split into matched, created, and updated. Skipped workflows and agents are left out. A package holding several projects still emits one event.
 
 The failure event carries the user, a `reason` of `access-denied`, `entity-not-found`, `blocked`, or `validation`, and the target project and folder if the import got far enough to resolve them. It carries no workflow IDs, because many failures happen before n8n reads the package.
 
@@ -291,5 +300,6 @@ A refused import emits no success event. Log streaming events carry IDs but no c
 * [n8n packages](./)
 * [Package format](package-format.md)
 * [Export a package](export-a-package.md)
+* [Export and import agents](export-and-import-agents.md)
 * [How import works](how-import-works.md)
 * [Limits and permissions](limits-and-permissions.md)

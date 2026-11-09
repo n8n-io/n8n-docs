@@ -69,7 +69,7 @@ There's no `--force` and no `--dry-run`.
 
 | Flag | Values | Description |
 |------|--------|-------------|
-| `--conflict-policy` | `new-version` (default), `fail`, `skip` | What to do when a workflow or agent already exists on the target. `new-version` saves a new version of the existing workflow, or updates the existing agent, `fail` refuses the whole import, `skip` leaves it alone and carries on. |
+| `--conflict-policy` | `new-version` (default), `fail`, `skip` | What to do when a workflow or agent already exists on the target. `new-version` saves a new version of the existing workflow, or updates the existing agent, `fail` refuses the whole import, `skip` leaves it alone and carries on. `new-version` also archives or restores a workflow to match the package. |
 | `--id-policy` | `source` (default and only value) | A new workflow or agent keeps the package's ID. If a workflow or agent that doesn't match already uses that ID anywhere on the instance, n8n refuses the import. A matched workflow or agent keeps its ID on the target. |
 | `--publishing-policy` | `preserve-published-state` (default), `match-source`, `publish-all`, `unpublish-all` | Whether imported workflows and agents end up published. See [Publishing](#publishing). |
 | `--missing-node-type-mode` | `fail` (default), `import-anyway` | What to do when a workflow, or an agent's node tool, uses a node type or node version the target instance doesn't have. `fail` refuses before writing anything and lists every missing type with the workflows and agents using it. `import-anyway` imports them, but they're never published. |
@@ -99,10 +99,12 @@ Publishing can also fail without failing the import, most often when two workflo
 
 | Flag | Values | Description |
 |------|--------|-------------|
-| `--folder-conflict-policy` | `merge` (default), `fail` | What to do when a folder in the package already exists in the target project. `merge` reuses the existing folder and merges the package's contents into it, leaving its name as it is. `fail` refuses the import. |
+| `--folder-conflict-policy` | `merge`, `fail`, `overwrite` | What to do when a folder in the package already exists in the target project. Defaults to the `--project-conflict-policy` value, and to `merge` for workflow and folder packages. `merge` reuses the existing folder and merges the package's contents into it, leaving its name as it is. `fail` refuses the import. `overwrite` also removes what the package doesn't contain. See [Folders and projects](how-import-works.md#folders-and-projects). |
 | `--project-conflict-policy` | `merge` (default), `fail`, `overwrite` | Project packages only. What to do when a project in the package already exists. `merge` leaves the project's details alone and adds the package's contents. `overwrite` also replaces its name, description, and icon, leaving anything the package doesn't carry as it is. `fail` refuses the import. |
 
-`--project-conflict-policy` is ignored for workflow and folder packages.
+| `--overwrite-deletion-policy` | `archive` (default), `hard-delete` | How `--folder-conflict-policy=overwrite` removes a workflow. `archive` archives it, so you can restore it. `hard-delete` deletes it and its executions permanently. |
+
+`--project-conflict-policy` is ignored for workflow and folder packages. `--folder-conflict-policy=overwrite` only works on project packages, together with `--project-conflict-policy=overwrite`.
 
 Two folder conflicts refuse the import even under `merge`: a folder ID that exists in a different project, and an existing folder that sits under a different parent than the import would place it. Neither is something a policy can resolve, because both would mean moving a folder.
 
@@ -205,11 +207,13 @@ A successful import returns `200` with a summary of what it did:
 	"workflows": [
 		{ "sourceWorkflowId": "wf9Zx1", "localId": "wf9Zx1", "name": "Send email",
 			"projectId": "prProd4", "parentFolderId": null,
-			"activeVersionId": null, "publishing": { "state": "unchanged" }, "status": "created" },
+			"activeVersionId": null, "isArchived": false, "publishing": { "state": "unchanged" }, "status": "created" },
 		{ "sourceWorkflowId": "wf7Kq2", "localId": "wf7Kq2", "name": "Triage inbound",
 			"projectId": "prProd4", "parentFolderId": null,
-			"activeVersionId": null, "publishing": { "state": "unchanged" }, "status": "created" }
+			"activeVersionId": null, "isArchived": false, "publishing": { "state": "unchanged" }, "status": "created" }
 	],
+	"removedWorkflows": [],
+	"removedFolders": [],
 	"folders": [],
 	"projects": [],
 	"bindings": {
@@ -229,7 +233,9 @@ A successful import returns `200` with a summary of what it did:
 | `package` | The source instance's n8n version and instance ID, copied from the manifest |
 | `agents` | One row per agent. Empty for a package without agents. See [The import response](export-and-import-agents.md#the-import-response) for agents |
 | `counts` | The number of agents `created`, `updated`, and `skipped` |
-| `workflows` | One row per workflow, with its `status` of `created`, `updated`, or `skipped`, and its `publishing` outcome |
+| `workflows` | One row per workflow, with its `status` of `created`, `updated`, or `skipped`, whether it's archived, and its `publishing` outcome |
+| `removedWorkflows` | Workflows that `--folder-conflict-policy=overwrite` removed, each with a `deletion` of `archived` or `deleted`. A `hard-delete` n8n can't finish yet reports `archived` |
+| `removedFolders` | Folders that `--folder-conflict-policy=overwrite` removed |
 | `folders` | One row per folder, with a `status` of `created` or `skipped` |
 | `projects` | One row per project, with a `status` of `created`, `updated`, or `skipped`. Empty for workflow and folder packages |
 | `bindings` | Source ID to target ID maps for workflows, agents, and credentials. Only the `credentials` map can be passed back on a later import |

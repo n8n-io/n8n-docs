@@ -33,7 +33,7 @@ An import runs in two phases. First n8n plans it: it reads the package, works ou
 There's no rollback. n8n has no database transaction around an import, so its promise that a refused import writes nothing covers the problems it can predict, not every possible failure. If something unexpected goes wrong while an import is being written, such as a dropped database connection, whatever was already written stays on the instance, and there's no cleanup afterward. Checking first makes this rare, not impossible.
 {% endhint %}
 
-Import never deletes a workflow, folder, project, data table, or tag. Under `--data-table-schema-conflict-policy=overwrite`, it can remove columns from a data table. See [Data tables](#data-tables).
+Import never deletes a project, data table, or tag. It only removes workflows and folders under `--folder-conflict-policy=overwrite`. See [Folders and projects](#folders-and-projects). Under `--data-table-schema-conflict-policy=overwrite`, it can remove columns from a data table. See [Data tables](#data-tables).
 
 ## Write order
 
@@ -164,7 +164,13 @@ Import never deletes a tag. If tags are switched off on the target instance, all
 
 Two folder conflicts refuse the import whatever the policy, because both would mean moving a folder rather than merging into it: a folder ID that exists in a different project, and an existing folder sitting under a different parent than the import would place it.
 
+`--folder-conflict-policy=overwrite` makes each project match the package. n8n removes the workflows the package doesn't contain, from the project root and from the folders the package defines. Then it removes the folders the package doesn't define, but only once they're empty, so workflows in a folder that only exists on the target stay. By default, n8n archives a removed workflow, so you can restore it. With `--overwrite-deletion-policy=hard-delete`, it deletes the workflow and its executions permanently. If you can't delete something the import would remove, n8n refuses the import rather than removing only part of it.
+
 For project packages, n8n creates the project shells first, then runs the same machinery once per project. If a package project's ID matches a personal project on the target, the import is refused with a `403`: that's never something a conflict policy can merge.
+
+## Archived workflows
+
+A workflow travels with its archived state. n8n creates a new workflow archived when it's archived in the package. Under `--conflict-policy=new-version`, n8n archives or restores an existing workflow to match the package, which needs permission to delete that workflow. Under `skip`, an existing workflow keeps its state. An archived workflow is never published.
 
 ## Node types
 
@@ -204,6 +210,9 @@ Each reason an import can be blocked appears in the `issues` array with a `type`
 |------|-------|---------------|
 | `workflow-conflict` | | The workflow exists on the target and `--conflict-policy` is `fail` |
 | `workflow-id-conflict` | | The package ID of a new workflow is already used somewhere on the instance, including in another project and including archived workflows |
+| `workflow-archive-forbidden` | | The import would archive or restore an existing workflow, and you don't have permission to delete it |
+| `workflow-removal-forbidden` | | `--folder-conflict-policy=overwrite` would remove a workflow you don't have permission to delete |
+| `folder-removal-forbidden` | | `--folder-conflict-policy=overwrite` would remove a folder you don't have permission to delete |
 | `workflow-folder-conflict` | | The existing workflow lives in a different folder than the import would put it in. This refuses the import even under `--conflict-policy=skip` |
 | `project-conflict` | `fail-policy` | The project exists and `--project-conflict-policy` is `fail` |
 | `folder-conflict` | `parent-mismatch`, `id-in-other-project`, `fail-policy` | The first two refuse whatever the policy |

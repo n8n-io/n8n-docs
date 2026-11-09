@@ -90,6 +90,8 @@ Both endpoints authenticate with an API key, and the import is attributed to tha
 |-------|-------------|
 | `workflow:import` | The package contains workflows |
 | `folder:create` and `folder:update` | The package contains folders |
+| `workflow:delete` | The import archives or restores an existing workflow, or `--folder-conflict-policy` is `overwrite` |
+| `folder:delete` | `--folder-conflict-policy` is `overwrite` |
 | `project:create` and `project:update` | The package is a project package, whether or not it creates a project |
 | `credential:create` | The import actually creates a credential under `--credential-missing-mode=create-with-values` |
 | `credential:update` | The import actually changes a credential under `--credential-conflict-policy=overwrite` |

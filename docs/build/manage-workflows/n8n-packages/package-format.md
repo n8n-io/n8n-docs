@@ -199,6 +199,8 @@ Then come the entry lists, one per entity type that's present: `workflows`, `age
 * `name`: the entity's name.
 * `target`: the directory holding the entity's JSON file, relative to the package root.
 
+Workflow entries also carry `isArchived`, whether the workflow is archived on the source.
+
 Last comes `requirements`, which lists what the workflows and agents need to run on the target instance. It has up to seven sections. Each entry carries `usedBy`, the workflows and agents that need it, each as `{ "kind": "workflow", "id": "<id>" }` or `{ "kind": "agent", "id": "<id>" }`:
 
 | Section | Entry shape | Notes |
@@ -224,8 +226,8 @@ A full manifest for a workflow package holding two workflows:
 	"sourceId": "f9e1e962bba26edf357042c12f367dab17f4c63ec368e1f39cbf7ce43c8b9f8b",
 
 	"workflows": [
-		{ "id": "wf7Kq2", "name": "Triage inbound", "target": "workflows/triage-inbound-wf7Kq2" },
-		{ "id": "wf9Zx1", "name": "Send email", "target": "workflows/send-email-wf9Zx1" }
+		{ "id": "wf7Kq2", "name": "Triage inbound", "target": "workflows/triage-inbound-wf7Kq2", "isArchived": false },
+		{ "id": "wf9Zx1", "name": "Send email", "target": "workflows/send-email-wf9Zx1", "isArchived": false }
 	],
 	"credentials": [
 		{ "id": "crLin44", "name": "Linear api", "target": "credentials/linear-api-crLin44" }

@@ -62,7 +62,7 @@ n8n-cli package export --project-id=prTeam9 --project-id=prOps3 --output=teams.n
 
 Workflow, agent, and folder IDs can be combined. Project IDs can't be combined with any of them, because a project package has a different shape. Mixing the two groups returns a `400`.
 
-A folder always brings its nested folders and their workflows. If you name a workflow that's also inside a folder you named, it's exported once, inside the folder.
+A folder always brings its nested folders and their workflows. Folder and project exports leave out archived workflows, unless you set `--include-archived-workflows=true`. A workflow you name by ID always exports, even when it's archived. If you name a workflow that's also inside a folder you named, it's exported once, inside the folder.
 
 n8n caps each group of IDs at 300. That's per group, so one export can name 300 workflows, 300 agents, and 300 folders. Exceeding the cap returns a `400`, and the CLI doesn't catch it before sending the request.
 
@@ -79,6 +79,7 @@ An empty project exports as project metadata only, with no `workflows` list in t
 | `--output`, `-o` | File to write the package to. Defaults to `export.n8np` in the current directory. |
 | `--include-variable-values` | `true` (default) or `false`. Whether variable values are bundled. See [Variable values](#variable-values). |
 | `--include-tags` | `true` (default) or `false`. Whether the tags on the exported workflows are bundled. |
+| `--include-archived-workflows` | `false` (default) or `true`. Whether folder and project exports include their archived workflows. |
 | `--credential-export-policy` | `expression-values-only` (default) or `no-values`. Whether credential fields set by an expression are bundled. See [Credential values](#credential-values). |
 | `--dependency-policy` | `fail` (default), `include-in-package`, or `reference-only`. How n8n handles a workflow or agent the package depends on that you didn't name, such as a sub-workflow, an error workflow, or a sub-agent. See [Workflow dependencies](#workflow-dependencies). |
 

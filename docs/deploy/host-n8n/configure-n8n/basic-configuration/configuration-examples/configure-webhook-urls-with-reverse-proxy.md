@@ -95,7 +95,7 @@ export N8N_INSECURE_DISABLE_FORM_HTML_SANDBOX=true
 
 ### Test forms from the editor behind an authentication proxy
 
-From n8n 2.27.0, the editor opens test forms on a webhook hostname behind an authentication proxy. When you select **Execute workflow** or **Execute step** on a workflow with an **n8n Form Trigger** node, the editor opens the test form in a new window. If you aren't signed in to the proxy yet, the proxy's sign-in page shows first. After you sign in, the form loads.
+From n8n 2.47.0, the editor opens test forms on a webhook hostname behind an authentication proxy. When you select **Execute workflow** or **Execute step** on a workflow with an **n8n Form Trigger** node, the editor opens the test form in a new window. If you aren't signed in to the proxy yet, the proxy's sign-in page shows first. After you sign in, the form loads.
 
 On earlier versions, the editor doesn't open the test form in this setup. To test the form, open the **n8n Form Trigger** node, copy its **Test URL**, and open it in a new browser tab.
 

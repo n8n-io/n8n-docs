@@ -36,7 +36,7 @@ In [queue mode](../configure-n8n/scaling/enable-queue-mode.md), main processes, 
 ### Before you update an instance in queue mode
 
 * Take a [full backup](backup-and-restore.md), including the database and the encryption key. If n8n can't revert a migration that the update applies, you need this backup to return to the previous version.
-* Note the newest migration in the `migrations` table of your database, so you know where to stop if you roll back. For example, with no table prefix, run `SELECT name FROM migrations ORDER BY id DESC LIMIT 1;`. If you set `DB_TABLE_PREFIX`, replace `migrations` with the prefixed table name. If you set `DB_POSTGRESDB_SCHEMA`, add the schema name, for example `<schema>.migrations`.
+* Note the newest migration in the `migrations` table of your database, so you know where to stop if you roll back. For example, with no table prefix, run `SELECT name FROM migrations ORDER BY id DESC LIMIT 1;`. If n8n uses a table prefix (`DB_TABLE_PREFIX`), replace `migrations` with the prefixed table name. If n8n uses a custom schema (`DB_POSTGRESDB_SCHEMA`), add the schema name, for example `<schema-name>.migrations`. Either setting can also come from its `_FILE` variable, such as `DB_POSTGRESDB_SCHEMA_FILE`.
 * Read the [release notes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/release-notes) for every version after your current one, up to and including the target version.
 * If you deploy with the [n8n Helm chart](https://github.com/n8n-io/n8n-hosting/tree/main/charts/n8n), check whether the target n8n version needs a newer chart version. The chart has its own version number, separate from the n8n version it deploys.
 
@@ -63,7 +63,7 @@ Changing the image tag or Helm release back to the older version doesn't reverse
 1. Stop every n8n process: main processes, workers, any webhook processors, and external task runners.
 2. Return the database to its state before the update, in one of two ways:
 	* **Revert the migrations the update applied.** You need the newest migration you noted before updating. If you didn't note it, restore the backup instead.
-		1. Check the `migrations` table in your database. It lists the migrations n8n has run. If you set `DB_TABLE_PREFIX`, the table name starts with that prefix. If you set `DB_POSTGRESDB_SCHEMA`, the table is in that schema. If the newest migration is the one you noted before updating, stop reverting and go to the next rollback step.
+		1. Check the `migrations` table in your database. It lists the migrations n8n has run. If n8n uses a table prefix, the table name starts with that prefix. If n8n uses a custom schema, the table is in that schema. If the newest migration is the one you noted before updating, stop reverting and go to the next rollback step.
 		2. Keep every other n8n process stopped. Run `n8n db:revert` with the newer n8n version and your existing database configuration, for example as a one-off container from the newer image. Each run reverts only the most recent migration.
 		3. Check the output of the command:
 			* If the output starts with `Cancelled command`, or says n8n couldn't find the migration's code, n8n didn't revert the migration. `n8n db:revert` exits with status 0 in these cases, so you can't rely on the exit status.

@@ -95,9 +95,9 @@ To stay under the limits and recover when you reach one:
 
 ### Calls from an n8n workflow
 
-An n8n workflow can call the n8n API of its own instance, for example with the n8n node or the HTTP Request node. A node runs once for each item, so a list of 1,000 items sends about 1,000 requests at once. These nodes don't wait for `Retry-After`, and the node fails on a `429`.
+An n8n workflow can call the n8n API of its own instance, for example with the **n8n** node or the **HTTP Request** node. A node runs once for each item, so a list of 1,000 items sends about 1,000 requests at once. These nodes don't wait for `Retry-After`, and the node fails on a `429`.
 
-To stay under the limits, open the node's **Options**, add **Batching**, and set **Items per Batch** and **Batch Interval (ms)**. For example, 10 items each second sends 600 requests a minute.
+To stay under the limits, open the node's **Options**, add **Batching**, and set **Items per Batch** and **Batch Interval (ms)**. For example, 5 items each second sends 300 requests a minute, which is below every default limit.
 
 **Retry On Fail** doesn't fix a `429`. It waits at most 5 seconds between tries, which is often inside the same window, and it runs the node again for every item.
 
@@ -141,7 +141,7 @@ Use these endpoints. The API key needs the `securitySettings:manage` scope.
 For example, to turn on the limits with the default values:
 
 ```shell
-curl -X PUT https://<your-instance>/api/v1/settings/rate-limits \
+curl -X PUT 'https://<your-instance>/api/v1/settings/rate-limits' \
   -H "X-N8N-API-KEY: <your-api-key>" \
   -H "Content-Type: application/json" \
   -d '{

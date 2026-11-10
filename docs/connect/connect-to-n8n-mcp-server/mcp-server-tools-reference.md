@@ -2045,8 +2045,6 @@ Each skill has one of two scopes:
 | `project`  | Agents in one project                                    |
 | `instance` | Agents in every project on the instance                  |
 
-Before n8n 2.47.0, a skill can also have the `agent` scope, which limits it to one agent.
-
 A skill body has these fields and limits:
 
 | Field          | Type     | Required | Description                                                                                                                                                                  |

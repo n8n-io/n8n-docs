@@ -220,7 +220,7 @@ A project package can hold several projects, so `--selected-project-id` names th
 
 The other options have fixed values:
 
-* **Folders:** n8n merges every folder of the selected project, including folders with no selected workflows.
+* **Folders:** n8n creates or merges only the folders that hold a selected workflow, and the folders above them. Other folders stay as they are.
 * **Credentials and variables:** they must already exist on the target, credentials with the same ID, and n8n doesn't change them.
 * **Data tables:** n8n matches them by ID and creates missing ones. Any schema difference refuses the import.
 * **Tags:** n8n creates missing tags and skips conflicting ones.

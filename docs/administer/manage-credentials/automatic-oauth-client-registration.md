@@ -160,7 +160,7 @@ If the OAuth2 server sends back an error instead of an authorization code, the n
 The authorization response came from an unexpected OAuth2 server.
 ```
 
-A different server answered than the one n8n sent you to, so n8n stops the connection. Reconnect the credential. If the error comes back, contact the server's provider.
+The response came from a different server than the one n8n sent you to, so n8n stops the connection. Reconnect the credential. If the error comes back, contact the server's provider.
 
 ### Redirect URI errors
 

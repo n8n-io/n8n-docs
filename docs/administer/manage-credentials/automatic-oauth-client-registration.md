@@ -15,7 +15,7 @@ Automatic OAuth client registration lets some OAuth2 credentials connect without
 {% hint style="info" %}
 **Feature availability**
 
-Automatic OAuth client registration with Client ID Metadata Documents, and the **Automatic (recommended)** option for app credentials, are available from n8n X.Y.Z.
+Automatic OAuth client registration with Client ID Metadata Documents, and the **Automatic (recommended)** option for app credentials, are available from n8n 2.49.0.
 
 Client ID Metadata Documents are available on:
 

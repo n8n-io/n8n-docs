@@ -2151,9 +2151,9 @@ Preferences are part of agentic context management, which is in Preview and may 
 {% hint style="info" %}
 **Configuration**
 
-The preferences tools are on by default. On a self-hosted instance with telemetry turned off (`N8N_DIAGNOSTICS_ENABLED=false`), or one that can't reach n8n's feature flag service, they stay off. To turn them on, set `N8N_FEATURE_FLAG_OVERRIDES` to `{"111_context_preferences":"variant"}`, preserving any other entries in the JSON object, then restart n8n. The value must be the string `"variant"`, not `true`.
+From n8n 2.48.0, the preferences tools no longer depend on the `111_context_preferences` feature flag. n8n registers them on every instance, including self-hosted instances with telemetry turned off, and offers their OAuth scopes on the consent screen. A client still needs the matching scope to use each tool.
 
-With preferences off, n8n doesn't register these tools and doesn't offer their OAuth scopes on the consent screen.
+In earlier versions, the tools are on by default but stay off on a self-hosted instance with telemetry turned off (`N8N_DIAGNOSTICS_ENABLED=false`), or one that can't reach n8n's feature flag service. To turn them on in those versions, set `N8N_FEATURE_FLAG_OVERRIDES` to `{"111_context_preferences":"variant"}`, preserving any other entries in the JSON object, then restart n8n. The value must be the string `"variant"`, not `true`. With preferences off, n8n doesn't register these tools and doesn't offer their OAuth scopes on the consent screen.
 {% endhint %}
 
 [Preferences](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/agentic-context-management/preferences) are short instructions, such as "Name nodes in English", that the user wants every AI tool to apply when it works in n8n. These tools let an MCP client read the preferences that apply to the current user, and save, change, or remove them.

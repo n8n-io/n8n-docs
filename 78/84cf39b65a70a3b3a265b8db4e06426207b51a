@@ -1,0 +1,19 @@
+docs/administer/observe-and-log/stream-logs-to-external-systems.md
+  s_dd0868aec4eea9::t_b9179d1445cc8c 129-134,222,224,228-233
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "7884cf39b65a70a3b3a265b8db4e06426207b51a",
+  "prompts": {},
+  "sessions": {
+    "s_dd0868aec4eea9": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1c39a-9fcb-72f3-9ba1-919833ba0b5a",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "kgrhartlage <kai.hartlage@n8n.io>"
+    }
+  }
+}

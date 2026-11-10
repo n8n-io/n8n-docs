@@ -1,0 +1,46 @@
+docs/build/manage-workflows/n8n-packages/README.md
+  s_481a47571961f9::t_a3c8b3ac2ca917 3-4,28,42,55,97
+docs/build/manage-workflows/n8n-packages/export-a-package.md
+  s_481a47571961f9::t_b042d4eacce2bc 209
+  s_481a47571961f9::t_657574da32e8a2 3-4,56-58,63,67,76,78,82,94,149,152,163-164,167,175,191
+docs/build/manage-workflows/n8n-packages/limits-and-permissions.md
+  s_481a47571961f9::t_575effdbee5ed3 72,91
+  s_481a47571961f9::t_a3c8b3ac2ca917 45,83-84,101
+  s_481a47571961f9::t_b042d4eacce2bc 143
+docs/build/manage-workflows/n8n-packages/package-format.md
+  s_481a47571961f9::t_b042d4eacce2bc 311
+  s_481a47571961f9::t_fa0c7862c383b1 134-159
+  s_481a47571961f9::t_cfae257c63d23a 187
+  s_481a47571961f9::t_4cfe60bcf405ea 193,197-203
+  s_481a47571961f9::t_30a35721c3b54a 206,237,240,243,246,249,252-256
+docs/build/manage-workflows/n8n-packages/how-import-works.md
+  s_481a47571961f9::t_a3c8b3ac2ca917 22
+  s_481a47571961f9::t_b042d4eacce2bc 226
+docs/build/manage-workflows/n8n-packages/import-a-package.md
+  s_481a47571961f9::t_6e4a0ada0bf765 72,94
+  s_481a47571961f9::t_914ba0856f5674 68,73-75,79-80,194,203-204,216,230-231,235,256,258,286
+  s_481a47571961f9::t_b042d4eacce2bc 303
+docs/build/manage-workflows/n8n-packages/export-and-import-agents.md
+  s_481a47571961f9::t_35873a7b89ac50 44-46
+  s_481a47571961f9::t_4959ba412cf039 34
+  s_481a47571961f9::t_e95dc67f246a14 1-33,35-41,43,47-91,93-107,109-140,142-268
+  s_481a47571961f9::t_b762cc36f3983d 42,92,108,141
+docs/build/SUMMARY.md
+  s_481a47571961f9::t_b042d4eacce2bc 46
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "a05a605d5b720b20d7b21a2cfedf68056a45fb17",
+  "prompts": {},
+  "sessions": {
+    "s_481a47571961f9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "febba625-4573-4933-b74b-d2ec2e270f37",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jan K. <jan.kalkan@n8n.io>"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+docs/administer/environments/README.md
+  s_8ec7bfed268277::t_f322ef7224b9d8 51
+  s_8ec7bfed268277::t_f11a859d0c824b 57,59
+docs/administer/environments/plan-your-environments.md
+  s_8ec7bfed268277::t_0ef29c83dc4b54 24,26-27,29,31
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "7282d2e29eec2eb98be7eab0ae577a384ef6c40a",
+  "prompts": {},
+  "sessions": {
+    "s_8ec7bfed268277": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b9ff11b4-095e-4619-830d-c574ab65583e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jan K. <jan.kalkan@n8n.io>"
+    }
+  }
+}

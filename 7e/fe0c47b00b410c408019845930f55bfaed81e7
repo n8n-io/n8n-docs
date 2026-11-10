@@ -1,0 +1,25 @@
+docs/administer/environments/set-up-environments.md
+  s_8ec7bfed268277::t_c31235beb10897 38
+docs/administer/environments/README.md
+  s_8ec7bfed268277::t_461c1ea4c3a7f0 14
+  s_8ec7bfed268277::t_2388ac22ba42be 45
+  s_8ec7bfed268277::t_671ff88812564d 59
+  s_8ec7bfed268277::t_c31235beb10897 57,68
+  s_8ec7bfed268277::t_7dbc6dc7e59a39 43,46-51
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "7efe0c47b00b410c408019845930f55bfaed81e7",
+  "prompts": {},
+  "sessions": {
+    "s_8ec7bfed268277": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b9ff11b4-095e-4619-830d-c574ab65583e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jan K. <jan.kalkan@n8n.io>"
+    }
+  }
+}

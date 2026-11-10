@@ -1,0 +1,27 @@
+docs/administer/environments/git-based-promotion/gitlab.md
+  s_8ec7bfed268277::t_56b906eefb0cb0 43
+docs/administer/environments/known-limitations.md
+  s_8ec7bfed268277::t_56b906eefb0cb0 77
+docs/administer/use-source-control-and-environments/push-and-pull-changes.md
+  s_8ec7bfed268277::t_56b906eefb0cb0 57
+docs/administer/environments/upgrade-from-environments-classic.md
+  s_8ec7bfed268277::t_56b906eefb0cb0 58
+docs/contribute/contribution-guide-for-n8n-docs/terminology.md
+  s_8ec7bfed268277::t_56b906eefb0cb0 128-129
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "dbc786b637db0a5d521a94ad4ce6445cb19026a4",
+  "prompts": {},
+  "sessions": {
+    "s_8ec7bfed268277": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b9ff11b4-095e-4619-830d-c574ab65583e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jan K. <jan.kalkan@n8n.io>"
+    }
+  }
+}

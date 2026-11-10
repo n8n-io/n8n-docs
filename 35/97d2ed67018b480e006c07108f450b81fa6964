@@ -1,0 +1,9 @@
+docs/build/manage-workflows/n8n-packages/how-import-works.md
+  ai_agent 105
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "3597d2ed67018b480e006c07108f450b81fa6964",
+  "prompts": {}
+}

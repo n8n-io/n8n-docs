@@ -95,7 +95,7 @@ Every command supports `--help` for detailed usage.
 | `user` | `list`, `get` |
 | `config` | `set-url`, `set-api-key`, `show` |
 | `source-control` | `pull` |
-| `package (preview)` | `export`, `import` |
+| `package (preview)` | `export`, `import`, `import-selection` |
 | `skill` | `install` |
 | `audit` | (top-level) |
 | `login` / `logout` | (top-level) |
@@ -185,8 +185,8 @@ The `package` command is in Preview and may change in future releases.
 ```bash
 n8n-cli package export --workflow-id=<workflow-id> --output=export.n8np
 n8n-cli package export --project-id=<project-id> --output=project.n8np
-n8n-cli package import --file=export.n8np --workflow-conflict-policy=fail
-n8n-cli package import --file=export.n8np --project-id=<project-id> --workflow-conflict-policy=skip
+n8n-cli package import --file=export.n8np --conflict-policy=fail
+n8n-cli package import --file=export.n8np --project-id=<project-id> --conflict-policy=skip
 n8n-cli package import --file=export.n8np --project-id=<project-id> --data-table-schema-conflict-policy=overwrite-non-destructive
 ```
 

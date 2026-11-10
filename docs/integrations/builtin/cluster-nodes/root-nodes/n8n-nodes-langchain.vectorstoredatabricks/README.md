@@ -2,10 +2,6 @@
 description: >-
   Learn how to use the Databricks Vector Store node in n8n. Search and fill
   Databricks Vector Search indexes and connect them to AI agents and chains.
-status: preview
-tags:
-  - tag: preview
-    primary: true
 layout:
   description:
     visible: false
@@ -21,12 +17,6 @@ On this page, you'll find the prerequisites, the index types the node works with
 **Credentials**
 
 Refer to [Databricks credentials](../../../credentials/databricks.md) for guidance on setting up authentication. The node accepts the **Databricks OAuth2 API** credential only, with a service principal or user login. It doesn't accept a personal access token.
-{% endhint %}
-
-{% hint style="info" %}
-**Preview status**
-
-The Databricks Vector Store node is in Preview from n8n 2.45.0 and may change in future releases. Avoid relying on it in production workflows.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}

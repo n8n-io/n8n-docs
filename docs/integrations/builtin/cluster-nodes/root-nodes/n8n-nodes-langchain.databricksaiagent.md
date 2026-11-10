@@ -2,10 +2,6 @@
 description: >-
   Learn how to use the Databricks AI Agent node in n8n. Run an AI agent and
   export each run to MLflow Tracing in your Databricks workspace.
-status: preview
-tags:
-  - tag: preview
-    primary: true
 layout:
   description:
     visible: false
@@ -21,12 +17,6 @@ On this page, you'll find the prerequisites, setup steps, node parameters, what 
 **Credentials**
 
 Refer to [Databricks credentials](../../credentials/databricks.md) for guidance on setting up authentication. The credential on this node is optional. The agent runs on the credential of the connected chat model sub-node. This node uses its own **Databricks OAuth2 API** credential only to export traces, so select one when you turn on **Export Traces to MLflow**.
-{% endhint %}
-
-{% hint style="info" %}
-**Preview status**
-
-The Databricks AI Agent node is in Preview from n8n 2.45.0 and may change in future releases. Avoid relying on it in production workflows.
 {% endhint %}
 
 ## Prerequisites

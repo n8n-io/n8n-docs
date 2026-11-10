@@ -91,7 +91,9 @@ The quickest way: open the editor, go to the instance's AI settings, and add you
 2. Restart n8n.
 3. Open the editor and confirm n8n Assistant appears and responds.
 
-`N8N_INSTANCE_AI_MODEL` defaults to `anthropic/claude-opus-5-5`. Set it explicitly only if you want a different model (see [Choose a model provider](#choose-a-model-provider)).
+`N8N_INSTANCE_AI_MODEL` defaults to `anthropic/claude-opus-5-5` from n8n 2.48.0. Earlier versions default to `anthropic/claude-opus-4-8`. Set it explicitly only if you want a different model (see [Choose a model provider](#choose-a-model-provider)).
+
+If you connect through a gateway with `N8N_INSTANCE_AI_MODEL_URL` and don't set a model, make sure the gateway offers Claude Opus 5.5. If it doesn't, set `N8N_INSTANCE_AI_MODEL` to a model it offers, such as `anthropic/claude-opus-4-8`.
 
 Prefer to watch? This [video guide](https://go.n8n.io/RZZWq1) covers the setup end to end, from the one-line install to selecting a provider and model in the editor.
 

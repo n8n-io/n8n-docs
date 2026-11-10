@@ -39,8 +39,8 @@ Configure how n8n identifies itself to OAuth2 servers when a credential register
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
-| `N8N_OAUTH_CIMD_ENABLED` | Boolean | `false` | Set to `true` to let n8n identify itself with a Client ID Metadata Document (CIMD) when a credential registers its client automatically. Turn this on only if the OAuth2 servers can reach this instance over HTTPS. When the server doesn't support CIMD, n8n uses Dynamic Client Registration (DCR). Available from n8n 2.49.0. |
-| `N8N_OAUTH_CLIENT_METADATA_URL` | String | - | HTTPS URL of the client metadata document that n8n sends as its client ID. The document must list the OAuth callback URL of this instance. If you don't set it, n8n uses the document it serves at `/rest/oauth2-credential/client-metadata.json`. Available from n8n 2.49.0. |
+| `N8N_OAUTH_CIMD_ENABLED` | Boolean | `false` | Set to `true` to let n8n identify itself with a Client ID Metadata Document (CIMD) when a credential registers its client automatically. Turn this on only if the OAuth2 servers can download the client metadata document over HTTPS: from this instance, or from `N8N_OAUTH_CLIENT_METADATA_URL` if you set it. When the server doesn't support CIMD, n8n uses Dynamic Client Registration (DCR). Available from n8n 2.49.0. |
+| `N8N_OAUTH_CLIENT_METADATA_URL` | String | - | HTTPS URL of the client metadata document that n8n sends as its client ID. The URL must have a path, for example `https://example.com/client-metadata.json`. If not, n8n uses DCR. The document must list the OAuth callback URL of this instance. If you don't set it, n8n uses the document it serves at `/rest/oauth2-credential/client-metadata.json`. Available from n8n 2.49.0. |
 
 ## Related resources
 

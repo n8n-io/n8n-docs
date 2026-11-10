@@ -49,7 +49,7 @@ Refer to [Find your API token](https://todoist.com/help/articles/find-your-api-t
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/HoGXnGIfupVt81dGox48/" %}
 
-If you're [self-hosting](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n) n8n, select **Automatic (recommended)**, then select **Connect my account**. n8n registers itself with Todoist, so you don't need a Todoist app. Refer to [Automatic OAuth client registration](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/automatic-oauth-client-registration) for details.
+If you're [self-hosting](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n) n8n, select **Automatic (recommended)**, then select **Connect my account**. New credentials use **Automatic (recommended)** by default. Existing credentials use **Custom OAuth2** until you change it. n8n registers itself with Todoist, so you don't need a Todoist app. Refer to [Automatic OAuth client registration](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/automatic-oauth-client-registration) for details.
 
 To use your own Todoist app instead, select **Custom OAuth2**. You'll need a [Todoist](https://todoist.com/) account and:
 

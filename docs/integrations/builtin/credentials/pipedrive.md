@@ -55,7 +55,7 @@ Refer to [How to find the API token](https://pipedrive.readme.io/docs/how-to-fin
 
 ## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
-To connect without an app of your own, select **Automatic (recommended)**, then select **Connect my account**. n8n registers itself with Pipedrive and requests all scopes that Pipedrive offers, including `admin`. The [Pipedrive Trigger](../trigger-nodes/n8n-nodes-base.pipedrivetrigger.md) node needs the `admin` scope for webhooks. Pipedrive doesn't support Client ID Metadata Documents, so n8n always uses Dynamic Client Registration. Refer to [Automatic OAuth client registration](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/automatic-oauth-client-registration) for details.
+To connect without an app of your own, select **Automatic (recommended)**, then select **Connect my account**. New credentials use **Automatic (recommended)** by default. Existing credentials use **Custom OAuth2** until you change it. n8n registers itself with Pipedrive and requests all scopes that Pipedrive offers, including `admin`. The [Pipedrive Trigger](../trigger-nodes/n8n-nodes-base.pipedrivetrigger.md) node needs the `admin` scope for webhooks. Pipedrive doesn't support Client ID Metadata Documents, so n8n always uses Dynamic Client Registration. Refer to [Automatic OAuth client registration](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/automatic-oauth-client-registration) for details.
 
 To use your own app instead, select **Custom OAuth2**. You'll need a [Pipedrive developer sandbox account](https://developers.pipedrive.com/) and:
 

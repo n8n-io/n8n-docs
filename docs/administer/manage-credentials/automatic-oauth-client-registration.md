@@ -28,7 +28,7 @@ Client ID Metadata Documents are available on:
 | Credential | Setting | Default |
 | :--------- | :------ | :------ |
 | [MCP credentials](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/credentials/mcp), used by the **MCP Client** node and the **MCP Client Tool** node | The **Register Client Automatically** toggle | On |
-| MCP servers from the MCP registry | None. n8n always registers the client automatically. | On |
+| MCP servers from the MCP registry that use MCP OAuth2 | None. n8n always registers the client automatically. Some registry servers use a credential of their own instead. Refer to the page of the server. | On |
 | App credentials that n8n has tested with automatic registration. The credential page of each app says if it supports automatic registration. | The **Automatic (recommended)** option, next to **Custom OAuth2** | **Automatic (recommended)** for new credentials. Existing credentials stay on **Custom OAuth2**. |
 
 The generic OAuth2 API credential doesn't support automatic registration. Enter the client ID and client secret of your own OAuth app.
@@ -110,7 +110,7 @@ If the OAuth callback URL of your instance changes, update `redirect_uris` in th
 
 ## Existing credentials and automatic registration
 
-n8n registers the client when you select **Connect my account**. Credentials that you connected before you turned on CIMD keep their DCR client ID. When you reconnect such a credential, n8n uses CIMD if the server supports it. Then the client ID changes to the URL of the metadata document, and n8n deletes the stored client secret.
+n8n registers the client when you select **Connect my account**. Credentials that you connected before you turned on CIMD keep their DCR client ID. When you reconnect such a credential, n8n uses CIMD only if all the CIMD conditions are true. Refer to [How n8n registers the client: CIMD and DCR](#how-n8n-registers-the-client-cimd-and-dcr). If n8n changes from DCR to CIMD, the client ID changes to the URL of the metadata document, and n8n deletes the stored client secret.
 
 When n8n refreshes an access token, it uses the stored client ID. A refresh doesn't register a new client.
 

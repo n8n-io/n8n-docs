@@ -2086,6 +2086,7 @@ Search the skills the current user can access.
 | `skills[].projectId`    | `string \| null` | The project of a project skill                                 |
 | `skills[].projectName`  | `string \| null` | The name of that project                                       |
 | `skills[].latestVersion`| `number`         | The number of the latest saved version                         |
+| `skills[].availableToAssistant` | `boolean` | Whether n8n Assistant can use the skill. Present only when n8n Assistant can use skills on the instance. |
 | `skills[].usedByAgents` | `number`         | Number of agents that use the skill                            |
 | `skills[].canEdit`      | `boolean`        | Whether the current user can update the skill                  |
 | `skills[].canDelete`    | `boolean`        | Whether the current user can delete the skill                  |
@@ -2133,6 +2134,7 @@ Create a skill in the skills hub.
 | `scope`     | `"project" \| "instance"` | Yes      | `"project"` lets the agents in one project use the skill. `"instance"` lets agents in every project use it. |
 | `projectId` | `string`                  | No       | The project to create the skill in. Required when `scope` is `"project"`.                           |
 | `skill`     | `object`                  | Yes      | The skill body, with `name`, `description`, `instructions`, and optionally `references`. Can't include `allowedTools`. |
+| `availableToAssistant` | `boolean`      | No       | Let n8n Assistant use the skill. Defaults to `false`. Available only when n8n Assistant can use skills on the instance. |
 
 #### Output
 
@@ -2168,6 +2170,7 @@ Update a skill. Pass only the fields to change. A change to the content saves th
 | `references`    | `array`                   | No       | The new reference files. Replaces all current reference files.                                               |
 | `scope`         | `"project" \| "instance"` | No       | Move the skill to this scope. n8n refuses the move if an agent that uses the skill can't use it in the new scope. |
 | `projectId`     | `string`                  | No       | The project to move the skill to. Required when `scope` is `"project"`.                                      |
+| `availableToAssistant` | `boolean`          | No       | Let n8n Assistant use the skill, or stop it. A change to only this setting doesn't save a new version. Available only when n8n Assistant can use skills on the instance. |
 
 #### Output
 

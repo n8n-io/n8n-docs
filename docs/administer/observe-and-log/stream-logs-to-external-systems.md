@@ -126,6 +126,12 @@ The following events are available. You can choose which events to stream in **S
 	* External secrets connection deleted
 	* External secrets connection tested
 	* External secrets connection reloaded
+	* Promotions provider created
+	* Promotions provider updated
+	* Promotions provider deleted
+	* Promotions environment created
+	* Promotions environment updated
+	* Promotions environment deleted
 	* Personal publishing restricted enabled
 	* Personal publishing restricted disabled
 	* Personal sharing restricted enabled
@@ -212,6 +218,21 @@ Every event carries `executionId`, `workflowId`, and `workflowName`.
 | `errorMessage` | The error message, as a string. |
 
 `n8n.workflow.cancelled` additionally carries `reason`, a string describing why the execution was cancelled.
+
+### Promotions provider and environment events
+
+These six audit events record successful changes to promotion providers and environments. A provider stores the credentials n8n uses to connect to a Git host. An environment uses a provider and a repository to define where n8n sends workflows or gets them from.
+
+| Event name | Sent when |
+| --- | --- |
+| `n8n.audit.promotions.provider.created` | A user creates a promotion provider. |
+| `n8n.audit.promotions.provider.updated` | A user updates a promotion provider. |
+| `n8n.audit.promotions.provider.deleted` | A user deletes a promotion provider. |
+| `n8n.audit.promotions.environment.created` | A user creates a promotion environment. |
+| `n8n.audit.promotions.environment.updated` | A user updates a promotion environment. |
+| `n8n.audit.promotions.environment.deleted` | A user deletes a promotion environment. |
+
+To stream all six, subscribe your destination to `n8n.audit.promotions`. In **Settings** > **Log Streaming** > **Events**, they appear in the **Audit** group.
 
 ### MCP events
 

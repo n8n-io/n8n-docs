@@ -62,7 +62,7 @@ There's no license feature for packages themselves. The feature is available on 
 
 Import checks two license features, and only for what it would actually do:
 
-* **Folders**, whenever the package contains folders. This is judged from what the package declares, so it applies even if every folder already exists on the target.
+* **Folders**, when the import actually creates or removes a folder. A folder package always needs it, even when its folders already exist on the target.
 * **Variables**, only when the import would actually create or overwrite a variable. A package whose variables all resolve on the target writes none, so it needs neither the license nor a variable scope.
 
 Importing a project package also needs a license that supports team projects.
@@ -89,12 +89,13 @@ The package endpoints authenticate with an API key, and the import is attributed
 | Scope | Needed when |
 |-------|-------------|
 | `workflow:import` | The package contains workflows |
-| `folder:create` and `folder:update` | The package contains folders |
-| `workflow:delete` | The import archives or restores an existing workflow, the folder conflict policy is `overwrite`, or `--deleted-workflow-ids` names a workflow |
-| `folder:delete` | The folder conflict policy is `overwrite`, set directly or through `--project-conflict-policy=overwrite` |
+| `folder:create` and `folder:update` | The package is a folder package. A project package needs only `folder:create`, and only when the import actually creates a folder |
+| `workflow:delete` | The import archives or restores an existing workflow, the folder conflict policy `overwrite` actually removes a workflow, or `--deleted-workflow-ids` names a workflow |
+| `folder:delete` | The folder conflict policy `overwrite`, set directly or through `--project-conflict-policy=overwrite`, actually removes a folder |
 | `workflow:activate` | The import plans to publish a workflow, including a republish under the default `--publishing-policy=preserve-published-state` |
 | `workflow:deactivate` | The import plans to unpublish a workflow under `--publishing-policy=match-source` or `unpublish-all` |
-| `project:create` and `project:update` | The package is a project package, whether or not it creates a project |
+| `project:create` | The import actually creates a project |
+| `project:update` | The import actually changes a project's details under `--project-conflict-policy=overwrite` |
 | `credential:create` | The import actually creates a credential under `--credential-missing-mode=create-with-values` |
 | `credential:update` | The import actually changes a credential under `--credential-conflict-policy=overwrite` |
 | `dataTable:create` | The package references data tables and `--data-table-missing-mode` is `create` |
@@ -108,9 +109,9 @@ An import with agents also needs agent and skill scopes, depending on what it cr
 
 The same scopes apply when you [import a selection from a project package](import-a-package.md#import-a-selection-from-a-project-package).
 
-The publishing scopes, the credential scopes, `dataTable:update`, and the variable and tag scopes are judged from what the import will really write, so a package that references tags or variables which all already match needs neither scope. The rest are judged from what the package declares and the options you pass. For a workflow or folder package, that means `dataTable:create` is required even when every referenced table already exists.
+Most scopes are judged from what the import will really write, so a package whose tags or variables all already match on the target needs no tag or variable scope. The exceptions are `workflow:import`, `workflow:delete` for `--deleted-workflow-ids`, the folder scopes for a folder package, and `dataTable:create` for a workflow or folder package. These are judged from what the package declares and the options you pass, so a workflow or folder package needs `dataTable:create` even when every referenced table already exists.
 
-A member-role API key can't import a project package, because `project:create` and `project:update` are owner and admin scopes. Members can hold every other scope in these tables.
+A member-role API key can't import a project package that creates a project or changes its details, because `project:create` and `project:update` are owner and admin scopes. Members can hold every other scope in these tables.
 
 API key scopes are checked on top of your own permissions, not instead of them. On export you can only take what you can read, so n8n checks your access to each workflow, folder, project, and credential. On import it checks your permission to write to the target project. A credential you can't read is recorded as a requirement rather than bundled, so a partial view of an instance produces a package that says plainly what the target has to supply.
 

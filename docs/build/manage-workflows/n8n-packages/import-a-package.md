@@ -105,7 +105,7 @@ Publishing can also fail without failing the import, most often when two workflo
 
 Two folder conflicts refuse the import even under `merge`: a folder ID that exists in a different project, and an existing folder that sits under a different parent than the import would place it. Neither is something a policy can resolve, because both would mean moving a folder.
 
-A package containing folders needs a license that supports folders.
+The import needs a license that supports folders when it actually creates or removes a folder, or when the package is a folder package.
 
 ## Credential options
 

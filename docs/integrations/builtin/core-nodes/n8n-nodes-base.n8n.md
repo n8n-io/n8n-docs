@@ -49,6 +49,12 @@ Refer to the [API authentication documentation](https://app.gitbook.com/s/r7wKI4
 This node doesn't support SSL. If your server requires an SSL connection, use the [HTTP Request node](n8n-nodes-base.httprequest/README.md) to call the [n8n API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api). The HTTP Request node has options to [provide the SSL certificate](../credentials/httprequest.md#provide-an-ssl-certificate).
 {% endhint %}
 
+{% hint style="info" %}
+**Rate limits**
+
+From n8n 2.47.0, your instance can limit requests to the n8n public API. When the limits are on and your workflow sends too many requests, this node fails with a `429` response. To send fewer requests at a time, add **Batching** in **Request Options**. Refer to [API rate limits](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/rate-limits#calls-from-an-n8n-workflow).
+{% endhint %}
+
 ## Operations <a href="#operations" id="operations"></a>
 
 * Audit

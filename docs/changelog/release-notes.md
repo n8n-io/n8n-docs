@@ -35,6 +35,20 @@ n8n uses [semantic versioning](https://semver.org/). All version numbers are in 
 
 ---
 
+## `n8n 3.1` Postgres node adds custom SSL certificate support, plus 6 other features <a href="#n8n31" id="n8n31"></a>
+
+**Released:** 2026-11-03
+
+* [Mailchimp Trigger Node: Add webhook signature verification](https://github.com/n8n-io/n8n/pull/41561): The Mailchimp Trigger node now verifies the X-Mailchimp-Signature header on incoming webhook deliveries, checking both the HMAC signature and timestamp freshness, and rejects invalid requests with a 401 response. This prevents unauthorized requests from triggering workflows. Existing workflows are unaffected until reactivated, since Mailchimp only provides the signing secret when a webhook is created; deactivating and reactivating the workflow enables verification.
+* [n8n Node: Add user get operation](https://github.com/n8n-io/n8n/pull/42566): The n8n node now supports a User resource with a Get operation, letting workflows look up a user by ID or email via the n8n public API. An optional 'Include Role' toggle adds the user's global role to the output. This requires instance owner credentials with the user:read API scope, and returns a clear 'User not found' error for unknown IDs or emails.
+* [Open a resource from the Assistant header when no tabs are open](https://github.com/n8n-io/n8n/pull/42671): In the Assistant thread view, when no preview tabs are open, the header now shows a button to open a workflow, data table, or agent directly from a resource picker, instead of a disabled toggle. Selecting a resource opens it in a new tab and shows the preview. Once tabs are open, the header reverts to the usual preview toggle. This applies to both the main Assistant view and the Assistant agent view.
+* [Zendesk Node: Default new nodes to OAuth2 authentication](https://github.com/n8n-io/n8n/pull/39310): New Zendesk and Zendesk Trigger nodes now default to OAuth2 authentication instead of API Token, since Zendesk is retiring API token support. API Token remains available as an option. Existing workflows using API Token are unaffected and keep their current authentication. The Zendesk API credential also now shows a notice recommending migration to OAuth2, with a link to Zendesk's migration guide.
+* [Venafi TLS Protect Cloud Trigger Node: Add webhook signature verification](https://github.com/n8n-io/n8n/pull/42250): The Venafi TLS Protect Cloud Trigger now verifies incoming webhook signatures. When the node creates its connector, it generates a secret and checks each delivery's VaaS-Signature header against it, rejecting unsigned or mismatched requests with a 401. Previously any POST to the webhook URL was accepted. Connectors created before this update are unaffected until the workflow is republished. Also fixed a bug where checking for existing connectors could incorrectly error out instead of properly matching and cleaning up duplicates by name.
+* [Microsoft Agent 365 Node: Send spans to Microsoft through the OpenTelemetry setup](https://github.com/n8n-io/n8n/pull/42174): The Microsoft Agent 365 node now reliably sends conversation spans to Microsoft's Agent 365 observability service through n8n's own OpenTelemetry setup. Previously this only worked on self-hosted instances without Sentry and with n8n's tracing off; it now also works on n8n Cloud and alongside Sentry or n8n OTel tracing. Export remains on by default and can be disabled via ENABLE_OBSERVABILITY=false or ENABLE_A365_OBSERVABILITY_EXPORTER=false; an opt-in env var also forwards these spans to the customer's own OTel endpoint.
+* [Postgres Node: Add custom SSL certificate support](https://github.com/n8n-io/n8n/pull/41593): Postgres credentials now support custom SSL certificates: a CA certificate, client certificate, and client private key, shown when SSL mode is set to Allow or Require. This enables connections to databases requiring custom TLS trust or client authentication. SSH-tunneled connections now correctly verify the database hostname for TLS. Credential testing also gives a clearer error message suggesting adding a CA certificate when trust errors occur and none is set.
+
+---
+
 ## `n8n 3.0` Edit Image node rebuilt with napi-rs canvas, plus 16 other features <a href="#n8n30" id="n8n30"></a>
 
 **Released:** 2026-10-27
@@ -63,6 +77,22 @@ n8n 3.0 is a major release with breaking changes. Before you upgrade, read [n8n 
 
 ---
 
+## `n8n 2.46.3` Migration rule pages show fix guidance <a href="#n8n2463" id="n8n2463"></a>
+
+**Released:** 2026-10-30
+
+* [Add resolution guidance to the migration rule detail page](https://github.com/n8n-io/n8n/pull/42615): The migration report rule detail page now includes a "How to fix" panel below the header, showing recommended resolution steps for the rule. If no recommendations exist, it links to the rule's documentation or, failing that, to the general breaking-changes docs. For migratable rules, it also points users to the Migrate action in the table.
+
+---
+
+## `n8n 2.46.2` Project column added to migration report <a href="#n8n2462" id="n8n2462"></a>
+
+**Released:** 2026-10-29
+
+* [Show the project of each workflow in the migration report](https://github.com/n8n-io/n8n/pull/42455): The migration report now shows which project each affected workflow belongs to. A new Project column displays team project names, while personal projects show as "Personal". The column supports sorting by this label and truncates long names, making it easier for admins to identify and assign migration work without opening each workflow individually.
+
+---
+
 ## `n8n 2.45.4` Filter migration report workflows by project <a href="#n8n2454" id="n8n2454"></a>
 
 **Released:** 2026-10-26
@@ -71,7 +101,7 @@ n8n 3.0 is a major release with breaking changes. Before you upgrade, read [n8n 
 
 ---
 
-## `n8n 2.45` Monday.com node V2 reaches full parity, plus 15 other features <a href="#n8n245" id="n8n245"></a>
+## `n8n 2.45` Monday.com node V2 reaches full parity, plus 14 other features <a href="#n8n245" id="n8n245"></a>
 
 **Released:** 2026-10-20
 
@@ -90,7 +120,6 @@ n8n 3.0 is a major release with breaking changes. Before you upgrade, read [n8n 
 * [Don't save MCP connections without user approval](https://github.com/n8n-io/n8n/pull/39996): In the AI Assistant's MCP server setup, connecting a server now requires explicitly clicking "Add connector" before it is saved. Previously, selecting and authorizing a connector saved it immediately, with no way to discard an unwanted connection. This prevents accidental or unintended MCP server connections from being persisted.
 * [Show policy-blocked items in the source control pull modal](https://github.com/n8n-io/n8n/pull/40604): The source control pull modal now shows which workflows or credentials a content-import policy will block before you pull. A banner summarizes how many items are blocked, each tab groups blocked items under 'Not pulled · blocked by policy' with a hover badge explaining why, and the Pull button reflects how many items will actually come in. A separate warning appears if a policy check itself fails during preview.
 * [Databricks Node: Show the Vector Store, Embeddings and AI Agent nodes in the node picker](https://github.com/n8n-io/n8n/pull/41206): The Databricks Vector Store, Embeddings Databricks, and Databricks AI Agent nodes are no longer hidden and now appear in the node picker and sub-node pickers. The AI Agent node links to its documentation and is now recognized as an AI root node in the editor and workflow SDK, so the Evaluations wizard offers it like other agent nodes. Existing workflows using these nodes are unaffected.
-* [Microsoft Teams Node: Add the TeamMember.Read.All scope and correct the Trigger scope notice](https://github.com/n8n-io/n8n/pull/39819): The Microsoft Teams Trigger now requests the `TeamMember.Read.All` permission for its New Team Member event. On n8n Cloud, this is an admin-consent permission, so a Microsoft Entra administrator approves it once for the tenant. Until then, connecting fails with error AADSTS65004. Existing n8n Cloud users reconnect the credential after the admin approves. See [Microsoft Teams on Cloud: admin approval](https://docs.n8n.io/integrations/builtin/credentials/microsoft/#microsoft-teams-on-cloud-admin-approval) for the steps.
 
 ---
 
@@ -223,7 +252,6 @@ n8n 3.0 is a major release with breaking changes. Before you upgrade, read [n8n 
 * [Azure Storage Node: Add Azure cloud selection and custom endpoints to the Shared Key credential](https://github.com/n8n-io/n8n/pull/38181): The Azure Storage Shared Key credential now has an Azure Cloud dropdown to select Azure Public Cloud, Azure US Government, Azure China, or Custom. Custom reveals an Endpoint field for private endpoints or custom domains, letting each credential target a different endpoint instead of relying on a single instance-wide override. Custom endpoints must be enabled by an administrator via the new N8N_AZURE_STORAGE_CUSTOM_ENDPOINTS_ENABLED setting (default off); otherwise custom credentials fail with a clear error. Existing credentials keep working unchanged, defaulting to the public cloud. Only host-style endpoints are supported; path-style endpoints are a future improvement.
 * [HTTP Request Node: Add support for PROPFIND, MKCOL, MOVE, COPY and REPORT methods](https://github.com/n8n-io/n8n/pull/24151): The HTTP Request node (and HTTP Request Tool node) now support WebDAV methods PROPFIND, MKCOL, MOVE, COPY and REPORT, available via a new 'Enable WebDAV Methods' option in the node's Options. When enabled, these methods appear in the Method dropdown and correctly send a request body when Send Body is on, fixing previous silent body-dropping for non-standard methods. Useful for connecting to WebDAV servers and similar services.
 * [Microsoft Teams Node: Add the channel message delete operation](https://github.com/n8n-io/n8n/pull/38428): The Microsoft Teams node now supports a Delete operation for channel messages and replies, calling Microsoft Graph's soft delete endpoint. This requires the ChannelMessage.ReadWrite OAuth2 scope; existing credentials keep their original scopes, so users must create a new credential or enable Custom Scopes and add ChannelMessage.ReadWrite to use it. Delete is not available with Service Principal credentials.
-* [Microsoft Teams on Cloud needs a one-time Microsoft admin approval](https://docs.n8n.io/integrations/builtin/credentials/microsoft/#microsoft-teams-on-cloud-admin-approval): On n8n Cloud, the managed Microsoft Teams credential uses Microsoft permissions that need a one-time approval from a Microsoft Entra administrator before anyone in the tenant can connect. A non-admin who connects in a tenant that hasn't approved gets error AADSTS65004 and no token. The administrator approves first, then users reconnect. This applies from this release onward, and the credentials documentation now covers the steps.
 * [Rename AI Assistant to n8n Assistant](https://github.com/n8n-io/n8n/pull/38065): The AI Assistant feature is now called "n8n Assistant" throughout the product, including UI labels, settings pages, error and log messages, agent panel text, and telemetry event descriptions. New model, web search, and sandbox connections created in Settings are named accordingly (e.g. "n8n Assistant model"); existing connections keep their current names. This is a naming-only change with no functional impact.
 * [Hand agent change requests in the preview chat to the n8n Assistant](https://github.com/n8n-io/n8n/pull/38283): In the agent preview chat, the agent now recognizes it cannot change its own setup (instructions, model, tools, skills, knowledge, channels, integrations, schedules, or name) and tells users to use the n8n Assistant instead. When a message asks for such a change, the chat displays a note with a button that opens the n8n Assistant with the request pre-filled and the session attached. This behavior is limited to the preview chat and does not affect published channels, evals, MCP, or other test surfaces.
 * [Microsoft Teams Node: Add Online Meeting Update operation](https://github.com/n8n-io/n8n/pull/37707): The Microsoft Teams node's Online Meeting resource now supports an Update operation, letting you change subject, start/end time, and meeting settings (camera, mic, chat mode, reactions, presenters, entry announcement, lobby bypass scope, auto-recording) by meeting ID or join URL. Start and end times must be updated together, and Lobby Bypass Scope gains Invited and Organization Excluding Guests options, also now available on Create. Require Passcode remains unavailable on Update since Graph disallows changing it after creation.

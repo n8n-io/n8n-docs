@@ -39,6 +39,7 @@ Configure a self-hosted n8n instance, including database, security, scaling, and
 * [Set up n8n Assistant](set-up-n8n-assistant.md): configure AI-assisted building for self-hosted n8n.
 * [Deploy n8n in canvas-only mode](deploy-n8n-in-canvas-only-mode.md): restrict an instance to the workflow canvas.
 * [Manage your license](manage-your-license.md): activate, renew, and manage your n8n license.
+* [Report usage from air-gapped instances](report-usage-from-air-gapped-instances.md): collect daily usage reports from instances that can't reach the internet.
 * [Security](security.md): audit, harden, and restrict a self-hosted instance.
 * [Scaling](scaling.md): configure n8n for a large number of users, workflows, or executions.
 

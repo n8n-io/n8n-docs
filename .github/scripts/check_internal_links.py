@@ -129,7 +129,7 @@ ASSET_EXTS = {
 # Markdown inline links [text](target) and HTML href/src attributes.
 # The target allows one level of balanced parens so filenames like
 # `(node-name).all.md` are captured whole instead of truncated at the inner `)`.
-MD_LINK_RE = re.compile(r"\[[^\]]*\]\(\s*(<[^>]+>|(?:[^()\s]+|\([^()]*\))+)")
+MD_LINK_RE = re.compile(r"\[[^\]]*\]\(\s*(<[^>]+>|(?:\\.|[^()\s\\]+|\([^()]*\))+)")
 HTML_ATTR_RE = re.compile(r"""(?:href|src)\s*=\s*["']([^"']+)["']""", re.IGNORECASE)
 MD_ESCAPE_RE = re.compile(r"\\([!-/:-@\[-`{-~])")
 # Reference definitions: [id]: target. The label's first char must not be `^`,

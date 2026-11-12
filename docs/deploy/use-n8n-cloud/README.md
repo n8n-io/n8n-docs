@@ -10,7 +10,7 @@ Manage your n8n Cloud trial, plan, and instance.
 
 ## In this section
 
-* [Try free then choose a plan](start-your-free-trial.md): start a free trial, then compare the Starter, Pro, and Enterprise plans.
+* [Try free then choose a plan](start-your-free-trial.md): start a free trial, then compare the Starter, Pro, and Enterprise plans. For Enterprise rollout guidance, see the [Enterprise Hub](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/enterprise-hub).
 * [Use the Cloud console](use-the-cloud-console.md): open the n8n Cloud console, where you manage your instance, plan, billing, and credits.
 * [Update your version](update-your-version.md): update your n8n version on Cloud.
 * [Configure Cloud](configure-cloud/README.md): set your timezone, find your IP addresses, and manage your data.

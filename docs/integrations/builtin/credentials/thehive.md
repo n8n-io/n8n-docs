@@ -37,13 +37,13 @@ Install [TheHive](https://docs.strangebee.com/thehive/installation/installation-
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [TheHive's API documentation](https://docs.strangebee.com/thehive/api-docs/) and [TheHive's documentation](https://docs.strangebee.com/) for more information about the services. The TheHive 3 API docs are no longer online.
+Refer to the [TheHive 5 API documentation](https://docs.strangebee.com/thehive/api-docs/) and [TheHive's documentation](https://docs.strangebee.com/) for more information about the services. The API docs for TheHive 3 and 4 are no longer online.
 
 ## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need:
 
-- An **API Key**: Create an API key from **Organization > Create API Key**. Refer to [TheHive's API documentation](https://docs.strangebee.com/thehive/api-docs/) for more information.
+- An **API Key**: Create an API key from **Organization > Create API Key**. Refer to the [TheHive 5 API documentation](https://docs.strangebee.com/thehive/api-docs/) for more information.
 - Your **URL**: The URL of your TheHive server.
 - An **API Version**: Choose between:
     - **TheHive 3 (api v0)**

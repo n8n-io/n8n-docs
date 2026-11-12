@@ -51,7 +51,7 @@ Air-gapped usage reporting has three parts:
 
 - **The n8n-airgap-monitoring service.** A small service that you host in your own network. It runs as one container with one volume and stores the reports it receives.
 - **The `instance-reporting` module.** An opt-in module in n8n. Once you enable it, an n8n instance sends one usage report a day to the monitoring service.
-- **The usage report.** A JSON file you download from the monitoring service and share with n8n. It lists every reporting instance and its daily execution counts.
+- **The usage report.** A JSON payload you can share with n8n directly from your n8n-airgap-monitoring instance using your browser's internet connection (n8n-airgap-monitoring makes no outbound network requests itself). It lists every reporting instance and its billable execution counts.
 
 No data leaves your network unless you send the report to n8n yourself. The report contains execution counts, instance IDs, n8n versions, and the labels you choose. It doesn't contain workflows, execution data, or credentials.
 

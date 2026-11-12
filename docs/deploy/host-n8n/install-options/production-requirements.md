@@ -57,7 +57,7 @@ This section applies to production deployments that you expose to users or to ex
 | 5678 | n8n | HTTP API, editor UI, and webhooks. This is the default value of `N8N_PORT`. |
 | 5432 | PostgreSQL | Database connections. This is the PostgreSQL default. |
 | 6379 | Redis | Queue communication in queue mode. This is the Redis default. Use the port and TLS settings of your Redis service, since managed services often use a different port for TLS. |
-| 5679 | n8n task broker | Connections from external task runners. This is the default value of `N8N_RUNNERS_BROKER_PORT`. Keep this traffic private between n8n and the runners. |
+| 5679 | n8n task broker | Connections from external task runners. This is the default value of `N8N_RUNNERS_BROKER_PORT`. The broker listens on `127.0.0.1` by default. If runners can’t connect through loopback, set `N8N_RUNNERS_BROKER_LISTEN_ADDRESS` to a bind address they can reach. Keep the port private and restrict access to the runners. |
 
 ### Firewall rules
 

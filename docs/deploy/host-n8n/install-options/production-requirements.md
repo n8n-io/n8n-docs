@@ -36,15 +36,15 @@ Refer to [Choose n8n's database](../configure-n8n/choose-n8ns-database.md) for t
 
 For those deployments, plan for the following:
 
-- **n8n data directory:** a persistent volume for the n8n data directory, which holds the encryption key and logs. It also holds local binary data in [filesystem mode](../configure-n8n/scaling/handle-binary-data.md#enable-filesystem-mode), the default in regular mode from n8n 2.0.
+- **n8n data directory:** a persistent volume for the n8n data directory, which holds the encryption key and file logs, when enabled. It also holds local binary data in [filesystem mode](../configure-n8n/scaling/handle-binary-data.md#enable-filesystem-mode), the default in regular mode from n8n 2.0.
 - **PostgreSQL data:** if you run PostgreSQL yourself, a persistent volume for PostgreSQL data.
-- **Binary data in queue mode:** n8n doesn't support filesystem binary data storage in queue mode. Use database storage, or use AWS S3 or Azure Blob Storage if your license includes [external storage](../configure-n8n/scaling/use-external-storage.md). Database mode increases the size of your PostgreSQL database. If your license includes external storage, prefer it for queue mode. Refer to [Handle binary data](../configure-n8n/scaling/handle-binary-data.md) for details.
+- **Binary data in queue mode:** n8n stores binary data in the database by default unless you configure another storage mode. If your license includes the relevant [external storage](../configure-n8n/scaling/use-external-storage.md) option, you can use AWS S3 or Azure Blob Storage. If you use filesystem storage, all main instances, workers, and webhook processors that handle binary data must access the same shared volume at the same configured path. Database mode increases the size of your PostgreSQL database. If your license includes external storage, prefer it for queue mode. Refer to [Handle binary data](../configure-n8n/scaling/handle-binary-data.md) for details.
 
 ## Redis
 
 This section applies only if you [enable queue mode](../configure-n8n/scaling/enable-queue-mode.md).
 
-In queue mode, Redis holds the queue state for pending executions between the main n8n instance and its workers. PostgreSQL holds your workflows and execution data. If Redis loses its data, pending executions fail. Configure Redis persistence and availability to match how much lost work you can tolerate. Provision a Redis instance that the main instance and every worker can reach. Refer to [Start Redis](../configure-n8n/scaling/enable-queue-mode.md#start-redis) for the connection settings.
+In queue mode, Redis holds the queue state for pending executions between the main n8n instance and its workers. PostgreSQL holds your workflows and execution data. If Redis loses queued jobs, n8n doesn't rebuild them from PostgreSQL. It marks the affected executions as crashed instead. Configure Redis persistence and availability to match how much lost work you can tolerate. Provision a Redis instance that the main instance and every worker can reach. Refer to [Start Redis](../configure-n8n/scaling/enable-queue-mode.md#start-redis) for the connection settings.
 
 ## Network
 

@@ -231,7 +231,7 @@ How n8n handles the entries:
 - n8n drops entries past the OpenTelemetry limits: 180 entries, 4,096 bytes for a single entry, and 8,192 bytes in total. A dropped entry never reaches the downstream service.
 - n8n saves the entries on the execution, so they survive a [queue mode](../configure-n8n/scaling/enable-queue-mode.md) worker and a resume after a Wait node.
 - n8n forwards the entries without recording them. A `tenant.id` entry goes out on the headers but never appears as a [span attribute](#span-attributes).
-- An `otel.configure` external hook can add entries of its own. Those win over the caller's when both set the same key.
+- An [`otel.configure` external hook](#change-exported-telemetry-with-an-external-hook) can add entries of its own. Those win over the caller's when both set the same key.
 
 ## Start spans
 
@@ -320,7 +320,7 @@ n8n can also emit detailed spans for agent runs built with the Agents feature, u
 {% hint style="warning" %}
 **Legacy AI Agent node**
 
-This section covers tracing for the new Agents feature. The older AI Agent (LangChain) node only produces the standard `node.execute` span like any other node. It doesn't emit the `gen_ai.*` agent-run or tool-call spans.
+This section covers tracing for the new Agents feature. The older AI Agent (LangChain) node doesn't produce agent-run or tool-call spans. It produces a standard `node.execute` span. From n8n 2.46.0, that span has `gen_ai.*` attributes, and so does the span of its chat model node.
 {% endhint %}
 
 Agent tracing rides along with the rest of the OTel module. With `N8N_OTEL_ENABLED` turned on, add:
@@ -368,7 +368,7 @@ n8n supports the following custom attribute levels:
 
 | Level | Configure in | Exported span | Default attribute prefix |
 | :---- | :----------- | :------------ | :--------------- |
-| Project | **Project settings** | `workflow.execute` | `n8n.project.custom.<key>` |
+| Project | **Project settings** | `workflow.execute`, and `node.execute` from n8n 2.42.0 | `n8n.project.custom.<key>` |
 | Workflow | **Workflow settings** | `workflow.execute` | `n8n.workflow.custom.<key>` |
 | Node | Node **Settings** tab | `node.execute` | `n8n.node.custom.<key>` |
 
@@ -472,11 +472,60 @@ export N8N_OTEL_TRACES_CUSTOM_ATTRIBUTE_PREFIXES='{"project":"acme."}'
 
 If the value isn't valid JSON, uses any other key, or has a non-string value, n8n logs a warning and uses the default prefixes for all levels.
 
+If you change a prefix, a custom key can end up the same as another key on the same span:
+
+- If it's the same as a built-in attribute, such as `n8n.workflow.id` or `service.name`, n8n keeps its own value and drops yours.
+- If two levels use the same key, the more specific level wins. Node wins over workflow, and workflow wins over project.
+
 {% hint style="warning" %}
 **OpenTelemetry standard attributes**
 
 n8n doesn't check custom keys against the [OpenTelemetry semantic conventions](https://opentelemetry.io/docs/specs/semconv/). If your key matches a standard attribute, such as `user.id` or `http.request.method`, your backend reads your value as that attribute. Avoid standard keys unless your value has the standard meaning.
 {% endhint %}
+
+## Change exported telemetry with an external hook
+
+{% hint style="info" %}
+**Feature availability**
+
+The `otel.configure` external hook is available from n8n 2.47.0.
+{% endhint %}
+
+With the `otel.configure` [external hook](../configure-n8n/external-hooks.md), you can add your own resource attributes and `baggage` entries to what n8n sends. n8n runs the hook once when it starts. If you change the hook file, restart n8n.
+
+The hook gives you two functions. You pass each one a function of your own, called a mapper:
+
+| Function | What it does |
+| :------- | :----------- |
+| `registerResourceAttributeMapper` | Adds resource attributes to each exported span. n8n keeps its own value for `service.name`, `service.version`, `n8n.instance.id`, and `n8n.instance.role`. |
+| `registerOutboundBaggageMapper` | Adds entries to the `baggage` header on outbound requests. You need [outbound trace headers](#outbound-trace-headers) turned on. |
+
+A mapper gets the attributes of one span and returns an object of keys and values:
+
+- Return string values. n8n ignores other values.
+- Don't make the mapper `async`.
+- If a mapper throws an error, n8n logs a warning and skips it.
+
+To try the example below, save it as a file. Then set `EXTERNAL_HOOK_FILES` to its path on the main instance, workers, and webhook processors:
+
+```js
+// Copy the project ID to a resource attribute and a baggage entry
+const projectIdFrom = (spanAttributes) => {
+	const projectId = spanAttributes['n8n.project.id'];
+	return typeof projectId === 'string' ? { 'project.id': projectId } : {};
+};
+
+module.exports = {
+	otel: {
+		configure: [
+			async (api) => {
+				api.registerResourceAttributeMapper(projectIdFrom);
+				api.registerOutboundBaggageMapper(projectIdFrom);
+			},
+		],
+	},
+};
+```
 
 ## Try it out with Jaeger <a href="#try-it-out-with-jaeger" id="try-it-out-with-jaeger"></a>
 

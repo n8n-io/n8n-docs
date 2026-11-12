@@ -10,7 +10,7 @@ layout:
 
 # Report usage from air-gapped instances
 
-To report usage from n8n instances that can't reach the internet, you run the n8n-airgap-monitoring service inside your network, point every n8n instance at it, and download a usage report to share with n8n.
+To report usage from n8n instances that can't reach the internet, you run the n8n-airgap-monitoring service inside your network, point every n8n instance at it and share the resulting usage report with n8n once per month.
 
 {% hint style="info" %}
 **Feature availability**

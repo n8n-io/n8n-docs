@@ -114,7 +114,7 @@ This defines every service you're setting up: n8n itself, the sandbox stack that
 | **sandbox-runner-1** | Does the actual work; a privileged Docker-in-Docker container that creates and runs the sandboxes. |
 | **searxng**          | Bundled web search backend for n8n Assistant.                                                      |
 
-This bundles n8n's own sandbox (`n8n-sandbox`), which is for development and testing only. Its runner is privileged, so it gives weak isolation. For a production instance, n8n recommends the n8n sandbox service on Kubernetes with Sysbox runners. If a third party can process your workflow data, Daytona is a managed alternative. See [Set up n8n Assistant](../configure-n8n/set-up-n8n-assistant.md) for how to configure each option.
+This bundles n8n's own sandbox (`n8n-sandbox`), which is for development and testing only. Its runner is privileged, so it gives weak isolation. For a production instance, n8n recommends the n8n sandbox service with Sysbox runners, ideally on Kubernetes. If a third party can process your workflow data, Daytona is a managed alternative. See [Set up n8n Assistant](../configure-n8n/set-up-n8n-assistant.md) for how to configure each option.
 
 There's no database service defined here. n8n falls back to its built-in SQLite database. The `n8n-data` volume in `get-n8n-compose.yml` stores the database and n8n's encryption key, so your data survives restarts and container recreation. For a production instance, swap in Postgres. See [Use PostgreSQL instead of SQLite](install-using-docker-compose.md#optional-use-postgresql-instead-of-sqlite) below.
 
@@ -245,7 +245,7 @@ SQLite is fine for trying things out, but for a production instance that must ha
 
 * `sandbox-runner-1` (`privileged: true`, Docker-in-Docker) is never exposed to the public internet. Treat it as equivalent to root on the host.
 * Nothing else runs on the same host or VM as the Compose stack. If code escapes the sandbox, it reaches everything on that host.
-* This setup isn't your production sandbox. For production, use the n8n sandbox service on Kubernetes with Sysbox. If a third party can process your workflow data, Daytona is a managed alternative. See [Set up n8n Assistant](../configure-n8n/set-up-n8n-assistant.md).
+* This setup isn't your production sandbox. For production, use the n8n sandbox service with Sysbox runners, ideally on Kubernetes. If a third party can process your workflow data, Daytona is a managed alternative. See [Set up n8n Assistant](../configure-n8n/set-up-n8n-assistant.md).
 * Only n8n's port is open on your cloud firewall.
 * `SANDBOX_API_KEYS`, the registration token, and the runner key are unique, not left as `change-me-...`, and rotated periodically.
 * `sandbox-api` and `sandbox-runner-1` do **not** use `env_file: .env`. Each only receives the specific variables it needs, explicitly, in its `environment` block. The model API key, Brave key, Postgres password, and n8n encryption key never reach the sandbox containers.

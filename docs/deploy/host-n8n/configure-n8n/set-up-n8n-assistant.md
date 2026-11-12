@@ -53,7 +53,7 @@ Every self-hosted n8n Assistant setup needs three things:
 * **A sandbox (required):** An isolated environment where n8n Assistant runs code.
 * **A search provider (optional):** Lets n8n Assistant look things up on the web.
 
-How you provide the sandbox is the main decision. For self-hosted production, n8n recommends running the n8n sandbox service (`n8n-sandbox`) on Kubernetes with Sysbox runners. If you can send workflow data to a third party, Daytona is a managed alternative. The bundled sandbox that the [one-line setup command](../install-options/one-line-setup.md) and [Docker Compose guide](../install-options/install-using-docker-compose.md) set up automatically is for development and testing only. Its privileged runner gives weak isolation.
+How you provide the sandbox is the main decision. For self-hosted production, n8n recommends running the n8n sandbox service (`n8n-sandbox`) with Sysbox runners, ideally on Kubernetes. If you can send workflow data to a third party, Daytona is a managed alternative. The bundled sandbox that the [one-line setup command](../install-options/one-line-setup.md) and [Docker Compose guide](../install-options/install-using-docker-compose.md) set up automatically is for development and testing only. Its privileged runner gives weak isolation.
 
 [Pick your setup](#pick-your-setup) below based on how you installed n8n and where you're running it.
 

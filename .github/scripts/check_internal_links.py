@@ -131,18 +131,10 @@ ASSET_EXTS = {
 # `(node-name).all.md` are captured whole instead of truncated at the inner `)`.
 MD_LINK_RE = re.compile(r"\[[^\]]*\]\(\s*(<[^>]+>|(?:[^()\s]+|\([^()]*\))+)")
 HTML_ATTR_RE = re.compile(r"""(?:href|src)\s*=\s*["']([^"']+)["']""", re.IGNORECASE)
+MD_ESCAPE_RE = re.compile(r"\\([!-/:-@\[-`{-~])")
 # Reference definitions: [id]: target. The label's first char must not be `^`,
 # so Markdown footnote definitions ([^1]: some text) aren't treated as links.
 REF_DEF_RE = re.compile(r"^\s{0,3}\[(?:[^^\]][^\]]*)\]:\s*(\S+)")
-# CommonMark backslash escape: a backslash before any ASCII punctuation character
-# stands for that character alone. Link targets must escape parentheses, so the
-# file `(node-name).all.md` is written `\(node-name\).all.md` (DOC-2570).
-MD_ESCAPE_RE = re.compile(r"\\([!-/:-@\[-`{-~])")
-
-
-def unescape_md(target: str) -> str:
-    """Drop Markdown backslash escapes, so `\\(x\\).md` names the file `(x).md`."""
-    return MD_ESCAPE_RE.sub(r"\1", target)
 
 
 def blank_gitbook_native(text: str) -> str:
@@ -227,12 +219,14 @@ def iter_targets(text: str):
             target = m.group(1).strip()
             if target.startswith("<") and target.endswith(">"):
                 target = target[1:-1].strip()
-            yield i, target
+            # CommonMark allows backslash escapes in link targets. GitBook writes
+            # SUMMARY entries such as `\(node-name\).all.md`.
+            yield i, MD_ESCAPE_RE.sub(r"\1", target)
         for m in HTML_ATTR_RE.finditer(line):
             yield i, m.group(1).strip()
         m = REF_DEF_RE.match(line)
         if m:
-            yield i, m.group(1).strip()
+            yield i, MD_ESCAPE_RE.sub(r"\1", m.group(1).strip())
 
 
 def classify_cross_space(target: str, src_rel: str):
@@ -501,9 +495,7 @@ def classify(md_file: Path, src_rel: str, target: str):
         return None if result == "unknown" else result
 
     # Strip anchor and query.
-    # The path is a filename on disk, so drop Markdown escapes before any lookup.
-    # Messages keep `target` as written, so a finding still matches the source.
-    path_part = unescape_md(target.split("#", 1)[0].split("?", 1)[0].strip())
+    path_part = target.split("#", 1)[0].split("?", 1)[0].strip()
     anchor = target.split("#", 1)[1].strip() if "#" in target else None
 
     # Skip: external, mailto/other schemes, protocol-relative, pure anchors,

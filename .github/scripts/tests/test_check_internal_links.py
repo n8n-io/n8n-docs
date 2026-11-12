@@ -134,27 +134,31 @@ def main():
     check("missing .md target is flagged", category(A, "gone.md") == "missing-target")
     check("absolute path is flagged", category(A, "/spacea/page-one.md") == "absolute-path")
 
-    # --- Markdown backslash escapes (DOC-2570) --------------------------------
+    # --- Markdown backslash escapes, end to end (DOC-2570) --------------------
     # A link target must escape parens, so `(node-name).all.md` is written
     # `\(node-name\).all.md`. The weekly sweep reported docs/build/SUMMARY.md as
     # missing-target every week because the backslashes reached the file lookup.
-    check("escaped parens in a target resolve to the real file",
-          category(A, r"\(node-name\).all.md") is None)
-    check("unescaped parens still resolve", category(A, "(node-name).all.md") is None)
-    check("escaped target with an anchor still reaches the anchor check",
-          category(A, r"\(node-name\).all.md#nope") == "broken-anchor")
-    missing_escaped = classify(A, r"\(gone\).all.md")
-    check("an escaped target that really is missing is still flagged",
-          missing_escaped is not None and missing_escaped[0] == "missing-target")
-    check("the missing-target message keeps the target as written",
-          missing_escaped is not None and r"\(gone\).all.md" in missing_escaped[1])
-    check("unescape_md drops a backslash before ASCII punctuation",
-          cil.unescape_md(r"a\(b\)\_c\#d") == "a(b)_c#d")
-    check("unescape_md keeps a backslash before a letter or digit",
-          cil.unescape_md(r"a\nb\1") == r"a\nb\1")
-    check("an escaped-paren link in a SUMMARY line is parsed and resolves",
-          [category(A, t) for _, t in cil.iter_targets(
-              r"* [(node-name).all](\(node-name\).all.md)")] == [None])
+    # These run a Markdown line through the same parse -> classify path as main().
+    def line_categories(src_rel, md_line):
+        return [category(src_rel, t) for _, t in cil.iter_targets(md_line)]
+
+    check("an escaped-paren SUMMARY entry resolves to the real file",
+          line_categories(A, r"* [(node-name).all](\(node-name\).all.md)") == [None])
+    check("an escaped-paren reference definition resolves to the real file",
+          line_categories(A, "[ref]: \\(node-name\\).all.md\n") == [None])
+    check("an escaped-paren link that really is missing is still flagged",
+          line_categories(A, r"[x](\(gone\).all.md)") == ["missing-target"])
+    check("an escaped-paren link with a bad anchor reaches the anchor check",
+          line_categories(A, r"[x](\(node-name\).all.md#nope)") == ["broken-anchor"])
+    # Escapes are dropped before the `#` split, as GitBook renders them: `\#` is a
+    # plain `#` in the href, so it still starts the anchor (cubic on PR #5707).
+    check("an escaped '#' still starts the anchor",
+          [t for _, t in cil.iter_targets(r"[x](page-one.md\#section-one)")]
+          == ["page-one.md#section-one"])
+    check("a backslash before a letter or digit is kept",
+          [t for _, t in cil.iter_targets(r"[x](a\nb\1.md)")] == [r"a\nb\1.md"])
+    check("HTML href values are not unescaped",
+          [t for _, t in cil.iter_targets(r'<a href="a\(b\).md">x</a>')] == [r"a\(b\).md"])
 
     # --- Rule 1 exception: bare directory references resolve to README.md ----
     check("current-folder bare directory reference resolves",

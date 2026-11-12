@@ -35,17 +35,29 @@ n8n uses [semantic versioning](https://semver.org/). All version numbers are in 
 
 ---
 
-## `n8n 3.1` Postgres node adds custom SSL certificate support, plus 6 other features <a href="#n8n31" id="n8n31"></a>
+## `n8n 3.2` Paddle node renamed to Paddle Classic <a href="#n8n32" id="n8n32"></a>
+
+**Released:** 2026-11-10
+
+* [Paddle Node: Rename node to Paddle Classic](https://github.com/n8n-io/n8n/pull/43042): The Paddle node has been renamed to "Paddle Classic" and its credential to "Paddle Classic API" to clarify that it only supports the Paddle Classic platform, not Paddle Billing. Both the node and credential now show a notice directing Paddle Billing users to the dedicated Paddle Billing node. Existing workflows, credentials, and node names are unaffected; only newly added nodes get the updated default name.
+
+---
+
+## `n8n 3.1` Postgres node adds custom SSL certificate support, plus 10 other features <a href="#n8n31" id="n8n31"></a>
 
 **Released:** 2026-11-03
 
 * [Mailchimp Trigger Node: Add webhook signature verification](https://github.com/n8n-io/n8n/pull/41561): The Mailchimp Trigger node now verifies the X-Mailchimp-Signature header on incoming webhook deliveries, checking both the HMAC signature and timestamp freshness, and rejects invalid requests with a 401 response. This prevents unauthorized requests from triggering workflows. Existing workflows are unaffected until reactivated, since Mailchimp only provides the signing secret when a webhook is created; deactivating and reactivating the workflow enables verification.
+* [Add an on/off switch and env var for the n8n Assistant](https://github.com/n8n-io/n8n/pull/42121): The n8n Assistant now has an on/off switch in Settings > Assistant, similar to Agents and Chat. On Enterprise plans it's off by default until an admin enables it; other plans keep it on by default. Self-hosted admins can set the default via N8N_INSTANCE_AI_ENABLED, with a saved Settings choice taking precedence. Enterprise instances already using the Assistant remain enabled after upgrading. Turning it on guides admins through remaining setup steps.
 * [n8n Node: Add user get operation](https://github.com/n8n-io/n8n/pull/42566): The n8n node now supports a User resource with a Get operation, letting workflows look up a user by ID or email via the n8n public API. An optional 'Include Role' toggle adds the user's global role to the output. This requires instance owner credentials with the user:read API scope, and returns a clear 'User not found' error for unknown IDs or emails.
 * [Open a resource from the Assistant header when no tabs are open](https://github.com/n8n-io/n8n/pull/42671): In the Assistant thread view, when no preview tabs are open, the header now shows a button to open a workflow, data table, or agent directly from a resource picker, instead of a disabled toggle. Selecting a resource opens it in a new tab and shows the preview. Once tabs are open, the header reverts to the usual preview toggle. This applies to both the main Assistant view and the Assistant agent view.
 * [Zendesk Node: Default new nodes to OAuth2 authentication](https://github.com/n8n-io/n8n/pull/39310): New Zendesk and Zendesk Trigger nodes now default to OAuth2 authentication instead of API Token, since Zendesk is retiring API token support. API Token remains available as an option. Existing workflows using API Token are unaffected and keep their current authentication. The Zendesk API credential also now shows a notice recommending migration to OAuth2, with a link to Zendesk's migration guide.
 * [Venafi TLS Protect Cloud Trigger Node: Add webhook signature verification](https://github.com/n8n-io/n8n/pull/42250): The Venafi TLS Protect Cloud Trigger now verifies incoming webhook signatures. When the node creates its connector, it generates a secret and checks each delivery's VaaS-Signature header against it, rejecting unsigned or mismatched requests with a 401. Previously any POST to the webhook URL was accepted. Connectors created before this update are unaffected until the workflow is republished. Also fixed a bug where checking for existing connectors could incorrectly error out instead of properly matching and cleaning up duplicates by name.
 * [Microsoft Agent 365 Node: Send spans to Microsoft through the OpenTelemetry setup](https://github.com/n8n-io/n8n/pull/42174): The Microsoft Agent 365 node now reliably sends conversation spans to Microsoft's Agent 365 observability service through n8n's own OpenTelemetry setup. Previously this only worked on self-hosted instances without Sentry and with n8n's tracing off; it now also works on n8n Cloud and alongside Sentry or n8n OTel tracing. Export remains on by default and can be disabled via ENABLE_OBSERVABILITY=false or ENABLE_A365_OBSERVABILITY_EXPORTER=false; an opt-in env var also forwards these spans to the customer's own OTel endpoint.
 * [Postgres Node: Add custom SSL certificate support](https://github.com/n8n-io/n8n/pull/41593): Postgres credentials now support custom SSL certificates: a CA certificate, client certificate, and client private key, shown when SSL mode is set to Allow or Require. This enables connections to databases requiring custom TLS trust or client authentication. SSH-tunneled connections now correctly verify the database hostname for TLS. Credential testing also gives a clearer error message suggesting adding a CA certificate when trust errors occur and none is set.
+* [Show skills created or edited by the n8n Assistant as artifacts](https://github.com/n8n-io/n8n/pull/41631): When the n8n Assistant creates or updates a skill, it now automatically opens a preview artifact alongside the chat, showing the skill's name, scope, and files in read-only mode with an 'Open in Skills' link for editing. Previews refresh on later saves and keep your selected reference file. Reads, lists, deletes, and denied or refused actions do not trigger a preview. Saved skill tabs persist across conversation reloads.
+* [Redesign the agent session trace](https://github.com/n8n-io/n8n/pull/41536): The agent session timeline has been redesigned for clarity. User and agent messages now appear as distinct, Markdown-rendered transcript items with expand/collapse for long content, and agent avatars. Tool calls and skills show name, status, and expandable input/output. Approvals, errors, background tasks, and job results each have clearer displays, plus a link to pending approvals. The old 'Open test' action and dock close button are replaced with breadcrumb navigation and an 'Edit in builder' option.
+* [Show app blueprint card before creating an app](https://github.com/n8n-io/n8n/pull/42815): When asking the AI assistant to build an app, it now shows an editable blueprint card (name, namespace, visibility, theme, description, and optional notes) for review and approval before creating anything. Users can edit details or cancel. App creation and opening are now separate steps, so failures can be retried individually instead of restarting the whole flow.
 
 ---
 
@@ -74,6 +86,22 @@ n8n 3.0 is a major release with breaking changes. Before you upgrade, read [n8n 
 * [Databricks Node: Enable the Lakebase resource and show the Lakebase Chat Memory sub-node](https://github.com/n8n-io/n8n/pull/41795): The Databricks node now exposes a Lakebase resource in its Resource dropdown, offering Get Many, Insert, Update, Insert or Update, Delete and Execute Function operations against Lakebase Postgres tables, including use as AI Agent tools. The Databricks Lakebase Chat Memory sub-node is now visible in the node picker under AI > Memory, enabling multi-turn chat history storage in Lakebase.
 * [Send users to the admin who can lift a type restriction](https://github.com/n8n-io/n8n/pull/41297): When a node or credential type is blocked, n8n now directs users to the correct admin instead of always pointing to an instance admin. Blocks set by a team project, or opt-in types the project hasn't allowed, now point to that project's admins (falling back to instance owners/admins if none exist); all other blocks still go to instance admins. The dialog lists the right people, and the agent chat refusal message reflects project-level blocks.
 * [Prevent usage of deprecated nodes](https://github.com/n8n-io/n8n/pull/31392): Nodes marked as deprecated are now frozen in the editor: they can no longer be edited, renamed, disabled, duplicated, cut, or pinned, and can only be removed or replaced. Import and paste still work so parameter values can be copied, but resulting deprecated nodes remain frozen and, depending on configuration, may be blocked from saving. Error messages now suggest the specific replacement node when available.
+
+---
+
+## `n8n 2.47.3` Migration emails link to filtered report <a href="#n8n2473" id="n8n2473"></a>
+
+**Released:** 2026-11-09
+
+* [Open the migration report filtered to the recipient from notification emails](https://github.com/n8n-io/n8n/pull/43095): Migration finding notification emails now link directly to the migration report pre-filtered to the recipient's own workflows, instead of the full unfiltered report. This saves owners from having to manually search for the workflows they need to fix after receiving a notification.
+
+---
+
+## `n8n 2.46.5` Loading message added for migration report <a href="#n8n2465" id="n8n2465"></a>
+
+**Released:** 2026-11-04
+
+* [Show a message when the migration report takes long to load](https://github.com/n8n-io/n8n/pull/43001): In Settings > Migration report, if loading or refreshing the report takes longer than 5 seconds, a message now appears over the loading skeleton: 'Still scanning your workflows…' with a note that this can take a while on instances with many workflows. The message disappears once the report finishes loading, so users on large instances get a clear signal the scan is still running rather than seeing an unexplained skeleton.
 
 ---
 

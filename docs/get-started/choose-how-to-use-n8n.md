@@ -103,7 +103,7 @@ Every plan runs on the same underlying product with different features, usage li
 | **Pro** | Power users and small teams that need higher limits, admin accounts, and insights |
 | **Enterprise** | Organizations that need advanced security, scaling, and dedicated support |
 
-For how to plan an Enterprise rollout, see the [Enterprise Hub](enterprise-hub.md). For how to start a trial and upgrade, see [Try free then choose a plan](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/start-your-free-trial). For what each plan includes, see the [pricing page](https://n8n.io/pricing/).
+For how to start a trial and upgrade, see [Try free then choose a plan](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/use-n8n-cloud/start-your-free-trial). For what each plan includes, see the [pricing page](https://n8n.io/pricing/).
 
 ### Pick a plan or edition for self-hosted n8n <a href="#if-you-chose-self-hosted-pick-an-edition" id="if-you-chose-self-hosted-pick-an-edition"></a>
 
@@ -116,7 +116,7 @@ Every self-hosted installation runs on the same underlying product. You can stic
 | **Business** | Paid (license key when you subscribe to Business plan) | Teams needing paid features like SSO, environments, and projects |
 | **Enterprise** | Paid (license key when you subscribe to Enterprise plan) | Organizations needing the most advanced security, scaling, and governance |
 
-For how to plan an Enterprise rollout, see the [Enterprise Hub](enterprise-hub.md). For the differences between editions and how to register or license an instance, see [Compare plans and editions](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/community-edition-features). For what each plan includes, see the [pricing page](https://n8n.io/pricing/).
+For the differences between editions and how to register or license an instance, see [Compare plans and editions](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/community-edition-features). For what each plan includes, see the [pricing page](https://n8n.io/pricing/).
 
 To register a Community edition instance for the extra free features, go to **Settings > Plan & usage** and select **Unlock**.
 

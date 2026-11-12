@@ -213,7 +213,12 @@ def space_of(rel_path: str) -> str | None:
 
 
 def iter_targets(text: str):
-    """Yield (line_number, raw_target) for every link in the (code-stripped) text."""
+    """Yield (line_number, target) for every link in the (code-stripped) text.
+
+    Markdown link targets come back with backslash escapes removed, as GitBook
+    resolves them: `\\(node-name\\).all.md` -> `(node-name).all.md`. HTML href/src
+    values are returned as written.
+    """
     for i, line in enumerate(text.split("\n"), start=1):
         for m in MD_LINK_RE.finditer(line):
             target = m.group(1).strip()

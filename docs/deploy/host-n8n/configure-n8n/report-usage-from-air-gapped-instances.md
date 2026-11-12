@@ -68,7 +68,7 @@ You need:
 
 1. **Deploy the monitoring service.** Run the `ghcr.io/n8n-io/n8n-airgap-monitoring` image with a read token you generate and a persistent volume. Follow [Self-host n8n-airgap-monitoring](https://github.com/n8n-io/n8n-airgap-monitoring/blob/main/docs/USER_GUIDE.md#1-self-host-n8n-airgap-monitoring) in the user guide, or use the [Helm chart](https://github.com/n8n-io/n8n-airgap-monitoring/blob/main/docs/charts/airgap-monitoring/README.md) on Kubernetes.
 1. **Enable reporting on every n8n instance.** Set the environment variables in [Enable reporting on every n8n instance](#enable-reporting-on-every-n8n-instance).
-1. **Download the usage report and share it with n8n.** Download the report from the monitoring service with your read token, and send the file to n8n. See [Download usage reports](https://github.com/n8n-io/n8n-airgap-monitoring/blob/main/docs/USER_GUIDE.md#3-download-usage-reports-from-n8n-airgap-monitoring) in the user guide.
+1. **Share the usage report with n8n once per month.** Your n8n-airgap-monitoring service offers a web page for easily submitting the data collected for your instances to n8n by using your computer's internet connection.
 
 ## Keep the monitoring service off the public internet
 

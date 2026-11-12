@@ -248,8 +248,8 @@ These two audit events record when an instance owner or admin turns [API rate li
 
 | Event name | Sent when |
 | --- | --- |
-| `n8n.audit.public-api-rate-limit.enabled` | A user turns rate limiting on. Carries the acting user. |
-| `n8n.audit.public-api-rate-limit.disabled` | A user turns rate limiting off. Carries the acting user. |
+| `n8n.audit.public-api-rate-limit.enabled` | An instance owner or admin turns rate limiting on. Carries the acting user. |
+| `n8n.audit.public-api-rate-limit.disabled` | An instance owner or admin turns rate limiting off. Carries the acting user. |
 
 n8n doesn't send an event when:
 

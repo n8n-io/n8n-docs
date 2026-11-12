@@ -116,7 +116,7 @@ An instance owner or admin can turn on and change the limits in three ways:
 
 A change in the settings or with the API applies at once. You don't need to restart n8n.
 
-When you turn rate limiting on or off in the settings or with the API, n8n sends an audit event to your log streaming destinations. Refer to [Public API rate limit events](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/stream-logs-to-external-systems#public-api-rate-limit-events).
+When you turn rate limiting on or off in the settings or with the API, n8n sends an audit event to each log streaming destination that subscribes to it. Refer to [Public API rate limit events](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/stream-logs-to-external-systems#public-api-rate-limit-events).
 
 ### In the n8n settings
 

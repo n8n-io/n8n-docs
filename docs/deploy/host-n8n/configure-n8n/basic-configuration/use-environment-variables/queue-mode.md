@@ -29,6 +29,8 @@ You can run n8n in different modes depending on your needs. Queue mode provides 
 | :------- | :---- | :------- | :---------- |
 | `OFFLOAD_MANUAL_EXECUTIONS_TO_WORKERS` | Boolean | `false` | Set to `true` if you want manual executions to run on the worker rather than on main. |
 | `QUEUE_BULL_PREFIX` | String | - | Prefix to use for all queue keys. |
+| `N8N_REDIS_KEY_PREFIX` | String | `n8n` | Prefix for Redis keys and pub/sub channels outside the job queue, such as the multi-main leader key, messages between main and worker instances, the cache, and locks. If two or more n8n deployments share one Redis, give each deployment a different value. Use the same value on every main and worker of a deployment. Before n8n 2.3.0, the prefix doesn't apply to pub/sub channels, so use a separate Redis for each deployment. |
+| `N8N_CACHE_REDIS_KEY_PREFIX` | String | `cache` | Prefix for cache keys in Redis. n8n adds it after `N8N_REDIS_KEY_PREFIX`, for example `n8n:cache`. |
 | `QUEUE_BULL_REDIS_DB` | Number | `0` | The Redis database used. |
 | `QUEUE_BULL_REDIS_HOST` | String | `localhost` | The Redis host. |
 | `QUEUE_BULL_REDIS_PORT` | Number | `6379` | The Redis port used. |

@@ -138,8 +138,8 @@ The following events are available. You can choose which events to stream in **S
 	* Personal sharing restricted disabled
 	* 2FA enforcement enabled
 	* 2FA enforcement disabled
-	* Public API rate limit enabled
-	* Public API rate limit disabled
+	* **Public API rate limit enabled**
+	* **Public API rate limit disabled**
 	* Token exchange succeeded
 	* Token exchange failed
 	* Token exchange embed login

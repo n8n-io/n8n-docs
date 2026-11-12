@@ -129,8 +129,9 @@ ASSET_EXTS = {
 # Markdown inline links [text](target) and HTML href/src attributes.
 # The target allows one level of balanced parens so filenames like
 # `(node-name).all.md` are captured whole instead of truncated at the inner `)`.
-MD_LINK_RE = re.compile(r"\[[^\]]*\]\(\s*(<[^>]+>|(?:[^()\s]+|\([^()]*\))+)")
+MD_LINK_RE = re.compile(r"\[[^\]]*\]\(\s*(<[^>]+>|(?:\\.|[^()\s\\]+|\([^()]*\))+)")
 HTML_ATTR_RE = re.compile(r"""(?:href|src)\s*=\s*["']([^"']+)["']""", re.IGNORECASE)
+MD_ESCAPE_RE = re.compile(r"\\([!-/:-@\[-`{-~])")
 # Reference definitions: [id]: target. The label's first char must not be `^`,
 # so Markdown footnote definitions ([^1]: some text) aren't treated as links.
 REF_DEF_RE = re.compile(r"^\s{0,3}\[(?:[^^\]][^\]]*)\]:\s*(\S+)")
@@ -212,18 +213,25 @@ def space_of(rel_path: str) -> str | None:
 
 
 def iter_targets(text: str):
-    """Yield (line_number, raw_target) for every link in the (code-stripped) text."""
+    """Yield (line_number, target) for every link in the (code-stripped) text.
+
+    Markdown link targets come back with backslash escapes removed, as GitBook
+    resolves them: `\\(node-name\\).all.md` -> `(node-name).all.md`. HTML href/src
+    values are returned as written.
+    """
     for i, line in enumerate(text.split("\n"), start=1):
         for m in MD_LINK_RE.finditer(line):
             target = m.group(1).strip()
             if target.startswith("<") and target.endswith(">"):
                 target = target[1:-1].strip()
-            yield i, target
+            # CommonMark allows backslash escapes in link targets. GitBook writes
+            # SUMMARY entries such as `\(node-name\).all.md`.
+            yield i, MD_ESCAPE_RE.sub(r"\1", target)
         for m in HTML_ATTR_RE.finditer(line):
             yield i, m.group(1).strip()
         m = REF_DEF_RE.match(line)
         if m:
-            yield i, m.group(1).strip()
+            yield i, MD_ESCAPE_RE.sub(r"\1", m.group(1).strip())
 
 
 def classify_cross_space(target: str, src_rel: str):

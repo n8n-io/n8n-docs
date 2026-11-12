@@ -328,6 +328,8 @@ To deploy n8n in multi-main setup, ensure:
 - All `main` processes have set the environment variable `N8N_MULTI_MAIN_SETUP_ENABLED` to `true`.
 - All `main` processes are running behind a load balancer with session persistence (sticky sessions) enabled.
 
+If several n8n deployments share one Redis, set a different [`N8N_REDIS_KEY_PREFIX`](../basic-configuration/use-environment-variables/queue-mode.md) value for each deployment, and the same value on every `main` and `worker` process of a deployment, so leader election and messages between instances don't cross between deployments.
+
 If needed, you can adjust the leader key options:
 
 | Using configuration file | Using environment variables | Description |

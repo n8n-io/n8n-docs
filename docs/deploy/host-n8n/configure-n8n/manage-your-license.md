@@ -47,7 +47,7 @@ N8N_LICENSE_CERT=<base64-encoded-license-string>
 
 Set either `N8N_LICENSE_CERT` or `N8N_LICENSE_ACTIVATION_KEY`, never both.
 
-Air-gapped instances also use the license certificate to authenticate their usage reports. See [Report usage from air-gapped instances](report-usage-from-air-gapped-instances.md).
+To report usage from air-gapped instances, see [Report usage from air-gapped instances](report-usage-from-air-gapped-instances.md).
 
 
 

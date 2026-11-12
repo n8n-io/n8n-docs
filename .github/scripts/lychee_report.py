@@ -133,6 +133,9 @@ def build_payload(stats, ctx):
         "timeouts": _int(stats.get("timeouts")),
         "errors": len(failures),
         "blocked": len(blocked),
+        # The 502/503/504 share of `blocked`, counted before the MAX_FAILURES cap so
+        # the summary can say how much of the bucket was a host outage.
+        "server_errors": sum(1 for f in blocked if f["status"] in SERVER_ERROR_STATUSES),
         "lychee_errors": _int(stats.get("errors")),
     }
     return {
@@ -182,16 +185,21 @@ def merge_quality(payload, quality):
         if url in reported:
             continue
         if url in blocked_urls:
-            if f.get("kind") == "blocked":
-                continue          # same verdict, no new information
+            # `blocked` is the same verdict and `error` is no verdict at all (the second
+            # pass got no answer either). Neither may withdraw the lychee row: during a
+            # host outage the second pass hits the same 504s, and promoting its `error`
+            # moved those links out of the not-verifiable count (DOC-2568).
+            if f.get("kind") in ("blocked", "error"):
+                continue
             promoted.add(url)
         kept.append(f)
 
-    withdrawn = 0
+    withdrawn = withdrawn_server = 0
     if promoted:
-        before = len(payload["blocked"])
+        gone = [f for f in payload["blocked"] if f["url"] in promoted]
         payload["blocked"] = [f for f in payload["blocked"] if f["url"] not in promoted]
-        withdrawn = before - len(payload["blocked"])
+        withdrawn = len(gone)
+        withdrawn_server = sum(1 for f in gone if f["status"] in SERVER_ERROR_STATUSES)
 
     q_totals = quality.get("totals") or {}
     payload["quality"] = kept[:MAX_FAILURES]
@@ -207,6 +215,8 @@ def merge_quality(payload, quality):
     # the cap; those stay counted, which overstates rather than hides. `blocked_truncated`
     # remains the flag that the list is partial.
     payload["totals"]["blocked"] = max(0, _int(payload["totals"].get("blocked")) - withdrawn)
+    payload["totals"]["server_errors"] = max(
+        0, _int(payload["totals"].get("server_errors")) - withdrawn_server)
     payload["totals"].update({
         "quality_checked": _int(q_totals.get("checked")),
         "soft_404": _int(q_totals.get("soft_404")),
@@ -230,9 +240,8 @@ def summary_markdown(payload):
     if t.get("blocked"):
         lines.append(f"- Blocked by the host or server error "
                      f"(401/403/407/429/502/503/504, not verifiable): {t['blocked']}")
-        # Counted from the delivered rows, which are capped at MAX_FAILURES.
-        server = sum(1 for f in payload.get("blocked", [])
-                     if f["status"] in SERVER_ERROR_STATUSES)
+        # From the totals, not the delivered rows: those are capped at MAX_FAILURES.
+        server = _int(t.get("server_errors"))
         if server:
             lines.append(f"  - of which server errors (502/503/504), usually a host "
                          f"outage: {server}")

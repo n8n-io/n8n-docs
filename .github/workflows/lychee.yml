@@ -74,6 +74,9 @@ jobs:
         # Without these, a strange week can only be read back from the job log, which is
         # how DOC-2568 had to be investigated.
         if: always()
+        # The report is already delivered by now. A failed upload must not turn the job
+        # red: red means lychee crashed or the report did not reach n8n (see the header).
+        continue-on-error: true
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: lychee-reports

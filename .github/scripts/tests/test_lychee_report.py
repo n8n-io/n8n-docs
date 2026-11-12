@@ -56,7 +56,7 @@ check("payload: source and run metadata",
       payload["source"] == "lychee-weekly" and payload["run_id"] == "123" and payload["sha"] == "abc")
 check("payload: totals map lychee 'excludes' to 'excluded'; errors = delivered rows (incl. timeouts), lychee's own counter kept",
       payload["totals"] == {"total": 120, "successful": 100, "excluded": 16, "timeouts": 1,
-                            "errors": 3, "blocked": 1, "lychee_errors": 3})
+                            "errors": 3, "blocked": 1, "server_errors": 0, "lychee_errors": 3})
 check("payload: failures included and not truncated",
       len(payload["failures"]) == 3 and payload["failures_truncated"] is False)
 
@@ -99,6 +99,33 @@ check("summary: names the server errors inside the not-verifiable bucket",
       and "server errors (502/503/504), usually a host outage: 3" in outage_summary)
 check("summary: no server-error line when there are none",
       "server errors" not in lr.summary_markdown(rate_limited))
+check("payload: server_errors total counts the 502/503/504 rows", outage["totals"]["server_errors"] == 3)
+
+# During the outage the second pass hits the same 504s and reports `error` (no verdict).
+# That must not withdraw the lychee row, or the link leaves the not-verifiable count.
+gh_504 = {"error_map": {"./docs/changelog/release-notes-0.x.md": [
+    {"url": "https://github.com/aarongut", "status": {"code": 504, "text": "Gateway Timeout"}}]}}
+no_verdict = lr.merge_quality(lr.build_payload(gh_504, ctx), {"totals": {}, "findings": [
+    {"page": "docs/changelog/release-notes-0.x.md", "url": "https://github.com/aarongut",
+     "kind": "error", "detail": "unexpected status 504"}]})
+check("merge: a second-pass 'error' on a 504 keeps the blocked row",
+      len(no_verdict["blocked"]) == 1 and no_verdict["quality"] == []
+      and no_verdict["totals"]["blocked"] == 1 and no_verdict["totals"]["server_errors"] == 1)
+real_verdict = lr.merge_quality(lr.build_payload(gh_504, ctx), {"totals": {}, "findings": [
+    {"page": "docs/changelog/release-notes-0.x.md", "url": "https://github.com/aarongut",
+     "kind": "dead", "detail": "returns 404 to a browser user agent"}]})
+check("merge: a second-pass 'dead' on a 504 still wins and updates both totals",
+      real_verdict["blocked"] == [] and real_verdict["quality"][0]["kind"] == "dead"
+      and real_verdict["totals"]["blocked"] == 0 and real_verdict["totals"]["server_errors"] == 0)
+
+# The "of which server errors" line must use the real count, not the capped row list.
+many_504 = {"error_map": {"./docs/a.md": [
+    {"url": f"https://github.com/u{i}", "status": {"code": 504, "text": "Gateway Timeout"}}
+    for i in range(lr.MAX_FAILURES + 25)]}}
+big_outage = lr.build_payload(many_504, ctx)
+check("summary: server-error count is not capped at MAX_FAILURES",
+      len(big_outage["blocked"]) == lr.MAX_FAILURES
+      and f"usually a host outage: {lr.MAX_FAILURES + 25}" in lr.summary_markdown(big_outage))
 
 # fallback to fail_map (older lychee) and errors derived from the map when the counter is absent
 old = {"total": 5, "fail_map": {"./docs/a.md": [{"url": "https://x/1", "status": "500 Internal Server Error"}]}}

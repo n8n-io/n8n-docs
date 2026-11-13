@@ -14,6 +14,8 @@ layout:
 
 # Environments in n8n <a href="#environments-in-n8n" id="environments-in-n8n"></a>
 
+Environments let you change and test workflows in a development instance without breaking the workflows running in production. Each environment is an n8n instance linked to a Git branch, and you move work between them by pushing and pulling, or by merging branches in your Git provider.
+
 n8n has built its environments feature on top of Git, a version control software. This document helps you understand:
 
 * The purpose of environments.

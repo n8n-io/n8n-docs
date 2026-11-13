@@ -12,6 +12,8 @@ layout:
 
 # Splitting workflows with conditional nodes <a href="#splitting-workflows-with-conditional-nodes" id="splitting-workflows-with-conditional-nodes"></a>
 
+You add conditional logic to an n8n workflow with the IF or Switch node, which splits a single branch into several, for example by whether the user marked an issue as urgent. After splitting, you can merge the branches back together.
+
 Splitting uses the [IF](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.if) or [Switch](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.switch) nodes. It turns a single-branch workflow into a multi-branch workflow. This is a key piece of n8n's [flow logic](./).
 
 Compare these workflows:

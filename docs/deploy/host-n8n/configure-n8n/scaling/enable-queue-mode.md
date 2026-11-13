@@ -11,6 +11,8 @@ layout:
 
 # Queue mode <a href="#queue-mode" id="queue-mode"></a>
 
+Queue mode is how you run n8n at scale. A main instance receives triggers and webhooks, Redis queues the executions, and worker instances run them, so you scale up or down by adding or removing workers.
+
 You can run n8n in different modes depending on your needs. The queue mode provides the best scalability.
 
 {% hint style="info" %}

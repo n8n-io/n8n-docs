@@ -14,6 +14,8 @@ layout:
 
 # Role-based access control (RBAC) <a href="#role-based-access-control-rbac" id="role-based-access-control-rbac"></a>
 
+RBAC in n8n controls what each user can do at two levels. Instance roles (Owner, Admin, Member, Chat user, or a custom role) apply across the whole instance, and project roles apply inside a project, where you group workflows and credentials, so a user can have a different role in each project.
+
 {% hint style="info" %}
 **Feature availability**
 

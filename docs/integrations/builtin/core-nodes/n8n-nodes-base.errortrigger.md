@@ -20,6 +20,8 @@ layout:
 
 # Error Trigger node <a href="#error-trigger-node" id="error-trigger-node"></a>
 
+The Error Trigger node starts an error workflow when another workflow fails, and passes it details about the failed workflow and the error. Use it to send alerts, such as an email or Slack message, when a critical workflow fails: select the error workflow in the failing workflow's settings.
+
 You can use the Error Trigger node to create error workflows. When another linked workflow fails, this node gets details about the failed workflow and the errors, and runs the error workflow.
 
 ## Usage <a href="#usage" id="usage"></a>

@@ -28,6 +28,8 @@ layout:
 
 # Handle rate limits
 
+When an n8n node hits an API rate limit, it errors, for example with error 429. You can handle this with the node's Retry On Fail setting, which retries the request after a pause (up to five tries, at most 5 seconds apart), or with the Loop Over Items and Wait nodes, which send smaller batches with a pause between them.
+
 API[^1] rate limits are restrictions on request frequency. For example, an API may limit the number of requests you can make per minute, or per day.
 
 APIs can also limits how much data you can send in one request, or how much data the API sends in a single response.

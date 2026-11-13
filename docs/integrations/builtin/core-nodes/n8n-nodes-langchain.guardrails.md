@@ -19,6 +19,8 @@ layout:
 
 # Guardrails node <a href="#guardrails-node" id="guardrails-node"></a>
 
+The Guardrails node checks text against your safety, security, and content policies, either before you send it to an AI model or before your workflow uses the model's output. It can replace personal data (PII), secret keys, and URLs with placeholders, and flag jailbreak attempts, NSFW content, or off-topic text.
+
 Use the Guardrails node to enforce safety, security, and content policies on text. You can use it to validate user input _before_ sending it to an AI model, or to check the _output_ from an AI model before using it in your workflow.
 
 {% hint style="info" %}

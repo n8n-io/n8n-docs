@@ -130,4 +130,5 @@ If you're experiencing issues running n8n on Windows, verify your Node.js enviro
 * [One-line setup](one-line-setup.md)
 * [Install using Docker Compose](install-using-docker-compose.md)
 * [Install with Docker](install-with-docker.md)
+* [Install with Helm](install-with-helm.md)
 * [Use a cloud provider](use-a-cloud-provider/README.md)

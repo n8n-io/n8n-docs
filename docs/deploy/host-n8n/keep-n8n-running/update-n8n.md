@@ -28,6 +28,7 @@ For instructions on how to update, refer to the documentation for your installat
 
 * [Installed with npm](../install-options/install-with-npm.md#updating)
 * [Installed with Docker or Docker Compose](../install-options/install-with-docker.md#updating)
+* [Installed with Helm](../install-options/install-with-helm.md#upgrade-the-helm-chart)
 
 ## Update an instance in queue mode
 

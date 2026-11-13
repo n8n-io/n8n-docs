@@ -28,7 +28,7 @@ Refer to [Choose n8n's database](../configure-n8n/choose-n8ns-database.md) for t
 ## Operating system and runtime
 
 - **Operating system:** n8n recommends a 64-bit Linux host for production.
-- **Node.js:** in n8n 2.x, you only need Node.js for [npm installations](install-with-npm.md). Docker and Kubernetes installations include the correct version. Refer to [Install with npm](install-with-npm.md) for the supported Node.js versions. From n8n 3.0, n8n no longer supports npm installations, so you need a Docker-based deployment. Refer to [v3.0 breaking changes](../../../changelog/v30-breaking-changes.md#docker-based-deployment-required-for-self-hosted-n8n).
+- **Node.js:** in n8n 2.x, you only need Node.js for [npm installations](install-with-npm.md). Docker and Kubernetes installations include the correct version. Refer to [Install with npm](install-with-npm.md) for the supported Node.js versions. From n8n 3.0, n8n no longer supports npm installations, so you need a Docker-based deployment. Refer to [v3.0 breaking changes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v30-breaking-changes#docker-based-deployment-required-for-self-hosted-n8n).
 
 ## Storage
 
@@ -105,7 +105,7 @@ Refer to [Install using Docker Compose](install-using-docker-compose.md) for ins
 {% hint style="info" %}
 **Feature availability**
 
-Bare metal installations with npm are available in n8n 2.x. From n8n 3.0, n8n no longer supports npm installations, so you need a Docker-based deployment. Refer to [v3.0 breaking changes](../../../changelog/v30-breaking-changes.md#docker-based-deployment-required-for-self-hosted-n8n).
+Bare metal installations with npm are available in n8n 2.x. From n8n 3.0, n8n no longer supports npm installations, so you need a Docker-based deployment. Refer to [v3.0 breaking changes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v30-breaking-changes#docker-based-deployment-required-for-self-hosted-n8n).
 {% endhint %}
 
 - A supported Node.js version. Refer to [Install with npm](install-with-npm.md).

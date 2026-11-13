@@ -22,8 +22,6 @@ You can use these credentials to authenticate the following nodes:
 
 * [Microsoft Entra ID](../app-nodes/n8n-nodes-base.microsoftentra.md)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 - Create a Microsoft Entra ID account or subscription.

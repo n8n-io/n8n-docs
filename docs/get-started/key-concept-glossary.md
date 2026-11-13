@@ -13,8 +13,6 @@ layout:
 
 This glossary defines the terms n8n uses for building, running, and managing workflows and agents. Each entry links to the page that explains the concept in full.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Workflow building blocks
 
 ### canvas (n8n) <a href="#canvas-n8n" id="canvas-n8n"></a>
@@ -120,7 +118,7 @@ Learn more: [MCP servers](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integra
 
 ### n8n Assistant
 
-n8n Assistant is a chat-based agent in n8n that helps you create, edit, test, and troubleshoot workflows from natural language. It can also build agents and help with instance tasks. n8n Assistant is in Preview. Learn more: [Use n8n Assistant](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/n8n-assistant).
+n8n Assistant is a chat-based agent in n8n that helps you create, edit, test, and troubleshoot workflows from natural language. It can also build agents and help with instance tasks. Learn more: [Use n8n Assistant](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/n8n-assistant).
 
 ### root node (n8n) <a href="#root-node-n8n" id="root-node-n8n"></a>
 

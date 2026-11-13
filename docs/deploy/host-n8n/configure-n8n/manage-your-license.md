@@ -15,14 +15,12 @@ layout:
 
 To enable certain licensed features, you must first activate your license. You can do this either through the UI or by setting environment variables.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Add a license key using the UI <a href="#add-a-license-key-using-the-ui" id="add-a-license-key-using-the-ui"></a>
 
 In your n8n instance:
 
 1. Log in as **Admin** or **Owner**.
-1. Select **Settings** > **Usage and plan**.
+1. Select **Settings** > **Plan & usage**.
 1. Select **Enter activation key**.
 1. Paste in your license key.
 1. Select **Activate**.

@@ -21,8 +21,6 @@ n8n packages are in Preview. Import behavior may change in future releases.
 
 This page covers what n8n does with an [n8n package](README.md) once you've called [import](import-a-package.md): how it decides whether the import can go ahead, and how it resolves each kind of entity.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Check everything, then write
 
 An import runs in two phases. First n8n plans it: it reads the package, works out what it would do with every entity, and collects any reason the import can't go ahead. Then it checks the collected reasons, along with license, permission, and quota requirements. Only if nothing is blocking does it start writing.
@@ -35,7 +33,7 @@ An import runs in two phases. First n8n plans it: it reads the package, works ou
 There's no rollback. n8n has no database transaction around an import, so its promise that a refused import writes nothing covers the problems it can predict, not every possible failure. If something unexpected goes wrong while an import is being written, such as a dropped database connection, whatever was already written stays on the instance, and there's no cleanup afterward. Checking first makes this rare, not impossible.
 {% endhint %}
 
-Import never deletes a workflow, folder, project, data table, or tag. Under `--data-table-schema-conflict-policy=overwrite`, it can remove columns from a data table. See [Data tables](#data-tables).
+Import never deletes a project, data table, or tag. It only removes workflows and folders under `--folder-conflict-policy=overwrite`, and workflows you name in `--deleted-workflow-ids` when you [import a selection](import-a-package.md#import-a-selection-from-a-project-package). See [Folders and projects](#folders-and-projects). Under `--data-table-schema-conflict-policy=overwrite`, it can remove columns from a data table. See [Data tables](#data-tables).
 
 ## Write order
 
@@ -66,11 +64,11 @@ Two things aren't rewritten. A reference set by an expression is left untouched,
 
 ## Credentials
 
-No credential data travels in a package, so every credential reference has to be resolved against the target instance. n8n resolves each one in this order:
+A package carries at most a credential's [expression values](export-a-package.md#credential-values), never its secrets, so every credential reference has to be resolved against the target instance. n8n resolves each one in this order:
 
 1. An explicit [binding](import-a-package.md#bindings), if you gave one for that credential.
 2. Otherwise, the `--credential-matching-mode` rules.
-3. Otherwise, `--credential-missing-mode` decides whether to create an empty placeholder or refuse the import.
+3. Otherwise, `--credential-missing-mode` decides whether to create an empty placeholder, create the credential from the package's expression values, or refuse the import.
 
 Whichever route it takes, n8n checks the type. A credential of the wrong type refuses the import, and tells you both the type the node needs and the type the credential actually is. That applies to explicit bindings too.
 
@@ -96,7 +94,17 @@ Under the default `--credential-missing-mode=create-stub`, a reference n8n can't
 
 A workflow using a placeholder credential is never published, whatever the publishing policy says. Fill in the credential, then publish the workflow.
 
+Under `--credential-missing-mode=create-with-values`, n8n creates the credential from the expression values bundled in the package instead. A credential the package carries no values for still becomes an empty placeholder. When the package confirms it carries all the source credential's data, n8n lists the credential under `credentials.seeded`. Otherwise, it lists it under `credentials.incomplete`, and the workflows using it aren't published until you fill it in.
+
 Some credential problems refuse the import even under `create-stub`, because a placeholder wouldn't help: a credential type the instance doesn't have installed, a binding pointing at a credential of the wrong type, and a binding for a credential the package doesn't declare.
+
+### Existing credentials
+
+By default, n8n never changes a credential it matched. With `--credential-conflict-policy=overwrite`, it writes the package's name and expression values to the matched credential, and keeps every other stored value, such as secrets. It lists the credential under `credentials.updated`. With `fail`, n8n refuses the import when `overwrite` would change a credential.
+
+`overwrite` only changes credentials owned by a project the import writes to: the target project, or every project in a project package. Any other matched credential, such as one shared into the project or owned by another project, is used as it is. Managed credentials, credentials resolved per end user, and instance-level credentials never change.
+
+Under `overwrite` and `fail`, you need permission to update every matched credential the import could change, even when its values are the same, because n8n compares the stored values. To reuse such a credential without that permission, use `keep-existing`. Every policy leaves a credential alone when the package's values match.
 
 ## Variables
 
@@ -156,7 +164,13 @@ Import never deletes a tag. If tags are switched off on the target instance, all
 
 Two folder conflicts refuse the import whatever the policy, because both would mean moving a folder rather than merging into it: a folder ID that exists in a different project, and an existing folder sitting under a different parent than the import would place it.
 
+`--folder-conflict-policy=overwrite` makes each project match the package. n8n removes the workflows the package neither contains nor references as a sub-workflow, from the project root and from the folders the package defines. Then it removes the folders the package doesn't define, but only once they're empty, so workflows in a folder that only exists on the target stay. By default, n8n archives a removed workflow, so you can restore it. With `--overwrite-deletion-policy=hard-delete`, it deletes the workflow and its executions permanently. If you can't delete something the import would remove, n8n refuses the import rather than removing only part of it.
+
 For project packages, n8n creates the project shells first, then runs the same machinery once per project. If a package project's ID matches a personal project on the target, the import is refused with a `403`: that's never something a conflict policy can merge.
+
+## Archived workflows
+
+A workflow travels with its archived state. n8n creates a new workflow archived when it's archived in the package. Under `--conflict-policy=new-version`, n8n archives or restores an existing workflow to match the package, which needs permission to delete that workflow. Under `skip`, an existing workflow keeps its state. An archived workflow is never published.
 
 ## Node types
 
@@ -176,7 +190,7 @@ Every workflow in the response carries a `publishing.state`:
 | `blocked` | n8n refused to publish it. `blockedReason` says why |
 | `failed` | Publishing was attempted and failed. `error` says why |
 
-`blockedReason` is either `stub-credential` or `missing-node-type`. A workflow blocked for both reports `missing-node-type`, because that one means it physically can't run.
+`blockedReason` is `stub-credential`, `incomplete-credential`, or `missing-node-type`. A workflow blocked for a credential and a missing node type reports `missing-node-type`, because that one means it physically can't run.
 
 `blocked` means nothing is live. If the workflow already had a published version and the new one can't be published, you get `unchanged` with a `skippedPublishReason` instead, and the older version keeps serving traffic. So "never published" refers to the version you just imported, not to the workflow.
 
@@ -190,28 +204,39 @@ n8n only compares paths it can read literally: the node has to be enabled, and i
 
 ## Why an import is refused
 
-There are 12 reasons an import can be blocked. Each appears in the `issues` array with a `type`, and some carry a `kind` narrowing it further:
+Each reason an import can be blocked appears in the `issues` array with a `type`, and some carry a `kind` narrowing it further:
 
 | Type | Kinds | What it means |
 |------|-------|---------------|
-| `workflow-conflict` | | The workflow exists on the target and `--workflow-conflict-policy` is `fail` |
-| `workflow-id-conflict` | | Under `--workflow-id-policy=source`, that workflow ID is already used somewhere on the instance, including in another project and including archived workflows |
-| `workflow-folder-conflict` | | The existing workflow lives in a different folder than the import would put it in. This refuses the import even under `--workflow-conflict-policy=skip` |
+| `workflow-conflict` | | The workflow exists on the target and `--conflict-policy` is `fail` |
+| `workflow-lineage-conflict` | | The target project has more than one workflow imported from the same package workflow, so n8n can't tell which one to update. If only one of them isn't archived, n8n updates that one |
+| `workflow-id-conflict` | | The package ID of a new workflow is already used somewhere on the instance, including in another project and including archived workflows |
+| `workflow-archive-forbidden` | | The import would archive or restore an existing workflow, and you don't have permission to delete it |
+| `workflow-removal-forbidden` | | `--folder-conflict-policy=overwrite` or `--deleted-workflow-ids` would remove a workflow you don't have permission to delete |
+| `workflow-removal-conflict` | | In a selection import, a selected workflow's target ID is also in `--deleted-workflow-ids` |
+| `folder-removal-forbidden` | | `--folder-conflict-policy=overwrite` would remove a folder you don't have permission to delete |
+| `workflow-folder-conflict` | | The existing workflow lives in a different folder than the import would put it in, and `--conflict-policy=new-version` would update it |
 | `project-conflict` | `fail-policy` | The project exists and `--project-conflict-policy` is `fail` |
 | `folder-conflict` | `parent-mismatch`, `id-in-other-project`, `fail-policy` | The first two refuse whatever the policy |
 | `credential-unresolved` | `not_found`, `unknown_type`, `source_not_found`, `type_mismatch` | Only `not_found` can be resolved by a placeholder credential |
+| `credential-conflict` | `differs`, `divergent` | `differs`: the package would change a matched credential and `--credential-conflict-policy` is `fail`. `divergent`: under `overwrite`, two package credentials with different names or values match the same credential |
+| `credential-update-forbidden` | | Under `--credential-conflict-policy=overwrite` or `fail`, you don't have permission to update a matched credential |
+| `credential-policy-violation` | | An instance policy refuses a credential the import would create or update, such as a credential type the instance doesn't allow |
 | `data-table-unresolved` | `missing`, `id-conflict`, `name-conflict`, `schema-incompatible`, `module-disabled`, `permission-denied` | Under `overwrite-non-destructive`, `schema-incompatible` means a change would remove or retype a column, and lists those columns |
 | `tag-unresolved` | `rename-drift`, `name-collision`, `invalid-name`, `invalid-id`, `permission-denied` | |
 | `variable-unresolved` | | A referenced variable doesn't resolve and `--variable-missing-mode` is `must-preexist` |
 | `variable-conflict` | | A resolved variable's value differs and `--variable-conflict-policy` is `fail` |
 | `variable-limit-exceeded` | | The new variables would exceed the instance's variable limit |
+| `policy-violation` | | An instance policy refuses a workflow in the package. n8n refuses the whole import rather than skipping the workflow, because other workflows may reference it |
 | `missing-node-type` | | A workflow uses a node type or version the instance doesn't have, under `--missing-node-type-mode=fail` |
 
-The HTTP status depends on the kind of problem. The response is a `409` if any issue is conflict-shaped: a workflow, project, folder, or variable conflict, a data table ID or name conflict, or tag rename drift or name collision. Everything else is a `422`. A mixed set containing one conflict returns `409` for the whole response.
+Imports with agents can also return `agent-conflict`, `agent-invalid`, `agent-dependency-unresolved`, and `agent-policy-violation`.
+
+The HTTP status depends on the kind of problem. The response is a `409` if any issue is conflict-shaped: any type ending in `-conflict`, a data table ID or name conflict, or tag rename drift or name collision. Everything else is a `422`. A mixed set containing one conflict returns `409` for the whole response.
 
 Some failures are reported on their own rather than batched with the rest, because they stop n8n before it can plan: a missing license feature, a missing API key scope, and a malformed package.
 
-Missing permission to create a tag, or to create or change a data table, isn't a `403`. It comes back as a `permission-denied` blocking issue naming the scope it needed.
+If your role doesn't let you create a tag, or create or change a data table, that's not a `403`. It comes back as a `permission-denied` blocking issue naming the permission it needed. A missing API key scope is always a `403`.
 
 ## Read next
 

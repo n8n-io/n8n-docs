@@ -124,6 +124,14 @@ To refer to every tier at once, write "All plans" or "All editions" rather than 
 | folder | directory (in the app), group |
 | environment variable | env (as a noun), config var |
 | data table | database table, datatable, the table feature |
+| Environments (the feature); Environments (Classic) (the earlier source control feature) | Environments v2, promotions (as the feature name), Git connections |
+| environment (a step in your release process, together with the instance that runs it) | promotion target, stage (for an environment) |
+| promote to, apply from (an environment) | promote from, apply to, and push, pull, deploy, or sync as names for promote and apply |
+| provider (connects and authenticates n8n to a Git host) | Git connection, connection (for a provider) |
+| promotion review (the n8n approval step) | merge request or pull request (except when naming the Git host object) |
+| Git-based promotion | Git sync |
+
+Use "instance" for a running n8n system. Pair the actions with the environment only: you promote to an environment and apply from an environment. For the instances, write "the instance that promotes" (the source instance) and "the instance that applies" (the target instance), not "the instance you promote from" or "the instance you apply to".
 
 ## Product and brand names
 

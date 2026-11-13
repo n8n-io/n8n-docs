@@ -14,6 +14,8 @@ layout:
 
 This section is the complete endpoint reference for n8n's public REST API, generated from the OpenAPI specification. Use it to explore every available operation and view the parameters, request bodies, and response schemas.
 
+The reference matches the latest stable n8n release. If you run a beta version, newer endpoints might not appear here yet.
+
 {% hint style="info" %}
 **Feature availability**
 
@@ -24,8 +26,6 @@ The n8n API is available on:
 
 It isn't available on the free trial.
 {% endhint %}
-
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
 
 ## Before you start
 
@@ -52,4 +52,5 @@ To experiment with live calls, use the [built-in API playground](use-an-api-play
 * [Authentication](authentication.md)
 * [Pagination](pagination.md)
 * [Idempotency](idempotency.md)
+* [Rate limits](rate-limits.md)
 * [Use an API playground](use-an-api-playground.md)

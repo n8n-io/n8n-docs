@@ -37,14 +37,12 @@ You can use these credentials to authenticate the following nodes:
 
 * [Discord](../app-nodes/n8n-nodes-base.discord/README.md)
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 * Create a [Discord](https://www.discord.com/) account.
 * For Bot and OAuth2 credentials:
-  * [Set up your local developer environment](https://discord.com/developers/docs/quick-start/getting-started#step-0-project-setup).
-  * [Create an application and a bot user](https://discord.com/developers/docs/quick-start/getting-started#step-1-creating-an-app).
+  * [Set up your local developer environment](https://docs.discord.com/developers/quick-start/getting-started#step-0-project-setup).
+  * [Create an application and a bot user](https://docs.discord.com/developers/quick-start/getting-started#step-1-creating-an-app).
 * For webhook credentials, [create a webhook](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks).
 
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
@@ -75,12 +73,12 @@ To create an application with a bot and generate the **Bot Token**:
 4. Select **Bot** from the left menu.
 5. Under **Token**, select **Reset Token** to generate a new bot token.
 6. Copy the token and add it to your n8n credential.
-7. In **Bot > Privileged Gateway Intents**, add any privileged intents you want your bot to have. Refer to [Configuring your bot](https://discord.com/developers/docs/quick-start/getting-started#configuring-your-bot) for more information on privileged intents.
+7. In **Bot > Privileged Gateway Intents**, add any privileged intents you want your bot to have. Refer to [Configuring your bot](https://docs.discord.com/developers/quick-start/getting-started#configuring-your-bot) for more information on privileged intents.
    * n8n recommends activating **SERVER MEMBERS INTENT: Required for your bot to receive events listed under GUILD\_MEMBERS**.
 8. In **Installation > Installation Contexts**, select the installation contexts you want your bot to use:
    * Select **Guild Install** for server-installed apps. (Most common for n8n users.)
    * Select **User Install** for user-installed apps. (Less common for n8n users, but may be useful for testing.)
-   * Refer to Discord's [Choosing installation contexts](https://discord.com/developers/docs/quick-start/getting-started#choosing-installation-contexts) documentation for more information about these installation contexts.
+   * Refer to Discord's [Choosing installation contexts](https://docs.discord.com/developers/quick-start/getting-started#choosing-installation-contexts) documentation for more information about these installation contexts.
 9. In **Installation > Install Link**, select **Discord Provided Link** if it's not already selected.
 10. Still on the **Installation** page, in the **Default Install Settings** section, select `applications.commands` and `bot` scopes. Refer to Discord's [Scopes](https://discord.com/developers/docs/topics/oauth2#shared-resources-oauth2-scopes) documentation for more information about these and other scopes.
 11. Add permissions on the **Bot > Bot Permissions** page. Refer to Discord's [Permissions](https://discord.com/developers/docs/topics/permissions) documentation for more information. n8n recommends selecting these permissions for the [Discord](../app-nodes/n8n-nodes-base.discord/README.md) node:
@@ -104,10 +102,10 @@ To create an application with a bot and generate the **Bot Token**:
     3. Select **Add to server** in the installation prompt.
     4. Once your app's added to your server, you'll see it in the member list.
 
-These steps outline the basic functionality needed to set up your n8n credential. Refer to the [Discord Creating an App](https://discord.com/developers/docs/quick-start/getting-started#step-1-creating-an-app) guide for more information on creating an app, especially:
+These steps outline the basic functionality needed to set up your n8n credential. Refer to the [Discord Creating an App](https://docs.discord.com/developers/quick-start/getting-started#step-1-creating-an-app) guide for more information on creating an app, including:
 
-* [Fetching your credentials](https://discord.com/developers/docs/quick-start/getting-started#fetching-your-credentials) for getting your app's credentials into your local developer environment.
-* [Handling interactivity](https://discord.com/developers/docs/quick-start/getting-started#step-3-handling-interactivity) for information on setting up public endpoints for interactive `/slash` commands.
+* [Fetching your credentials](https://docs.discord.com/developers/quick-start/getting-started#fetching-your-credentials) for getting your app's credentials into your local developer environment.
+* [Handling interactivity](https://docs.discord.com/developers/quick-start/getting-started#step-3-handling-interactivity) for information on setting up public endpoints for interactive `/slash` commands.
 
 ## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 

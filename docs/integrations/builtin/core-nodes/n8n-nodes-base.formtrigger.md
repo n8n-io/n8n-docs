@@ -22,8 +22,6 @@ Use the n8n Form trigger to start a workflow when a user submits a form, taking 
 
 You can add more pages to continue the form with the [n8n Form](n8n-nodes-base.form.md) node.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Build and test workflows <a href="#build-and-test-workflows" id="build-and-test-workflows"></a>
 
 While building or testing a workflow, use the **Test URL**. Using a test URL ensures that you can view the incoming data in the editor UI, which is useful for debugging. 
@@ -188,6 +186,8 @@ You can use one of the following options to add authentication to your form:
 ## HTML security and allowed tags <a href="#html-security-and-allowed-tags" id="html-security-and-allowed-tags"></a>
 
 The n8n Form Trigger automatically sanitizes HTML content in the **Form Description** field and **Custom HTML** form elements to prevent security vulnerabilities. While HTML is supported for formatting, certain tags and attributes are restricted.
+
+n8n also serves form pages in a browser sandbox, so the browser doesn't send cookies when someone submits the form. If you self-host n8n and put forms behind an authentication proxy that uses a session cookie, refer to [Serve forms from a separate hostname behind an authentication proxy](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/configuration-examples/configure-webhook-urls-with-reverse-proxy#serve-forms-from-a-separate-hostname-behind-an-authentication-proxy).
 
 ### Allowed HTML Tags <a href="#allowed-html-tags" id="allowed-html-tags"></a>
 

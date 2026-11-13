@@ -42,8 +42,6 @@ This page helps with both.
 [Start free trial](https://n8n.io/cloud/)
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Decision 1: Cloud or self-hosted <a href="#decision-1-cloud-or-self-hosted" id="decision-1-cloud-or-self-hosted"></a>
 
 Use this guide to choose a deployment option:
@@ -120,7 +118,7 @@ Every self-hosted installation runs on the same underlying product. You can stic
 
 For the differences between editions and how to register or license an instance, see [Compare plans and editions](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/community-edition-features). For what each plan includes, see the [pricing page](https://n8n.io/pricing/).
 
-To register a Community edition instance for the extra free features, go to **Settings > Usage and plan** and select **Unlock**.
+To register a Community edition instance for the extra free features, go to **Settings > Plan & usage** and select **Unlock**.
 
 ## Which features need a paid plan or edition <a href="#which-features-need-a-paid-plan-or-edition" id="which-features-need-a-paid-plan-or-edition"></a>
 
@@ -137,7 +135,7 @@ Some features require certain paid plan subscriptions, including:
 - Workflow and credential sharing
 - Version control using Git
 
-Feature availability changes over time and differs by plan and edition. For exactly what each plan and edition includes, the [pricing page](https://n8n.io/pricing/) is the definitive source. See also [Compare plans and editions](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/community-edition-features) for how the self-hosted plans and editions differ.
+Feature availability changes over time and differs by plan and edition. For exactly what each plan and edition includes, the [pricing page](https://n8n.io/pricing/) is the definitive source. See also [Compare plans and editions](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/community-edition-features) for how the self-hosted plans and editions differ. For how your plan, platform, and n8n version determine access, and how maturity status (Preview, GA, deprecated, or removed) affects whether you can rely on a feature, see [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability).
 
 ## Getting started <a href="#getting-started" id="getting-started"></a>
 

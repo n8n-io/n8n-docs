@@ -32,8 +32,6 @@ API[^1] rate limits are restrictions on request frequency. For example, an API m
 
 APIs can also limits how much data you can send in one request, or how much data the API sends in a single response.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Identify rate limit issues <a href="#identify-rate-limit-issues" id="identify-rate-limit-issues"></a>
 
 When an n8n node hits a rate limit, it errors. n8n displays the error message in the node output panel. This includes the error message from the service.
@@ -56,7 +54,9 @@ When you enable Retry On Fail, the node automatically tries the request again if
 1. Open the node.
 2. Select **Settings**.
 3. Enable the **Retry On Fail** toggle.
-4. Configure the retry settings: if using this to work around rate limits, set **Wait Between Tries (ms)** to more than the rate limit. For example, if the API you're using allows one request per second, set **Wait Between Tries (ms)** to `1000` to allow a 1 second wait.
+4. Configure the retry settings. For example, if the API allows one request per second, set **Wait Between Tries (ms)** to `1000` to wait 1 second between retries.
+
+**Retry On Fail limitations:** **Wait Between Tries** is limited to 5000 ms (5 seconds), and **Max Tries** is limited to five. The HTTP Request node doesn't automatically honor the API's `Retry-After` response header. For rate limits requiring longer delays, use batching or combine Loop Over Items with a Wait node to control request frequency.
 
 ### Use Loop Over Items and Wait <a href="#use-loop-over-items-and-wait" id="use-loop-over-items-and-wait"></a>
 
@@ -75,11 +75,11 @@ The HTTP Request node has built-in settings for handling rate limits and large a
 
 ### Batch requests <a href="#batch-requests" id="batch-requests"></a>
 
-Use the Batching option to send more than one request, reducing the request size, and introducing a pause between requests. This is the equivalent of using Loop Over Items and Wait.
+Use the **Batching** option to control how many requests the node sends before pausing. The **Batch Interval** setting controls the delay between batches.
 
 1. In the HTTP Request node, select **Add Option** > **Batching**.
-2. Set **Items per Batch**: this is the number of input items to include in each request.
-3. Set **Batch Interval (ms)** to introduce a delay between requests. For example, if the API you're using allows one request per second, set **Wait Between Tries (ms)** to `1000` to allow a 1 second wait.
+2. Set **Items per Batch** to the number of input items to process in each batch. Each input item generates a separate HTTP request.
+3. Set **Batch Interval (ms)** to introduce a delay between batches. For example, set **Batch Interval (ms)** to `1000` to wait 1 second between batches.
 
 ### Paginate results <a href="#paginate-results" id="paginate-results"></a>
 

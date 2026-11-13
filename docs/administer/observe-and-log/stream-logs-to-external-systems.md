@@ -140,6 +140,7 @@ The following events are available. You can choose which events to stream in **S
 	* 2FA enforcement disabled
 	* **Public API rate limit enabled**
 	* **Public API rate limit disabled**
+	* **Public API rate limit updated**
 	* Token exchange succeeded
 	* Token exchange failed
 	* Token exchange embed login
@@ -241,23 +242,26 @@ To stream all six, subscribe your destination to `n8n.audit.promotions`. In **Se
 {% hint style="info" %}
 **Feature availability**
 
-Public API rate limit audit events are available from n8n 2.47.0.
+The enabled and disabled events are available from n8n 2.47.0. The updated event is available from n8n 2.49.0.
 {% endhint %}
 
-These two audit events record when an instance owner or admin turns [API rate limits](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/rate-limits) on or off, in **Settings** > **Policies** or with the n8n public API.
+These audit events record when an instance owner or admin turns [API rate limits](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/rate-limits) on or off, or changes a limit or a window. The changes can come from **Settings** > **Policies** or the n8n public API.
 
 | Event name | Sent when |
 | --- | --- |
 | `n8n.audit.public-api-rate-limit.enabled` | An instance owner or admin turns rate limiting on. Carries the acting user. |
 | `n8n.audit.public-api-rate-limit.disabled` | An instance owner or admin turns rate limiting off. Carries the acting user. |
+| `n8n.audit.public-api-rate-limit.updated` | An instance owner or admin changes at least one limit or window. Carries the acting user, and `before` and `after` with only the values that changed. |
+
+For example, a change of the read limit for all endpoints from 1,200 to 100 carries `"before": { "globalReadLimit": 1200 }` and `"after": { "globalReadLimit": 100 }`. A save that turns rate limiting on and changes a limit sends two events: `enabled` and `updated`.
 
 n8n doesn't send an event when:
 
-* A user changes a limit or a window while rate limiting stays on.
-* The `N8N_PUBLIC_API_RATE_LIMIT_ENABLED` environment variable turns rate limiting on.
+* An environment variable turns rate limiting on or sets a value.
+* A save changes nothing.
 * n8n rejects a request with a `429` response.
 
-To stream both, subscribe your destination to `n8n.audit.public-api-rate-limit`. In **Settings** > **Log Streaming** > **Events**, they appear in the **Audit** group.
+To stream all three, subscribe your destination to `n8n.audit.public-api-rate-limit`. In **Settings** > **Log Streaming** > **Events**, they appear in the **Audit** group.
 
 ### MCP events
 

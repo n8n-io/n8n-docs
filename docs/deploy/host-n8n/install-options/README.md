@@ -15,6 +15,7 @@ Compare ways to install self-hosted n8n.
 * [Install with npm](install-with-npm.md): install n8n directly using Node Package Manager.
 * [Install with Docker](install-with-docker.md): install and run n8n using Docker.
 * [Use a cloud provider](use-a-cloud-provider/README.md): deploy self-hosted n8n to DigitalOcean, AWS, Azure, Google Cloud, and more.
+* [Production requirements](production-requirements.md): check database, operating system, runtime, storage, and software requirements for a production deployment.
 
 ## Related resources
 

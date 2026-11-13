@@ -53,6 +53,7 @@ Config comes from the environment (see the workflow):
 
 from __future__ import annotations
 
+import ipaddress
 import json
 import os
 import re
@@ -151,6 +152,35 @@ def load_excludes(config_path: Path) -> list[re.Pattern]:
 
 def is_excluded(url: str, patterns) -> bool:
     return any(p.search(url) for p in patterns)
+
+
+# lychee skips these hosts on its own, so the second pass must too (DOC-2590). Without
+# this, the 2026-11-12 run probed localhost:5678, localhost:16686 and a *.example.com
+# placeholder from sample config in the docs, and reported each as "unreachable".
+# - `exclude_all_private = true` in lychee.toml: loopback, private and link-local
+#   addresses, and the name `localhost`.
+# - lychee's built-in example-domain check: example.com, .net, .org, .edu and their
+#   subdomains.
+EXAMPLE_DOMAINS = ("example.com", "example.net", "example.org", "example.edu")
+
+
+def is_placeholder_host(url: str) -> bool:
+    """True for a URL lychee never checks: a local, private or example-domain host."""
+    try:
+        host = (urllib.parse.urlsplit(url).hostname or "").rstrip(".")
+    except ValueError:
+        return False
+    if not host:
+        return False
+    if host == "localhost" or host.endswith(".localhost"):
+        return True
+    if any(host == d or host.endswith("." + d) for d in EXAMPLE_DOMAINS):
+        return True
+    try:
+        ip = ipaddress.ip_address(host)
+    except ValueError:
+        return False
+    return ip.is_private or ip.is_loopback or ip.is_link_local or ip.is_unspecified
 
 
 def normalize(url: str) -> str:
@@ -344,7 +374,7 @@ def collect_urls(docs_dir: Path, patterns):
             # the authoritative answer.
             if host == "app.gitbook.com":
                 continue
-            if is_excluded(url, patterns):
+            if is_excluded(url, patterns) or is_placeholder_host(url):
                 excluded += 1
                 continue
             entry = urls.setdefault(url, {"url": url, "pages": []})

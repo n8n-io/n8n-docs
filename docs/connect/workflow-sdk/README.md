@@ -33,7 +33,7 @@ Three parts of n8n read Workflow SDK code:
 There are two ways to turn SDK code into a workflow on your instance:
 
 * **Through the n8n MCP server.** Send the code to `validate_workflow`, then to `create_workflow_from_code`. The instance parses the code, so you don't install anything. This needs n8n 2.12.0 or later, and an owner or admin must first [enable MCP access](../connect-to-n8n-mcp-server.md#enabling-mcp-access). The [Quickstart](quickstart.md) walks through this path.
-* **Locally, with the package.** Install `@n8n/workflow-sdk` from npm and convert the code to workflow JSON with `parseWorkflowCodeToBuilder` and `validateWorkflowBuilder`. Then create the workflow from that JSON with the [n8n API](../n8n-api/README.md) or the [n8n CLI](../n8n-cli.md). The parser doesn't accept `import` lines, so remove them before you parse. Refer to [Convert code to workflow JSON](https://github.com/n8n-io/n8n/blob/master/packages/@n8n/workflow-sdk/README.md#convert-code-to-workflow-json) in the SDK README.
+* **Locally, with the package.** Install `@n8n/workflow-sdk` from npm. Convert the code to workflow JSON with `parseWorkflowCodeToBuilder`, then check it with `validateWorkflowBuilder`. Then create the workflow from that JSON with the [n8n API](../n8n-api/README.md) or the [n8n CLI](../n8n-cli.md). The parser doesn't accept `import` lines, so remove them before you parse. Refer to [Convert code to workflow JSON](https://github.com/n8n-io/n8n/blob/master/packages/@n8n/workflow-sdk/README.md#convert-code-to-workflow-json) in the SDK README.
 
 The n8n API and the n8n CLI work with workflow JSON. They don't read SDK code.
 

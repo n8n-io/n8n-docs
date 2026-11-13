@@ -87,6 +87,31 @@ This parameter is only available for these operations:
 
 [Browse Extract From File integration templates](https://n8n.io/integrations/extract-from-file) or [search all templates](https://n8n.io/workflows/)
 
+## Common issues <a href="#common-issues" id="common-issues"></a>
+
+The CSV parser is strict: it reads the first row to learn how many columns the file has, then requires every following row to have exactly that many fields. Two of the most common failures are silent, so check the output rather than the workflow status.
+
+### "Invalid Record Length: expect 7, got 8 on line 12"
+
+The line in the message has more (or fewer) fields than the header row. In practice the extra field is almost always a delimiter inside a text value that wasn't quoted: an unquoted `Acme, Inc.` in a company column splits into two fields, while the rows around it still parse, so the error names the first row that happened to contain one.
+
+Fix it in the export by quoting any field that can contain the delimiter, doubling any quote mark inside the value:
+
+```text
+company,email
+"Acme, Inc.",buyer@example.com
+```
+
+A value containing a line break needs the same treatment. If the source system can't quote properly, clean the file before the node runs: normalizing rows in a [Code node](n8n-nodes-base.code/README.md) is more reliable than loosening the parse, because a row that silently shifts by one column writes the wrong value into the wrong field.
+
+### Rows come out as a single column, with no error
+
+This is a delimiter mismatch: a semicolon- or tab-separated export parsed as comma-separated. Nothing fails. Each line becomes one field, so the output has a single key and the next node's expressions stop matching. Open the file in a text editor and confirm which character actually separates the values before changing anything in the workflow.
+
+### Rows merge together, or the data stops partway through
+
+An unbalanced quote mark: an odd number of `"` characters makes the parser treat everything after it as one long quoted value, so several rows arrive as one item and the following rows look missing. The file usually got there through a manual edit or a hand-rolled export. Count the quote characters per line; a well-formed file has an even number on every line.
+
 [HTTP Request Node]: n8n-nodes-base.httprequest/README.md
 [Webhook Node]: n8n-nodes-base.webhook/README.md
 [base64]: https://datatracker.ietf.org/doc/html/rfc4648#section-4

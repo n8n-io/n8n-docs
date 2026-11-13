@@ -20,6 +20,8 @@ layout:
 
 # Error Trigger node <a href="#error-trigger-node" id="error-trigger-node"></a>
 
+When an automatic workflow run fails, the Error Trigger node starts the error workflow selected in that workflow's settings and passes it details about the failure.
+
 You can use the Error Trigger node to create error workflows. When another linked workflow fails, this node gets details about the failed workflow and the errors, and runs the error workflow.
 
 ## Usage <a href="#usage" id="usage"></a>

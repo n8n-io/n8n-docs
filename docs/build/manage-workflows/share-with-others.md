@@ -12,6 +12,8 @@ layout:
 
 # Workflow sharing <a href="#workflow-sharing" id="workflow-sharing"></a>
 
+Workflow sharing gives other users of your instance editor access to a workflow with least privilege: editors can't share or delete it, or edit nodes using unshared credentials.
+
 {% hint style="info" %}
 **Feature availability**
 

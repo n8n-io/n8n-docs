@@ -28,6 +28,8 @@ layout:
 
 # Handle rate limits
 
+When a node hits an API rate limit, it errors: turn on **Retry On Fail** for short waits, or batch requests with pauses using Loop Over Items and Wait. **Retry On Fail** allows at most five tries, up to 5 seconds apart.
+
 API[^1] rate limits are restrictions on request frequency. For example, an API may limit the number of requests you can make per minute, or per day.
 
 APIs can also limits how much data you can send in one request, or how much data the API sends in a single response.

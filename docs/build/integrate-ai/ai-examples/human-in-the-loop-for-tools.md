@@ -15,7 +15,7 @@ layout:
 
 # Human-in-the-loop for AI tool calls <a href="#human-in-the-loop-for-ai-tool-calls" id="human-in-the-loop-for-ai-tool-calls"></a>
 
-You can make an AI agent wait for human approval before it runs a specific tool. The workflow pauses and sends the request to a reviewer in a channel such as Slack, Telegram, or n8n Chat, and the tool only runs if the reviewer approves it.
+You can make an AI agent wait for human approval, in Slack, n8n Chat, or another channel, before it runs a specific tool.
 
 You can require human approval before an AI Agent executes a specific tool. When a tool requires human review, the workflow pauses and waits for a person to take one of the following actions:
 

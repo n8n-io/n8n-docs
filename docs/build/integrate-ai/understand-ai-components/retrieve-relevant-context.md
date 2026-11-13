@@ -20,7 +20,7 @@ layout:
 
 # RAG in n8n <a href="#rag-in-n8n" id="rag-in-n8n"></a>
 
-RAG (Retrieval-Augmented Generation) in n8n combines an AI model with your own data, so answers rely on up-to-date, domain-specific, or proprietary knowledge. You insert documents into a vector store with an embedding model, then query it from an AI agent as a tool or directly with a vector store node.
+RAG (Retrieval-Augmented Generation) in n8n grounds AI answers in your own data: you insert documents into a vector store, then query it from an AI agent or directly.
 
 ## What is RAG <a href="#what-is-rag" id="what-is-rag"></a>
 

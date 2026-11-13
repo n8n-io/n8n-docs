@@ -29,7 +29,7 @@ layout:
 
 # Set a human fallback for AI workflows
 
-This example adds a human fallback to an AI agent. The agent tries to answer the user's question, and if it can't, it calls a second workflow as a tool, which asks for the user's email address and sends a Slack message asking a person for help.
+This example adds a human fallback to an AI agent: when the agent can't answer, it calls a second workflow that asks a person for help in Slack.
 
 This is a workflow that tries to answer user queries using the standard GPT-4 model. If it can't answer, it sends a message to Slack to ask for human help. It prompts the user to supply an email address.
 

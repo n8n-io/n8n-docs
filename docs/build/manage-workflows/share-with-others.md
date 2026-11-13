@@ -12,7 +12,7 @@ layout:
 
 # Workflow sharing <a href="#workflow-sharing" id="workflow-sharing"></a>
 
-Workflow sharing lets you give other users of your n8n instance access to a workflow as an editor. It follows the principle of least privilege: editors can't share or delete the workflow, and they can't edit nodes that use credentials not shared with them.
+Workflow sharing gives other users of your instance editor access to a workflow with least privilege: editors can't share or delete it, or edit nodes using unshared credentials.
 
 {% hint style="info" %}
 **Feature availability**

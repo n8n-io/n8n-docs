@@ -31,7 +31,7 @@ layout:
 
 # Agents vs chains
 
-In n8n, an AI agent uses an LLM to decide which tools to call and can keep memory across messages, while a chain runs a sequence of calls to an LLM and other components without memory or tools. This example lets you send the same chat query to either one to compare them.
+An n8n AI agent decides which tools to call and can use memory, while a chain runs a sequence of LLM calls without tools or memory.
 
 In this workflow you can choose whether your chat query goes to an agent[^1] or chain[^2]. It shows some of the ways that agents are more powerful than chains.
 

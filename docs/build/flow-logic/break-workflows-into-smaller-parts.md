@@ -14,7 +14,7 @@ layout:
 
 # Sub-workflows <a href="#sub-workflows" id="sub-workflows"></a>
 
-You can reuse logic across workflows by calling one workflow from another as a sub-workflow, using the Execute Workflow and Execute Sub-workflow Trigger nodes. Sub-workflow executions don't count towards your plan's execution or active workflow limits.
+You can reuse logic across n8n workflows by calling one workflow from another as a sub-workflow, with the Execute Workflow and Execute Sub-workflow Trigger nodes.
 
 You can call one workflow from another workflow. This allows you to build modular, microservice-like workflows, as part of your workflow's [flow logic](./). It can also help if your workflow grows large enough to encounter [memory issues](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/scaling/fix-memory-issues). Creating sub-workflows uses the [Execute Workflow](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.executeworkflow) and [Execute Sub-workflow Trigger](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.executeworkflowtrigger) nodes.
 

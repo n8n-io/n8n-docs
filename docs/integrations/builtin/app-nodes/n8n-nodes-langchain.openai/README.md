@@ -82,6 +82,8 @@ Refer to [OpenAI's assistants documentation](https://platform.openai.com/docs/as
 
 For help dealing with rate limits, refer to [Handling rate limits](../../handle-rate-limits.md).
 
+To reach an OpenAI-compatible gateway or proxy rather than OpenAI itself, use the [Custom Model Endpoint](../n8n-nodes-langchain.custommodelendpoint.md) node, which supports login methods this node can't send.
+
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 
 ## Using tools with OpenAI assistants <a href="#using-tools-with-openai-assistants" id="using-tools-with-openai-assistants"></a>

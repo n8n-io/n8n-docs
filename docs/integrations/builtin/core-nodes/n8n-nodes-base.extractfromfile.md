@@ -82,6 +82,51 @@ This parameter is only available for these operations:
 - Extract From Text File
 - Move File to Base64 String
 
+## Troubleshooting: accented characters arrive as ? or Ã© <a href="#troubleshooting-accents" id="troubleshooting-accents"></a>
+
+The CSV parser decodes incoming bytes as UTF-8. A file saved by Excel on a Windows machine in a legacy
+code page - Windows-1250 for Central and Eastern Europe, Windows-1252 for Western Europe - isn't valid
+UTF-8, so a name like `Đorđe Milošević` arrives as `?or?e Milo?evi?` or `ÃorÃ°e MiloÅ¡eviÄ`.
+
+The node's **Encoding** option lists UTF-8, UTF-16 LE/BE and Latin-1 only. Latin-1 has no `Đ`, `ć`, `Š`
+or `ž`, so it can't represent these files either - the option changes the decoder, but the characters it
+would produce don't exist in that code page.
+
+Fix it by decoding the bytes yourself, in a Code node set to **Run Once for All Items** placed *before*
+Extract From File, then handing the parser clean UTF-8:
+
+```js
+const bytes = await this.helpers.getBinaryDataBuffer(0, 'data');
+const text = new TextDecoder('windows-1250').decode(bytes);
+
+return [{
+  json: {},
+  binary: {
+    data: await this.helpers.prepareBinaryData(
+      Buffer.from(text, 'utf8'),
+      'decoded.csv',
+      'text/csv',
+    ),
+  },
+}];
+```
+
+Use `windows-1252` for Western European exports, `iso-8859-2` for some Hungarian and Romanian ones, and
+`windows-1251` for Cyrillic. Extract From File can then run unchanged, because the binary it receives is
+valid UTF-8.
+
+{% hint style="info" %}
+**Checking a file without opening an editor**
+
+`new TextDecoder('utf-8', { fatal: true })` throws on invalid bytes and decodes cleanly on valid ones.
+Decoding the same buffer with ``fatal: true`` is the quickest way to tell an encoding problem from a
+delimiter or header problem: if it throws, the file is not UTF-8 and no CSV setting will fix it.
+{% endhint %}
+
+If characters come back as `?` after decoding, the original bytes carried no information for them (some
+exporters replace unsupported characters before writing the file). Re-export from the source system with
+UTF-8 selected - decoding can't restore what was already discarded.
+
 ## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
 

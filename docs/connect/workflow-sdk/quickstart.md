@@ -18,12 +18,12 @@ In this tutorial you write a workflow file with the [Workflow SDK](README.md), c
 Connect to the n8n MCP server, call `get_workflow_sdk_reference`, then write a Workflow SDK file for the workflow described below. Call `validate_workflow` with the full code, fix every error the `hint` points to, then call `create_workflow_from_code` and return the workflow URL.
 {% endhint %}
 
-### What you will need
+## What you will need
 
 * An n8n instance with [MCP access enabled](../connect-to-n8n-mcp-server.md#enabling-mcp-access) and an MCP client connected to it. The [client connection examples](../connect-to-n8n-mcp-server/mcp-client-examples.md) cover Claude Code, Claude Desktop, and Cursor.
 * No local install. The instance parses the code.
 
-### What you will learn
+## What you will learn
 
 * The shape of a Workflow SDK file.
 * How to check code before you create a workflow.
@@ -36,7 +36,7 @@ Connect to the n8n MCP server, call `get_workflow_sdk_reference`, then write a W
 
 Create `github-stars.ts` with this content. It has a manual trigger, one HTTP Request node, and one Edit Fields (Set) node:
 
-```javascript
+```typescript
 import { workflow, node, trigger, expr } from '@n8n/workflow-sdk';
 
 const start = trigger({
@@ -112,7 +112,7 @@ The tool assigns credentials it finds on the instance to nodes that need them. I
 
 Replace the Keep stars node with an If node that routes popular repositories one way and the rest another way. Add one Edit Fields node per branch. Every If condition needs `options`, `conditions`, and `combinator`. The complete file:
 
-```javascript
+```typescript
 import { workflow, node, trigger, ifElse, expr } from '@n8n/workflow-sdk';
 
 const start = trigger({
@@ -200,4 +200,5 @@ To change the workflow you created, don't create a second one. Call `update_work
 
 * Read the full reference your instance serves: call `get_workflow_sdk_reference` on the [n8n MCP server](../connect-to-n8n-mcp-server/mcp-server-tools-reference.md#workflow-builder). The `patterns` section has complete examples for loops, parallel branches, multiple triggers, and AI agents.
 * Call `get_workflow_best_practices` with `technique: "list"` to see the use cases with a guide, such as chatbots, scheduling, and data extraction.
+* To convert code to workflow JSON without the MCP server, refer to the [SDK README](https://github.com/n8n-io/n8n/blob/master/packages/@n8n/workflow-sdk/README.md#convert-code-to-workflow-json).
 * Set up your coding agent with [Build with AI](build-with-ai.md).

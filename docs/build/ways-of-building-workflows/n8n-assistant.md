@@ -23,9 +23,6 @@ layout:
     visible: true
   anchors:
     visible: true
-tags:
-  - tag: preview
-    primary: true
 ---
 
 # Use n8n Assistant
@@ -237,11 +234,11 @@ When you enable web access, n8n Assistant asks for permission before accessing a
 
 Review the requested domain before you approve access.
 
-## Preview limitations
+## Limitations
 
-n8n Assistant is a Preview feature. Availability, supported actions, and behavior may change.
+Availability, supported actions, and behavior of n8n Assistant may change.
 
-During Preview:
+Be aware that:
 
 * n8n Assistant may not support some actions yet.
 * Some capabilities may roll out gradually.

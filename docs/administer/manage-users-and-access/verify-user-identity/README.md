@@ -7,6 +7,8 @@ layout:
 
 Confirm who's signing in to your n8n instance, from two-factor auth to directory-backed single sign-on.
 
+In n8n, go to **Settings** > **Authentication** to see the sign-in methods for your instance. The page lists single sign-on (SSO) and LDAP, marks the active method, and shows whether two-factor auth is enforced.
+
 ## In this section
 
 * [Require two-factor auth](require-two-factor-auth.md): enable 2FA for your n8n account.

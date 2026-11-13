@@ -134,6 +134,32 @@ def main():
     check("missing .md target is flagged", category(A, "gone.md") == "missing-target")
     check("absolute path is flagged", category(A, "/spacea/page-one.md") == "absolute-path")
 
+    # --- Markdown backslash escapes, end to end (DOC-2570) --------------------
+    # A link target must escape parens, so `(node-name).all.md` is written
+    # `\(node-name\).all.md`. The weekly sweep reported docs/build/SUMMARY.md as
+    # missing-target every week because the backslashes reached the file lookup.
+    # These run a Markdown line through the same parse -> classify path as main().
+    def line_categories(src_rel, md_line):
+        return [category(src_rel, t) for _, t in cil.iter_targets(md_line)]
+
+    check("an escaped-paren SUMMARY entry resolves to the real file",
+          line_categories(A, r"* [(node-name).all](\(node-name\).all.md)") == [None])
+    check("an escaped-paren reference definition resolves to the real file",
+          line_categories(A, "[ref]: \\(node-name\\).all.md\n") == [None])
+    check("an escaped-paren link that really is missing is still flagged",
+          line_categories(A, r"[x](\(gone\).all.md)") == ["missing-target"])
+    check("an escaped-paren link with a bad anchor reaches the anchor check",
+          line_categories(A, r"[x](\(node-name\).all.md#nope)") == ["broken-anchor"])
+    # Escapes are dropped before the `#` split, as GitBook renders them: `\#` is a
+    # plain `#` in the href, so it still starts the anchor (cubic on PR #5707).
+    check("an escaped '#' still starts the anchor",
+          [t for _, t in cil.iter_targets(r"[x](page-one.md\#section-one)")]
+          == ["page-one.md#section-one"])
+    check("a backslash before a letter or digit is kept",
+          [t for _, t in cil.iter_targets(r"[x](a\nb\1.md)")] == [r"a\nb\1.md"])
+    check("HTML href values are not unescaped",
+          [t for _, t in cil.iter_targets(r'<a href="a\(b\).md">x</a>')] == [r"a\(b\).md"])
+
     # --- Rule 1 exception: bare directory references resolve to README.md ----
     check("current-folder bare directory reference resolves",
           category(A, "./") is None)
@@ -276,6 +302,12 @@ def main():
           [t for _, t in cil.iter_targets("[ref]: page-one.md\n")] == ["page-one.md"])
     check("filenames with parens are captured whole",
           [t for _, t in cil.iter_targets("[x]((node-name).all.md)")] == ["(node-name).all.md"])
+    check("escaped parens in an inline link are unescaped",
+          [t for _, t in cil.iter_targets(r"[x](\(node-name\).all.md)")] == ["(node-name).all.md"])
+    check("an escaped closing paren doesn't end an inline link",
+          [t for _, t in cil.iter_targets(r"[x](a\).md)")] == ["a).md"])
+    check("escaped parens in a reference definition are unescaped",
+          [t for _, t in cil.iter_targets("[ref]: \\(node-name\\).all.md\n")] == ["(node-name).all.md"])
 
     # --- space_of -------------------------------------------------------------
     check("space_of reads the top-level folder", cil.space_of(A) == "spacea")

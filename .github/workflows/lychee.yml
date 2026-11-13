@@ -13,6 +13,14 @@ on:
   schedule:
     - cron: "18 7 * * 1"
   workflow_dispatch:
+    inputs:
+      send_report:
+        # false = a test run: lychee and the second pass run as normal, the summary and
+        # the artifact are produced, and nothing is POSTed to n8n (no Slack message, no
+        # sheet tab, no Supabase or Notion row). The schedule always sends (DOC-2568).
+        description: "Send the report to n8n (Slack, sheet, Supabase). Set false for a test run."
+        type: boolean
+        default: true
 permissions:
   contents: read
 jobs:
@@ -51,9 +59,27 @@ jobs:
         env:
           REPORT: lychee/out.json
           QUALITY_REPORT: lychee/quality.json
+          PAYLOAD_OUT: lychee/payload.json
+          # Only a manual run can opt out. On the schedule `inputs` is empty, so this is
+          # never "true" there.
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && !inputs.send_report }}
           EXIT_CODE: ${{ steps.lychee.outputs.exit_code }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           WEBHOOK_URL: ${{ secrets.DOCOPS_LYCHEE_WEBHOOK_URL }}
           WEBHOOK_USER: ${{ secrets.WEBHOOK_USER }}
           WEBHOOK_PASSWORD: ${{ secrets.WEBHOOK_PASSWORD }}
         run: python3 .github/scripts/lychee_report.py
+
+      - name: Keep the raw reports
+        # Without these, a strange week can only be read back from the job log, which is
+        # how DOC-2568 had to be investigated.
+        if: always()
+        # The report is already delivered by now. A failed upload must not turn the job
+        # red: red means lychee crashed or the report did not reach n8n (see the header).
+        continue-on-error: true
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: lychee-reports
+          path: lychee/
+          if-no-files-found: warn
+          retention-days: 30

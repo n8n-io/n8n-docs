@@ -43,7 +43,7 @@ See the [Data Table node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin
 
 Work with data tables programmatically using the `/datatables` endpoint in the n8n API.
 
-See the [API reference](https://docs.n8n.io/api/api-reference/#tag/datatable) for full documentation.
+See the [API reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/build-and-run/data-tables) for full documentation.
 
 ### Data table tab <a href="#data-table-tab" id="data-table-tab"></a>
 

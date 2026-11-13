@@ -245,6 +245,8 @@ See [reference.md](reference.md) for full examples and rules.
   tag or `status:` field. A feature not available on Enterprise at all gets a
   **Feature availability** hint instead. See [reference.md](reference.md) for
   the standard hint.
+  For a section where every page is Preview, tag only the section's top page.
+  The subpages keep `status: preview` and the Preview hint.
 - **Deprecation and removal:** a `warning` hint, same `**Feature availability**`
   title, using "from" for both ("deprecated from n8n 2.0", "removed from n8n 3.0";
   never "removed in"). Name the replacement and removal version if known.

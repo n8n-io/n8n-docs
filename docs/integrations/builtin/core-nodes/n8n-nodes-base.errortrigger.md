@@ -20,7 +20,7 @@ layout:
 
 # Error Trigger node <a href="#error-trigger-node" id="error-trigger-node"></a>
 
-The Error Trigger node runs an error workflow when another workflow fails, and passes it details about the failed workflow and the error. Set it in the settings of each critical workflow you want to watch.
+When a workflow fails, the Error Trigger node starts the error workflow you selected in that workflow's settings and passes it details about the failure.
 
 You can use the Error Trigger node to create error workflows. When another linked workflow fails, this node gets details about the failed workflow and the errors, and runs the error workflow.
 

@@ -27,7 +27,7 @@ If you're not sure which style your node needs, start declarative. The [`n8n-nod
 
 The programmatic style is more verbose, and it puts your node's behavior in code that you have to maintain. Treat it as the exception. Use the programmatic style when your node is one of these:
 
-* A trigger node.
+* A trigger node that a [declarative trigger](../build-your-node/reference/declarative-triggers/README.md) can't express. Declarative triggers support polling and webhook triggers, and are in Preview.
 * A node that isn't REST-based. This includes nodes that need to call a GraphQL API and nodes that use external dependencies.
 * A node that needs to transform data beyond what routing handles. The declarative style can change the request with `routing.request.preSend` and the API response with `routing.output.postReceive`. Use the programmatic style when your node needs to work on incoming items independently of a single API call.
 * A node that needs feature-based versioning to branch its behavior in code, using `this.isNodeFeatureEnabled()`. Declarative nodes can still use light versioning, and can read feature flags with `@feature` in `displayOptions`. Refer to [Node versioning](../build-your-node/reference/versioning.md) for more information on types of versioning.
@@ -35,9 +35,9 @@ The programmatic style is more verbose, and it puts your node's behavior in code
 If your node isn't on this list, build it in the declarative style.
 
 {% hint style="info" %}
-**Trigger nodes must use the programmatic style**
+**Trigger nodes**
 
-The declarative style doesn't support trigger nodes. Build every trigger node in the programmatic style, even when the action node for the same service is declarative.
+From n8n 3.0.0, you can build polling and webhook trigger nodes in the declarative style with [declarative triggers](../build-your-node/reference/declarative-triggers/README.md). Declarative triggers are in Preview. Build other trigger nodes in the programmatic style.
 
 You can mix both styles in one node package. For example, a package submitted for [verification](../build-your-node/reference/verification-guidelines.md) can contain a declarative-style action node and a programmatic-style trigger node for the same service.
 {% endhint %}

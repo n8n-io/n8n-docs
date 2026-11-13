@@ -148,6 +148,13 @@ Enter these parameters:
 - **Table**: Choose the table that you want to work on. Select **From list** to choose the table from the dropdown list, or select **By Name** to enter the table name.
 - **Return All**: Whether to return all results or only up to a given limit.
 - **Limit**: The maximum number of items to return when **Return All** is disabled.
+- **Start After**: Read a large table page by page. This parameter is available when **Return All** is disabled. Select **Add Cursor**, then set:
+	- **Column**: The column to page by. The column must be a primary key or have a unique index on that column alone.
+	- **Value**: The value of **Column** in the last row of the previous page. Leave this empty to get the first page.
+
+	The node returns the next **Limit** rows after **Value**, ordered by **Column**. To read the whole table, run the node again with the last value of each page until a page returns fewer rows than **Limit**.
+
+	The node doesn't return rows that have no value in **Column**. If you add **Sort** rules, sort only by the same **Column** in ascending order. Other sort rules can make pages skip or repeat rows.
 - **Select Rows**: Set the conditions to select rows. Define a **Column**, **Operator**, and **Value**(as `json`) to match rows on.
 The **Value** can vary by type — for example with Fixed mode:
 	- String: "hello", hellowithoutquotes, "hello with space"

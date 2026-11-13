@@ -1,8 +1,8 @@
 ---
 title: Use n8n Assistant
 description: >-
-  Use n8n Assistant to create, edit, test, and troubleshoot n8n workflows from a
-  chat.
+  Use n8n Assistant to create, edit, test, and troubleshoot n8n workflows from
+  a chat.
 layout:
   width: default
   title:
@@ -38,22 +38,24 @@ The result is a normal n8n workflow. You can open it, inspect it, edit it, test 
 
 n8n Assistant is available on:
 
-* **n8n Cloud:** Starter, Pro
-* **Self-hosted:** Community, Registered Community, Business
+- **n8n Cloud:** Starter, Pro, Enterprise
+- **Self-hosted:** Community, Registered Community, Business, Enterprise
 {% endhint %}
 
 {% hint style="info" %}
 **Limited enterprise readiness**
 
-n8n Assistant has **Limited enterprise readiness**. It partially supports the following Enterprise capabilities:
+n8n Assistant has Limited enterprise readiness. It partially supports the following Enterprise capabilities:
 
 - **RBAC and project scoping**
 - **Data residency**
 - **Queue mode and multi-main**
 - **Environments and source control**
 
-It doesn't yet support all other relevant Enterprise capabilities.
+Other Enterprise capabilities either don't apply to n8n Assistant or it doesn't support them yet. See [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#enterprise-capabilities) for the full list of Enterprise capabilities.
 {% endhint %}
+
+n8n Assistant can make mistakes. Always review generated workflows before using them in production.
 
 ## What n8n Assistant can help with
 

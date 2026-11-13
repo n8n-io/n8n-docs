@@ -54,6 +54,7 @@
   * [End-user credentials](manage-credentials/end-user-credentials.md)
   * [Credential overwrites](manage-credentials/credential-overwrites.md)
   * [Use external secret stores](manage-credentials/use-external-secret-stores.md)
+  * [Automatic OAuth client registration](manage-credentials/automatic-oauth-client-registration.md)
 * [Observe and log](observe-and-log/README.md)
   * [Track usage with Insights](observe-and-log/track-usage-with-insights.md)
   * [Stream logs to external systems](observe-and-log/stream-logs-to-external-systems.md)

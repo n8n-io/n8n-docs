@@ -16,8 +16,6 @@ The durable scheduler runs time-based workflows, such as those that start with a
 The durable scheduler is available from n8n 2.36.0. Earlier versions back to n8n 2.32.0 include it as a Preview feature. Before n8n 2.45.0, it's off by default. From n8n 2.45.0, it's on by default for both new and existing instances, unless you explicitly turn it off.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## In-memory scheduler compared to the durable scheduler <a href="#in-memory-vs-durable" id="in-memory-vs-durable"></a>
 
 The in-memory scheduler was the default before n8n 2.45.0. It works out when its active schedules should fire and holds those timers in the main instance's process. This works well for a single instance, but it has limits:

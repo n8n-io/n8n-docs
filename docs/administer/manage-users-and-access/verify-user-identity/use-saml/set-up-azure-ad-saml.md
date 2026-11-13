@@ -16,8 +16,6 @@ layout:
 
 This document provides instructions for configuring Azure AD to send role information to n8n via SAML attributes. This enables automatic role assignment based on Azure AD group membership.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 You need an Azure AD account with access to Enterprise Applications, and the redirect URL and entity ID from n8n's SAML settings.
@@ -86,7 +84,7 @@ Conditions are evaluated in order. Place the most privileged group (owners) at t
 
 ### Testing the configuration <a href="#testing-the-configuration" id="testing-the-configuration"></a>
 
-1. In n8n, go to **Settings** > **SSO**.
+1. In n8n, go to **Settings** > **Authentication** > **Single sign-on (SSO)**.
 1. Set **Role assignment** to **Instance roles via SSO**.
 1. Set **Role mapping method** to **Map rules on your IdP**.
 1. Click **Test settings**.

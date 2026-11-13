@@ -8,8 +8,6 @@ layout:
 
 n8n lets you build AI workflows that connect different LLM providers such as OpenAI, Anthropic, and Google, add tools and memory, and combine several models in one workflow.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## In this section
 
 * [MCP servers](mcp-servers.md): connect an AI agent to an MCP registry server in one click.
@@ -24,7 +22,7 @@ See [Build](../README.md) for other workflow-building topics.
 
 * [Build](../)
 * [Understand workflows](../understand-workflows/README.md)
-* [Build and manage agents](../build-and-manage-agents.md)
+* [Build and manage agents](../build-and-manage-agents/README.md)
 * [Ways of building workflows](../ways-of-building-workflows/README.md)
 * [Manage workflows](../manage-workflows/README.md)
 * [Flow logic](../flow-logic/README.md)

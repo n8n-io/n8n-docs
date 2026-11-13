@@ -49,8 +49,6 @@ Refer to the [Azure AI Search credentials documentation](../../credentials/azure
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Before using this node, you need:
@@ -346,7 +344,6 @@ For authentication troubleshooting including API key errors, refer to the [crede
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
 * [Azure AI Search Vector Search documentation](https://learn.microsoft.com/azure/search/vector-search-overview)
-* [LangChain Azure AI Search integration](https://js.langchain.com/docs/integrations/vectorstores/azure_aisearch)
 * [Azure AI Search REST API reference](https://learn.microsoft.com/rest/api/searchservice/)
 * [OData filter syntax for Azure AI Search](https://learn.microsoft.com/azure/search/search-query-odata-filter)
 

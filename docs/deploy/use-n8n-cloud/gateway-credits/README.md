@@ -13,8 +13,6 @@ Gateway credits let you use supported AI models and third-party services in your
 
 Gateway credits only pay for nodes in your workflows. They don't pay for n8n Assistant, which uses separate [Assistant credits](../assistant-credits/README.md), starting with a monthly allowance included in your plan. Topping up Gateway credits doesn't give n8n Assistant more credits.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## In this section
 
 * [Top up Gateway credits](top-up-gateway-credits.md): add credit manually or automatically.
@@ -51,7 +49,7 @@ Services that aren't in the catalogue still work in n8n the usual way: create a 
 
 ## Your credit balance
 
-Each Cloud instance has one credit balance, shared by everyone who uses Gateway credits on that instance. You can see the balance in the editor next to the Gateway credits option on a node, and on the **Gateway credits** tab in the [Cloud admin dashboard](../use-the-admin-dashboard.md), which also shows your spend over time. Refer to [Track Gateway credit spend](track-gateway-credit-spend.md) for details.
+Each Cloud instance has one credit balance, shared by everyone who uses Gateway credits on that instance. You can see the balance in the editor next to the Gateway credits option on a node, and on the **Gateway credits** page in the [n8n Cloud console](../use-the-cloud-console.md), which also shows your spend over time. Refer to [Track Gateway credit spend](track-gateway-credit-spend.md) for details.
 
 New Cloud users receive a small amount of free credit at sign-up, so you can try supported services before you buy credits. Free trials include Gateway credits too: you can use them from your first workflow.
 
@@ -71,8 +69,8 @@ n8n has more than one kind of credit. They have separate balances and pay for di
 
 | Credit type | What it pays for | Where you see it |
 |---|---|---|
-| Gateway credits | AI models and tool services used by nodes in your workflows | On supported nodes, and on the **Gateway credits** tab in the Cloud admin dashboard |
-| [Assistant credits](../assistant-credits/README.md) | Your usage of [n8n Assistant](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/n8n-assistant), from a monthly allowance included in your plan | In the n8n Assistant panel in the editor, and on the **Assistant credits** tab in the Cloud admin dashboard |
+| Gateway credits | AI models and tool services used by nodes in your workflows | On supported nodes, and on the **Gateway credits** page in the Cloud console |
+| [Assistant credits](../assistant-credits/README.md) | Your usage of [n8n Assistant](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/ways-of-building-workflows/n8n-assistant), from a monthly allowance included in your plan | In the n8n Assistant panel in the editor, and on the **Assistant credits** page in the Cloud console |
 | Free OpenAI API credits | A legacy one-time OpenAI allowance for new Cloud users | Only on instances without Gateway credits |
 
 Topping up Gateway credits doesn't add Assistant credits, and using n8n Assistant doesn't spend your Gateway credit balance.
@@ -85,7 +83,7 @@ When a node runs on Gateway credits, n8n sends the request through its gateway t
 
 - [Use n8n Cloud](../)
 - [Try free then choose a plan](../start-your-free-trial.md)
-- [Use the admin dashboard](../use-the-admin-dashboard.md)
+- [Use the Cloud console](../use-the-cloud-console.md)
 - [Update your version](../update-your-version.md)
 - [Configure Cloud](../configure-cloud/README.md)
 - [Assistant credits](../assistant-credits/README.md)

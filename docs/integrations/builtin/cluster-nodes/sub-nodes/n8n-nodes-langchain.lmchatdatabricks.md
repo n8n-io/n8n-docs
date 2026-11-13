@@ -21,8 +21,6 @@ Refer to [Databricks credentials](../../credentials/databricks.md) for guidance 
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Prerequisites
 
 - A Databricks workspace with Unity AI Gateway enabled.
@@ -50,7 +48,7 @@ Use user login when the agent should run with your own Databricks permissions an
 
 1. Have a Databricks account admin [create a custom OAuth app connection](../../credentials/databricks.md#create-a-custom-oauth-app-connection) and share its client ID and secret with you.
 2. In the n8n credential, enter the workspace URL as the **Host**, set **Grant Type** to **Authorization Code (User)**, and enter the **Client ID** and **Client Secret**.
-3. Select **Connect my account** and sign in to Databricks.
+3. Select **Connect** and sign in to Databricks.
 4. Select the credential in the node. n8n refreshes the access token during long executions, so agents can run past the one-hour token lifetime.
 
 ## Node parameters
@@ -86,6 +84,8 @@ Pay-per-token model services are rate limited per workspace. Three concurrent ag
 - [Databricks credentials](../../credentials/databricks.md)
 - [Databricks node](../../app-nodes/n8n-nodes-base.databricks.md) for SQL, Unity Catalog, and Genie Agent REST operations
 - [Databricks Genie One MCP server](n8n-mcp-registry.databricksgenie.md) to give an agent access to Genie One
+- [Databricks Vector Store](../root-nodes/n8n-nodes-langchain.vectorstoredatabricks/README.md) and [Embeddings Databricks](n8n-nodes-langchain.embeddingsdatabricks.md) to let an agent search a Databricks Vector Search index
+- [Databricks AI Agent](../root-nodes/n8n-nodes-langchain.databricksaiagent.md) to export agent runs to MLflow Tracing
 - [Unity AI Gateway model services](https://docs.databricks.com/aws/en/ai-gateway/model-services) in the Databricks documentation
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
@@ -110,4 +110,4 @@ The node fails with `Databricks host must use https` because the credential's **
 
 ### Requests fail with 403 after the credential worked before
 
-For user-login credentials, the refresh token or the OAuth app's absolute session lifetime has expired. Open the credential in n8n and select **Connect my account** again. To avoid this for scheduled workflows, use a service principal or ask your admin to [extend the token lifetimes](../../credentials/databricks.md#configure-token-lifetimes).
+For user-login credentials, the refresh token or the OAuth app's absolute session lifetime has expired. Open the credential in n8n, select **Switch account**, and sign in again. To avoid this for scheduled workflows, use a service principal or ask your admin to [extend the token lifetimes](../../credentials/databricks.md#configure-token-lifetimes).

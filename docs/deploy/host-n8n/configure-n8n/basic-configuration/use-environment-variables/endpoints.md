@@ -53,12 +53,13 @@ This page lists environment variables for customizing endpoints in n8n.
 | `N8N_ENDPOINT_WEBHOOK` | String | `webhook` | The path used for webhook endpoint. |
 | `N8N_ENDPOINT_WEBHOOK_TEST` | String | `webhook-test` | The path used for test-webhook endpoint. |
 | `N8N_ENDPOINT_WEBHOOK_WAIT` | String | `webhook-waiting` | The path used for waiting-webhook endpoint. |
+| `N8N_ENDPOINT_FORM` | String | `form` | The path used for the form endpoint. |
+| `N8N_ENDPOINT_FORM_TEST` | String | `form-test` | The path used for the test-form endpoint. |
+| `N8N_ENDPOINT_FORM_WAIT` | String | `form-waiting` | The path used for the waiting-form endpoint. |
 | `N8N_ENDPOINT_HEALTH` | String | `healthz` | The path used for health check endpoint. |
 | `N8N_WEBHOOK_URL` | String | - | Sets the base URL for both test and production webhooks when running n8n behind a reverse proxy. Use this instead of the `N8N_ENDPOINT_*` variables above, which set only the endpoint _path_, not a URL. See [Configure webhook URLs with reverse proxy](../configuration-examples/configure-webhook-urls-with-reverse-proxy.md). |
 | `WEBHOOK_URL` | String | - | Deprecated from n8n 2.35.0; alias of `N8N_WEBHOOK_URL`. Still works, but n8n logs a deprecation warning on startup. |
 | `N8N_DISABLE_PRODUCTION_MAIN_PROCESS` | Boolean | `false` | Disable production webhooks from main process. This helps ensure no HTTP traffic load to main process when using webhook-specific processes. |
-
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
 
 ## Related resources
 

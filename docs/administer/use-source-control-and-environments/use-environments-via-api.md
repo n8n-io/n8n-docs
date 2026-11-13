@@ -21,8 +21,6 @@ The Source Control `status` and `push` endpoints are available from n8n version 
 Environments is an Enterprise feature.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## The endpoints
 
 The public API exposes three source control operations:
@@ -239,5 +237,5 @@ The API commits and applies the same resources as the UI: workflows, credential 
 * [Compare versions](compare-versions.md)
 * [Move work between environments](move-work-between-environments.md)
 * [Tutorial: Create environments with source control](tutorial-create-environments-with-source-control.md)
-* [Source control](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/source-control): Request and response schemas for the source control endpoints.
+* [Source control](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/instance-operations/source-control): Request and response schemas for the source control endpoints.
 * [Endpoint reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/api-reference): The complete public API schemas.

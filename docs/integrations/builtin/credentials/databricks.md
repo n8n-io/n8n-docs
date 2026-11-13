@@ -20,11 +20,13 @@ layout:
 You can use these credentials to authenticate the following nodes:
 
 - [Databricks](../app-nodes/n8n-nodes-base.databricks.md)
+- [Databricks AI Agent](../cluster-nodes/root-nodes/n8n-nodes-langchain.databricksaiagent.md) (OAuth2 only, used for the MLflow trace export)
 - [Databricks Chat Model](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatdatabricks.md) (OAuth2 only)
 - [Databricks Genie One MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md) (OAuth2 with user login only)
+- [Databricks Lakebase Chat Memory](../cluster-nodes/sub-nodes/n8n-nodes-langchain.memorylakebasechat.md) (OAuth2 only)
 - [Databricks Trigger](../trigger-nodes/n8n-nodes-base.databrickstrigger.md)
-
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
+- [Databricks Vector Store](../cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoredatabricks/README.md) (OAuth2 only)
+- [Embeddings Databricks](../cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsdatabricks.md) (OAuth2 only)
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
@@ -35,7 +37,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
-- [Personal access token](#using-a-personal-access-token): a token tied to one Databricks user. Supported by the Databricks node only.
+- [Personal access token](#using-a-personal-access-token): a token tied to one Databricks user. Supported by the Databricks node only, and not by its **Lakebase** resource.
 - [OAuth2 with user login](#using-oauth2-with-user-login): the credential is connected by signing in to a Databricks account in the browser. Operations run with that user's permissions and appear in Databricks audit logs under their identity. Each user can create their own credential to run workflows under their own account. Databricks recommends this for attended, interactive use.
 - [OAuth2 with a service principal](#using-oauth2-service-principal): n8n authenticates as a service principal with a client ID and secret, without user interaction. Databricks recommends this for unattended scenarios, such as fully automated production workflows.
 
@@ -49,11 +51,15 @@ The identity the credential authenticates as (the signed-in user or the service 
 | Databricks SQL (Execute Query) | The **Databricks SQL access** entitlement and **CAN USE** on the SQL warehouse |
 | Job (Get, Get Run, Get Run Output) | **CAN VIEW** on the job |
 | Job (Run) | **CAN MANAGE RUN** on the job |
+| Lakebase | A Postgres role on the project's branch, granted to `authenticator`, with the table and function grants the operation needs. Refer to [Set up Lakebase for the Data API](#set-up-lakebase-for-the-data-api) |
 | Reading or writing Unity Catalog data | **USE CATALOG** on the catalog, **USE SCHEMA** on the schema, and **SELECT** on the tables or views you query. Functions and models also need **EXECUTE** |
 | Genie Agent (Databricks node) | **CAN RUN** on the Genie Agent and **CAN USE** on its SQL warehouse |
-| Genie One MCP server | **CAN RUN** on each Genie Agent that Genie One should answer from, and **CAN USE** on at least one SQL warehouse |
+| Genie One MCP server | **CAN RUN** on each Genie Agent that Genie One should answer from, **CAN USE** on at least one SQL warehouse, and **EXECUTE** on `system.ai.genie_one_mcp`. Databricks grants **EXECUTE** on the `system.ai` services to all users by default |
 | Model Serving (Query Endpoint) | **CAN QUERY** on the serving endpoint |
-| Unity AI Gateway model services (Databricks Chat Model) | **USE CATALOG** and **USE SCHEMA** on the catalog and schema that hold the model service, and **EXECUTE** on the model service. Databricks grants **EXECUTE** on the `system.ai` services to all users by default |
+| Unity AI Gateway model services (Databricks Chat Model, Embeddings Databricks) | **USE CATALOG** and **USE SCHEMA** on the catalog and schema that hold the model service, and **EXECUTE** on the model service. Databricks grants **EXECUTE** on the `system.ai` services to all users by default |
+| Searching a vector search index (Databricks Vector Store: Get Many, Retrieve Documents, Retrieve as Tool) | **USE CATALOG** on the catalog, **USE SCHEMA** on the schema, and **SELECT** on the index. **SELECT** on the source table of a Delta Sync index that syncs all of its columns lets the node list those columns. A self-managed index also needs the model service privileges above for the Embeddings Databricks node. **Metadata Filter** needs read access on the Vector Search endpoint |
+| Inserting documents (Databricks Vector Store: Insert Documents) | The privileges for searching, plus **MODIFY** on the index. Only Direct Access indexes accept inserts |
+| Exporting traces to MLflow (Databricks AI Agent) | **CAN EDIT** on the experiment. The default experiment the node creates under `/Shared` needs no extra grant, because all workspace users have **CAN MANAGE** on the `/Shared` folder by default |
 | Watching a job or pipeline (Databricks Trigger) | **CAN VIEW** on the job or pipeline |
 
 {% hint style="info" %}
@@ -123,7 +129,7 @@ A Databricks account admin needs to complete these steps:
 3. On the **App connections** tab, select **Add connection**.
 4. Enter a name for the connection, for example `n8n`.
 5. Add the **OAuth Redirect URL** you copied from n8n as a redirect URL.
-6. Select the access scopes the connection needs. The **Databricks** node and the **Databricks Chat Model** node need **All APIs**. If the connection serves only the [Genie One MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md), select `genie` instead: the connection then can't reach other Databricks APIs, and users consent to a narrower grant. Databricks automatically allows the `offline_access` scope that n8n needs to stay connected. In n8n's testing, **All APIs** also covers the `genie` scope; if connecting the tile fails with a scope error, [add the `genie` scope](#add-the-genie-scope-for-the-genie-mcp-server).
+6. Select the access scopes the connection needs. The **Databricks** node and the **Databricks Chat Model** node need **All APIs**. If the connection serves only the [Genie One MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md), select `ai-gateway` instead: the connection then can't call the Databricks REST APIs that **All APIs** covers, and users consent to a narrower grant. The `ai-gateway` scope still covers other AI Gateway services, such as the Databricks SQL MCP server, within the user's Unity Catalog permissions. Databricks automatically allows the `offline_access` scope that n8n needs to stay connected. The **All APIs** option doesn't cover the `ai-gateway` scope, so a connection that serves the tile and the other nodes needs both. Refer to [Add the `ai-gateway` scope](#add-the-ai-gateway-scope-for-the-genie-one-mcp-server).
 7. Enable client secret generation. n8n is a confidential client, so it needs a secret.
 8. Save the connection, then copy the **Client ID** and **Client Secret**. Databricks shows the secret only once.
 
@@ -131,26 +137,40 @@ Share the client ID and secret with the n8n users who'll create credentials. All
 
 Refer to [Enable or disable partner OAuth applications](https://docs.databricks.com/aws/en/integrations/enable-disable-oauth) for more information.
 
-### Add the genie scope for the Genie MCP server
+### Add the ai-gateway scope for the Genie One MCP server
 
-The [Databricks Genie One MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md) tile requests the `genie` and `offline_access` scopes. In n8n's testing, an app connection with **All APIs** satisfies the request without an explicit `genie` scope. On accounts where it doesn't, users see this error when they select **Connect my account** on the tile:
+The [Databricks Genie One MCP server](../cluster-nodes/sub-nodes/n8n-mcp-registry.databricksgenie.md) tile calls Genie One through the AI Gateway endpoint of the workspace and requests the `ai-gateway` and `offline_access` scopes. The **All APIs** option doesn't cover `ai-gateway`: in n8n's testing, an app connection with **All APIs** returned a token without the `ai-gateway` scope until the admin added that scope to the connection. Depending on the Databricks account, users see one of two errors. Either connecting the credential fails with:
 
 ```text
-access_denied: Scopes 'genie' are not assigned to the client <client-id>
+access_denied: Scopes 'ai-gateway' are not assigned to the client <client-id>
 ```
 
-To fix it, a Databricks account admin adds the `genie` scope to the app connection. If the connection's page in the account console offers `genie` in the **Add scope** picker, add it there. Otherwise, use the [Databricks CLI](https://docs.databricks.com/aws/en/dev-tools/cli/) authenticated against the account. The CLI update replaces the whole scope list, so include every scope the app needs. One app connection that serves the Databricks node, the Databricks Chat Model node, and the Genie One MCP server needs all three:
+Or connecting succeeds, and the agent fails as soon as it runs with:
+
+```text
+Invalid scope, required scopes: ai-gateway
+```
+
+To fix either error, a Databricks account admin adds the `ai-gateway` scope to the app connection. If the connection's page in the account console offers `ai-gateway` in the **Add scope** picker, add it there. Otherwise, use the [Databricks CLI](https://docs.databricks.com/aws/en/dev-tools/cli/) authenticated against the account. The CLI update replaces the whole scope list, so include every scope the app needs. One app connection that serves the Databricks node, the Databricks Chat Model node, and the Genie One MCP server needs all three:
 
 ```bash
 databricks account custom-app-integration update <integration-id> \
-	--json '{"scopes": ["all-apis", "genie", "offline_access"]}'
+	--json '{"scopes": ["all-apis", "ai-gateway", "offline_access"]}'
 ```
 
 Find `<integration-id>` with `databricks account custom-app-integration list`, or on the connection's detail page in the account console. Refer to [Update Custom OAuth App Integration](https://docs.databricks.com/api/account/customappintegration/update) for the API reference.
 
-The Databricks consent screen shows the scopes assigned to the app connection, not the narrower set n8n requests. Users connecting the Genie One MCP server through an **All APIs** app see **All APIs** on the consent screen, even though the token n8n receives is scoped to `genie offline_access`.
+After the admin adds the scope, each user reconnects the credential they use with the tile, so n8n receives a token with the new scope. Refreshing the old token doesn't add it.
 
-If the app connection serves only the Genie One MCP server, set the scopes to `["genie", "offline_access"]` instead. Users then see and consent to a narrower grant. The client also can't reach other Databricks APIs.
+The Databricks consent screen doesn't show which scopes the token gets. In n8n's testing, it listed `ai-gateway` while the app connection didn't have that scope, and the token n8n received lacked it. To check the setup, look at the app connection's scopes in the account console.
+
+If the app connection serves only the Genie One MCP server, set the scopes to `["ai-gateway", "offline_access"]` instead. Users then see and consent to a narrower grant, which leaves out the Databricks REST APIs but not other AI Gateway services.
+
+{% hint style="warning" %}
+**App connections without the ai-gateway scope**
+
+Before the tile moved to the AI Gateway endpoint on October 30, 2026, it requested the `genie` scope. An app connection set up for the `genie` scope keeps working for the nodes it already served, but the tile needs `ai-gateway` added. After the admin adds the scope, each user reconnects their Genie One credential so n8n receives a token with the new scope. Once every user has reconnected, remove `genie` from the connection, unless another integration still calls the beta endpoint, which Databricks retires on November 30, 2026.
+{% endhint %}
 
 ### Configure token lifetimes
 
@@ -172,7 +192,7 @@ A short refresh token TTL or absolute session lifetime means users must periodic
 1. Enter your workspace URL as the **Host**.
 2. Set **Grant Type** to **Authorization Code (User)**.
 3. Enter the **Client ID** and **Client Secret** from the custom OAuth app connection.
-4. Select **Connect my account** and sign in with your Databricks account.
+4. Select **Connect** and sign in with your Databricks account.
 
 By default the credential requests the `all-apis` and `offline_access` scopes. The `offline_access` scope keeps the connection alive past one hour, so it's always included: if you enable **Custom Scopes** and remove it from the list, n8n adds it back automatically.
 
@@ -204,7 +224,7 @@ There are two steps to setting up this credential:
 {% hint style="info" %}
 **Workspace assignment**
 
-The service principal must be assigned to the workspace it will access. Go to the **Permissions** tab and grant the required users or groups access to manage and use the service principal.
+The service principal must be assigned to the workspace it will access, with the **Workspace access** entitlement. A service principal that only exists at the account level fails with `invalid_client` from the workspace token endpoint, which looks like a wrong client secret. Go to the **Permissions** tab and grant the required users or groups access to manage and use the service principal.
 {% endhint %}
 
 {% hint style="warning" %}
@@ -224,3 +244,73 @@ In your n8n credential:
 3. Set **Grant Type** to **Client Credentials (Service Principal)**. This is the default.
 4. Enter the **Client ID** you copied from the service principal.
 5. Enter the **Client Secret** you generated.
+
+## Set up Lakebase for the Data API
+
+The **Lakebase** resource on the [Databricks node](../app-nodes/n8n-nodes-base.databricks.md#lakebase-operations) reads and writes rows over the Lakebase Data API. The API is off by default, and the identity the credential authenticates as needs a Postgres role before any operation works. Do these steps in this order. The steps have different scopes. You turn on the Data API and the OpenAPI specification once for each project. You create the Postgres role and grant it to `authenticator` once for each branch. You install the `databricks_auth` extension and grant privileges on tables and functions once for each database the node reaches.
+
+{% hint style="info" %}
+**The Data API doesn't accept personal access tokens**
+
+The node checks this before it calls the Data API, so a personal access token fails with `Lakebase requires OAuth2 authentication` rather than anything from Databricks. Set the node's **Authentication** to **OAuth2** and use [OAuth2 with user login](#using-oauth2-with-user-login) or [OAuth2 with a service principal](#using-oauth2-service-principal).
+{% endhint %}
+
+### Enable the Data API
+
+In Databricks, open the Lakebase project, then select **App Backend** > **Data API** > **Enable Data API**. There's no API or CLI for this step. Databricks creates the `authenticator` role that the grant below needs.
+
+The API exposes only the `public` schema by default. Add any other schema you want to reach in the same settings.
+
+### Turn on the OpenAPI specification
+
+In the same project, select **Data API** > **API** > **Advanced settings** > **OpenAPI specification**, then select **Follow privileges**. Select **Save** to apply the change, which then takes effect right away.
+
+The node reads this document to list tables, functions, a table's columns, and a function's arguments. Without it, the **Table**, **Function**, and column lists show an error, and the **Columns** and **Arguments** mappers stay empty with a notice. Each message names the same setting:
+
+```text
+Data API > API > Advanced settings > OpenAPI specification
+```
+
+**Follow privileges** lists only the objects the connected identity can use. **Ignore privileges** lists everything, including the internal tables and functions Databricks creates.
+
+### Create a Postgres role for the n8n identity
+
+Run this in the Lakebase SQL editor, as an identity that can manage the project:
+
+```sql
+CREATE EXTENSION IF NOT EXISTS databricks_auth;
+SELECT databricks_create_role('<identity>', 'SERVICE_PRINCIPAL');
+```
+
+`<identity>` is the service principal's application ID. For a user identity, pass the email address and `'USER'` instead.
+
+A Postgres extension belongs to one database. Run `CREATE EXTENSION` in every database the node reaches. The role covers the whole branch, not one database. Run `databricks_create_role` again on any branch that has no role for the identity. Without a role there, the Data API returns `invalid token permissions` (`PGRST301`).
+
+Create the role this way even if the identity already appears in the Databricks UI. The next step works only on a role created with `databricks_create_role`.
+
+### Grant the role to authenticator
+
+`<role>` is the identity you passed to `databricks_create_role`. Use the application ID for a service principal, or the email address for a user.
+
+```sql
+GRANT "<role>" TO authenticator;
+```
+
+Run this as the identity that created the role. No role reaches the Data API without this grant. Operations fail with `permission denied to set role` until you run it.
+
+Then grant the role what it needs on your data, the same as any other Postgres role. Run these in each database that holds a table or function the node uses:
+
+```sql
+GRANT USAGE ON SCHEMA <schema> TO "<role>";
+GRANT SELECT, INSERT, UPDATE, DELETE ON <table> TO "<role>";
+GRANT USAGE ON ALL SEQUENCES IN SCHEMA <schema> TO "<role>";
+GRANT EXECUTE ON FUNCTION <function>(<argument-types>) TO "<role>";
+```
+
+Schema `USAGE` matters for every schema except `public`. Without the sequence grant, an insert into a `serial` column fails with `permission denied for sequence`.
+
+{% hint style="warning" %}
+**Don't connect as the project owner**
+
+Databricks excludes the database owner from the Data API by design. The owner can't grant their own role to `authenticator`, and the grant fails with `permission denied to grant role`. Use an identity that doesn't own the project.
+{% endhint %}

@@ -193,8 +193,6 @@ layout:
 
 `format()` is a custom n8n extension added to Luxon `DateTime` objects in the expressions editor. It doesn't exist in the Code node, because Code node scripts run against plain, unmodified Luxon. Calling it there throws `... .format is not a function`.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 Use Luxon's native [`toFormat()`](https://moment.github.io/luxon/api-docs/index.html#datetimetoformat) instead:
 
 ```javascript

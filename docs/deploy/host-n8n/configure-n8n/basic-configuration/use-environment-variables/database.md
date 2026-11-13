@@ -38,8 +38,6 @@ This page outlines environment variables to configure your chosen database for y
 | `DB_RECOVERY_BACKOFF_MAX_MS` | Number | `30000` | The longest, in milliseconds, n8n waits between recovery attempts. This caps the backoff. Must be greater than or equal to `DB_RECOVERY_BACKOFF_MIN_MS`. |
 | `DB_CONNECTION_ACQUISITION_TIMEOUT_MS` | Number | `30000` | How long, in milliseconds, a query waits while recovery is in progress before failing fast with an error. Set to `0` to wait indefinitely. Applies to PostgreSQL only. |
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## PostgreSQL <a href="#postgresql" id="postgresql"></a>
 
 | Variable | Type  | Default  | Description |
@@ -66,7 +64,7 @@ This page outlines environment variables to configure your chosen database for y
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
-| `DB_SQLITE_POOL_SIZE` | Number | `0` | Controls whether to open the SQLite file in [WAL mode](https://www.sqlite.org/wal.html) or [rollback journal mode](https://www.sqlite.org/lockingv3.html#rollback). Uses rollback journal mode when set to zero. When greater than zero, uses WAL mode with the value determining the number of parallel SQL read connections to configure. WAL mode is much more performant and reliable than the rollback journal mode. |
+| `DB_SQLITE_POOL_SIZE` | Number | `3` | The number of parallel SQL read connections in the SQLite connection pool. Must be at least `1`. Setting it to `0` logs a warning and falls back to the default. n8n opens the SQLite file in [WAL mode](https://www.sqlite.org/wal.html). |
 | `DB_SQLITE_VACUUM_ON_STARTUP` | Boolean | `false` | Runs [VACUUM](https://www.sqlite.org/lang_vacuum.html) operation on startup to rebuild the database. Reduces file size and optimizes indexes. This is a long running blocking operation and increases start-up time. |
 
 ## How database connection recovery works <a href="#how-database-connection-recovery-works" id="how-database-connection-recovery-works"></a>

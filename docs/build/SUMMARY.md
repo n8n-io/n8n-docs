@@ -1,4 +1,4 @@
-# Summary
+# Table of contents
 
 * [Build](README.md)
 * [Understand workflows](understand-workflows/README.md)
@@ -20,7 +20,10 @@
   * [Save and publish workflows](understand-workflows/save-and-publish-workflows.md)
   * [Create and edit credentials](understand-workflows/create-and-edit-credentials.md)
   * [Use Gateway credits](understand-workflows/use-gateway-credits.md)
-* [Build and manage agents](build-and-manage-agents.md)
+* [Build and manage agents](build-and-manage-agents/README.md)
+  * [Connect an agent to Microsoft Teams](build-and-manage-agents/microsoft-teams/README.md)
+    * [Set up the Teams channel](build-and-manage-agents/microsoft-teams/set-up-the-teams-channel.md)
+    * [Manage the Teams channel](build-and-manage-agents/microsoft-teams/manage-the-teams-channel.md)
 * [Ways of building workflows](ways-of-building-workflows/README.md)
   * [Use n8n Assistant](ways-of-building-workflows/n8n-assistant.md)
     * [Work with Browser Use](ways-of-building-workflows/n8n-assistant/browser-use.md)
@@ -105,7 +108,7 @@
     * [Built-in methods and variables examples](code-in-n8n/cookbook/built-in-methods-and-variables-examples/README.md)
       * [execution](code-in-n8n/cookbook/built-in-methods-and-variables-examples/execution.md)
       * [getWorkflowStaticData](code-in-n8n/cookbook/built-in-methods-and-variables-examples/getworkflowstaticdata.md)
-      * [(node-name).all](code-in-n8n/cookbook/built-in-methods-and-variables-examples/(node-name).all.md)
+      * [(node-name).all](code-in-n8n/cookbook/built-in-methods-and-variables-examples/\(node-name\).all.md)
       * [vars](code-in-n8n/cookbook/built-in-methods-and-variables-examples/vars.md)
     * [Code node](code-in-n8n/cookbook/code-node/README.md)
       * [Get number of items returned by last node](code-in-n8n/cookbook/code-node/get-number-of-items-returned-by-last-node.md)
@@ -136,4 +139,6 @@
     * [Human-in-the-loop for tools](integrate-ai/ai-examples/human-in-the-loop-for-tools.md)
     * [Set a human fallback for AI workflows](integrate-ai/ai-examples/set-a-human-fallback-for-ai-workflows.md)
     * [Use AI for parameters](integrate-ai/ai-examples/use-ai-for-parameters.md)
+* [Agentic context management](agentic-context-management/README.md)
+  * [Preferences](agentic-context-management/preferences.md)
 * [Keyboard shortcuts](keyboard-shortcuts.md)

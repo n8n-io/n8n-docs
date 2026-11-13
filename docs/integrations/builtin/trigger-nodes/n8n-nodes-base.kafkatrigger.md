@@ -46,8 +46,6 @@ Version 1 of the Kafka Trigger consumes uncompressed messages and messages compr
 For usage examples and templates to help you get started, refer to n8n's [Kafka Trigger integrations](https://n8n.io/integrations/kafka-trigger/) page.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Kafka Trigger version 2
 
 {% hint style="info" %}

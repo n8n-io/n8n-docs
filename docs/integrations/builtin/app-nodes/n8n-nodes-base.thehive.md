@@ -32,8 +32,6 @@ n8n provides two nodes for TheHive. Use this node (TheHive) if you want to use T
 Refer to [TheHive credentials](../credentials/thehive.md) for guidance on setting up authentication.
 {% endhint %}
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Operations <a href="#operations" id="operations"></a>
 
 The available operations depend on your API version. To see the operations list, create your credentials, including selecting your API version. Then return to the node, select the resource you want to use, and n8n displays the available operations for your API version. 
@@ -57,5 +55,5 @@ n8n provides a trigger node for TheHive. Refer to the [TheHive Trigger node docu
 
 Refer to TheHive's documentation for more information about the service:
 
-* [Version 3](https://docs.thehive-project.org/thehive/legacy/thehive3/api/)
-* [Version 4](https://docs.thehive-project.org/cortex/api/api-guide/)
+* The API docs for TheHive 3 and 4 are no longer online. Refer to the [TheHive 5 API documentation](https://docs.strangebee.com/thehive/api-docs/) for the current API.
+* [Cortex API guide](https://docs.strangebee.com/cortex/api/api-guide/), for Cortex, the analysis engine that works with TheHive.

@@ -13,8 +13,6 @@ layout:
 
 n8n improves its node library over time. This page lists removed nodes (fully removed), deprecated nodes (retired but still functional), and versioned nodes (active with multiple versions available).
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 ## Deprecated nodes <a href="#deprecated-nodes" id="deprecated-nodes"></a>
 
 n8n won't release further updates or bug fixes for deprecated nodes. Existing workflows that use them continue to run, but you should migrate to a supported alternative.
@@ -44,6 +42,7 @@ Replace deprecated nodes in your workflows before n8n removes them in a future r
 | JSON Input Loader | 1 |
 | LangChain Code | 1 |
 | Line | 1 |
+| Line Tool | 1 |
 | Manual Chat Trigger | 1.1 |
 | MCP Registry Client (internal) | 1.1 |
 | Motorhead | 1.4 |
@@ -101,6 +100,7 @@ Always use the current version in new workflows to get the latest features and b
 | Anthropic Chat Model | 1.6 | 1, 1.1, 1.2, 1.3, 1.4, 1.5 |
 | AWS Bedrock Chat Model | 1.2 | 1, 1.1 |
 | AWS S3 | 2 | 1 |
+| Azure AI Foundry Chat Model | 1.1 | 1 |
 | Azure AI Search Vector Store | 1.3 | 1, 1.1, 1.2 |
 | Baserow | 1.1 | 1 |
 | Basic LLM Chain | 1.9 | 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8 |
@@ -131,7 +131,7 @@ Always use the current version in new workflows to get the latest features and b
 | Evaluation | 4.8 | 4.6, 4.7 |
 | Evaluation Trigger | 4.7 | 4.6 |
 | Execute Sub-workflow | 1.4 | 1, 1.1, 1.2, 1.3 |
-| Execute Workflow Trigger | 1.2 | 1, 1.1 |
+| Execute Workflow Trigger | 1.3 | 1, 1.1, 1.2 |
 | Execution Data | 1.1 | 1 |
 | Extract from File | 1.1 | 1 |
 | Filter | 2.3 | 1, 2, 2.1, 2.2 |
@@ -183,8 +183,8 @@ Always use the current version in new workflows to get the latest features and b
 | Microsoft Teams | 2 | 1, 1.1 |
 | Milvus Vector Store | 1.3 | 1, 1.1, 1.2 |
 | Mindee | 3 | 1, 2 |
-| MiniMax | 1.1 | 1 |
-| MiniMax Chat Model | 1.1 | 1 |
+| MiniMax | 1.2 | 1, 1.1 |
+| MiniMax Chat Model | 1.2 | 1, 1.1 |
 | MongoDB | 1.5 | 1, 1.1, 1.2, 1.3, 1.4 |
 | MongoDB Atlas Vector Store | 1.3 | 1, 1.1, 1.2 |
 | MongoDB Chat Memory | 1.1 | 1 |
@@ -209,6 +209,7 @@ Always use the current version in new workflows to get the latest features and b
 | QuestDB | 1.1 | 1 |
 | Question and Answer Chain | 1.7 | 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6 |
 | Qwen Cloud | 1.1 | 1 |
+| Qwen Cloud Chat Model | 1.1 | 1 |
 | RabbitMQ | 1.2 | 1, 1.1 |
 | Read/Write Files from Disk | 1.1 | 1 |
 | Redis Chat Memory | 1.6 | 1, 1.1, 1.2, 1.3, 1.4, 1.5 |
@@ -228,6 +229,7 @@ Always use the current version in new workflows to get the latest features and b
 | Simple Vector Store | 1.3 | 1, 1.1, 1.2 |
 | Slack | 2.7 | 1, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6 |
 | Snowflake | 1.1 | 1 |
+| Split Out | 1.1 | 1 |
 | Splunk | 2 | 1 |
 | Strava | 1.1 | 1 |
 | Structured Output Parser | 1.3 | 1, 1.1, 1.2 |
@@ -249,7 +251,7 @@ Always use the current version in new workflows to get the latest features and b
 | Weaviate Vector Store | 1.3 | 1, 1.1, 1.2 |
 | Webflow | 2 | 1 |
 | Webflow Trigger | 2 | 1 |
-| Webhook | 2.1 | 1, 1.1, 2 |
+| Webhook | 2.2 | 1, 1.1, 2, 2.1 |
 | WhatsApp Business Cloud | 1.1 | 1 |
 | Workflow Retriever | 1.1 | 1 |
 | X (Formerly Twitter) | 2 | 1 |

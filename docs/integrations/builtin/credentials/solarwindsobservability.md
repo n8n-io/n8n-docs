@@ -28,8 +28,6 @@ layout:
 
 Refer to [SolarWinds Observability SaaS's API documentation](https://documentation.solarwinds.com/en/success_center/observability/content/api/api-swagger.htm) for more information about the service.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
-
 
 ## Using API Token <a href="#using-api-token" id="using-api-token"></a>
 

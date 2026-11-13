@@ -159,9 +159,11 @@ def is_excluded(url: str, patterns) -> bool:
 # placeholder from sample config in the docs, and reported each as "unreachable".
 # - `exclude_all_private = true` in lychee.toml: loopback, private and link-local
 #   addresses, and the name `localhost`.
-# - lychee's built-in example-domain check: example.com, .net, .org, .edu and their
-#   subdomains.
+# - lychee's built-in example-domain check (lychee-lib filter/mod.rs): example.com,
+#   .net, .org, .edu and their subdomains, plus the reserved TLDs .test, .example,
+#   .invalid and .localhost (RFC 2606).
 EXAMPLE_DOMAINS = ("example.com", "example.net", "example.org", "example.edu")
+EXAMPLE_TLDS = (".test", ".example", ".invalid", ".localhost")
 
 
 def is_placeholder_host(url: str) -> bool:
@@ -172,7 +174,7 @@ def is_placeholder_host(url: str) -> bool:
         return False
     if not host:
         return False
-    if host == "localhost" or host.endswith(".localhost"):
+    if host == "localhost" or host.endswith(EXAMPLE_TLDS):
         return True
     if any(host == d or host.endswith("." + d) for d in EXAMPLE_DOMAINS):
         return True

@@ -27,7 +27,7 @@ Administer n8n by controlling access, securing credentials, managing changes, an
 This section helps you run n8n securely and reliably as usage grows.
 
 {% hint style="info" %}
-Enterprise teams often spend more time in this section. SSO, directory integration, change control, and centralized logging become more important at scale. Many features covered here, including user management basics, credential security, and operational monitoring, are also useful outside Enterprise.
+Enterprise teams often spend more time in this section. For a guided path through Enterprise setup, see the [Enterprise Hub](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/enterprise-hub). SSO, directory integration, change control, and centralized logging become more important at scale. Many features covered here, including user management basics, credential security, and operational monitoring, are also useful outside Enterprise.
 {% endhint %}
 
 Before you plan an upgrade or check whether a feature applies to your instance, see [Understand feature availability](understand-feature-availability.md).

@@ -54,7 +54,7 @@ Use this guide to choose a deployment option:
 | Don't want to manage infrastructure | **n8n Cloud** | n8n handles hosting, updates, and scaling |
 | Need full control over deployment | **Self-hosted** | You control the environment and configuration |
 | Have customized use cases | **Self-hosted** | Full control over deployment and configuration |
-| Need enterprise features (SSO, environments, projects, etc.) | **Both options work** | Enterprise plans (paid) are available with both |
+| Need enterprise features (SSO, environments, projects, etc.) | **Both options work** | Enterprise plans (paid) are available with both. See the [Enterprise Hub](enterprise-hub.md) |
 | Have infrastructure and technical resources | **Self-hosted** | You can manage your own deployment |
 | Want to run n8n for free | **Self-hosted (Community edition)** | Free with almost the complete feature set |
 

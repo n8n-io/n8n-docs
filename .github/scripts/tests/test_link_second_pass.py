@@ -159,15 +159,40 @@ _pats = []
 with _tempfile.TemporaryDirectory(prefix="lsp-hosttest-") as _tmpdir:
     _tmp = Path(_tmpdir)
     (_tmp / "p.md").write_text(
-        "a https://docs.n8n.io/real b https://docs.n8n.io.evil.example/x "
-        "c https://app.gitbook.com/s/ABC/page d https://ok.example/y\n", encoding="utf-8")
+        "a https://docs.n8n.io/real b https://docs.n8n.io.evil.io/x "
+        "c https://app.gitbook.com/s/ABC/page d https://ok.io/y\n", encoding="utf-8")
     _urls, _ = lsp.collect_urls(_tmp, _pats)
+# The hosts use .io, not the reserved .example TLD: since DOC-2590 that TLD is skipped
+# as a placeholder, like lychee does, so it can no longer stand in for a real site.
 check("collect_urls: our own docs host is skipped", "https://docs.n8n.io/real" not in _urls)
 check("collect_urls: a lookalike host is NOT skipped",
-      "https://docs.n8n.io.evil.example/x" in _urls)
+      "https://docs.n8n.io.evil.io/x" in _urls)
 check("collect_urls: cross-space gitbook links are skipped",
       "https://app.gitbook.com/s/ABC/page" not in _urls)
-check("collect_urls: an ordinary host is kept", "https://ok.example/y" in _urls)
+check("collect_urls: an ordinary host is kept", "https://ok.io/y" in _urls)
+
+# --- placeholder hosts (DOC-2590) ---------------------------------------------------------
+# lychee skips local, private and example-domain hosts. The 2026-11-12 run probed these
+# from sample config in the docs and called them "unreachable".
+for _u in ("http://localhost:5678/webhook", "http://localhost:16686", "http://127.0.0.1:8080/x",
+           "http://[::1]:5678/", "http://10.0.0.5/api", "http://192.168.1.10:5678",
+           "http://169.254.169.254/latest", "http://0.0.0.0:5678",
+           "https://mytemplatemaker.example.com/x", "https://example.org/", "http://app.localhost/",
+           "https://ok.example/y", "https://api.service.test/v1", "https://foo.invalid/"):
+    check(f"placeholder host skipped: {_u}", lsp.is_placeholder_host(_u))
+for _u in ("https://n8n.io/integrations/airtop", "https://ok.io/y", "https://testing.io/",
+           "https://notexample.com/", "https://example.com.evil.io/", "https://8.8.8.8/",
+           "https://docs.strapi.io/cms/features/users-permissions"):
+    check(f"real host kept: {_u}", not lsp.is_placeholder_host(_u))
+
+with _tempfile.TemporaryDirectory(prefix="lsp-placeholder-") as _tmpdir:
+    _tmp = Path(_tmpdir)
+    (_tmp / "p.md").write_text(
+        "a http://localhost:5678/webhook b https://mytemplatemaker.example.com/x "
+        "c https://real.io/z\n", encoding="utf-8")
+    _urls, _excl = lsp.collect_urls(_tmp, [])
+check("collect_urls: placeholder hosts are dropped and counted as excluded",
+      list(_urls) == ["https://real.io/z"] and _excl == 2)
 
 # --- cap_findings -------------------------------------------------------------------------
 # First full run: 719 redirect-reliant against 23 dead. A flat cap sorted by severity

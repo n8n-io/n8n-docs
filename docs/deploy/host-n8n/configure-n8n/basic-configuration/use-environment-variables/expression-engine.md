@@ -61,6 +61,19 @@ These variables configure the backend `vm` and `quickjs` engines. They have no e
 | `N8N_EXPRESSION_ENGINE_MEMORY_LIMIT` | Number | `128` | Memory limit in MiB for each sandbox. |
 | `N8N_EXPRESSION_ENGINE_IDLE_TIMEOUT` | Number | - | If set, scales the pool to zero warm sandboxes after this many seconds with no activity. |
 
+## Observability and tracing for expression evaluation
+
+The backend expression engines can emit observability signals about how expressions run. These variables only apply when `N8N_EXPRESSION_ENGINE` is `vm` or `quickjs`: the `legacy` engine never emits expression metrics.
+
+| Variable | Type | Default | Description |
+| :------- | :--- | :------ | :---------- |
+| `N8N_EXPRESSION_ENGINE_OBSERVABILITY_ENABLED` | Boolean | `true` | Whether n8n emits observability signals (metrics, traces, logs) for expression evaluation. |
+| `N8N_EXPRESSION_ENGINE_TRACES_ENABLED` | Boolean | `false` | Whether n8n sends OpenTelemetry spans for expression evaluations when OTEL is enabled (`N8N_OTEL_ENABLED`). Each failing or slow evaluation gets a span, and n8n samples the rest at the rate set by `N8N_EXPRESSION_ENGINE_TRACES_SAMPLE_RATE`. |
+| `N8N_EXPRESSION_ENGINE_SLOW_EVAL_THRESHOLD_MS` | Number | `50` | How long (in milliseconds) an evaluation can run before n8n considers it slow and gives it a span. |
+| `N8N_EXPRESSION_ENGINE_TRACES_SAMPLE_RATE` | Number | `0` | Head-based sampling rate for regular expression spans, from 0 to 1. Slow and failing expressions always emit spans. |
+
+Refer to [OpenTelemetry](opentelemetry.md) to enable tracing on your instance.
+
 ## Related resources
 
 * [Environment variables](./)

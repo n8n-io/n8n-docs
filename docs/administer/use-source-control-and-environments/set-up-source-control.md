@@ -22,7 +22,7 @@ n8n uses source control to provide environments. Refer to [Environments in n8n](
 
 To use source control with n8n, you need a Git repository with either:
 
-- SSH access (using deploy keys), or 
+- SSH access (using deploy keys), or
 - HTTPS access (using Personal Access Tokens)
 
 This document assumes you are familiar with Git and your Git provider.
@@ -31,7 +31,7 @@ This document assumes you are familiar with Git and your Git provider.
 
 For a new setup:
 
-1. Create a new repository for use with n8n. 
+1. Create a new repository for use with n8n.
 1. Create the branches you need. For example, if you plan to have different environments for test and production, set up a branch for each.
 
 To help decide what branches you need for your use case, refer to [Branch patterns](choose-branching-patterns.md).
@@ -84,7 +84,7 @@ The file or directory replaces the default trust store for Git. If the instance 
 ## Step 4: Connect n8n and configure your instance <a href="#step-4-connect-n8n-and-configure-your-instance" id="step-4-connect-n8n-and-configure-your-instance"></a>
 
 1. In **Settings** > **Environments** in n8n, select **Connect**. n8n connects to your Git repository.
-1. Under **Instance settings**, choose which branch you want to use for the current n8n instance.
+1. Under **Instance settings**, choose the branch to connect this n8n instance to. If per-commit branch selection is enabled (`N8N_SOURCECONTROL_BRANCH_SELECTION_ENABLED`), n8n labels this setting the **Default branch**. Pulls always use it, and users choose or create the branch for each push in the push dialog. Refer to [Push and pull changes](push-and-pull-changes.md).
 1. **Optional**: select **Protected instance** to prevent users editing source-controlled resources in this instance. This is useful for protecting production instances.
 1. **Optional**: choose a custom color for the instance. This will appear in the menu next to the source control push and pull buttons. It helps users know which instance they're in.
 1. Select **Save settings**.
@@ -101,4 +101,3 @@ The file or directory replaces the default trust store for Git. If the instance 
 * [Move work between environments](move-work-between-environments.md)
 * [Use environments programmatically with the public API](use-environments-via-api.md)
 * [Tutorial: Create environments with source control](tutorial-create-environments-with-source-control.md)
-

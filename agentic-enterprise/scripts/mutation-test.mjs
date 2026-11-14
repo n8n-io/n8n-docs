@@ -7,10 +7,24 @@
  *   npm run mutation              كل الطفرات
  *   npm run mutation -- approval  الطفرات التي يحتوي اسمها على "approval"
  *
- * كل ملف يُستعاد بعد كل طفرة، حتى عند المقاطعة (SIGINT).
+ * يعمل افتراضيًا في نسخة مؤقتة من المشروع (node_modules مربوط رمزيًا)، فلا يعدّل المستودع أبدًا،
+ * حتى لو انقطع التشغيل في منتصف طفرة. MUTATION_IN_PLACE=1 يعطّل ذلك (للتشخيص فقط).
  */
-import { execSync } from "node:child_process";
-import { copyFileSync, readFileSync, renameSync, writeFileSync } from "node:fs";
+import { execSync, spawnSync } from "node:child_process";
+import { copyFileSync, cpSync, mkdtempSync, readFileSync, renameSync, rmSync, symlinkSync, writeFileSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join, resolve } from "node:path";
+
+if (!process.env.MUTATION_IN_PLACE) {
+  const root = resolve(import.meta.dirname, "..");
+  const work = mkdtempSync(join(tmpdir(), "ae-mutation-"));
+  cpSync(root, work, { recursive: true, filter: (src) => !src.startsWith(join(root, "node_modules")) && !src.includes(`${"/"}data${"/"}`) });
+  symlinkSync(join(root, "node_modules"), join(work, "node_modules"), "dir");
+  console.log(`Running in isolated copy: ${work}`);
+  const r = spawnSync(process.execPath, [join(work, "scripts/mutation-test.mjs"), ...process.argv.slice(2)], { cwd: work, stdio: "inherit", env: { ...process.env, MUTATION_IN_PLACE: "1" } });
+  rmSync(work, { recursive: true, force: true });
+  process.exit(r.status ?? 1);
+}
 
 const A = "agents/";
 /** [الاسم، الملف، النص الأصلي، النص البديل، equivalent؟] */

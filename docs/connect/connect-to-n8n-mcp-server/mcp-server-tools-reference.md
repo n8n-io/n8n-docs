@@ -7,7 +7,7 @@ url: >-
   https://docs.n8n.io/connect/connect-to-n8n-mcp-server/mcp-server-tools-reference
 description: >-
   Complete reference for all tools exposed by the n8n MCP server, including
-  workflow management, workflow builder, agent management, user preference, and
+  workflow management, workflow builder, agent management, skill, user preference, and
   data table tools.
 layout:
   width: default
@@ -1531,6 +1531,8 @@ When `versionId` is omitted, the response describes the current draft:
 | `isRunnable`            | `boolean`        | Whether the agent has everything it needs to run                                                                                                   |
 | `missing`               | `string[]`       | Config paths still needed before the agent is runnable                                                                                             |
 | `skills`                | `object`         | Map of skill ID to skill body (`name`, `description`, `instructions`, and optionally `allowedTools`, `references`)                                 |
+| `skillHashes`           | `object`         | Map of skill ID to a hash of the skill body. Pass a skill's hash as `baseSkillHash` to `skill.upsert` in `mutate_agent`.                           |
+| `outdatedSkillIds`      | `string[]`       | IDs of the skills that the agent pins to a saved version that has a newer version. Available from n8n 2.46.0.                                      |
 | `tasks`                 | `array`          | Scheduled tasks, each with `id`, `name`, `objective`, `cronExpression`, and `enabled`                                                              |
 | `customTools`           | `array`          | Custom tools, each with `id` and `descriptor` (`name`, `description`, `inputSchema`, `outputSchema`, and related metadata)                         |
 | `integrations`          | `array`          | Configured Slack, Telegram, or Linear integrations. Read-only here; manage with `update_agent_integration`.                                        |
@@ -1667,8 +1669,8 @@ Apply one config, skill, task, or custom-tool mutation to an agent draft. Return
 | ------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `config.replace`    | `config: object`                                       | Replace the full editable agent configuration. Can't include `integrations`.                                                                                                    |
 | `config.patch`      | `patch: array` (min 1)                                 | Apply an array of RFC 6902 JSON Patch operations (`add`, `remove`, `replace`, `move`, `copy`, `test`). Paths under `/integrations` are rejected.                                |
-| `skill.upsert`      | `skill: object`, `skillId?: string`                    | Omit `skillId` to create and attach a new skill; pass it to replace an existing skill body                                                                                      |
-| `skill.delete`      | `skillId: string`                                      | Delete a skill and remove its config reference                                                                                                                                  |
+| `skill.upsert`      | `skill: object`, `skillId?: string`, `baseSkillHash?: string` | Omit `skillId` to create a skill in the agent's project and attach it. Pass `skillId` to save the next version of an attached skill. Pass `baseSkillHash` from the `skillHashes` field of `get_agent` to reject the save if the skill changed since you read it. Skills ignore `allowedTools`. |
+| `skill.delete`      | `skillId: string`                                      | Detach the skill from the agent. The skill stays in the skills hub, available to other agents.                                                                                  |
 | `task.upsert`       | `task: object`, `taskId?: string`, `enabled?: boolean` | Omit `taskId` to create a new scheduled task; pass it to replace an existing one. `task` has `name`, `objective`, and `cronExpression` (a standard five-field cron expression). |
 | `task.delete`       | `taskId: string`                                       | Delete a task and remove its config reference                                                                                                                                   |
 | `customTool.upsert` | `code: string`                                         | Compile, validate, store, and attach a custom tool from source code                                                                                                             |
@@ -1701,6 +1703,8 @@ On a stale configuration:
 * Integrations (Slack, Telegram, Linear) can't be changed through `config.replace` or `config.patch`; use [update\_agent\_integration](mcp-server-tools-reference.md#updateagentintegration).
 * Custom tool code may only import `@n8n/agents` and `zod`. Its default export must be a `Tool` builder chain with `description`, `input` (a Zod schema), and `handler`; `output` is optional.
 * Fetch [get\_agent\_builder\_reference](mcp-server-tools-reference.md#getagentbuilderreference) for the full configuration schema and worked examples before calling `config.replace` or `config.patch`.
+* From n8n 2.46.0, agents keep their skills in the [skills hub](mcp-server-tools-reference.md#skills). Agents can share a skill, so a new version from `skill.upsert` applies to every agent that uses the latest version of that skill. In earlier versions, `skill.upsert` with a `skillId` replaces the skill body, and `skill.delete` deletes the skill.
+* A skill ref with `versionId` in the agent config pins that saved version of the skill. `get_agent` lists pinned skills that have a newer version in `outdatedSkillIds`. To use the latest version, remove `versionId` from the ref with `config.patch`. Don't delete and add the skill again.
 
 ***
 
@@ -1721,6 +1725,7 @@ Validate an agent draft, its sidecar references, and user-accessible credentials
 | `valid`   | `boolean`  | Whether the agent is valid and runnable                |
 | `errors`  | `string[]` | Configuration schema errors                            |
 | `missing` | `string[]` | Config paths still needed before the agent is runnable |
+| `warnings` | `string[]` | Problems that don't change `valid`, for example two skills with names that are hard to tell apart. Present only when there are warnings. Available from n8n 2.46.0. |
 | `url`     | `string`   | The URL to open the agent in the n8n editor            |
 
 #### Notes <a href="#notes" id="notes"></a>
@@ -2131,6 +2136,209 @@ For MCP clients that support resources, n8n also exposes the agent builder refer
 | URI       | `n8n://agents/reference`                                                                                                                                 |
 | MIME type | `text/markdown`                                                                                                                                          |
 | Content   | The same build-sequence guide, `mutate_agent` operation catalog, and canonical agent configuration JSON Schema returned by `get_agent_builder_reference` |
+
+***
+
+## Skills
+
+{% hint style="info" %}
+**Feature availability**
+
+Skills tools are available from n8n 2.46.0, when the agents module is enabled on the instance. Without the agents module, n8n doesn't register these tools.
+{% endhint %}
+
+A skill is a set of reusable instructions, with optional reference files, that agents can attach. n8n keeps skills in the skills hub. These tools let an MCP client search, read, create, update, and delete skills in the skills hub. To attach a skill to an agent or detach it, use [mutate\_agent](mcp-server-tools-reference.md#mutateagent).
+
+Two OAuth scopes cover these tools:
+
+| OAuth scope   | Consent screen label                 | Tools                                                                          |
+| ------------- | ------------------------------------ | ------------------------------------------------------------------------------ |
+| `skill:read`  | **List and read skills**             | `search_n8n_skills`, `get_skill`                                               |
+| `skill:write` | **Create, update and delete skills** | `create_skill`, `update_skill`, `delete_skill`, `search_n8n_skills`, `get_skill` |
+
+Each skill has one of two scopes:
+
+| Scope      | Who can use the skill                                    |
+| ---------- | -------------------------------------------------------- |
+| `project`  | Agents in one project                                    |
+| `instance` | Agents in every project on the instance                  |
+
+A skill body has these fields and limits:
+
+| Field          | Type     | Required | Description                                                                                                                                                                  |
+| -------------- | -------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`         | `string` | Yes      | Up to 128 characters. Must be unique in the skill's scope.                                                                                                                  |
+| `description`  | `string` | Yes      | Up to 1,024 characters                                                                                                                                                       |
+| `instructions` | `string` | Yes      | Up to 65,536 characters. Can't be only white space.                                                                                                                         |
+| `references`   | `array`  | No       | Up to 20 reference files, each with `path` and `content`. `path` must be a Markdown file under `references/`, for example `references/api.md`. Each `content` holds up to 65,536 characters, and all references together hold up to 262,144 characters. |
+
+When a skills tool fails with an error that its own section doesn't list, the response has `ok: false`, `code: "skill_tool_error"`, and the error message in `error`.
+
+### search\_n8n\_skills
+
+Search the skills the current user can access.
+
+#### Parameters
+
+| Name                  | Type                        | Required | Default | Description                                                                         |
+| --------------------- | --------------------------- | -------- | ------- | ----------------------------------------------------------------------------------- |
+| `query`               | `string`                    | No       |         | Filter by skill name or description (max 200 characters)                            |
+| `scope`               | `"project" \| "instance"`   | No       |         | Only return skills with this scope                                                  |
+| `projectId`           | `string`                    | No       |         | Only return skills of this project                                                  |
+| `attachableToAgentId` | `string`                    | No       |         | Only return skills this agent can attach. Don't combine it with `scope` or `projectId`. |
+| `limit`               | `integer`                   | No       | `50`    | Limit the number of results (max 100)                                               |
+| `skip`                | `integer`                   | No       | `0`     | Number of skills to skip, to read the next page                                     |
+
+#### Output
+
+| Field                   | Type             | Description                                                    |
+| ----------------------- | ---------------- | -------------------------------------------------------------- |
+| `count`                 | `integer`        | Total number of skills that match the filters                  |
+| `skills`                | `array`          | The skills on this page                                        |
+| `skills[].id`           | `string`         | The skill ID                                                   |
+| `skills[].name`         | `string`         | The skill name                                                 |
+| `skills[].description`  | `string`         | The skill description                                          |
+| `skills[].scope`        | `string`         | `"project"` or `"instance"`                                    |
+| `skills[].projectId`    | `string \| null` | The project of a project skill                                 |
+| `skills[].projectName`  | `string \| null` | The name of that project                                       |
+| `skills[].latestVersion`| `number`         | The number of the latest saved version                         |
+| `skills[].availableToAssistant` | `boolean` | Whether n8n Assistant can use the skill. Present only when n8n Assistant can use skills on the instance. |
+| `skills[].usedByAgents` | `number`         | Number of agents that use the skill                            |
+| `skills[].canEdit`      | `boolean`        | Whether the current user can update the skill                  |
+| `skills[].canDelete`    | `boolean`        | Whether the current user can delete the skill                  |
+| `skills[].updatedAt`    | `string`         | ISO timestamp when the skill was last updated                  |
+
+#### Notes
+
+* Use `attachableToAgentId` to find skills to attach to an agent. An agent can attach the skills of its own project and instance skills.
+
+***
+
+### get\_skill
+
+Read a skill with its instructions, references, `skillHash`, and the agents that use it.
+
+#### Parameters
+
+| Name      | Type     | Required | Description                                  |
+| --------- | -------- | -------- | -------------------------------------------- |
+| `skillId` | `string` | Yes      | The skill ID, from `search_n8n_skills`       |
+
+#### Output
+
+The response has every `skills[]` field from `search_n8n_skills`, without the `skills[]` prefix, and these fields:
+
+| Field                | Type      | Description                                                                                                         |
+| -------------------- | --------- | ------------------------------------------------------------------------------------------------------------------- |
+| `skill`              | `object`  | The body of the latest version: `name`, `description`, `instructions`, and optionally `references`                  |
+| `skillHash`          | `string`  | Hash of the latest version. Pass it as `baseSkillHash` to `update_skill`.                                           |
+| `usedBy`             | `object`  | The agents that use the skill, limited to the agents you can read                                                   |
+| `usedBy.drafts`      | `array`   | Agents whose draft uses the skill, each with `agentId`, `agentName`, `projectId`, `version`, and `pinned`           |
+| `usedBy.pins`        | `array`   | Agents whose published version pins the skill, each with `agentId`, `agentName`, `projectId`, and `version`         |
+| `usedBy.hiddenAgents`| `number`  | Number of agents that use the skill in projects you can't read                                                      |
+
+***
+
+### create\_skill
+
+Create a skill in the skills hub.
+
+#### Parameters
+
+| Name        | Type                      | Required | Description                                                                                         |
+| ----------- | ------------------------- | -------- | --------------------------------------------------------------------------------------------------- |
+| `scope`     | `"project" \| "instance"` | Yes      | `"project"` lets the agents in one project use the skill. `"instance"` lets agents in every project use it. |
+| `projectId` | `string`                  | No       | The project to create the skill in. Required when `scope` is `"project"`.                           |
+| `skill`     | `object`                  | Yes      | The skill body, with `name`, `description`, `instructions`, and optionally `references`. Can't include `allowedTools`. |
+| `availableToAssistant` | `boolean`      | No       | Let n8n Assistant use the skill. Defaults to `false`. Available only when n8n Assistant can use skills on the instance. |
+
+#### Output
+
+On success, the response has the same fields as `get_skill`.
+
+When another skill in the same scope has the name:
+
+| Field     | Type      | Description                                      |
+| --------- | --------- | ------------------------------------------------ |
+| `ok`      | `boolean` | `false`                                          |
+| `code`    | `string`  | `"skill_name_taken"`                             |
+| `message` | `string`  | Tells you to choose a different name and retry   |
+
+#### Notes
+
+* Creating a skill doesn't attach it to an agent. To attach it, add a skill ref to the agent config with `mutate_agent`.
+
+***
+
+### update\_skill
+
+Update a skill. Pass only the fields to change. A change to the content saves the next version of the skill.
+
+#### Parameters
+
+| Name            | Type                      | Required | Description                                                                                                  |
+| --------------- | ------------------------- | -------- | ------------------------------------------------------------------------------------------------------------ |
+| `skillId`       | `string`                  | Yes      | The skill to update                                                                                          |
+| `baseSkillHash` | `string`                  | Yes      | The `skillHash` from `get_skill`. n8n refuses the update if the skill changed since you read it.             |
+| `name`          | `string`                  | No       | The new name                                                                                                 |
+| `description`   | `string`                  | No       | The new description                                                                                          |
+| `instructions`  | `string`                  | No       | The new instructions                                                                                         |
+| `references`    | `array`                   | No       | The new reference files. Replaces all current reference files.                                               |
+| `scope`         | `"project" \| "instance"` | No       | Move the skill to this scope. n8n refuses the move if an agent that uses the skill can't use it in the new scope. |
+| `projectId`     | `string`                  | No       | The project to move the skill to. Required when `scope` is `"project"`.                                      |
+| `availableToAssistant` | `boolean`          | No       | Let n8n Assistant use the skill, or stop it. A change to only this setting doesn't save a new version. Available only when n8n Assistant can use skills on the instance. |
+
+#### Output
+
+On success:
+
+| Field       | Type      | Description                                                                                    |
+| ----------- | --------- | ---------------------------------------------------------------------------------------------- |
+| `id`        | `string`  | The skill ID                                                                                   |
+| `versionId` | `string`  | The ID of the latest version                                                                   |
+| `version`   | `number`  | The number of the latest version                                                               |
+| `created`   | `boolean` | `false` when the content matched the latest version, so n8n saved no new version               |
+| `skillHash` | `string`  | Hash of the latest version. Pass it as `baseSkillHash` to the next update.                     |
+
+When the skill changed since you read it:
+
+| Field       | Type      | Description                                                              |
+| ----------- | --------- | ------------------------------------------------------------------------ |
+| `ok`        | `boolean` | `false`                                                                  |
+| `skillId`   | `string`  | The skill ID                                                             |
+| `code`      | `string`  | `"stale_skill"`                                                          |
+| `skillHash` | `string`  | The current hash of the skill                                            |
+| `message`   | `string`  | `"The skill changed since you read it. Call get_skill before retrying."` |
+
+When another skill in the same scope has the new name, the response has `ok: false`, `skillId`, `code: "skill_name_taken"`, and `message`.
+
+#### Notes
+
+* Agents that use the latest version of the skill run the new version. Agents that pin an older version keep it until you remove the pin. See [mutate\_agent](mcp-server-tools-reference.md#mutateagent).
+
+***
+
+### delete\_skill
+
+Permanently delete a skill from the skills hub.
+
+#### Parameters
+
+| Name      | Type     | Required | Description          |
+| --------- | -------- | -------- | -------------------- |
+| `skillId` | `string` | Yes      | The skill to delete  |
+
+#### Output
+
+| Field     | Type      | Description          |
+| --------- | --------- | -------------------- |
+| `deleted` | `boolean` | `true`               |
+| `skillId` | `string`  | The deleted skill ID |
+
+#### Notes
+
+* n8n refuses to delete a skill while an agent uses it, in its draft or in a published version. The error names the agents you can read. To detach the skill from an agent draft, use `skill.delete` in `mutate_agent`.
+* You can't restore a deleted skill.
 
 ***
 

@@ -159,6 +159,7 @@ The one-line setup command needs a terminal that understands shell scripts, whic
 * [Install using Docker Compose](install-using-docker-compose.md)
 * [Install with npm](install-with-npm.md)
 * [Install with Docker](install-with-docker.md)
+* [Production requirements](production-requirements.md)
 * [Use a cloud provider](use-a-cloud-provider/README.md)
 
 

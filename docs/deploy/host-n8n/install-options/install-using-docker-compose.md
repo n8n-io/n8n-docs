@@ -73,7 +73,7 @@ N8N_RUNNERS_AUTH_TOKEN=change-me-runner-auth-token
 
 # Sandbox service secrets — pick your own values
 SANDBOX_API_KEYS=change-me-api-key
-SANDBOX_RUNNER_REGISTRATION_TOKEN=change-me-registration-token
+SANDBOX_API_RUNNER_REGISTRATION_TOKEN=change-me-registration-token
 SANDBOX_RUNNER_API_KEYS=change-me-runner-key
 
 # Must match a value in SANDBOX_API_KEYS above — this is how n8n authenticates to the sandbox
@@ -236,8 +236,8 @@ SQLite is fine for trying things out, but for a production instance that must ha
 | ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `sandbox-api` or `sandbox-runner-1` fail to start, cert errors          | `sandbox-certs` didn't complete. Check `docker compose logs sandbox-certs`.                                                                                                                                                                                                                                     |
 | `sandbox-api` never becomes `healthy`                                   | Check its logs; also confirm `wget` actually exists in that image.                                                                                                                                                                                                                                              |
-| `sandbox-runner-1` crash-loops on startup with `... must be set` errors | It's missing required environment variables, most commonly `SANDBOX_RUNNER_API_KEYS` or `SANDBOX_RUNNER_REGISTRATION_TOKEN`. For the full list of environment variables the runner requires, run `strings /usr/local/bin/sandbox-runner \| grep -oE 'SANDBOX_[A-Z_]+ must be set'` inside the runner container. |
-| Runner never registers with the API                                     | `SANDBOX_RUNNER_REGISTRATION_TOKEN` mismatch, or `SANDBOX_RUNNER_API_GRPC_ADDR` wrong.                                                                                                                                                                                                                          |
+| `sandbox-runner-1` crash-loops on startup with `... must be set` errors | It's missing required environment variables, most commonly `SANDBOX_RUNNER_API_KEYS` or `SANDBOX_API_RUNNER_REGISTRATION_TOKEN`. For the full list of environment variables the runner requires, run `strings /usr/local/bin/sandbox-runner \| grep -oE 'SANDBOX_[A-Z_]+ must be set'` inside the runner container. |
+| Runner never registers with the API                                     | `SANDBOX_API_RUNNER_REGISTRATION_TOKEN` mismatch, or `SANDBOX_RUNNER_API_GRPC_ADDR` wrong.                                                                                                                                                                                                                          |
 | n8n's sandbox calls fail                                                | Sandbox URL/key in `.env` doesn't match `sandbox-api`'s address or `SANDBOX_API_KEYS`.                                                                                                                                                                                                                          |
 | Works on Linux, fails on WSL                                            | Usually a bind-mount path issue. Keep the project inside the WSL filesystem, not `/mnt/c/...`.                                                                                                                                                                                                                  |
 
@@ -282,6 +282,5 @@ n8n sends code execution requests to `sandbox-api`, which hands them to `sandbox
 * [One-line setup](one-line-setup.md)
 * [Install with npm](install-with-npm.md)
 * [Install with Docker](install-with-docker.md)
-* [Production requirements](production-requirements.md)
 * [Use a cloud provider](use-a-cloud-provider/README.md)
 * [Set up n8n Assistant](../configure-n8n/set-up-n8n-assistant.md)

@@ -1,28 +1,39 @@
 ---
 title: MISP credentials
-description: Documentation for MISP credentials. Use these credentials to authenticate MISP in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for MISP credentials. Use these credentials to authenticate MISP
+  in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: MISP credentials
+originalFilePath: integrations/builtin/credentials/misp.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/misp'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/misp'
+layout:
+  description:
+    visible: false
 ---
 
-# MISP credentials
+# MISP credentials <a href="#misp-credentials" id="misp-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [MISP](/integrations/builtin/app-nodes/n8n-nodes-base.misp.md)
+- [MISP](../app-nodes/n8n-nodes-base.misp.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Install and run a [MISP](https://misp.github.io/MISP/) instance.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [MISP's Automation API documentation](https://www.circl.lu/doc/misp/automation) for more information about the service.
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need:
 

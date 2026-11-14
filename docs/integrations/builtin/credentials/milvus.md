@@ -1,31 +1,42 @@
 ---
 title: Milvus credentials
-description: Documentation for the Milvus credentials. Use these credentials to authenticate Milvus in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for the Milvus credentials. Use these credentials to
+  authenticate Milvus in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: high
+nodeTitle: Milvus credentials
+originalFilePath: integrations/builtin/credentials/milvus.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/milvus'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/milvus'
+layout:
+  description:
+    visible: false
 ---
 
-# Milvus credentials
+# Milvus credentials <a href="#milvus-credentials" id="milvus-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-* [Milvus Vector Store](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremilvus.md)
+* [Milvus Vector Store](../cluster-nodes/root-nodes/n8n-nodes-langchain.vectorstoremilvus.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create and run an [Milvus](https://milvus.io/) instance. Refer to the [Install Milvus](https://milvus.io/docs/install-overview.md) for more information.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - Basic auth
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Milvus's Authentication documentation](https://milvus.io/docs/authenticate.md?tab=docker#Authenticate-User-Access) for more information about setting up authentication.
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 
-## Using basic auth
+## Using basic auth <a href="#using-basic-auth" id="using-basic-auth"></a>
 
 To configure this credential, you'll need:
 

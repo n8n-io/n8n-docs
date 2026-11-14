@@ -1,22 +1,39 @@
 ---
 title: TheHive Trigger node documentation
-description: Learn how to use the TheHive Trigger node in n8n. Follow technical documentation to integrate TheHive Trigger node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the TheHive Trigger node in n8n. Follow technical
+  documentation to integrate TheHive Trigger node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: TheHive Trigger node documentation
+originalFilePath: integrations/builtin/trigger-nodes/n8n-nodes-base.thehivetrigger.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.thehivetrigger
+url: >-
+  https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.thehivetrigger
+layout:
+  description:
+    visible: false
 ---
 
-# TheHive Trigger node
+# TheHive Trigger node <a href="#thehive-trigger-node" id="thehive-trigger-node"></a>
 
 On this page, you'll find a list of events the TheHive Trigger node can respond to and links to more resources.
 
-/// note | TheHive and TheHive 5
-n8n provides two nodes for TheHive. Use this node (TheHive Trigger) if you want to use TheHive's version 3 or 4 API. If you want to use version 5, use [TheHive 5 Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.thehive5trigger.md).
-///
+{% hint style="info" %}
+**TheHive and TheHive 5**
 
-///  note  | Examples and templates
+n8n provides two nodes for TheHive. Use this node (TheHive Trigger) if you want to use TheHive's version 3 or 4 API. If you want to use version 5, use [TheHive 5 Trigger](n8n-nodes-base.thehive5trigger.md).
+{% endhint %}
+
+{% hint style="info" %}
+**Examples and templates**
+
 For usage examples and templates to help you get started, refer to n8n's [TheHive Trigger integrations](https://n8n.io/integrations/thehive-trigger/) page.
-///
+{% endhint %}
 
-## Events
+## Events <a href="#events" id="events"></a>
 
 * Alert 
 	* Created
@@ -39,19 +56,19 @@ For usage examples and templates to help you get started, refer to n8n's [TheHiv
 	* Deleted
 	* Updated
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for TheHive. You can find the node docs [here](/integrations/builtin/app-nodes/n8n-nodes-base.thehive.md).
+n8n provides an app node for TheHive. Refer to the [TheHive node documentation](../app-nodes/n8n-nodes-base.thehive.md) for more information.
 
 View [example workflows and related content](https://n8n.io/integrations/thehive-trigger/) on n8n's website.
 
 Refer to TheHive's documentation for more information about the service:
 
-* [Version 3](https://docs.thehive-project.org/thehive/legacy/thehive3/api/)
-* [Version 4](https://docs.thehive-project.org/cortex/api/api-guide/)
+* The API docs for TheHive 3 and 4 are no longer online. Refer to the [TheHive 5 API documentation](https://docs.strangebee.com/thehive/api-docs/) for the current API.
+* [Cortex API guide](https://docs.strangebee.com/cortex/api/api-guide/), for Cortex, the analysis engine that works with TheHive.
 
 
-## Configure a webhook in TheHive
+## Configure a webhook in TheHive <a href="#configure-a-webhook-in-thehive" id="configure-a-webhook-in-thehive"></a>
 
 To configure the webhook for your TheHive instance:
 

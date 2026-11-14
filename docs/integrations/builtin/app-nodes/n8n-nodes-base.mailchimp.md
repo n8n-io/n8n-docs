@@ -1,20 +1,33 @@
 ---
 title: Mailchimp node documentation
-description: Learn how to use the Mailchimp node in n8n. Follow technical documentation to integrate Mailchimp node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Mailchimp node in n8n. Follow technical documentation to
+  integrate Mailchimp node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Mailchimp node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.mailchimp.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.mailchimp'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.mailchimp'
+layout:
+  description:
+    visible: false
 ---
 
-# Mailchimp node
+# Mailchimp node <a href="#mailchimp-node" id="mailchimp-node"></a>
 
 Use the Mailchimp node to automate work in Mailchimp, and integrate Mailchimp with other applications. n8n has built-in support for a wide range of Mailchimp features, including creating, updating, and deleting campaigns, as well as getting list groups. 
 
 On this page, you'll find a list of operations the Mailchimp node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Mailchimp credentials](/integrations/builtin/credentials/mailchimp.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
-## Operations
+Refer to [Mailchimp credentials](../credentials/mailchimp.md) for guidance on setting up authentication.
+{% endhint %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Campaign
     * Delete a campaign
@@ -35,9 +48,9 @@ Refer to [Mailchimp credentials](/integrations/builtin/credentials/mailchimp.md)
     * Add tags from a list member
     * Remove tags from a list member
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'mailchimp') ]]
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+[Browse Mailchimp node documentation integration templates](https://n8n.io/integrations/mailchimp) or [search all templates](https://n8n.io/workflows/)
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

@@ -36,7 +36,7 @@ Use the _Name_ node to automate work in _Name_ and integrate _Name_ with other a
 On this page, you'll find a list of operations the _Name_ node supports, and links to more resources.
 
 ///  note  | Credentials
-You can find authentication information for this node [here](/integrations/builtin/credentials/_Name_.md).
+Refer to the [_Name_ credentials documentation](/integrations/builtin/credentials/_Name_.md) for authentication information for this node.
 ///
 
 
@@ -53,7 +53,7 @@ You can find authentication information for this node [here](/integrations/built
 ## Related resources
 
 <!-- provide a link to the trigger node docs, if there is a trigger node for this service -->
-n8n provides a trigger node for _Name_. You can find the trigger node docs [here](/integrations/builtin/trigger-nodes/n8n-nodes-base._Name_trigger.md).
+n8n provides a trigger node for _Name_. Refer to the [_Name_ Trigger node documentation](/integrations/builtin/trigger-nodes/n8n-nodes-base._Name_trigger.md) for more information.
 
 
 <!-- add a link to the service's documentation. This should usually go direct to the API docs -->

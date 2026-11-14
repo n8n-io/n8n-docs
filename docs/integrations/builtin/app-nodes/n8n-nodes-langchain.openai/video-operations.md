@@ -1,21 +1,35 @@
 ---
-title: OpenAI Video operations 
-description: Documentation for the Video operations in OpenAI node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: [integration, reference]
+title: OpenAI Video operations
+description: >-
+  Documentation for the Video operations in OpenAI node in n8n, a workflow
+  automation platform. Includes details of operations and configuration, and
+  links to examples and credentials information.
+contentType:
+  - integration
+  - reference
 priority: critical
+nodeTitle: OpenAI Video operations
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/video-operations.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/video-operations
+url: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/video-operations
+layout:
+  description:
+    visible: false
 ---
 
-# OpenAI Video operations
+# OpenAI Video operations <a href="#openai-video-operations" id="openai-video-operations"></a>
 
-Use this operation to generate a video in OpenAI. Refer to [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md) for more information on the OpenAI node itself.
+Use this operation to generate a video in OpenAI. Refer to [OpenAI](README.md) for more information on the OpenAI node itself.
 
-## Generate Video
+## Generate Video <a href="#generate-video" id="generate-video"></a>
 
 Use this operation to generate a video from a text prompt.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
+- **Credential to connect with**: Create or select an existing [OpenAI credential](../../credentials/openai.md).
 - **Resource**: Select **Video**.
 - **Operation**: Select **Generate Video**.
 - **Model**: Select the model you want to use to generate a video. Currently supports `sora-2` and `sora-2-pro`.
@@ -23,7 +37,7 @@ Enter these parameters:
 - **Seconds**: Clip duration in seconds (up to 25).
 - **Size**: Output resolution formatted as width x height. 1024x1792 and 1792x1024 are only supported by Sora 2 Pro.
 
-### Options
+### Options <a href="#options" id="options"></a>
 
 - **Reference**: Optional image reference that guides generation. Has to be passed in as a binary item.
 - **Wait Timeout**: Time to wait for the video to be generated in seconds. Defaults to 300.

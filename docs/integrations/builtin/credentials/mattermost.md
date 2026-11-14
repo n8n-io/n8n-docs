@@ -1,25 +1,36 @@
 ---
 title: Mattermost credentials
-description: Documentation for Mattermost credentials. Use these credentials to authenticate Mattermost in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Mattermost credentials. Use these credentials to
+  authenticate Mattermost in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Mattermost credentials
+originalFilePath: integrations/builtin/credentials/mattermost.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/mattermost'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/mattermost'
+layout:
+  description:
+    visible: false
 ---
 
-# Mattermost credentials
+# Mattermost credentials <a href="#mattermost-credentials" id="mattermost-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Mattermost](/integrations/builtin/app-nodes/n8n-nodes-base.mattermost.md)
+- [Mattermost](../app-nodes/n8n-nodes-base.mattermost.md)
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API access token
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Mattermost's API documentation](https://api.mattermost.com/) for more information about the service.
 
-## Using API access token
+## Using API access token <a href="#using-api-access-token" id="using-api-access-token"></a>
 
 To configure this credential, you'll need a [Mattermost](https://www.mattermost.com/) account and:
 
@@ -28,11 +39,9 @@ To configure this credential, you'll need a [Mattermost](https://www.mattermost.
 
 To set it up:
 
-1. In Mattermost, go to **Profile > Security > Personal Access Tokens**.
+1. In Mattermost, go to **Profile > Security > Personal Access Tokens**.<br>
 
-    /// warning | No Personal Access Tokens option
-    If you don't see the Personal Access Tokens option, refer to the troubleshooting steps in [Enable personal access tokens](#enable-personal-access-tokens) below.
-    ///
+    <div data-gb-custom-block data-tag="hint" data-style="warning" class="hint hint-warning"><p><strong>No Personal Access Tokens option</strong></p><p>If you don't see the Personal Access Tokens option, refer to the troubleshooting steps in <a href="#enable-personal-access-tokens">Enable personal access tokens</a> below.</p></div>
 
 2. Select **Create Token**.
 3. Enter a **Token description**, like `n8n integration`.
@@ -43,7 +52,7 @@ To set it up:
 
 Refer to the Mattermost [Personal access tokens documentation](https://developers.mattermost.com/integrate/reference/personal-access-token/) for more information.
 
-## Enable personal access tokens
+## Enable personal access tokens <a href="#enable-personal-access-tokens" id="enable-personal-access-tokens"></a>
 
 Not seeing the **Personal Access Tokens** option has two possible causes:
 

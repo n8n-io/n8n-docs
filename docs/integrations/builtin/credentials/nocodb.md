@@ -1,30 +1,43 @@
 ---
 title: NocoDB credentials
-description: Documentation for NocoDB credentials. Use these credentials to authenticate NocoDB in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for NocoDB credentials. Use these credentials to authenticate
+  NocoDB in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: NocoDB credentials
+originalFilePath: integrations/builtin/credentials/nocodb.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/nocodb'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/nocodb'
+layout:
+  description:
+    visible: false
 ---
 
-# NocoDB credentials
+# NocoDB credentials <a href="#nocodb-credentials" id="nocodb-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [NocoDB](/integrations/builtin/app-nodes/n8n-nodes-base.nocodb.md)
+- [NocoDB](../app-nodes/n8n-nodes-base.nocodb.md)
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API token (recommended)
 - User auth token
 
-    /// note | User auth token deprecation
-    NocoDB deprecated user auth tokens in v0.205.1. Use [API tokens](#using-api-token) instead.
-    ///
+{% hint style="warning" %}
+**Feature availability**
 
-## Related resources
+NocoDB deprecated user auth tokens in v0.205.1. Use [API tokens](#using-api-token) instead.
+{% endhint %}
+
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [NocoDB's API documentation](https://data-apis-v2.nocodb.com/) for more information about the service.
 
-## Using API token
+## Using API token <a href="#using-api-token" id="using-api-token"></a>
 
 To configure this credential, you'll need a [NocoDB](https://www.nocodb.com/) instance and:
 
@@ -44,13 +57,15 @@ To generate an API token:
 
 Refer to the NocoDB [API Tokens documentation](https://docs.nocodb.com/account-settings/api-tokens/) for more detailed instructions.
 
-## Using user auth token
+## Using user auth token <a href="#using-user-auth-token" id="using-user-auth-token"></a>
 
 Before NocoDB deprecated it, user auth token was a temporary token designed for quick experiments with the API, valid for a session until the user logs out or for 10 hours.
 
-/// note | User auth token deprecation
+{% hint style="warning" %}
+**Feature availability**
+
 NocoDB deprecated user auth tokens in v0.205.1. Use [API tokens](#using-api-token) instead.
-///
+{% endhint %}
 
 To configure this credential, you'll need a [NocoDB](https://www.nocodb.com/) instance and:
 

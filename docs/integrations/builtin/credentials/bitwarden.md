@@ -1,28 +1,39 @@
 ---
 title: Bitwarden credentials
-description: Documentation for Bitwarden credentials. Use these credentials to authenticate Bitwarden in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Bitwarden credentials. Use these credentials to authenticate
+  Bitwarden in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Bitwarden credentials
+originalFilePath: integrations/builtin/credentials/bitwarden.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/bitwarden'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/bitwarden'
+layout:
+  description:
+    visible: false
 ---
 
-# Bitwarden credentials
+# Bitwarden credentials <a href="#bitwarden-credentials" id="bitwarden-credentials"></a>
 
 You can use these credentials to authenticate the following node:
 
-- [Bitwarden](/integrations/builtin/app-nodes/n8n-nodes-base.bitwarden.md)
+- [Bitwarden](../app-nodes/n8n-nodes-base.bitwarden.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Bitwarden](https://vault.bitwarden.com/#/register?org=teams) Teams organization or Enterprise organization account. (Bitwarden only makes the Bitwarden Public API available for these [organization](https://bitwarden.com/help/about-organizations/) plans.)
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Bitwarden's Public API documentation](https://bitwarden.com/help/public-api/) for more information about the service.
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need:
 

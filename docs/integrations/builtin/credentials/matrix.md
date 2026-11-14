@@ -1,30 +1,41 @@
 ---
 title: Matrix credentials
-description: Documentation for Matrix credentials. Use these credentials to authenticate Matrix in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Matrix credentials. Use these credentials to authenticate
+  Matrix in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Matrix credentials
+originalFilePath: integrations/builtin/credentials/matrix.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/matrix'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/matrix'
+layout:
+  description:
+    visible: false
 ---
 
-# Matrix credentials
+# Matrix credentials <a href="#matrix-credentials" id="matrix-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Matrix](/integrations/builtin/app-nodes/n8n-nodes-base.matrix.md)
+- [Matrix](../app-nodes/n8n-nodes-base.matrix.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create an account on a [Matrix](https://matrix.org/) server. Refer to [Creating an account](https://matrix.org/docs/chat_basics/matrix-for-im/#creating-a-matrix-account) for more information.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API access token
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to the [Matrix Specification](https://spec.matrix.org/latest/) for more information about the service.
 
 Refer to the documentation for the specific client you're using to access the Matrix server.
 
-## Using API access token
+## Using API access token <a href="#using-api-access-token" id="using-api-access-token"></a>
 
 To configure this credential, you'll need:
 

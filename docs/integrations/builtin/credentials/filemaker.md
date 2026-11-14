@@ -1,17 +1,28 @@
 ---
 title: FileMaker credentials
-description: Documentation for FileMaker credentials. Use these credentials to authenticate FileMaker in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for FileMaker credentials. Use these credentials to authenticate
+  FileMaker in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: FileMaker credentials
+originalFilePath: integrations/builtin/credentials/filemaker.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/filemaker'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/filemaker'
+layout:
+  description:
+    visible: false
 ---
 
-# FileMaker credentials
+# FileMaker credentials <a href="#filemaker-credentials" id="filemaker-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [FileMaker](/integrations/builtin/app-nodes/n8n-nodes-base.filemaker.md)
+- [FileMaker](../app-nodes/n8n-nodes-base.filemaker.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 - Create a user account on a [FileMaker Server](https://www.claris.com/filemaker/) with the `fmrest` extended privilege to [Access the FileMaker Data API](https://help.claris.com/en/data-api-guide/content/enable-access.html).
 - Ensure the FileMaker Server can use the [FileMaker Data API](https://help.claris.com/en/data-api-guide/content/index.html):
@@ -26,15 +37,15 @@ You can use these credentials to authenticate the following nodes:
     1. Monitor your hosted solution using Admin Console.
         - Refer to [Monitor FileMaker Data API solutions](https://help.claris.com/en/data-api-guide/content/monitor-data-api-app.html) for more information.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - Database connection
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [FileMaker's Data API Guide](https://help.claris.com/en/data-api-guide/content/index.html) for more information about the service.
 
-## Using database connection
+## Using database connection <a href="#using-database-connection" id="using-database-connection"></a>
 
 To configure this credential:
 

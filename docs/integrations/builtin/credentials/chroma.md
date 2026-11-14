@@ -1,32 +1,43 @@
 ---
 title: Chroma credentials
-description: Documentation for the Chroma credentials. Use these credentials to authenticate Chroma in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for the Chroma credentials. Use these credentials to
+  authenticate Chroma in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Chroma credentials
+originalFilePath: integrations/builtin/credentials/chroma.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/chroma'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/chroma'
+layout:
+  description:
+    visible: false
 ---
 
-# Chroma credentials
+# Chroma credentials <a href="#chroma-credentials" id="chroma-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
 - Chroma Vector Store 
 
-## Prerequisites 
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 Create and run a [Chroma](https://www.trychroma.com/home) instance. Refer to the [Running Chroma in Client-Server Mode](https://docs.trychroma.com/docs/run-chroma/client-server) for more information.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 - API key
 - Instance URL
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Chroma's documentation](https://docs.trychroma.com/docs/overview/getting-started) for more information about the service. Also refer to [Chroma Cloud](https://docs.trychroma.com/cloud/getting-started) for using cloud instance.
 
-View n8n's [Advanced AI](/advanced-ai/index.md) documentation.
+View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
 
---8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need a  [Chroma](https://www.trychroma.com/) account. You'll also need the following:
 
@@ -41,7 +52,7 @@ To set it up:
 3. Click **Settings** for the database you want the access to.
 4. Click **Create API key and copy code**
 5. Enter your **API Key**, **Tenant ID** and **Database Name** to n8n credential
-## Using Instance URL
+## Using Instance URL <a href="#using-instance-url" id="using-instance-url"></a>
 
 To configure this credential, you'll need:
 

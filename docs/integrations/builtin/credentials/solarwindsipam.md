@@ -1,21 +1,32 @@
 ---
 title: SolarWinds IPAM credentials
-description: Documentation for the SolarWinds IPAM credentials. Use these credentials to authenticate SolarWinds IPAM in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for the SolarWinds IPAM credentials. Use these credentials to
+  authenticate SolarWinds IPAM in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: SolarWinds IPAM credentials
+originalFilePath: integrations/builtin/credentials/solarwindsipam.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/solarwindsipam'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/solarwindsipam'
+layout:
+  description:
+    visible: false
 ---
-# SolarWinds IPAM credentials
+# SolarWinds IPAM credentials <a href="#solarwinds-ipam-credentials" id="solarwinds-ipam-credentials"></a>
 
---8<-- "_snippets/integrations/builtin/credentials/cred-only-statement.md"
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/7QbEnpnpOks3Rq0SiMFb/" %}
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 * Username & Password
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [SolarWinds IPAM's API documentation](https://github.com/solarwinds/OrionSDK/wiki/REST) for more information about the service.
 
-## Using Username & Password
+## Using Username & Password <a href="#using-username-and-password" id="using-username-and-password"></a>
 
 To configure this credential, you'll need a SolarWinds IPAM account and:
 

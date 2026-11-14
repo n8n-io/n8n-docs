@@ -1,28 +1,39 @@
 ---
 title: Cortex credentials
-description: Documentation for the Cortex credentials. Use these credentials to authenticate Cortex in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for the Cortex credentials. Use these credentials to
+  authenticate Cortex in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Cortex credentials
+originalFilePath: integrations/builtin/credentials/cortex.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/cortex'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/cortex'
+layout:
+  description:
+    visible: false
 ---
 
-# Cortex credentials
+# Cortex credentials <a href="#cortex-credentials" id="cortex-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Cortex](/integrations/builtin/app-nodes/n8n-nodes-base.cortex.md)
+- [Cortex](../app-nodes/n8n-nodes-base.cortex.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Install [Cortex](https://docs.strangebee.com/cortex/installation-and-configuration/) on your server.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Cortex's API documentation](https://docs.strangebee.com/cortex/api/api-guide/) for more information about the service.
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need:
 

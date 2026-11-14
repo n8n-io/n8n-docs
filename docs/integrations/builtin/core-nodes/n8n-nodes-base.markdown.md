@@ -1,35 +1,48 @@
 ---
 title: Markdown
-description: Documentation for the Markdown node in n8n, a workflow automation platform. Includes guidance on usage, and links to examples.
-contentType: [integration, reference]
+description: >-
+  Documentation for the Markdown node in n8n, a workflow automation platform.
+  Includes guidance on usage, and links to examples.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Markdown
+originalFilePath: integrations/builtin/core-nodes/n8n-nodes-base.markdown.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.markdown'
+url: 'https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.markdown'
+layout:
+  description:
+    visible: false
 ---
 
-# Markdown
+# Markdown <a href="#markdown" id="markdown"></a>
 
 The Markdown node converts between Markdown and HTML formats.
 
-## Operations
+## Operations <a href="#operations" id="operations"></a>
 
 This node's operations are **Modes**:
 
 * **Markdown to HTML**: Use this mode to convert from Markdown to HTML.
 * **HTML to Markdown**: Use this mode to convert from HTML to Markdown.
 
-## Node parameters
+## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
 * **HTML** or **Markdown**: Enter the data you want to convert. The field name changes based on which **Mode** you select.
 * **Destination Key**: Enter the field you want to put the output in. Specify nested fields using dots, for example `level1.level2.newKey`.
 
-## Node options
+## Node options <a href="#node-options" id="node-options"></a>
 
 The node's **Options** depend on the **Mode** selected.
 
-/// note | Test out the options
-Some of the options depend on each other or can interact. We recommend testing out options to confirm the effects are what you want.
-///
+{% hint style="info" %}
+**Test out the options**
 
-### Markdown to HTML options
+Some of the options depend on each other or can interact. We recommend testing out options to confirm the effects are what you want.
+{% endhint %}
+
+### Markdown to HTML options <a href="#markdown-to-html-options" id="markdown-to-html-options"></a>
 
 | Option | Description | Default |
 | ------ | ----------- | ------- |
@@ -63,7 +76,7 @@ Some of the options depend on each other or can interact. We recommend testing o
 | **Tables Header ID** | Whether to add an ID to table header tags (enabled) or not (disabled). | Disabled |
 | **Tables Support** | Whether to support tables (enabled) or not (disabled). | Disabled |
 
-### HTML to Markdown options
+### HTML to Markdown options <a href="#html-to-markdown-options" id="html-to-markdown-options"></a>
 
 | Option | Description | Default |
 | ------ | ----------- | ------- |
@@ -81,12 +94,12 @@ Some of the options depend on each other or can interact. We recommend testing o
 | **Text Replacement Pattern** | Define a text replacement pattern using regex. | None |
 | **Treat As Blocks** | Specify HTML elements to treat as blocks (surround with blank lines) | None |
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'markdown') ]]
 
-## Parsers
+[Browse Markdown integration templates](https://n8n.io/integrations/markdown) or [search all templates](https://n8n.io/workflows/)
+
+## Parsers <a href="#parsers" id="parsers"></a>
 
 n8n uses the following parsers:
 

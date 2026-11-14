@@ -1,35 +1,46 @@
 ---
 title: Twake credentials
-description: Documentation for Twake credentials. Use these credentials to authenticate Twake in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Twake credentials. Use these credentials to authenticate
+  Twake in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Twake credentials
+originalFilePath: integrations/builtin/credentials/twake.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/twake'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/twake'
+layout:
+  description:
+    visible: false
 ---
 
-# Twake credentials
+# Twake credentials <a href="#twake-credentials" id="twake-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Twake](/integrations/builtin/app-nodes/n8n-nodes-base.twake.md)
+- [Twake](../app-nodes/n8n-nodes-base.twake.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Twake](https://twake.app/) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - Cloud API key
 - Server API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Twake's documentation](https://doc.twake.app/developers-api/api-reference) for more information about the service.
 
-## Using Cloud API key
+## Using Cloud API key <a href="#using-cloud-api-key" id="using-cloud-api-key"></a>
 
 To configure this credential, you'll need:
 
 - A **Workspace Key**: Generated when you install the **n8n** application to your Twake Cloud environment and select **Configure**. Refer to [How to connect n8n to Twake](https://help.twake.app/en/latest/applications/connectors/index.html#how-to-connect-n8n-to-twake) for more detailed instructions.
 
-## Using Server API key
+## Using Server API key <a href="#using-server-api-key" id="using-server-api-key"></a>
 
 To configure this credential, you'll need:
 

@@ -1,27 +1,38 @@
 ---
 title: Twilio credentials
-description: Documentation for Twilio credentials. Use these credentials to authenticate Twilio in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Twilio credentials. Use these credentials to authenticate
+  Twilio in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Twilio credentials
+originalFilePath: integrations/builtin/credentials/twilio.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/twilio'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/twilio'
+layout:
+  description:
+    visible: false
 ---
 
-# Twilio credentials
+# Twilio credentials <a href="#twilio-credentials" id="twilio-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Twilio](/integrations/builtin/app-nodes/n8n-nodes-base.twilio.md)
-- [Twilio trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.twiliotrigger.md)
+- [Twilio](../app-nodes/n8n-nodes-base.twilio.md)
+- [Twilio trigger](../trigger-nodes/n8n-nodes-base.twiliotrigger.md)
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - **Auth token**: Twilio recommends this method for local testing only.
 - **API key**: Twilio recommends this method for production.
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Twilio's API documentation](https://www.twilio.com/docs) for more information about the service.
 
-## Using Auth Token
+## Using Auth Token <a href="#using-auth-token" id="using-auth-token"></a>
 
 To configure this credential, you'll need a [Twilio](https://twilio.com/) account and:
 
@@ -37,7 +48,7 @@ To set up the credential:
 
 Refer to [Auth Tokens and How to Change Them](https://help.twilio.com/articles/223136027-Auth-Tokens-and-How-to-Change-Them) for more information.
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need a [Twilio](https://twilio.com/) account and:
 
@@ -60,7 +71,7 @@ To set up the credential:
 
 Refer to [Create an API key](https://www.twilio.com/docs/iam/api-keys#create-an-api-key) for more detailed instructions.
 
-### Selecting an API key type
+### Selecting an API key type <a href="#selecting-an-api-key-type" id="selecting-an-api-key-type"></a>
 
 When you create a Twilio API key, you must select a key type. The n8n credential works with **Main** and **Standard** key types.
 

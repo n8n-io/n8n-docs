@@ -1,26 +1,37 @@
 ---
 title: RabbitMQ credentials
-description: Documentation for RabbitMQ credentials. Use these credentials to authenticate RabbitMQ in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for RabbitMQ credentials. Use these credentials to authenticate
+  RabbitMQ in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: RabbitMQ credentials
+originalFilePath: integrations/builtin/credentials/rabbitmq.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/rabbitmq'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/rabbitmq'
+layout:
+  description:
+    visible: false
 ---
 
-# RabbitMQ credentials
+# RabbitMQ credentials <a href="#rabbitmq-credentials" id="rabbitmq-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [RabbitMQ](/integrations/builtin/app-nodes/n8n-nodes-base.rabbitmq.md)
-- [RabbitMQ Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.rabbitmqtrigger.md)
+- [RabbitMQ](../app-nodes/n8n-nodes-base.rabbitmq.md)
+- [RabbitMQ Trigger](../trigger-nodes/n8n-nodes-base.rabbitmqtrigger.md)
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - User connection
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [RabbitMQ's Connections documentation](https://www.rabbitmq.com/docs/connections) for more information about the service.
 
-## Using user connection
+## Using user connection <a href="#using-user-connection" id="using-user-connection"></a>
 
 To configure this credential, you'll need to have a [RabbitMQ broker](https://www.rabbitmq.com/) installed and:
 
@@ -38,7 +49,7 @@ To configure this credential, you'll need to have a [RabbitMQ broker](https://ww
         - The **Passphrase**: Paste the SSL passphrase to use.
     - **CA Certificates**: Paste the text of the SSL CA certificates to use.
 
-## guest user issues
+## guest user issues <a href="#guest-user-issues" id="guest-user-issues"></a>
 
 If you use the `guest` user for the credential and you try to access a remote host, you may see a connection error. The RabbitMQ logs show an error like this:
 

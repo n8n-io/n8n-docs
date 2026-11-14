@@ -1,20 +1,33 @@
 ---
 title: Freshservice node documentation
-description: Learn how to use the Freshservice node in n8n. Follow technical documentation to integrate Freshservice node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Freshservice node in n8n. Follow technical documentation
+  to integrate Freshservice node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Freshservice node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.freshservice.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.freshservice'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.freshservice'
+layout:
+  description:
+    visible: false
 ---
 
-# Freshservice node
+# Freshservice node <a href="#freshservice-node" id="freshservice-node"></a>
 
 Use the Freshservice node to automate work in Freshservice and integrate Freshservice with other applications. n8n has built-in support for a wide range of Freshdesk features, including creating, updating, deleting, and getting agent information and departments.
 
 On this page, you'll find a list of operations the Freshservice node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Freshservice credentials](/integrations/builtin/credentials/freshservice.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
-## Operations
+Refer to [Freshservice credentials](../credentials/freshservice.md) for guidance on setting up authentication.
+{% endhint %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Agent
     * Create an agent
@@ -104,7 +117,7 @@ Refer to [Freshservice credentials](/integrations/builtin/credentials/freshservi
     * Retrieve all tickets
     * Update a ticket
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'freshservice') ]]
+
+[Browse Freshservice node documentation integration templates](https://n8n.io/integrations/freshservice) or [search all templates](https://n8n.io/workflows/)

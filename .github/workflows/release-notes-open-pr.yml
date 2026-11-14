@@ -1,0 +1,77 @@
+name: Release notes - open the weekly PR as the Assistant
+# The weekly release-notes PR used to be opened by the "Publish release notes to docs"
+# workflow on the internal n8n instance, using a personal GitHub credential. That made
+# the author and the only available reviewer the same person, and `main` requires one
+# approving review - so the PR could only land via an admin bypass.
+#
+# n8n now commits the files and fires a repository_dispatch; this opens the PR as the
+# n8n-assistant App, so an ordinary human review satisfies the ruleset.
+#
+# Same posture as docops-auto-merge.yml: App token rather than github-actions[bot],
+# actions SHA-pinned, and repository_dispatch only ever runs the default-branch copy of
+# this file. It opens a PR and nothing else - it never approves, merges, or enables
+# auto-merge.
+on:
+  repository_dispatch:
+    types: [release-notes-pr]
+
+permissions: {}
+
+concurrency:
+  group: release-notes-open-pr
+  cancel-in-progress: false
+
+jobs:
+  open-pr:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Generate n8n-assistant App token
+        id: app-token
+        uses: actions/create-github-app-token@29824e69f54612133e76f7eaac726eef6c875baf # v2.2.1
+        with:
+          app-id: ${{ secrets.N8N_ASSISTANT_APP_ID }}
+          private-key: ${{ secrets.N8N_ASSISTANT_PRIVATE_KEY }}
+          permission-pull-requests: write
+          permission-contents: read
+
+      - name: Open the PR
+        env:
+          # client_payload is caller-controlled: pass it as env, never interpolate it
+          # into the script body. BRANCH is additionally pattern-checked below so a
+          # dispatch cannot open a PR from an arbitrary ref.
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          REPO: ${{ github.repository }}
+          BRANCH: ${{ github.event.client_payload.branch }}
+          TITLE: ${{ github.event.client_payload.title }}
+          BODY: ${{ github.event.client_payload.body }}
+        run: |
+          set -euo pipefail
+
+          if ! printf '%s' "$BRANCH" | grep -qE '^release-notes/[0-9]{8}-[0-9]{4}$'; then
+            echo "::error::Refusing to open a PR from '$BRANCH' - not a release-notes branch."
+            exit 1
+          fi
+          if [ -z "$TITLE" ]; then
+            echo "::error::client_payload.title is empty."
+            exit 1
+          fi
+          if ! gh api "repos/$REPO/git/ref/heads/$BRANCH" --silent 2>/dev/null; then
+            echo "::error::Branch '$BRANCH' does not exist."
+            exit 1
+          fi
+
+          # Idempotent: a retried dispatch must not open a second PR.
+          EXISTING=$(gh api "repos/$REPO/pulls?state=open&head=${REPO%%/*}:$BRANCH" --jq '.[0].html_url // empty')
+          if [ -n "$EXISTING" ]; then
+            echo "::notice::PR already open for $BRANCH - $EXISTING"
+            exit 0
+          fi
+
+          URL=$(gh api "repos/$REPO/pulls" \
+            -f title="$TITLE" \
+            -f head="$BRANCH" \
+            -f base=main \
+            -f body="$BODY" \
+            --jq .html_url)
+          echo "::notice::Opened $URL"

@@ -1,30 +1,41 @@
 ---
 title: Intercom credentials
-description: Documentation for Intercom credentials. Use these credentials to authenticate Intercom in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Intercom credentials. Use these credentials to authenticate
+  Intercom in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Intercom credentials
+originalFilePath: integrations/builtin/credentials/intercom.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/intercom'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/intercom'
+layout:
+  description:
+    visible: false
 ---
 
-# Intercom credentials
+# Intercom credentials <a href="#intercom-credentials" id="intercom-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Intercom](/integrations/builtin/app-nodes/n8n-nodes-base.intercom.md)
+- [Intercom](../app-nodes/n8n-nodes-base.intercom.md)
 
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 - Create an [Intercom](https://www.intercom.com/) developer account.
 - [Create an app](https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/) in your developer hub.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Intercom's API documentation](https://developers.intercom.com/docs/references/introduction/) for more information about the service.
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need:
 

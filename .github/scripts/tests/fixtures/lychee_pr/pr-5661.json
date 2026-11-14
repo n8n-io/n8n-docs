@@ -1,0 +1,121 @@
+{
+  "total": 18434,
+  "successful": 5009,
+  "unknown": 0,
+  "unsupported": 0,
+  "timeouts": 0,
+  "redirects": 0,
+  "excludes": 13410,
+  "errors": 15,
+  "cached": 0,
+  "error_map": {
+    "./docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.embeddingsgooglevertex.md": [
+      {
+        "url": "https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/text-embeddings-api",
+        "status": {
+          "text": "Too many redirects: error following redirect for url (https://www.google.com/sorry/index?continue=https://docs.cloud.google.com/vertex-ai/generative-ai/docs/model-reference/text-embeddings-api&q=EgQNU-vRGM2Pg9cGIjAOoZhWk8nGKv-GKwASQvACTICB_NzS5Qjol0OLAVo3ruI_-Wrbi-_lf57M7Uv5Ki8yBT4-Y3JSWgFDYIqs85jwjvSnwwE)"
+        }
+      }
+    ],
+    "./docs/integrations/builtin/credentials/google/oauth-generic.md": [
+      {
+        "url": "https://developers.google.com/identity/protocols/oauth2/scopes",
+        "status": {
+          "text": "Too many redirects: error following redirect for url (https://developers.google.com/identity/protocols/oauth2/scopes?google_abuse=GOOGLE_ABUSE_EXEMPTION%3DID%3D5dbc73e2d690493c:TM%3D1793116163:C%3D%3E:IP%3D13.83.235.209-:S%3DPVEgEq0dkXDfSkMWJNPo3Q%3B+path%3D/%3B+domain%3Dgoogle.com%3B+expires%3DTue,+27-Oct-2026+18:49:23+GMT)"
+        }
+      },
+      {
+        "url": "https://developers.google.com/workspace/guides/configure-oauth-consent",
+        "status": {
+          "text": "Too many redirects: error following redirect for url (https://developers.google.com/workspace/guides/configure-oauth-consent?google_abuse=GOOGLE_ABUSE_EXEMPTION%3DID%3D5fafbddca95929f0:TM%3D1793116163:C%3D%3E:IP%3D13.83.235.209-:S%3D4CH2KQMKOgDHmZavUhme4w%3B+path%3D/%3B+domain%3Dgoogle.com%3B+expires%3DTue,+27-Oct-2026+18:49:23+GMT)"
+        }
+      }
+    ],
+    "./docs/integrations/builtin/credentials/googlevertexai.md": [
+      {
+        "url": "https://cloud.google.com/iam/docs/keys-create-delete#creating",
+        "status": {
+          "text": "Too many redirects: error following redirect for url (https://www.google.com/sorry/index?continue=https://docs.cloud.google.com/iam/docs/keys-create-delete&q=EgQNU-vRGIaQg9cGIjDZ2vMyjm6VpxYTB2zLMkn9OunLgGxXEN-oxKTXQIa2oxXkYM6eiIKO2Do-6J7hkK4yBD5jclJaAUNg0KbMvIyX65ow)"
+        }
+      },
+      {
+        "url": "https://docs.cloud.google.com/resource-manager/reference/rest/v3/projects/search",
+        "status": {
+          "text": "Too many redirects: error following redirect for url (https://docs.cloud.google.com/resource-manager/reference/rest/v3/projects/search?google_abuse=GOOGLE_ABUSE_EXEMPTION%3DID%3D7e0bd3cb67c65546:TM%3D1793116167:C%3D%3E:IP%3D13.83.235.209-:S%3D31xBSlfbgugDYJCKZFdmbA%3B+path%3D/%3B+domain%3Dgoogle.com%3B+expires%3DTue,+27-Oct-2026+18:49:27+GMT)"
+        }
+      },
+      {
+        "url": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/locations",
+        "status": {
+          "text": "Too many redirects: error following redirect for url (https://www.google.com/sorry/index?continue=https://docs.cloud.google.com/vertex-ai/generative-ai/docs/learn/locations&q=EgQNU-vRGIaQg9cGIjDvicckvu5UK8rGvWbqxeF1CJXnnQ_sO8DvA4mc5cciv6azvgg_BKsNIX6vUxO4l3wyBD5jclJaAUNg0PH96-yPs7oW)"
+        }
+      },
+      {
+        "url": "https://cloud.google.com/vertex-ai/generative-ai/docs",
+        "status": {
+          "text": "Too many redirects: error following redirect for url (https://www.google.com/sorry/index?continue=https://docs.cloud.google.com/vertex-ai/generative-ai/docs&q=EgQNU-vRGIaQg9cGIjD6UwCU8GqVGNEnPeCuZlv1piuTvxPk27mkE8ulxOqmVsMeh2cS5HQhfjJou7ILBa0yBD5jclJaAUNgytPh9aSYyfrBAQ)"
+        }
+      }
+    ],
+    "./docs/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatgooglevertex.md": [
+      {
+        "url": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models",
+        "status": {
+          "text": "Too many redirects: error following redirect for url (https://www.google.com/sorry/index?continue=https://docs.cloud.google.com/vertex-ai/generative-ai/docs/learn/models&q=EgQNU-vRGNGPg9cGIjCjmKHL4wcJbPqfjRqpi9DxrKBKtBU_FsXUYlCNCamRqSblaJW3qkz8DoEjH-HrIXAyBT4-Y3JSWgFDYOjixvf0y5K_ywE)"
+        }
+      }
+    ],
+    "./docs/integrations/builtin/credentials/halopsa.md": [
+      {
+        "url": "https://halopsa.com/guides/article/?kbid=1737",
+        "status": {
+          "text": "Network error: Not Found",
+          "code": 404
+        }
+      }
+    ],
+    "./docs/integrations/builtin/credentials/google/service-account.md": [
+      {
+        "url": "https://cloud.google.com/iam/docs/creating-managing-service-accounts",
+        "status": {
+          "text": "Too many redirects: error following redirect for url (https://www.google.com/sorry/index?continue=https://docs.cloud.google.com/iam/docs/creating-managing-service-accounts&q=EgQNU-vRGIWQg9cGIjCvmLnWxOtOs4q5uQWpzSw3-v6zKJ18ArwkFUixFq2E7zFqa5TVokEEQIFjOjVlVj0yBD5jclJaAUNgnaf4jN_8t_ox)"
+        }
+      },
+      {
+        "url": "https://developers.google.com/identity/protocols/oauth2/scopes",
+        "status": {
+          "text": "Error (cached)"
+        }
+      },
+      {
+        "url": "https://developers.google.com/identity/protocols/oauth2/service-account#delegatingauthority",
+        "status": {
+          "text": "Too many redirects: error following redirect for url (https://developers.google.com/identity/protocols/oauth2/service-account?google_abuse=GOOGLE_ABUSE_EXEMPTION%3DID%3Db86ae253918768fa:TM%3D1793116165:C%3D%3E:IP%3D13.83.235.209-:S%3DzZKUTmMJzxCP6d2t3UzsVA%3B+path%3D/%3B+domain%3Dgoogle.com%3B+expires%3DTue,+27-Oct-2026+18:49:25+GMT)"
+        }
+      },
+      {
+        "url": "https://cloud.google.com/iam/docs/best-practices-service-accounts#domain-wide-delegation",
+        "status": {
+          "text": "Too many redirects: error following redirect for url (https://www.google.com/sorry/index?continue=https://docs.cloud.google.com/iam/docs/best-practices-service-accounts&q=EgQNU-vRGIWQg9cGIjDM_wnnP0XU8ah70iarCEY46IOYajcHcd5dx87oqYIa8deS9yKf75Cpm0uyyZ0NS38yBD5jclJaAUNgxvi_4K3P5pJR)"
+        }
+      },
+      {
+        "url": "https://cloud.google.com/iam/docs/creating-managing-service-accounts?hl=en#creating",
+        "status": {
+          "text": "Too many redirects: error following redirect for url (https://www.google.com/sorry/index?continue=https://docs.cloud.google.com/iam/docs/creating-managing-service-accounts%3Fhl%3Den&hl=en&q=EgQNU-vRGISQg9cGIjDOCd2YA36u7wxXC4xOJlr8n2xelDy1bDqZBrvU1TY9gK4LJyXJ2WiE1sKbr9C3hH8yBD5jclJaAUNgidSxqvzK_ON9)"
+        }
+      }
+    ],
+    "./docs/integrations/builtin/credentials/googleai.md": [
+      {
+        "url": "https://developers.google.com/workspace/marketplace/create-gcp-project",
+        "status": {
+          "text": "Too many redirects: error following redirect for url (https://developers.google.com/workspace/marketplace/create-gcp-project?google_abuse=GOOGLE_ABUSE_EXEMPTION%3DID%3Db3578a6f5d2be45e:TM%3D1793116164:C%3D%3E:IP%3D13.83.235.209-:S%3D6sIK1PQDOp8AvnQ8BR-0mw%3B+path%3D/%3B+domain%3Dgoogle.com%3B+expires%3DTue,+27-Oct-2026+18:49:24+GMT)"
+        }
+      }
+    ]
+  },
+  "suggestion_map": {},
+  "excluded_map": {},
+  "duration_secs": 300
+}

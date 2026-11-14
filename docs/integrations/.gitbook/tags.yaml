@@ -1,0 +1,6 @@
+- tag: deprecated
+  label: Deprecated
+  color: red
+- tag: preview
+  label: Preview
+  color: orange

@@ -29,7 +29,7 @@ You can use the Error Trigger node to create error workflows. When another linke
 
 Note the following:
 
-* You have to publish the workflow that uses the Error Trigger node.
+* You have to publish the workflow that uses the **Error Trigger** node.
 * If a workflow contains the Error Trigger node, by default, the workflow uses itself as the error workflow.
 * You can't test error workflows when running workflows manually. The Error Trigger only runs when an automatic workflow errors.
 

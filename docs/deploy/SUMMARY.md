@@ -35,6 +35,8 @@
         * [Configure Enterprise features on AWS](host-n8n/install-options/use-a-cloud-provider/deploy-to-aws-with-terraform/use-enterprise-features-on-aws.md)
         * [Customize the AWS infrastructure](host-n8n/install-options/use-a-cloud-provider/deploy-to-aws-with-terraform/customize-the-infrastructure.md)
         * [Maintain and tear down the AWS deployment](host-n8n/install-options/use-a-cloud-provider/deploy-to-aws-with-terraform/maintain-and-tear-down.md)
+      * [Deploy to Azure with Terraform](host-n8n/install-options/use-a-cloud-provider/deploy-to-azure-with-terraform.md)
+      * [Deploy to Google Cloud Platform with Terraform](host-n8n/install-options/use-a-cloud-provider/deploy-to-gcp-with-terraform.md)
       * [Deploy to Azure](host-n8n/install-options/use-a-cloud-provider/deploy-to-azure.md)
       * [Deploy to Google Cloud Run](host-n8n/install-options/use-a-cloud-provider/deploy-to-google-cloud-run.md)
       * [Deploy to Google Kubernetes](host-n8n/install-options/use-a-cloud-provider/deploy-to-google-kubernetes.md)

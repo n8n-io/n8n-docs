@@ -31,7 +31,7 @@ const MUTATIONS = [
   ["platform: payload tamper check", "platform/tools/executor.ts", "if (hashObject(approval.payload) !== approval.payloadHash) {", "if (false) {"],
   ["platform: max tool calls", "platform/tools/executor.ts", "if (count > agent.maxToolCalls) {", "if (false) {"],
   ["platform: status from facts", "platform/orchestrator/orchestrator.ts", 'else if (outcome.status === "needs_approval") {', 'else if (false) {'],
-  ["platform: handoff allowlist", "platform/orchestrator/orchestrator.ts", "if (agent.canHandoffTo.includes(h.taskType) && this.routes.has(h.taskType)) return true;", "if (this.routes.has(h.taskType)) return true;"],
+  ["platform: handoff allowlist", "platform/orchestrator/orchestrator.ts", "if (!(agent.canHandoffTo.includes(h.taskType) && this.routes.has(h.taskType))) {", "if (!this.routes.has(h.taskType)) {"],
   ["platform: injection guard", "platform/security/guardrails.ts", "if (findings.length === 0) return allow;", "return allow;"],
   ["platform: PII redaction", "platform/memory/memory-store.ts", "const { value, count } = allowPii ? { value: record.value, count: 0 } : redactPii(record.value);", "const { value, count } = { value: record.value, count: 0 };"],
   ["platform: connector IBAN check", "platform/connectors/mock/mock-connectors.ts", 'if (supplier.bankAccount.iban !== instr.iban) throw new PlatformError("CONNECTOR_ERROR", "IBAN does not match supplier master data");', ""],

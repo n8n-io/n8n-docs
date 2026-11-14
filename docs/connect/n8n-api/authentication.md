@@ -69,7 +69,7 @@ For the available operations and parameters, refer to the [n8n node](https://app
 
 ## API Scopes <a href="#api-scopes" id="api-scopes"></a>
 
-You can limit which resources and actions an API key can access with scopes. Scopes are available on all plans from n8n 2.14.0. On earlier versions they need an Enterprise plan. Choose the minimum scopes needed for the key's intended purpose.
+You can limit which resources and actions an API key can access with scopes. Scopes are available on all plans from n8n 2.14.0. On earlier versions, you need an Enterprise plan to use scopes. Choose the minimum scopes needed for the key's intended purpose.
 
 On versions before 2.14.0, non-Enterprise API keys have full access to all the account's resources and capabilities.
 

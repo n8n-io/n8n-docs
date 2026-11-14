@@ -67,7 +67,10 @@ describe("HTTP API: authentication, scopes and tenant isolation", () => {
     s.control.revokeToken(ro.tokenId, "u-ops", "rotated");
     expect((await s.call("GET", "/v1/tasks", ro.token)).status).toBe(401);
     expect(s.control.listTokens("acme")[0]!.revokedAt).not.toBeNull();
-    expect(JSON.stringify(s.control.listTokens())).not.toContain(ro.token.split("_")[2]); // الرمز الخام لا يُخزَّن
+    // الجزء السري بعد "aet_<id>_" (قد يحتوي "_" نفسه، فلا يُستخرج بـ split)
+    const secret = ro.token.slice(`aet_${ro.tokenId}_`.length);
+    expect(secret).toHaveLength(43);
+    expect(JSON.stringify(s.control.listTokens())).not.toContain(secret); // الرمز الخام لا يُخزَّن
   });
 
   it("a token for one tenant can never see another tenant's data", async () => {

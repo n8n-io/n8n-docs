@@ -282,5 +282,6 @@ n8n sends code execution requests to `sandbox-api`, which hands them to `sandbox
 * [One-line setup](one-line-setup.md)
 * [Install with npm](install-with-npm.md)
 * [Install with Docker](install-with-docker.md)
+* [Production requirements](production-requirements.md)
 * [Use a cloud provider](use-a-cloud-provider/README.md)
 * [Set up n8n Assistant](../configure-n8n/set-up-n8n-assistant.md)

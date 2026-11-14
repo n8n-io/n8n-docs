@@ -52,7 +52,7 @@ n8n Assistant has Limited enterprise readiness. It partially supports the follow
 - **Queue mode and multi-main**
 - **Environments and source control**
 
-Other Enterprise capabilities either don't apply to n8n Assistant or it doesn't support them yet. See [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#enterprise-capabilities) for the full list of Enterprise capabilities.
+Other Enterprise capabilities either don't apply to n8n Assistant or it doesn't support them yet. Refer to [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#enterprise-capabilities) for the full list of Enterprise capabilities.
 {% endhint %}
 
 n8n Assistant can make mistakes. Always review generated workflows before using them in production.

@@ -1,0 +1,55 @@
+{
+  "id": "aeInvoiceRecv0001",
+  "name": "AE · invoice received → platform (signed event)",
+  "active": false,
+  "settings": { "executionOrder": "v1" },
+  "nodes": [
+    {
+      "id": "9a1b2c3d-0000-4000-8000-000000000001",
+      "name": "Invoice arrived (webhook stand-in for ERP/IMAP trigger)",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [0, 0],
+      "webhookId": "6e7f8a9b-0000-4000-8000-000000000001",
+      "parameters": { "httpMethod": "POST", "path": "ae/simulate-invoice-received", "responseMode": "lastNode", "options": {} }
+    },
+    {
+      "id": "9a1b2c3d-0000-4000-8000-000000000002",
+      "name": "Build signed event",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [240, 0],
+      "parameters": {
+        "jsCode": "// يبني حدثًا بمعرّفات فقط (لا نص حر)، ويوقّعه بسر المستأجر الوارد (AE_N8N_INBOUND_SECRET، hex).\nconst crypto = require('crypto');\nconst src = $input.first().json.body || {};\nconst raw = JSON.stringify({ eventId: String(src.eventId), data: { invoiceId: String(src.invoiceId) } });\nconst ts = Math.floor(Date.now() / 1000);\nconst secret = Buffer.from($env.AE_N8N_INBOUND_SECRET, 'hex');\nconst signature = 'v1=' + crypto.createHmac('sha256', secret).update(`${ts}.${raw}`).digest('hex');\nconst nonce = crypto.randomBytes(16).toString('hex');\nreturn [{ json: { raw, ts: String(ts), nonce, signature } }];"
+      }
+    },
+    {
+      "id": "9a1b2c3d-0000-4000-8000-000000000003",
+      "name": "POST to platform",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [480, 0],
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.AE_PLATFORM_URL }}/v1/tenants/{{ $env.AE_TENANT_ID }}/n8n/invoice-received",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "x-ae-timestamp", "value": "={{ $json.ts }}" },
+            { "name": "x-ae-nonce", "value": "={{ $json.nonce }}" },
+            { "name": "x-ae-signature", "value": "={{ $json.signature }}" }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "application/json",
+        "body": "={{ $json.raw }}",
+        "options": {}
+      }
+    }
+  ],
+  "connections": {
+    "Invoice arrived (webhook stand-in for ERP/IMAP trigger)": { "main": [[{ "node": "Build signed event", "type": "main", "index": 0 }]] },
+    "Build signed event": { "main": [[{ "node": "POST to platform", "type": "main", "index": 0 }]] }
+  }
+}

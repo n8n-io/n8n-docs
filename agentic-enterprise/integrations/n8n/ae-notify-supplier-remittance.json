@@ -1,0 +1,28 @@
+{
+  "id": "aeNotifyRemit0001",
+  "name": "AE · notify supplier remittance (verifies platform signature)",
+  "active": false,
+  "settings": { "executionOrder": "v1" },
+  "nodes": [
+    {
+      "id": "8f0c2a51-1d2e-4c71-9a0b-000000000001",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [0, 0],
+      "webhookId": "5d6a8c1e-2b3f-4a5d-8e9f-000000000001",
+      "parameters": { "httpMethod": "POST", "path": "ae/notify-supplier-remittance", "responseMode": "lastNode", "options": {} }
+    },
+    {
+      "id": "8f0c2a51-1d2e-4c71-9a0b-000000000002",
+      "name": "Verify platform signature",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [240, 0],
+      "parameters": {
+        "jsCode": "// يتحقق من توقيع المنصة (HMAC-SHA256 على `${ts}.${body}`) ونافذة الوقت، ويرفض غير ذلك.\n// السر من متغير بيئة n8n (AE_N8N_OUTBOUND_SECRET، hex). في الإنتاج: من مدير أسرار n8n.\nconst crypto = require('crypto');\nconst req = $input.first().json;\nconst h = req.headers || {};\nconst ts = Number(h['x-ae-timestamp']);\nconst body = JSON.stringify(req.body);\nconst secret = Buffer.from($env.AE_N8N_OUTBOUND_SECRET, 'hex');\nconst expected = 'v1=' + crypto.createHmac('sha256', secret).update(`${ts}.${body}`).digest('hex');\nconst got = String(h['x-ae-signature'] || '');\nconst fresh = Math.abs(Date.now() / 1000 - ts) <= 300;\nconst verified = fresh && got.length === expected.length && crypto.timingSafeEqual(Buffer.from(got), Buffer.from(expected));\nif (!verified) throw new Error('AE signature verification failed');\n// هنا تأتي خطوة الإرسال الفعلية (Email/Outlook node) في نشر حقيقي. هذا السير يعيد ما سيُرسل فقط.\nreturn [{ json: { verified, idempotencyKey: h['idempotency-key'], workflowKey: req.body.workflowKey, approvalId: req.body.approvalId, payload: req.body.payload, action: 'remittance_notice_prepared' } }];"
+      }
+    }
+  ],
+  "connections": { "Webhook": { "main": [[{ "node": "Verify platform signature", "type": "main", "index": 0 }]] } }
+}

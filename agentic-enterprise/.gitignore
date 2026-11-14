@@ -1,0 +1,7 @@
+node_modules/
+.env
+data/
+reports/
+*.db
+*.db-*
+*.mutbak

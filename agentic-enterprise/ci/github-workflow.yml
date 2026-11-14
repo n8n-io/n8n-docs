@@ -1,0 +1,116 @@
+name: agentic-enterprise
+
+on:
+  push:
+    paths: ["agentic-enterprise/**", ".github/workflows/agentic-enterprise.yml"]
+  pull_request:
+    paths: ["agentic-enterprise/**", ".github/workflows/agentic-enterprise.yml"]
+  workflow_dispatch:
+    inputs:
+      live:
+        description: "Run live-model evals (uses the ANTHROPIC_API_KEY secret; billable)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: agentic-enterprise-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    working-directory: agentic-enterprise
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22.22"
+          cache: npm
+          cache-dependency-path: agentic-enterprise/package-lock.json
+      - run: npm ci --no-audit --no-fund
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run eval
+      - name: Dependency audit (runtime deps, high and above)
+        run: npm audit --omit=dev --audit-level=high
+      - name: SBOM (CycloneDX)
+        run: npm sbom --sbom-format cyclonedx --omit=dev > sbom.cdx.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sbom
+          path: agentic-enterprise/sbom.cdx.json
+      - name: Secret scan
+        run: |
+          if grep -rEn --exclude-dir=node_modules -e 'sk-ant-[A-Za-z0-9_-]{20,}' -e 'BEGIN (RSA |EC )?PRIVATE KEY' .; then
+            echo "Possible secret committed"; exit 1; fi
+
+  postgres:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: ae
+          POSTGRES_PASSWORD: ci-only-not-a-secret
+          POSTGRES_DB: ae_test
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U ae" --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      TEST_POSTGRES_URL: postgres://ae:ci-only-not-a-secret@localhost:5432/ae_test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22.22"
+          cache: npm
+          cache-dependency-path: agentic-enterprise/package-lock.json
+      - run: npm ci --no-audit --no-fund
+      - run: npm run test:pg
+      - run: npm run eval
+
+  mutation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    if: github.event_name != 'push'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22.22"
+          cache: npm
+          cache-dependency-path: agentic-enterprise/package-lock.json
+      - run: npm ci --no-audit --no-fund
+      - run: npm run mutation
+
+  live-eval:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    if: github.event_name == 'workflow_dispatch' && inputs.live
+    environment: live-model
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      EVAL_LIVE_MAX_TOTAL_USD: "5"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22.22"
+          cache: npm
+          cache-dependency-path: agentic-enterprise/package-lock.json
+      - run: npm ci --no-audit --no-fund
+      - run: test -n "$ANTHROPIC_API_KEY" || { echo "ANTHROPIC_API_KEY secret is not set"; exit 1; }
+      - run: npm run eval:live
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: live-eval-report
+          path: agentic-enterprise/reports/

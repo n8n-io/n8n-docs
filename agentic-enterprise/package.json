@@ -1,0 +1,36 @@
+{
+  "name": "agentic-enterprise",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "NODE_OPTIONS=--disable-warning=ExperimentalWarning vitest run",
+    "test:pg": "NODE_OPTIONS=--disable-warning=ExperimentalWarning vitest run",
+    "eval": "NODE_OPTIONS=--disable-warning=ExperimentalWarning tsx platform/eval/cli.ts",
+    "eval:live": "NODE_OPTIONS=--disable-warning=ExperimentalWarning tsx platform/eval/cli.ts --live",
+    "check": "npm run typecheck && npm run test && npm run eval",
+    "ops": "NODE_OPTIONS=--disable-warning=ExperimentalWarning tsx ops/cli.ts",
+    "serve": "NODE_OPTIONS=--disable-warning=ExperimentalWarning tsx server/main.ts",
+    "e2e:console": "NODE_OPTIONS=--disable-warning=ExperimentalWarning tsx scripts/console-e2e.ts",
+    "e2e:n8n": "NODE_OPTIONS=--disable-warning=ExperimentalWarning tsx scripts/n8n-live-e2e.ts",
+    "mutation": "node scripts/mutation-test.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/claude-agent-sdk": "0.3.296",
+    "@anthropic-ai/sdk": "0.133.0",
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "pg": "8.23.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.5",
+    "@types/pg": "8.23.1",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3",
+    "vitest": "5.0.3"
+  }
+}

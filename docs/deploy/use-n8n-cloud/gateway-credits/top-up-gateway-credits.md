@@ -17,7 +17,7 @@ Only the instance owner can top up, and topping up requires an active paid subsc
 
 Gateway credit top-ups are available only with an active paid n8n Cloud subscription on Starter or Pro plans. If you cancel your subscription renewal, you will keep access to your instance and any remaining Gateway credits until the end of your current billing period. However, you won’t be able to purchase additional Gateway credits during this time, and the **Top up** option will no longer appear on the Gateway credits page.
 
-To buy more Gateway credits after cancellation, you must resubscribe to a paid Starter or Pro plan. Once resubscribed, the top-up option becomes visible again under **Gateway credits** → **Balance** → **Top up** in the Cloud console.
+To buy more Gateway credits after canceling your subscription renewal, resubscribe to a paid Starter or Pro plan in the [Cloud console](../use-the-cloud-console.md). After you resubscribe, you can select **Top up** again under **Gateway credits** → **Balance**.
 
 {% hint style="warning" %}
 **Gateway credits don't pay for n8n Assistant**

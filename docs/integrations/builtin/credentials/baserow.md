@@ -1,32 +1,43 @@
 ---
 title: Baserow credentials
-description: Documentation for Baserow credentials. Use these credentials to authenticate Baserow in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Baserow credentials. Use these credentials to authenticate
+  Baserow in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: high
+nodeTitle: Baserow credentials
+originalFilePath: integrations/builtin/credentials/baserow.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/baserow'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/baserow'
+layout:
+  description:
+    visible: false
 ---
 
-# Baserow credentials
+# Baserow credentials <a href="#baserow-credentials" id="baserow-credentials"></a>
 
 You can use these credentials to authenticate the following node:
 
-- [Baserow](/integrations/builtin/app-nodes/n8n-nodes-base.baserow.md)
+- [Baserow](../app-nodes/n8n-nodes-base.baserow.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Baserow](https://baserow.io/) account on any hosted Baserow instance or a self-hosted instance.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - Basic auth
 - Token
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Baserow's documentation](https://baserow.io/docs/index) for more information about the service.
 
 Refer to [Baserow's auto-generated API documentation](https://baserow.io/api-docs) for more information about the API specifically.
 
-## Using basic auth
+## Using basic auth <a href="#using-basic-auth" id="using-basic-auth"></a>
 
 To configure this credential, you'll need:
 
@@ -43,14 +54,14 @@ Follow these steps:
 
 Refer to [Baserow's API Authentication documentation](https://baserow.io/docs/apis/rest-api#authentication) for information on creating user accounts.
 
-## Using a token
+## Using a token <a href="#using-a-token" id="using-a-token"></a>
 
 To configure the database token credential, you'll need:
 
 - Your Baserow **Host**
 - A **Database token** created on Baserow.io, which requires a **Username** and **Password** for login.
 
-### Creating the database token
+### Creating the database token <a href="#creating-the-database-token" id="creating-the-database-token"></a>
 
 1. In [Baserow](https://baserow.io/login), log in with your username and password.
 2. Click on your workspace in the top left corner and select **My Settings**.

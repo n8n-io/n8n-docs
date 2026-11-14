@@ -1,4 +1,5 @@
 {
+  "name": "RSS feed example",
   "nodes": [
     {
       "parameters": {},

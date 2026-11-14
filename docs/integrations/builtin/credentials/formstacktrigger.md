@@ -1,29 +1,40 @@
 ---
 title: Formstack Trigger credentials
-description: Documentation for Formstack Trigger credentials. Use these credentials to authenticate Formstack Trigger in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Formstack Trigger credentials. Use these credentials to
+  authenticate Formstack Trigger in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Formstack Trigger credentials
+originalFilePath: integrations/builtin/credentials/formstacktrigger.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/formstacktrigger'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/formstacktrigger'
+layout:
+  description:
+    visible: false
 ---
 
-# Formstack Trigger credentials
+# Formstack Trigger credentials <a href="#formstack-trigger-credentials" id="formstack-trigger-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Formstack Trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.formstacktrigger.md)
+- [Formstack Trigger](../trigger-nodes/n8n-nodes-base.formstacktrigger.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Formstack](https://www.formstack.com/) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API access token
 - OAuth2
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Formstack's API documentation](https://developers.formstack.com/reference/api-overview) for more information about the service.
 
-## Using API access token
+## Using API access token <a href="#using-api-access-token" id="using-api-access-token"></a>
 
 To configure this credential, you'll need:
 
@@ -36,11 +47,13 @@ Once you've created the application, copy the access token either from the appli
 
 Refer to [Formstack's API Authorization documentation](https://developers.formstack.com/reference/api-overview#obtaining-an-api-key-oauth2-access-token) for more detailed instructions.
 
-/// note | Access token permissions
-Formstack ties access tokens to a Formstack user. Access tokens follow Formstack (in-app) user permissions.
-///
+{% hint style="info" %}
+**Access token permissions**
 
-## Using OAuth2
+Formstack ties access tokens to a Formstack user. Access tokens follow Formstack (in-app) user permissions.
+{% endhint %}
+
+## Using OAuth2 <a href="#using-oauth2" id="using-oauth2"></a>
 
 To configure this credential, you'll need:
 
@@ -57,7 +70,9 @@ Once you've created the application, select it from the applications list to vie
 
 Refer to [Formstack's API Authorization documentation](https://developers.formstack.com/reference/api-overview#obtaining-an-api-key-oauth2-access-token) for more detailed instructions.
 
-/// note | Access token permissions
+{% hint style="info" %}
+**Access token permissions**
+
 Formstack ties access tokens to a Formstack user. Access tokens follow Formstack (in-app) user permissions.
-///
+{% endhint %}
 

@@ -1,21 +1,35 @@
 ---
-title: OpenAI Image operations 
-description: Documentation for the Image operations in OpenAI node in n8n, a workflow automation platform. Includes details of operations and configuration, and links to examples and credentials information.
-contentType: [integration, reference]
+title: OpenAI Image operations
+description: >-
+  Documentation for the Image operations in OpenAI node in n8n, a workflow
+  automation platform. Includes details of operations and configuration, and
+  links to examples and credentials information.
+contentType:
+  - integration
+  - reference
 priority: critical
+nodeTitle: OpenAI Image operations
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-langchain.openai/image-operations.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/image-operations
+url: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/image-operations
+layout:
+  description:
+    visible: false
 ---
 
-# OpenAI Image operations
+# OpenAI Image operations <a href="#openai-image-operations" id="openai-image-operations"></a>
 
-Use this operation to analyze or generate an image in OpenAI. Refer to [OpenAI](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/index.md) for more information on the OpenAI node itself.
+Use this operation to analyze or generate an image in OpenAI. Refer to [OpenAI](README.md) for more information on the OpenAI node itself.
 
-## Analyze Image
+## Analyze Image <a href="#analyze-image" id="analyze-image"></a>
 
 Use this operation to take in images and answer questions about them.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
+- **Credential to connect with**: Create or select an existing [OpenAI credential](../../credentials/openai.md).
 - **Resource**: Select **Image**.
 - **Operation**: Select **Analayze Image**.
 - **Model**: Select the model you want to use to analyze an image. 
@@ -24,26 +38,26 @@ Enter these parameters:
     - **Image URL(s)**: Enter the **URL(s)** of the image(s) to analyze. Add multiple URLs in a comma-separated list.
     - **Binary File(s)**: Enter the name of the binary property which contains the image(s) in the **Input Data Field Name**.
 
-### Options
+### Options <a href="#options" id="options"></a>
 
 - **Detail**: Specify the balance between response time versus token usage. 
 - **Length of Description (Max Tokens)**: Defaults to 300. Fewer tokens will result in shorter, less detailed image description.
 
 Refer to [Images | OpenAI](https://platform.openai.com/docs/api-reference/images) documentation for more information.
 
-## Generate an Image
+## Generate an Image <a href="#generate-an-image" id="generate-an-image"></a>
 
 Use this operation to create an image from a text prompt.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
+- **Credential to connect with**: Create or select an existing [OpenAI credential](../../credentials/openai.md).
 - **Resource**: Select **Image**.
 - **Operation**: Select **Generate an Image**.
 - **Model**: Select the model you want to use to generate an image. 
 - **Prompt**: Enter the text description of the desired image(s). The maximum length is 1000 characters for `dall-e-2` and 4000 characters for `dall-e-3`.
 
-### Options
+### Options <a href="#options" id="options"></a>
 
 - **Quality**: The quality of the image you generate. **HD** creates images with finer details and greater consistency across the image. This option is only supported for `dall-e-3`. Otherwise, choose **Standard**.
 - **Resolution**: Select the resolution of the generated images. Select **1024x1024** for `dall-e-2`. Select one of **1024x1024**, **1792x1024**, or **1024x1792** for `dall-e-3` models.
@@ -55,13 +69,13 @@ Enter these parameters:
 
 Refer to [Create image | OpenAI](https://platform.openai.com/docs/api-reference/images/create) documentation for more information.
 
-## Edit an Image
+## Edit an Image <a href="#edit-an-image" id="edit-an-image"></a>
 
 Use this operation to edit an image from a text prompt.
 
 Enter these parameters:
 
-- **Credential to connect with**: Create or select an existing [OpenAI credential](/integrations/builtin/credentials/openai.md).
+- **Credential to connect with**: Create or select an existing [OpenAI credential](../../credentials/openai.md).
 - **Resource**: Select **Image**.
 - **Operation**: Select **Edit Image**.
 - **Model**: Select the model you want to use to generate an image. Supports `dall-e-2` and `gpt-image-1`.
@@ -73,12 +87,12 @@ Enter these parameters:
 - **Output Format**: The format in which the generated images are returned (png, webp, or jpg). Only supported for gpt-image-1.
 - **Output Compression**: The compression level (0-100%) for the generated images. Only supported for `gpt-image-1` with webp or jpeg output formats.
 
-### Options
+### Options <a href="#options" id="options"></a>
 - **Background**: Allows to set transparency for the background of the generated image(s). Only supported for `gpt-image-1`.
 - **Input Fidelity**: Control how much effort the model will exert to match the style and features of input images. Only supported for `gpt-image-1`.
 - **Image Mask**: Name of the binary property that contains the image. A second image whose fully transparent areas (for example, where alpha is zero) shows where the image should be edited. If there are multiple images provided, the mask will be applied on the first image. Must be a valid PNG file, less than 4MB, and have the same dimensions as image.
 - **User**: A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse.
 
-## Common issues
+## Common issues <a href="#common-issues" id="common-issues"></a>
 
-For common errors or issues and suggested resolution steps, refer to [Common Issues](/integrations/builtin/app-nodes/n8n-nodes-langchain.openai/common-issues.md).
+For common errors or issues and suggested resolution steps, refer to [Common Issues](common-issues.md).

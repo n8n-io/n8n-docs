@@ -1,23 +1,38 @@
 ---
 title: Google Cloud Firestore node documentation
-description: Learn how to use the Google Cloud Firestore node in n8n. Follow technical documentation to integrate Google Cloud Firestore node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Google Cloud Firestore node in n8n. Follow technical
+  documentation to integrate Google Cloud Firestore node into your workflows.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Google Cloud Firestore node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.googlecloudfirestore.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.googlecloudfirestore
+url: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.googlecloudfirestore
+layout:
+  description:
+    visible: false
 ---
 
-# Google Cloud Firestore node
+# Google Cloud Firestore node <a href="#google-cloud-firestore-node" id="google-cloud-firestore-node"></a>
 
 Use the Google Cloud Firestore node to automate work in Google Cloud Firestore, and integrate Google Cloud Firestore with other applications. n8n has built-in support for a wide range of Google Cloud Firestore features, including creating, deleting, and getting documents. 
 
 On this page, you'll find a list of operations the Google Cloud Firestore node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Google credentials](/integrations/builtin/credentials/google/index.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
---8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"
+Refer to [Google credentials](../credentials/google/README.md) for guidance on setting up authentication.
+{% endhint %}
 
-## Operations
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/6vuTxJwns2nA8U7V56ij/" %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Document
     * Create a document
@@ -29,9 +44,9 @@ Refer to [Google credentials](/integrations/builtin/credentials/google/index.md)
 * Collection
     * Get all root collections
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'google-cloud-firestore') ]]
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+[Browse Google Cloud Firestore node documentation integration templates](https://n8n.io/integrations/google-cloud-firestore) or [search all templates](https://n8n.io/workflows/)
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

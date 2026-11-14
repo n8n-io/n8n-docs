@@ -1,0 +1,452 @@
+---
+title: custom-templates-library
+---
+In your environment variables, set `N8N_TEMPLATES_HOST` to the base URL of your API.
+
+### Endpoints <a href="#endpoints" id="endpoints"></a>
+
+Your API must provide the same endpoints and data structure as n8n's.
+
+The endpoints are:
+
+| Method | Path | Purpose |
+| ------ | ---- | ------- |
+| GET | `/templates/workflows/<id>` | Fetch template metadata for preview/browsing |
+| GET | `/workflows/templates/<id>` | Fetch workflow data to import onto canvas |
+| GET | `/templates/search` | Search for workflow templates |
+| GET | `/templates/collections/<id>` | Get a specific template collection |
+| GET | `/templates/collections` | List all template collections |
+| GET | `/templates/categories` | List all template categories |
+| GET | `/health` | Health check endpoint |
+
+{% hint style="warning" %}
+**Critical: Two different response formats required**
+
+The two workflow endpoints require **different response formats**:
+
+- **`/templates/workflows/{id}`**: Returns the template itself, which includes the workflow in the `workflow` key
+- **`/workflows/templates/{id}`**: Returns the workflow the template contains
+
+See Schemas below for details.
+{% endhint %}
+
+### Query parameters <a href="#query-parameters" id="query-parameters"></a>
+
+The `/templates/search` endpoint accepts the following query parameters:
+
+| Parameter  | Type                                         | Description                                      |
+|------------|----------------------------------------------|--------------------------------------------------|
+| `page`     | integer                                      | The page of results to return                    |
+| `rows`     | integer                                      | The maximum number of results to return per page |
+| `category` | comma-separated list of strings (categories) | The categories to search within                  |
+| `search`   | string                                       | The search query                                 |
+
+The `/templates/collections` endpoint accepts the following query parameters:
+
+| Parameter  | Type                                         | Description                     |
+|------------|----------------------------------------------|---------------------------------|
+| `category` | comma-separated list of strings (categories) | The categories to search within |
+| `search`   | string                                       | The search query                |
+
+### Schemas <a href="#schemas" id="schemas"></a>
+
+The key difference between the two workflow endpoints:
+
+```json
+// GET /templates/workflows/{id} returns (wrapped):
+{
+  "workflow": {
+    "id": 123,
+    "name": "...",
+    "totalViews": 1000,
+    // ... see full workflow item schema below
+    "workflow": {    // actual workflow definition
+      "nodes": [...],
+      "connections": {}
+    }
+  }
+}
+
+// GET /workflows/templates/{id} returns (flat):
+{
+  "id": 123,
+  "name": "...",
+  "workflow": {      // actual workflow definition
+    "nodes": [...],
+    "connections": {}
+  }
+}
+```
+
+Detailed schemas for response objects:
+
+<details>
+
+<summary>Show <code>workflow</code> item data schema</summary>
+
+Used by `/templates/workflows/{id}` endpoint (wrapped in a `workflow` key).
+
+This schema describes the template metadata used for displaying templates in search/browse UI. It includes a nested `workflow` property that contains the actual importable workflow definition.
+
+```json title="Workflow item data schema"
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "number"
+    },
+    "name": {
+      "type": "string"
+    },
+    "totalViews": {
+      "type": "number"
+    },
+    "price": {},
+    "purchaseUrl": {},
+    "recentViews": {
+      "type": "number"
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "user": {
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string"
+        },
+        "verified": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "username",
+        "verified"
+      ]
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "icon": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "codex": {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "properties": {
+                  "details": {
+                    "type": "string"
+                  },
+                  "resources": {
+                    "type": "object",
+                    "properties": {
+                      "generic": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "url": {
+                              "type": "string"
+                            },
+                            "icon": {
+                              "type": "string"
+                            },
+                            "label": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "url",
+                            "label"
+                          ]
+                        }
+                      },
+                      "primaryDocumentation": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "url": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "url"
+                          ]
+                        }
+                      }
+                    },
+                    "required": [
+                      "primaryDocumentation"
+                    ]
+                  },
+                  "categories": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "nodeVersion": {
+                    "type": "string"
+                  },
+                  "codexVersion": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "categories"
+                ]
+              }
+            }
+          },
+          "group": {
+            "type": "string"
+          },
+          "defaults": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "color": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name"
+            ]
+          },
+          "iconData": {
+            "type": "object",
+            "properties": {
+              "icon": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "fileBuffer": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "displayName": {
+            "type": "string"
+          },
+          "typeVersion": {
+            "type": "number"
+          },
+          "nodeCategories": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "number"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name"
+              ]
+            }
+          }
+        },
+        "required": [
+          "id",
+          "icon",
+          "name",
+          "codex",
+          "group",
+          "defaults",
+          "iconData",
+          "displayName",
+          "typeVersion"
+        ]
+      }
+    },
+    "description": {
+      "type": "string"
+    },
+    "image": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "url": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "workflowInfo": {
+      "type": "object",
+      "properties": {
+        "nodeCount": {
+          "type": "number"
+        },
+        "nodeTypes": {
+          "type": "object"
+        }
+      }
+    },
+    "workflow": {
+      "type": "object",
+      "properties": {
+        "nodes": {
+          "type": "array"
+        },
+        "connections": {
+          "type": "object"
+        },
+        "settings": {
+          "type": "object"
+        },
+        "pinData": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "nodes",
+        "connections"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "totalViews",
+    "createdAt",
+    "user",
+    "nodes",
+    "workflow"
+  ]
+}
+```
+
+</details>
+
+<details>
+
+<summary>Show <code>category</code> item data schema</summary>
+
+```json title="Category item data schema"
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "number"
+    },
+    "name": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "name"
+  ]
+}
+```
+
+</details>
+
+<details>
+
+<summary>Show <code>collection</code> item data schema</summary>
+
+```json title="Collection item data schema"
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "number"
+    },
+    "rank": {
+      "type": "number"
+    },
+    "name": {
+      "type": "string"
+    },
+    "totalViews": {},
+    "createdAt": {
+      "type": "string"
+    },
+    "workflows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "items": {}
+    }
+  },
+  "required": [
+    "id",
+    "rank",
+    "name",
+    "totalViews",
+    "createdAt",
+    "workflows",
+    "nodes"
+  ]
+}
+```
+
+</details>
+
+You can also interactively explore n8n's API endpoints:
+
+[https://api.n8n.io/templates/categories](https://api.n8n.io/templates/categories)
+[https://api.n8n.io/templates/collections](https://api.n8n.io/templates/collections)
+[https://api.n8n.io/templates/search](https://api.n8n.io/templates/search)
+[https://api.n8n.io/health](https://api.n8n.io/health)
+
+
+You can [contact us](mailto:help@n8n.io) for more support.

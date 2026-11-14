@@ -1,20 +1,33 @@
 ---
 title: Coda node documentation
-description: Learn how to use the Coda node in n8n. Follow technical documentation to integrate Coda node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Coda node in n8n. Follow technical documentation to
+  integrate Coda node into your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Coda node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.coda.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.coda'
+url: 'https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.coda'
+layout:
+  description:
+    visible: false
 ---
 
-# Coda node
+# Coda node <a href="#coda-node" id="coda-node"></a>
 
 Use the Coda node to automate work in Coda, and integrate Coda with other applications. n8n has built-in support for a wide range of Coda features, including creating, getting, and deleting controls, formulas, tables, and views.
 
 On this page, you'll find a list of operations the Coda node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Coda credentials](/integrations/builtin/credentials/coda.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
-## Operations
+Refer to [Coda credentials](../credentials/coda.md) for guidance on setting up authentication.
+{% endhint %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Control
     * Get a control
@@ -39,7 +52,7 @@ Refer to [Coda credentials](/integrations/builtin/credentials/coda.md) for guida
     * Update row
     * Push view button
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'coda') ]]
+
+[Browse Coda node documentation integration templates](https://n8n.io/integrations/coda) or [search all templates](https://n8n.io/workflows/)

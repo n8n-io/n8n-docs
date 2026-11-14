@@ -1,28 +1,39 @@
 ---
 title: TimescaleDB credentials
-description: Documentation for TimescaleDB credentials. Use these credentials to authenticate TimescaleDB in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for TimescaleDB credentials. Use these credentials to
+  authenticate TimescaleDB in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: TimescaleDB credentials
+originalFilePath: integrations/builtin/credentials/timescaledb.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/timescaledb'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/timescaledb'
+layout:
+  description:
+    visible: false
 ---
 
-# TimescaleDB credentials
+# TimescaleDB credentials <a href="#timescaledb-credentials" id="timescaledb-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [TimescaleDB](/integrations/builtin/app-nodes/n8n-nodes-base.timescaledb.md)
+- [TimescaleDB](../app-nodes/n8n-nodes-base.timescaledb.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 An available instance of [TimescaleDB](https://www.timescale.com/).
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - Database connection
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to the [Timescale documentation](https://docs.timescale.com/) for more information about the service.
 
-## Using database connection
+## Using database connection <a href="#using-database-connection" id="using-database-connection"></a>
 
 To configure this credential, you'll need:
 

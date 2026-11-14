@@ -1,15 +1,30 @@
 ---
 title: Google Sheets Trigger node common issues
-description: Documentation for common issues and questions in the Google Sheets Trigger node in n8n, a workflow automation platform. Includes details of the issue and suggested solutions.
-contentType: [integration, reference]
+description: >-
+  Documentation for common issues and questions in the Google Sheets Trigger
+  node in n8n, a workflow automation platform. Includes details of the issue and
+  suggested solutions.
+contentType:
+  - integration
+  - reference
 priority: high
+nodeTitle: Google Sheets Trigger node common issues
+originalFilePath: >-
+  integrations/builtin/trigger-nodes/n8n-nodes-base.googlesheetstrigger/common-issues.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.googlesheetstrigger/common-issues
+url: >-
+  https://docs.n8n.io/integrations/builtin/trigger-nodes/n8n-nodes-base.googlesheetstrigger/common-issues
+layout:
+  description:
+    visible: false
 ---
 
-# Google Sheets Trigger node common issues
+# Google Sheets Trigger node common issues <a href="#google-sheets-trigger-node-common-issues" id="google-sheets-trigger-node-common-issues"></a>
 
-Here are some common errors and issues with the [Google Sheets Trigger node](/integrations/builtin/trigger-nodes/n8n-nodes-base.googlesheetstrigger/index.md) and steps to resolve or troubleshoot them.
+Here are some common errors and issues with the [Google Sheets Trigger node](README.md) and steps to resolve or troubleshoot them.
 
-## Stuck waiting for trigger event
+## Stuck waiting for trigger event <a href="#stuck-waiting-for-trigger-event" id="stuck-waiting-for-trigger-event"></a>
 
 When testing the Google Sheets Trigger node with the **Execute step** or **Execute workflow** buttons, the execution may appear stuck and unable to stop listening for events. If this occurs, you may need to exit the workflow and open it again to reset the canvas.
 
@@ -17,7 +32,7 @@ Stuck listening events often occur due to issues with your network configuration
 
 To resolve this issue, check your reverse proxy configuration (Nginx, Caddy, Apache HTTP Server, Traefik, etc.) to enable websocket support.
 
-## Date and time columns are rendering as numbers
+## Date and time columns are rendering as numbers <a href="#date-and-time-columns-are-rendering-as-numbers" id="date-and-time-columns-are-rendering-as-numbers"></a>
 
 Google Sheets can render dates and times a few different ways.
 

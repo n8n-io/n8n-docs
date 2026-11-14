@@ -1,0 +1,271 @@
+---
+description: External storage of binary data and execution data for your n8n instance.
+contentType: howto
+tags:
+  - external storage
+  - storage
+hide:
+  - tags
+search:
+  boost: 1.5
+nodeTitle: Use external storage
+originalFilePath: hosting/scaling/external-storage.md
+originalUrl: 'https://docs.n8n.io/hosting/scaling/external-storage'
+url: 'https://docs.n8n.io/deploy/host-n8n/configure-n8n/scaling/use-external-storage'
+layout:
+  description:
+    visible: false
+---
+
+# External storage <a href="#external-storage" id="external-storage"></a>
+
+{% hint style="info" %}
+**Feature availability**
+
+External storage is available on:
+
+- **Self-hosted:** Business, Enterprise
+
+It isn't available on n8n Cloud.
+
+{% endhint %}
+
+n8n can store binary data and execution data produced by workflow executions externally. This feature is useful to avoid relying on the database or filesystem for storing large amounts of data.
+
+## Storing n8n's binary data in S3 <a href="#storing-n8ns-binary-data-in-s3" id="storing-n8ns-binary-data-in-s3"></a>
+
+n8n supports [AWS S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html) as an external store for binary data produced by workflow executions. You can use other S3-compatible services like Cloudflare R2 and Backblaze B2, but n8n doesn't officially support these.
+
+{% hint style="info" %}
+**Feature availability**
+
+S3 binary data storage is available on:
+
+- **Self-hosted:** Business, Enterprise
+
+It isn't available on n8n Cloud.
+
+Activate your [license key](../manage-your-license.md) before you enable external storage. n8n won't start in `s3` binary data mode without a valid license: set `N8N_DEFAULT_BINARY_DATA_MODE` to another mode or upgrade your plan.
+{% endhint %}
+
+### Setup <a href="#setup" id="setup"></a>
+
+Create and configure a bucket following the [AWS documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html). You can use the following policy, replacing `<bucket-name>` with the name of the bucket you created:
+
+```json
+{
+ "Version": "2012-10-17",
+ "Statement": [
+  {
+   "Sid": "VisualEditor0",
+   "Effect": "Allow",
+   "Action": ["s3:*"],
+   "Resource": ["arn:aws:s3:::<bucket-name>", "arn:aws:s3:::<bucket-name>/*"]
+  }
+ ]
+}
+```
+
+Set a bucket-level lifecycle configuration so that S3 automatically deletes old binary data. n8n delegates pruning of binary data to S3, so setting a lifecycle configuration is required unless you want to preserve binary data indefinitely.
+
+If the bucket also holds execution data, read [Lifecycle rules when binary data and execution data share storage](#lifecycle-rules-when-binary-data-and-execution-data-share-storage) before you add a rule.
+
+Once you finish creating the bucket, you will have a host, bucket name and region, and an access key ID and secret access key. You need to set them in n8n's environment:
+
+```sh
+export N8N_EXTERNAL_STORAGE_S3_HOST=... # example: s3.us-east-1.amazonaws.com
+export N8N_EXTERNAL_STORAGE_S3_BUCKET_NAME=...
+export N8N_EXTERNAL_STORAGE_S3_BUCKET_REGION=...
+export N8N_EXTERNAL_STORAGE_S3_ACCESS_KEY=...
+export N8N_EXTERNAL_STORAGE_S3_ACCESS_SECRET=...
+```
+
+{% hint style="info" %}
+**No region**
+
+If your provider doesn't require a region, you can set `N8N_EXTERNAL_STORAGE_S3_BUCKET_REGION` to `'auto'`.
+{% endhint %}
+
+## Validate and update your S3 bucket region format (from n8n 2.6.4) <a href="#validate-and-update-your-s3-bucket-region-format-v264-onward" id="validate-and-update-your-s3-bucket-region-format-v264-onward"></a>
+
+Starting from n8n 2.6.4, the value of the environment variable `N8N_EXTERNAL_STORAGE_S3_BUCKET_REGION` must meet these conditions:
+
+- Only contain alphanumeric characters (`a-z`, `A-Z`, `0-9`) and hyphens (`-`).
+- Not contain underscores (`_`) or other special characters.
+
+If these conditions are not met, n8n will fail startup with connection errors even if the storage endpoint is reachable and was previously working in older versions.
+
+If S3 connection fails after upgrading n8n to 2.6.4, verify your region value matches these conditions and redeploy n8n.
+
+Tell n8n to store binary data in S3:
+
+```sh
+export N8N_AVAILABLE_BINARY_DATA_MODES=filesystem,s3
+export N8N_DEFAULT_BINARY_DATA_MODE=s3
+```
+
+
+{% hint style="info" %}
+**Auth autodetection**
+
+To automatically detect credentials to authenticate your S3 calls, set `N8N_EXTERNAL_STORAGE_S3_AUTH_AUTO_DETECT` to `true`. This will use the default [credential provider chain](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/setting-credentials-node.html#credchain).
+{% endhint %}
+
+Restart the server to load the new configuration.
+
+### Usage <a href="#usage" id="usage"></a>
+
+After you enable S3, n8n writes and reads any new binary data to and from the S3 bucket. n8n writes binary data to your S3 bucket in this format:
+
+```text
+workflows/<workflow-id>/executions/<execution-id>/binary_data/<binary-file-id>
+```
+
+n8n continues to read older binary data stored in the filesystem from the filesystem, if `filesystem` remains listed as an option in `N8N_AVAILABLE_BINARY_DATA_MODES`.
+
+If you store binary data in S3 and later switch to filesystem mode, the instance continues to read any data stored in S3, as long as `s3` remains listed in `N8N_AVAILABLE_BINARY_DATA_MODES` and your S3 credentials remain valid.
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/kct3MUrE5xSbDyeytQIX/" %}
+
+### Upgrade best practices for S3 storage <a href="#upgrade-best-practices-for-s3-storage" id="upgrade-best-practices-for-s3-storage"></a>
+
+When using S3 or S3-compatible storage:
+
+1. Upgrade all n8n components (main, worker, runner) to the same version simultaneously to avoid protocol incompatibilities.
+2. For on-premise or S3-compatible storage over HTTP, set `N8N_EXTERNAL_STORAGE_S3_PROTOCOL=http` and include the protocol in the host configuration.
+3. Use only supported environment variable names: for access key, use `N8N_EXTERNAL_STORAGE_S3_ACCESS_KEY`.
+
+Newer n8n versions have stricter validation and protocol handling. Older configurations may need updates after upgrading.
+
+## Storing n8n's binary data in Azure Blob Storage
+
+n8n supports [Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction) as an external store for binary data produced by workflow executions. This uses the same Azure Blob configuration as [external execution data storage](../basic-configuration/use-environment-variables/external-data-storage.md#azure-blob-storage), so a single container can hold both binary data and execution data.
+
+{% hint style="info" %}
+**Feature availability**
+
+Azure Blob Storage for binary data is available on:
+
+- **Self-hosted:** Business, Enterprise
+
+It isn't available on n8n Cloud.
+
+Activate your [license key](../manage-your-license.md) before you enable external storage. n8n won't start in `azure` binary data mode without a valid license: set `N8N_DEFAULT_BINARY_DATA_MODE` to another mode or upgrade your plan.
+{% endhint %}
+
+### Azure setup
+
+Create a blob container in your Azure storage account following the [Azure documentation](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal).
+
+Set the container name in n8n's environment. `N8N_EXTERNAL_STORAGE_AZURE_CONTAINER_NAME` is always required:
+
+```sh
+export N8N_EXTERNAL_STORAGE_AZURE_CONTAINER_NAME=...
+```
+
+For authentication, n8n supports a connection string, an account name and key, or managed identity (`DefaultAzureCredential`). Refer to [External data storage environment variables | Azure Blob Storage](../basic-configuration/use-environment-variables/external-data-storage.md#azure-blob-storage) for the full list of authentication variables and the order in which n8n checks them.
+
+n8n delegates pruning of binary data to Azure, so set a [lifecycle management policy](https://learn.microsoft.com/en-us/azure/storage/blobs/lifecycle-management-overview) to automatically delete old binary data. Setting a lifecycle policy is required unless you want to preserve binary data indefinitely. You set the policy on the storage account. A rule without a `prefixMatch` applies to all blobs in the account, so scope each rule to your container with a `prefixMatch` that starts with the container name.
+
+If the container also holds execution data, read [Lifecycle rules when binary data and execution data share storage](#lifecycle-rules-when-binary-data-and-execution-data-share-storage) before you add a policy.
+
+Tell n8n to store binary data in Azure Blob Storage:
+
+```sh
+export N8N_AVAILABLE_BINARY_DATA_MODES=filesystem,azure
+export N8N_DEFAULT_BINARY_DATA_MODE=azure
+```
+
+Restart the server to load the new configuration.
+
+### Azure usage
+
+After you enable Azure Blob Storage, n8n writes and reads any new binary data to and from the container. n8n writes binary data to your container in this format:
+
+```text
+workflows/<workflow-id>/executions/<execution-id>/binary_data/<binary-file-id>
+```
+
+n8n continues to read older binary data stored in the filesystem from the filesystem, if `filesystem` remains listed as an option in `N8N_AVAILABLE_BINARY_DATA_MODES`.
+
+If you store binary data in Azure Blob Storage and later switch to filesystem mode, the instance continues to read any data stored in Azure, as long as `azure` remains listed in `N8N_AVAILABLE_BINARY_DATA_MODES` and your Azure credentials remain valid.
+
+## Storing n8n's execution data in S3
+
+n8n can also store execution data in S3.
+
+Configure the S3 bucket and credentials as described in the binary data [setup](#setup) section, then tell n8n to store execution data in S3:
+
+```sh
+export N8N_EXECUTION_DATA_STORAGE_MODE=s3
+```
+
+In [queue mode](enable-queue-mode.md), set `N8N_EXECUTION_DATA_STORAGE_MODE` and the `N8N_EXTERNAL_STORAGE_S3_*` variables on all instances, including workers.
+
+{% hint style="warning" %}
+**License required to start**
+
+S3 execution data storage requires a Business or Enterprise plan with an active [license key](../manage-your-license.md). If you set `N8N_EXECUTION_DATA_STORAGE_MODE=s3` without a valid license, n8n won't start. To start n8n again, switch the mode back to `database` or `filesystem`, or restore a valid license.
+{% endhint %}
+
+After you enable S3 execution data storage, n8n writes the data of any new execution to your S3 bucket in this format:
+
+```text
+workflows/<workflow-id>/executions/<execution-id>/execution_data/bundle.json
+```
+
+n8n records where each execution's data is stored, so switching modes is non-destructive. Older executions stay readable from the database or filesystem, and if you later switch back to another mode, executions stored in S3 stay readable as long as the bucket remains configured.
+
+n8n prunes execution data in S3 itself, using the standard [executions pruning](manage-execution-data.md#enable-executions-pruning) settings (the `EXECUTIONS_DATA_*` variables). Unlike binary data, execution data doesn't rely on an S3 lifecycle rule. Don't add a lifecycle rule for execution data, as it could delete data that n8n still references.
+
+If you deploy n8n on AWS using the [terraform-aws-n8n](https://github.com/n8n-io/terraform-aws-n8n) module, see [Configure Enterprise features on AWS](../../install-options/use-a-cloud-provider/deploy-to-aws-with-terraform/use-enterprise-features-on-aws.md#execution-data-in-s3) for the module-specific setup.
+
+To expire binary data in a bucket that also holds execution data, read [Lifecycle rules when binary data and execution data share storage](#lifecycle-rules-when-binary-data-and-execution-data-share-storage).
+
+## Lifecycle rules when binary data and execution data share storage
+
+When you store both binary data and execution data with the same provider, they share one S3 bucket (`N8N_EXTERNAL_STORAGE_S3_BUCKET_NAME`) or Azure container (`N8N_EXTERNAL_STORAGE_AZURE_CONTAINER_NAME`). Both data types sit under the same prefix for each execution:
+
+```text
+workflows/<workflow-id>/executions/<execution-id>/binary_data/<binary-file-id>
+workflows/<workflow-id>/executions/<execution-id>/execution_data/bundle.json
+```
+
+S3 key-prefix filters and Azure `prefixMatch` filters match from the start of the object name. On Azure, the prefix also starts with the container name. No single prefix covers all binary data without also covering execution data, and n8n doesn't tag objects by data type. As a result, a lifecycle rule for the whole bucket or container can expire both data types.
+
+### Expire binary data when execution data stays in the database or filesystem
+
+If execution data stays in the database or on the filesystem, n8n doesn't write new execution data to the bucket or container. A lifecycle rule scoped to the `workflows/` prefix can then expire binary data from executions:
+
+* **S3:** set the rule's prefix filter to `workflows/`.
+* **Azure:** set `prefixMatch` to `<container-name>/workflows/`. Without a `prefixMatch`, the rule applies to all blobs in the storage account, not only the container.
+
+This approach has these limits:
+
+* The bucket or container can still hold execution data from an earlier setup. Switching `N8N_EXECUTION_DATA_STORAGE_MODE` doesn't move existing execution data. A lifecycle rule can delete data that n8n still references, so check for `execution_data/` objects before you add the rule.
+* Lifecycle rules use object timestamps, not execution completion times. n8n measures execution age from when the execution finished, and it can write binary data earlier. Setting the expiry age to match `EXECUTIONS_DATA_MAX_AGE` doesn't guarantee that binary data stays available for every execution that n8n keeps. A shorter age can delete binary data for executions that n8n still keeps.
+* [Executions pruning](manage-execution-data.md#enable-executions-pruning) skips annotated executions and executions with the `new`, `running`, or `waiting` status. These executions can stay in n8n longer than any expiry age, and lose their binary data when the rule expires it.
+* Not all binary data comes from executions. n8n stores Chat Hub and agent attachments in the same bucket or container, under the `chat-hub/` and `agents/` prefixes. These files don't depend on execution age, and n8n still references them. A rule for the whole bucket or container also expires them, so scope the rule to `workflows/`.
+
+### Expire binary data when execution data is also in object storage
+
+If you set `N8N_EXECUTION_DATA_STORAGE_MODE` to `s3` or `azure` and store binary data with the same provider, n8n doesn't provide a lifecycle configuration that expires only binary data. Don't add a lifecycle rule that expires current objects in the bucket or container, because it also expires execution data that n8n still references.
+
+Keeping execution data in the database avoids storing execution bundles alongside binary data.
+
+### Object versioning and lifecycle rules
+
+With versioning on, objects that expire or that n8n deletes stay as older versions, and you keep paying to store them. Cleaning up older versions is separate from expiring current objects:
+
+* **S3:** n8n deletes objects without a version ID, which adds a delete marker in a versioned bucket. Add a `NoncurrentVersionExpiration` rule to remove older versions. See [S3 lifecycle configuration elements](https://docs.aws.amazon.com/AmazonS3/latest/userguide/intro-lifecycle-rules.html).
+* **Azure:** blob versioning is a storage account setting, and lifecycle policies apply to the whole storage account. Add an action for previous versions, and scope the rule with a `prefixMatch` that starts with your container name and a slash, for example `<container-name>/`. See [Azure lifecycle policy structure](https://learn.microsoft.com/en-us/azure/storage/blobs/lifecycle-management-policy-structure).
+
+## Related resources
+
+* [Scaling](../scaling.md)
+* [Measure performance](measure-performance.md)
+* [Enable queue mode](enable-queue-mode.md)
+* [Control concurrency](control-concurrency.md)
+* [Manage execution data](manage-execution-data.md)
+* [Handle binary data](handle-binary-data.md)
+* [Fix memory issues](fix-memory-issues.md)

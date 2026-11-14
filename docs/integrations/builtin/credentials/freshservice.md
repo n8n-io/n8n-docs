@@ -1,28 +1,39 @@
 ---
 title: Freshservice credentials
-description: Documentation for Freshservice credentials. Use these credentials to authenticate Freshservice in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Freshservice credentials. Use these credentials to
+  authenticate Freshservice in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
+nodeTitle: Freshservice credentials
+originalFilePath: integrations/builtin/credentials/freshservice.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/freshservice'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/freshservice'
+layout:
+  description:
+    visible: false
 ---
 
-# Freshservice credentials
+# Freshservice credentials <a href="#freshservice-credentials" id="freshservice-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Freshservice](/integrations/builtin/app-nodes/n8n-nodes-base.freshservice.md)
+- [Freshservice](../app-nodes/n8n-nodes-base.freshservice.md)
 
-## Prerequisites
+## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 Create a [Freshservice](https://freshservice.com/) account.
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Freshservice's API documentation](https://api.freshservice.com/v2/) for more information about the service.
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need:
 

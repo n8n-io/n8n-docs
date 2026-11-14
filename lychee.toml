@@ -7,8 +7,9 @@ verbose = "warn"
 # Don't show interactive progress bar while checking links.
 no_progress = true
 
-# Path to summary output file.
-output = "_lychee/output.md"
+# Path to summary output file. Note: lychee-action ignores this and writes to its own
+# `output` input (set in the workflows), so this only applies to local runs.
+output = "lychee/out.md"
 format = "markdown"
 
 #############################  Cache  ###############################
@@ -53,7 +54,14 @@ retry_wait_time = 10
 # accept = "200..=204, 429"
 # accept = ["200", "429"]
 # accept = "200, 429"
-accept = ["200", "429", "403"]
+#
+# 403 used to be in this list, which meant every link behind a WAF scored as healthy:
+# the 2026-10-05 sweep auto-passed 64 of them. A dead page behind Cloudflare was
+# indistinguishable from a live one. 403 now fails here and `lychee_report.py` files it
+# under `blocked` instead of `broken`, so it is visible and triageable without inflating
+# the broken count. Hosts that always 403 belong in `exclude` below, with a dated note.
+# 429 stays accepted: that is our own crawl rate, not a broken link.
+accept = ["200", "429"]
 
 # Proceed for server connections considered insecure (invalid TLS).
 insecure = false
@@ -92,6 +100,19 @@ skip_missing = false
 # blocks.
 include_verbatim = false
 
+# Fragment checking (`include_fragments`) is deliberately OFF for external links.
+# Measured on 2026-10-12 over a 50-URL sample of the 382 external links that carry a
+# `#fragment`: 14 failures, 12 of them "cannot find fragment", and the ones we hand-
+# checked (GitHub `#L266` line anchors, Kafka, Grafana, Supabase, Notion) are pages that
+# build their anchors in the browser. The anchor is simply not in the served HTML, so
+# the check cannot tell a renamed heading from a client-rendered one. A ~28% flag rate
+# on fragments is the same untriageable pile DOC-2310 hit with its offline redirect-chain
+# heuristic (1,421 false positives) and removed.
+#
+# Our own anchors are checked properly elsewhere, against the markdown rather than the
+# rendered page: check_internal_links.py for docs-internal links, product_links_report.py
+# for the docs.n8n.io links hardcoded in the product.
+
 # Ignore case of paths when matching glob patterns.
 glob_ignore_case = false
 
@@ -105,6 +126,7 @@ exclude = [
   '^https://segment\.com/docs/.*',                       # Actively blocks linkchecks
   '^https://support\.plivo\.com/hc/en-us/articles/.*',   # Actively blocks linkchecks
   '^https://platform\.deepseek\.com/.*',                 # Actively blocks linkchecks
+  '^https://cratedb\.com/docs/.*',                      # Returns 406 to the checker, 200 in a browser
   '^https://support\.unleashedsoftware\.com/hc/en-us/articles/.*', # Actively blocks linkchecks
   '^https://reddit\.com/.*',                             # Actively blocks linkchecks
   '^https://www\.mysql\.com/.*',                         # Actively blocks linkchecks
@@ -130,10 +152,25 @@ exclude = [
   '^https://api\.mist\.com/',  # Only works when logged in
   '^https://business\.adobe\.com/products/commerce\.html',  # Times out on automated checks
   '^https://developer\.paddle\.com/',  # Times out on automated checks
+  '^https://console\.cloud\.google\.com/apis/library',  # Redirect loop on automated checks (works in a browser)
+  '^https://github\.com/(CxGarcia|miguel-mconf|yoky-devsavant|kirill-chertkov|bramknuever|bugagashenkj|FFTDB|jamesliupenn|nikozila|torbhai|manusjs)$',  # Deleted contributor accounts credited in historical release notes
+  '^https://developers\.facebook\.com/docs/(certificate-transparency-api|graph-api/webhooks/getting-started/webhooks-for-certificate-transparency|graph-api/webhooks/reference/certificate-transparency)',  # Meta removed/moved these docs (404); needs content review
+  '^https://docs\.openwebui\.com/getting-started/api-endpoints',  # OpenWebUI moved these docs (404); needs content review
+  '^https://(www\.)?youtube\.com/embed/.*',  # Lychee's YouTube ID check (via thumbnail lookup) doesn't reliably support /embed/ URLs, causing false-positive failures
+  # Verified by hand on 2026-09-14 (DOC-2308): these open fine in a browser but block or stall automated checks.
+  '^https://www\.eventbrite\.com/platform/',  # 401 for bots; /platform/api 301s to /platform/new/api
+  '^https://milvus\.io/',  # Redirect loop for bots (works in a browser)
+  '^https://posthog\.com/',  # Times out on automated checks
+  '^https://[a-z0-9-]+\.docs\.apiary\.io/',  # Times out on automated checks (autopilot, demio API docs)
+  '^https://twake\.app/',  # Times out on automated checks
+  '^https://app\.tapfiliate\.com/a/profile/',  # In-app page, redirects to login
+  '^https://wise-sandbox\.com/',  # In-app sandbox pages, redirect to login
+  '^https://app\.todoist\.com/app/',  # In-app settings pages, need login
+  '^https://(www\.)?googleapis\.com/auth/',  # OAuth scope strings shown in code cells, not web pages
   ]
 
 # Exclude these filesystem paths from getting checked.
-exclude_path = ["file/path/to/Ignore", "./other/file/path/to/Ignore"]
+exclude_path = []
 
 # URLs to check (supports regex). Has preference over all excludes.
 # include = ['gist\.github\.com.*']

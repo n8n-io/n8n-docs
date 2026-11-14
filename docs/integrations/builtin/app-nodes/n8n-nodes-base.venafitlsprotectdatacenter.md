@@ -1,21 +1,37 @@
 ---
 title: Venafi TLS Protect Datacenter node documentation
-description: Learn how to use the Venafi TLS Protect Datacenter node in n8n. Follow technical documentation to integrate Venafi TLS Protect Datacenter node into your workflows.
-contentType: [integration, reference]
+description: >-
+  Learn how to use the Venafi TLS Protect Datacenter node in n8n. Follow
+  technical documentation to integrate Venafi TLS Protect Datacenter node into
+  your workflows.
+contentType:
+  - integration
+  - reference
+nodeTitle: Venafi TLS Protect Datacenter node documentation
+originalFilePath: integrations/builtin/app-nodes/n8n-nodes-base.venafitlsprotectdatacenter.md
+originalUrl: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.venafitlsprotectdatacenter
+url: >-
+  https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.venafitlsprotectdatacenter
+layout:
+  description:
+    visible: false
 ---
-<!-- vale off -->
-<!-- disabled vale because of "Datacenter" Don't want to general approve it, but it's the brand name -->
-# Venafi TLS Protect Datacenter node
+
+
+# Venafi TLS Protect Datacenter node <a href="#venafi-tls-protect-datacenter-node" id="venafi-tls-protect-datacenter-node"></a>
 
 Use the Venafi TLS Protect Datacenter node to automate work in Venafi TLS Protect Datacenter, and integrate Venafi TLS Protect Datacenter with other applications. n8n has built-in support for a wide range of Venafi TLS Protect Datacenter features, including creating, deleting, and getting certificates. 
 
 On this page, you'll find a list of operations the Venafi TLS Protect Datacenter node supports and links to more resources.
 
-/// note | Credentials
-Refer to [Venafi TLS Protect Datacenter credentials](/integrations/builtin/credentials/venafitlsprotectdatacenter.md) for guidance on setting up authentication. 
-///
+{% hint style="info" %}
+**Credentials**
 
-## Operations
+Refer to [Venafi TLS Protect Datacenter credentials](../credentials/venafitlsprotectdatacenter.md) for guidance on setting up authentication.
+{% endhint %}
+
+## Operations <a href="#operations" id="operations"></a>
 
 * Certificate
 	* Create
@@ -27,17 +43,17 @@ Refer to [Venafi TLS Protect Datacenter credentials](/integrations/builtin/crede
 * Policy
 	* Get
 
-## Templates and examples
+## Templates and examples <a href="#templates-and-examples" id="templates-and-examples"></a>
 
-<!-- see https://www.notion.so/n8n/Pull-in-templates-for-the-integrations-pages-37c716837b804d30a33b47475f6e3780 -->
-[[ templatesWidget(page.title, 'venafi-tls-protect-datacenter') ]]
 
-## Related resources
+[Browse Venafi TLS Protect Datacenter node documentation integration templates](https://n8n.io/integrations/venafi-tls-protect-datacenter) or [search all templates](https://n8n.io/workflows/)
+
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 n8n also provides:
 
-* A [node](/integrations/builtin/app-nodes/n8n-nodes-base.venafitlsprotectcloud.md) and [trigger](/integrations/builtin/trigger-nodes/n8n-nodes-base.venafitlsprotectcloudtrigger.md) node for Venafi TLS Protect Cloud.
+* A [node](n8n-nodes-base.venafitlsprotectcloud.md) and [trigger](../trigger-nodes/n8n-nodes-base.venafitlsprotectcloudtrigger.md) node for Venafi TLS Protect Cloud.
 
-<!-- vale on -->
 
---8<-- "_snippets/integrations/builtin/app-nodes/operation-not-supported.md"
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}

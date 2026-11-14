@@ -1,28 +1,39 @@
 ---
 title: Odoo credentials
-description: Documentation for Odoo credentials. Use these credentials to authenticate Odoo in n8n, a workflow automation platform.
-contentType: [integration, reference]
+description: >-
+  Documentation for Odoo credentials. Use these credentials to authenticate Odoo
+  in n8n, a workflow automation platform.
+contentType:
+  - integration
+  - reference
 priority: medium
+nodeTitle: Odoo credentials
+originalFilePath: integrations/builtin/credentials/odoo.md
+originalUrl: 'https://docs.n8n.io/integrations/builtin/credentials/odoo'
+url: 'https://docs.n8n.io/integrations/builtin/credentials/odoo'
+layout:
+  description:
+    visible: false
 ---
 
-# Odoo credentials
+# Odoo credentials <a href="#odoo-credentials" id="odoo-credentials"></a>
 
 You can use these credentials to authenticate the following nodes:
 
-- [Odoo](/integrations/builtin/app-nodes/n8n-nodes-base.odoo.md)
+- [Odoo](../app-nodes/n8n-nodes-base.odoo.md)
 
-## Supported authentication methods
+## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 - API key (Recommended)
 - Password
 
-## Related resources
+## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Odoo's External API documentation](https://www.odoo.com/documentation/17.0/developer/reference/external_api.html) for more information about the service.
 
 Refer to the Odoo [Getting Started tutorial](https://www.odoo.com/slides/getting-started-15) if you're new to Odoo.
 
-## Using API key
+## Using API key <a href="#using-api-key" id="using-api-key"></a>
 
 To configure this credential, you'll need a user account on an [Odoo](https://www.odoo.com/) database and:
 
@@ -45,7 +56,7 @@ To set up the credential with an API key:
 
 Refer to [Odoo API Keys](https://www.odoo.com/documentation/15.0/developer/reference/external_api.html?#api-keys) for more information.
 
-## Using password
+## Using password <a href="#using-password" id="using-password"></a>
 
 To configure this credential, you'll need a user account on an [Odoo](https://www.odoo.com/) database and:
 
@@ -61,14 +72,18 @@ To set up the credential with a password:
 3. To use a password, enter your user password in the **Password or API key** field.
 4. Enter your Odoo **Database name**, also known as the instance name.
 
-/// note | Password compatibility
+{% hint style="info" %}
+**Password compatibility**
+
 If you try a password credential and it doesn't work for a specific node function, try switching to an API key. Odoo requires an API key for certain modules or based on certain settings.
-///
+{% endhint %}
 
-## Required plan type
+## Required plan type <a href="#required-plan-type" id="required-plan-type"></a>
 
-/// note | Required plan type
+{% hint style="info" %}
+**Required plan type**
+
 Access to the external API is only available on a **Custom** Odoo plan. (The One App Free or Standard plans won't give you access.)
 
 Refer to [Odoo Pricing Plans](https://www.odoo.com/pricing-plan) for more information.
-///
+{% endhint %}

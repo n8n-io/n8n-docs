@@ -110,7 +110,7 @@ This is a delimiter mismatch: a semicolon- or tab-separated export parsed as com
 
 ### Rows merge together, or the data stops partway through
 
-An unbalanced quote mark: an odd number of `"` characters makes the parser treat everything after it as one long quoted value, so several rows arrive as one item and the following rows look missing. The file usually got there through a manual edit or a hand-rolled export. Scan for a quote mark that has no matching closing quote, looking across line breaks too: a field that legitimately spans several lines opens its quote on one line and closes it on another.
+An unbalanced quote mark: an odd number of `"` characters makes the parser treat everything after it as one long quoted value. As a result, several rows arrive as one item and the following rows look missing. The file usually got there through a manual edit or a hand-rolled export. Scan for a quote mark that has no matching closing quote. Check across line breaks too, because a field that legitimately spans several lines opens its quote on one line and closes it on another.
 
 [HTTP Request Node]: n8n-nodes-base.httprequest/README.md
 [Webhook Node]: n8n-nodes-base.webhook/README.md

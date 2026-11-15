@@ -38,6 +38,8 @@ const ConfigSchema = z.object({
   AUDIT_ANCHOR_FILE: z.string().default("./data/audit-anchor.jsonl"),
   /** true: يرفض الإقلاع دون مفتاح تثبيت. إلزامي في الإنتاج. */
   AUDIT_ANCHOR_REQUIRED: boolish,
+  /** الفاصل بين تحققين كاملين من audit (مللي ثانية). بينهما تحقق تزايدي قبل كل عملية مميزة. */
+  AUDIT_FULL_VERIFY_INTERVAL_MS: z.coerce.number().int().min(0).default(600_000),
   /** signed: كل قرار موافقة يتطلب توقيع Ed25519 من صاحبه (الافتراضي، وإلزامي في الإنتاج). trusted: للاختبار فقط. */
   APPROVER_AUTH: z.enum(["signed", "trusted"]).default("signed"),
   /** true: الوكيل الجديد أو الذي تغيّر تعريفه ينتظر نشرًا بشريًا موقّعًا قبل أن يعمل. موصى به في الإنتاج. */

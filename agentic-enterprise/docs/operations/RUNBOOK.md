@@ -54,6 +54,10 @@ npm run check                 # يجب أن ينجح قبل أي تشغيل: typ
 | `LOG_LEVEL` | `info` | سجلات JSON إلى stdout |
 | `EVAL_LIVE_MAX_TOTAL_USD` | `5` | سقف التكلفة الإجمالي لتشغيل `eval:live` |
 | `AGENT_DAILY_BUDGET_USD` | `50` | سقف تكلفة كل وكيل خلال 24 ساعة متحركة. عند بلوغه تنتظر مهامه، ويطلق تنبيه `BUDGET_EXHAUSTED`. التعريف يستطيع تحديد `dailyBudgetUsd` خاص |
+| `AUDIT_FULL_VERIFY_INTERVAL_MS` | `600000` | الفاصل بين تحققين كاملين من audit. بينهما تحقق تزايدي قبل كل قرار |
+| `AUDIT_CHECKPOINT_KEY_FILE` | (فارغ) | المفتاح الخاص (Ed25519 PEM) لتوقيع نقاط التحقق. خاص بهذا الغرض. المفتاح العام يُسلَّم للشاهد |
+| `AUDIT_WITNESS_FILE` / `AUDIT_WITNESS_URL` | (فارغ) | وجهة نقاط التحقق: ملف على مخزن WORM خارجي، و/أو عنوان HTTPS لدى طرف ثالث |
+| `AUDIT_CHECKPOINT_INTERVAL_MS` | `3600000` | تكرار نقاط التحقق في الخادم لكل مستأجر |
 | `MODEL_ROUTES` | (مسار واحد حتى confidential) | مسارات النماذج المعتمدة (JSON): `[{id, provider, model, region, maxClass, approvalRef}]`. ما فوق confidential يتطلب `approvalRef` |
 | `DATA_RESIDENCY` | `any` | إقامة البيانات المطلوبة (مثل `sa`). في الخادم تأتي من المستأجر: `tenants create … --residency sa` |
 | `AGENT_MAX_HANDOFF_DEPTH` | `6` | أقصى عمق لسلسلة الإحالات. التجاوز، أو تكرار الإحالة نفسها مرتين في السلسلة، يُرفض ويُصعَّد (`delegation_limit`) |
@@ -323,7 +327,8 @@ npm run ops -- audit task <id>   # كل ما جرى في مهمة
 | المهمة | التكرار | الأمر أو الملاحظة |
 |--------|---------|-------------------|
 | تحويل الموافقات المنتهية إلى تصعيدات | كل دقيقة | ضمن `ops run` |
-| التحقق من audit | يوميًا، وقبل أي رفع إيقاف | `ops audit verify` |
+| التحقق من audit | يوميًا، وقبل أي رفع إيقاف | `ops audit verify` (كامل) |
+| مطابقة السجل مع الشاهد | أسبوعيًا، وبعد أي حادث | `ops audit witness-verify <witness.jsonl> --pub <checkpoint.pub.pem>`. يفحص نقاط الشاهد والسلسلة المحلية معًا |
 | نسخ احتياطي | يوميًا | `npm run ops -- backup --out <dir>` (أو `--data-root` للخادم)، ثم `npm run ops -- backup verify <dir>`. التفاصيل في [`DISASTER_RECOVERY.md`](DISASTER_RECOVERY.md) |
 | تدوير رموز API | قبل انتهائها (90 يومًا افتراضيًا) | `ops tokens issue … --ttl-days N`، ثم `ops tokens revoke` للقديم |
 | اختبار الطفرات | مع كل تغيير في الحواجز أو التقييمات | `npm run mutation`، والمطلوب 0 missed |

@@ -91,7 +91,7 @@ export function createPlatform(opts: CreatePlatformOptions = {}): Platform {
     opts.anchor ??
     (config.AUDIT_ANCHOR_KEY ? new HmacFileAnchor(config.AUDIT_ANCHOR_FILE, parseAnchorKey(config.AUDIT_ANCHOR_KEY)) : new NoAnchor());
   if (config.AUDIT_ANCHOR_REQUIRED && anchor.kind === "none") throw new Error("AUDIT_ANCHOR_REQUIRED=true but AUDIT_ANCHOR_KEY is not set");
-  const audit = new AuditLog(db, clock, anchor);
+  const audit = new AuditLog(db, clock, anchor, config.AUDIT_FULL_VERIFY_INTERVAL_MS);
   // الإقلاع يرفض سجلًا تالفًا (fail-closed). الوضع الجنائي يسمح بالفتح للتشخيص فقط، مع إيقاف طارئ إلزامي.
   if (!opts.forensic) audit.assertIntact();
   const directory = new HumanDirectory(opts.humans ?? DEFAULT_HUMANS);

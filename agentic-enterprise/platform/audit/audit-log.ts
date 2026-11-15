@@ -52,11 +52,21 @@ export interface VerifyResult {
  */
 export const ANCHOR_PENDING_WINDOW = 8;
 
+/** الفاصل الافتراضي بين تحققين كاملين عندما يُستخدم التحقق التزايدي. */
+export const DEFAULT_FULL_VERIFY_INTERVAL_MS = 10 * 60_000;
+
 export class AuditLog {
+  /**
+   * نقطة الثقة: آخر seq تحقق منه تحقق كامل ناجح (مع تثبيته)، وhash الصف عنده، ووقت ذلك التحقق.
+   * تُوضع خلف الذيل بنافذة التثبيت المعلّق، فيُعاد فحص الأحداث الحديثة غير المثبتة بعد في كل مرة.
+   */
+  private trusted: { seq: number; hash: string; at: number } | null = null;
+
   constructor(
     private readonly db: Database,
     private readonly clock: Clock,
     private readonly anchor: AuditAnchor = new NoAnchor(),
+    private readonly fullVerifyIntervalMs = DEFAULT_FULL_VERIFY_INTERVAL_MS,
   ) {
     db.exec(`
       CREATE TABLE IF NOT EXISTS audit_log (
@@ -197,6 +207,80 @@ export class AuditLog {
       pending++;
     }
     return { valid: true, entries: lastSeq, anchoring, pendingAnchors: pending };
+  }
+
+  /**
+   * تحقق تزايدي للاستخدام قبل كل عملية مميزة. التكلفة تتناسب مع الأحداث الجديدة منذ نقطة الثقة، لا مع حجم السجل.
+   *
+   * يكشف فورًا: إعادة كتابة السلسلة أو حذف الذيل (hash الصف عند نقطة الثقة أو عدد الصفوف حتى عندها يتغير)،
+   * وأي خلل في الأحداث الجديدة (تسلسل، أو prev_hash، أو محتوى، أو تثبيت ناقص أو متعارض، أو حذف بعد نقطة الثقة،
+   * أو تقصير ملف التثبيت). لا يكشف فورًا: تعديل محتوى صف قديم مع ترك عمود hash كما هو؛ يكشفه التحقق الكامل
+   * التالي، الذي يُفرض تلقائيًا كل fullVerifyIntervalMs (افتراضيًا 10 دقائق)، وعند الإقلاع، وفي `ops audit verify`.
+   */
+  verifyFast(): VerifyResult {
+    const now = this.clock.now().getTime();
+    if (!this.trusted || now - this.trusted.at >= this.fullVerifyIntervalMs) return this.verifyFullAndTrust();
+    const anchoring = this.anchor.kind;
+    const t = this.trusted;
+    const lastSeq = Number((this.db.prepare("SELECT COALESCE(MAX(seq), 0) AS m FROM audit_log").get() as { m: number }).m);
+    if (t.seq > 0) {
+      const row = this.db.prepare("SELECT hash FROM audit_log WHERE seq = ?").get(t.seq) as { hash: string } | undefined;
+      if (!row) return { ...broken(lastSeq, t.seq, "trusted checkpoint event missing (deletion or truncation)"), anchoring };
+      if (row.hash !== t.hash) return { ...broken(lastSeq, t.seq, "trusted checkpoint hash changed (rewritten history)"), anchoring };
+      const n = Number((this.db.prepare("SELECT COUNT(*) AS n FROM audit_log WHERE seq <= ?").get(t.seq) as { n: number }).n);
+      if (n !== t.seq) return { ...broken(lastSeq, t.seq, "events before the trusted checkpoint were deleted or inserted"), anchoring };
+    }
+    const rows = this.db.prepare("SELECT * FROM audit_log WHERE seq > ? ORDER BY seq").all(t.seq);
+    let prevHash = t.seq > 0 ? t.hash : GENESIS_HASH;
+    let expectedSeq = t.seq + 1;
+    const hashes = new Map<number, string>();
+    for (const raw of rows) {
+      const e = rowToEntry(raw as Record<string, unknown>);
+      if (e.seq !== expectedSeq) return { ...broken(lastSeq, e.seq, "sequence gap"), anchoring };
+      if (e.prevHash !== prevHash) return { ...broken(lastSeq, e.seq, "prev_hash mismatch"), anchoring };
+      const { hash, ...body } = e;
+      if (sha256(canonicalJson(body)) !== hash) return { ...broken(lastSeq, e.seq, "content hash mismatch"), anchoring };
+      hashes.set(e.seq, hash);
+      prevHash = hash;
+      expectedSeq++;
+    }
+    if (anchoring === "none") return { valid: true, entries: lastSeq, anchoring };
+    const a = this.anchor.readAfter(t.seq);
+    if (a.truncated) return { ...broken(lastSeq, t.seq, "anchor store was truncated or replaced"), anchoring };
+    if (!a.present && lastSeq > 0) return { ...broken(lastSeq, 1, "anchor store missing while audit log has events"), anchoring };
+    if (a.invalidSignatures > 0) return { ...broken(lastSeq, 0, `${a.invalidSignatures} anchor entr(y/ies) with invalid signature`), anchoring };
+    const anchored = new Map<number, string>();
+    for (const e of a.entries) {
+      const prior = anchored.get(e.seq);
+      if (prior !== undefined && prior !== e.hash) return { ...broken(lastSeq, e.seq, "conflicting anchors for the same event"), anchoring };
+      anchored.set(e.seq, e.hash);
+    }
+    for (const [seq, hash] of anchored) {
+      const dbHash = hashes.get(seq);
+      if (dbHash === undefined) return { ...broken(lastSeq, seq, "anchored event missing from audit log (deletion or truncation)"), anchoring };
+      if (dbHash !== hash) return { ...broken(lastSeq, seq, "anchored hash differs from audit log (rewritten history)"), anchoring };
+    }
+    let pending = 0;
+    for (let seq = t.seq + 1; seq <= lastSeq; seq++) {
+      if (anchored.has(seq)) continue;
+      if (seq <= lastSeq - ANCHOR_PENDING_WINDOW) return { ...broken(lastSeq, seq, "event has no anchor (inserted outside the audit API)"), anchoring };
+      pending++;
+    }
+    return { valid: true, entries: lastSeq, anchoring, pendingAnchors: pending };
+  }
+
+  private verifyFullAndTrust(): VerifyResult {
+    const r = this.verify();
+    if (!r.valid) {
+      this.trusted = null;
+      return r;
+    }
+    // نقطة الثقة خلف الذيل بنافذة التثبيت المعلّق، فالأحداث غير المثبتة بعد تُفحص مجددًا في كل تحقق سريع.
+    const seq = Math.max(0, r.entries - ANCHOR_PENDING_WINDOW);
+    const row = seq > 0 ? (this.db.prepare("SELECT hash FROM audit_log WHERE seq = ?").get(seq) as { hash: string }) : null;
+    this.trusted = { seq, hash: row?.hash ?? GENESIS_HASH, at: this.clock.now().getTime() };
+    if (this.anchor.kind !== "none") this.anchor.readAfter(seq); // تهيئة موضع القراءة التزايدية بعد القراءة الكاملة
+    return r;
   }
 
   /** يرمي خطأ إن كانت السلسلة تالفة. يُستدعى عند الإقلاع وفي evals. */

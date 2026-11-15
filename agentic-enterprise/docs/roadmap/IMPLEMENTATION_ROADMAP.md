@@ -36,7 +36,7 @@
 | CI لهذا المشروع: typecheck، وtest، وeval، وPostgreSQL، وطفرات على PR | ✅ | `.github/workflows/agentic-enterprise.yml` بتفويض صاحب المستودع |
 | فحص الأسرار، وSBOM (`npm sbom`)، و`npm audit` في CI | ✅ | أول تدقيق كشف ثغرتين عاليتين (zod وbody-parser) وأُصلحتا |
 | اختبار النسخ والاستعادة | ✅ | `ops backup` و`backup verify`، وتمرين آلي في `ops/backup.test.ts` (SQLite). PostgreSQL: pg_dump يدوي |
-| تحقق audit تزايدي (بدل O(n)) | ⬜ | عند تجاوز 100 ألف حدث |
+| تحقق audit تزايدي (بدل O(n)) | ✅ | ADR-018: 13 مللي ثانية مقابل 2.0 ثانية عند 100 ألف حدث |
 | سجلات منظمة مع correlation وtrace ID، وOpenTelemetry | 🟡 | JSON مع requestId في الخادم. OpenTelemetry لم يُنفذ |
 | ميزانيات تكلفة تراكمية مفروضة لكل وكيل | ✅ | `AGENT_DAILY_BUDGET_USD` و`dailyBudgetUsd`، وتنبيها BUDGET_NEAR وBUDGET_EXHAUSTED |
 | اختبارات حمل | ⬜ | |
@@ -63,7 +63,7 @@
 | تكامل n8n حقيقي (الاتجاهان) | ✅ ADR-015، و`e2e:n8n` |
 | تكاملات حقيقية: ERP، وبنك، وMCP | ⛔ تحتاج بيئات وبيانات اعتماد |
 | SSO أو WebAuthn لمفاتيح الموافقين | ⛔ يحتاج مزود هوية |
-| تصدير رأس audit لطرف ثالث | ⬜ |
+| تصدير رأس audit لطرف ثالث | ✅ ADR-018. اختيار الشاهد الفعلي (جهة أو خدمة) ⛔ قرار تشغيلي |
 | RoPA وإشعار الخصوصية وسياسة الاحتفاظ (PDPL) | ⬜ |
 
 ## المرحلة 5: التوسع التجاري (P3)

@@ -5,6 +5,7 @@ import { ALL_AGENTS } from "../agents/index.ts";
 import { parseAnchorKey } from "../platform/audit/anchor.ts";
 import { backupUnits, dataRootUnits, keyForUnit, verifyBackup } from "./backup.ts";
 import { runControlCommand } from "./tenants-cli.ts";
+import { FileCheckpointSink, HttpCheckpointSink, makeCheckpoint, readCheckpointFile, verifyAgainstCheckpoints } from "../platform/audit/checkpoint.ts";
 import { resolvePotentialMatch } from "../agents/compliance/human-actions.ts";
 import { loadConfig } from "../platform/config.ts";
 import { defaultFixtures, type Fixtures } from "../platform/connectors/mock/fixtures.ts";
@@ -38,6 +39,8 @@ import { computeMetrics } from "./metrics.ts";
  *   npm run ops -- release --as <operator> --key <pem> --note "…"   رفع الإيقاف (لا يستأنف التنفيذ تلقائيًا)
  *   npm run ops -- resume --as <operator> --key <pem>                تنفيذ الموافقات المعلّقة بعد رفع الإيقاف
  *   npm run ops -- audit verify | audit tail [n] | audit task <taskId>
+ *   npm run ops -- audit checkpoint --key <checkpoint.pem> --out <witness.jsonl>    رأس السلسلة موقّعًا إلى شاهد خارجي (أو AUDIT_WITNESS_URL)
+ *   npm run ops -- audit witness-verify <witness.jsonl> --pub <checkpoint.pub.pem>   مطابقة السجل مع نقاط الشاهد
  *   npm run ops -- backup --out <dir> [--data-root <DATA_ROOT>]     نسخة متسقة مع تثبيت مقصوص وmanifest
  *   npm run ops -- backup verify <dir> [--data-root .]               تحقق من النسخة (hashes وسلسلة audit)
  *   npm run ops -- reset-demo --confirm                     حذف البيانات المحلية (بيئة التطوير فقط)
@@ -82,6 +85,8 @@ const { positionals, values } = parseArgs({
     "ttl-days": { type: "string" },
     "data-root": { type: "string" },
     residency: { type: "string" },
+    pub: { type: "string" },
+    scope: { type: "string" },
   },
 });
 const [cmd, ...args] = positionals;
@@ -286,7 +291,26 @@ async function main(): Promise<void> {
         } else if (sub === "tail" || sub === "task") {
           const all = sub === "task" ? p.audit.query({ taskId: arg }) : p.audit.query().slice(-Number(arg ?? 20));
           table(all.map((e) => ({ seq: e.seq, ts: e.ts.slice(0, 19), actor: `${e.actor.type}:${e.actor.id}`, action: e.action, outcome: e.outcome, data: JSON.stringify(e.data).slice(0, 80) })));
-        } else throw new Error("usage: audit verify | audit tail [n] | audit task <taskId>");
+        } else if (sub === "checkpoint") {
+          const keyFile = values.key ?? process.env.AUDIT_CHECKPOINT_KEY_FILE;
+          if (!keyFile) throw new Error("audit checkpoint requires --key <checkpoint-private.pem> or AUDIT_CHECKPOINT_KEY_FILE");
+          const v = p.audit.verify(); // لا يُوقَّع رأس سجل تالف أبدًا
+          if (!v.valid) throw new Error(`Refusing to checkpoint a broken audit chain (seq ${v.firstBrokenSeq}: ${v.reason})`);
+          const c = makeCheckpoint(p.db, values.scope ?? "default", readFileSync(keyFile, "utf8"), new Date());
+          const witnessUrl = process.env.AUDIT_WITNESS_URL;
+          const sinks = [...(values.out ? [new FileCheckpointSink(values.out)] : []), ...(witnessUrl ? [new HttpCheckpointSink(witnessUrl)] : [])];
+          if (!sinks.length) throw new Error("audit checkpoint needs --out <witness.jsonl> and/or AUDIT_WITNESS_URL");
+          for (const sink of sinks) await sink.publish(c);
+          console.log(`Checkpoint seq ${c.seq} ${c.hash.slice(0, 16)}… signed by ${c.keyFingerprint}, sent to ${sinks.map((x) => x.kind).join(", ")}`);
+        } else if (sub === "witness-verify") {
+          if (!arg || !values.pub) throw new Error("usage: audit witness-verify <checkpoints.jsonl> --pub <checkpoint-public.pem> [--scope <scope>]");
+          // الشاهد يتحقق من رؤوس السلسلة المُصدَّرة؛ السلسلة المحلية تتحقق من كل صف. النتيجة "سليم" تتطلب الاثنين.
+          const r = verifyAgainstCheckpoints(p.db, readCheckpointFile(arg), readFileSync(values.pub, "utf8"), values.scope);
+          const local = p.audit.verify();
+          console.log(r.ok ? `Witness: ${r.checked} checkpoint(s) match the audit log` : `WITNESS MISMATCH:\n  ${r.problems.join("\n  ")}`);
+          console.log(local.valid ? `Local chain: intact (${local.entries} entries)` : `LOCAL CHAIN BROKEN at seq ${local.firstBrokenSeq}: ${local.reason}`);
+          if (!r.ok || !local.valid) process.exitCode = 3;
+        } else throw new Error("usage: audit verify | audit tail [n] | audit task <taskId> | audit checkpoint --key <pem> --out <file> | audit witness-verify <file> --pub <pem>");
         break;
       }
       default:

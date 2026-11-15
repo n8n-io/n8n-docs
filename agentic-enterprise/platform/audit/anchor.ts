@@ -1,5 +1,5 @@
 import { createHmac, timingSafeEqual } from "node:crypto";
-import { appendFileSync, existsSync, mkdirSync, readFileSync } from "node:fs";
+import { appendFileSync, closeSync, existsSync, fstatSync, mkdirSync, openSync, readFileSync, readSync } from "node:fs";
 import { dirname } from "node:path";
 
 /**
@@ -32,6 +32,11 @@ export interface AuditAnchor {
   readonly kind: "file" | "memory" | "none";
   record(seq: number, hash: string, ts: string): void;
   read(): AnchorRead;
+  /**
+   * قراءة تزايدية: التثبيتات ذات seq > afterSeq فقط، دون إعادة قراءة كل الملف.
+   * `truncated` يعني أن المخزن صار أقصر مما قُرئ سابقًا: تلاعب (الملف append-only).
+   */
+  readAfter(afterSeq: number): AnchorRead & { truncated: boolean };
 }
 
 function sign(key: Buffer, seq: number, hash: string, ts: string): string {
@@ -73,6 +78,43 @@ export class HmacFileAnchor implements AuditAnchor {
     }
     return { present: true, entries, invalidSignatures: invalid };
   }
+
+  // حالة القراءة التزايدية: موضع آخر بايت قُرئ، والتثبيتات المقروءة بعد آخر نقطة ثقة.
+  private offset = 0;
+  private tail: AnchorEntry[] = [];
+  private tailInvalid = 0;
+  private partial = "";
+
+  readAfter(afterSeq: number): AnchorRead & { truncated: boolean } {
+    if (!existsSync(this.path)) return { present: false, entries: [], invalidSignatures: 0, truncated: this.offset > 0 };
+    const fd = openSync(this.path, "r");
+    try {
+      const size = fstatSync(fd).size;
+      if (size < this.offset) return { present: true, entries: [], invalidSignatures: 0, truncated: true };
+      if (size > this.offset) {
+        const buf = Buffer.alloc(size - this.offset);
+        readSync(fd, buf, 0, buf.length, this.offset);
+        this.offset = size;
+        const text = this.partial + buf.toString("utf8");
+        const lines = text.split("\n");
+        this.partial = lines.pop() ?? ""; // سطر لم يكتمل بعد (كاتب متزامن): يُستكمل في القراءة التالية
+        for (const line of lines) {
+          if (!line.trim()) continue;
+          try {
+            const e = JSON.parse(line) as AnchorEntry;
+            if (validSig(this.key, e)) this.tail.push(e);
+            else this.tailInvalid++;
+          } catch {
+            this.tailInvalid++;
+          }
+        }
+      }
+    } finally {
+      closeSync(fd);
+    }
+    this.tail = this.tail.filter((e) => e.seq > afterSeq); // لا حاجة لما قبل نقطة الثقة
+    return { present: true, entries: [...this.tail], invalidSignatures: this.tailInvalid, truncated: false };
+  }
 }
 
 /** للاختبارات: نفس منطق التوقيع، في الذاكرة. */
@@ -87,6 +129,14 @@ export class MemoryAnchor implements AuditAnchor {
     const entries = this.lines.filter((e) => validSig(this.key, e));
     return { present: true, entries, invalidSignatures: this.lines.length - entries.length };
   }
+  private seen = 0;
+  readAfter(afterSeq: number): AnchorRead & { truncated: boolean } {
+    const truncated = this.lines.length < this.seen;
+    this.seen = this.lines.length;
+    const after = this.lines.filter((e) => e.seq > afterSeq);
+    const entries = after.filter((e) => validSig(this.key, e));
+    return { present: true, entries, invalidSignatures: after.length - entries.length, truncated };
+  }
 }
 
 /** بلا تثبيت (تطوير محلي فقط). التحقق يعلن ذلك صراحة، والمراقبة تطلق تنبيهًا. */
@@ -95,6 +145,9 @@ export class NoAnchor implements AuditAnchor {
   record(): void {}
   read(): AnchorRead {
     return { present: false, entries: [], invalidSignatures: 0 };
+  }
+  readAfter(): AnchorRead & { truncated: boolean } {
+    return { present: false, entries: [], invalidSignatures: 0, truncated: false };
   }
 }
 

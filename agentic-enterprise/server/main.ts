@@ -1,4 +1,6 @@
+import { readFileSync } from "node:fs";
 import { join } from "node:path";
+import { FileCheckpointSink, HttpCheckpointSink, makeCheckpoint, type CheckpointSink } from "../platform/audit/checkpoint.ts";
 import { HmacFileAnchor, parseAnchorKey } from "../platform/audit/anchor.ts";
 import { loadConfig } from "../platform/config.ts";
 import { systemClock } from "../platform/core/util.ts";
@@ -33,6 +35,35 @@ const server = createApi({ control, tenants, log });
 
 let stopping = false;
 let lastPrune = 0;
+
+// نقاط تحقق دورية لكل مستأجر إلى شاهد خارجي (ADR-018). تتطلب مفتاح التوقيع ووجهة واحدة على الأقل.
+const checkpointKey = process.env.AUDIT_CHECKPOINT_KEY_FILE ? readFileSync(process.env.AUDIT_CHECKPOINT_KEY_FILE, "utf8") : null;
+const checkpointSinks: CheckpointSink[] = [
+  ...(process.env.AUDIT_WITNESS_FILE ? [new FileCheckpointSink(process.env.AUDIT_WITNESS_FILE)] : []),
+  ...(process.env.AUDIT_WITNESS_URL ? [new HttpCheckpointSink(process.env.AUDIT_WITNESS_URL)] : []),
+];
+const CHECKPOINT_INTERVAL_MS = Number(process.env.AUDIT_CHECKPOINT_INTERVAL_MS ?? 3_600_000);
+let lastCheckpoint = 0;
+if (!checkpointKey || !checkpointSinks.length) log.log("warn", "audit witness checkpoints disabled: set AUDIT_CHECKPOINT_KEY_FILE and AUDIT_WITNESS_FILE or AUDIT_WITNESS_URL");
+
+async function checkpointAll(): Promise<void> {
+  if (!checkpointKey || !checkpointSinks.length) return;
+  for (const t of control.listTenants().filter((x) => x.status === "active")) {
+    try {
+      const p = tenants.get(t.id);
+      const v = p.audit.verify();
+      if (!v.valid) {
+        log.log("error", "checkpoint.refused_broken_chain", { tenant: t.id, seq: v.firstBrokenSeq, reason: v.reason });
+        continue;
+      }
+      const c = makeCheckpoint(p.db, `tenant:${t.id}`, checkpointKey, new Date());
+      for (const sink of checkpointSinks) await sink.publish(c);
+      log.log("info", "checkpoint.published", { tenant: t.id, seq: c.seq });
+    } catch (err) {
+      log.log("error", "checkpoint.failed", { tenant: t.id, error: (err as Error).message });
+    }
+  }
+}
 let working = false;
 async function workOnce(): Promise<void> {
   if (working || stopping) return;
@@ -50,6 +81,10 @@ async function workOnce(): Promise<void> {
       } catch (err) {
         log.log("error", "worker.tenant_failed", { tenant: t.id, error: (err as Error).message });
       }
+    }
+    if (Date.now() - lastCheckpoint >= CHECKPOINT_INTERVAL_MS) {
+      lastCheckpoint = Date.now();
+      await checkpointAll();
     }
   } finally {
     if (Date.now() - lastPrune > 10 * 60_000) lastPrune = Date.now();

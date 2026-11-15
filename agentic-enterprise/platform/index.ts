@@ -26,6 +26,8 @@ import { ClaudeAgentRuntime } from "./runtime/claude-runtime.ts";
 import { ScriptedRuntime, type AgentRuntime } from "./runtime/runtime.ts";
 import { ToolExecutor } from "./tools/executor.ts";
 import { parseRoutes } from "./policy/data-routing.ts";
+import { PrivacyService } from "./privacy/privacy-service.ts";
+import { SubjectVault } from "./privacy/vault.ts";
 
 /**
  * حاوية المنصة: تبني كل المكونات وتربطها. نقطة الدخول الوحيدة لتشغيل النظام أو اختباره.
@@ -47,6 +49,10 @@ export interface Platform {
   runtime: AgentRuntime;
   keys: ApproverKeyRegistry;
   agents: AgentRegistry;
+  /** خزنة مفاتيح أصحاب البيانات (crypto-shredding). */
+  vault: SubjectVault;
+  /** حق المحو والختم والتعليق القانوني. */
+  privacy: PrivacyService;
   /** مستقبل أحداث n8n. null إذا لم يُضبط N8N_INBOUND_SECRET. */
   inbound: N8nInbound | null;
   register(...agents: AgentDefinition[]): Platform;
@@ -117,7 +123,11 @@ export function createPlatform(opts: CreatePlatformOptions = {}): Platform {
     executor: () => executor, connectors, maxAttempts: 3, defaultTimeoutMs: config.AGENT_TIMEOUT_MS, humanAuth: { mode: config.APPROVER_AUTH, keys }, registry: agentRegistry, requireDeploy: config.AGENT_REQUIRE_DEPLOY, maxHandoffDepth: config.AGENT_MAX_HANDOFF_DEPTH, dailyBudgetUsd: config.AGENT_DAILY_BUDGET_USD,
     dataPolicy: { routes: parseRoutes(config.MODEL_ROUTES, config.AGENT_MODEL), residency: config.DATA_RESIDENCY },
   });
+  const vault = new SubjectVault(db, clock);
+  const privacy = new PrivacyService({ db, audit, vault, memory, orchestrator, connectors, directory, clock, humanAuth: { mode: config.APPROVER_AUTH, keys } });
+  escalations.sealer = (taskId) => privacy.sealFor(taskId);
   executor = new ToolExecutor({
+    sealFor: (taskId) => privacy.sealFor(taskId),
     audit, gate, escalations, memory, killSwitch, connectors, clock,
     getTask: (id) => orchestrator.get(id),
     getAgent: (id) => orchestrator.agent(id),
@@ -130,6 +140,8 @@ export function createPlatform(opts: CreatePlatformOptions = {}): Platform {
 
   const platform: Platform = {
     inbound,
+    vault,
+    privacy,
     config, db, clock, audit, gate, escalations, notifier, memory, killSwitch, directory, connectors, executor, orchestrator, runtime,
     keys,
     agents: agentRegistry,

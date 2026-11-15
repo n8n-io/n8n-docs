@@ -63,6 +63,7 @@ export const sanctionsScreenerAgent = defineAgent({
   version: "1.0.0",
   // يفحص أسماء أفراد، فبياناته شخصية: لا تُرسل لنموذج إلا عبر مسار معتمد لهذه الفئة.
   dataClass: "personal",
+  dataSubject: (task) => (typeof task.input.partyId === "string" ? task.input.partyId : null),
   domain: "compliance",
   name: "Sanctions Screener",
   title: "Sanctions Screening Analyst",

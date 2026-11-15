@@ -330,6 +330,7 @@ npm run ops -- audit task <id>   # كل ما جرى في مهمة
 | التحقق من audit | يوميًا، وقبل أي رفع إيقاف | `ops audit verify` (كامل) |
 | مطابقة السجل مع الشاهد | أسبوعيًا، وبعد أي حادث | `ops audit witness-verify <witness.jsonl> --pub <checkpoint.pub.pem>`. يفحص نقاط الشاهد والسلسلة المحلية معًا |
 | نسخ احتياطي | يوميًا | `npm run ops -- backup --out <dir>` (أو `--data-root` للخادم)، ثم `npm run ops -- backup verify <dir>`. التفاصيل في [`DISASTER_RECOVERY.md`](DISASTER_RECOVERY.md) |
+| طلب محو بيانات شخصية (PDPL/GDPR) | عند الطلب، بعد التحقق من هوية الطالب | `npm run ops -- privacy erase <subjectId> --as <compliance officer> --key <pem> --note "<المرجع>"`. يُرفض عند تعليق قانوني. **امحُ في ERP والأنظمة المرجعية أيضًا** |
 | تقرير الاستخدام الشهري | شهريًا (أساس الفوترة) | `npm run ops -- usage --month 2029-03 [--json]`، أو `GET /v1/usage?month=2029-03` بنطاق `ops:read` |
 | اختبار الحمل | قبل أي ترقية للبنية | `npm run load -- --tasks 600 --workers 1,2,4` (ومع `TEST_POSTGRES_URL`) |
 | تدوير رموز API | قبل انتهائها (90 يومًا افتراضيًا) | `ops tokens issue … --ttl-days N`، ثم `ops tokens revoke` للقديم |

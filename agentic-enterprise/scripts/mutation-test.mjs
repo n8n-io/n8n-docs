@@ -115,6 +115,10 @@ const MUTATIONS = [
   ["audit-fast: anchor truncation", "platform/audit/anchor.ts", "if (size < this.offset) return { present: true, entries: [], invalidSignatures: 0, truncated: true };", ""],
   ["witness: signature checked", "platform/audit/checkpoint.ts", "    if (!checkpointSignatureValid(c, publicKeyPem)) {", "    if (false) {"],
   ["witness: hash compared", "platform/audit/checkpoint.ts", '    else if (row.hash !== c.hash) problems.push', "    else if (false) problems.push"],
+  ["privacy: tool outputs sealed", "platform/tools/executor.ts", 'log("success", { permission: tool.permission, output: seal ? seal(truncate(output)) : truncate(output) });', 'log("success", { permission: tool.permission, output: truncate(output) });'],
+  ["privacy: erasure role", "platform/privacy/privacy-service.ts", 'if (!human.roles.includes("compliance_officer")) deny', "if (false) deny"],
+  ["privacy: legal hold", "platform/privacy/privacy-service.ts", "if (hold) deny", "if (false) deny"],
+  ["privacy: no key recreated after erasure", "platform/privacy/vault.ts", "if (row) return row.key_b64 && !row.erased_at ? Buffer.from(row.key_b64, \"base64\") : null;", "if (row && row.key_b64) return Buffer.from(row.key_b64, \"base64\");"],
   // المشتريات
   ["procurement: decision guard", A + "procurement/requisition-intake/guardrails/decision-matches-assessment.ts", "check: (call, ctx) => {", "check: (call, ctx) => { if (1) return allow;"],
   ["procurement: split detection", A + "procurement/shared/assessment.ts", "if (prior.length > 0 && g.totalUsd", "if (false && g.totalUsd"],

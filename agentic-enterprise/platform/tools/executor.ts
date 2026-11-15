@@ -7,7 +7,7 @@ import { assertAuditIntegrity } from "../audit/integrity.ts";
 import type { Connectors } from "../connectors/types.ts";
 import { isPlatformError } from "../core/errors.ts";
 import type { KillSwitch } from "../core/kill-switch.ts";
-import { HUMAN_ROLES, type JsonObject } from "../core/types.ts";
+import { HUMAN_ROLES, type JsonObject, type JsonValue } from "../core/types.ts";
 import { hashObject, type Clock } from "../core/util.ts";
 import { ESCALATION_REASONS, type EscalationService } from "../escalation/escalation.ts";
 import type { MemoryStore } from "../memory/memory-store.ts";
@@ -38,6 +38,8 @@ export interface ExecutorDeps {
   getTask(id: string): Task;
   getAgent(id: string): AgentDefinition;
   registry: AgentRegistry;
+  /** إن أعاد صاحب بيانات للمهمة، تُختم مخرجات الأدوات في audit بمفتاحه (crypto-shredding). */
+  sealFor?: (taskId: string) => ((value: JsonValue) => JsonValue) | null;
 }
 
 export class ToolExecutor {
@@ -150,7 +152,8 @@ export class ToolExecutor {
 
     try {
       const output = await tool.handler(input, ctx);
-      log("success", { permission: tool.permission, output: truncate(output) });
+      const seal = this.deps.sealFor?.(taskId);
+      log("success", { permission: tool.permission, output: seal ? seal(truncate(output)) : truncate(output) });
       return { status: "ok", output };
     } catch (err) {
       return this.failure(log, err);
@@ -203,7 +206,8 @@ export class ToolExecutor {
         throw new Error(`Tool ${tool.name} completed without redeeming its approval grant`);
       }
       gate.recordResult(approvalId, { output: truncate(output) });
-      log("success", { output: truncate(output) });
+      const seal = this.deps.sealFor?.(approval.taskId);
+      log("success", { output: seal ? seal(truncate(output)) : truncate(output) });
       return { status: "ok", output };
     } catch (err) {
       const message = err instanceof Error ? err.message : String(err);

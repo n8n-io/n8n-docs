@@ -2,7 +2,7 @@ import type { AuditLog } from "../audit/audit-log.ts";
 import type { Database } from "../core/db.ts";
 import { parseJson, transaction } from "../core/db.ts";
 import { PlatformError } from "../core/errors.ts";
-import type { HumanRole, JsonObject } from "../core/types.ts";
+import type { HumanRole, JsonObject, JsonValue } from "../core/types.ts";
 import { newId, type Clock } from "../core/util.ts";
 
 /**
@@ -77,6 +77,9 @@ export class InMemoryNotifier implements EscalationNotifier {
 }
 
 export class EscalationService {
+  /** يُضبط بعد بناء المنسق: يختم الملخص في audit لمهام أصحاب البيانات الشخصية. */
+  sealer: ((taskId: string) => ((value: JsonValue) => JsonValue) | null) | null = null;
+
   constructor(
     private readonly db: Database,
     private readonly audit: AuditLog,
@@ -127,7 +130,7 @@ export class EscalationService {
       target: e.id,
       taskId: e.taskId,
       outcome: "info",
-      data: { reason: e.reason, severity: e.severity, toRole: e.toRole, summary: e.summary },
+      data: { reason: e.reason, severity: e.severity, toRole: e.toRole, summary: this.sealer?.(e.taskId)?.(e.summary) ?? e.summary },
     });
     this.notifier.notify(e);
     return e;

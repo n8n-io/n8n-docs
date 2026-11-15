@@ -39,6 +39,7 @@ import { computeMetrics } from "./metrics.ts";
  *   npm run ops -- kill "<reason>" --as <human>             إيقاف طارئ فوري
  *   npm run ops -- release --as <operator> --key <pem> --note "…"   رفع الإيقاف (لا يستأنف التنفيذ تلقائيًا)
  *   npm run ops -- resume --as <operator> --key <pem>                تنفيذ الموافقات المعلّقة بعد رفع الإيقاف
+ *   npm run ops -- privacy erase <subjectId> --as <compliance officer> --key <pem> --note "…"   حق المحو (crypto-shredding)
  *   npm run ops -- usage [--month 2029-03 | --from <iso> --to <iso>] [--json]   تقرير الاستخدام من audit (للفوترة)
  *   npm run ops -- audit verify | audit tail [n] | audit task <taskId>
  *   npm run ops -- audit checkpoint --key <checkpoint.pem> --out <witness.jsonl>    رأس السلسلة موقّعًا إلى شاهد خارجي (أو AUDIT_WITNESS_URL)
@@ -287,6 +288,15 @@ async function main(): Promise<void> {
         table(done.map((t) => ({ task: t.id, type: t.type, status: t.status })));
         break;
       }
+      case "privacy": {
+        const [sub, subject] = args;
+        if (sub !== "erase" || !subject) throw new Error('usage: privacy erase <subjectId> --as <compliance officer> --key <pem> --note "<legal basis / request ref>"');
+        const human = requireHuman(p);
+        const r = p.privacy.erase(subject, human, values.note, signIfRequired(p, human, "privacy.erase_subject/v1", subject, { note: values.note }));
+        console.log(`Subject ${subject} erased: key shredded, ${r.memoryDeleted} memory record(s) deleted, ${r.tasksRedacted} task output(s) and ${r.escalationsRedacted} escalation(s) redacted. Audit chain unchanged.`);
+        console.log("Note: backups taken before now still hold the key until they expire; the system of record (ERP) must be erased separately.");
+        break;
+      }
       case "usage": {
         const range = values.from || values.to ? { from: values.from ?? "1970-01-01T00:00:00.000Z", to: values.to ?? new Date().toISOString() } : monthRange(new Date(), values.month);
         const u = computeUsage(p.db, range.from, range.to);
@@ -305,7 +315,7 @@ async function main(): Promise<void> {
           if (!v.valid) process.exitCode = 3;
         } else if (sub === "tail" || sub === "task") {
           const all = sub === "task" ? p.audit.query({ taskId: arg }) : p.audit.query().slice(-Number(arg ?? 20));
-          table(all.map((e) => ({ seq: e.seq, ts: e.ts.slice(0, 19), actor: `${e.actor.type}:${e.actor.id}`, action: e.action, outcome: e.outcome, data: JSON.stringify(e.data).slice(0, 80) })));
+          table(all.map((e) => ({ seq: e.seq, ts: e.ts.slice(0, 19), actor: `${e.actor.type}:${e.actor.id}`, action: e.action, outcome: e.outcome, data: JSON.stringify(p.vault.openAll(e.data)).slice(0, 80) })));
         } else if (sub === "checkpoint") {
           const keyFile = values.key ?? process.env.AUDIT_CHECKPOINT_KEY_FILE;
           if (!keyFile) throw new Error("audit checkpoint requires --key <checkpoint-private.pem> or AUDIT_CHECKPOINT_KEY_FILE");

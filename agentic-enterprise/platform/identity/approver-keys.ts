@@ -65,7 +65,7 @@ export function generateApproverKeyPair(): { publicKeyPem: string; privateKeyPem
  * المبدأ: الإيقاف سهل دائمًا ولا يحتاج توقيعًا (fail-safe)، وكل ما يفتح أو يستأنف عملية يحتاج توقيعًا.
  * التوقيع يغطي الغرض (purpose) والموضوع (subject) وhash التفاصيل، فلا يُعاد استخدامه لغرض أو موضوع آخر.
  */
-export const HUMAN_ACTIONS = ["compliance.resolve_match/v1", "task.resolve_escalation/v1", "ops.release_stop/v1", "ops.resume_approved/v1", "agent.activate/v1"] as const;
+export const HUMAN_ACTIONS = ["compliance.resolve_match/v1", "task.resolve_escalation/v1", "ops.release_stop/v1", "ops.resume_approved/v1", "agent.activate/v1", "privacy.erase_subject/v1"] as const;
 export type HumanActionPurpose = (typeof HUMAN_ACTIONS)[number];
 
 export interface HumanActionProof {

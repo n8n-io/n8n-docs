@@ -17,6 +17,7 @@
     "serve": "NODE_OPTIONS=--disable-warning=ExperimentalWarning tsx server/main.ts",
     "e2e:console": "NODE_OPTIONS=--disable-warning=ExperimentalWarning tsx scripts/console-e2e.ts",
     "e2e:n8n": "NODE_OPTIONS=--disable-warning=ExperimentalWarning tsx scripts/n8n-live-e2e.ts",
+    "load": "NODE_OPTIONS=--disable-warning=ExperimentalWarning tsx scripts/load-test.ts",
     "mutation": "node scripts/mutation-test.mjs"
   },
   "dependencies": {

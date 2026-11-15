@@ -5,6 +5,7 @@ import { ALL_AGENTS } from "../agents/index.ts";
 import { parseAnchorKey } from "../platform/audit/anchor.ts";
 import { backupUnits, dataRootUnits, keyForUnit, verifyBackup } from "./backup.ts";
 import { runControlCommand } from "./tenants-cli.ts";
+import { computeUsage, monthRange } from "./usage.ts";
 import { FileCheckpointSink, HttpCheckpointSink, makeCheckpoint, readCheckpointFile, verifyAgainstCheckpoints } from "../platform/audit/checkpoint.ts";
 import { resolvePotentialMatch } from "../agents/compliance/human-actions.ts";
 import { loadConfig } from "../platform/config.ts";
@@ -38,6 +39,7 @@ import { computeMetrics } from "./metrics.ts";
  *   npm run ops -- kill "<reason>" --as <human>             إيقاف طارئ فوري
  *   npm run ops -- release --as <operator> --key <pem> --note "…"   رفع الإيقاف (لا يستأنف التنفيذ تلقائيًا)
  *   npm run ops -- resume --as <operator> --key <pem>                تنفيذ الموافقات المعلّقة بعد رفع الإيقاف
+ *   npm run ops -- usage [--month 2029-03 | --from <iso> --to <iso>] [--json]   تقرير الاستخدام من audit (للفوترة)
  *   npm run ops -- audit verify | audit tail [n] | audit task <taskId>
  *   npm run ops -- audit checkpoint --key <checkpoint.pem> --out <witness.jsonl>    رأس السلسلة موقّعًا إلى شاهد خارجي (أو AUDIT_WITNESS_URL)
  *   npm run ops -- audit witness-verify <witness.jsonl> --pub <checkpoint.pub.pem>   مطابقة السجل مع نقاط الشاهد
@@ -86,6 +88,9 @@ const { positionals, values } = parseArgs({
     "data-root": { type: "string" },
     residency: { type: "string" },
     pub: { type: "string" },
+    from: { type: "string" },
+    to: { type: "string" },
+    month: { type: "string" },
     scope: { type: "string" },
   },
 });
@@ -280,6 +285,16 @@ async function main(): Promise<void> {
         const ids = p.gate.list({ status: "approved" }).map((a) => a.id).sort();
         const done = await p.orchestrator.executePendingApproved(who, signIfRequired(p, who, "ops.resume_approved/v1", "pending-approved", { approvalIds: ids }));
         table(done.map((t) => ({ task: t.id, type: t.type, status: t.status })));
+        break;
+      }
+      case "usage": {
+        const range = values.from || values.to ? { from: values.from ?? "1970-01-01T00:00:00.000Z", to: values.to ?? new Date().toISOString() } : monthRange(new Date(), values.month);
+        const u = computeUsage(p.db, range.from, range.to);
+        if (values.json) console.log(JSON.stringify(u, null, 2));
+        else {
+          console.log(`\nUsage ${u.from.slice(0, 10)} -> ${u.to.slice(0, 10)}: ${u.tasks.submitted} tasks, ${u.toolCalls.total} tool calls (${u.toolCalls.denied} denied), ${u.approvals.requested} approvals requested, ${u.approvals.executed} executed, ${u.escalations} escalations, model $${u.model.costUsd.toFixed(4)} over ${u.model.runs} runs`);
+          table(Object.entries(u.tasks.byAgent).map(([agent, c]) => ({ agent, ...c, costUsd: (u.model.byAgent[agent] ?? 0).toFixed(4) })));
+        }
         break;
       }
       case "audit": {

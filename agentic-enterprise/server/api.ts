@@ -2,6 +2,7 @@ import { randomUUID } from "node:crypto";
 import { createServer, type IncomingMessage, type Server, type ServerResponse } from "node:http";
 import { z } from "zod";
 import { computeMetrics } from "../ops/metrics.ts";
+import { computeUsage, monthRange } from "../ops/usage.ts";
 import { isPlatformError, PlatformError, type PlatformErrorCode } from "../platform/core/errors.ts";
 import type { ApprovalRequest } from "../platform/approval/approval-gate.ts";
 import type { JsonObject } from "../platform/core/types.ts";
@@ -164,6 +165,15 @@ export function createApi(deps: ApiDeps): Server {
     ["GET", /^\/v1\/escalations$/, async (req) => {
       const pr = principal(req, "ops:read");
       return { status: 200, body: deps.tenants.get(pr.tenantId).escalations.list({ status: "open" }) };
+    }],
+    ["GET", /^\/v1\/usage$/, async (req) => {
+      const pr = principal(req, "ops:read");
+      const q = new URL(req.url ?? "/", "http://x").searchParams;
+      const iso = z.string().datetime();
+      const range = q.get("from") || q.get("to")
+        ? { from: iso.parse(q.get("from") ?? "1970-01-01T00:00:00.000Z"), to: iso.parse(q.get("to") ?? new Date().toISOString()) }
+        : monthRange(new Date(), q.get("month") ? z.string().regex(/^\d{4}-\d{2}$/).parse(q.get("month")) : undefined);
+      return { status: 200, body: { tenant: pr.tenantId, ...computeUsage(deps.tenants.get(pr.tenantId).db, range.from, range.to) } };
     }],
     ["GET", /^\/v1\/metrics$/, async (req) => {
       const pr = principal(req, "ops:read");

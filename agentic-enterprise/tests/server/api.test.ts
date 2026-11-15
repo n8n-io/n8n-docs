@@ -164,6 +164,14 @@ describe("HTTP API: end-to-end approval over HTTP requires the human's signature
 
     const task = await s.call("GET", `/v1/tasks/${created.json.id}`, t);
     expect(task.json.status).toBe("completed");
+
+    // تقرير الاستخدام للمستأجر، مشتق من audit
+    const usage = await s.call("GET", `/v1/usage?from=2000-01-01T00:00:00.000Z&to=2100-01-01T00:00:00.000Z`, t);
+    expect(usage.status).toBe(200);
+    expect(usage.json).toMatchObject({ tenant: "acme", tasks: { submitted: 2 }, approvals: { requested: 1, executed: 1 } });
+    expect(usage.json.tasks.byAgent["procurement.requisition-intake"]).toMatchObject({ submitted: 1, completed: 1 });
+    expect(usage.json.tasks.byAgent["procurement.po-issuer"]).toMatchObject({ submitted: 1, completed: 1 });
+    expect((await s.call("GET", "/v1/usage?from=not-a-date", t)).status).toBe(400);
     expect((await s.call("GET", "/v1/metrics", t)).json.audit.valid).toBe(true);
   });
 });

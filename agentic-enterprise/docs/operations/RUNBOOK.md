@@ -330,6 +330,8 @@ npm run ops -- audit task <id>   # كل ما جرى في مهمة
 | التحقق من audit | يوميًا، وقبل أي رفع إيقاف | `ops audit verify` (كامل) |
 | مطابقة السجل مع الشاهد | أسبوعيًا، وبعد أي حادث | `ops audit witness-verify <witness.jsonl> --pub <checkpoint.pub.pem>`. يفحص نقاط الشاهد والسلسلة المحلية معًا |
 | نسخ احتياطي | يوميًا | `npm run ops -- backup --out <dir>` (أو `--data-root` للخادم)، ثم `npm run ops -- backup verify <dir>`. التفاصيل في [`DISASTER_RECOVERY.md`](DISASTER_RECOVERY.md) |
+| تقرير الاستخدام الشهري | شهريًا (أساس الفوترة) | `npm run ops -- usage --month 2029-03 [--json]`، أو `GET /v1/usage?month=2029-03` بنطاق `ops:read` |
+| اختبار الحمل | قبل أي ترقية للبنية | `npm run load -- --tasks 600 --workers 1,2,4` (ومع `TEST_POSTGRES_URL`) |
 | تدوير رموز API | قبل انتهائها (90 يومًا افتراضيًا) | `ops tokens issue … --ttl-days N`، ثم `ops tokens revoke` للقديم |
 | اختبار الطفرات | مع كل تغيير في الحواجز أو التقييمات | `npm run mutation`، والمطلوب 0 missed |
 | evals حية | أسبوعيًا، ومع أي تغيير في النموذج أو البروموت | `npm run eval:live` (بسقف `EVAL_LIVE_MAX_TOTAL_USD`) |

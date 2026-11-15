@@ -17,6 +17,7 @@ import { verifyHumanAction, type ApproverKeyRegistry, type DecisionProof, type H
 import type { AgentRuntime } from "../runtime/runtime.ts";
 import { detectInjection } from "../security/untrusted.ts";
 import type { ToolExecutor } from "../tools/executor.ts";
+import { selectRoute, type ModelRoute } from "../policy/data-routing.ts";
 import { TERMINAL, TRANSITIONS, type Handoff, type Task, type TaskStatus } from "./task.ts";
 
 /**
@@ -64,6 +65,8 @@ export interface OrchestratorDeps {
   maxHandoffDepth?: number;
   /** سقف التكلفة التراكمية لكل وكيل خلال 24 ساعة متحركة (دولار). يتجاوزه تعريف الوكيل إن حدد dailyBudgetUsd. */
   dailyBudgetUsd?: number;
+  /** مسارات النماذج المعتمدة ومتطلب الإقامة. يُفرض قبل أي استدعاء لنموذج خارجي (المنفّذ الحي). */
+  dataPolicy?: { routes: ModelRoute[]; residency: string };
 }
 
 /** عدد مرات ظهور (نوع المهمة، hash المدخلات) نفسه بين الأسلاف قبل اعتبار السلسلة حلقة. يسمح بالاستئناف المشروع مرة واحدة. */
@@ -265,13 +268,27 @@ export class Orchestrator {
       this.deps.audit.append({ actor: { type: "system", id: "orchestrator" }, action: "security.injection_suspected", taskId, outcome: "info", data: { findings: injection as unknown as JsonObject[] } as unknown as JsonObject });
     }
 
+    // سياسة البيانات: قبل أن تغادر بيانات المهمة إلى نموذج خارجي. المنفّذ الحتمي لا يرسل شيئًا للخارج.
+    let model: string | undefined;
+    if (this.deps.runtime.kind === "live" && this.deps.dataPolicy) {
+      const dataClass = agent.dataClass ?? "confidential";
+      const decision = selectRoute(this.deps.dataPolicy.routes, { dataClass, residency: this.deps.dataPolicy.residency });
+      if (!decision.ok) {
+        this.deps.audit.append({ actor: { type: "system", id: "data-policy" }, action: "model.route_denied", taskId, outcome: "denied", data: { agentId: agent.id, dataClass, residency: this.deps.dataPolicy.residency, reason: decision.reason } });
+        this.deps.escalations.raise({ taskId, raisedBy: "data-policy", reason: "data_policy", severity: "high", toRole: agent.defaultEscalationRole, summary: `${decision.reason}. The model was not called; approve a route in MODEL_ROUTES or handle the task manually.` });
+        return this.transition(task, "escalated", { lastError: decision.reason });
+      }
+      model = decision.route.model;
+      this.deps.audit.append({ actor: { type: "system", id: "data-policy" }, action: "model.routed", taskId, outcome: "info", data: { agentId: agent.id, dataClass, routeId: decision.route.id, provider: decision.route.provider, model: decision.route.model, region: decision.route.region } });
+    }
+
     const executor = this.deps.executor();
     const abort = new AbortController();
     let timer: NodeJS.Timeout | undefined;
     let outcome: AgentOutcome;
     try {
       const result = await Promise.race([
-        this.deps.runtime.run({ agent, task, tools: executor.gatewayFor(agent, taskId, leaseId), toolList: executor.toolsFor(agent), signal: abort.signal, maxBudgetUsd: this.budgetRemaining(agent.id) }),
+        this.deps.runtime.run({ agent, task, tools: executor.gatewayFor(agent, taskId, leaseId), toolList: executor.toolsFor(agent), signal: abort.signal, maxBudgetUsd: this.budgetRemaining(agent.id), ...(model ? { model } : {}) }),
         new Promise<never>((_, reject) => {
           timer = setTimeout(() => (abort.abort(), reject(new Error(`Agent run exceeded timeout of ${timeoutMs} ms`))), timeoutMs);
         }),

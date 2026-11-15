@@ -25,6 +25,7 @@ import { Orchestrator } from "./orchestrator/orchestrator.ts";
 import { ClaudeAgentRuntime } from "./runtime/claude-runtime.ts";
 import { ScriptedRuntime, type AgentRuntime } from "./runtime/runtime.ts";
 import { ToolExecutor } from "./tools/executor.ts";
+import { parseRoutes } from "./policy/data-routing.ts";
 
 /**
  * حاوية المنصة: تبني كل المكونات وتربطها. نقطة الدخول الوحيدة لتشغيل النظام أو اختباره.
@@ -114,6 +115,7 @@ export function createPlatform(opts: CreatePlatformOptions = {}): Platform {
   const orchestrator = new Orchestrator({
     db, audit, gate, escalations, memory, killSwitch, directory, clock, runtime,
     executor: () => executor, connectors, maxAttempts: 3, defaultTimeoutMs: config.AGENT_TIMEOUT_MS, humanAuth: { mode: config.APPROVER_AUTH, keys }, registry: agentRegistry, requireDeploy: config.AGENT_REQUIRE_DEPLOY, maxHandoffDepth: config.AGENT_MAX_HANDOFF_DEPTH, dailyBudgetUsd: config.AGENT_DAILY_BUDGET_USD,
+    dataPolicy: { routes: parseRoutes(config.MODEL_ROUTES, config.AGENT_MODEL), residency: config.DATA_RESIDENCY },
   });
   executor = new ToolExecutor({
     audit, gate, escalations, memory, killSwitch, connectors, clock,

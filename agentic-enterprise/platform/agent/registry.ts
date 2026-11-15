@@ -69,7 +69,7 @@ export function definitionFingerprint(a: AgentDefinition): string {
     tools: a.tools.map((t) => ({ name: t.name, permission: t.permission, action: t.irreversible?.action ?? null, roles: t.irreversible?.roles ?? null, input: z.toJSONSchema(t.input, { io: "input" }) })),
     guardrails: a.guardrails.map((g) => ({ id: g.id, appliesTo: g.appliesTo })),
     prompt: hashObject(a.systemPrompt), memory: a.memory, handles: a.handles, canHandoffTo: a.canHandoffTo,
-    maxToolCalls: a.maxToolCalls, timeoutMs: a.timeoutMs ?? null, dailyBudgetUsd: a.dailyBudgetUsd ?? null, output: z.toJSONSchema(a.outputSchema, { io: "input" }),
+    maxToolCalls: a.maxToolCalls, timeoutMs: a.timeoutMs ?? null, dailyBudgetUsd: a.dailyBudgetUsd ?? null, dataClass: a.dataClass ?? "confidential", output: z.toJSONSchema(a.outputSchema, { io: "input" }),
     defaultEscalationRole: a.defaultEscalationRole, outcomeGuard: Boolean(a.outcomeGuard),
   });
 }

@@ -29,6 +29,8 @@ export const TenantIdSchema = z.string().regex(/^[a-z][a-z0-9-]{2,31}$/, "tenant
 export const TenantSettingsSchema = z.strictObject({
   /** اسم متغير البيئة الذي يحمل سر n8n الوارد لهذا المستأجر. السر نفسه لا يُخزَّن هنا. */
   n8nInboundSecretEnv: z.string().regex(/^[A-Z][A-Z0-9_]{2,63}$/).optional(),
+  /** منطقة إقامة البيانات المطلوبة لهذا المستأجر (مثل "sa"). تُفرض على البيانات الشخصية والمنظمة. */
+  dataResidency: z.string().regex(/^(any|[a-z]{2,10})$/).optional(),
 });
 export type TenantSettings = z.infer<typeof TenantSettingsSchema>;
 

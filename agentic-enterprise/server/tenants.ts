@@ -41,6 +41,7 @@ export class TenantPlatforms {
         ...this.base.config,
         DATABASE_PATH: join(dir, "enterprise.db"),
         DATABASE_SCHEMA: ControlPlane.tenantSchema(tenantId, this.base.schemaPrefix),
+        ...(tenant.settings.dataResidency ? { DATA_RESIDENCY: tenant.settings.dataResidency } : {}),
         KILL_SWITCH_FILE: join(dir, "KILL_SWITCH"),
         AUDIT_ANCHOR_FILE: join(dir, "audit-anchor.jsonl"),
         ...(inboundSecret ? { N8N_INBOUND_SECRET: inboundSecret } : { N8N_INBOUND_SECRET: undefined }),

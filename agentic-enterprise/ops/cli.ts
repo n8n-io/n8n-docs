@@ -81,6 +81,7 @@ const { positionals, values } = parseArgs({
     "n8n-secret-env": { type: "string" },
     "ttl-days": { type: "string" },
     "data-root": { type: "string" },
+    residency: { type: "string" },
   },
 });
 const [cmd, ...args] = positionals;

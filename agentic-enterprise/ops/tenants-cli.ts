@@ -5,7 +5,7 @@ import { API_SCOPES, ControlPlane, deriveTenantKey, type ApiScope } from "../pla
 
 /**
  * أوامر مستوى التحكم (تُشغَّل على الخادم بصلاحية الوصول إلى DATA_ROOT):
- *   npm run ops -- tenants create <id> --name "…" --as <operator> [--n8n-secret-env ACME_N8N_INBOUND_SECRET]
+ *   npm run ops -- tenants create <id> --name "…" --as <operator> [--n8n-secret-env ACME_N8N_INBOUND_SECRET] [--residency sa]
  *   npm run ops -- tenants list
  *   npm run ops -- tenants suspend|activate <id> --as <operator> --note "…"
  *   npm run ops -- tokens issue <tenantId> --scopes tasks:write,tasks:read --originator u-requester --label "…" --as <operator> [--ttl-days 90]
@@ -25,7 +25,11 @@ export function runControlCommand(cmd: string, args: string[], v: Record<string,
   try {
     if (cmd === "tenants") {
       if (sub === "create") {
-        const t = cp.createTenant(String(id), String(v.name ?? id), as(), typeof v["n8n-secret-env"] === "string" ? { n8nInboundSecretEnv: v["n8n-secret-env"] } : {});
+        const settings = {
+          ...(typeof v["n8n-secret-env"] === "string" ? { n8nInboundSecretEnv: v["n8n-secret-env"] } : {}),
+          ...(typeof v.residency === "string" ? { dataResidency: v.residency } : {}),
+        };
+        const t = cp.createTenant(String(id), String(v.name ?? id), as(), settings);
         console.log(`Tenant created: ${t.id} (${t.name}). Data directory: ${cp.tenantDir(t.id)}`);
       } else if (sub === "list") console.table(cp.listTenants().map((t) => ({ id: t.id, name: t.name, status: t.status, createdAt: t.createdAt, n8n: t.settings.n8nInboundSecretEnv ?? "-" })));
       else if (sub === "suspend" || sub === "activate") {

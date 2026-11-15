@@ -104,6 +104,10 @@ const MUTATIONS = [
   ["delegation: loop detection", "platform/orchestrator/orchestrator.ts", ": repeats >= MAX_SAME_HANDOFF_IN_CHAIN ?", ": false ?"],
   ["budget: claim blocked when exhausted", "platform/orchestrator/orchestrator.ts", "      if (this.budgetRemaining(task.assignee) <= 0) {", "      if (false) {"],
   ["budget: remaining passed to runtime", "platform/orchestrator/orchestrator.ts", "maxBudgetUsd: this.budgetRemaining(agent.id) }", "maxBudgetUsd: undefined }"],
+  ["data: route denial blocks model call", "platform/orchestrator/orchestrator.ts", "      if (!decision.ok) {", "      if (false) {"],
+  ["data: class ceiling", "platform/policy/data-routing.ts", "if (classRank(r.maxClass) < classRank(req.dataClass)) continue;", ""],
+  ["data: residency", "platform/policy/data-routing.ts", "if (residencyApplies && r.region !== req.residency) continue;", ""],
+  ["data: approval ref required", "platform/policy/data-routing.ts", 'if (classRank(r.maxClass) > classRank("confidential") && !r.approvalRef)', "if (false)"],
   // المشتريات
   ["procurement: decision guard", A + "procurement/requisition-intake/guardrails/decision-matches-assessment.ts", "check: (call, ctx) => {", "check: (call, ctx) => { if (1) return allow;"],
   ["procurement: split detection", A + "procurement/shared/assessment.ts", "if (prior.length > 0 && g.totalUsd", "if (false && g.totalUsd"],

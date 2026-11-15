@@ -72,6 +72,8 @@ export interface AgentDefinition {
   timeoutMs?: number;
   /** إصدار التعريف (semver). البصمة الكاملة تُحسب في AgentRegistry وتُسجَّل في audit عند أي تغيير. */
   version?: string;
+  /** أعلى فئة حساسية للبيانات التي يتعامل معها الوكيل. تحدد مسارات النماذج المسموحة. الافتراضي confidential. */
+  dataClass?: import("../policy/data-routing.ts").DataClass;
   /** سقف التكلفة خلال 24 ساعة لهذا الوكيل (دولار). الافتراضي AGENT_DAILY_BUDGET_USD. */
   dailyBudgetUsd?: number;
   /** أقصى مستوى استقلالية (0 إلى 4). الافتراضي 3: سير عمل بموافقات بشرية. المشغّل يستطيع خفضه وقت التشغيل. */

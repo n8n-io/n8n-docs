@@ -16,6 +16,8 @@ export interface RunRequest {
   signal?: AbortSignal;
   /** ما تبقى من ميزانية الوكيل اليومية. المنفّذ الحي يأخذ الأدنى بينه وبين سقف التشغيل الواحد. */
   maxBudgetUsd?: number;
+  /** النموذج الذي اختارته سياسة التوجيه. المنفّذ الحي يستخدمه بدل نموذجه الافتراضي. */
+  model?: string;
 }
 
 export interface RunResult {

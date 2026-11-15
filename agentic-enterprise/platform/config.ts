@@ -28,6 +28,10 @@ const ConfigSchema = z.object({
   /** أقصى عمق لسلسلة الإحالات بين الوكلاء. */
   /** سقف التكلفة التراكمية لكل وكيل خلال 24 ساعة متحركة (دولار). */
   AGENT_DAILY_BUDGET_USD: z.coerce.number().positive().default(50),
+  /** مسارات النماذج المعتمدة (JSON). الافتراضي: مسار واحد حتى confidential. انظر platform/policy/data-routing.ts. */
+  MODEL_ROUTES: z.string().optional(),
+  /** منطقة إقامة البيانات المطلوبة (مثل "sa"). "any" = لا اشتراط. في الخادم تأتي من إعداد المستأجر. */
+  DATA_RESIDENCY: z.string().regex(/^(any|[a-z]{2,10})$/).default("any"),
   AGENT_MAX_HANDOFF_DEPTH: z.coerce.number().int().min(1).max(50).default(6),
   /** مفتاح HMAC لتثبيت audit خارج القاعدة (32 بايت على الأقل، hex أو base64). يأتي من مدير الأسرار. */
   AUDIT_ANCHOR_KEY: z.string().optional(),

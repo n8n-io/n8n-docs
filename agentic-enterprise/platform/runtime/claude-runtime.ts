@@ -56,7 +56,7 @@ export class ClaudeAgentRuntime implements AgentRuntime {
       prompt: renderTaskPrompt(req.task),
       options: {
         abortController,
-        model: this.opts.model,
+        model: req.model ?? this.opts.model,
         systemPrompt: req.agent.systemPrompt,
         tools: [],
         mcpServers: { [SERVER]: server },

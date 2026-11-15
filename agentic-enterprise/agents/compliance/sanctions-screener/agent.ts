@@ -61,6 +61,8 @@ async function referencePolicy({ task, tools }: { task: Readonly<Task>; tools: T
 export const sanctionsScreenerAgent = defineAgent({
   id: "compliance.sanctions-screener",
   version: "1.0.0",
+  // يفحص أسماء أفراد، فبياناته شخصية: لا تُرسل لنموذج إلا عبر مسار معتمد لهذه الفئة.
+  dataClass: "personal",
   domain: "compliance",
   name: "Sanctions Screener",
   title: "Sanctions Screening Analyst",

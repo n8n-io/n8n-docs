@@ -54,6 +54,8 @@ npm run check                 # يجب أن ينجح قبل أي تشغيل: typ
 | `LOG_LEVEL` | `info` | سجلات JSON إلى stdout |
 | `EVAL_LIVE_MAX_TOTAL_USD` | `5` | سقف التكلفة الإجمالي لتشغيل `eval:live` |
 | `AGENT_DAILY_BUDGET_USD` | `50` | سقف تكلفة كل وكيل خلال 24 ساعة متحركة. عند بلوغه تنتظر مهامه، ويطلق تنبيه `BUDGET_EXHAUSTED`. التعريف يستطيع تحديد `dailyBudgetUsd` خاص |
+| `MODEL_ROUTES` | (مسار واحد حتى confidential) | مسارات النماذج المعتمدة (JSON): `[{id, provider, model, region, maxClass, approvalRef}]`. ما فوق confidential يتطلب `approvalRef` |
+| `DATA_RESIDENCY` | `any` | إقامة البيانات المطلوبة (مثل `sa`). في الخادم تأتي من المستأجر: `tenants create … --residency sa` |
 | `AGENT_MAX_HANDOFF_DEPTH` | `6` | أقصى عمق لسلسلة الإحالات. التجاوز، أو تكرار الإحالة نفسها مرتين في السلسلة، يُرفض ويُصعَّد (`delegation_limit`) |
 
 ---

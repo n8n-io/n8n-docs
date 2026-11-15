@@ -29,6 +29,7 @@ export const ESCALATION_REASONS = [
   "agent_requested",
   "runtime_error",
   "delegation_limit",
+  "data_policy",
 ] as const;
 export type EscalationReason = (typeof ESCALATION_REASONS)[number];
 

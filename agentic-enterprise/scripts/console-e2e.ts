@@ -27,6 +27,7 @@ interface Page {
   setInputFiles(sel: string, file: string): Promise<void>;
   textContent(sel: string): Promise<string | null>;
   evaluate<T>(fn: () => T): Promise<T>;
+  selectOption(sel: string, value: string): Promise<unknown>;
 }
 interface Browser {
   newPage(): Promise<Page>;
@@ -66,17 +67,28 @@ try {
   const errors: string[] = [];
   page.on("pageerror", (e) => errors.push(e.message));
   await page.goto(`${base}/console`);
-  await page.fill("#token", token);
-  await page.click("#connect");
-  await page.waitForSelector("text=Pending approvals");
-  await page.waitForSelector("text=Approve (sign)");
+  // العربية افتراضيًا، باتجاه من اليمين إلى اليسار
+  const dir = await page.evaluate(() => { const d = (globalThis as unknown as { document: { documentElement: { lang: string; dir: string } } }).document.documentElement; return `${d.lang}/${d.dir}`; });
+  if (dir !== "ar/rtl") fail(`expected ar/rtl by default, got ${dir}`);
+  await page.fill('[data-testid="token"]', token);
+  await page.click('[data-testid="connect"]');
+  await page.waitForSelector("text=الموافقات المعلّقة");
+  await page.waitForSelector('[data-testid="approve"]');
+  if (!(await page.textContent('[data-testid="approve"]'))?.includes("اعتماد")) fail("approve button not in Arabic");
   if (!(await page.textContent("main"))?.includes(XSS)) fail("untrusted text not shown literally in the approval card");
-  await page.setInputFiles('input[type="file"]', keyFile);
-  await page.waitForSelector("text=Key loaded locally");
-  await page.fill('input[placeholder^="your human id"]', "u-proc-mgr");
-  await page.fill('input[placeholder^="comment"]', "approved from console");
-  await page.click("text=Approve (sign)");
-  await page.waitForSelector("text=Decision recorded", { timeout: 5000 }).catch(async () => fail(`console status: ${await page.textContent("#status")}`));
+  // التبديل إلى الإنجليزية يعيد الرسم باتجاه LTR دون فقدان الجلسة
+  await page.selectOption('[data-testid="lang"]', "en");
+  await page.waitForSelector("text=Pending approvals");
+  const dirEn = await page.evaluate(() => (globalThis as unknown as { document: { documentElement: { dir: string } } }).document.documentElement.dir);
+  if (dirEn !== "ltr") fail(`expected ltr after switching to English, got ${dirEn}`);
+  await page.selectOption('[data-testid="lang"]', "ar");
+  await page.waitForSelector('[data-testid="approve"]');
+  await page.setInputFiles('[data-testid="key-file"]', keyFile);
+  await page.waitForSelector("text=حُمّل المفتاح محليًا");
+  await page.fill('[data-testid="human-id"]', "u-proc-mgr");
+  await page.fill('[data-testid="comment"]', "approved from console");
+  await page.click('[data-testid="approve"]');
+  await page.waitForSelector("text=سُجّل القرار", { timeout: 5000 }).catch(async () => fail(`console status: ${await page.textContent('[data-testid="status"]')}`));
   const status = p.gate.get(pending[0]!.id).status;
   const decision = p.gate.get(pending[0]!.id).decisions[0];
   const xss = await page.evaluate(() => (globalThis as { __xss?: number }).__xss ?? 0);
@@ -84,7 +96,7 @@ try {
   if (!decision || decision.auth !== "signed" || decision.comment !== "approved from console") throw new Error(`decision ${JSON.stringify(decision)}`);
   if (xss) fail("XSS payload executed in console");
   if (errors.length) fail(`page errors: ${errors.join("; ")}`);
-  console.log(`PASS console e2e: browser-signed approval verified by server (status=${status}, key=${decision.keyFingerprint}); no script execution from untrusted text`);
+  console.log(`PASS console e2e (Arabic RTL default, English switch): browser-signed approval verified by server (status=${status}, key=${decision.keyFingerprint}); no script execution from untrusted text`);
 } finally {
   await browser?.close();
   server.close();

@@ -36,6 +36,8 @@ Refer to [Postgres credentials](../../credentials/postgres.md) for guidance on s
 * [**Execute Query**](#execute-query): Execute an SQL query
 * [**Insert**](#insert): Insert rows in a table
 * [**Insert or Update**](#insert-or-update): Insert or update rows in a table
+* [**List Schemas**](#list-schemas): List the schemas, the same ones the **Schema** list offers
+* [**List Tables**](#list-tables): List the tables, views and foreign tables in a schema
 * [**Select**](#select): Select rows from a table
 * [**Update**](#update): Update rows in a table
 
@@ -64,7 +66,7 @@ Enter these parameters:
 - **Delay Closing Idle Connection**: The number of seconds to wait before considering idle connections eligible for closing.
 - **Query Batching**: The way to send queries to the database:
 	- **Single Query**: A single query for all incoming items.
-	- **Independently**: Execute one query per incoming item of the execution.
+	- **Independent**: Execute one query per incoming item of the run.
 	- **Transaction**: Execute all queries in a transaction. If a failure occurs, Postgres rolls back all changes.
 - **Output Large-Format Numbers As**: The format to output `NUMERIC` and `BIGINT` columns as:
 	- **Numbers**: Use this for standard numbers.
@@ -86,7 +88,7 @@ Enter these parameters:
 - **Delay Closing Idle Connection**: The number of seconds to wait before considering idle connections eligible for closing.
 - **Query Batching**: The way to send queries to the database:
 	- **Single Query**: A single query for all incoming items.
-	- **Independently**: Execute one query per incoming item of the execution.
+	- **Independent**: Execute one query per incoming item of the run.
 	- **Transaction**: Execute all queries in a transaction. If a failure occurs, Postgres rolls back all changes.
 - **Query Parameters**: A comma-separated list of values that you want to use as [query parameters](#use-query-parameters).
 - **Output Large-Format Numbers As**: The format to output `NUMERIC` and `BIGINT` columns as:
@@ -114,7 +116,7 @@ Enter these parameters:
 - **Delay Closing Idle Connection**: The number of seconds to wait before considering idle connections eligible for closing.
 - **Query Batching**: The way to send queries to the database:
 	- **Single Query**: A single query for all incoming items.
-	- **Independently**: Execute one query per incoming item of the execution.
+	- **Independent**: Execute one query per incoming item of the run.
 	- **Transaction**: Execute all queries in a transaction. If a failure occurs, Postgres rolls back all changes.
 - **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/expressions-versus-data-nodes).
 - **Output Large-Format Numbers As**: The format to output `NUMERIC` and `BIGINT` columns as:
@@ -143,13 +145,69 @@ Enter these parameters:
 - **Delay Closing Idle Connection**: The number of seconds to wait before considering idle connections eligible for closing.
 - **Query Batching**: The way to send queries to the database:
 	- **Single Query**: A single query for all incoming items.
-	- **Independently**: Execute one query per incoming item of the execution.
+	- **Independent**: Execute one query per incoming item of the run.
 	- **Transaction**: Execute all queries in a transaction. If a failure occurs, Postgres rolls back all changes.
 - **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/expressions-versus-data-nodes).
 - **Output Large-Format Numbers As**: The format to output `NUMERIC` and `BIGINT` columns as:
 	- **Numbers**: Use this for standard numbers.
 	- **Text**: Use this if you expect numbers longer than 16 digits. Without this, numbers may be incorrect.
 - **Replace Empty Strings with NULL**: Whether to replace empty strings with NULL in input. This may be useful when working with data exported from spreadsheet software.
+
+### List Schemas <a href="#list-schemas" id="list-schemas"></a>
+
+Use this operation to get the schemas as data, instead of only in the **Schema** dropdown. It only reads, so it's safe to give to an AI agent on an instance that blocks **Execute Query**.
+
+Enter these parameters:
+
+- **Credential to connect with**: Create or select an existing [Postgres credential](../../credentials/postgres.md).
+- **Operation**: Select **List Schemas**. This operation takes no **Schema** or **Table**.
+
+The node returns one item for each schema, as `{ "schema_name": "public" }`. It runs the same query as the **Schema** dropdown, so the two always agree. Postgres decides which schemas that query returns: the list isn't always every schema your role can read, and it does include the system schemas `pg_catalog` and `information_schema`, which most workflows filter out.
+
+#### List Schemas options <a href="#list-schemas-options" id="list-schemas-options"></a>
+
+- **Connection Timeout**: The number of seconds to try to connect to the database.
+- **Delay Closing Idle Connection**: The number of seconds to wait before considering idle connections eligible for closing.
+- **Query Batching**: The way to send queries to the database:
+	- **Single Query**: A single query for all incoming items.
+	- **Independent**: Execute one query per incoming item of the run.
+	- **Transaction**: Execute all queries in a transaction. If a failure occurs, Postgres rolls back all changes.
+- **Output Large-Format Numbers As**: The format to output `NUMERIC` and `BIGINT` columns as. This operation returns no numeric columns, so the setting makes no difference to its output.
+
+### List Tables <a href="#list-tables" id="list-tables"></a>
+
+Use this operation to get the contents of a schema as data, for example to loop over every table in it. It only reads, so it's safe to give to an AI agent on an instance that blocks **Execute Query**.
+
+Enter these parameters:
+
+- **Credential to connect with**: Create or select an existing [Postgres credential](../../credentials/postgres.md).
+- **Operation**: Select **List Tables**.
+- **Schema**: Choose the schema to list. Select **From list** to choose the schema from the dropdown list or **By Name** to enter the schema name. This is required and defaults to `public`. This operation takes no **Table**.
+
+The node returns one item for each entry, as `{ "table_name": "orders", "table_type": "BASE TABLE" }`. A schema holds more than tables, so use **table_type** to tell them apart:
+
+- `BASE TABLE` is a table. A child of a partitioned table also reports `BASE TABLE`.
+- `VIEW` is a view.
+- `FOREIGN` is a foreign table.
+- `LOCAL TEMPORARY` is a temporary table, which Postgres keeps in a session-private `pg_temp_` schema.
+
+Materialized views never appear, whatever their schema. A schema with no tables returns no items.
+
+#### List Tables options <a href="#list-tables-options" id="list-tables-options"></a>
+
+- **Connection Timeout**: The number of seconds to try to connect to the database.
+- **Delay Closing Idle Connection**: The number of seconds to wait before considering idle connections eligible for closing.
+- **Query Batching**: The way to send queries to the database:
+	- **Single Query**: A single query for all incoming items.
+	- **Independent**: Execute one query per incoming item of the run.
+	- **Transaction**: Execute all queries in a transaction. If a failure occurs, Postgres rolls back all changes.
+- **Output Large-Format Numbers As**: The format to output `NUMERIC` and `BIGINT` columns as. This operation returns no numeric columns, so the setting makes no difference to its output.
+
+{% hint style="info" %}
+**Both operations run once for each input item**
+
+Like the other operations, these run their query one time for each item the node receives, so three input items give you the list three times. Turn on **Execute Once** in the node's **Settings** to run the query a single time. A node attached to an AI agent as a tool has no **Execute Once** setting, and the agent calls it one time for each call it makes.
+{% endhint %}
 
 ### Select <a href="#select" id="select"></a>
 
@@ -173,7 +231,7 @@ Enter these parameters:
 - **Delay Closing Idle Connection**: The number of seconds to wait before considering idle connections eligible for closing.
 - **Query Batching**: The way to send queries to the database:
 	- **Single Query**: A single query for all incoming items.
-	- **Independently**: Execute one query per incoming item of the execution.
+	- **Independent**: Execute one query per incoming item of the run.
 	- **Transaction**: Execute all queries in a transaction. If a failure occurs, Postgres rolls back all changes.
 - **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/expressions-versus-data-nodes).
 - **Output Large-Format Numbers As**: The format to output `NUMERIC` and `BIGINT` columns as:
@@ -200,7 +258,7 @@ Enter these parameters:
 - **Delay Closing Idle Connection**: The number of seconds to wait before considering idle connections eligible for closing.
 - **Query Batching**: The way to send queries to the database:
 	- **Single Query**: A single query for all incoming items.
-	- **Independently**: Execute one query per incoming item of the execution.
+	- **Independent**: Execute one query per incoming item of the run.
 	- **Transaction**: Execute all queries in a transaction. If a failure occurs, Postgres rolls back all changes.
 - **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/expressions-versus-data-nodes).
 - **Output Large-Format Numbers As**: The format to output `NUMERIC` and `BIGINT` columns as:

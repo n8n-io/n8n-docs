@@ -53,7 +53,6 @@ To use SCIM provisioning, you need:
 
 * An n8n Enterprise plan.
 * SAML or OIDC single sign-on set up and active. You can't turn on SCIM without it. SCIM doesn't work with LDAP. To set up SSO, see [Set up SAML](use-saml/set-up-saml.md) or [Set up OIDC](use-oidc/set-up-oidc.md).
-* While SCIM is in Preview, the `N8N_ENV_FEAT_SCIM` environment variable set to `true` on your n8n instance. Restart n8n after you set it. Without this variable, the SCIM endpoints return a `404` error.
 
 ## Turn on SCIM in n8n
 

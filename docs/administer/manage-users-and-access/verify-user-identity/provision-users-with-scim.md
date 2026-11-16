@@ -52,6 +52,7 @@ If your IdP sends a `roles` attribute, n8n accepts it but ignores the value. Thi
 To use SCIM provisioning, you need:
 
 * An n8n Enterprise plan.
+* The instance owner or instance admin role. Only these roles can turn on SCIM and manage its token.
 * SAML or OIDC single sign-on set up and active. You can't turn on SCIM without it. SCIM doesn't work with LDAP. To set up SSO, see [Set up SAML](use-saml/set-up-saml.md) or [Set up OIDC](use-oidc/set-up-oidc.md).
 
 ## Turn on SCIM in n8n
@@ -109,7 +110,7 @@ n8n protects some accounts from SCIM changes:
 
 ## Manage the SCIM token
 
-Users with the `scim:manage` permission can rotate or revoke the SCIM token from **Settings** > **Authentication** > **Single sign-on (SSO)**. After the token exists, n8n only shows its last four characters.
+Only instance owners and instance admins can rotate or revoke the SCIM token. You can't give this permission to other roles yet. To manage the token, go to **Settings** > **Authentication** > **Single sign-on (SSO)**. After the token exists, n8n only shows its last four characters.
 
 * **Rotate:** creates a new token and replaces the old one. Update the token in your IdP straight away, or provisioning requests fail.
 * **Revoke:** removes the token. Your IdP can't send provisioning changes to n8n until you create a new token and add it to your IdP.

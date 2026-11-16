@@ -84,7 +84,7 @@ The file or directory replaces the default trust store for Git. If the instance 
 ## Step 4: Connect n8n and configure your instance <a href="#step-4-connect-n8n-and-configure-your-instance" id="step-4-connect-n8n-and-configure-your-instance"></a>
 
 1. In **Settings** > **Environments** in n8n, select **Connect**. n8n connects to your Git repository.
-1. Under **Instance settings**, choose which branch you want to use for the current n8n instance.
+1. Under **Instance settings**, choose which branch you want to use for the current n8n instance. When `N8N_SOURCECONTROL_BRANCH_SELECTION_ENABLED` is `true`, n8n labels this branch **Default branch**.
 1. **Optional**: select **Protected instance** to prevent users editing source-controlled resources in this instance. This is useful for protecting production instances.
 1. **Optional**: choose a custom color for the instance. This will appear in the menu next to the source control push and pull buttons. It helps users know which instance they're in.
 1. Select **Save settings**.

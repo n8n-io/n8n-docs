@@ -84,7 +84,7 @@ You must be an instance owner, instance admin, or project admin to push changes 
 
 ### Push to another branch
 
-When `N8N_SOURCECONTROL_BRANCH_SELECTION_ENABLED` is `true`, the push window shows a branch picker. You can push to an existing branch or create a branch from the latest default branch. Pull, reset, and status still use the branch configured in **Settings** > **Source Control**, labeled **Default branch**.
+When `N8N_SOURCECONTROL_BRANCH_SELECTION_ENABLED` is `true`, the push window shows a branch picker. You can push to an existing branch or create a branch from the branch labeled **Default branch**. Pull, reset, and status still use the branch configured in **Settings** > **Source Control**, labeled **Default branch**.
 
 When the variable is `false` or unset, n8n pushes to the configured branch and doesn't show the picker.
 

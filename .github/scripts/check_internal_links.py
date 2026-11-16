@@ -464,7 +464,14 @@ def heading_ids(path: Path) -> tuple:
             s = anchor_slug(m.group(1))
             if s:
                 n = seen.get(s, 0)
-                slugs.add(s if n == 0 else f"{s}-{n}")
+                if n == 0:
+                    slugs.add(s)
+                else:
+                    # Unverified for long ids whether GitBook cuts before or
+                    # after adding the suffix, so accept both. The cut-after
+                    # form, (s-n)[:100], comes from gitbook_id_forms below.
+                    slugs.add(f"{s}-{n}")
+                    slugs.add(f"{s[:GITBOOK_ID_MAX]}-{n}")
                 seen[s] = n + 1
     explicit = gitbook_id_forms(explicit)
     slugs = gitbook_id_forms(slugs)

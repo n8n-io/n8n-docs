@@ -3,10 +3,6 @@ title: Microsoft Work IQ credentials
 description: >-
   Documentation for Microsoft Work IQ credentials. Use these credentials to
   connect an n8n agent to the Work IQ MCP server.
-contentType:
-  - integration
-  - reference
-nodeTitle: Microsoft Work IQ credentials
 layout:
   description:
     visible: false
@@ -49,8 +45,9 @@ To configure this credential, you'll need:
 6. Copy the **Application (client) ID** and enter it in n8n as the **Client ID**.
 7. Go to **API permissions** > **Add a permission** > **APIs my organization uses**, search for **Work IQ**, and select **Delegated permissions**.
 8. Select the permissions for the access level you want. Refer to [Access level](#access-level).
-9. Select **Grant admin consent** for your tenant. Each Work IQ permission needs admin consent.
-10. Create a client secret and enter it in n8n as the **Client Secret**. Refer to [Generate a client secret](microsoft.md#generate-a-client-secret). To use a certificate instead, refer to [Authenticate with a certificate](microsoft.md#authenticate-with-a-certificate).
+9. Select **Add permissions**.
+10. Select **Grant admin consent** for your tenant. Each Work IQ permission needs admin consent.
+11. Create a client secret and enter it in n8n as the **Client Secret**. Refer to [Generate a client secret](microsoft.md#generate-a-client-secret). To use a certificate instead, refer to [Authenticate with a certificate](microsoft.md#authenticate-with-a-certificate).
 
 If **Work IQ** doesn't appear in **APIs my organization uses**, the Work IQ service principal may not exist in your tenant yet. Refer to [Enable Work IQ](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/work-iq/enable-work-iq).
 

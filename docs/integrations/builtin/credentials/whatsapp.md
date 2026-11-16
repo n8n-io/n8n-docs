@@ -72,7 +72,7 @@ To create credentials for WhatsApp, you need the following Meta assets:
 
 </details>
 
-* A Meta [business app](https://developers.facebook.com/documentation/development/create-an-app) configured with WhatsApp: Once you have a developer account, you will create a Meta business app.
+* A Meta [business app](https://developers.facebook.com/documentation/development/create-an-app) configured with WhatsApp: Once you have a developer account, you'll create a Meta business app.
 
 <details>
 
@@ -118,7 +118,7 @@ To generate an access token, follow these steps:
 5. Copy the **Access token** and add it to n8n as the **Access Token**.
 6. Copy the **WhatsApp Business Account ID** and add it to n8n as the **Business Account ID**.
 
-Refer to Meta's [WhatsApp Cloud API get started guide](https://developers.facebook.com/documentation/business-messaging/whatsapp/get-started) for more information on the above steps.
+Refer to Meta's [WhatsApp Cloud API get started guide](https://developers.facebook.com/documentation/business-messaging/whatsapp/get-started) for more information on generating an access token and finding your WhatsApp Business Account ID.
 
 Fully verifying and launching your app takes further configuration, including business verification and App Review. Refer to Meta's [Become a Tech Provider](https://developers.facebook.com/documentation/business-messaging/whatsapp/solution-providers/get-started-for-tech-providers) for more information. Refer to [App Review](https://developers.facebook.com/documentation/resp-plat-initiatives/individual-processes/app-review) for more information on the Meta App Review process.
 

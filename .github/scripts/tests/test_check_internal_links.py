@@ -291,6 +291,27 @@ def main():
     check("a shorter cut of a long id is still broken",
           category(G, "#" + long_id[:90]) == "broken-anchor")
 
+    # A repeated heading whose slug is over 100 characters: unverified whether
+    # GitBook cuts before or after adding -1, so both forms must resolve.
+    long_slug = cil.anchor_slug("Long repeated heading about sandbox setup options "
+                                "about sandbox setup options about sandbox setup "
+                                "options for production")
+    check("fixture long slug is over 100 characters", len(long_slug) > 100)
+    check("long repeated heading: cut then suffix resolves",
+          category(G, "#" + long_slug[:100] + "-1") is None)
+    check("long repeated heading: suffix then cut resolves",
+          category(G, "#" + (long_slug + "-1")[:100]) is None)
+    check("long repeated heading: a suffix past the last repeat is still broken",
+          category(G, "#" + long_slug[:100] + "-2") == "broken-anchor")
+    # At 99 characters the two orders give different ids, so test both.
+    edge = cil.anchor_slug("Edge case heading with exactly ninety nine characters "
+                           "in its generated slug for the suffix tests ab")
+    check("fixture edge slug is 99 characters", len(edge) == 99)
+    check("99-character repeated heading: cut then suffix resolves",
+          category(G, "#" + edge[:100] + "-1") is None)
+    check("99-character repeated heading: suffix then cut resolves",
+          category(G, "#" + (edge + "-1")[:100]) is None)
+
     check("a block whose index Name is only in frontmatter resolves",
           cil.reusable_blocks().get("BLOCK2") is not None)
 

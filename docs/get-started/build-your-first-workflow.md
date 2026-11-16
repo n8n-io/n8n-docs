@@ -66,10 +66,6 @@ On n8n Cloud Enterprise and self-hosted Enterprise, contact your Customer Succes
 {% endhint %}
 
 {% hint style="info" %}
-**Preview status**
-
-n8n Assistant is in Preview and may change in future releases.
-
 Your results may differ from the screenshots in this guide.
 {% endhint %}
 

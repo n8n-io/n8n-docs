@@ -75,15 +75,15 @@ This will produce the date as a string without the time or timezone components. 
 
 The [**Insert or Update**](README.md#insert-or-update) and [**Update**](README.md#update) operations can fail with these errors:
 
-- **Insert or Update** in all node versions, and **Update** in node versions 2 and 2.1: `Column to match on not found in input item. Add a column to match on or set the 'Data Mode' to 'Define Below' to define the value to match on.`
-- **Update**: `Add values to update to the input item or set the 'Data Mode' to 'Define Below' to define the values to update.`
-- **Insert or Update**: `Add values to update or insert to the input item or set the 'Data Mode' to 'Define Below' to define the values to insert or update.`
+- `Column to match on not found in input item. Add a column to match on or set the 'Data Mode' to 'Define Below' to define the value to match on.` (**Insert or Update**, and **Update** in node versions 2 and 2.1)
+- `Add values to update to the input item or set the 'Data Mode' to 'Define Below' to define the values to update.` (**Update**)
+- `Add values to update or insert to the input item or set the 'Data Mode' to 'Define Below' to define the values to insert or update.` (**Insert or Update**)
 
-These messages use old names. **Data Mode** is what node versions 2 and 2.1 call **Mapping Column Mode**, and "Define Below" means the **Map Each Column Manually** option.
+These messages use old names. **Data Mode** is the name of **Mapping Column Mode** in node versions 2 and 2.1, and "Define Below" means the **Map Each Column Manually** option.
 
-To fix the error, give the node a value for each column to match on and for at least one other column. Where the values come from depends on **Mapping Column Mode**:
+To fix these errors, give the node a value for each column to match on and for at least one other column. Where the values come from depends on **Mapping Column Mode** (**Data Mode** in node versions 2 and 2.1):
 
-- **Map Automatically**: n8n reads the values from the incoming item, so the item needs a field with the same name as each column. Use an [Edit Fields (Set) node](../../core-nodes/n8n-nodes-base.set.md) before the Postgres node to rename fields if needed.
-- **Map Each Column Manually**: n8n uses the values you set in the node. Set the column to match on and at least one other column.
+- **Map Automatically** (**Auto-Map Input Data to Columns** in node versions 2 and 2.1): n8n reads the values from the incoming item, so the item needs fields named like the column to match on and at least one other column. Use an [Edit Fields (Set) node](../../core-nodes/n8n-nodes-base.set.md) before the Postgres node to rename fields if needed.
+- **Map Each Column Manually**: n8n uses the values you set in the node. Set a value for the column to match on and for at least one other column.
 
-For the first error, n8n also treats an empty value, `0`, or `false` in the column to match on as missing.
+For the `Column to match on not found` error, n8n also treats an empty value, `0`, or `false` in the column to match on as missing.

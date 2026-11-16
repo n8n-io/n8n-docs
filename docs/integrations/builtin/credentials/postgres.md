@@ -56,7 +56,7 @@ The Agent node doesn't support SSH tunnels.
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [Postgres's documentation](https://www.postgresql.org/docs/16/index.html) for more information about the service.
+Refer to [Postgres's documentation](https://www.postgresql.org/docs/current/index.html) for more information about the service.
 
 ## Using database connection <a href="#using-database-connection" id="using-database-connection"></a>
 
@@ -66,10 +66,10 @@ To configure this credential, you'll need:
 * The **Database** name.
 * A **User** name.
 * A user **Password**.
-* **Maximum Number of Connections**: The size of the connection pool.
-* **Ignore SSL Issues**: Set whether the credential connects if SSL validation fails.
+* **Maximum Number of Connections**: The maximum size of each connection pool.
+* **Ignore SSL Issues (Insecure)**: Set whether the credential connects if SSL validation fails.
 * **SSL**: Choose whether to use SSL in your connection.
-* Optional SSL certificates: **CA Certificate**, **Client Private Key**, and **Client Certificate**.
+* Optional SSL certificates (available from n8n 2.47.0): **CA Certificate**, **Client Private Key**, and **Client Certificate**.
 * The **Port** number to use for the connection.
 * **SSH Tunnel**: Choose if you want to use SSH to encrypt the network connection with the Postgres server.
 
@@ -83,34 +83,33 @@ To set up the database connection:
 2. Enter the **Database** name. Run the `/conninfo` command to confirm the database name.
 3. Enter the **User** name of the user you wish to connect as.
 4. Enter the user's **Password**.
-5. **Maximum Number of Connections**: Enter the maximum number of connections n8n opens to the database. The default is `100`. Make sure this value times the number of n8n workers you run is lower than the maximum number of connections your Postgres server allows.
-6. **Ignore SSL Issues**: If you turn this on, the credential will connect even if SSL validation fails.
-7. **SSL**: Choose whether to use SSL in your connection. Refer to Postgres [SSL Support](https://www.postgresql.org/docs/current/libpq-ssl.html) for more information. Options include:
-   * **Allow**: Sets the `sslmode` parameter to `allow`. First try a non-SSL connection; if that fails, try an SSL connection.
-   * **Disable**: Sets the `sslmode` parameter to `disable`. Only try a non-SSL connection.
-   * **Require**: Sets the `sslmode` parameter to `require`. Only try an SSL connection, and verify that a trusted certificate authority (CA) issued the server certificate. To trust a private CA, add its root certificate in **CA Certificate**. Without it, n8n only trusts its default set of public certificate authorities, so a server certificate from a private CA fails validation.
-8. If you set **SSL** to **Allow** or **Require**, you can add certificates in PEM format:
-   * **CA Certificate**: The root certificate of the CA that issued the server certificate. Add it when your Postgres server uses a certificate from a private CA, for example a managed database service that issues its own certificates.
+5. **Maximum Number of Connections**: Enter the maximum number of connections in each connection pool n8n opens with this credential. The default is `100`. Each n8n instance and worker keeps its own pools. Postgres nodes on different node versions, and other nodes that use this credential, such as Postgres Chat Memory, can each open a separate pool. Keep the total below the maximum number of connections your Postgres server allows.
+6. **Ignore SSL Issues (Insecure)**: If you turn this on, the credential connects over SSL without validating the server certificate, and n8n hides the **SSL** setting.
+7. **SSL**: Choose whether to use SSL in your connection. Options include:
+   * **Allow**: Connect over SSL and verify the server certificate, the same as **Require**. n8n doesn't fall back to a connection without SSL.
+   * **Disable**: Connect without SSL.
+   * **Require**: Connect over SSL only, and verify that a trusted certificate authority (CA) issued the server certificate and that the certificate matches the **Host**. To trust a private CA, add its root certificate in **CA Certificate**. Without it, n8n trusts the public certificate authorities built into Node.js, plus any certificate authorities you [added to your self-hosted instance](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/configuration-examples/configure-custom-ssl-certificate-authorities).
+8. If you set **SSL** to **Allow** or **Require**, you can add certificates in PEM format. The certificate fields are available from n8n 2.47.0:
+   * **CA Certificate**: The root certificate of the CA that issued the server certificate. Add it when your Postgres server uses a certificate from a private CA, such as a managed database service that issues its own certificates. Paste a single certificate, from `-----BEGIN CERTIFICATE-----` to `-----END CERTIFICATE-----`. A bundle with several certificates doesn't work in this field.
    * **Client Private Key** and **Client Certificate**: The private key and certificate n8n presents to the server. Add both when the server requires client certificate authentication.
 9.  Enter the **Port** number to use for the connection. You can either run the `/conninfo` command to confirm the host name or run this query:
 
     ```
     SELECT inet_server_port();
     ```
-10. **SSH Tunnel**: Turn this setting on to connect to the database over SSH. Refer to [SSH tunnel limitations](postgres.md#ssh-tunnel-limitations) for some guidance around using SSH. Once turned on, you'll need:
+10. **SSH Tunnel**: Turn this setting on to connect to the database over SSH. n8n then reaches the **Host** and **Port** through the SSH server. Refer to [SSH tunnel limitations](postgres.md#ssh-tunnel-limitations) before you use SSH. After you turn it on:
     1. Select **SSH Authenticate with** to set the SSH Tunnel type to build:
        * Select **Password** if you want to connect to SSH using a password.
        * Select **Private Key** if you want to connect to SSH using an identity file (private key) and a passphrase.
-    2. Enter the remote bind address you're connecting to as the **SSH Host**.
-    3. **SSH Port**: Enter the local port number for the SSH tunnel.
-    4. **SSH Postgres Port**: Enter the remote end of the tunnel, the port number the database server is using.
-    5. **SSH User**: Enter the username to log in as.
-    6. If you selected **Password** for SSH Authenticate with, add the user's **SSH Password**.
-    7. If you selected **Private Key** for **SSH Authenticate with**:
+    2. Enter the address of the SSH server as the **SSH Host**.
+    3. **SSH Port**: Enter the port of the SSH server. The default is `22`.
+    4. **SSH User**: Enter the username to log in as.
+    5. If you selected **Password** for **SSH Authenticate with**, add the user's **SSH Password**.
+    6. If you selected **Private Key** for **SSH Authenticate with**:
        1. Add the contents of the **Private Key** or identity file used for SSH.
-       2. If the **Private Key** was created with a passphrase, enter that **Passphrase**. If the **Private Ke**y has no passphrase, leave this field blank.
+       2. If you created the private key with a passphrase, enter it in **Passphrase**. If the private key has no passphrase, leave **Passphrase** blank.
 
-Refer to [Secure TCP/IP Connections with SSH Tunnels](https://www.postgresql.org/docs/16/ssh-tunnels.html) for more information.
+Refer to [Secure TCP/IP Connections with SSH Tunnels](https://www.postgresql.org/docs/current/ssh-tunnels.html) for more information.
 
 ### SSH tunnel limitations <a href="#ssh-tunnel-limitations" id="ssh-tunnel-limitations"></a>
 

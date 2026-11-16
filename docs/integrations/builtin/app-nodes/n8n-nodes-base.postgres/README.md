@@ -78,7 +78,7 @@ Enter these parameters:
 
 - **Credential to connect with**: Create or select an existing [Postgres credential](../../credentials/postgres.md).
 - **Operation**: Select **Execute Query**.
-- **Query**: The SQL query to execute. You can use n8n [expressions](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/expressions-versus-data-nodes) and tokens like `$1`, `$2`, and `$3` to build [prepared statements](https://www.postgresql.org/docs/current/sql-prepare.html) to use with [query parameters](#use-query-parameters).
+- **Query**: The SQL query to execute. You can use n8n [expressions](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/expressions-versus-data-nodes) and placeholders such as `$1`, `$2`, and `$3` to use [query parameters](#use-query-parameters).
 
 #### Execute Query options <a href="#execute-query-options" id="execute-query-options"></a>
 
@@ -89,8 +89,8 @@ Enter these parameters:
 	- **Independently**: Execute one query per incoming item of the execution.
 	- **Transaction**: Execute all queries in a transaction. If a failure occurs, Postgres rolls back all changes.
 - **Query Parameters**: A comma-separated list of values that you want to use as [query parameters](#use-query-parameters).
-- **Treat query parameters in single quotes as text**: Whether to keep a placeholder inside single quotes, like `'$1'`, as literal text. This option appears once you add **Query Parameters**, and it's off by default:
-	- **Off**: n8n replaces `'$1'` with the parameter value, inside the quotes. For a text value, this produces invalid SQL and Postgres returns a syntax error.
+- **Treat query parameters in single quotes as text**: Whether to keep a quoted placeholder, such as `'$1'`, as literal text. The option only applies when the quotes contain just the placeholder, not to text such as `'%$1%'`. It appears after you add **Query Parameters**, and it's off by default:
+	- **Off**: n8n replaces the `$1` inside the quotes with the parameter value. For a text value, the result is invalid SQL, and Postgres returns a syntax error. To pass a value, remove the quotes: write `WHERE email = $1`, not `WHERE email = '$1'`. n8n quotes text values for you.
 	- **On**: n8n leaves `'$1'` alone, so the query uses the literal text `$1`.
 - **Output Large-Format Numbers As**: The format to output `NUMERIC` and `BIGINT` columns as:
 	- **Numbers**: Use this for standard numbers.
@@ -107,9 +107,9 @@ Enter these parameters:
 - **Operation**: Select **Insert**.
 - **Schema**: Choose the schema that contains the table you want to work on. Select **From list** to choose the schema from the dropdown list or **By Name** to enter the schema name.
 - **Table**: Choose the table that you want to work on. Select **From list** to choose the table from the dropdown list or **By Name** to enter the table name.
-- **Mapping Column Mode**: How to map column names to incoming data. Node versions 2 and 2.1 call this field **Data Mode**:
+- **Mapping Column Mode** (**Data Mode** in node versions 2 and 2.1): How to map column names to incoming data:
 	- **Map Each Column Manually**: Select the values to use for each column.
-	- **Map Automatically**: Automatically map incoming data to matching column names in Postgres. The incoming data field names must match the column names in Postgres for this to work. If necessary, consider using the [edit fields (set) node](../../core-nodes/n8n-nodes-base.set.md) before this node to adjust the format as needed.
+	- **Map Automatically** (**Auto-Map Input Data to Columns** in node versions 2 and 2.1): Automatically map incoming data to matching column names in Postgres. The incoming data field names must match the column names in Postgres for this to work. If necessary, consider using the [Edit Fields (Set) node](../../core-nodes/n8n-nodes-base.set.md) before this node to adjust the format as needed.
 
 #### Insert options <a href="#insert-options" id="insert-options"></a>
 
@@ -136,9 +136,9 @@ Enter these parameters:
 - **Operation**: Select **Insert or Update**.
 - **Schema**: Choose the schema that contains the table you want to work on. Select **From list** to choose the schema from the dropdown list or **By Name** to enter the schema name.
 - **Table**: Choose the table that you want to work on. Select **From list** to choose the table from the dropdown list or **By Name** to enter the table name.
-- **Mapping Column Mode**: How to map column names to incoming data. Node versions 2 and 2.1 call this field **Data Mode**:
+- **Mapping Column Mode** (**Data Mode** in node versions 2 and 2.1): How to map column names to incoming data:
 	- **Map Each Column Manually**: Select the values to use for each column.
-	- **Map Automatically**: Automatically map incoming data to matching column names in Postgres. The incoming data field names must match the column names in Postgres for this to work. If necessary, consider using the [edit fields (set) node](../../core-nodes/n8n-nodes-base.set.md) before this node to adjust the format as needed.
+	- **Map Automatically** (**Auto-Map Input Data to Columns** in node versions 2 and 2.1): Automatically map incoming data to matching column names in Postgres. The incoming data field names must match the column names in Postgres for this to work. If necessary, consider using the [Edit Fields (Set) node](../../core-nodes/n8n-nodes-base.set.md) before this node to adjust the format as needed.
 
 #### Insert or Update options <a href="#insert-or-update-options" id="insert-or-update-options"></a>
 
@@ -170,7 +170,10 @@ Enter these parameters:
 - **Combine Conditions**: How to combine the conditions in **Select Rows**. **AND** requires all conditions to be true, while **OR** requires at least one condition to be true.
 - **Sort**: Choose how to sort the selected rows. Choose a **Column** from a list or by ID and a sort **Direction**.
 
-**Select** returns either all matching rows or the first rows up to **Limit**. It has no offset or cursor, so you can't use it to page through a large table. To read a large table in batches, use [**Execute Query**](#execute-query) with your own `LIMIT` and `OFFSET`, or a condition on a sorted key, such as `WHERE id > $1 ORDER BY id LIMIT 1000`.
+**Select** returns either all matching rows or the first rows up to the **Limit** value. It has no offset or cursor option. To read a large table in batches, sort on a unique column and fetch the rows after the last one you read:
+
+- In **Select**, add a **Select Rows** condition on that column with the **Greater Than** operator and the last value you read. Add a **Sort** rule on the same column with the **ASC** direction, and set **Limit** to the batch size.
+- Or use [**Execute Query**](#execute-query) with a query such as `SELECT * FROM orders WHERE id > $1 ORDER BY id LIMIT 1000`, and set `$1` to the last `id` you read in [**Query Parameters**](#use-query-parameters).
 
 #### Select options <a href="#select-options" id="select-options"></a>
 
@@ -195,9 +198,9 @@ Enter these parameters:
 - **Operation**: Select **Update**.
 - **Schema**: Choose the schema that contains the table you want to work on. Select **From list** to choose the schema from the dropdown list or **By Name** to enter the schema name.
 - **Table**: Choose the table that you want to work on. Select **From list** to choose the table from the dropdown list or **By Name** to enter the table name.
-- **Mapping Column Mode**: How to map column names to incoming data. Node versions 2 and 2.1 call this field **Data Mode**:
+- **Mapping Column Mode** (**Data Mode** in node versions 2 and 2.1): How to map column names to incoming data:
 	- **Map Each Column Manually**: Select the values to use for each column.
-	- **Map Automatically**: Automatically map incoming data to matching column names in Postgres. The incoming data field names must match the column names in Postgres for this to work. If necessary, consider using the [edit fields (set) node](../../core-nodes/n8n-nodes-base.set.md) before this node to adjust the format as needed.
+	- **Map Automatically** (**Auto-Map Input Data to Columns** in node versions 2 and 2.1): Automatically map incoming data to matching column names in Postgres. The incoming data field names must match the column names in Postgres for this to work. If necessary, consider using the [Edit Fields (Set) node](../../core-nodes/n8n-nodes-base.set.md) before this node to adjust the format as needed.
 
 #### Update options <a href="#update-options" id="update-options"></a>
 
@@ -255,6 +258,8 @@ Then in **Query Parameters**, provide the field values to use. You can provide f
 // users is an example table name
 {{ [ 'users', $json.email ] }} 
 ```
+
+If your query has a placeholder inside single quotes, such as `'$1'`, refer to **Treat query parameters in single quotes as text** in [Execute Query options](#execute-query-options).
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 

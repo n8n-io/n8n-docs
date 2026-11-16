@@ -33,15 +33,15 @@ When someone joins your organization, changes their name or email, or leaves, yo
 
 ## What SCIM manages and what SSO manages
 
-SCIM in n8n manages the user account lifecycle: it creates, updates, and deactivates accounts. It doesn't set or change roles. Single sign-on (SSO) still handles sign-in and all roles.
+SCIM in n8n manages the user account lifecycle: it creates, updates, and deactivates accounts. SCIM doesn't currently manage roles. Single sign-on (SSO) handles sign-in and all roles.
 
 | What | Managed by | Details |
 |------|------------|---------|
 | Sign-in | SSO | SAML or OIDC. |
 | Account creation | SCIM | Your IdP creates the account when you assign the user to the n8n app. n8n always creates new accounts with the Member instance role. |
 | Name and email | SCIM | n8n keeps them in sync with your IdP. |
-| Instance role | SSO role assignment, or an admin | SCIM sets Member once, when it creates the account, and never changes it. |
-| Project roles | SSO role assignment, or an admin | SCIM never sets project access. |
+| Instance role | SSO role assignment, or an admin | SCIM only manages the user lifecycle, not roles. New accounts start as Member, and any later changes come from SSO or an admin. |
+| Project roles | SSO role assignment, or an admin | SCIM doesn't currently manage project access. |
 | Deactivation | SCIM | n8n disables the account. The user's personal project and workflows stay in place. |
 | Deletion | Deprovisioning policy | See [What happens when your IdP deletes a user](#what-happens-when-your-idp-deletes-a-user). |
 | Invites | Admins | Admins can still invite users while SSO and SCIM are on. If SSO assigns roles, admins can only invite users as Members. |

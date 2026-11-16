@@ -1,0 +1,19 @@
+docs/deploy/host-n8n/configure-n8n/set-up-n8n-assistant.md
+  s_efb3d530cba609::t_3534684388bea3 94-96
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "921728e0da80ee0ebf0ed34efc0675dbec52319e",
+  "prompts": {},
+  "sessions": {
+    "s_efb3d530cba609": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1e8e98e2-1e93-4457-b513-d7274d8d30ff",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jaakko Husso <jaakko@n8n.io>"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+docs/build/work-with-data/transform-data/expression-reference/object.md
+  s_b98b23005b5ea9::t_a071f0b968b9e7 30-31,34-35
+  s_b98b23005b5ea9::t_68b79eb9d492d4 28-29,32-33
+  s_b98b23005b5ea9::t_03ba2fcbc65466 15,36-39
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "16f78856707afe1d43ddc510b78247680f3ab691",
+  "prompts": {},
+  "sessions": {
+    "s_b98b23005b5ea9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "601e8d65-a1b8-4e98-a527-7937cfb9b223",
+        "model": "claude-fable-5-2"
+      },
+      "human_author": "Lorent Lempereur <lorent.lempereur@n8n.io>"
+    }
+  }
+}

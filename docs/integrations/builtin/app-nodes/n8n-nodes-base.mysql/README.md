@@ -33,7 +33,7 @@ Refer to [MySQL credentials](../../credentials/mysql.md) for guidance on setting
 {% hint style="info" %}
 **The credential sets the default database**
 
-The node connects to the database named in the credential, and every operation uses that database by default. The **From List** option of the **Table** field, and the column lists of each operation, only cover that database. To reach another database on the same server, write a qualified name like `other_database.table_name` in the **Name** option of the **Table** field, or in an **Execute SQL** query, and set the columns with an expression. The user in the credential needs permission for that database. Another server needs another credential.
+The node connects to the database named in the credential, and every operation uses that database by default. The **From List** option of the **Table** field, and the column lists of each operation, only cover that database. To reach another database on the same server, write a qualified name like `other_database.table_name` in the **Name** option of the **Table** field, or in an **Execute SQL** query. Set the columns with an expression. The user in the credential needs permission for that database. Another server needs another credential.
 {% endhint %}
 
 ## Operations <a href="#operations" id="operations"></a>
@@ -79,7 +79,7 @@ Enter these parameters:
 
 - **Credential to connect with**: Create or select an existing [MySQL credential](../../credentials/mysql.md).
 - **Operation**: Select **Execute SQL**.
-- **Query**: The SQL query to run. You can use n8n [expressions](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/expressions-versus-data-nodes), and tokens like `$1`, `$2` and `$3` with [query parameters](#use-query-parameters).
+- **Query**: The SQL query to run. You can use n8n [expressions](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/expressions-versus-data-nodes), and tokens like `$1`, `$2`, and `$3` with [query parameters](#use-query-parameters).
 
 #### Execute SQL options <a href="#execute-sql-options" id="execute-sql-options"></a>
 
@@ -90,7 +90,10 @@ Enter these parameters:
     - **Text**: Returns every `BIGINT` as a string. n8n selects this choice when you add the option.
     - **Numbers**: Returns a `BIGINT` as a number when JavaScript can hold the full value. Larger values come back as strings, so the type can change from row to row.
 - **Output Query Execution Details**: Whether to output the details of the executed query for each statement, instead of a confirmation of success. Default is off.
-- **Query Batching**: The way to send queries to the database. See the [Delete options](#delete-options) for the three modes.
+- **Query Batching**: The way to send queries to the database:
+    - **Single Query**: One query for all incoming items. This is the default.
+    - **Independent**: One query for each incoming item.
+    - **Transaction**: All queries in one transaction. If one query fails, the node rolls back every change.
 - **Query Parameters**: A comma-separated list of the values to use as [query parameters](#use-query-parameters).
 - **Replace Empty Strings with NULL**: Whether to replace empty strings in the input with NULL. Default is off. This is useful for data exported from spreadsheet software.
 
@@ -116,7 +119,10 @@ Enter these parameters:
 - **Priority**: The priority of the INSERT statement. The node sends no priority keyword until you add this option.
     - **Low Prioirity**: Delays the insert until no other client reads from the table. n8n selects this choice when you add the option.
     - **High Priority**: Overrides the server's `--low-priority-updates` option, and stops the server from using concurrent inserts.
-- **Query Batching**: The way to send queries to the database. See the [Delete options](#delete-options) for the three modes.
+- **Query Batching**: The way to send queries to the database:
+    - **Single Query**: One query for all incoming items. This is the default.
+    - **Independent**: One query for each incoming item.
+    - **Transaction**: All queries in one transaction. If one query fails, the node rolls back every change.
 - **Replace Empty Strings with NULL**: Whether to replace empty strings in the input with NULL. Default is off.
 - **Skip on Conflict**: Whether to skip the row instead of throwing an error when it violates a unique constraint. Default is off.
 
@@ -143,7 +149,10 @@ Enter these parameters:
 - **Connection Timeout**: The number of milliseconds reserved for connecting to the database. Default is 30. See [Connection Timeout has no effect](#connection-timeout-has-no-effect).
 - **Connections Limit**: The maximum number of connections to the database. Default is 10.
 - **Output Query Execution Details**: Whether to output the details of the executed query for each statement, instead of a confirmation of success. Default is off.
-- **Query Batching**: The way to send queries to the database. See the [Delete options](#delete-options) for the three modes.
+- **Query Batching**: The way to send queries to the database:
+    - **Single Query**: One query for all incoming items. This is the default.
+    - **Independent**: One query for each incoming item.
+    - **Transaction**: All queries in one transaction. If one query fails, the node rolls back every change.
 - **Replace Empty Strings with NULL**: Whether to replace empty strings in the input with NULL. Default is off.
 
 ### Select <a href="#select" id="select"></a>
@@ -171,7 +180,10 @@ Select returns all the matching rows, or the first **Limit** rows. It can't retu
 - **Output Decimals as Numbers**: Whether to output `DECIMAL` columns as numbers instead of strings. Default is off. See [Output Decimals as Numbers can lose digits](#output-decimals-as-numbers-can-lose-digits).
 - **Output Large-Format Numbers As**: How to return `BIGINT` values. See the [Execute SQL options](#execute-sql-options).
 - **Output Query Execution Details**: Whether to output the details of the executed query for each statement, instead of a confirmation of success. Default is off.
-- **Query Batching**: The way to send queries to the database. See the [Delete options](#delete-options) for the three modes.
+- **Query Batching**: The way to send queries to the database:
+    - **Single Query**: One query for all incoming items. This is the default.
+    - **Independent**: One query for each incoming item.
+    - **Transaction**: All queries in one transaction. If one query fails, the node rolls back every change.
 - **Select Distinct**: Whether to remove duplicate rows from the result. Default is off.
 
 ### Update <a href="#update" id="update"></a>
@@ -195,7 +207,10 @@ Enter these parameters:
 - **Connection Timeout**: The number of milliseconds reserved for connecting to the database. Default is 30. See [Connection Timeout has no effect](#connection-timeout-has-no-effect).
 - **Connections Limit**: The maximum number of connections to the database. Default is 10.
 - **Output Query Execution Details**: Whether to output the details of the executed query for each statement, instead of a confirmation of success. Default is off.
-- **Query Batching**: The way to send queries to the database. See the [Delete options](#delete-options) for the three modes.
+- **Query Batching**: The way to send queries to the database:
+    - **Single Query**: One query for all incoming items. This is the default.
+    - **Independent**: One query for each incoming item.
+    - **Transaction**: All queries in one transaction. If one query fails, the node rolls back every change.
 - **Replace Empty Strings with NULL**: Whether to replace empty strings in the input with NULL. Default is off.
 
 ## Output Decimals as Numbers can lose digits <a href="#output-decimals-as-numbers-can-lose-digits" id="output-decimals-as-numbers-can-lose-digits"></a>

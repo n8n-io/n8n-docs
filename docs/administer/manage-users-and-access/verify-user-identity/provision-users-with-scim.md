@@ -44,7 +44,6 @@ SCIM in n8n manages the user account lifecycle: it creates, updates, and deactiv
 | Project roles | SSO role assignment, or an admin | SCIM doesn't currently manage project access. |
 | Deactivation | SCIM | n8n disables the account. The user's personal project and workflows stay in place. |
 | Deletion | Deprovisioning policy | See [What happens when your IdP deletes a user](#what-happens-when-your-idp-deletes-a-user). |
-| Invites | Admins | Admins can still invite users while SSO and SCIM are on. If SSO assigns roles, admins can only invite users as Members. |
 
 If your IdP sends a `roles` attribute, n8n accepts it but ignores the value. This means a role mapping in your IdP's SCIM settings doesn't cause an error, but it doesn't change anything in n8n either. To manage roles from your IdP, set up role assignment for [SAML](use-saml/set-up-saml.md#instance-and-project-access-provisioning) or [OIDC](use-oidc/set-up-oidc.md#instance-and-project-access-provisioning). n8n applies those roles when the user signs in with SSO.
 

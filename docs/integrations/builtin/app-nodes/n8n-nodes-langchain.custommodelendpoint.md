@@ -10,7 +10,7 @@ layout:
 
 # Custom Model Endpoint node
 
-Use the Custom Model Endpoint node to send a prompt to any endpoint that speaks the OpenAI API, such as an AI gateway, an API management proxy, or a self-hosted model. Examples include LiteLLM, Portkey, Kong AI Gateway, Azure API Management, vLLM, and NVIDIA NIM.
+Use the **Custom Model Endpoint** node to send a prompt to any endpoint that speaks the OpenAI API, such as an AI gateway, an API management proxy, or a self-hosted model. Examples include LiteLLM, Portkey, Kong AI Gateway, Azure API Management, vLLM, and NVIDIA NIM.
 
 The node has one job, messaging a model, so there's no operation to choose.
 
@@ -137,6 +137,8 @@ The node outputs one item per input item:
 
 The node reports token usage into the execution metadata, the same as the other AI nodes.
 
+The node doesn't stream. It reads the whole answer before it passes the item on, so `stream` in **Extra Body** gives you an error rather than a partial answer. To stream an answer, give an AI Agent the [Custom Endpoint Chat Model](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatcustomendpoint.md) sub-node.
+
 ## Templates and examples
 
 [Search all templates](https://n8n.io/workflows/) for workflows you can adapt.
@@ -145,9 +147,9 @@ The node reports token usage into the execution metadata, the same as the other 
 
 Refer to the [OpenAI API reference](https://platform.openai.com/docs/api-reference/chat) for the request and response format these endpoints follow.
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
-
 To move an existing workflow from the OpenAI node with a Base URL override, see [Moving from the OpenAI node with a custom Base URL](../credentials/custommodelendpoint.md#moving-from-the-openai-node-with-a-custom-base-url).
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 
 ## Common issues
 

@@ -11,7 +11,9 @@ layout:
 
 # Custom Endpoint Chat Model node
 
-Use the Custom Endpoint Chat Model node to give an AI Agent a model on any endpoint that speaks the OpenAI API, such as an AI gateway, an API management proxy, or a self-hosted model. Examples include LiteLLM, Portkey, Kong AI Gateway, Azure API Management, vLLM, and NVIDIA NIM.
+Use the **Custom Endpoint Chat Model** node to give an **AI Agent** a model on any endpoint that speaks the OpenAI API, such as an AI gateway, an API management proxy, or a self-hosted model. Examples include LiteLLM, Portkey, Kong AI Gateway, Azure API Management, vLLM, and NVIDIA NIM.
+
+The model streams, so an agent built on it can stream its answer the same way it does on the other chat model sub-nodes.
 
 On this page, you'll find the node parameters for the Custom Endpoint Chat Model node and links to more resources.
 
@@ -42,6 +44,8 @@ Model names differ between gateways. The same underlying model might be `gpt-4o`
 ### Headers
 
 Headers for this request only. Values accept expressions.
+
+An expression here resolves against the first input item of the agent, so one value goes out on every call of a run. To give each item its own header value, use the [Custom Model Endpoint](../../app-nodes/n8n-nodes-langchain.custommodelendpoint.md) node, which resolves its headers for each item.
 
 Headers your gateway needs on every call belong on the credential instead, as **Gateway Headers**. n8n encrypts those and sends them on the model list as well. They don't travel on the OAuth2 token request.
 
@@ -127,7 +131,7 @@ The gateway doesn't serve a compatible `GET /models`. Switch **Model** to **By I
 
 ### The agent gets an empty answer
 
-Check the gateway's own response first. The node surfaces the gateway's error text rather than replacing it with a generic message, so a rejected key, a disabled deployment and an exhausted quota each read differently.
+Check the gateway's own response first. The node surfaces the gateway's error text rather than replacing it with a generic message, so a rejected key, a disabled deployment, and an exhausted quota each read differently.
 
 ### Tool calling does nothing
 

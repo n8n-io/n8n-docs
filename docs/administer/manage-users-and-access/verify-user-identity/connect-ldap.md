@@ -104,3 +104,4 @@ If you turn LDAP off, n8n converts existing LDAP users to email users on their n
 * [Require two-factor auth](require-two-factor-auth.md)
 * [Use SAML](use-saml/README.md)
 * [Use OIDC](use-oidc/README.md)
+* [Provision users with SCIM](provision-users-with-scim.md)

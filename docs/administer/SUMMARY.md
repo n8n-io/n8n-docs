@@ -25,6 +25,7 @@
     * [Use OIDC](manage-users-and-access/verify-user-identity/use-oidc/README.md)
       * [Set up OIDC](manage-users-and-access/verify-user-identity/use-oidc/set-up-oidc.md)
       * [Troubleshoot OIDC](manage-users-and-access/verify-user-identity/use-oidc/troubleshoot-oidc.md)
+    * [Provision users with SCIM](manage-users-and-access/verify-user-identity/provision-users-with-scim.md)
   * [Follow best practices](manage-users-and-access/follow-best-practices.md)
 * [Environments](environments/README.md)
   * [Plan your environments](environments/plan-your-environments.md)

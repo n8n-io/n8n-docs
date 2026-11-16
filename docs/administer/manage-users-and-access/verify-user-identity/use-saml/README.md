@@ -30,4 +30,5 @@ This section tells you how to enable SAML SSO (single sign-on) in n8n. It assume
 * [Require two-factor auth](../require-two-factor-auth.md)
 * [Connect LDAP](../connect-ldap.md)
 * [Use OIDC](../use-oidc/README.md)
+* [Provision users with SCIM](../provision-users-with-scim.md)
 

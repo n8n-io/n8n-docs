@@ -15,6 +15,7 @@ In n8n, go to **Settings** > **Authentication** to see the sign-in methods for y
 * [Connect LDAP](connect-ldap.md): use LDAP with n8n.
 * [Use SAML](use-saml/README.md): enable SAML SSO (single sign-on) in n8n.
 * [Use OIDC](use-oidc/README.md): enable OpenID Connect (OIDC) for single sign-on.
+* [Provision users with SCIM](provision-users-with-scim.md): create, update, and deactivate users automatically from your identity provider.
 
 ## Related resources
 

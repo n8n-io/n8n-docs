@@ -70,3 +70,17 @@ SELECT TO_CHAR(date_col, 'YYYY-MM-DD') AS date_col_as_date FROM table_with_date_
 ```
 
 This will produce the date as a string without the time or timezone components. To continue the earlier example, with this casting, a date of `2025-12-25` would produce the string `2025-12-25`. You can find out more in the [`pg` package documentation on dates](https://node-postgres.com/features/types#date--timestamp--timestamptz).
+
+## Error mentions Data Mode or Define Below
+
+The **Insert or Update** and **Update** operations can fail with errors like these:
+
+- `Column to match on not found in input item. Add a column to match on or set the 'Data Mode' to 'Define Below' to define the value to match on.`
+- `Add values to update to the input item or set the 'Data Mode' to 'Define Below' to define the values to update.`
+
+These messages use the field names from node versions 2 and 2.1. In later node versions, **Data Mode** is **Mapping Column Mode**, and **Define Below** is **Map Each Column Manually**.
+
+To fix the error, make sure each item has a value for the columns to match on and for at least one other column:
+
+- With **Map Automatically**, the incoming field names must match the column names in Postgres. Use an [Edit Fields (Set) node](../../core-nodes/n8n-nodes-base.set.md) before the Postgres node to rename fields if needed.
+- With **Map Each Column Manually**, set the values for those columns in the node.

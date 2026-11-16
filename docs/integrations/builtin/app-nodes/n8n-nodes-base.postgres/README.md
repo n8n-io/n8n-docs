@@ -89,6 +89,9 @@ Enter these parameters:
 	- **Independently**: Execute one query per incoming item of the execution.
 	- **Transaction**: Execute all queries in a transaction. If a failure occurs, Postgres rolls back all changes.
 - **Query Parameters**: A comma-separated list of values that you want to use as [query parameters](#use-query-parameters).
+- **Treat query parameters in single quotes as text**: Whether to keep a placeholder inside single quotes, like `'$1'`, as literal text. This option appears once you add **Query Parameters**, and it's off by default:
+	- **Off**: n8n replaces `'$1'` with the parameter value, inside the quotes. For a text value, this produces invalid SQL and Postgres returns a syntax error.
+	- **On**: n8n leaves `'$1'` alone, so the query uses the literal text `$1`.
 - **Output Large-Format Numbers As**: The format to output `NUMERIC` and `BIGINT` columns as:
 	- **Numbers**: Use this for standard numbers.
 	- **Text**: Use this if you expect numbers longer than 16 digits. Without this, numbers may be incorrect.
@@ -104,7 +107,7 @@ Enter these parameters:
 - **Operation**: Select **Insert**.
 - **Schema**: Choose the schema that contains the table you want to work on. Select **From list** to choose the schema from the dropdown list or **By Name** to enter the schema name.
 - **Table**: Choose the table that you want to work on. Select **From list** to choose the table from the dropdown list or **By Name** to enter the table name.
-- **Mapping Column Mode**: How to map column names to incoming data:
+- **Mapping Column Mode**: How to map column names to incoming data. Node versions 2 and 2.1 call this field **Data Mode**:
 	- **Map Each Column Manually**: Select the values to use for each column.
 	- **Map Automatically**: Automatically map incoming data to matching column names in Postgres. The incoming data field names must match the column names in Postgres for this to work. If necessary, consider using the [edit fields (set) node](../../core-nodes/n8n-nodes-base.set.md) before this node to adjust the format as needed.
 
@@ -133,7 +136,7 @@ Enter these parameters:
 - **Operation**: Select **Insert or Update**.
 - **Schema**: Choose the schema that contains the table you want to work on. Select **From list** to choose the schema from the dropdown list or **By Name** to enter the schema name.
 - **Table**: Choose the table that you want to work on. Select **From list** to choose the table from the dropdown list or **By Name** to enter the table name.
-- **Mapping Column Mode**: How to map column names to incoming data:
+- **Mapping Column Mode**: How to map column names to incoming data. Node versions 2 and 2.1 call this field **Data Mode**:
 	- **Map Each Column Manually**: Select the values to use for each column.
 	- **Map Automatically**: Automatically map incoming data to matching column names in Postgres. The incoming data field names must match the column names in Postgres for this to work. If necessary, consider using the [edit fields (set) node](../../core-nodes/n8n-nodes-base.set.md) before this node to adjust the format as needed.
 
@@ -167,6 +170,8 @@ Enter these parameters:
 - **Combine Conditions**: How to combine the conditions in **Select Rows**. **AND** requires all conditions to be true, while **OR** requires at least one condition to be true.
 - **Sort**: Choose how to sort the selected rows. Choose a **Column** from a list or by ID and a sort **Direction**.
 
+**Select** returns either all matching rows or the first rows up to **Limit**. It has no offset or cursor, so you can't use it to page through a large table. To read a large table in batches, use [**Execute Query**](#execute-query) with your own `LIMIT` and `OFFSET`, or a condition on a sorted key, such as `WHERE id > $1 ORDER BY id LIMIT 1000`.
+
 #### Select options <a href="#select-options" id="select-options"></a>
 
 - **Connection Timeout**: The number of seconds to try to connect to the database.
@@ -190,7 +195,7 @@ Enter these parameters:
 - **Operation**: Select **Update**.
 - **Schema**: Choose the schema that contains the table you want to work on. Select **From list** to choose the schema from the dropdown list or **By Name** to enter the schema name.
 - **Table**: Choose the table that you want to work on. Select **From list** to choose the table from the dropdown list or **By Name** to enter the table name.
-- **Mapping Column Mode**: How to map column names to incoming data:
+- **Mapping Column Mode**: How to map column names to incoming data. Node versions 2 and 2.1 call this field **Data Mode**:
 	- **Map Each Column Manually**: Select the values to use for each column.
 	- **Map Automatically**: Automatically map incoming data to matching column names in Postgres. The incoming data field names must match the column names in Postgres for this to work. If necessary, consider using the [edit fields (set) node](../../core-nodes/n8n-nodes-base.set.md) before this node to adjust the format as needed.
 

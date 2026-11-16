@@ -1,0 +1,21 @@
+docs/build/manage-workflows/n8n-packages/README.md
+  s_481a47571961f9::t_8e0c5d6b562619 48,57
+docs/build/manage-workflows/n8n-packages/export-a-package.md
+  s_481a47571961f9::t_8e0c5d6b562619 158
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "61501051512315aaa7de835329c66262ad28f255",
+  "prompts": {},
+  "sessions": {
+    "s_481a47571961f9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "febba625-4573-4933-b74b-d2ec2e270f37",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jan K. <jan.kalkan@n8n.io>"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+docs/build/manage-workflows/n8n-packages/limits-and-permissions.md
+  ai_agent 95-96,109,111
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "c1bd15a62d083519da9905189b425a5c918e1f51",
+  "prompts": {}
+}

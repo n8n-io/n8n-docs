@@ -1,0 +1,33 @@
+docs/build/manage-workflows/n8n-packages/export-a-package.md
+  s_481a47571961f9::t_0a75b1ee5f403b 86,89-90
+  s_481a47571961f9::t_972b0b6c019a7a 4
+  s_481a47571961f9::t_f8f954e4d94021 81,88,112,170
+  s_481a47571961f9::t_13ffc837a4da55 78
+docs/build/manage-workflows/n8n-packages/import-a-package.md
+  s_481a47571961f9::t_b38a08452e3f09 43
+  s_481a47571961f9::t_bb15aaff0999ff 63,65,72-74
+  s_481a47571961f9::t_08fc3ecdb2bd31 232
+  s_481a47571961f9::t_ee85483d1705fb 236
+  s_481a47571961f9::t_7b2f797eb5f3a8 36
+docs/connect/n8n-cli.md
+  s_481a47571961f9::t_f8f954e4d94021 188-189
+docs/build/manage-workflows/n8n-packages/how-import-works.md
+  s_481a47571961f9::t_f8f954e4d94021 195,197
+  s_481a47571961f9::t_a1e849334ebcf2 196
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "c41a31b9e48b75dabaa6a082dd1aa9e019669de5",
+  "prompts": {},
+  "sessions": {
+    "s_481a47571961f9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "febba625-4573-4933-b74b-d2ec2e270f37",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": null
+    }
+  }
+}

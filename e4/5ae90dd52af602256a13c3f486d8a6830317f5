@@ -1,0 +1,27 @@
+docs/administer/environments/protect-a-production-instance.md
+  s_8ec7bfed268277::t_6cd4991990204d 11,42,44-47
+docs/administer/environments/first-promotion.md
+  s_8ec7bfed268277::t_a48a51a6dc2d9d 41
+docs/administer/environments/upgrade-from-environments-classic.md
+  s_8ec7bfed268277::t_6cd4991990204d 61
+docs/administer/environments/plan-your-environments.md
+  s_8ec7bfed268277::t_6cd4991990204d 26
+docs/administer/environments/README.md
+  s_8ec7bfed268277::t_6cd4991990204d 102
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "e45ae90dd52af602256a13c3f486d8a6830317f5",
+  "prompts": {},
+  "sessions": {
+    "s_8ec7bfed268277": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b9ff11b4-095e-4619-830d-c574ab65583e",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jan K. <jan.kalkan@n8n.io>"
+    }
+  }
+}

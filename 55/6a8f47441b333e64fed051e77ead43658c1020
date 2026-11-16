@@ -1,0 +1,32 @@
+docs/build/manage-workflows/n8n-packages/import-a-package.md
+  s_481a47571961f9::t_08fc3ecdb2bd31 240
+  s_481a47571961f9::t_bb15aaff0999ff 63,65,70-72,74-77,80-82
+  s_481a47571961f9::t_7b2f797eb5f3a8 36
+  s_481a47571961f9::t_ee85483d1705fb 244
+  s_481a47571961f9::t_23488bd06a2be4 73
+  s_481a47571961f9::t_b38a08452e3f09 43
+docs/build/manage-workflows/n8n-packages/how-import-works.md
+  s_481a47571961f9::t_a1e849334ebcf2 196
+  s_481a47571961f9::t_f8f954e4d94021 195,197
+docs/connect/n8n-cli.md
+  s_481a47571961f9::t_f8f954e4d94021 188-189
+docs/build/manage-workflows/n8n-packages/export-a-package.md
+  s_481a47571961f9::t_f8f954e4d94021 84,87,94,116,174
+  s_481a47571961f9::t_49ddf349ced4c8 70-75
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "556a8f47441b333e64fed051e77ead43658c1020",
+  "prompts": {},
+  "sessions": {
+    "s_481a47571961f9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "febba625-4573-4933-b74b-d2ec2e270f37",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jan K. <jan.kalkan@n8n.io>"
+    }
+  }
+}

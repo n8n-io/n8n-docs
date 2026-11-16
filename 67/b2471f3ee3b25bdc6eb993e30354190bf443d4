@@ -1,0 +1,11 @@
+docs/build/manage-workflows/n8n-packages/README.md
+  ai_agent 57
+docs/build/manage-workflows/n8n-packages/export-a-package.md
+  ai_agent 158
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "67b2471f3ee3b25bdc6eb993e30354190bf443d4",
+  "prompts": {}
+}

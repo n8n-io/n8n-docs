@@ -1,0 +1,27 @@
+docs/administer/manage-users-and-access/control-node-availability.md
+  s_0636228609e6f6::t_5ee9e8b3744fbb 33,93,95,105,130,150,205
+docs/administer/use-source-control-and-environments/use-environments-via-api.md
+  s_0636228609e6f6::t_c1304dcfa448ba 240
+docs/build/work-with-data/data-tables.md
+  s_0636228609e6f6::t_9c625cabfe54f7 46
+docs/changelog/README.md
+  s_0636228609e6f6::t_b2455ea912c554 268
+docs/integrations/builtin/core-nodes/n8n-nodes-base.n8n.md
+  s_0636228609e6f6::t_8eb3e6fc27ce51 197
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "328ed976b1e1b12b7a71290da5d51a7608d1f035",
+  "prompts": {},
+  "sessions": {
+    "s_0636228609e6f6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "86d6be62-09bc-43af-a121-ac7a4e0dc159",
+        "model": "claude-haiku-5-5"
+      },
+      "human_author": "Sam Wooler <swooler592@gmail.com>"
+    }
+  }
+}

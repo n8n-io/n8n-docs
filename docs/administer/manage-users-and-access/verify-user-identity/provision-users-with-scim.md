@@ -18,7 +18,7 @@ SCIM provisioning lets your identity provider (IdP) create, update, and deactiva
 {% hint style="info" %}
 **Preview status**
 
-SCIM provisioning is in Preview and may change in future releases. Avoid relying on it in production. Learn more about [what Preview means](../../understand-feature-availability.md#feature-maturity-preview-ga-deprecated-and-removed).
+SCIM provisioning is in Preview and may change in future releases. Avoid relying on it in production.
 {% endhint %}
 
 {% hint style="info" %}

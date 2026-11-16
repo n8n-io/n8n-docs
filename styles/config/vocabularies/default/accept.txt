@@ -215,6 +215,7 @@ OTel
 OTLP
 Ortto
 Oura
+Palo
 PDFs?
 Peekalink
 [Pp]erformant

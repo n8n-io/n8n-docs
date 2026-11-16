@@ -75,36 +75,6 @@ Make sure you have:
 ### Setup 1: n8n sandbox service on Kubernetes with Sysbox (recommended for self-hosted production)
 
 The n8n sandbox service runs sandboxes in Sysbox nodes on a Kubernetes cluster you control. Workflow data stays in your infrastructure, and the runners don't need `privileged: true`. This is the setup n8n recommends for self-hosted production.
-If you installed n8n with the [one-line setup command](../install-options/one-line-setup.md) or built it by hand with the [Docker Compose guide](../install-options/install-using-docker-compose.md), the sandbox and search, using bundled SearXNG, are already running. All that's left is a model key.
-
-**What you need:** an LLM API key. Nothing else.
-
-**Steps:**
-
-The quickest way: open the editor, go to the instance's AI settings, and add your model key there. Prefer `.env`?  Use the steps below.
-
-1. Add your model key to `.env`:
-
-   ```bash
-   N8N_INSTANCE_AI_MODEL_API_KEY=sk-ant-xxx
-   ```
-
-2. Restart n8n.
-3. Open the editor and confirm n8n Assistant appears and responds.
-
-`N8N_INSTANCE_AI_MODEL` defaults to `anthropic/claude-opus-5-5` from n8n 2.48.0. Earlier versions default to `anthropic/claude-opus-4-8`. Set it explicitly only if you want a different model (see [Choose a model provider](#choose-a-model-provider)).
-
-If you connect through a gateway with `N8N_INSTANCE_AI_MODEL_URL` and don't set a model, make sure the gateway offers Claude Opus 5.5. If it doesn't, set `N8N_INSTANCE_AI_MODEL` to a model it offers, such as `anthropic/claude-opus-4-8`.
-
-Prefer to watch? This [video guide](https://go.n8n.io/RZZWq1) covers the setup end to end, from the one-line install to selecting a provider and model in the editor.
-
-### Setup 2: Self-host the sandbox manually (advanced)
-
-Use this if you're configuring n8n outside of the one-line setup command or Docker Compose guide, and you want to run the sandbox yourself rather than hand it to Daytona.
-
-{% hint style="warning" %}
-This means hosting two extra containers yourself: the sandbox API and a privileged Docker-in-Docker runner, plus mutual TLS between them. Like setup 1, this uses `n8n-sandbox`, which is best suited to local development and testing. For production, use [Daytona](#setup-3-daytona-managed-sandbox-recommended-for-production) instead.
-{% endhint %}
 
 **What you need:**
 
@@ -245,7 +215,9 @@ The quickest way: open the editor, go to the instance's AI settings, and add you
 2. Restart n8n.
 3. Open the editor and confirm n8n Assistant appears and responds.
 
-`N8N_INSTANCE_AI_MODEL` defaults to `anthropic/claude-opus-4-8`. Set it explicitly only if you want a different model (see [Choose a model provider](#choose-a-model-provider)).
+`N8N_INSTANCE_AI_MODEL` defaults to `anthropic/claude-opus-5-5` from n8n 2.48.0. Earlier versions default to `anthropic/claude-opus-4-8`. Set it explicitly only if you want a different model (see [Choose a model provider](#choose-a-model-provider)).
+
+If you connect through a gateway with `N8N_INSTANCE_AI_MODEL_URL` and don't set a model, make sure the gateway offers Claude Opus 5.5. If it doesn't, set `N8N_INSTANCE_AI_MODEL` to a model it offers, such as `anthropic/claude-opus-4-8`.
 
 Prefer to watch? This [video guide](https://go.n8n.io/RZZWq1) covers the setup end to end, from the one-line install to selecting a provider and model in the editor.
 

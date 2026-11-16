@@ -269,6 +269,28 @@ def main():
     check("and that documented id isn't treated as a real anchor",
           category("docs/spacea/id-in-code-heading.md", "#example") == "broken-anchor")
 
+    # GitBook makes repeated heading ids unique with -1, -2 in page order
+    # (enterprise-hub: a stepper step and the section below share a title).
+    G = "docs/spacea/gitbook-ids.md"
+    check("first of repeated headings keeps the plain slug",
+          category(G, "#publish-first-workflow") is None)
+    check("second repeated heading resolves as -1",
+          category(G, "#publish-first-workflow-1") is None)
+    check("third repeated heading resolves as -2",
+          category(G, "#publish-first-workflow-2") is None)
+    check("a suffix past the last repeat is still broken",
+          category(G, "#publish-first-workflow-3") == "broken-anchor")
+
+    # GitBook serves explicit ids cut to 100 characters (v20-breaking-changes).
+    long_id = ("return-expected-sub-workflow-data-when-the-sub-workflow-resumes-"
+               "from-waiting-waiting-for-webhook-forms-hitl-etc")
+    check("the 100-character form of a long explicit id resolves",
+          category(G, "#" + long_id[:100]) is None)
+    check("the full long explicit id still resolves",
+          category(G, "#" + long_id) is None)
+    check("a shorter cut of a long id is still broken",
+          category(G, "#" + long_id[:90]) == "broken-anchor")
+
     check("a block whose index Name is only in frontmatter resolves",
           cil.reusable_blocks().get("BLOCK2") is not None)
 

@@ -36,8 +36,8 @@ Refer to [Postgres credentials](../../credentials/postgres.md) for guidance on s
 * [**Execute Query**](#execute-query): Execute an SQL query
 * [**Insert**](#insert): Insert rows in a table
 * [**Insert or Update**](#insert-or-update): Insert or update rows in a table
-* [**List Schemas**](#list-schemas): List the schemas, the same ones the **Schema** list offers
-* [**List Tables**](#list-tables): List the tables, views and foreign tables in a schema
+* [**List Schemas**](#list-schemas): List the schemas, the same ones the **Schema** dropdown offers
+* [**List Tables**](#list-tables): List the tables, views, and foreign tables in a schema
 * [**Select**](#select): Select rows from a table
 * [**Update**](#update): Update rows in a table
 
@@ -153,7 +153,7 @@ Enter these parameters:
 	- **Text**: Use this if you expect numbers longer than 16 digits. Without this, numbers may be incorrect.
 - **Replace Empty Strings with NULL**: Whether to replace empty strings with NULL in input. This may be useful when working with data exported from spreadsheet software.
 
-### List Schemas <a href="#list-schemas" id="list-schemas"></a>
+### List Schemas
 
 Use this operation to get the schemas as data, instead of only in the **Schema** dropdown. It only reads, so it's safe to give to an AI agent on an instance that blocks **Execute Query**.
 
@@ -164,7 +164,7 @@ Enter these parameters:
 
 The node returns one item for each schema, as `{ "schema_name": "public" }`. It runs the same query as the **Schema** dropdown, so the two always agree. Postgres decides which schemas that query returns: the list isn't always every schema your role can read, and it does include the system schemas `pg_catalog` and `information_schema`, which most workflows filter out.
 
-#### List Schemas options <a href="#list-schemas-options" id="list-schemas-options"></a>
+#### List Schemas options
 
 - **Connection Timeout**: The number of seconds to try to connect to the database.
 - **Delay Closing Idle Connection**: The number of seconds to wait before considering idle connections eligible for closing.
@@ -174,7 +174,7 @@ The node returns one item for each schema, as `{ "schema_name": "public" }`. It 
 	- **Transaction**: Execute all queries in a transaction. If a failure occurs, Postgres rolls back all changes.
 - **Output Large-Format Numbers As**: The format to output `NUMERIC` and `BIGINT` columns as. This operation returns no numeric columns, so the setting makes no difference to its output.
 
-### List Tables <a href="#list-tables" id="list-tables"></a>
+### List Tables
 
 Use this operation to get the contents of a schema as data, for example to loop over every table in it. It only reads, so it's safe to give to an AI agent on an instance that blocks **Execute Query**.
 
@@ -191,9 +191,9 @@ The node returns one item for each entry, as `{ "table_name": "orders", "table_t
 - `FOREIGN` is a foreign table.
 - `LOCAL TEMPORARY` is a temporary table, which Postgres keeps in a session-private `pg_temp_` schema.
 
-Materialized views never appear, whatever their schema. A schema with no tables returns no items.
+Materialized views never appear, whatever their schema. A schema with no matching entries returns no items.
 
-#### List Tables options <a href="#list-tables-options" id="list-tables-options"></a>
+#### List Tables options
 
 - **Connection Timeout**: The number of seconds to try to connect to the database.
 - **Delay Closing Idle Connection**: The number of seconds to wait before considering idle connections eligible for closing.

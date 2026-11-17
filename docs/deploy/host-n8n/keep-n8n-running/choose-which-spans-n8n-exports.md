@@ -127,7 +127,7 @@ This variable controls the copy that goes to your OTLP endpoint. Separately, n8n
 
 ## Microsoft Agent 365 spans sent to Microsoft
 
-The **Microsoft Agent 365 Trigger** node sends its `invoke_agent <agent-name>` spans to Microsoft's Agent 365 observability service. This export is on by default, and it doesn't depend on your OpenTelemetry settings: it runs even when `N8N_OTEL_ENABLED` is `false`.
+The **Microsoft Agent 365 Trigger** node sends its `invoke_agent <agent-name>` spans to Microsoft's Agent 365 observability service. This export is on by default, and it doesn't depend on `N8N_OTEL_ENABLED` or **Settings > OpenTelemetry**: it runs even when OpenTelemetry tracing is off. Two things stop it besides the variables below: `OTEL_SDK_DISABLED=true`, and another OpenTelemetry setup loaded before n8n. Refer to [Don't set library OpenTelemetry flags](#dont-set-library-opentelemetry-flags).
 
 These spans can contain user messages and agent replies. n8n sends them to Microsoft only while both `ENABLE_OBSERVABILITY` and `ENABLE_A365_OBSERVABILITY_EXPORTER` are unset or `true`. To stop the export, set either one to `false` on every instance that runs workflows, and restart n8n:
 

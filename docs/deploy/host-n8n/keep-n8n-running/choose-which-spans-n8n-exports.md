@@ -14,7 +14,7 @@ tags:
 
 # Choose which spans n8n exports
 
-By default, n8n sends only workflow, node, and agent spans to your OTLP endpoint. Every other tracing source stays off until you turn it on with an environment variable.
+By default, n8n sends only workflow, node, and agent spans to your OTLP endpoint. Spans from every other source reach your endpoint only after you turn that source on with an environment variable.
 
 {% hint style="info" %}
 **Preview status**
@@ -30,7 +30,9 @@ The Daytona and Microsoft Agent 365 tracing sources, and the n8n handling of sta
 Expression spans are available from n8n 2.19.0, and off by default from n8n 2.45.0.
 {% endhint %}
 
-This page covers what reaches your OTLP endpoint and what doesn't. To set up tracing in the first place, refer to [OpenTelemetry tracing](trace-executions-with-opentelemetry.md).
+This page covers what reaches your OTLP endpoint and what doesn't. Two other destinations work separately from your endpoint: Microsoft Agent 365 spans go to Microsoft by default, and Sentry spans go to Sentry when `N8N_SENTRY_DSN` is set. Refer to [Microsoft Agent 365 spans sent to Microsoft](#microsoft-agent-365-spans-sent-to-microsoft) and [Sentry spans](#sentry-spans).
+
+To set up tracing in the first place, refer to [OpenTelemetry tracing](trace-executions-with-opentelemetry.md).
 
 ## What n8n exports by default
 
@@ -45,7 +47,7 @@ When you turn on OpenTelemetry tracing (`N8N_OTEL_ENABLED=true`, or **Enable Ope
 
 For the attributes on each span, refer to [Span attributes](trace-executions-with-opentelemetry.md#span-attributes).
 
-n8n drops spans from every other source, including the libraries that nodes use internally. A library can create spans, but n8n doesn't export them unless you turn that source on. This keeps internal engine telemetry, and data you didn't choose to send, out of your trace backend.
+n8n keeps spans from every other source away from your OTLP endpoint, including the libraries that nodes use internally. A library can create spans, but n8n doesn't send them to your endpoint unless you turn that source on. This keeps internal engine telemetry, and data you didn't choose to send, out of your trace backend.
 
 ## Turn on other tracing sources
 
@@ -55,7 +57,7 @@ You can turn on these extra sources. Each one needs OpenTelemetry tracing turned
 | :----- | :------------------- | :------ | :---------------- |
 | Expressions | `N8N_EXPRESSION_ENGINE_TRACES_ENABLED` | `false` | `expression.evaluate`, for each expression that fails, runs slowly, or is sampled |
 | Daytona sandbox | `N8N_DAYTONA_TRACING_ENABLED` | `false` | One span per Daytona client call that an AI agent makes, named `<class>.<method>`, for example `Daytona.create` |
-| Microsoft Agent 365 | `N8N_MICROSOFT_AGENT_365_TRACING_ENABLED` | `false` | `invoke_agent <agent-name>` and `agents.*` spans from the [Microsoft Agent 365 Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.microsoftagent365trigger) |
+| Microsoft Agent 365 | `N8N_MICROSOFT_AGENT_365_TRACING_ENABLED` | `false` | `invoke_agent <agent-name>` and `agents.*` spans from the [**Microsoft Agent 365 Trigger** node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.microsoftagent365trigger) |
 
 To turn on a source:
 
@@ -108,7 +110,7 @@ export N8N_DAYTONA_TRACING_ENABLED=true
 
 ### Trace Microsoft Agent 365
 
-To send spans from the Microsoft Agent 365 Trigger node to your OTLP endpoint, set:
+To send spans from the **Microsoft Agent 365 Trigger** node to your OTLP endpoint, set:
 
 ```bash
 export N8N_OTEL_ENABLED=true
@@ -125,7 +127,7 @@ This variable controls the copy that goes to your OTLP endpoint. Separately, n8n
 
 ## Microsoft Agent 365 spans sent to Microsoft
 
-The Microsoft Agent 365 Trigger node sends its `invoke_agent <agent-name>` spans to Microsoft's Agent 365 observability service. This export is on by default, and it doesn't depend on your OpenTelemetry settings: it runs even when `N8N_OTEL_ENABLED` is `false`.
+The **Microsoft Agent 365 Trigger** node sends its `invoke_agent <agent-name>` spans to Microsoft's Agent 365 observability service. This export is on by default, and it doesn't depend on your OpenTelemetry settings: it runs even when `N8N_OTEL_ENABLED` is `false`.
 
 These spans can contain user messages and agent replies. n8n sends them to Microsoft only while both `ENABLE_OBSERVABILITY` and `ENABLE_A365_OBSERVABILITY_EXPORTER` are unset or `true`. To stop the export, set either one to `false` on every instance that runs workflows, and restart n8n:
 
@@ -145,7 +147,7 @@ Sentry also doesn't add trace headers to outbound requests. Only the OpenTelemet
 
 ## Standard OpenTelemetry environment variables
 
-OpenTelemetry defines standard `OTEL_*` environment variables. n8n has its own `N8N_OTEL_*` variable for most options, and n8n's settings always win.
+OpenTelemetry defines standard `OTEL_*` environment variables. n8n has its own setting for most options. Where it does, n8n's setting wins over the standard variable. A few standard variables, such as `OTEL_SDK_DISABLED`, apply whatever n8n's settings say. Refer to [Variables n8n applies](#variables-n8n-applies).
 
 For each option that has an n8n setting, n8n uses the first value it finds:
 
@@ -194,6 +196,21 @@ n8n sets up OpenTelemetry once, when it starts. Some libraries that n8n uses hav
 | `DAYTONA_OTEL_ENABLED`, `DAYTONA_EXPERIMENTAL_OTEL_ENABLED` | The Daytona client starts its own OpenTelemetry setup and exporter, and replaces n8n's OpenTelemetry diagnostics logging with console output. | `N8N_DAYTONA_TRACING_ENABLED` |
 | `MISTRAL_SDK_TELEMETRY` | The Mistral client can start its own exporter and send spans to Mistral. | None. n8n doesn't export Mistral spans. |
 | `NODE_OPTIONS=--require @opentelemetry/auto-instrumentations-node/register`, or any other OpenTelemetry setup loaded before n8n | n8n finds an existing setup and steps aside. Workflow spans go to that setup, n8n ignores its own OpenTelemetry settings, and n8n sends no Microsoft Agent 365 spans to Microsoft. | `N8N_OTEL_*` variables or **Settings > OpenTelemetry** |
+
+## Send spans to different backends
+
+n8n exports to one OTLP endpoint. To send spans to more than one backend, or different spans to different backends, point n8n at an [OpenTelemetry Collector](https://opentelemetry.io/docs/collector/) and route them there, for example with the [filter processor](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/processor/filterprocessor). Don't load a second OpenTelemetry setup in the n8n process instead: n8n steps aside and ignores its own settings. Refer to [Don't set library OpenTelemetry flags](#dont-set-library-opentelemetry-flags).
+
+To route n8n spans, match on these names and attributes:
+
+| Spans | Match on |
+| :---- | :------- |
+| Workflow and node spans | Span name `workflow.execute` or `node.execute` |
+| Agent runs and tool calls | Span attribute `gen_ai.operation.name` |
+| Expression evaluations | Span name `expression.evaluate` |
+| Spans from one instance type, such as workers | Resource attribute `n8n.instance.role` |
+
+If you send agent spans and workflow spans to different backends, an agent run started from a workflow arrives without its parent, because it nests under the span of the node that called it. Agent runs started from a chat integration start their own trace, so they arrive complete.
 
 ## Troubleshooting
 

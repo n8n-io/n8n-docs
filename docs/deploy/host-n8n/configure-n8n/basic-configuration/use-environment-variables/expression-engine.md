@@ -63,7 +63,7 @@ These variables configure the backend `vm` and `quickjs` engines. They have no e
 
 ## Trace expression evaluations
 
-These variables control the `expression.evaluate` OpenTelemetry spans. Like the variables above, they only work with the `vm` and `quickjs` backend engines. The spans also need OpenTelemetry tracing turned on with `N8N_OTEL_ENABLED`. Refer to [Choose which spans n8n exports](../../../keep-n8n-running/choose-which-spans-n8n-exports.md#trace-expression-evaluations).
+These variables control the `expression.evaluate` OpenTelemetry spans. Like the variables above, they only work with the `vm` and `quickjs` backend engines. The spans also need OpenTelemetry turned on, with `N8N_OTEL_ENABLED` or **Enable OpenTelemetry** in **Settings > OpenTelemetry**. Refer to [Choose which spans n8n exports](../../../keep-n8n-running/choose-which-spans-n8n-exports.md#trace-expression-evaluations).
 
 | Variable | Type | Default | Description |
 | :------- | :--- | :------ | :---------- |

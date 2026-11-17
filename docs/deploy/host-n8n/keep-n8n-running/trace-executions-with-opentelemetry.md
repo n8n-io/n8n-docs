@@ -653,7 +653,7 @@ Agent spans depend on the OTel module. Check that:
 - `N8N_OTEL_ENABLED` is set to `true`.
 - `N8N_AGENTS_TRACING_ENABLED` isn't set to `false`. It defaults to `true`.
 
-With `N8N_OTEL_ENABLED` set to `false`, agent runs complete normally, but n8n emits no spans for them, whatever `N8N_AGENTS_TRACING_ENABLED` is set to.
+With `N8N_OTEL_ENABLED` set to `false`, agent runs still complete, but n8n emits no spans for them, whatever value you give `N8N_AGENTS_TRACING_ENABLED`.
 
 If you deploy n8n on AWS using the [terraform-aws-n8n](https://github.com/n8n-io/terraform-aws-n8n) module, see [Configure Enterprise features on AWS](../install-options/use-a-cloud-provider/deploy-to-aws-with-terraform/use-enterprise-features-on-aws.md#opentelemetry-tracing) for the module-specific setup.
 

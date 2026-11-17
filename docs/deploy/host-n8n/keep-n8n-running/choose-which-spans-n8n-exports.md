@@ -123,7 +123,7 @@ export N8N_MICROSOFT_AGENT_365_TRACING_ENABLED=true
 These spans can contain user messages and agent replies. Check what your trace backend stores, and who can read it, before you turn them on.
 {% endhint %}
 
-This variable controls the copy that goes to your OTLP endpoint. Separately, n8n also sends Microsoft Agent 365 spans to Microsoft. Refer to [Microsoft Agent 365 spans sent to Microsoft](#microsoft-agent-365-spans-sent-to-microsoft).
+This variable controls only the copy that goes to your OTLP endpoint. n8n also sends Microsoft Agent 365 spans to Microsoft, and other variables control that export. Refer to [Microsoft Agent 365 spans sent to Microsoft](#microsoft-agent-365-spans-sent-to-microsoft).
 
 ## Microsoft Agent 365 spans sent to Microsoft
 

@@ -233,6 +233,7 @@ Test a workflow using pin data to bypass external services. Trigger nodes, nodes
 * Can be used to test workflow logic without setting up credentials or hitting external services.
 * This tool executes workflows synchronously (waits for execution to finish).
 * Has an enforced MCP execution timeout, five minutes by default. Use `timeout` to raise it, up to 60 minutes.
+* From n8n 2.47.0, if execution data redaction applies to you, `error` holds the redacted error instead of the original message. If n8n can't load or redact the execution, `error` holds `Error details hidden because the execution data redaction check failed`.
 
 ***
 

@@ -1,0 +1,19 @@
+docs/connect/connect-to-n8n-mcp-server/mcp-server-tools-reference.md
+  s_585bcc7494f86c::t_6ccb2866a43bff 141
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "1a30da0f248b4ce41bec6579cfa34a9a8c15cabe",
+  "prompts": {},
+  "sessions": {
+    "s_585bcc7494f86c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bcd1736f-09d4-42a8-b0c6-baab32fc70f0",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Svetoslav Dekov <svetoslav.dekov@n8n.io>"
+    }
+  }
+}

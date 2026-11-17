@@ -122,3 +122,4 @@ As of now, front-end logs aren't available. Using `Logger` or `LoggerProxy` woul
 * [Back up and restore](backup-and-restore.md)
 * [Update n8n](update-n8n.md)
 * [Trace executions with OpenTelemetry](trace-executions-with-opentelemetry.md)
+* [Choose which spans n8n exports](choose-which-spans-n8n-exports.md)

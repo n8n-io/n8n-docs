@@ -45,7 +45,17 @@ n8n can export workflow and node execution traces over OTLP to an OpenTelemetry 
 | `N8N_AGENTS_TRACING_ENABLED` | Boolean | `true` | Whether agent runs emit OpenTelemetry spans. Inherits the endpoint, headers, sampling, and transport settings from `N8N_OTEL_*`. Spans have nowhere to go until you configure an OTel provider, so set this to `false` to run workflow tracing without agent spans. | 2.33.0 |
 | `N8N_AGENTS_TRACING_RECORD_INPUTS` | Boolean | `true` | Whether agent tracing records inputs, such as prompts and tool arguments. Set to `false` to exclude sensitive input data from traces. | 2.33.0 |
 | `N8N_AGENTS_TRACING_RECORD_OUTPUTS` | Boolean | `true` | Whether agent tracing records outputs, such as responses and tool results. Set to `false` to exclude sensitive output data from traces. | 2.33.0 |
+| `N8N_DAYTONA_TRACING_ENABLED` | Boolean | `false` | Whether n8n sends spans from the Daytona sandbox client to your OTLP endpoint. Needs `N8N_OTEL_ENABLED` set to `true`. n8n reads it at startup, so a change needs a restart. Refer to [Choose which spans n8n exports](../../../keep-n8n-running/choose-which-spans-n8n-exports.md#trace-the-daytona-sandbox). | 2.47.0 |
+| `N8N_MICROSOFT_AGENT_365_TRACING_ENABLED` | Boolean | `false` | Whether n8n sends spans from the Microsoft Agent 365 Trigger node to your OTLP endpoint. These spans can contain user messages and agent replies. Needs `N8N_OTEL_ENABLED` set to `true`. n8n reads it at startup, so a change needs a restart. Refer to [Choose which spans n8n exports](../../../keep-n8n-running/choose-which-spans-n8n-exports.md#trace-microsoft-agent-365). | 2.47.0 |
+| `ENABLE_OBSERVABILITY` | Boolean | `true` | Whether the Microsoft Agent 365 Trigger node sends its spans to Microsoft. Any value other than `true` stops the export. Doesn't depend on `N8N_OTEL_ENABLED`. Refer to [Microsoft Agent 365 spans sent to Microsoft](../../../keep-n8n-running/choose-which-spans-n8n-exports.md#microsoft-agent-365-spans-sent-to-microsoft). | 2.47.0 |
+| `ENABLE_A365_OBSERVABILITY_EXPORTER` | Boolean | `true` | Whether the Microsoft Agent 365 Trigger node sends its spans to Microsoft. Any value other than `true` stops the export. Doesn't depend on `N8N_OTEL_ENABLED`. Refer to [Microsoft Agent 365 spans sent to Microsoft](../../../keep-n8n-running/choose-which-spans-n8n-exports.md#microsoft-agent-365-spans-sent-to-microsoft). | 2.47.0 |
+
+To trace expression evaluations, use the `N8N_EXPRESSION_ENGINE_TRACES_*` variables in [Expression engine environment variables](expression-engine.md#trace-expression-evaluations).
+
+n8n also reads some standard `OTEL_*` variables, such as `OTEL_RESOURCE_ATTRIBUTES` and `OTEL_BSP_*`, and ignores others. For the full list, and which setting wins when both are set, refer to [Standard OpenTelemetry environment variables](../../../keep-n8n-running/choose-which-spans-n8n-exports.md#standard-opentelemetry-environment-variables).
 
 ## Related resources
 
 * [Environment variables](./)
+* [OpenTelemetry tracing](../../../keep-n8n-running/trace-executions-with-opentelemetry.md)
+* [Choose which spans n8n exports](../../../keep-n8n-running/choose-which-spans-n8n-exports.md)

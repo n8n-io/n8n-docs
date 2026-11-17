@@ -40,6 +40,8 @@ When you turn on tracing, n8n exports two kinds of spans for each execution:
 
 n8n exports a span when it ends. To see a run while it's still going, turn on [start spans](#start-spans).
 
+Workflow, node, and [agent](#agent-tracing) spans are the only spans n8n exports by default. To add spans from other sources, such as expressions, or to see how n8n reads the standard `OTEL_*` variables, refer to [Choose which spans n8n exports](choose-which-spans-n8n-exports.md).
+
 Each span includes resource attributes that identify the n8n instance:
 
 - `service.name` (default `n8n`)
@@ -663,6 +665,7 @@ If you deploy n8n on AWS using the [terraform-aws-n8n](https://github.com/n8n-io
 - [Visualize metrics with Grafana](visualize-metrics-with-grafana.md)
 - [Back up and restore](backup-and-restore.md)
 - [Update n8n](update-n8n.md)
+- [Choose which spans n8n exports](choose-which-spans-n8n-exports.md)
 - [OpenTelemetry environment variables](../configure-n8n/basic-configuration/use-environment-variables/opentelemetry.md)
 - [W3C Trace Context specification](https://www.w3.org/TR/trace-context/)
 - [W3C Baggage specification](https://www.w3.org/TR/baggage/)

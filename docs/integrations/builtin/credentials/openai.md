@@ -51,7 +51,7 @@ Create an [OpenAI](https://platform.openai.com/signup/) account.
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 * API key
-* OpenAI Account (OpenAI Chat Model node only)
+* **OpenAI Account** (**OpenAI Chat Model** node only)
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 

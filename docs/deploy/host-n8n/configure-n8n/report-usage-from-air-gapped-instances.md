@@ -1,8 +1,8 @@
 ---
 description: >-
   Set up n8n-airgap-monitoring to collect daily usage reports from self-hosted
-  n8n instances in an air-gapped network, then download the report and share it
-  with n8n.
+  n8n instances in an air-gapped network, then share the report with n8n.
+
 layout:
   description:
     visible: false

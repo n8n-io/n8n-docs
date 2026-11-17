@@ -58,7 +58,7 @@ Refer to the [OpenAI credentials documentation](../../../credentials/openai.md) 
 
 Select **API Key** to use an OpenAI API key, or **OpenAI Account** to connect a ChatGPT/OpenAI account. Refer to the [OpenAI credentials](../../../credentials/openai.md) for setup.
 
-With **OpenAI Account**, n8n loads models from the ChatGPT/Codex account backend and defaults to `gpt-5.4-mini`.
+With **OpenAI Account**, n8n loads models from the ChatGPT/Codex account backend and uses the account's available default model.
 
 ### Model <a href="#model" id="model"></a>
 

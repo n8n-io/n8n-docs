@@ -30,7 +30,7 @@ The Daytona and Microsoft Agent 365 tracing sources, and the n8n handling of sta
 Expression spans are available from n8n 2.19.0, and off by default from n8n 2.45.0.
 {% endhint %}
 
-This page covers what reaches your OTLP endpoint and what doesn't. Two other destinations work separately from your endpoint: Microsoft Agent 365 spans go to Microsoft by default, and Sentry spans go to Sentry when `N8N_SENTRY_DSN` is set. Refer to [Microsoft Agent 365 spans sent to Microsoft](#microsoft-agent-365-spans-sent-to-microsoft) and [Sentry spans](#sentry-spans).
+This page covers what reaches your OTLP endpoint and what doesn't. Two other destinations don't depend on your endpoint: Microsoft Agent 365 spans go to Microsoft by default, and Sentry spans go to Sentry when you set `N8N_SENTRY_DSN`. Refer to [Microsoft Agent 365 spans sent to Microsoft](#microsoft-agent-365-spans-sent-to-microsoft) and [Sentry spans](#sentry-spans).
 
 To set up tracing in the first place, refer to [OpenTelemetry tracing](trace-executions-with-opentelemetry.md).
 
@@ -40,7 +40,7 @@ When you turn on OpenTelemetry tracing (`N8N_OTEL_ENABLED=true`, or **Enable Ope
 
 | Spans | Source | Turn off with |
 | :---- | :----- | :------------ |
-| `workflow.execute` | Each workflow execution | Not possible while tracing is on |
+| `workflow.execute` | Each workflow execution | Always on while tracing is on |
 | `node.execute` | Each node execution | `N8N_OTEL_TRACES_INCLUDE_NODE_SPANS=false` |
 | `<agent-name>.generate`, `<agent-name>.stream`, `execute_tool <tool-name>` | Agent runs built with the Agents feature | `N8N_AGENTS_TRACING_ENABLED=false` |
 | `workflow.execute.started`, `node.execute.started` | Optional start spans, off by default | Refer to [Start spans](trace-executions-with-opentelemetry.md#start-spans) |
@@ -55,7 +55,7 @@ You can turn on these extra sources. Each one needs OpenTelemetry tracing turned
 
 | Source | Environment variable | Default | Spans n8n exports |
 | :----- | :------------------- | :------ | :---------------- |
-| Expressions | `N8N_EXPRESSION_ENGINE_TRACES_ENABLED` | `false` | `expression.evaluate`, for each expression that fails, runs slowly, or is sampled |
+| Expressions | `N8N_EXPRESSION_ENGINE_TRACES_ENABLED` | `false` | `expression.evaluate`, for each expression that fails, takes longer than the slow threshold, or falls in the sample |
 | Daytona sandbox | `N8N_DAYTONA_TRACING_ENABLED` | `false` | One span per Daytona client call that an AI agent makes, named `<class>.<method>`, for example `Daytona.create` |
 | Microsoft Agent 365 | `N8N_MICROSOFT_AGENT_365_TRACING_ENABLED` | `false` | `invoke_agent <agent-name>` and `agents.*` spans from the [**Microsoft Agent 365 Trigger** node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.microsoftagent365trigger) |
 

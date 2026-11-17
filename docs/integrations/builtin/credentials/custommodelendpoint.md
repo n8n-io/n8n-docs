@@ -18,7 +18,7 @@ You can use these credentials to authenticate the following nodes:
 
 Use these credentials to reach any endpoint that speaks the OpenAI API, such as an AI gateway, an API management proxy, or a self-hosted model. Examples include LiteLLM, Portkey, Kong AI Gateway, Azure API Management, vLLM, and NVIDIA NIM.
 
-The gateway's address, its login method, and the headers it needs on every call live on the credential, not on the node. When your company changes gateway, you edit one credential rather than every node. A workflow can still need a change of its own: model names differ between gateways, and so can the per-request headers a node sends.
+The gateway's address, its login method, and the headers it needs on every call live on the credential, not on the node. When your company changes its gateway, you edit one credential rather than every node. A workflow can still need a change of its own: model names differ between gateways, and so can the per-request headers a node sends.
 
 {% hint style="info" %}
 **Name each credential after its gateway**
@@ -129,9 +129,9 @@ To stop sending them, turn off **Send n8n Context Headers** on the node.
 
 ## Moving from the OpenAI node with a custom Base URL
 
-If you reach your gateway today with the OpenAI node and a Base URL override, you replace the node, but not the credential. Both nodes accept an existing OpenAI credential, so you can swap the node first and build a Custom Model Endpoint credential later, when you need something the OpenAI one can't express.
+If you reach your gateway today with the **OpenAI** node and a **Base URL** override, you replace the node, but not the credential. Both nodes accept an existing OpenAI credential, so you can swap the node first and build a **Custom Model Endpoint** credential later.
 
-Switch when you need something the OpenAI credential can't express:
+Build one when you need something the OpenAI credential can't express:
 
 | You need | Why the OpenAI credential can't do it |
 | --- | --- |

@@ -137,7 +137,7 @@ The node outputs one item per input item:
 
 The node reports token usage into the execution metadata, the same as the other AI nodes.
 
-The node doesn't stream. It reads the whole answer before it passes the item on, so `stream` in **Extra Body** gives you an error rather than a partial answer. To stream an answer, give an AI Agent the [Custom Endpoint Chat Model](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatcustomendpoint.md) sub-node.
+The node doesn't stream. It reads the whole answer before it passes the item on, so `stream` in **Extra Body** gives you an error rather than a partial answer. To stream an answer, give an **AI Agent** the [**Custom Endpoint Chat Model**](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatcustomendpoint.md) sub-node.
 
 ## Templates and examples
 

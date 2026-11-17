@@ -25,7 +25,7 @@ Refer to the [Custom Model Endpoint credentials documentation](../../credentials
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
 
-To send a single prompt in a workflow rather than attach a model to an agent, use the [Custom Model Endpoint](../../app-nodes/n8n-nodes-langchain.custommodelendpoint.md) node instead.
+To send a single prompt in a workflow rather than attach a model to an agent, use the [**Custom Model Endpoint**](../../app-nodes/n8n-nodes-langchain.custommodelendpoint.md) node instead.
 
 ## Node parameters
 
@@ -45,7 +45,7 @@ Model names differ between gateways. The same underlying model might be `gpt-4o`
 
 Headers for this request only. Values accept expressions.
 
-An expression here resolves against the first input item of the agent, so one value goes out on every call of a run. To give each item its own header value, use the [Custom Model Endpoint](../../app-nodes/n8n-nodes-langchain.custommodelendpoint.md) node, which resolves its headers for each item.
+An expression here resolves against the first input item of the agent, so one value goes out on every call of a run. To give each item its own header value, use the [**Custom Model Endpoint**](../../app-nodes/n8n-nodes-langchain.custommodelendpoint.md) node, which resolves its headers for each item.
 
 Headers your gateway needs on every call belong on the credential instead, as **Gateway Headers**. n8n encrypts those and sends them on the model list as well. They don't travel on the OAuth2 token request.
 

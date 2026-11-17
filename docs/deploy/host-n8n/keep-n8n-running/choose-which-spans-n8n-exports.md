@@ -199,18 +199,20 @@ n8n sets up OpenTelemetry once, when it starts. Some libraries that n8n uses hav
 
 ## Send spans to different backends
 
-n8n exports to one OTLP endpoint. To send spans to more than one backend, or different spans to different backends, point n8n at an [OpenTelemetry Collector](https://opentelemetry.io/docs/collector/) and route them there, for example with the [filter processor](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/processor/filterprocessor). Don't load a second OpenTelemetry setup in the n8n process instead: n8n steps aside and ignores its own settings. Refer to [Don't set library OpenTelemetry flags](#dont-set-library-opentelemetry-flags).
+n8n exports to one OTLP endpoint. To send spans to more than one backend, or different spans to different backends, point n8n at an [OpenTelemetry Collector](https://opentelemetry.io/docs/collector/). Route spans there, for example with the [filter processor](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/processor/filterprocessor).
+
+Don't load a second OpenTelemetry setup in the n8n process. n8n steps aside and ignores its own settings. Refer to [Don't set library OpenTelemetry flags](#dont-set-library-opentelemetry-flags).
 
 To route n8n spans, match on these names and attributes:
 
 | Spans | Match on |
 | :---- | :------- |
-| Workflow and node spans | Span name `workflow.execute` or `node.execute` |
+| Workflow and node spans | Span name `workflow.execute`, `workflow.execute.started`, `node.execute`, or `node.execute.started` |
 | Agent runs and tool calls | Span attribute `gen_ai.operation.name` |
 | Expression evaluations | Span name `expression.evaluate` |
 | Spans from one instance type, such as workers | Resource attribute `n8n.instance.role` |
 
-If you send agent spans and workflow spans to different backends, an agent run started from a workflow arrives without its parent, because it nests under the span of the node that called it. Agent runs started from a chat integration start their own trace, so they arrive complete.
+If you send agent spans and workflow spans to different backends, an agent run started from a workflow arrives without its parent. It nests under the span of the node that called it. Agent runs started from a chat integration start their own trace, so they arrive complete.
 
 ## Troubleshooting
 

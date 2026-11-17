@@ -26,7 +26,7 @@ n8n uses Git-based source control to support environments. Refer to [Source cont
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
 | `N8N_SOURCECONTROL_DEFAULT_SSH_KEY_TYPE` | String | `ed25519` | Set to `rsa` to make RSA the default SSH key type for [Source control setup](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/use-source-control-and-environments/set-up-source-control). |
-| `N8N_SOURCECONTROL_BRANCH_SELECTION_ENABLED` | Boolean | `false` | Set to `true` to show a branch picker in the Source Control push window. Pull, reset, and status still use the branch labeled **Default branch**. |
+| `N8N_SOURCECONTROL_BRANCH_SELECTION_ENABLED` | Boolean | `false` | Set to `true` to show a branch picker in the source control push window. Pull, reset, and status still use the branch labeled **Default branch**. |
 
 ## Related resources
 

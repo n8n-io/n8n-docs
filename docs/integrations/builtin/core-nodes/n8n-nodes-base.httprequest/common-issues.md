@@ -119,7 +119,7 @@ To resolve the error, you can use one of the built-in options of the HTTP reques
 Use this option to send requests in batches and introduce a delay between them.
 
 1. In the HTTP Request node, select **Add Option > Batching**.
-1. Set **Items per Batch** to the number of input items to include in each request.
+1. Set **Items per Batch** to the number of input items to process in each batch. Each input item generates a separate HTTP request.
 1. Set **Batch Interval (ms)** to introduce a delay between requests in milliseconds. For example, to send one request to an API per second, set **Batch Interval (ms)** to `1000`.
 
 ### Retry on Fail <a href="#retry-on-fail" id="retry-on-fail"></a>

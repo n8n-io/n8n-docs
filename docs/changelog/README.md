@@ -40,6 +40,8 @@ Old-style release notes pages for [2.x](release-notes-2.x.md), [1.x](release-not
 For guidance on major version upgrades, see [v3.0 breaking changes](v30-breaking-changes.md), [v3.0 migration tool](v30-migration-tool.md), [v2.0 breaking changes](v20-breaking-changes.md), [v2.0 migration tool](v20-migration-tool.md), and [v1.0 migration guide](v10-migration-guide.md).
 {% endhint %}
 
+For what Preview, GA, deprecated, and removed mean, what Enterprise readiness means, and how n8n's version numbers work, refer to [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability).
+
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
 
 ## Use your personal credentials in team projects
@@ -265,7 +267,7 @@ You can now read and update instance-level settings through the n8n public REST 
 
 To use these endpoints, generate an API key with the `securitySettings:manage` scope. Scopes are fixed on a key when you create it, so an existing key won't pick up a new scope: issue a new one. Settings endpoints for log streaming and SAML followed in n8n 2.32, OpenTelemetry in n8n 2.33, and OIDC and LDAP in n8n 2.34.
 
-Learn more in the [security policy API documentation](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/security-policy).
+Learn more in the [security policy API documentation](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/instance-settings/security-policy).
 
 {% hint style="info" %}
 **Availability:** Enterprise.

@@ -181,7 +181,7 @@ Add files the agent can search and read from the **Knowledge** tab. Supported fi
 {% hint style="info" %}
 **Feature availability**
 
-Knowledge bases are available on n8n Cloud. On self-hosted, they need a Daytona sandbox. See [Self-hosted](#self-hosted).
+Knowledge bases are available on n8n Cloud. On self-hosted, they need a configured sandbox. See [Self-hosted](#self-hosted).
 {% endhint %}
 
 {% hint style="info" %}

@@ -4,7 +4,7 @@ title: invite-users
 You can now invite other people to your n8n instance.
 
 1. Sign in to your n8n instance with your owner account. On n8n Cloud, if you're in the n8n Cloud console, select **Open instance** on the **Overview** page.
-2. Click the three dots next to your user icon at the bottom left and click **Settings**. n8n opens your **Personal settings** page.
+2. Click the three dots next to your user icon at the bottom left and click **Settings**.
 3. Click **Users** to go to the **Users** page.
 4. Click **Invite**.
 5. Enter the new user's email address.

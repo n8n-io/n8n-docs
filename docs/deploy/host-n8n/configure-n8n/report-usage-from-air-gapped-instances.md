@@ -21,7 +21,7 @@ Air-gapped usage reporting is available on:
 
 It isn't available on n8n Cloud.
 
-Air-gapped usage reporting is available from n8n 2.40.6.
+Air-gapped usage reporting is available from n8n 2.42.0, and from the patch releases n8n 2.40.6 and 2.41.2.
 
 Air-gapped licenses cost more than standard licenses.
 {% endhint %}
@@ -59,7 +59,7 @@ No data leaves your network unless you send the report to n8n yourself. The repo
 
 You need:
 
-- n8n instances on n8n 2.40.6 or above, with an Enterprise license certificate set in `N8N_LICENSE_CERT`.
+- n8n instances on n8n 2.42.0 or above, or on patch release 2.40.6 or 2.41.2 or later in those release lines. Each instance needs an Enterprise license certificate set in `N8N_LICENSE_CERT`.
 - The `insights` module enabled on every instance. It's enabled by default.
 - A place to run one container with a persistent volume, such as Docker or Kubernetes.
 - A private network path from every n8n instance to the monitoring service.

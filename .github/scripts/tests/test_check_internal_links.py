@@ -269,6 +269,49 @@ def main():
     check("and that documented id isn't treated as a real anchor",
           category("docs/spacea/id-in-code-heading.md", "#example") == "broken-anchor")
 
+    # GitBook makes repeated heading ids unique with -1, -2 in page order
+    # (enterprise-hub: a stepper step and the section below share a title).
+    G = "docs/spacea/gitbook-ids.md"
+    check("first of repeated headings keeps the plain slug",
+          category(G, "#publish-first-workflow") is None)
+    check("second repeated heading resolves as -1",
+          category(G, "#publish-first-workflow-1") is None)
+    check("third repeated heading resolves as -2",
+          category(G, "#publish-first-workflow-2") is None)
+    check("a suffix past the last repeat is still broken",
+          category(G, "#publish-first-workflow-3") == "broken-anchor")
+
+    # GitBook serves explicit ids cut to 100 characters (v20-breaking-changes).
+    long_id = ("return-expected-sub-workflow-data-when-the-sub-workflow-resumes-"
+               "from-waiting-waiting-for-webhook-forms-hitl-etc")
+    check("the 100-character form of a long explicit id resolves",
+          category(G, "#" + long_id[:100]) is None)
+    check("the full long explicit id still resolves",
+          category(G, "#" + long_id) is None)
+    check("a shorter cut of a long id is still broken",
+          category(G, "#" + long_id[:90]) == "broken-anchor")
+
+    # A repeated heading whose slug is over 100 characters: unverified whether
+    # GitBook cuts before or after adding -1, so both forms must resolve.
+    long_slug = cil.anchor_slug("Long repeated heading about sandbox setup options "
+                                "about sandbox setup options about sandbox setup "
+                                "options for production")
+    check("fixture long slug is over 100 characters", len(long_slug) > 100)
+    check("long repeated heading: cut then suffix resolves",
+          category(G, "#" + long_slug[:100] + "-1") is None)
+    check("long repeated heading: suffix then cut resolves",
+          category(G, "#" + (long_slug + "-1")[:100]) is None)
+    check("long repeated heading: a suffix past the last repeat is still broken",
+          category(G, "#" + long_slug[:100] + "-2") == "broken-anchor")
+    # At 99 characters the two orders give different ids, so test both.
+    edge = cil.anchor_slug("Edge case heading with exactly ninety nine characters "
+                           "in its generated slug for the suffix tests ab")
+    check("fixture edge slug is 99 characters", len(edge) == 99)
+    check("99-character repeated heading: cut then suffix resolves",
+          category(G, "#" + edge[:100] + "-1") is None)
+    check("99-character repeated heading: suffix then cut resolves",
+          category(G, "#" + (edge + "-1")[:100]) is None)
+
     check("a block whose index Name is only in frontmatter resolves",
           cil.reusable_blocks().get("BLOCK2") is not None)
 

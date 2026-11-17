@@ -1,0 +1,23 @@
+docs/integrations/builtin/app-nodes/n8n-nodes-base.postgres/common-issues.md
+  s_ab0aa42760f99e::t_1c892a8fc6bc39 78
+docs/integrations/builtin/credentials/postgres.md
+  s_ab0aa42760f99e::t_1c892a8fc6bc39 86,100
+docs/integrations/builtin/app-nodes/n8n-nodes-base.postgres/README.md
+  s_ab0aa42760f99e::t_1c892a8fc6bc39 178-179
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "2789fa2a60ad349e9828a16557da7df72346420a",
+  "prompts": {},
+  "sessions": {
+    "s_ab0aa42760f99e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "aab96d01-1f76-4548-9108-c7cc1ba98391",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Csaba Tuncsik <csaba.tuncsik@gmail.com>"
+    }
+  }
+}

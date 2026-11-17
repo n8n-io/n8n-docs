@@ -83,7 +83,7 @@ To set up the database connection:
 2. Enter the **Database** name. Run the `/conninfo` command to confirm the database name.
 3. Enter the **User** name of the user you wish to connect as.
 4. Enter the user's **Password**.
-5. **Maximum Number of Connections**: Enter the maximum number of connections for each connection pool that n8n opens with this credential. The default is `100`. In queue mode, the main instance and each worker keep their own pools. One n8n process can also open more than one pool for the same credential, for example for Postgres nodes on different node versions or for the **Postgres Chat Memory** node. Keep the total number of connections across all pools below the maximum your Postgres server allows.
+5. **Maximum Number of Connections**: Enter the maximum number of connections for each connection pool that n8n opens with this credential. The default is `100`. In queue mode, the main instance and each worker keep their own pools. One n8n process can also open several pools for the same credential, for example for different Postgres node versions or the **Postgres Chat Memory** node. Keep the total number of connections across all pools below the maximum your Postgres server allows.
 6. **Ignore SSL Issues (Insecure)**: If you turn this on, the credential connects over SSL without validating the server certificate, and n8n hides the **SSL** setting.
 7. **SSL**: Choose whether to use SSL in your connection. The options are:
    * **Allow**: Connect over SSL and verify the server certificate, the same as **Require**. n8n doesn't fall back to a connection without SSL.
@@ -97,7 +97,7 @@ To set up the database connection:
     ```
     SELECT inet_server_port();
     ```
-10. **SSH Tunnel**: Turn this setting on to connect to the database over SSH. n8n then connects to the **Host** and **Port** from the SSH server, so enter them as the SSH server sees them, such as `localhost` when Postgres runs on the SSH server. Refer to [SSH tunnel limitations](postgres.md#ssh-tunnel-limitations) before you use SSH. After you turn it on:
+10. **SSH Tunnel**: Turn this setting on to connect to the database over SSH. n8n then connects to the **Host** and **Port** from the SSH server. Enter them as the SSH server sees them, such as `localhost` when Postgres runs on the SSH server. Refer to [SSH tunnel limitations](postgres.md#ssh-tunnel-limitations) before you use SSH. After you turn it on:
     1. Select **SSH Authenticate with** to set the SSH Tunnel type to build:
        * Select **Password** if you want to connect to SSH using a password.
        * Select **Private Key** if you want to connect to SSH using an identity file (private key) and a passphrase.

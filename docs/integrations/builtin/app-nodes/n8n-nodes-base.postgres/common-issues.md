@@ -75,7 +75,7 @@ This will produce the date as a string without the time or timezone components. 
 
 The [**Insert or Update**](README.md#insert-or-update) and [**Update**](README.md#update) operations can fail with these errors:
 
-- `Column to match on not found in input item. Add a column to match on or set the 'Data Mode' to 'Define Below' to define the value to match on.` (**Insert or Update**, and **Update** in node versions 2 and 2.1)
+- `Column to match on not found in input item. Add a column to match on or set the 'Data Mode' to 'Define Below' to define the value to match on.` (**Insert or Update**, and **Update** with **Auto-Map Input Data to Columns** in node versions 2 and 2.1)
 - `Add values to update to the input item or set the 'Data Mode' to 'Define Below' to define the values to update.` (**Update**)
 - `Add values to update or insert to the input item or set the 'Data Mode' to 'Define Below' to define the values to insert or update.` (**Insert or Update**)
 

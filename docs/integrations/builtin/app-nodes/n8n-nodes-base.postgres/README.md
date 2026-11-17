@@ -175,6 +175,8 @@ Enter these parameters:
 - **Select**: Add a **Select Rows** condition on that column, with **Operator** set to **Greater Than** and **Value** set to the last value you read. Add a **Sort** rule on the same column with the **ASC** direction. Turn off **Return All**, and set **Limit** to the batch size.
 - [**Execute Query**](#execute-query): Use a query such as `SELECT * FROM orders WHERE id > $1 ORDER BY id LIMIT 1000`. In [**Query Parameters**](#use-query-parameters), set `$1` to the last `id` you read.
 
+Run the node again with the last value from the previous batch, for example in a loop, until a batch returns no rows. Pass the node a single item that holds the last value, because the node runs the query once for each input item.
+
 #### Select options <a href="#select-options" id="select-options"></a>
 
 - **Connection Timeout**: The number of seconds to try to connect to the database.

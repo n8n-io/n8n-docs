@@ -47,7 +47,7 @@ n8n creates a new version when you:
 
 * Save your workflow.
 * Restore an old version. n8n saves the latest version before restoring.
-* Pull from a Git repository using [Source control](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/use-source-control-and-environments). Note that n8n saves versions to the instance database, not to Git.
+* Pull from a Git repository using [Source control](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/work-with-environments/classic). Note that n8n saves versions to the instance database, not to Git.
 
 Changes to workflow settings do not create a new version.
 

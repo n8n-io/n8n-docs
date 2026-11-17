@@ -221,7 +221,7 @@ Every event carries `executionId`, `workflowId`, and `workflowName`.
 
 ### Provider and environment events
 
-These six audit events record successful changes to providers and environments in the [Environments](../environments/README.md) feature. A provider stores the credentials n8n uses to connect to a Git host. An environment uses a provider and a repository to define where n8n sends workflows or gets them from.
+These six audit events record successful changes to providers and environments in the [Environments](../work-with-environments/preview/README.md) feature. A provider stores the credentials n8n uses to connect to a Git host. An environment uses a provider and a repository to define where n8n sends workflows or gets them from.
 
 | Event name | Sent when |
 | --- | --- |

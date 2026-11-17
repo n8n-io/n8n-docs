@@ -29,7 +29,7 @@ Name each environment after its step in your release process, such as Staging or
 
 ## Development and production
 
-![The development instance promotes to the Production environment, and the production instance applies from it](../.gitbook/assets/environments-dev-prod.png)
+![The development instance promotes to the Production environment, and the production instance applies from it](../../.gitbook/assets/environments-dev-prod.png)
 
 Use this pattern when one team builds on one instance and runs workflows on another.
 
@@ -42,7 +42,7 @@ On the development instance, add a Production promote environment configuration.
 
 ## Development, staging, and production
 
-![The staging instance applies from the Staging environment and promotes to the Production environment](../.gitbook/assets/environments-dev-staging-prod.png)
+![The staging instance applies from the Staging environment and promotes to the Production environment](../../.gitbook/assets/environments-dev-staging-prod.png)
 
 Use this pattern when you test changes on a staging instance before they reach production. The staging instance has two environments: it applies changes from Staging and promotes changes to Production.
 

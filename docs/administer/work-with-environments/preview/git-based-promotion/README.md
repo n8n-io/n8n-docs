@@ -8,7 +8,7 @@ layout:
 
 # Git-based promotion
 
-With Git-based promotion, changes travel between n8n instances through a Git repository. Each environment is a repository and branch.
+With Git-based promotion, changes travel between n8n instances through a Git repository. Each environment is a repository and branch. If you're new to Git, see [Git concepts for environments](../../git-concepts.md) for the concepts n8n uses.
 
 {% hint style="info" %}
 **Preview status**

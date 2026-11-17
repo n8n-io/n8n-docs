@@ -45,7 +45,7 @@ Separate environments let you change workflows without breaking the ones running
 
 ## How environments work
 
-![Example: changes move from the development instance, after an optional review, to the Production environment's Git branch, then to the production instance](../.gitbook/assets/environments-how-it-works.png)
+![Example: changes move from the development instance, after an optional review, to the Production environment's Git branch, then to the production instance](../../.gitbook/assets/environments-how-it-works.png)
 
 Changes move between instances through an environment:
 
@@ -97,7 +97,7 @@ A provider holds the details n8n uses to connect and authenticate to a Git host,
 
 ## Environments and Environments (Classic)
 
-Environments replace [Environments (Classic)](../use-source-control-and-environments/README.md), the earlier source control feature. An instance uses one or the other. See [Upgrade from Environments (Classic)](upgrade-from-environments-classic.md).
+Environments replace [Environments (Classic)](../classic/README.md), the earlier source control feature. An instance uses one or the other. To find out which one your instance uses, see [Work with environments](../README.md#find-out-which-version-your-instance-uses). To compare the two versions and migrate, see [Upgrade from Environments (Classic)](upgrade-from-environments-classic.md).
 
 ## In this section
 
@@ -113,6 +113,6 @@ Environments replace [Environments (Classic)](../use-source-control-and-environm
 
 ## Related resources
 
-- [Administer](../)
-- [Set permissions and roles](../manage-users-and-access/set-permissions-and-roles-rbac/README.md)
+- [Administer](../../)
+- [Set permissions and roles](../../manage-users-and-access/set-permissions-and-roles-rbac/README.md)
 - [n8n packages](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages)

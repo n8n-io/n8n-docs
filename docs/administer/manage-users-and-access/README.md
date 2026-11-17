@@ -43,6 +43,6 @@ This section includes guides to configuring [LDAP](verify-user-identity/connect-
 ## Related resources
 
 * [Administer](../)
-* [Use source control and environments](../use-source-control-and-environments/README.md)
+* [Use source control and environments](../work-with-environments/classic/README.md)
 * [Manage credentials](../manage-credentials/README.md)
 * [Observe and log](../observe-and-log/README.md)

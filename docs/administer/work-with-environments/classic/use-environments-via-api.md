@@ -228,8 +228,7 @@ The API commits and applies the same resources as the UI: workflows, credential 
 ## Related resources
 
 * [Use source control and environments](./)
-* [Understand source control](understand-source-control.md)
-* [Work with environments](work-with-environments.md)
+* [Classic environments in n8n](work-with-environments.md)
 * [Use Git in n8n](use-git-in-n8n.md)
 * [Choose branching patterns](choose-branching-patterns.md)
 * [Set up source control](set-up-source-control.md)

@@ -51,7 +51,7 @@ Store and share credentials safely. Use [Manage credentials](manage-credentials/
 {% step %}
 ### Move changes safely
 
-Use Git-backed workflows to promote changes between environments. See [Use source control and environments](use-source-control-and-environments/README.md).
+Use Git-backed workflows to promote changes between environments. See [Use source control and environments](work-with-environments/classic/README.md).
 {% endstep %}
 
 {% step %}

@@ -8,7 +8,7 @@ layout:
 
 # Upgrade from Environments (Classic)
 
-Environments improve on and replace [Environments (Classic)](../use-source-control-and-environments/README.md), the earlier source control feature. Each instance uses either Classic or Environments, and you can switch back to Classic while Environments are in Preview.
+Environments improve on and replace [Environments (Classic)](../classic/README.md), the earlier source control feature. Each instance uses either Classic or Environments, and you can switch back to Classic while Environments are in Preview.
 
 {% hint style="info" %}
 **Preview status**
@@ -72,7 +72,7 @@ If development has no changes that you aren't ready to bring to production, foll
 
 If development has changes that aren't ready for production, fill the branch from production instead. The branch then matches production, and you promote changes from development when they're ready.
 
-![Migration from Environments (Classic): 1, the production instance runs one instance promote to the Production environment's Git branch. 2, the development instance promotes changes to the branch. 3, the production instance applies them.](../.gitbook/assets/environments-migrate-from-classic.png)
+![Migration from Environments (Classic): 1, the production instance runs one instance promote to the Production environment's Git branch. 2, the development instance promotes changes to the branch. 3, the production instance applies them.](../../.gitbook/assets/environments-migrate-from-classic.png)
 
 1. On production, add a Production promote environment configuration, pointing to the same repository and branch, and run an [instance promote](promote-changes.md#instance-promote). Then remove the promote environment configuration from production.
 2. From then on, promote changes from development with a [project promote](promote-changes.md#project-promote) when they're ready. An instance promote would also send the changes that aren't ready.
@@ -97,4 +97,4 @@ Switching back affects only this instance. You can upgrade again at any time.
 - [Promotion reviews](promotion-reviews.md)
 - [Git-based promotion](git-based-promotion/README.md)
 - [Known limitations](known-limitations.md)
-- [Environments (Classic)](../use-source-control-and-environments/README.md)
+- [Environments (Classic)](../classic/README.md)

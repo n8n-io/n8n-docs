@@ -20,7 +20,7 @@ This tutorial walks through the process of setting up environments end-to-end. Y
 
 n8n has built its environments feature on top of Git, a version control software. You link an n8n instance to a Git branch, and use a push-pull pattern to move work between environments. You should have some understanding of environments and Git. If you need more information on these topics, refer to:
 
-* [Environments in n8n](work-with-environments.md): the purpose of environments, and how they work in n8n. 
+* [Classic environments in n8n](work-with-environments.md): the purpose of environments, and how they work in n8n. 
 * [Git and n8n](use-git-in-n8n.md): Git concepts and source control in n8n.
 
 ## Choose your source control pattern <a href="#choose-your-source-control-pattern" id="choose-your-source-control-pattern"></a>
@@ -31,14 +31,14 @@ Before setting up source control and environments, you need to plan your environ
 
 ### Multiple instances, multiple branches <a href="#multiple-instances-multiple-branches" id="multiple-instances-multiple-branches"></a>
 
-![Development n8n instance linked to a development branch and production instance linked to a production branch](../.gitbook/assets/vc-multi-multi.png)
+![Development n8n instance linked to a development branch and production instance linked to a production branch](../../.gitbook/assets/vc-multi-multi.png)
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/O5AqRfApNuiINXZOe5j1/" %}
 
 
 ### Multiple instances, one branch <a href="#multiple-instances-one-branch" id="multiple-instances-one-branch"></a>
 
-![Development and production n8n instances both connected to the same Git branch](../.gitbook/assets/vc-multi-one.png)
+![Development and production n8n instances both connected to the same Git branch](../../.gitbook/assets/vc-multi-one.png)
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/Vo4DpZeEyTa0iuufMDB8/" %}
 
@@ -106,11 +106,11 @@ Your work is now in GitHub. If you're using a multi-branch setup, it's on the de
 {% tab title="Multi-branch" %}
 1. In GitHub, create a pull request to merge development into production.
 1. Merge the pull request.
-1. In your production instance, select **Pull** <img src="../.gitbook/assets/pull-icon.png" alt="Pull icon" data-size="line"> in the main menu.
+1. In your production instance, select **Pull** <img src="../../.gitbook/assets/pull-icon.png" alt="Pull icon" data-size="line"> in the main menu.
 {% endtab %}
 
 {% tab title="Single-branch" %}
-In your production instance, select **Pull** <img src="../.gitbook/assets/pull-icon.png" alt="Pull icon" data-size="line"> in the main menu.
+In your production instance, select **Pull** <img src="../../.gitbook/assets/pull-icon.png" alt="Pull icon" data-size="line"> in the main menu.
 {% endtab %}
 {% endtabs %}
 
@@ -127,14 +127,13 @@ If you want to avoid logging in to your production instance to pull, you can use
 
 Learn more about:
 
-* [Environments in n8n](work-with-environments.md) and [Git and n8n](use-git-in-n8n.md)
+* [Classic environments in n8n](work-with-environments.md) and [Git and n8n](use-git-in-n8n.md)
 * [Source control patterns](choose-branching-patterns.md)
 
 ## Related resources
 
 * [Use source control and environments](./)
-* [Understand source control](understand-source-control.md)
-* [Work with environments](work-with-environments.md)
+* [Classic environments in n8n](work-with-environments.md)
 * [Use Git in n8n](use-git-in-n8n.md)
 * [Choose branching patterns](choose-branching-patterns.md)
 * [Set up source control](set-up-source-control.md)

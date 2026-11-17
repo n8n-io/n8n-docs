@@ -230,6 +230,6 @@ This is a limit your own admin sets, not n8n. See [Understand instance roles](ma
 
 * [Administer](./)
 * [Manage users and access](manage-users-and-access/README.md)
-* [Use source control and environments](use-source-control-and-environments/README.md)
+* [Use source control and environments](work-with-environments/classic/README.md)
 * [Manage credentials](manage-credentials/README.md)
 * [Observe and log](observe-and-log/README.md)

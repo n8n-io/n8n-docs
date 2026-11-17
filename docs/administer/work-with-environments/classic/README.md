@@ -20,15 +20,14 @@ layout:
 {% hint style="info" %}
 **New version available**
 
-These pages cover Environments (Classic). For the new version, in Preview and available on Enterprise plans, see [Environments](../environments/README.md). To compare the versions and upgrade an instance, see [Upgrade from Environments (Classic)](../environments/upgrade-from-environments-classic.md).
+These pages cover Environments (Classic). For the new version, in Preview and available on Enterprise plans, see [Environments (Preview)](../preview/README.md). To find out which version your instance uses, see [Work with environments](../README.md#find-out-which-version-your-instance-uses). To compare the versions and upgrade an instance, see [Upgrade from Environments (Classic)](../preview/upgrade-from-environments-classic.md).
 {% endhint %}
 
 n8n uses Git-based source control to support environments. Linking your n8n instances to a Git repository lets you create multiple n8n environments, backed by Git branches.
 
 ## In this section
 
-* [Understand source control](understand-source-control.md): how source control and environments work in n8n.
-* [Work with environments](work-with-environments.md): the purpose of environments, and how they work in n8n.
+* [Classic environments in n8n](work-with-environments.md): the purpose of environments, and how they work in n8n.
 * [Use Git in n8n](use-git-in-n8n.md): how n8n uses Git.
 * [Choose branching patterns](choose-branching-patterns.md): the possible relationships between n8n instances and Git branches.
 * [Set up source control](set-up-source-control.md): how to connect your n8n instance to Git.
@@ -41,13 +40,13 @@ n8n uses Git-based source control to support environments. Linking your n8n inst
 ## Related sections
 
 * [Variables](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/code-in-n8n/define-custom-variables): reusable values.
-* [External secrets](../manage-credentials/use-external-secret-stores.md): manage credentials[^1] with an external secrets vault.
+* [External secrets](../../manage-credentials/use-external-secret-stores.md): manage credentials[^1] with an external secrets vault.
 
 ## Related resources
 
-* [Administer](../)
-* [Manage users and access](../manage-users-and-access/README.md)
-* [Manage credentials](../manage-credentials/README.md)
-* [Observe and log](../observe-and-log/README.md)
+* [Administer](../../)
+* [Manage users and access](../../manage-users-and-access/README.md)
+* [Manage credentials](../../manage-credentials/README.md)
+* [Observe and log](../../observe-and-log/README.md)
 
 [^1]: In n8n, credentials store authentication information to connect with specific apps and services. After creating credentials with your authentication information (username and password, API key, OAuth secrets, etc.), you can use the associated app node to interact with the service.

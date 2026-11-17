@@ -28,7 +28,7 @@ This document assumes some familiarity with Git concepts and terminology. Refer 
 You must be an instance owner or instance admin to pull changes from git.
 {% endhint %}
 
-To pull work from Git, select **Pull** <img src="../.gitbook/assets/pull-icon.png" alt="Pull icon" data-size="line"> in the main menu.
+To pull work from Git, select **Pull** <img src="../../.gitbook/assets/pull-icon.png" alt="Pull icon" data-size="line"> in the main menu.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/z7oYIete6nifvfi0QZKs/" %}
 
@@ -50,7 +50,7 @@ If the original owner is a user:
 
 If the same owner is available on both instances (matching email), the owner remains the same. If the original owner isn't on the new instance, n8n sets the user performing the pull as the workflow owner.
 
-If the original owner is a [project](../manage-users-and-access/set-permissions-and-roles-rbac/README.md):
+If the original owner is a [project](../../manage-users-and-access/set-permissions-and-roles-rbac/README.md):
 
 n8n matches the project by its ID. If no project with that ID exists on the new instance, n8n creates one with the same ID and name. The user who pulls becomes its project admin. n8n then imports the workflows and credentials into the project.
 
@@ -155,14 +155,13 @@ If a pulled data table has columns removed compared to your local version, n8n d
 {% hint style="info" %}
 **Manage credentials with an external secrets vault**
 
-If you need different credentials on different n8n environments, use [external secrets](../manage-credentials/use-external-secret-stores.md).
+If you need different credentials on different n8n environments, use [external secrets](../../manage-credentials/use-external-secret-stores.md).
 {% endhint %}
 
 ## Related resources
 
 * [Use source control and environments](./)
-* [Understand source control](understand-source-control.md)
-* [Work with environments](work-with-environments.md)
+* [Classic environments in n8n](work-with-environments.md)
 * [Use Git in n8n](use-git-in-n8n.md)
 * [Choose branching patterns](choose-branching-patterns.md)
 * [Set up source control](set-up-source-control.md)

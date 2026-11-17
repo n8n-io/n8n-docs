@@ -16,7 +16,7 @@ layout:
 
 Link a Git repository to an n8n instance and configure your source control.
 
-n8n uses source control to provide environments. Refer to [Environments in n8n](work-with-environments.md) for more information.
+n8n uses source control to provide environments. Refer to [Classic environments in n8n](work-with-environments.md) for more information.
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
@@ -92,8 +92,7 @@ The file or directory replaces the default trust store for Git. If the instance 
 ## Related resources
 
 * [Use source control and environments](./)
-* [Understand source control](understand-source-control.md)
-* [Work with environments](work-with-environments.md)
+* [Classic environments in n8n](work-with-environments.md)
 * [Use Git in n8n](use-git-in-n8n.md)
 * [Choose branching patterns](choose-branching-patterns.md)
 * [Push and pull changes](push-and-pull-changes.md)

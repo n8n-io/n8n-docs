@@ -16,5 +16,5 @@ Track usage across your instance, and send events from n8n to your own logging t
 
 * [Administer](../)
 * [Manage users and access](../manage-users-and-access/README.md)
-* [Use source control and environments](../use-source-control-and-environments/README.md)
+* [Use source control and environments](../work-with-environments/classic/README.md)
 * [Manage credentials](../manage-credentials/README.md)

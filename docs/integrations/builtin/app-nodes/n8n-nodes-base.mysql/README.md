@@ -69,7 +69,7 @@ Enter these parameters:
 - **Query Batching**: The way to send queries to the database:
     - **Single Query**: One query for all incoming items. This is the default.
     - **Independent**: One query for each incoming item.
-    - **Transaction**: All queries in one transaction. If one query fails, the node rolls back every change.
+    - **Transaction**: All queries in one transaction. If one query fails, the node rolls back every change. The **Truncate** and **Drop** commands are an exception: MySQL commits them as it runs them, so a rollback can't undo them.
 
 ### Execute SQL <a href="#execute-sql" id="execute-sql"></a>
 
@@ -93,7 +93,7 @@ Enter these parameters:
 - **Query Batching**: The way to send queries to the database:
     - **Single Query**: One query for all incoming items. This is the default.
     - **Independent**: One query for each incoming item.
-    - **Transaction**: All queries in one transaction. If one query fails, the node rolls back every change.
+    - **Transaction**: All queries in one transaction. If one query fails, the node rolls back every change. A statement that changes the schema, such as `CREATE`, `ALTER`, `DROP`, or `TRUNCATE`, is an exception: MySQL [commits it as it runs it](https://dev.mysql.com/doc/refman/8.4/en/implicit-commit.html), so a rollback can't undo it.
 - **Query Parameters**: A comma-separated list of the values to use as [query parameters](#use-query-parameters).
 - **Replace Empty Strings with NULL**: Whether to replace empty strings in the input with NULL. Default is off. This is useful for data exported from spreadsheet software.
 

@@ -89,4 +89,4 @@ OpenAI Account authentication connects n8n to a ChatGPT/OpenAI account without a
 3. Select **Open OpenAI device login**, then enter the code shown in n8n.
 4. In n8n, select **Continue after authorization** to finish the connection.
 
-When you use OpenAI Account authentication, n8n loads models from the ChatGPT/Codex account backend. The node defaults to `gpt-5.4-mini`.
+When you use OpenAI Account authentication, n8n loads models from the ChatGPT/Codex account backend. The node uses the account's available default model.

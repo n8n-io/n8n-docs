@@ -85,11 +85,11 @@ Enter these parameters:
 
 - **Connection Timeout**: The number of milliseconds reserved for connecting to the database. Default is 30. See [Connection Timeout has no effect](#connection-timeout-has-no-effect).
 - **Connections Limit**: The maximum number of connections to the database. Default is 10.
-- **Output Decimals as Numbers**: Whether to output `DECIMAL` columns as numbers instead of strings. Default is off. See [Output Decimals as Numbers can lose digits](#output-decimals-as-numbers-can-lose-digits).
+- **Output Decimals as Numbers**: Whether to output `DECIMAL` columns as numbers instead of strings. Default is off. Refer to [Decimal numbers returned as strings](common-issues.md#decimal-numbers-returned-as-strings).
 - **Output Large-Format Numbers As**: How to return `BIGINT` values. The node behaves as **Numbers** until you add this option. `DECIMAL` columns have their own option, **Output Decimals as Numbers**, and this option doesn't change them.
     - **Text**: Returns every `BIGINT` as a string. n8n selects this choice when you add the option.
     - **Numbers**: Returns a `BIGINT` as a number when JavaScript can hold the full value. Larger values come back as strings, so the type can change from row to row.
-- **Output Query Execution Details**: Whether to output the details of the executed query for each statement, instead of a confirmation of success. Default is off.
+- **Output Query Execution Details**: Whether to output one item for each statement, with the statement in `sql` and its result in `data`. When off, a `SELECT` returns one item for each row, and other statements return `success: true`. Default is off.
 - **Query Batching**: The way to send queries to the database:
     - **Single Query**: One query for all incoming items. This is the default.
     - **Independent**: One query for each incoming item.
@@ -124,7 +124,7 @@ Enter these parameters:
     - **Independent**: One query for each incoming item.
     - **Transaction**: All queries in one transaction. If one query fails, the node rolls back every change.
 - **Replace Empty Strings with NULL**: Whether to replace empty strings in the input with NULL. Default is off.
-- **Skip on Conflict**: Whether to skip the row instead of throwing an error when it violates a unique constraint. Default is off.
+- **Skip on Conflict**: Whether to skip a row that duplicates an existing primary key or unique index, instead of throwing an error. Default is off. The node sends `INSERT IGNORE`, so MySQL also turns some other errors into warnings and stores an adjusted value, for example a truncated string. Refer to MySQL's [IGNORE documentation](https://dev.mysql.com/doc/refman/8.4/en/sql-mode.html#ignore-effect-on-execution).
 
 ### Insert or Update <a href="#insert-or-update" id="insert-or-update"></a>
 
@@ -170,16 +170,18 @@ Enter these parameters:
 - **Combine Conditions**: How to combine the conditions in **Select Rows**. **AND** requires every condition to be true. **OR** requires at least one condition to be true.
 - **Sort**: Choose how to sort the selected rows. Each rule takes a **Column** and a **Direction**.
 
-Select returns all the matching rows, or the first **Limit** rows. It can't return the next **Limit** rows, so you can't read a large table one page at a time. To walk a large table, use **Execute SQL** and write the query yourself.
+**Select** has no offset, so it can't skip the rows it already returned. To read a large table in pages, add a **Select Rows** condition like `id` **Greater Than** the last ID you read, and a **Sort** rule on the same column. This works for numeric columns only. For other columns, use **Execute SQL** and write the query yourself.
 
 #### Select options <a href="#select-options" id="select-options"></a>
 
 - **Connection Timeout**: The number of milliseconds reserved for connecting to the database. Default is 30. See [Connection Timeout has no effect](#connection-timeout-has-no-effect).
 - **Connections Limit**: The maximum number of connections to the database. Default is 10.
 - **Output Columns**: Choose which columns to return. Select from the list, which starts with `*` for every column, or specify IDs using an [expression](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/expressions-versus-data-nodes). The node returns every column until you add this option. If you add the option and select no column, the node sends an incomplete query and MySQL reports a syntax error.
-- **Output Decimals as Numbers**: Whether to output `DECIMAL` columns as numbers instead of strings. Default is off. See [Output Decimals as Numbers can lose digits](#output-decimals-as-numbers-can-lose-digits).
-- **Output Large-Format Numbers As**: How to return `BIGINT` values. See the [Execute SQL options](#execute-sql-options).
-- **Output Query Execution Details**: Whether to output the details of the executed query for each statement, instead of a confirmation of success. Default is off.
+- **Output Decimals as Numbers**: Whether to output `DECIMAL` columns as numbers instead of strings. Default is off. Refer to [Decimal numbers returned as strings](common-issues.md#decimal-numbers-returned-as-strings).
+- **Output Large-Format Numbers As**: How to return `BIGINT` values. The node behaves as **Numbers** until you add this option. `DECIMAL` columns have their own option, **Output Decimals as Numbers**, and this option doesn't change them.
+    - **Text**: Returns every `BIGINT` as a string. n8n selects this choice when you add the option.
+    - **Numbers**: Returns a `BIGINT` as a number when JavaScript can hold the full value. Larger values come back as strings, so the type can change from row to row.
+- **Output Query Execution Details**: Whether to output one item for each query, with the statement in `sql` and the rows in `data`, instead of one item for each row. Default is off.
 - **Query Batching**: The way to send queries to the database:
     - **Single Query**: One query for all incoming items. This is the default.
     - **Independent**: One query for each incoming item.
@@ -213,19 +215,11 @@ Enter these parameters:
     - **Transaction**: All queries in one transaction. If one query fails, the node rolls back every change.
 - **Replace Empty Strings with NULL**: Whether to replace empty strings in the input with NULL. Default is off.
 
-## Output Decimals as Numbers can lose digits <a href="#output-decimals-as-numbers-can-lose-digits" id="output-decimals-as-numbers-can-lose-digits"></a>
-
-**Output Decimals as Numbers** is off by default, so a `DECIMAL` column arrives as a string with every digit the database holds. MySQL treats `NUMERIC` as another name for `DECIMAL`, so this option controls both.
-
-Turn the option on and n8n converts the value to a JavaScript number instead. A JavaScript number holds about 15 significant digits, and MySQL stores `DECIMAL` to 65 digits without rounding. The conversion drops the digits past that limit, and it doesn't warn you. Leave the option off for money, identifiers, and any other value you compare or store again.
-
-Refer to MySQL's [fixed-point types documentation](https://dev.mysql.com/doc/refman/8.4/en/fixed-point-types.html) for the precision MySQL guarantees.
-
 ## Connection Timeout has no effect <a href="#connection-timeout-has-no-effect" id="connection-timeout-has-no-effect"></a>
 
-Versions 2 to 2.5 of the MySQL node show the **Connection Timeout** option for every operation, but the node doesn't apply it to the connection. The node stores the option under one name, and reads a different name when it opens the connection pool, so your value never reaches the MySQL driver.
+Node versions 2 and later show the **Connection Timeout** option for every operation, but the node doesn't apply it.
 
-These versions don't apply the **Connect Timeout** field of the [MySQL credential](../../credentials/mysql.md) either. They copy the other credential fields into the connection, but never this one. The driver's own default of 10 seconds applies instead.
+These versions also ignore the **Connect Timeout** field of the [MySQL credential](../../credentials/mysql.md). The MySQL driver's default of 10 seconds applies instead.
 
 Version 1 of the node has no **Connection Timeout** option. It passes the credential fields to the driver, so **Connect Timeout** does apply on version 1.
 

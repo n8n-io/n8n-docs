@@ -15,7 +15,7 @@ layout:
 
 # Environments (Classic)
 
-n8n uses Git-based source control to support environments. Linking your n8n instances to a Git repository lets you create multiple n8n environments, backed by Git branches.
+Environments (Classic) lets you link your n8n instances to a Git repository and create multiple environments backed by Git branches.
 
 {% hint style="info" %}
 **Feature availability**

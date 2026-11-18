@@ -14,7 +14,7 @@ layout:
 
 # Copy work between environments <a href="#copy-work-between-environments" id="copy-work-between-environments"></a>
 
-In Environments (Classic), the steps to send work from one n8n instance to another are different depending on whether you use a single Git branch or multiple branches.
+In Environments (Classic), work moves between n8n instances through a Git repository. The steps differ depending on whether you use a single Git branch or multiple branches.
 
 {% hint style="info" %}
 **Feature availability**

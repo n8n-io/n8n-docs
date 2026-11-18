@@ -62,6 +62,6 @@ See [Git-based promotion](preview/git-based-promotion/README.md) for how Environ
 
 ## Related resources
 
-- [Use source control and environments](README.md)
+- [Use source control and environments](./)
 - [Environments (Classic)](classic/README.md)
 - [Environments (Preview)](preview/README.md)

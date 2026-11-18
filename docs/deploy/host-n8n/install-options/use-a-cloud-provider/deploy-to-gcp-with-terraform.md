@@ -66,7 +66,7 @@ The module creates the VPC, GKE cluster, Cloud SQL instance, Memorystore instanc
   ```
 
 * **Application Default Credentials**: run `gcloud auth application-default login`, or point `GOOGLE_APPLICATION_CREDENTIALS` at a key file.
-* **The `iam.disableServiceAccountKeyCreation` org policy turned off** for the project. n8n's binary-data storage on Cloud Storage needs an HMAC key, and this policy blocks creating one. Ask an organization or folder admin to disable it for the project. This is the most common reason a first apply fails. See [Set your values](#3-set-your-values) for an alternative.
+* **The `iam.disableServiceAccountKeyCreation` org policy turned off** for the project. n8n's binary-data storage on Cloud Storage needs an HMAC key, and this policy blocks creating one. Ask an organization or folder admin to disable it for the project. This is the most common reason a first apply fails. See [Set your values](#step-3-set-your-values) for an alternative.
 * **An existing Cloud DNS public managed zone** for your domain, with the domain already delegated to it. You need the zone's resource name (for example `example-com`), not its DNS name.
 
 {% hint style="info" %}

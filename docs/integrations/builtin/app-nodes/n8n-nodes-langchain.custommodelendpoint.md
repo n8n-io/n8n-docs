@@ -80,7 +80,7 @@ On by default. Sends three headers so your gateway can attribute usage and cost:
 
 A header is only sent when it has a value. n8n URL-encodes a workflow name that contains non-English characters, so it won't break the request.
 
-The project ID isn't sent, because a node can't read the project it belongs to. To send a project name, add it as a gateway header on the credential or as a per-request header above.
+The project ID isn't sent, because a node can't read the project it belongs to. To send a project name, add it as a gateway header on the credential or as a per-request header in **Headers**.
 
 ## Node options
 
@@ -157,7 +157,7 @@ Here are some common errors and issues with the Custom Model Endpoint node and s
 
 ### `This gateway does not publish a model list`
 
-The gateway doesn't serve a compatible `GET /models`. Switch **Model** to **By ID** and type the name your gateway uses.
+The gateway doesn't serve a compatible `GET /models`. Many gateways don't, so this isn't always a fault. If your gateway does serve a model list, check that **Base URL** includes the version segment, such as `/v1`. Otherwise switch **Model** to **By ID** and type the name your gateway uses.
 
 ### `This node has no message to send`
 
@@ -167,7 +167,7 @@ Every **Messages** row has empty **Content**. The node drops empty rows and won'
 
 **Base URL** on the credential is empty, or isn't an absolute `http` or `https` URL.
 
-### The gateway doesn't recognise the model name
+### The gateway doesn't recognize the model name
 
 Gateways name models differently. Check the name against your gateway's own catalog rather than the provider's.
 

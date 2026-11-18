@@ -55,7 +55,7 @@ https://gateway.example.com/v1
 
 The node appends the route, so `/chat/completions` and `/models` hang off whatever you set here. If you leave the version off when your gateway expects it, requests fail with a 404 from the gateway rather than an n8n error.
 
-## Using Bearer token
+## Using bearer token
 
 Set **Authentication** to **Bearer Token** and **API Key** to your key. n8n sends it as:
 
@@ -75,7 +75,7 @@ Set **Authentication** to **API Key in Header**. Use this when your gateway read
 
 n8n sends no `Authorization` header when you use this method.
 
-## Using Basic auth
+## Using basic auth
 
 Set **Authentication** to **Basic Auth**, then fill in **User Name** and **Password**. n8n sends them as a standard `Authorization: Basic` header.
 
@@ -88,7 +88,7 @@ Set **Authentication** to **OAuth2 Client Credentials**. Use this when your gate
 - **Scope**: space-separated scopes to ask for. Leave it empty to ask for none.
 - **Send Client Credentials In**: choose **Authorization Header** to send the client ID and secret as Basic auth, or **Request Body** to send them as body fields. Login servers differ on which they accept.
 
-n8n fetches a token before the request, keeps it in memory for as long as the login server says it lasts, and fetches a new one when it expires. When the nodes run, the token stays in memory and isn't written back to the credential.
+n8n fetches a token when the node runs and keeps it in memory for that run. It fetches a new one shortly before the token expires, or after an hour if the login server doesn't say how long it lasts. The **Custom Model Endpoint** node fetches a new token for each input item. n8n doesn't write the token back to the credential.
 
 {% hint style="info" %}
 **If you restrict the credential's domains, allow the login server too**
@@ -135,24 +135,18 @@ Build one when you need something the OpenAI credential can't express:
 
 | You need | Why the OpenAI credential can't do it |
 | --- | --- |
-| A key in a header you name | It always sends `Authorization: Bearer` |
+| A key in a header you name, with no `Authorization` header | It always sends `Authorization: Bearer`, also next to a custom header |
 | OAuth2 client credentials | It only holds a static key |
 | More than one gateway header | It carries a single custom header |
 | Basic auth, or no auth at all | Neither is available |
 
 To move:
 
-1. Create a **Custom Model Endpoint** credential. Set **Base URL** to the same URL you put in the OpenAI node's Base URL override.
-2. Pick the authentication method your gateway actually wants, rather than the Bearer token the OpenAI node forced on you.
-3. Move any custom header you set on the OpenAI node into **Gateway Headers**.
+1. Create a **Custom Model Endpoint** credential. Set **Base URL** to the same URL as the **Base URL** on your OpenAI credential.
+2. Set **Authentication** to the method your gateway expects. It doesn't have to be a bearer token.
+3. Move the header from the OpenAI credential's **Add Custom Header** setting into **Gateway Headers**. If the OpenAI credential has an **Organization ID**, add it as an `OpenAI-Organization` gateway header.
 4. In your workflow, replace the OpenAI node with the **Custom Model Endpoint** node, or the OpenAI Chat Model sub-node with **Custom Endpoint Chat Model**.
 5. Select the new credential and check the model name. See [Model names differ between gateways](#model-names-differ-between-gateways).
-
-{% hint style="info" %}
-**Check the model name after you switch**
-
-Gateways name models differently, so the model ID that worked against one gateway may not exist on another.
-{% endhint %}
 
 ## Model names differ between gateways
 
@@ -168,7 +162,7 @@ Here are some common errors and issues with Custom Model Endpoint credentials an
 
 **Base URL** is empty, or isn't an absolute `http` or `https` URL. Set it to the root of your gateway, such as `https://gateway.example.com/v1`.
 
-### `This node has no credential`
+### `Node does not have any credentials set`
 
 The node has no credential selected. Choose a **Custom Model Endpoint** credential, or an OpenAI one.
 
@@ -198,7 +192,7 @@ A gateway header name or value contains characters a header can't carry. Check t
 
 ### `This gateway does not publish a model list`
 
-The gateway doesn't serve a compatible `GET /models`. This is normal and isn't a fault. Switch the node's **Model** field to **By ID** and type the model name your gateway uses.
+The gateway doesn't serve a compatible `GET /models`. Many gateways don't, so this isn't always a fault. If your gateway does serve a model list, check that **Base URL** includes the version segment, such as `/v1`. Otherwise switch the node's **Model** field to **By ID** and type the model name your gateway uses.
 
 ### `The gateway could not list its models`
 

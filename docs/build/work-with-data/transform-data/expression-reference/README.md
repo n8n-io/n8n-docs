@@ -846,7 +846,7 @@ If the string also contains other content, try using <code>extractUrl()</code> f
 
 * [_`String`_.**`isEmail()`**](string.md#stringisemail)
 
-    Returns <code>true</code> if the string is an email
+    Returns <code>true</code> if the whole string is one email address
 
 * [_`String`_.**`isEmpty()`**](string.md#stringisempty)
 

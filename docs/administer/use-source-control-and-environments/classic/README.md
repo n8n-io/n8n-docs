@@ -33,7 +33,7 @@ Instance owners and instance admins can push changes to and pull changes from th
 {% hint style="info" %}
 **Environments (Preview) are also available**
 
-This page is about Environments (Classic). A newer version of Environments is also available in Preview for Enterprise plans. It adds promotion reviews, a visual diff of each change, protection for production instances, and more. See [Environments (Preview)](../preview/README.md).
+This page is about Environments (Classic). A newer version of Environments is also available in Preview for Enterprise plans. It adds protection for production instances and, with GitLab, promotion reviews with a visual diff of changes. See [Environments (Preview)](../preview/README.md).
 {% endhint %}
 
 ## In this section

@@ -21,7 +21,7 @@ Environments (Classic) are available on:
 {% hint style="info" %}
 **Environments (Preview) are also available**
 
-This page is about Environments (Classic). A newer version of Environments is also available in Preview for Enterprise plans. It adds promotion reviews, a visual diff of each change, protection for production instances, and more. See [Environments (Preview)](../preview/README.md).
+This page is about Environments (Classic). A newer version of Environments is also available in Preview for Enterprise plans. It adds protection for production instances and, with GitLab, promotion reviews with a visual diff of changes. See [Environments (Preview)](../preview/README.md).
 {% endhint %}
 
 This page explains how the source control API endpoints work together. Environments (Preview) use promotion endpoints instead. See [Upgrade from Environments (Classic)](../preview/upgrade-from-environments-classic.md). It assumes you've already connected your instances to Git and understand how push and pull behave in the UI. For that background, read [Push and pull](push-and-pull-changes.md) and [Copy work between environments](move-work-between-environments.md).

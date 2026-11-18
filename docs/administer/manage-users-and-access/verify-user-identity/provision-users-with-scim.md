@@ -24,7 +24,7 @@ SCIM provisioning is in Preview and may change in future releases. Avoid relying
 {% hint style="info" %}
 **Feature availability**
 
-SCIM provisioning is available from n8n 2.48.0 on Enterprise plans.
+SCIM provisioning is available from n8n 2.48.0 on Enterprise plans. While SCIM is in Preview, you also need to set the `N8N_ENV_FEAT_SCIM` environment variable to `true`. Refer to [Before you set up SCIM](#before-you-set-up-scim).
 {% endhint %}
 
 SCIM (System for Cross-domain Identity Management) is an open standard that IdPs use to keep user accounts in sync with the apps they connect to. n8n supports SCIM 2.0 and works with IdPs such as Okta and Microsoft Entra ID.

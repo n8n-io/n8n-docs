@@ -33,9 +33,9 @@ Setting `n8n_main_hpa_min_replicas = 1` runs a single main pod instead, which on
 
 The module deploys n8n as three separate sets of pods on AKS:
 
-* **Main pods:** Handle the editor UI and the REST API.
-* **Webhook pods:** Handle inbound triggers.
-* **Worker pods:** Run workflow executions.
+* **Main pods:** handle the editor UI and the REST API.
+* **Webhook pods:** handle inbound triggers.
+* **Worker pods:** run workflow executions.
 
 The AKS cluster has two node pools. The module scales the number of pods in each set between the minimum and maximum for your chosen size (see [Choose a starting size](#choose-a-starting-size)).
 

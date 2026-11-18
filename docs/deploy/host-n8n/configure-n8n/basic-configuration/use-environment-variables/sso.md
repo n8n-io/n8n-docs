@@ -44,3 +44,7 @@ Refer to [Set up SSO](../../security/configure-sso.md) for in-app setup steps an
 ## SAML <a href="#saml" id="saml"></a>
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/NnYMdwgkElS7TK37owd0/" %}
+
+## Related resources
+
+* [Environment variables](./)

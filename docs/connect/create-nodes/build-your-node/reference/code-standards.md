@@ -125,3 +125,7 @@ const response = await this.helpers.httpRequestWithAuthentication.call(
 This uses the npm package [Axios](https://www.npmjs.com/package/axios).
 
 Refer to [HTTP helpers](http-request-helpers.md) for more information, and for migration instructions for the removed `this.helpers.request`.
+
+## Related resources
+
+* [Node building reference](./)

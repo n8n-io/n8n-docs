@@ -46,3 +46,7 @@ audit deny @{PROC}/[0-9]*/{environ,mounts} rwl,
 ```
 
 This denies and logs any attempt to read, write, or link to per-process `environ` and `mounts` files.
+
+## Related resources
+
+* [Security](../security.md)

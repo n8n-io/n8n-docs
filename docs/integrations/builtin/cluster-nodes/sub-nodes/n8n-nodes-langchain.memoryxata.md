@@ -25,7 +25,7 @@ On this page, you'll find a list of operations the Xata node supports, and links
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/xata.md).
+Refer to the [Xata credentials documentation](../../credentials/xata.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
@@ -41,8 +41,6 @@ You can find authentication information for this node [here](../../credentials/x
 [Browse Xata node documentation integration templates](https://n8n.io/integrations/xata) or [search all templates](https://n8n.io/workflows/)
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
-
-Refer to [LangChain's Xata documentation](https://js.langchain.com/docs/integrations/memory/xata) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

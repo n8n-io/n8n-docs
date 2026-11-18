@@ -272,7 +272,7 @@ from google.adk.agents import Agent
 from google.adk.tools.mcp_tool import McpToolset
 from google.adk.tools.mcp_tool.mcp_session_manager import StreamableHTTPServerParams
 
-N8N_INSTANCE_URL = "https://localhost:5678"
+N8N_INSTANCE_URL = "https://n8n.example.com"
 N8N_MCP_TOKEN = "YOUR_N8N_MCP_TOKEN"
 
 root_agent = Agent(
@@ -302,3 +302,8 @@ For more details, see [Connect ADK agent to n8n](https://google.github.io/adk-do
 ## Troubleshooting
 
 If a client doesn't connect using the steps above, see [Troubleshooting](../connect-to-n8n-mcp-server.md#troubleshooting) on the main MCP server page.
+
+## Related resources
+
+* [Connect to n8n MCP server](../connect-to-n8n-mcp-server.md)
+* [MCP server tools reference](mcp-server-tools-reference.md)

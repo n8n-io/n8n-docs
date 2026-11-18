@@ -45,6 +45,14 @@ The methods for accessing linked items are different depending on whether you're
 * [Preserving linking in the Code node](preserving-linking-in-the-code-node.md)
 * [Item linking errors](item-linking-errors.md)
 
+## Related resources
+
+* [Link data items](./)
+* [Accessing linked items in the Code node](accessing-linked-items-in-the-code-node.md)
+* [Preserving linking in the Code node](preserving-linking-in-the-code-node.md)
+* [Item linking errors](item-linking-errors.md)
+* [Item linking for node creators](item-linking-for-node-creators.md)
+
 
 
 

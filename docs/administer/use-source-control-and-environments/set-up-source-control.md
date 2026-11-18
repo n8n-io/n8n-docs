@@ -89,3 +89,16 @@ The file or directory replaces the default trust store for Git. If the instance 
 1. **Optional**: choose a custom color for the instance. This will appear in the menu next to the source control push and pull buttons. It helps users know which instance they're in.
 1. Select **Save settings**.
 
+## Related resources
+
+* [Use source control and environments](./)
+* [Understand source control](understand-source-control.md)
+* [Work with environments](work-with-environments.md)
+* [Use Git in n8n](use-git-in-n8n.md)
+* [Choose branching patterns](choose-branching-patterns.md)
+* [Push and pull changes](push-and-pull-changes.md)
+* [Compare versions](compare-versions.md)
+* [Move work between environments](move-work-between-environments.md)
+* [Use environments programmatically with the public API](use-environments-via-api.md)
+* [Tutorial: Create environments with source control](tutorial-create-environments-with-source-control.md)
+

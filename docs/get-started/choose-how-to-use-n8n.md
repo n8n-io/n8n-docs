@@ -54,7 +54,7 @@ Use this guide to choose a deployment option:
 | Don't want to manage infrastructure | **n8n Cloud** | n8n handles hosting, updates, and scaling |
 | Need full control over deployment | **Self-hosted** | You control the environment and configuration |
 | Have customized use cases | **Self-hosted** | Full control over deployment and configuration |
-| Need enterprise features (SSO, environments, projects, etc.) | **Both options work** | Enterprise plans (paid) are available with both |
+| Need enterprise features (SSO, environments, projects, etc.) | **Both options work** | Enterprise plans (paid) are available with both. See the [Enterprise Hub](enterprise-hub.md) |
 | Have infrastructure and technical resources | **Self-hosted** | You can manage your own deployment |
 | Want to run n8n for free | **Self-hosted (Community edition)** | Free with almost the complete feature set |
 
@@ -118,7 +118,7 @@ Every self-hosted installation runs on the same underlying product. You can stic
 
 For the differences between editions and how to register or license an instance, see [Compare plans and editions](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/community-edition-features). For what each plan includes, see the [pricing page](https://n8n.io/pricing/).
 
-To register a Community edition instance for the extra free features, go to **Settings > Usage and plan** and select **Unlock**.
+To register a Community edition instance for the extra free features, go to **Settings > Plan & usage** and select **Unlock**.
 
 ## Which features need a paid plan or edition <a href="#which-features-need-a-paid-plan-or-edition" id="which-features-need-a-paid-plan-or-edition"></a>
 
@@ -135,7 +135,7 @@ Some features require certain paid plan subscriptions, including:
 - Workflow and credential sharing
 - Version control using Git
 
-Feature availability changes over time and differs by plan and edition. For exactly what each plan and edition includes, the [pricing page](https://n8n.io/pricing/) is the definitive source. See also [Compare plans and editions](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/community-edition-features) for how the self-hosted plans and editions differ.
+Feature availability changes over time and differs by plan and edition. For exactly what each plan and edition includes, the [pricing page](https://n8n.io/pricing/) is the definitive source. See also [Compare plans and editions](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/community-edition-features) for how the self-hosted plans and editions differ. For how your plan, platform, and n8n version determine access, and how maturity status (Preview, GA, deprecated, or removed) affects whether you can rely on a feature, see [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability).
 
 ## Getting started <a href="#getting-started" id="getting-started"></a>
 
@@ -145,3 +145,10 @@ Ready to begin?
 - **[Get started with self-hosted](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n)** — installation and deployment guides, then [choose a plan or edition](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/community-edition-features)
 
 For the current plans, editions, licenses, and prices, always check the [pricing page](https://n8n.io/pricing/).
+
+## Related resources
+
+* [n8n Docs](./)
+* [Build your first workflow](build-your-first-workflow.md)
+* [Learning paths](learning-paths.md)
+* [Key concept glossary](key-concept-glossary.md)

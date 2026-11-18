@@ -24,7 +24,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/formstacktrigger.md).
+Refer to the [Formstack Trigger credentials documentation](../credentials/formstacktrigger.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}

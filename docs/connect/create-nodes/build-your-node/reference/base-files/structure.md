@@ -63,3 +63,11 @@ export class ExampleNode implements INodeType {
 ```
 
 Refer to [Standard parameters](standard-parameters.md) for information on parameters available to all node types. Refer to [Programmatic-style parameters](programmatic-style-parameters.md) and [Programmatic-style execute method](programmatic-style-execute-method.md) for more information on working with programmatic-style nodes.
+
+## Related resources
+
+* [Base files](./)
+* [Standard parameters](standard-parameters.md)
+* [Declarative-style parameters](declarative-style-parameters.md)
+* [Programmatic-style parameters](programmatic-style-parameters.md)
+* [Programmatic-style execute method](programmatic-style-execute-method.md)

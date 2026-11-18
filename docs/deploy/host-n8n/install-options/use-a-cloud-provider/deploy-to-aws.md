@@ -20,6 +20,12 @@ AWS offers several ways suitable for hosting n8n, including EC2 (virtual machine
 
 This guide uses [EKS](https://aws.amazon.com/eks/) as the hosting option. Using Kubernetes requires some additional complexity and configuration, but is the best method for scaling n8n as demand changes.
 
+{% hint style="info" %}
+**Looking for a production-grade, highly available setup?**
+
+For a multi-main deployment with managed PostgreSQL, Redis, and autoscaling workers, see [Deploy to AWS with Terraform](deploy-to-aws-with-terraform/README.md).
+{% endhint %}
+
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
 The steps in this guide use a mix of the AWS UI and [the eksctl CLI tool for EKS](https://eksctl.io).
@@ -118,7 +124,7 @@ resources:
 …    
 ```
 
-This defines a minimum of 250mb per container, a maximum of 500mb, and lets Kubernetes handle CPU. You can change these values to match your own needs. As a guide, here are the resources values for the n8n cloud offerings:
+This defines a minimum of 250mb per container, a maximum of 500mb, and lets Kubernetes handle CPU. You can change these values to match your own needs. As a guide, here are the resources values for the n8n Cloud offerings:
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/I9ftZ1V1rwx3OrFOh0bT/" %}
 
@@ -199,3 +205,16 @@ kubectl delete -f .
 ## Next steps <a href="#next-steps" id="next-steps"></a>
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/GtC2RL8itCPuNiwv5UUW/" %}
+
+## Related resources
+
+* [Use a cloud provider](./)
+* [Deploy to AWS with Terraform](deploy-to-aws-with-terraform/README.md)
+* [DigitalOcean](deploy-to-digital-ocean.md)
+* [Heroku](deploy-to-heroku.md)
+* [Hetzner Cloud](deploy-to-hetzner.md)
+* [Azure](deploy-to-azure.md)
+* [Google Cloud Run](deploy-to-google-cloud-run.md)
+* [Google Kubernetes Engine](deploy-to-google-kubernetes.md)
+* [OpenShift Local (CRC)](deploy-to-openshift-local-crc.md)
+* [Use Docker Compose](use-docker-compose.md)

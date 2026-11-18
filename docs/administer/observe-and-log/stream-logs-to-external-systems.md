@@ -77,6 +77,7 @@ The following events are available. You can choose which events to stream in **S
 * Audit
 	* User login success
 	* User login failed
+	* User login email conflict
 	* User signed up
 	* User updated
 	* User deleted
@@ -125,12 +126,21 @@ The following events are available. You can choose which events to stream in **S
 	* External secrets connection deleted
 	* External secrets connection tested
 	* External secrets connection reloaded
+	* Environments provider created
+	* Environments provider updated
+	* Environments provider deleted
+	* Environment created
+	* Environment updated
+	* Environment deleted
 	* Personal publishing restricted enabled
 	* Personal publishing restricted disabled
 	* Personal sharing restricted enabled
 	* Personal sharing restricted disabled
 	* 2FA enforcement enabled
 	* 2FA enforcement disabled
+	* **Public API rate limit enabled**
+	* **Public API rate limit disabled**
+	* **Public API rate limit updated**
 	* Token exchange succeeded
 	* Token exchange failed
 	* Token exchange embed login
@@ -143,6 +153,9 @@ The following events are available. You can choose which events to stream in **S
 	* Role mapping rule updated
 	* Role mapping rule deleted
 	* Role mapping rules bulk deleted
+	* MCP OAuth completed
+	* MCP tool called
+	* MCP access updated
 * Worker
 	* Started
 	* Stopped
@@ -172,6 +185,119 @@ The following events are available. You can choose which events to stream in **S
 	* Job stalled
 
 Two sets of audit events mention packages, and they're unrelated. **Package installed**, **Package updated**, and **Package deleted** cover [community nodes](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/community-nodes/installation-and-management) installed on the instance. The **n8n package** events cover [n8n packages](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/n8n-packages), the portable archives you use to move workflows between instances.
+
+### Workflow events
+
+The four **Workflow** events cover a single workflow execution's lifecycle.
+
+| Event name | Sent when |
+|---|---|
+| `n8n.workflow.started` | A workflow execution begins. |
+| `n8n.workflow.success` | A workflow execution finishes without an error. |
+| `n8n.workflow.failed` | A workflow execution finishes with an error. |
+| `n8n.workflow.cancelled` | Someone or something cancels a running execution. |
+
+To stream all four, subscribe your destination to `n8n.workflow`. In **Settings** > **Log Streaming** > **Events**, they appear in the **Workflow** group.
+
+Every event carries `executionId`, `workflowId`, and `workflowName`.
+
+`n8n.workflow.started`, `n8n.workflow.success`, and `n8n.workflow.failed` also carry:
+
+| Field | Description |
+|---|---|
+| `userId` | The user who owns the execution. Not present when n8n starts the execution itself, for example from a schedule trigger. |
+| `mode` | The execution mode, for example `trigger`, `manual`, `webhook`, or `retry`. |
+| `isManual` | `true` when someone starts the execution manually from the editor. |
+| `projectId`, `projectName` | The project the workflow belongs to, when it belongs to one. |
+
+`n8n.workflow.success` and `n8n.workflow.failed` also carry a `success` boolean: `true` on the success event, `false` on the failed event.
+
+`n8n.workflow.failed` additionally carries:
+
+| Field | Description |
+|---|---|
+| `lastNodeExecuted` | The name of the node that was running when the execution failed. |
+| `errorNodeType` | That node's type, for example `n8n-nodes-base.httpRequest`. |
+| `errorMessage` | The error message, as a string. |
+
+`n8n.workflow.cancelled` additionally carries `reason`, a string describing why the execution was cancelled.
+
+### Provider and environment events
+
+These six audit events record successful changes to providers and environments in the [Environments](../environments/README.md) feature. A provider stores the credentials n8n uses to connect to a Git host. An environment uses a provider and a repository to define where n8n sends workflows or gets them from.
+
+| Event name | Sent when |
+| --- | --- |
+| `n8n.audit.promotions.provider.created` | A user creates a provider. |
+| `n8n.audit.promotions.provider.updated` | A user updates a provider. |
+| `n8n.audit.promotions.provider.deleted` | A user deletes a provider. |
+| `n8n.audit.promotions.environment.created` | A user creates an environment. |
+| `n8n.audit.promotions.environment.updated` | A user updates an environment. |
+| `n8n.audit.promotions.environment.deleted` | A user deletes an environment. |
+
+To stream all six, subscribe your destination to `n8n.audit.promotions`. In **Settings** > **Log Streaming** > **Events**, they appear in the **Audit** group.
+
+### Public API rate limit events
+
+{% hint style="info" %}
+**Feature availability**
+
+The enabled and disabled events are available from n8n 2.47.0. The updated event is available from n8n 2.49.0.
+{% endhint %}
+
+These audit events record when an instance owner or admin turns [API rate limits](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/rate-limits) on or off, or changes a limit or a window. The changes can come from **Settings** > **Policies** or the n8n public API.
+
+| Event name | Sent when |
+| --- | --- |
+| `n8n.audit.public-api-rate-limit.enabled` | An instance owner or admin turns rate limiting on. Carries the acting user. |
+| `n8n.audit.public-api-rate-limit.disabled` | An instance owner or admin turns rate limiting off. Carries the acting user. |
+| `n8n.audit.public-api-rate-limit.updated` | An instance owner or admin changes at least one limit or window. Carries the acting user, and `before` and `after` with only the values that changed. |
+
+For example, a change of the read limit for all endpoints from 1,200 to 100 carries `"before": { "globalReadLimit": 1200 }` and `"after": { "globalReadLimit": 100 }`. A save that turns rate limiting on and changes a limit sends two events: `enabled` and `updated`.
+
+n8n doesn't send an event when:
+
+* An environment variable turns rate limiting on or sets a value.
+* A save changes nothing.
+* n8n rejects a request with a `429` response.
+
+To stream all three, subscribe your destination to `n8n.audit.public-api-rate-limit`. In **Settings** > **Log Streaming** > **Events**, they appear in the **Audit** group.
+
+### MCP events
+
+{% hint style="info" %}
+**Feature availability**
+
+MCP audit events are available from n8n 2.34.0.
+{% endhint %}
+
+The three **MCP** audit events cover the instance MCP server, which you turn on in **Settings** > **Instance-level MCP**. They don't cover workflows that use the **MCP Server Trigger** node. See [Connect to n8n MCP server](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server) for the difference between the two.
+
+| Event name | Sent when |
+| --- | --- |
+| `n8n.audit.mcp.oauth.completed` | A user finishes authorizing an MCP client through OAuth. Carries `userId`, `clientId`, and `clientName`. |
+| `n8n.audit.mcp.tool.called` | An MCP client calls a tool. See the fields below. |
+| `n8n.audit.mcp.access.updated` | Someone turns instance MCP access on or off. Carries the acting user and the new `enabled` value. |
+
+To stream all three, subscribe your destination to `n8n.audit.mcp`. In **Settings** > **Log Streaming** > **Events**, they appear in the **Audit** group.
+
+`n8n.audit.mcp.tool.called` carries these fields:
+
+| Field | Description |
+| --- | --- |
+| `userId` | The user whose credentials the client authenticated with. |
+| `_email`, `_firstName`, `_lastName`, `globalRole` | That user's details. |
+| `toolName` | The tool that was called, for example `execute_workflow`. |
+| `workflowId` | The workflow the tool acted on, when it acts on one. |
+| `status` | `success` or `error`. |
+| `errorMessage` | Why the call failed. Only present when `status` is `error`. |
+| `authType` | `oauth` or `api_key`. `api_key` covers every bearer token that isn't an OAuth access token. `authType` is available from n8n 2.34.0.|
+| `clientId` | The OAuth client the call authenticated as, as registered with your instance. Present when `authType` is `oauth`. `clientId` is available from n8n 2.34.0. |
+| `clientName` | The name the client reports for itself. |
+
+To measure usage per client, group by `clientId`. It identifies one client registration, so it stays the same across every call that client makes, including after its token refreshes. Two installations of the same product register separately and get different values, so `clientId` counts registrations rather than products. `clientName` isn't verified and isn't unique, so don't use it as a key.
+
+Setting `anonymizeAuditMessages` on a destination masks the user's email and name. It doesn't mask `userId`, `authType`, or `clientId`, so you can still group and count by them.
 
 ## Destinations <a href="#destinations" id="destinations"></a>
 
@@ -338,3 +464,10 @@ N8N_LOG_STREAMING_DESTINATIONS='[
   }
 ]'
 ```
+
+If you deploy n8n on AWS using the [terraform-aws-n8n](https://github.com/n8n-io/terraform-aws-n8n) module, see [Configure Enterprise features on AWS](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/install-options/use-a-cloud-provider/deploy-to-aws-with-terraform/use-enterprise-features-on-aws#log-streaming) for the module-specific setup.
+
+## Related resources
+
+* [Observe and log](./)
+* [Track usage with Insights](track-usage-with-insights.md)

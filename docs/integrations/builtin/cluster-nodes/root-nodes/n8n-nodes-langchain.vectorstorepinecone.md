@@ -43,7 +43,7 @@ On this page, you'll find the node parameters for the Pinecone node, and links t
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/pinecone.md).
+Refer to the [Pinecone credentials documentation](../../credentials/pinecone.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
@@ -145,7 +145,7 @@ Connect the Pinecone Vector Store node to the AI agent's tool connector, so the 
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [LangChain's Pinecone documentation](https://js.langchain.com/docs/integrations/vectorstores/pinecone/) for more information about the service.
+Refer to [LangChain's Pinecone documentation](https://docs.langchain.com/oss/javascript/integrations/vectorstores/pinecone) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

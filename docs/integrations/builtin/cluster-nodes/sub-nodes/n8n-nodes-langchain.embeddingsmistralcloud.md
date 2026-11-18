@@ -27,7 +27,7 @@ On this page, you'll find the node parameters for the Embeddings Mistral Cloud n
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/mistral.md).
+Refer to the [Mistral Cloud credentials documentation](../../credentials/mistral.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
@@ -50,7 +50,7 @@ Learn more about available models in [Mistral's models documentation](https://do
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [Langchain's Mistral embeddings documentation](https://js.langchain.com/docs/integrations/text_embedding/mistralai) for more information about the service.
+Refer to [LangChain's Mistral embeddings documentation](https://docs.langchain.com/oss/javascript/integrations/embeddings/mistralai) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

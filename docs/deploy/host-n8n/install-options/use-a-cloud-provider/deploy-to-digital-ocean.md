@@ -196,7 +196,8 @@ sudo docker compose stop
 
 n8n Assistant needs a sandbox to run code in. You can add the same sandbox stack used in the [Docker Compose guide](../install-using-docker-compose.md) to this setup. A few things are worth knowing before you start:
 
-* This sandbox is suitable for local development and testing. The stack below uses n8n's own bundled sandbox (`n8n-sandbox`). Since a DigitalOcean droplet with a public domain is often a real deployment, consider Daytona instead if this is going to production.
+* This sandbox is for development and testing only. The stack below uses n8n's own bundled sandbox (`n8n-sandbox`), whose runner runs with `privileged: true` and gives weak isolation. Since a DigitalOcean droplet with a public domain is often a real deployment, don't use this stack for production. Run nothing else on the droplet. If you need a more isolated sandbox on a single Linux VM, [install Sysbox on the VM](https://github.com/n8n-io/n8n-sandbox-service/blob/main/docs/quickstart-linux.md) and follow its steps to run the runner with Sysbox instead of `privileged: true`. The Compose file in this guide doesn't include those changes. See [Set up n8n Assistant](../../configure-n8n/set-up-n8n-assistant.md) for other production options.
+
 * **Resize if needed.** The sandbox runner uses Docker-in-Docker, which needs more headroom than n8n alone. Make sure you provision at least 4 GB RAM / 2 vCPU.
 * **No networking changes required.** Caddy only ever proxies n8n itself; the sandbox services stay internal to the Compose network and don't need DNS, firewall, or Caddyfile changes.
 
@@ -339,3 +340,15 @@ Replace the `change-me-...` placeholders in `.env` with your own unique secrets 
 ## Next steps <a href="#next-steps" id="next-steps"></a>
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/GtC2RL8itCPuNiwv5UUW/" %}
+
+## Related resources
+
+* [Use a cloud provider](./)
+* [Heroku](deploy-to-heroku.md)
+* [Hetzner Cloud](deploy-to-hetzner.md)
+* [AWS](deploy-to-aws.md)
+* [Azure](deploy-to-azure.md)
+* [Google Cloud Run](deploy-to-google-cloud-run.md)
+* [Google Kubernetes Engine](deploy-to-google-kubernetes.md)
+* [OpenShift Local (CRC)](deploy-to-openshift-local-crc.md)
+* [Use Docker Compose](use-docker-compose.md)

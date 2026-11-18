@@ -40,7 +40,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/google/README.md).
+Refer to the [Google credentials documentation](../../credentials/google/README.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}
@@ -75,7 +75,7 @@ Use these filters to further refine the node's behavior:
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for Gmail. You can find the node docs [here](../../app-nodes/n8n-nodes-base.gmail/README.md).
+n8n provides an app node for Gmail. Refer to the [Gmail node documentation](../../app-nodes/n8n-nodes-base.gmail/README.md) for more information.
 
 View [example workflows and related content](https://n8n.io/integrations/gmail-trigger/) on n8n's website.
 

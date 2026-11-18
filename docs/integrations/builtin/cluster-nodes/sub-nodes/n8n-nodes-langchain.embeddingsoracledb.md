@@ -19,7 +19,7 @@ On this page, you'll find the node parameters for the Embeddings Oracle Database
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/oracledb.md).
+Refer to the [Oracle Database credentials documentation](../../credentials/oracledb.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}

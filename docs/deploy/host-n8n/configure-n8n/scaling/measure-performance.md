@@ -27,7 +27,7 @@ The performance of n8n depends on factors including:
 
 ## Run your own benchmarking <a href="#run-your-own-benchmarking" id="run-your-own-benchmarking"></a>
 
-To get an accurate estimate for your use case, run n8n's [benchmarking framework](https://github.com/n8n-io/n8n/tree/master/packages/%40n8n/benchmark). The repository contains more information about the benchmarking.
+To get an accurate estimate for your use case, run n8n's [benchmarking framework](https://github.com/n8n-io/n8n/tree/master/packages/quality/efficiency/scale/benchmark). The repository contains more information about the benchmarking.
 
 ## Example: Single instance performance <a href="#example-single-instance-performance" id="example-single-instance-performance"></a>
 
@@ -62,3 +62,13 @@ Setup:
   <figcaption>This graph shows the percentage of requests to the Webhook Trigger node getting a response within 100 seconds, and how that varies with load. Under higher loads n8n usually still processes the data, but takes over 100s to respond.</figcaption>
 </figure>
 
+
+## Related resources
+
+* [Scaling](../scaling.md)
+* [Enable queue mode](enable-queue-mode.md)
+* [Control concurrency](control-concurrency.md)
+* [Manage execution data](manage-execution-data.md)
+* [Handle binary data](handle-binary-data.md)
+* [Use external storage](use-external-storage.md)
+* [Fix memory issues](fix-memory-issues.md)

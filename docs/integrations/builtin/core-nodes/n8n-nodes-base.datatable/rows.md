@@ -64,6 +64,15 @@ Enter these parameters:
 - **Return All:** Enable to return all matching rows. Or, disable and enter a **Limit** for the number of rows to return, for example `50`.
 - **Order By:** Enable to define the column to order results on, and the direction (ascending or descending). Or, disable for no ordering of results.
 
+### Reading rows while the table changes
+
+When you ask for a lot of results at once, n8n fetches them in smaller batches ("pages") one after another, rather than all in one go.
+
+Because this can take a little time, if someone changes the underlying data while it's still fetching (adding, editing, or deleting records), the results you get back might be a bit off. Some records could be missing, some could show up twice, and different parts of the results might reflect the data as it was at slightly different moments.
+
+* **To get a fully accurate result:** Make sure no one is adding, editing, or deleting records until the fetch is completely finished.
+* **If you're using "Return All":** If new matching records keep getting added while the fetch is running, **Return All** may never finish, since there's always more data to retrieve. If that happens, you can cancel the operation, and it will stop after the current batch finishes.
+
 ## If row exists <a href="#if-row-exists" id="if-row-exists"></a>
 
 Use this operation to check whether a row matching the defined condition(s) exists in a data table. If a matching row is found, the node outputs the same input item it received, unchanged. If no matching rows exist, it outputs nothing.

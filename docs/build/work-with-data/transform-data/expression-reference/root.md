@@ -401,3 +401,7 @@ Uses the instance’s time zone (unless overridden in the workflow’s settings)
 
 **Source:**  Custom n8n functionality
 
+
+## Related resources
+
+* [Expression reference](./)

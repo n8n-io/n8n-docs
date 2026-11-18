@@ -69,7 +69,11 @@ The Code node editing environment supports time-saving and useful keyboard short
 
 ## Python (Pyodide - legacy) <a href="#python-pyodide-legacy" id="python-pyodide-legacy"></a>
 
-Pyodide is a legacy feature. n8n 2 no longer supports this feature.
+{% hint style="warning" %}
+**Feature availability**
+
+Pyodide is removed from n8n 2.0. n8n no longer supports this feature.
+{% endhint %}
 
 n8n added Python support in n8n 1.0. It doesn't include a Python executable. Instead, n8n provides Python support using [Pyodide](https://pyodide.org/en/stable/), which is a port of CPython to WebAssembly. This limits the available Python packages to the [Packages included with Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html#packages-in-pyodide). n8n downloads the package automatically the first time you use it.
 
@@ -98,7 +102,11 @@ You can't access the file system or make HTTP requests. Use the following nodes 
 
 ## Python (Native) <a href="#python-native" id="python-native"></a>
 
-n8n added native Python support using task runners in n8n 1.111.0. This feature is stable as of n8n 2.
+{% hint style="info" %}
+**Feature availability**
+
+Native Python support using task runners is available from n8n 1.111.0. This feature is stable as of n8n 2.
+{% endhint %}
 
 Main differences from Pyodide:
 
@@ -106,7 +114,7 @@ Main differences from Pyodide:
 * On self-hosted, native Python supports importing native Python modules from the standard library and from third-parties, if the `n8nio/runners` image includes them and explicitly allowlists them. See [adding extra dependencies for task runners](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-task-runners#adding-extra-dependencies) for more details.
 * Native Python denies insecure built-ins by default. See [task runners environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/task-runners) for more details.
 * Unlike Pyodide, which accepts dot access notation, for example, `item.json.myNewField`, native Python only accepts bracket access notation, for example, `item["json"]["my_new_field"]`. There may be other minor syntax differences where Pyodide accepts constructs that aren't legal in native Python.
-* On n8n cloud, the Python option for the Code node doesn't allow users to import any Python libraries — whether from the standard library or third-party packages. Self-hosting users can find setup instructions to include external libraries [here](https://docs.n8n.io/hosting/configuration/task-runners/#adding-extra-dependencies). In the long term, the n8n team is committed to allowing users to securely execute arbitrary Python code with any first- and third-party libraries using task runners.
+* On n8n cloud, the Python option for the Code node doesn't allow users to import any Python libraries — whether from the standard library or third-party packages. See [adding extra dependencies for task runners](https://docs.n8n.io/hosting/configuration/task-runners/#adding-extra-dependencies) for instructions to include external libraries when self-hosting. In the long term, the n8n team is committed to allowing users to securely execute arbitrary Python code with any first- and third-party libraries using task runners.
 
 Upgrading to native Python is a breaking change, so you may need to adjust your Python scripts to use the native Python runner.
 

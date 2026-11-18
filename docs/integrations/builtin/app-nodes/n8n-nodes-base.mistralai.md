@@ -24,7 +24,7 @@ On this page, you'll find a list of operations the Mistral AI node supports, and
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/mistral.md).
+Refer to the [Mistral Cloud credentials documentation](../credentials/mistral.md) for authentication information for this node.
 {% endhint %}
 
 

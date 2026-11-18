@@ -18,3 +18,8 @@ Understanding n8n's underlying architecture is helpful if you need to:
 * Customize n8n's default databases
 
 This section is a work in progress. If you have questions, please try the [forum](https://community.n8n.io/) and let n8n know which architecture documents would be useful for you.
+
+## Related resources
+
+* [Understand the architecture](./)
+* [Understand the database](understand-the-database.md)

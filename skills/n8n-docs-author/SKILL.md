@@ -1,12 +1,8 @@
 ---
 name: n8n-docs-author
 description: >-
-  Authors and reviews n8n documentation pages following the n8n docs style and
-  contribution guides. Use when writing new doc pages, editing existing docs,
-  reviewing doc PRs, or checking content against the style guide. Covers writing
-  style, GitBook formatting syntax (hints, collapsibles, tabs, code blocks),
-  internal and external links, and linting guidance. Use when asked to write or
-  edit docs, or to review content against the style guide.
+  Writes, edits, and reviews customer-facing n8n documentation pages in the n8n-docs repo,
+  following the style guide, contribution guide, and terminology. Use when drafting a page, editing docs, reviewing a docs PR, or checking content against the style guide. Covers audience, plain language, page structure and links, feature availability, frontmatter, and GitBook syntax.
 ---
 
 # n8n docs author
@@ -23,6 +19,16 @@ distills them so you can act quickly, but defer to the guides when in doubt:
 The n8n Docs site is built with [GitBook](https://www.gitbook.com/). Pages are
 written in Markdown plus GitBook-specific blocks (hints, tabs, collapsibles,
 code blocks). Use GitBook syntax, not MkDocs/Material syntax.
+
+## Audience
+
+Write for people who use, operate, or build on n8n, not for n8n's own internal engineers.
+
+Include what the reader does and sees: controls, settings, fields, error messages, limits, and behavior that affects what they've built.
+
+Include an implementation detail only when the reader needs it to act, choose between options, or troubleshoot. For example, how execution data is stored matters on a self-hosting page and not on a node reference page. Otherwise leave it out.
+
+Tickets, PRs, and design docs are sources of facts, not templates for the page. Keep what the reader needs and drop the rest.
 
 ## Modes
 
@@ -135,19 +141,55 @@ docs assistant) chunk on `##`/`###` headings.
   key context instead of "as mentioned above" / "see below". Restate, don't
   duplicate — repeat a fact or two, not whole paragraphs (sections that need the
   same long explanation belong under one heading).
-- **Cross-references:** link every page to its prerequisites and its next step,
-  link parents and children both ways (an overview lists all its child pages;
-  each child links back with `./`), and aim for each page to sit in a cluster of
-  5+ interlinked pages on the same topic (AI search cites connected clusters far
-  more than standalone pages). Put
-  links in the body at the first meaningful mention, with descriptive anchor text
-  naming the target ([Configure the Schedule Trigger](...), never "click here").
-  Links point to separate topics; they don't replace context a section needs, so
-  restate that instead.
+- **Answer-first opening:** one plain sentence right after the H1, before any
+  existing intro or hint. Concrete, not "it lets you do things." One sentence; two only
+  if genuinely needed. Skip it if the intro already opens with an equivalent line.
+- **Cross-references:** the linking rule doesn't apply to node/integration reference pages
+  (`docs/integrations/`) — fixed one-page-per-node template, often
+  automation-managed, no natural parent/child or sibling relationship to link.
+  Don't add "In this section" or "Related resources" there; link to/from an
+  integration page only where there's a genuine content relationship (for
+  example, a credential page and the nodes that use it). Elsewhere: link every
+  page to its prerequisites and its next step.
+  Every section landing page links down to all its child pages. Every child
+  page links back up to its parent (`./`, or `../` if the current page is
+  itself a nested section README one level below its parent) and sideways to
+  each direct sibling, in a "Related resources" section at the end, a plain link list, structural
+  rather than curated, bare links with no descriptions (unlike "In this
+  section", the reader has already read a page from the cluster, so the
+  descriptive anchor text alone is enough). Add other genuinely related pages
+  at your discretion,
+  even outside the current section. Past about 8-10 siblings, drop the
+  sibling list and link back to the parent only — beyond that size it's
+  mostly boilerplate, and an O(n²) maintenance job on top, since the parent's
+  "In this section" already carries the exhaustive list. Aim for each page to
+  sit in a cluster of 5+ interlinked pages on the same topic (AI search cites
+  connected clusters far more than standalone pages). Skip sibling links for
+  flat reference collections (one page per data type, etc.) where every entry
+  follows the same template — these still link back to the parent, just
+  without a sibling list.
+- **Nested sections:** a page that is itself a parent (for example, a
+  subsection README) gets both — its own "In this section" for its children,
+  and a "Related resources" footer relating it to its own parent and its own
+  siblings at its level, linking to that parent with `../` (its own folder's
+  `./` would point at itself). Only reach one level up and one level sideways;
+  don't chain up to a grandparent section, since that connectivity already
+  exists transitively through the parent's own links.
+- **Listing children:** an overview with 2+ children lists them as a plain
+  bullet list under an "In this section" heading (link plus a one-line
+  description). With only one child, skip the list and link it inline at
+  first mention instead.
+- **Link placement:** put links in the body at the first meaningful mention,
+  with descriptive anchor text naming the target ([Configure the Schedule
+  Trigger](...), never "click here") — reuse an existing mention of the target
+  topic where one already exists, rather than adding a new sentence. A link
+  points to a separate topic; it can't stand in for context a section needs,
+  so restate that instead.
 
 ## Feature availability
 
-Reference plan/platform limits, n8n versions, and Preview status consistently.
+Reference plan/platform limits, n8n versions, Preview status, and Enterprise
+readiness consistently.
 See [reference.md](reference.md) for full examples and rules.
 
 - **Two version types:** instance version (the n8n release, three-part semver
@@ -182,12 +224,29 @@ See [reference.md](reference.md) for full examples and rules.
   title and box, even when it sits right next to an availability hint for the
   same feature. Name the feature or node in the sentence below it, not
   the title (never "this feature"), saying it may change and isn't for
-  production. Use "Preview", not "beta", for a feature's status — capitalize
+  production. Link to [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#feature-maturity-preview-ga-deprecated-and-removed)
+  for what Preview means rather than explaining it. Use "Preview", not "beta", for a feature's status — capitalize
   it wherever it names the status ("is in Preview", "a Preview feature"), same
   as "Deprecated"/"Archived". Frontmatter and tag values stay lowercase
   (`status: preview`, `tag: preview`) since they're literal identifiers, not
   prose. Whole page → also set `status: preview` plus a primary `preview` tag
   (see Frontmatter's `tags` field, below).
+- **Enterprise readiness:** an `info` hint titled
+  `**Limited enterprise readiness**` for a feature with Limited enterprise
+  readiness (some Enterprise capabilities don't cover it yet). Separate from
+  Preview, so never fold the two together; stack the hints. An Enterprise ready
+  feature carries nothing, so add no hint. Name the feature in the first
+  sentence, list the Enterprise capabilities it supports (add **Full** or
+  **Partial** after each name if levels differ; if they're all the same, say so
+  in the sentence), then say other Enterprise capabilities either don't apply
+  or it doesn't support them yet, and link to the list in Understand feature
+  availability. Don't list unsupported or non-applicable capabilities or say
+  whether n8n plans to close a gap. No visual
+  tag or `status:` field. A feature not available on Enterprise at all gets a
+  **Feature availability** hint instead. See [reference.md](reference.md) for
+  the standard hint.
+  For a section where every page is Preview, tag only the section's top page.
+  The subpages keep `status: preview` and the Preview hint.
 - **Deprecation and removal:** a `warning` hint, same `**Feature availability**`
   title, using "from" for both ("deprecated from n8n 2.0", "removed from n8n 3.0";
   never "removed in"). Name the replacement and removal version if known.
@@ -233,7 +292,7 @@ See [reference.md](reference.md) for full examples. Quick reference:
 |---------|--------|
 | External link | standard Markdown `[text](url)` (opens in a new tab automatically) |
 | Internal link (same space) | relative path including `.md`: `[text](../folder/page.md)`; `[text](./)` for the parent `README.md` |
-| Internal link (different space) | GitBook page URL, no `.md`: `[text](https://app.gitbook.com/s/<spaceId>/page-path)`. Each top-level `docs/` folder is a separate space, so relative paths don't cross spaces. See [reference.md](reference.md) for the space ID table |
+| Internal link (different space) | GitBook page URL, no `.md`: `[text](https://app.gitbook.com/s/<spaceId>/page-path)`. Each top-level `docs/` folder is a separate space, so relative paths don't cross spaces. Find space IDs in [`SPACE_INDEX.md`](https://github.com/n8n-io/n8n-docs/blob/main/SPACE_INDEX.md) |
 | Image | `![Alt text](../.gitbook/assets/file.png)` — stored in the space's `.gitbook/assets/` folder |
 | Video | `{% embed url="..." %}` — host externally; can't go inside a hint |
 | Hint / callout | `{% hint style="info" %}` … `{% endhint %}` |

@@ -51,7 +51,7 @@ Wise protects some live endpoints and operations with Strong Customer Authentica
 
 If you make a request to an endpoint that requires SCA, Wise returns a 403 Forbidden HTTP status code. The error returned will look like this:
 
-> This request requires Strong Customer Authentication (SCA). Please add a key pair to your account and n8n credentials. See https://api-docs.transferwise.com/#strong-customer-authentication-personal-token
+> This request requires Strong Customer Authentication (SCA). Please add a key pair to your account and n8n credentials. See https://docs.wise.com/guides/developer/auth-and-security/sca-and-2fa
 
 To use endpoints requiring SCA, generate an RSA key pair and add the relevant key information to both Wise and n8n:
 

@@ -66,3 +66,10 @@ Even so, you can still test different parts of your workflow with different eval
 Metrics can often have noise: they may be different across evaluation runs of the exact same workflow. This is because the workflow itself may return different results, or any LLM-based metrics might have natural variation in them.
 
 You can compensate for this by duplicating the rows of your dataset, so that each row appears more than once in the dataset. Since this means that each input will effectively be running multiple times, it will smooth out any variations.
+
+## Related resources
+
+* [Test and improve AI workflows](./)
+* [Understand why to test](understand-why-to-test.md)
+* [Run quick evaluations](run-quick-evaluations.md)
+* [Use metrics to measure quality](use-metrics-to-measure-quality.md)

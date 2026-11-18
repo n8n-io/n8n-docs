@@ -146,3 +146,9 @@ For example, the expression in this JSON includes a trailing period, which resul
 ```
 
 To resolve this error, check your [expression syntax](../expressions-versus-data-nodes.md) to make sure it follows the expected format.
+
+## Related resources
+
+* [Transform data](./)
+* [Approaches for transforming data](approaches-for-transforming-data.md)
+* [Expression reference](expression-reference/README.md)

@@ -38,8 +38,8 @@ To avoid these issues, n8n recommends that you build your workflows with memory 
 
 Current plans:
 
-* Trial: 320MiB RAM, 10 millicore CPU burstable
-* Starter: 320MiB RAM, 10 millicore CPU burstable
+* Trial: 640MiB RAM, 10 millicore CPU burstable
+* Starter: 640MiB RAM, 10 millicore CPU burstable
 * Pro-1 (10k executions): 640MiB RAM, 20 millicore CPU burstable
 * Pro-2 (50k executions): 1280MiB RAM, 80 millicore CPU burstable
 * Enterprise: 4096MiB RAM, 80 millicore CPU burstable
@@ -71,11 +71,11 @@ If a workflow consumes a large amounts of data and is past testing stage, it's a
 
 There are two ways you can control how much execution data n8n stores in the database:
 
-In the admin dashboard:
+In the n8n Cloud console:
 
-1. From your workspace or editor, navigate to **Admin Panel**.
-2. Select **Manage**.
-3. In **Executions to Save** deselect the executions you don't want to log.
+1. Open the [Cloud console](../use-the-cloud-console.md) and select **Instance settings**.
+2. In the **Runtime** section, under **Executions to save**, deselect the execution types you don't want to log: **Manual**, **Failed**, or **Successful**.
+3. Select **Save and restart** in the bar at the bottom of the page. Your instance restarts to apply the change.
 
 In your workflow settings:
 
@@ -93,6 +93,8 @@ n8n automatically prunes execution logs after a certain time or once you reach t
 * Pro plans: max 25000 executions saved and 30 days execution log retention;
 * Enterprise plan: max 50000 executions saved and unlimited execution log retention time.
 
+You reach the maximum storage limit either by exceeding the maximum number of saved executions or by exceeding the instance's database storage size. If the instance's database reaches this limit, n8n removes only the execution data and keeps the execution record. Pruning based on execution count or retention time, however, removes the record completely.
+
 ### Manual data pruning <a href="#manual-data-pruning" id="manual-data-pruning"></a>
 
 Heavier executions and use cases can exceed database capacity despite the automatic pruning practices. In cases like this, n8n will manually prune data to protect instance stability.
@@ -101,3 +103,10 @@ Heavier executions and use cases can exceed database capacity despite the automa
 2. n8n prunes execution data. n8n does this by running a backup of the instance (workflows, users, credentials and execution data) and restoring it without execution data.
 
 Due to the human steps in this process, the alert system isn't perfect. If warnings are triggered after hours or if data consumption rates are high, there might not be time to prune the data before the remaining disk space fills up.
+
+## Related resources
+
+* [Configure Cloud](./)
+* [Set your timezone](set-your-timezone.md)
+* [Find your IP addresses](find-your-ip-addresses.md)
+* [Change instance ownership or username](change-instance-ownership-or-username.md)

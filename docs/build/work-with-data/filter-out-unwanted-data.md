@@ -60,3 +60,14 @@ This removes array elements that don't match your condition while preserving the
 ### Filter out duplicate items from previous executions <a href="#filter-out-duplicate-items-from-previous-executions" id="filter-out-duplicate-items-from-previous-executions"></a>
 
 To remove items that have been seen in previous executions of a workflow, use the [Remove Duplicates](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.removeduplicates) node. Use this when an event fires multiple times but you only want to process the first occurrence.
+
+## Related resources
+
+* [Work with data](./)
+* [Understand n8n's data structure](understand-n8ns-data-structure.md)
+* [Expressions versus data nodes](expressions-versus-data-nodes.md)
+* [Reference data](reference-data/README.md)
+* [Transform data](transform-data/README.md)
+* [Pin and mock data](pin-and-mock-data.md)
+* [Handle special data types](handle-special-data-types/README.md)
+* [Data tables](data-tables.md)

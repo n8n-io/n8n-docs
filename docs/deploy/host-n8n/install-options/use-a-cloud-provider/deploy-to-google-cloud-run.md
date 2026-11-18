@@ -242,8 +242,10 @@ export SERVICE_URL="your-n8n-service-URL"
 
 gcloud run services update n8n \
     --region=$REGION \
-    --update-env-vars="N8N_HOST=$(echo $SERVICE_URL | sed 's/https:\/\///'),WEBHOOK_URL=$SERVICE_URL,N8N_EDITOR_BASE_URL=$SERVICE_URL"
+    --update-env-vars="N8N_HOST=$(echo $SERVICE_URL | sed 's/https:\/\///'),N8N_WEBHOOK_URL=$SERVICE_URL,N8N_EDITOR_BASE_URL=$SERVICE_URL"
 ```
+
+`N8N_WEBHOOK_URL` is available from n8n 2.30.0; on earlier versions, use `WEBHOOK_URL`.
 
 Lastly, you must setup OAuth for these services. Visit `https://console.cloud.google.com/auth` and follow these steps:
 
@@ -256,3 +258,15 @@ Lastly, you must setup OAuth for these services. Visit `https://console.cloud.go
 1. Click "Data Access" and add the scopes you want n8n to have access for (e.g. to access Google Sheets, you need `https://googleapis.com/auth/drive.file` and `https://googleapis.com/auth/spreadsheets`)
 1. Now you should be able to use these workspace services. You can test if it works by logging into n8n, add a Tool for the respective service and add its credentials using the information in the OAuth client JSON file from step 6.
 
+
+## Related resources
+
+* [Use a cloud provider](./)
+* [DigitalOcean](deploy-to-digital-ocean.md)
+* [Heroku](deploy-to-heroku.md)
+* [Hetzner Cloud](deploy-to-hetzner.md)
+* [AWS](deploy-to-aws.md)
+* [Azure](deploy-to-azure.md)
+* [Google Kubernetes Engine](deploy-to-google-kubernetes.md)
+* [OpenShift Local (CRC)](deploy-to-openshift-local-crc.md)
+* [Use Docker Compose](use-docker-compose.md)

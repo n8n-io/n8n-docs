@@ -33,3 +33,7 @@ N8N_DIAGNOSTICS_CONFIG_BACKEND=
 ```
 
 Refer to [Environment variables reference](../use-environment-variables/deployment.md) for more information on these variables.
+
+## Related resources
+
+* [Configuration examples](./)

@@ -34,3 +34,7 @@ n8n provides a library of workflow templates[^1]. When self-hosting n8n, you can
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mr8LBJxxxIAFYHNPNKU2/" %}
 
 [^1]: n8n templates are pre-built workflows designed by n8n and community members that you can import into your n8n instance. When using templates, you may need to fill in credentials and adjust the configuration to suit your needs.
+
+## Related resources
+
+* [Configuration examples](./)

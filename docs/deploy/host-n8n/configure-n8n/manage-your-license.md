@@ -20,7 +20,7 @@ To enable certain licensed features, you must first activate your license. You c
 In your n8n instance:
 
 1. Log in as **Admin** or **Owner**.
-1. Select **Settings** > **Usage and plan**.
+1. Select **Settings** > **Plan & usage**.
 1. Select **Enter activation key**.
 1. Paste in your license key.
 1. Select **Activate**.
@@ -48,3 +48,7 @@ N8N_LICENSE_CERT=<base64-encoded-license-string>
 Set either `N8N_LICENSE_CERT` or `N8N_LICENSE_ACTIVATION_KEY`, never both.
 
 
+
+## Related resources
+
+* [Configure n8n](./)

@@ -27,7 +27,7 @@ On this page, you'll find the node parameters for the Embeddings Cohere node, an
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/cohere.md).
+Refer to the [Cohere credentials documentation](../../credentials/cohere.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
@@ -48,7 +48,7 @@ Learn more about available models in [Cohere's models documentation](https://doc
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [Langchain's Cohere embeddings documentation](https://js.langchain.com/docs/integrations/text_embedding/cohere/) for more information about the service.
+Refer to [LangChain's Cohere embeddings documentation](https://docs.langchain.com/oss/javascript/integrations/embeddings/cohere) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

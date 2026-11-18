@@ -6,6 +6,6 @@ title: custom-execution-data-availability
 
 Custom executions data is available on:
 
-* Cloud: Pro, Enterprise
-* Self-Hosted: Enterprise, registered Community
+- **n8n Cloud:** Pro, Enterprise
+- **Self-hosted:** Registered Community, Enterprise
 {% endhint %}

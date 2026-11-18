@@ -101,3 +101,11 @@ You can document your workflow using node notes:
 [^1]: In n8n, nodes are individual components that you compose to create workflows. Nodes define when the workflow should run, allow you to fetch, send, and process data, can define flow control logic, and connect with external services.
 [^2]: An n8n workflow is a collection of nodes that automate a process. Workflows begin execution when a trigger condition occurs and execute sequentially to achieve complex tasks.
 [^3]: A trigger node is a special node responsible for executing the workflow in response to certain conditions. All production workflows need at least one trigger to determine when the workflow should run.
+
+## Related resources
+
+* [Workflow components](./)
+* [Connect nodes together](connect-nodes-together.md)
+* [Add notes and documentation](add-notes-and-documentation.md)
+* [Canvas Groups](canvas-groups.md)
+* [Find your workflow ID](find-your-workflow-id.md)

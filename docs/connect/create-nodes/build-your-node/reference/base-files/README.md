@@ -18,6 +18,8 @@ These documents give short code snippets to help understand the code structure a
 
 You can also explore the [n8n-nodes-starter](https://github.com/n8n-io/n8n-nodes-starter) and n8n's own [nodes](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes) for a wider range of examples. The starter contains basic examples that you can build on. The n8n [Mattermost node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Mattermost) is a good example of a more complex programmatic-style node, including versioning.
 
+## In this section
+
 For all nodes, refer to the:
 
 * [Structure of the node base file](structure.md)
@@ -31,3 +33,7 @@ For programmatic-style nodes, refer to the:
 
 * [Programmatic-style parameters](programmatic-style-parameters.md)
 * [Programmatic-style execute() method](programmatic-style-execute-method.md)
+
+## Related resources
+
+* [Node building reference](../)

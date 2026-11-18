@@ -8,12 +8,14 @@ PR's changed files plus those statuses and produces per-page deep links, so
 reviewers land on the exact page. See .github/workflows/gitbook-preview-links.yml.
 
 Usage:
-    gitbook_preview_links.py <changed_files.json> <combined_status.json>
+    gitbook_preview_links.py <changed_files.json> <statuses.json>
 
 - changed_files.json: output of `gh api repos/:repo/pulls/:n/files --paginate`
   (a JSON array of {filename, status, previous_filename?}).
-- combined_status.json: output of `gh api repos/:repo/commits/:sha/status`
-  (one latest entry per context under `.statuses`).
+- statuses.json: output of `gh api repos/:repo/commits/:sha/statuses`
+  (the full status *history*, newest first, as a JSON array). A `.statuses`
+  dict (the collapsed `/status` endpoint) is still accepted, but the history
+  is what callers should pass: see collapse_statuses for why.
 
 Reads the checked-out repo (CWD = repo root) for SUMMARY.md membership, page
 frontmatter/titles, and REUSABLE_CONTENT_INDEX.md. Stdlib only. Prints the
@@ -112,9 +114,52 @@ LIVE_RE = re.compile(r"^GitBook \(\./docs/([^)]+)\) - ")
 EDIT_RE = re.compile(r"^GitBook \(\./docs/([^)]+)\)$")
 
 
+# A build that reported success/failure/error is finished; `pending` is not a
+# verdict. GitBook has been seen posting a revision's `success` and `pending`
+# within the same second, `success` first (n8n-io/n8n-docs#5461), which the
+# collapsed `/commits/:sha/status` endpoint renders as a build stuck pending
+# forever: it keeps only the newest row per context, and no further status
+# event arrives to correct it.
+TERMINAL_STATES = ("success", "failure", "error")
+
+
+def collapse_statuses(status_json) -> list:
+    """One effective status row per context, newest first in, latest out.
+
+    Rule: pending can't undo a finished build, and among finished results the
+    newest wins. So a context resolves to its newest terminal row if it has
+    one, else to its newest row (pending). Ordering comes from the status id
+    when every row carries one (ids are monotonic, and same-second rows tie on
+    created_at); otherwise input order is trusted as newest-first.
+
+    "Newest terminal wins" drops a space whose rebuild later failed, but only
+    on a render that actually happens: the workflow fires on `success` events
+    only, so a failure arriving after a success re-renders nothing and the
+    sticky comment keeps its now-superseded links until the next success on
+    that sha. Self-correcting that needs a failure trigger *and* a body for the
+    all-failed case (the upsert is skipped on empty output) — deliberately out
+    of scope here, see the workflow's `if:`.
+
+    Accepts the `/commits/:sha/statuses` history (a list) or a `/status`
+    response (a dict with `.statuses`); collapsing the latter is a no-op since
+    it holds one row per context already.
+    """
+    rows = status_json.get("statuses", status_json) if isinstance(status_json, dict) else status_json
+    if rows and all(isinstance(r.get("id"), int) for r in rows):
+        rows = sorted(rows, key=lambda r: r["id"], reverse=True)
+    out: dict = {}
+    for r in rows:
+        ctx = r.get("context", "")
+        keep = out.get(ctx)
+        if keep is None or (keep.get("state") not in TERMINAL_STATES
+                            and r.get("state") in TERMINAL_STATES):
+            out[ctx] = r
+    return list(out.values())
+
+
 def load_spaces(status_json) -> dict:
     """space -> {live_base, site_prefix, editor_url}. Only successful builds."""
-    statuses = status_json.get("statuses", status_json) if isinstance(status_json, dict) else status_json
+    statuses = collapse_statuses(status_json)
     spaces: dict = {}
     for s in statuses:
         if s.get("state") != "success":
@@ -137,7 +182,7 @@ def gitbook_spaces(status_json) -> set:
     tell 'this space's preview is still building' apart from 'not a page'. Failed
     builds are excluded — a page there shouldn't promise an update that never
     lands (it falls through to the non-page footnote instead)."""
-    statuses = status_json.get("statuses", status_json) if isinstance(status_json, dict) else status_json
+    statuses = collapse_statuses(status_json)
     out = set()
     for s in statuses:
         if s.get("state") not in ("success", "pending"):
@@ -146,6 +191,36 @@ def gitbook_spaces(status_json) -> set:
         if m:
             out.add(m.group(1))
     return out
+
+
+def linkable_spaces(spaces: dict) -> set:
+    """Spaces we can actually deep-link into, i.e. whose *live* context built.
+
+    GitBook posts two contexts per space and load_spaces records whichever
+    succeeded, so an editor-only success yields a record with no `live_base`.
+    deep_link() indexes that key directly, so treating such a space as built
+    crashes the whole run with KeyError instead of reporting the failure."""
+    return {name for name, info in spaces.items() if "live_base" in info}
+
+
+def failed_spaces(status_json, spaces, pending) -> set:
+    """Spaces whose GitBook build ended badly (failure/error) and that aren't
+    covered by a successful or in-progress build of another of their contexts.
+
+    Pass `linkable_spaces(spaces)` rather than `spaces`: a space whose live
+    build failed is a failed space even though its editor context succeeded.
+
+    Without this a page in a failed space falls through render()'s last `else`
+    and is reported as "not in the nav" — telling the author to fix a SUMMARY
+    entry that was never broken, and hiding the real cause."""
+    out = set()
+    for s in collapse_statuses(status_json):
+        if s.get("state") not in ("failure", "error"):
+            continue
+        m = LIVE_RE.match(s.get("context", "")) or EDIT_RE.match(s.get("context", ""))
+        if m:
+            out.add(m.group(1))
+    return out - set(spaces) - set(pending)
 
 
 # --------------------------------------------------------------------------- #
@@ -258,9 +333,11 @@ def page_line(space_info: dict, filename: str) -> str:
     return f"- **[{safe_title}]({url})** — `{shown}`{edit_md}"
 
 
-def render(changed, spaces, index, pending_spaces=frozenset()) -> str:
+def render(changed, spaces, index, pending_spaces=frozenset(),
+           failed_build_spaces=frozenset()) -> str:
     direct: dict = {}          # space -> [file]  (pages with a real preview)
     pending: dict = {}         # space -> [file]  (page whose space is still building)
+    failed: dict = {}          # space -> [file]  (page whose space's build failed)
     reusable_blocks = []       # (name, [affected page paths], total)
     non_pages = []             # files that aren't pages
     unresolved_reusable = []   # include files we couldn't map
@@ -295,17 +372,20 @@ def render(changed, spaces, index, pending_spaces=frozenset()) -> str:
             # A real content .md that isn't in the space's SUMMARY.md — the one
             # actionable case: GitBook won't publish it until it's added to nav.
             non_pages.append(filename)
-        elif space in spaces:
+        elif space in spaces and "live_base" in spaces[space]:
             direct.setdefault(space, []).append(filename)
         elif space in pending_spaces:
             # It IS a page; its space's GitBook build just hasn't finished yet.
             pending.setdefault(space, []).append(filename)
+        elif space in failed_build_spaces:
+            # It IS a page and it IS in the nav; GitBook's build is what broke.
+            failed.setdefault(space, []).append(filename)
         else:
             non_pages.append(filename)
 
     out = [MARKER, "## 🔗 GitBook page previews", ""]
 
-    if not direct and not reusable_blocks and not pending:
+    if not direct and not reusable_blocks and not pending and not failed:
         out.append("No page previews to show for this PR's changes yet.")
         _append_extras(out, spaces, non_pages, unresolved_reusable)
         return "\n".join(out).rstrip() + "\n"
@@ -333,9 +413,16 @@ def render(changed, spaces, index, pending_spaces=frozenset()) -> str:
     if reusable_blocks:
         diff = spaces.get("reusable-content", {}).get("editor_url")
         out.append("### ♻️ Reusable content")
-        out.append("GitBook previews the reusable block itself, not the pages that "
-                   "embed it. Links below are the block diff plus the **live** pages "
-                   "it renders on.")
+        if "reusable-content" in failed_build_spaces:
+            # No diff to link: say so rather than printing the usual blurb about
+            # a block diff that this comment can't actually point at.
+            out.append("⚠️ **GitBook couldn't build the `reusable-content` preview**, "
+                       "so there's no block diff to link. The **live** pages each "
+                       "block renders on are listed below.")
+        else:
+            out.append("GitBook previews the reusable block itself, not the pages that "
+                       "embed it. Links below are the block diff plus the **live** pages "
+                       "it renders on.")
         out.append("")
         for name, pages, total in reusable_blocks:
             diff_md = f" · [view diff]({diff})" if diff else ""
@@ -359,6 +446,17 @@ def render(changed, spaces, index, pending_spaces=frozenset()) -> str:
         out.append(f"> ⏳ GitBook is still building the preview for {spaces_list} — "
                    f"{total_pending} changed page(s). This comment updates when the "
                    f"build finishes.")
+        out.append("")
+
+    # Pages whose space FAILED to build. Stated plainly so the note replaces any
+    # earlier deep links or "still building" promise for that space, instead of
+    # leaving a comment that points at a revision GitBook has since failed on.
+    if failed:
+        total_failed = sum(len(v) for v in failed.values())
+        spaces_list = ", ".join(f"`{s}`" for s in sorted(failed))
+        out.append(f"> ⚠️ **GitBook couldn't build the preview for {spaces_list}**. "
+                   f"{total_failed} changed page(s) have no preview to link. Check the "
+                   f"failed GitBook check on this PR; pushing a fix rebuilds it.")
         out.append("")
 
     _append_extras(out, spaces, non_pages, unresolved_reusable)
@@ -391,12 +489,16 @@ def main() -> int:
     status_json = json.loads(Path(sys.argv[2]).read_text(encoding="utf-8"))
     spaces = load_spaces(status_json)
     pending_spaces = gitbook_spaces(status_json) - set(spaces)
-    if not spaces and not pending_spaces:
-        # No GitBook build in progress or done yet: emit nothing so the
+    failed = failed_spaces(status_json, linkable_spaces(spaces), pending_spaces)
+    if not spaces and not pending_spaces and not failed:
+        # No GitBook build in progress, done, or failed: emit nothing so the
         # workflow skips (nothing to preview or promise).
         return 0
     index = load_reusable_index()
-    sys.stdout.write(render(changed, spaces, index, pending_spaces))
+    # `failed` must reach render: without it an all-failed PR produces no body,
+    # the workflow's has_body check skips the upsert, and a stale comment from
+    # an earlier successful build survives untouched.
+    sys.stdout.write(render(changed, spaces, index, pending_spaces, failed))
     return 0
 
 

@@ -34,7 +34,7 @@ You can customize workflow behavior for individual workflows using workflow sett
 To open the settings:
 
 1. Open your workflow.
-2. Select the **three dots icon** <img src="../.gitbook/assets/three-dots-horizontal (1).png" alt="three dots icon" data-size="line"> in the upper-right corner.
+2. Select the **Workflow menu** <img src="../.gitbook/assets/three-dots-horizontal (1).png" alt="Workflow menu icon" data-size="line"> in the upper-right corner.
 3. Select **Settings**. n8n opens the **Workflow settings** modal.
 
 ## Available settings <a href="#available-settings" id="available-settings"></a>
@@ -115,3 +115,14 @@ Setting this lets n8n calculate the amount of time saved for [insights](https://
 Add custom key-value attributes to the workflow's OpenTelemetry span. Refer to [Custom span attributes](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry#custom-span-attributes) for details.
 
 [^1]: The canvas is the main interface for building workflows in n8n's editor UI. You use the canvas to add and connect nodes to compose workflows.
+
+## Related resources
+
+* [Manage workflows](./)
+* [Tag workflows](tag-workflows.md)
+* [Favorite items](favorite-items.md)
+* [View change history](view-change-history.md)
+* [Review workflows](workflow-reviews.md)
+* [Export and import](export-and-import.md)
+* [n8n packages](n8n-packages/README.md)
+* [Share with others](share-with-others.md)

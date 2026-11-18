@@ -6,24 +6,20 @@ layout:
 ---
 # Create nodes <a href="#create-nodes" id="create-nodes"></a>
 
-{% content-ref url="overview.md" %}
-[overview.md](overview.md)
-{% endcontent-ref %}
+Plan, build, test, and deploy a custom n8n node.
 
-{% content-ref url="plan-your-node/README.md" %}
-[plan-your-node/README.md](plan-your-node/README.md)
-{% endcontent-ref %}
+## In this section
 
-{% content-ref url="build-your-node/README.md" %}
-[build-your-node/README.md](build-your-node/README.md)
-{% endcontent-ref %}
+* [Overview](overview.md): what node creation involves, and how to get started.
+* [Plan your node](plan-your-node/README.md): choose a node type, building style, and file structure.
+* [Build your node](build-your-node/README.md): set up your environment and write the node.
+* [Test your node](test-your-node/README.md): run your node locally, lint it, and troubleshoot issues.
+* [Deploy your node](deploy-your-node/README.md): submit a community node, or install a private node.
 
-{% content-ref url="test-your-node/README.md" %}
-[test-your-node/README.md](test-your-node/README.md)
-{% endcontent-ref %}
+## Related resources
 
-{% content-ref url="deploy-your-node/README.md" %}
-[deploy-your-node/README.md](deploy-your-node/README.md)
-{% endcontent-ref %}
-
-See [Connect](../README.md) for other ways to connect to n8n.
+* [Connect](../)
+* [n8n API](../n8n-api/README.md)
+* [n8n CLI](../n8n-cli.md)
+* [Connect to n8n MCP server](../connect-to-n8n-mcp-server.md)
+* [Connect to the n8n docs MCP server](../connect-to-n8n-docs-mcp-server.md)

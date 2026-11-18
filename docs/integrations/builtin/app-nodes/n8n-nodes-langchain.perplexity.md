@@ -26,7 +26,7 @@ On this page, you'll find a list of operations the Perplexity node supports, and
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/perplexity.md).
+Refer to the [Perplexity credentials documentation](../credentials/perplexity.md) for authentication information for this node.
 {% endhint %}
 
 

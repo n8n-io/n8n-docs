@@ -29,7 +29,7 @@ layout:
 Ask n8n AI helps you build, debug, and optimize your workflows. From answering questions about n8n to providing help with coding and expressions[^1], Ask n8n AI supports you as you navigate n8n's capabilities.
 
 {% hint style="info" %}
-Ask n8n AI is n8n's built-in help assistant and is no longer actively developed. To build, edit, and run workflows from a chat, see [Use AI Assistant](ai-assistant.md).
+Ask n8n AI is n8n's built-in help assistant and is no longer actively developed. To build, edit, and run workflows from a chat, see [Use n8n Assistant](n8n-assistant.md).
 {% endhint %}
 
 ## Current capabilities <a href="#current-capabilities" id="current-capabilities"></a>
@@ -62,19 +62,22 @@ Ask n8n AI offers a range of tools to support you:
 AI usage settings are available from n8n 2.7.0.
 {% endhint %}
 
-You can manage your AI usage settings by navigating to **Settings** > **AI Usage** in your n8n instance. Here, you can control what data is shared with Ask n8n AI.
+AI usage settings control what data n8n sends to Ask n8n AI and to [n8n Assistant](n8n-assistant.md). Where you find them depends on your instance:
 
-These settings are only available to the instance owners and administrators, and will apply to all users on the instance.
+* If your instance has the **Assistant** settings page, navigate to **Settings** > **Assistant** and go to the **Data sent to the model** section.
+* Otherwise, navigate to **Settings** > **AI usage**.
 
-![AI Usage settings page with the Send actual data values checkbox](../.gitbook/assets/ai_usage_settings.png)
+These settings are only available to the instance owners and administrators, and apply to all users on the instance.
 
-Choose whether to share actual workflow data (like node names, parameters, and structure) with Ask n8n AI. Disabling this option will limit the assistant's ability to provide context-aware help based on your workflows.
+![The Data sent to the model section on the Assistant settings page, with the Send field names and types and Send actual data values switches](../.gitbook/assets/ai_usage_settings.png)
 
-Since access to workflow data is essential for the AI Workflow builder to function, **disabling this option will also disable the AI Workflow builder feature**.
+n8n always sends field names and types (the schema) of your data. **Send actual data values** controls whether n8n also sends real values from your workflows and executions (like node parameters). While it's off, Ask n8n AI can't give context-aware help based on your workflows.
+
+Since access to workflow data is essential for the AI Workflow builder and n8n Assistant to function, **keeping this option off also disables the AI Workflow builder** and puts n8n Assistant in a limited mode, where it can't create or edit workflows.
 
 ### Disable sending data <a href="#disable-sending-data" id="disable-sending-data"></a>
 
-To stop sending actual data values to Ask n8n AI, turn off the **Send actual data values** checkbox on the **AI Usage** settings page.
+The **Send actual data values** option is deprecated. Once it's on, you can't turn it off in the settings. To keep it off on a self-hosted instance, set the `N8N_AI_ALLOW_SENDING_PARAMETER_VALUES` environment variable to `false` and restart n8n. The variable is deprecated too and will be removed in n8n 4.
 
 ## FAQs <a href="#faqs" id="faqs"></a>
 
@@ -84,7 +87,7 @@ Ask n8n AI has access to all elements displayed on your n8n screen, excluding ac
 
 ### Who can use the Assistant? <a href="#who-can-use-the-assistant" id="who-can-use-the-assistant"></a>
 
-Any user on a Cloud plan can use the assistant.
+The assistant is available on all n8n Cloud plans. It isn't available on self-hosted.
 
 ### How does the Assistant work? <a href="#how-does-the-assistant-work" id="how-does-the-assistant-work"></a>
 
@@ -93,3 +96,11 @@ The underlying logic of the assistant is build with the advanced AI capabilities
 [^1]: In n8n, expressions allow you to populate node parameters dynamically by executing JavaScript code. Instead of providing a static value, you can use the n8n expression syntax to define the value using data from previous nodes, other workflows, or your n8n environment.
 [^2]: AI agents are artificial intelligence systems capable of responding to requests, making decisions, and performing real-world tasks for users. They use large language models (LLMs) to interpret user input and make decisions about how to best process requests using the information and resources they have available.
 [^3]: In an AI context, memory allows AI tools to persist message context across interactions. This allows you to have a continuing conversations with AI agents, for example, without submitting ongoing context with each message. In n8n, AI agent nodes can use memory, but AI chains can't.
+
+## Related resources
+
+* [Ways of building workflows](./)
+* [Use n8n Assistant](n8n-assistant.md)
+* [Use n8n MCP server](connect-to-n8n-mcp-server.md)
+* [Use templates](use-templates.md)
+* [Use Chat Hub](chat-hub.md)

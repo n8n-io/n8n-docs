@@ -36,7 +36,7 @@ On this page, you'll find a list of operations the Zep node supports, and links 
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/zep.md).
+Refer to the [Zep credentials documentation](../../credentials/zep.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
@@ -51,8 +51,6 @@ You can find authentication information for this node [here](../../credentials/z
 [Browse Zep node documentation integration templates](https://n8n.io/integrations/zep) or [search all templates](https://n8n.io/workflows/)
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
-
-Refer to [LangChain's Zep documentation](https://js.langchain.com/docs/integrations/memory/zep_memory) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

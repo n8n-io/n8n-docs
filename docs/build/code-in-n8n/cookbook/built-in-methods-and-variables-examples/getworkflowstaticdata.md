@@ -92,3 +92,7 @@ To store a marker such as the last processed item in a data table:
 Unlike static data, you can't read data table values directly in an expression or in the Code node. Read the row with a Data Table node first, then reference that node's output.
 
 [^1]: A trigger node is a special node responsible for executing the workflow in response to certain conditions. All production workflows need at least one trigger to determine when the workflow should run.
+
+## Related resources
+
+* [Built-in methods and variables examples](./)

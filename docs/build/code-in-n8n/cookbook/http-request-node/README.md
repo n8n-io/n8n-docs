@@ -15,10 +15,13 @@ The HTTP Request node is one of the most versatile nodes in n8n. Use this node t
 
 Refer to [HTTP Request](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest) for information on node settings.
 
-
+See [Pagination](pagination.md) for examples of paging through results with this node.
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
+* [Cookbook](../)
+* [Built-in methods and variables examples](../built-in-methods-and-variables-examples/README.md)
+* [Code node](../code-node/README.md)
 * [HTTP Request](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.httprequest)
 * [Built-in methods and variables reference](../../use-built-in-shortcuts.md)
 * [Expressions](../../../work-with-data/expressions-versus-data-nodes.md)

@@ -97,3 +97,12 @@ You can use expressions[^2] to set credentials dynamically as your workflow runs
 
 [^1]: n8n projects allow you to separate workflows, variables, and credentials into separate groups for easier management. Projects make it easier for teams to collaborate by sharing and compartmentalizing related resources.
 [^2]: In n8n, expressions allow you to populate node parameters dynamically by executing JavaScript code. Instead of providing a static value, you can use the n8n expression syntax to define the value using data from previous nodes, other workflows, or your n8n environment.
+
+## Related resources
+
+* [Understand workflows](./)
+* [Create and run workflows](create-and-run-workflows.md)
+* [Save and publish workflows](save-and-publish-workflows.md)
+* [Use Gateway credits](use-gateway-credits.md)
+* [Workflow components](workflow-components/README.md)
+* [Understand executions](understand-executions/README.md)

@@ -7,11 +7,12 @@ This script covers the gap by resolving each relative link as a local file.
 
 GitBook rules enforced (see docs/contribute + the internal-linking guide):
   1. An internal link must end in `.md` (a folder page ends in `/README.md`).
-     A trailing slash or a bare path does NOT resolve — GitBook falls back to
-     the raw GitHub source URL and the link 404s on the live site. The sole
-     documented exception is a bare `./`, which GitBook resolves natively to
-     the current folder's own README.md (see the style guide's "Link to the
-     current page's parent page" section).
+     A bare path with no trailing slash does NOT resolve — GitBook falls back
+     to the raw GitHub source URL and the link 404s on the live site. The
+     documented exception is a bare directory reference (a relative path
+     ending in `/`, no filename, e.g. `./`, `../`, `../../`, `sibling/`), which
+     GitBook resolves natively to that folder's own README.md at any relative
+     depth (see the style guide's "Parent pages" note).
   2. A relative `.md` link must point at a file that exists.
   3. Relative `../` links can't cross GitBook spaces (top-level folders under
      docs/). Cross-space links must use an app.gitbook.com URL, so a relative
@@ -48,6 +49,7 @@ the changed files in a PR) to check only those. Exits 1 if any error is found.
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import re
 import sys
@@ -62,10 +64,12 @@ EXCLUDE_FILES = {
     "docs/contribute/contribution-guide-for-n8n-docs/style-guide-for-n8n-docs.md",
 }
 
-# The style guide holds the canonical `space folder -> space ID` table used for
-# cross-space (app.gitbook.com/s/<id>/...) links. Parsed at runtime so there's a
-# single source of truth the team already maintains.
-SPACE_ID_TABLE_FILE = REPO_ROOT / "docs" / "contribute" / "contribution-guide-for-n8n-docs" / "style-guide-for-n8n-docs.md"
+# Space IDs for cross-space (app.gitbook.com/s/<id>/...) links come from this
+# generated file, built from each space's GitBook Git Sync config by the
+# DocFather "Space Index" workflow, so it cannot drift the way a hand-kept
+# table can. The style guide and the n8n-docs-author skill both link to it
+# instead of keeping their own copy.
+SPACE_ID_TABLE_FILE = REPO_ROOT / "SPACE_INDEX.md"
 # Row form: | `space-folder` | `SpaceId` |
 SPACE_ID_ROW_RE = re.compile(r"^\|\s*`([a-z0-9-]+)`\s*\|\s*`([A-Za-z0-9]+)`\s*\|")
 APP_GITBOOK_RE = re.compile(
@@ -74,7 +78,7 @@ APP_GITBOOK_RE = re.compile(
 
 
 def load_space_ids() -> dict[str, str]:
-    """Parse the style-guide table into {space_id: folder}. Empty on failure."""
+    """Parse SPACE_INDEX.md into {space_id: folder}. Empty on failure."""
     id_to_folder: dict[str, str] = {}
     try:
         for line in SPACE_ID_TABLE_FILE.read_text(encoding="utf-8").split("\n"):
@@ -91,8 +95,12 @@ SPACE_ID_TO_FOLDER = load_space_ids()
 # Run-level stats for coverage transparency (not errors).
 _STATS = {"unknown_space_ids": set(), "unknown_space_links": 0, "generated_links": 0}
 
-# Hidden/utility spaces: include mechanisms, not real link targets.
-HIDDEN_SPACES = {"_workflows", "reusable-content"}
+# Utility spaces that hold no rendered content of their own.
+# `reusable-content` is deliberately NOT listed here. Its files are the git-sync
+# form of GitBook reusable blocks, so the links inside them render on live pages.
+# Skipping the space hid those links from every checker we run; one cross-space
+# link had been broken there unseen until DOC-2396.
+HIDDEN_SPACES = {"_workflows"}
 
 # Sub-trees inside a space whose pages GitBook generates (e.g. the public API
 # reference, rendered from an OpenAPI spec) rather than backing them with a `.md`
@@ -121,8 +129,9 @@ ASSET_EXTS = {
 # Markdown inline links [text](target) and HTML href/src attributes.
 # The target allows one level of balanced parens so filenames like
 # `(node-name).all.md` are captured whole instead of truncated at the inner `)`.
-MD_LINK_RE = re.compile(r"\[[^\]]*\]\(\s*(<[^>]+>|(?:[^()\s]+|\([^()]*\))+)")
+MD_LINK_RE = re.compile(r"\[[^\]]*\]\(\s*(<[^>]+>|(?:\\.|[^()\s\\]+|\([^()]*\))+)")
 HTML_ATTR_RE = re.compile(r"""(?:href|src)\s*=\s*["']([^"']+)["']""", re.IGNORECASE)
+MD_ESCAPE_RE = re.compile(r"\\([!-/:-@\[-`{-~])")
 # Reference definitions: [id]: target. The label's first char must not be `^`,
 # so Markdown footnote definitions ([^1]: some text) aren't treated as links.
 REF_DEF_RE = re.compile(r"^\s{0,3}\[(?:[^^\]][^\]]*)\]:\s*(\S+)")
@@ -204,18 +213,25 @@ def space_of(rel_path: str) -> str | None:
 
 
 def iter_targets(text: str):
-    """Yield (line_number, raw_target) for every link in the (code-stripped) text."""
+    """Yield (line_number, target) for every link in the (code-stripped) text.
+
+    Markdown link targets come back with backslash escapes removed, as GitBook
+    resolves them: `\\(node-name\\).all.md` -> `(node-name).all.md`. HTML href/src
+    values are returned as written.
+    """
     for i, line in enumerate(text.split("\n"), start=1):
         for m in MD_LINK_RE.finditer(line):
             target = m.group(1).strip()
             if target.startswith("<") and target.endswith(">"):
                 target = target[1:-1].strip()
-            yield i, target
+            # CommonMark allows backslash escapes in link targets. GitBook writes
+            # SUMMARY entries such as `\(node-name\).all.md`.
+            yield i, MD_ESCAPE_RE.sub(r"\1", target)
         for m in HTML_ATTR_RE.finditer(line):
             yield i, m.group(1).strip()
         m = REF_DEF_RE.match(line)
         if m:
-            yield i, m.group(1).strip()
+            yield i, MD_ESCAPE_RE.sub(r"\1", m.group(1).strip())
 
 
 def classify_cross_space(target: str, src_rel: str):
@@ -225,8 +241,7 @@ def classify_cross_space(target: str, src_rel: str):
     reject a URL pointing back into that file's own space (rule 4).
 
     Returns (category, message) if broken, "unknown" if the space ID isn't in
-    the table (can't verify — e.g. the reusable-content utility space), or None
-    if it resolves. Reconstructs docs/<folder>/<page-path> and accepts either a
+    SPACE_INDEX.md (can't verify), or None if it resolves. Reconstructs docs/<folder>/<page-path> and accepts either a
     matching `.md` file or a directory (folder page, whatever its index file).
     """
     m = APP_GITBOOK_RE.match(target)
@@ -235,8 +250,8 @@ def classify_cross_space(target: str, src_rel: str):
     space_id, page_path = m.group(1), (m.group(2) or "")
     folder = SPACE_ID_TO_FOLDER.get(space_id)
     if folder is None:
-        # Space ID not in the table (e.g. the reusable-content utility space);
-        # we can't map it to a folder, so we don't verify it. Track for transparency.
+        # Space ID not in SPACE_INDEX.md; we can't map it to a folder, so we
+        # don't verify it. Track for transparency.
         _STATS["unknown_space_ids"].add(space_id)
         _STATS["unknown_space_links"] += 1
         return "unknown"
@@ -390,6 +405,21 @@ def anchor_slug(heading: str) -> str:
     return re.sub(r"\s+", "-", h.strip())
 
 
+# GitBook serves a heading id cut to 100 characters, even when the markdown
+# carries a longer explicit `id=`. Seen live on changelog/v20-breaking-changes
+# (the `...-waiting-for-webhook-for` heading, CAP-426).
+GITBOOK_ID_MAX = 100
+
+
+def gitbook_id_forms(ids: set) -> set:
+    """Add the 100-character form of every id longer than GitBook serves.
+
+    Only adds ids, so it can silence a false positive but never create a
+    finding. The full id is kept too, because the cut was confirmed on one page.
+    """
+    return ids | {i[:GITBOOK_ID_MAX] for i in ids if len(i) > GITBOOK_ID_MAX}
+
+
 _HEADING_IDS: dict = {}
 
 
@@ -421,6 +451,10 @@ def heading_ids(path: Path) -> tuple:
     headings = strip_code(raw, inline=False)
     explicit = set(EXPLICIT_ID_RE.findall(markup))
     slugs = set()
+    # GitBook makes repeated heading ids unique by adding `-1`, `-2`, ... in page
+    # order (live on get-started/enterprise-hub: the stepper's "Publish first
+    # workflow" is `#publish-first-workflow`, the section below it is `-1`).
+    seen: dict = {}
     # Walk both views in step: judge id-presence on the markup line (so an
     # `<a id="...">` shown inside backticks doesn't count as a real anchor) while
     # slugging the heading line (which keeps its code spans).
@@ -429,7 +463,18 @@ def heading_ids(path: Path) -> tuple:
         if m and not re.search(r'<a\b[^>]*\bid="', line_markup):
             s = anchor_slug(m.group(1))
             if s:
-                slugs.add(s)
+                n = seen.get(s, 0)
+                if n == 0:
+                    slugs.add(s)
+                else:
+                    # Unverified for long ids whether GitBook cuts before or
+                    # after adding the suffix, so accept both. The cut-after
+                    # form, (s-n)[:100], comes from gitbook_id_forms below.
+                    slugs.add(f"{s}-{n}")
+                    slugs.add(f"{s[:GITBOOK_ID_MAX]}-{n}")
+                seen[s] = n + 1
+    explicit = gitbook_id_forms(explicit)
+    slugs = gitbook_id_forms(slugs)
     resolved = True
     blocks = reusable_blocks()
     for bid in INCLUDE_URL_RE.findall(markup):
@@ -525,22 +570,17 @@ def classify(md_file: Path, src_rel: str, target: str):
             return ("missing-asset", f"asset not found: {target} -> {rel}")
         return None
 
-    # Rule 1 exception: `./` is the documented way to link to the current
-    # folder's own parent page (its README.md) -- see the style guide's
-    # "Link to the current page's parent page" section. GitBook resolves this
-    # bare directory-self-reference natively, unlike other trailing-slash
-    # folder links, so it doesn't 404 the way Rule 1 assumes.
-    if path_part == "./":
-        resolved = (src_dir / "README.md").resolve()
-        if not resolved.exists():
-            rel = os.path.relpath(resolved, REPO_ROOT)
-            return ("missing-target", f"target not found: {target} -> {rel}")
-        if anchor is not None:
-            return classify_anchor(resolved, anchor, target)
-        return None
-
+    # Rule 1 exception: a bare directory reference (a relative path ending in
+    # `/`, no filename) is the documented way to link to that folder's own
+    # landing page -- see the style guide's "Parent pages" note. GitBook
+    # resolves this natively to the folder's README.md
+    # at any relative depth (`./`, `../`, `../../`, `sibling/`, ...), unlike a
+    # bare path with no trailing slash, so it doesn't 404 the way Rule 1
+    # assumes. Route it through the same file it names: `<path>README.md`.
+    if path_part.endswith("/"):
+        path_part += "README.md"
     # Rule 1: internal doc links must end in .md.
-    if not path_part.endswith(".md"):
+    elif not path_part.endswith(".md"):
         return ("no-md-extension", f"internal link must end in .md: {target}")
 
     # Rule 2: target file must exist.
@@ -585,6 +625,13 @@ def main() -> int:
         action="store_true",
         help="Fail on broken anchors instead of warning (see rule 5).",
     )
+    ap.add_argument(
+        "--json",
+        metavar="PATH",
+        help="Also write the findings as JSON, for the weekly sweep reporter "
+             "(internal_links_report.py). Same split as lychee: this script "
+             "finds, the reporter delivers.",
+    )
     args = ap.parse_args()
 
     if args.files:
@@ -601,6 +648,8 @@ def main() -> int:
     errors: list[str] = []
     warnings: list[str] = []
     counts: dict[str, int] = {}
+    records: list[dict] = []
+    scanned = 0
 
     for md_file in files:
         if not md_file.exists() or md_file.suffix != ".md":
@@ -614,6 +663,7 @@ def main() -> int:
         if space_of(rel) in HIDDEN_SPACES:
             continue
 
+        scanned += 1
         raw = md_file.read_text(encoding="utf-8", errors="replace")
         text = strip_code(blank_gitbook_native(raw))
         for line, target in iter_targets(text):
@@ -623,10 +673,25 @@ def main() -> int:
             category, message = result
             counts[category] = counts.get(category, 0) + 1
             entry = f"{rel}:{line}  [{category}]  {message}"
-            if category in warn_categories:
+            severity = "warning" if category in warn_categories else "error"
+            if severity == "warning":
                 warnings.append(entry)
             else:
                 errors.append(entry)
+            records.append({"page": rel, "line": line, "category": category,
+                            "message": message, "target": target,
+                            "severity": severity})
+
+    if args.json:
+        Path(args.json).parent.mkdir(parents=True, exist_ok=True)
+        Path(args.json).write_text(json.dumps({
+            "files_scanned": scanned,
+            "counts": counts,
+            "errors": len(errors),
+            "warnings": len(warnings),
+            "strict_anchors": bool(args.strict_anchors),
+            "findings": records,
+        }, indent=2), encoding="utf-8")
 
     if warnings:
         print(f"⚠️  {len(warnings)} warning(s):\n")
@@ -639,8 +704,7 @@ def main() -> int:
         n_ids = len(_STATS["unknown_space_ids"])
         print(
             f"ℹ️  Skipped {n_links} cross-space link(s) to {n_ids} space ID(s) not in "
-            f"the style-guide table (e.g. the reusable-content utility space); "
-            f"can't verify these.\n"
+            f"the generated SPACE_INDEX.md; can't verify these.\n"
         )
 
     if _STATS["generated_links"]:
@@ -661,7 +725,7 @@ def main() -> int:
         )
         return 1
 
-    print(f"✅ No broken internal links found ({len(files)} file(s) scanned).")
+    print(f"✅ No broken internal links found ({scanned} file(s) scanned).")
     if warnings:
         print(f"   ({len(warnings)} warning(s) above — not failing the build.)")
     return 0

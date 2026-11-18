@@ -53,6 +53,8 @@ An **edition** is the variant of the self-hosted software you run: Community, Re
 Exact features per plan and edition can change. For the current breakdown, see the [pricing page](https://n8n.io/pricing/). This page explains what the plans and editions are and the main differences between them, not the full feature list.
 {% endhint %}
 
+For how plan and platform limits combine with feature maturity (Preview, GA, deprecated, and removed) and n8n versioning, see [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability).
+
 ## Community edition <a href="#community-edition" id="community-edition"></a>
 
 The Community edition includes almost the complete feature set of n8n. It doesn't include these features:
@@ -83,15 +85,15 @@ To register a new Community edition instance, select the option during your init
 To register an existing Community edition instance:
 
 1. Select the **three dots icon** <img src="../.gitbook/assets/three-dots-horizontal (1).png" alt="three dots icon" data-size="line"> in the lower-left corner.
-2. Select **Settings** and then **Usage and plan**.
+2. Select **Settings** and then **Plan & usage**.
 3. Select **Unlock** to enter your email and then select **Send me a free license key**.
 4. Check your email for the account you entered.
 
-Once you have a license key, activate it by selecting the button in the license email, or by going to **Options > Settings > Usage and plan** and selecting **Enter activation key**.
+Once you have a license key, activate it by selecting the button in the license email, or by going to **Options > Settings > Plan & usage** and selecting **Enter activation key**.
 
 ## Business and Enterprise plans <a href="#business-and-enterprise-editions" id="business-and-enterprise-editions"></a>
 
-The Business and Enterprise plans unlock the paid features that the Community edition doesn't include, such as SSO, environments, external secrets, and log streaming. The Enterprise plan adds the most advanced features for security, scaling, and governance.
+The Business and Enterprise plans unlock the paid features that the Community edition doesn't include, such as SSO, environments, external secrets, and log streaming. The Enterprise plan adds the most advanced features for security, scaling, and governance. For guidance on rolling out Enterprise across your organization, see the [Enterprise Hub](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/enterprise-hub).
 
 When you subscribe to a paid plan, you get a license key that unlocks the features for that plan. Add the key to your instance to activate it. For how to get and activate a key, see [Manage your license](configure-n8n/manage-your-license.md). For the features included in each plan, see the [pricing page](https://n8n.io/pricing/).
 
@@ -102,3 +104,13 @@ When you subscribe to a paid plan, you get a license key that unlocks the featur
 - Subscribe to a **Business** or **Enterprise** plan when you need paid features like SSO, environments, projects, or external secrets. If you'd rather not manage infrastructure at all, consider [n8n Cloud](../use-n8n-cloud/start-your-free-trial.md) instead.
 
 [^1]: Data pinning allows you to temporarily freeze the output data of a node during workflow development. This allows you to develop workflows with predictable data without making repeated requests to external services. Production workflows ignore pinned data and request new data on each execution.
+
+## Related resources
+
+* [Host n8n](./)
+* [Install options](install-options/README.md)
+* [Configure n8n](configure-n8n/README.md)
+* [Keep n8n running](keep-n8n-running/README.md)
+* [Understand the architecture](understand-the-architecture/README.md)
+* [Deploy as an OEM integration](deploy-as-an-oem-integration/README.md)
+* [Deploy with the AI starter kit](deploy-with-the-ai-starter-kit.md)

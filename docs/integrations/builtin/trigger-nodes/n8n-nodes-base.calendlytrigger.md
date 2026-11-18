@@ -25,7 +25,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/calendly.md).
+Refer to the [Calendly credentials documentation](../credentials/calendly.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}

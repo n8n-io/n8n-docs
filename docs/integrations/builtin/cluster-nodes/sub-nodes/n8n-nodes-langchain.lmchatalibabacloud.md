@@ -45,7 +45,7 @@ The Qwen Cloud Chat Model node sends chat prompts to conversational models avail
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/alibaba.md).
+Refer to the [Qwen Cloud credentials documentation](../../credentials/alibaba.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}

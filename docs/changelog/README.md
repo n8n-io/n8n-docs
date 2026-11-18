@@ -20,6 +20,8 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # Changelog
@@ -35,10 +37,114 @@ Use this page alongside n8n's other release resources depending on what you need
 
 Old-style release notes pages for [2.x](release-notes-2.x.md), [1.x](release-notes-1.x.md), and [0.x](release-notes-0.x.md) remain archived. Everything in the 2.x archive is covered by this changelog and the Release notes.
 
-For guidance on major version upgrades, see [v3.0 breaking changes](v30-breaking-changes.md), [v2.0 breaking changes](v20-breaking-changes.md), [v2.0 migration tool](v20-migration-tool.md), and [v1.0 migration guide](v10-migration-guide.md).
+For guidance on major version upgrades, see [v3.0 breaking changes](v30-breaking-changes.md), [v3.0 migration tool](v30-migration-tool.md), [v2.0 breaking changes](v20-breaking-changes.md), [v2.0 migration tool](v20-migration-tool.md), and [v1.0 migration guide](v10-migration-guide.md).
 {% endhint %}
 
+For what Preview, GA, deprecated, and removed mean, what Enterprise readiness means, and how n8n's version numbers work, refer to [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability).
+
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
+
+## Use your personal credentials in team projects
+
+**Released:** 2026-10-27 in n8n 2.46.0
+
+You can now select your own personal credentials in any team project you're a member of, without sharing them first. Every workflow run acts as a person, and can only use the credentials that person is allowed to use. Teammates who can't use your credential can see that a workflow uses it. They can't run or publish the workflow with it, or see the execution data it produced. The credential selector groups credentials into **Available to you** and **Available in** _project name_.
+
+After you upgrade, you may notice:
+
+* **Disabled Execute and Publish buttons:** if a workflow uses someone else's credential that you can't use, n8n names the credential and its owner. You can still edit the workflow and switch to a credential you can use.
+* **Publish checks:** you can't publish a workflow with a credential you can't use. The check tells you which credential blocks it.
+* **Hidden execution data:** n8n hides the data of executions that used a credential you can't use, including data returned from sub-workflows.
+* **A clearer Sharing tab:** it lists people and projects together, shows projects that use the credential without a share as **Can view**, and lets you share with them in one step.
+
+Existing published workflows keep running. Learn more in [Use personal credentials in projects](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/use-personal-credentials-in-projects).
+
+## Durable scheduler on by default for Schedule Trigger nodes
+
+**Released:** 2026-10-20 in n8n 2.45
+
+Schedule Trigger nodes now run on the durable scheduler by default, on every instance, with no environment variable to set. The scheduler stores each run in the database before it's due, so a restart no longer drops pending runs. A run missed during downtime still fires within its grace period. Past that, the trigger's [misfire policy](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/durable-scheduler#misfire-policy) decides what happens. In a multi-main setup, one main claims each run, instead of a single leader firing them all.
+
+Existing Schedule Trigger nodes switch over on upgrade, without republishing. One timing detail changes: "every N seconds" and "every N minutes" schedules now run a steady N apart, counted from when you published the workflow. They no longer align to clock boundaries. Hourly, daily, weekly, monthly, and custom cron schedules fire as before in everyday use. They differ only in rare leap-year, 53rd-week, and daylight-saving edge cases, where the durable scheduler fixes an off-by-one-period error.
+
+You can keep the previous behavior while you adapt:
+
+* Set `N8N_SCHEDULER_TRIGGER_NODE_MODE=legacy` to keep clock-aligned timing on the durable scheduler.
+* Set `N8N_SCHEDULER_ENABLED=false` to return the whole instance to the in-memory scheduler.
+
+Both variables are now deprecated, and n8n logs a warning at startup if you set either one. A future version will remove them, along with the in-memory scheduler. This release also removes the Skip Durable Scheduler node setting and its `N8N_ENV_FEAT_SKIP_DURABLE_SCHEDULER` flag.
+
+Poll triggers and system tasks stay on their current schedulers. Learn more in the [durable scheduler documentation](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/durable-scheduler).
+
+## Control which nodes users can add and run, per instance or per project
+
+**Released:** 2026-10-13 in [n8n 2.44](release-notes.md#n8n244)
+
+You can now set rules that control which nodes users can add, publish, and run, either across the whole instance or within individual projects. Node type policies let instance and project admins enforce governance requirements through the public API without removing nodes from the instance entirely.
+
+Each policy is an ordered list of rules plus a default action. A rule can allow, deny, or delegate one node type or every node in a package. n8n evaluates the instance policy first. A deny there is final: no project can override it. An allow lets the project policy decide, so a project can only restrict further. A delegate blocks the node by default, but a project admin can turn it on for their team with an explicit allow rule. Without any policy, every node remains available.
+
+n8n checks policies when workflows are saved, published, and run, and when agents use tools in configuration or chat. CLI imports, source control pulls, and credential tests are checked too. In the editor, blocked nodes show a lock icon in search and their node details become read-only. If you try to publish or run a workflow that uses one, n8n refuses and lists each blocked node with a link to find it. Every block also sends an audit event to your log streaming destinations.
+
+To get started, create an API key with the `nodeTypePolicy:manage` scope and read the current policy with `GET /api/v1/node-type-policies/instance`. Add your rules, then send the whole policy back with `PUT`, including the `version` you read. Changes take effect within about one second.
+
+Learn more in the [Node Type Policies documentation](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/control-node-availability).
+
+{% hint style="info" %}
+**Availability:** Enterprise.
+{% endhint %}
+
+## TypeSafe AI node for smarter workflow routing with Jev
+
+**Released:** 2026-09-30&#x20;
+
+You can now use TypeSafe AI's Jev model in n8n to make decisions from unstructured data, without using a general-purpose LLM to generate and parse text.
+
+Think of Jev as an **If** or **Switch** for the fuzzy parts of a workflow. Give it some input, a question, and the possible outcomes. It returns a decision with its confidence, which you can use to branch, sort, route, or decide when a human should take over.
+
+For example, you could use it to decide:
+
+* **Priority:** Is this support ticket critical, high, medium, or low priority?
+* **Routing:** Is this inbound email a complaint, a question, or spam?
+* **Review:** Does this deal need executive review?
+* **Confidence gating:** Is the model confident enough to continue automatically, or should this go to a human?
+
+Unlike a text-generating LLM, Jev is designed for decisions rather than writing. If you already have a deterministic rule such as `amount > 10000`, an **If** node is still the right tool. If the decision depends on unstructured input, Jev gives you a new way to turn that judgment into workflow logic.
+
+**Availability:** The TypeSafe AI node is availalble to n8n Cloud and self-hosted users with your own TypeSafe AI API key. n8n Cloud users (Starter, Pro and new trials) can also use Jev via Gateway credits without setting up a seperate TypeSafe AI account or API key.
+
+<figure><img src=".gitbook/assets/typesafe Jev 2 square.png" alt=""><figcaption></figcaption></figure>
+
+## Build agents you set up once and use anywhere
+
+**Released:** 2026-09-21 in [n8n 2.40](release-notes.md#n8n240)
+
+You can now build agents in n8n. Describe what an agent should do, give it a model and the tools and workflows it can use, and it works out the steps itself. Open the **Agents** tab and select **Create Agent**, or describe what you want to n8n Assistant and it drafts the agent for you.
+
+Agents suit jobs where the next step depends on the last answer: a question in Slack that takes a few rounds, a support ticket, a new GitHub issue. Each agent has:
+
+* **A model:** any model you have credentials for, or Gateway credits.
+* **Instructions:** its role, tone, and what it should and shouldn't do, written in plain language.
+* **Tools:** n8n nodes, MCP servers, and your own workflows.
+* **Skills, sub-agents, knowledge files, and memory,** plus a stored session for every conversation.
+
+Agents and workflows call each other. An agent can use any workflow as a tool: the agent decides when the workflow runs, and the workflow runs the way you built it, with its own credentials. For example, an agent can add a note to your CRM through a workflow without ever holding write access to the CRM. In the other direction, the [Message an Agent](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.messageanagent) node calls an agent from inside a workflow and passes its answer to the next node.
+
+Connect one agent to Slack, Telegram, Linear, or Discord, run it on a schedule, and call it from your workflows. Edit a draft while your team keeps using the published version. When you publish, every place the agent is connected gets the update. Mark sensitive tools to require approval before the agent runs them, and review each session's tool calls, inputs, and outputs.
+
+One turn with an agent counts as one execution. Calls to workflow tools and sub-agents don't count separately. The AI Agent node hasn't changed, and everything you've built with it keeps working.
+
+{% hint style="warning" %}
+**Preview status**
+
+Agents are in Preview. They can make mistakes, and their behavior may change while they're in development. Test before you publish, and require approval on tools that write to your systems.
+{% endhint %}
+
+Learn more in [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents) and the [launch blog post](https://blog.n8n.io/introducing-n8n-agents/). On self-hosted n8n, agents need some extra setup from n8n 2.32.3: refer to [Self-hosted](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents#self-hosted).
+
+{% hint style="info" %}
+**Availability:** All plans. On Enterprise, agents are in Preview, with additional governance features on the way.
+{% endhint %}
 
 ## Error workflow executions no longer count towards your quota
 
@@ -64,7 +170,7 @@ Supported AI providers include OpenAI, Anthropic, Google Gemini, Alibaba Cloud Q
 
 On a supported node, select **Gateway credits** when setting up the credential and run your workflow. The choice is made per node, so the same workflow can use Gateway credits for one service and your own provider credentials for another.
 
-![Select Gateway credits in the Credetial dropdown ](<.gitbook/assets/select credits.png>)
+![Select Gateway credits in the Credetial dropdown](<.gitbook/assets/select credits.png>)
 
 Usage is deducted from a shared prepaid balance for the n8n instance. We align Gateway credit rates with publicly listed provider pricing wherever possible, and publish the rates for every supported service on our [service pricing page](https://app.n8n.cloud/service-pricing).
 
@@ -131,6 +237,41 @@ You can now read and write Excel workbooks stored in SharePoint document librari
 The node supports two authentication methods: sign in as a person using a Microsoft OAuth2 credential with the `Sites.ReadWrite.All` (or `Sites.Read.All`) scope, or sign in as an app using a Microsoft Entra Service Principal credential for unattended workflows that require no user interaction.
 
 Learn more in the [Microsoft Excel (SharePoint) node documentation](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/app-nodes/n8n-nodes-base.microsoftexcelsharepoint).
+
+## Schedule Trigger runs survive restarts and scale across mains
+
+**Released:** 2026-07-21 in [n8n 2.32](release-notes.md#n8n232)
+
+You can now run Schedule Trigger nodes from a database-backed queue instead of from each instance's memory. The durable scheduler records every upcoming run in the database before it's due, so a restart or crash no longer silently drops pending schedules.
+
+In a multi-main setup, every main instance shares the same queue and claims runs from it. Only one instance picks up each run, so scheduling load spreads across your whole fleet instead of depending on a single leader instance. Dispatch fires at the exact scheduled instant: the scheduler claims each run ahead of time and holds it with a precision timer, so steady-state timing is not limited to a polling cadence.
+
+To opt in, set two environment variables and restart your instance:
+
+1. Set `N8N_SCHEDULER_ENABLED=true` to enable the durable scheduler.
+2. Set `N8N_USE_WORKFLOW_PUBLICATION_SERVICE=true` so the scheduler takes over Schedule Trigger nodes. Without this second flag, Schedule Trigger nodes keep running on the in-memory scheduler and n8n logs a warning.
+
+Your existing Schedule Trigger nodes switch automatically without republishing. The defaults suit most instances, but you can tune timing precision, storage, and load with additional environment variables including `N8N_SCHEDULER_MATERIALIZATION_WINDOW`, `N8N_SCHEDULER_EXECUTOR_INTERVAL`, `N8N_SCHEDULER_RETENTION`, and `N8N_SCHEDULER_FAILED_RETENTION`. See the [Scheduler environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/scheduler) page for the full set. To monitor the scheduler, set `N8N_METRICS=true` and `N8N_METRICS_INCLUDE_SCHEDULER_METRICS=true` to expose Prometheus metrics for queue depth, scheduling lag, dispatch throughput, retries, and dead-letters.
+
+The durable scheduler shipped as a Preview feature in this release and became generally available in n8n 2.36. n8n recommends testing in a non-production environment first. How a run that was missed during downtime is handled depends on the trigger's misfire policy.
+
+Learn more in the [durable scheduler documentation](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/durable-scheduler).
+
+## Configure instance settings programmatically via REST API
+
+**Released:** 2026-07-14 in [n8n 2.31](release-notes.md#n8n231)
+
+You can now read and update instance-level settings through the n8n public REST API, starting with the security policy. Instead of clicking through the settings panel on every instance, you can drive configuration from a CI/CD pipeline, an infrastructure-as-code tool, or any HTTP client. Every write goes through the same validation as the UI, so an API-driven change takes effect exactly as it would if you clicked Save.
+
+`GET /api/v1/settings/security-policy` and `PUT /api/v1/settings/security-policy` read and update personal-space publishing and sharing, plus the execution-data redaction enforcement floor. The PUT takes the full configuration object: partial bodies are rejected with a 400, so you always know exactly what you're writing. The read-only usage counts that GET returns are ignored on write, so you can send a GET response straight back as a PUT body. If the policy is managed through environment variables, the API returns a 409 Conflict and leaves the values untouched, so declarative config is never silently overwritten.
+
+To use these endpoints, generate an API key with the `securitySettings:manage` scope. Scopes are fixed on a key when you create it, so an existing key won't pick up a new scope: issue a new one. Settings endpoints for log streaming and SAML followed in n8n 2.32, OpenTelemetry in n8n 2.33, and OIDC and LDAP in n8n 2.34.
+
+Learn more in the [security policy API documentation](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/instance-settings/security-policy).
+
+{% hint style="info" %}
+**Availability:** Enterprise.
+{% endhint %}
 
 ## Capture who approved and when in human-in-the-loop steps
 
@@ -726,23 +867,3 @@ With this release you can now:
 n8n automatically totals the time from all Time Saved nodes executed during each workflow run and reports it within the insights dashboard.
 
 <figure><img src=".gitbook/assets/time_saved_node_2.png" alt=""><figcaption><p>Total time saved calculation</p></figcaption></figure>
-
-
-### n8n 2.32 — Schedule Trigger runs survive restarts and scale across mains
-
-**Released:** 2026-07-21
-
-You can now run Schedule Trigger nodes from a database-backed queue instead of from each instance's memory. The durable scheduler records every upcoming run in the database before it's due, so a restart or crash no longer silently drops work. Any run whose time passed while an instance was down fires when the instance recovers rather than being skipped.
-
-In a multi-main setup, every main instance shares the same queue and claims runs from it. Only one instance picks up each run, so scheduling load spreads across your whole fleet instead of depending on a single leader instance. Dispatch fires at the exact scheduled instant: the scheduler claims each run ahead of time and holds it with a precision timer, so steady-state timing is not limited to a polling cadence.
-
-To opt in, set two environment variables and restart your instance:
-
-1. Set `N8N_SCHEDULER_ENABLED=true` to enable the durable scheduler.
-2. Set `N8N_USE_WORKFLOW_PUBLICATION_SERVICE=true` so the scheduler takes over Schedule Trigger nodes. Without this second flag, Schedule Trigger nodes keep running on the in-memory scheduler and n8n logs a warning.
-
-Your existing Schedule Trigger nodes switch automatically without republishing. The defaults suit most instances, but you can tune timing precision, storage, and load with additional environment variables including `N8N_SCHEDULER_MATERIALIZATION_WINDOW`, `N8N_SCHEDULER_EXECUTOR_INTERVAL`, `N8N_SCHEDULER_RETENTION`, `N8N_SCHEDULER_FAILED_RETENTION`, and `N8N_SCHEDULER_MISFIRE_GRACE`. See the Scheduler environment variables page for the full set. To monitor the scheduler, set `N8N_METRICS=true` and `N8N_METRICS_INCLUDE_SCHEDULER_METRICS=true` to expose Prometheus metrics, then import the n8n Durable Scheduler Health Grafana dashboard to track queue depth, scheduling lag, dispatch throughput, retries, and dead-letters.
-
-Note that this is a preview feature behind an environment flag, and the environment variables and default behavior can change before general availability. n8n recommends testing in a non-production environment first. If your instance is down for an extended period, missed runs are coalesced on recovery by default: only the most recent missed occurrence fires, instead of one run per missed occurrence. Tune this with `N8N_SCHEDULER_MISFIRE_GRACE` (how late a run may start and still count as on time before it's considered missed).
-
-Learn more in the [documentation](https://docs.n8n.io/deploy/host-n8n/configure-n8n/durable-scheduler).

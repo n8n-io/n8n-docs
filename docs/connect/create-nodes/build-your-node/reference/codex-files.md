@@ -42,3 +42,7 @@ Choose from these categories:
 * Utility
 
 You must match the syntax. For example, `Data & Storage` not `data and storage`.
+
+## Related resources
+
+* [Node building reference](./)

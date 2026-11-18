@@ -256,3 +256,7 @@ This message explains to the user what happened, and the current issue that prev
 The description explains to users how to solve the problem, what to change in the node configuration (if that's the case), or how to get unstuck. Here, you should guide them to the next step and unblock them.
 
 Avoid using words like "error", "problem", "failure", "mistake".
+
+## Related resources
+
+* [Node building reference](./)

@@ -1,3 +1,4 @@
 # Table of contents
 
-* [Sustainable Use License](README.md)
+* [Community license](README.md)
+  * [License FAQ](license-faq.md)

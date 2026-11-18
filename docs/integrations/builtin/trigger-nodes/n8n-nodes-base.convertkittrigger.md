@@ -24,7 +24,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/convertkit.md).
+Refer to the [ConvertKit credentials documentation](../credentials/convertkit.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}
@@ -49,7 +49,7 @@ For usage examples and templates to help you get started, refer to n8n's [Conver
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for ConvertKit. You can find the node docs [here](../app-nodes/n8n-nodes-base.convertkit.md).
+n8n provides an app node for ConvertKit. Refer to the [ConvertKit node documentation](../app-nodes/n8n-nodes-base.convertkit.md) for more information.
 
 View [example workflows and related content](https://n8n.io/integrations/convertkit-trigger/) on n8n's website.
 

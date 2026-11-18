@@ -42,7 +42,7 @@ The MiniMax node connects n8n workflows to MiniMax AI models. Use it to generate
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/minimax.md).
+Refer to the [MiniMax credentials documentation](../credentials/minimax.md) for authentication information for this node.
 {% endhint %}
 
 ## Resources and operations <a href="#resources-and-operations" id="resources-and-operations"></a>

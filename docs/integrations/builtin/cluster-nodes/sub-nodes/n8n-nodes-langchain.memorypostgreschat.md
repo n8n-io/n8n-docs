@@ -27,7 +27,7 @@ On this page, you'll find a list of operations the Postgres Chat Memory node sup
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/postgres.md).
+Refer to the [Postgres credentials documentation](../../credentials/postgres.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
@@ -39,8 +39,6 @@ You can find authentication information for this node [here](../../credentials/p
 * **Context Window Length**: Enter the number of previous interactions to consider for context.
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
-
-Refer to [LangChain's Postgres Chat Message History documentation](https://js.langchain.com/docs/integrations/memory/postgres) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

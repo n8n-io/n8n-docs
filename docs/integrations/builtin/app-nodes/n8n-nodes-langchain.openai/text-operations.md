@@ -81,7 +81,7 @@ Enter these parameters:
 The OpenAI Responses API provides a range of [built-in tools](https://platform.openai.com/docs/guides/tools) to enrich the model's response:
 
 - **Web Search**: Allows models to search the web for the latest information before generating a response.
-- **MCP Servers**: Allows models to connect to remote MCP servers. Find out more about using remote MCP servers as tools [here](https://platform.openai.com/docs/guides/tools-connectors-mcp).
+- **MCP Servers**: Allows models to connect to remote MCP servers. Find out more about [using remote MCP servers as tools](https://platform.openai.com/docs/guides/tools-connectors-mcp).
 - **File Search**: Allow models to search your knowledgebase from previously uploaded files for relevant information before generating a response. Refer to the [OpenAI documentation](https://platform.openai.com/docs/guides/tools-file-search) for more information.
 - **Code Interpreter**: Allows models to write and run Python code in a sandboxed environment.
 

@@ -32,7 +32,7 @@ Use the Microsoft Agent 365 Trigger node to receive messages from Microsoft Agen
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/microsoftagent365.md).
+Refer to the [Microsoft Agent 365 credentials documentation](../../credentials/microsoftagent365.md) for authentication information for this node.
 {% endhint %}
 
 ## Node connectors <a href="#node-connectors" id="node-connectors"></a>

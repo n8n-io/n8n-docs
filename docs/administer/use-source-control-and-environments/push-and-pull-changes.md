@@ -52,7 +52,7 @@ If the same owner is available on both instances (matching email), the owner rem
 
 If the original owner is a [project](../manage-users-and-access/set-permissions-and-roles-rbac/README.md):
 
-n8n tries to match the original project name to a project name on the new instance. If no matching project exists, n8n creates a new project with the name, assigns the current user as project owner, and imports the workflows and credentials to the project.
+n8n matches the project by its ID. If no project with that ID exists on the new instance, n8n creates one with the same ID and name. The user who pulls becomes its project admin. n8n then imports the workflows and credentials into the project.
 
 ### Auto publish workflows on pull <a href="#auto-publish-workflows-on-pull" id="auto-publish-workflows-on-pull"></a>
 
@@ -157,3 +157,16 @@ If a pulled data table has columns removed compared to your local version, n8n d
 
 If you need different credentials on different n8n environments, use [external secrets](../manage-credentials/use-external-secret-stores.md).
 {% endhint %}
+
+## Related resources
+
+* [Use source control and environments](./)
+* [Understand source control](understand-source-control.md)
+* [Work with environments](work-with-environments.md)
+* [Use Git in n8n](use-git-in-n8n.md)
+* [Choose branching patterns](choose-branching-patterns.md)
+* [Set up source control](set-up-source-control.md)
+* [Compare versions](compare-versions.md)
+* [Move work between environments](move-work-between-environments.md)
+* [Use environments programmatically with the public API](use-environments-via-api.md)
+* [Tutorial: Create environments with source control](tutorial-create-environments-with-source-control.md)

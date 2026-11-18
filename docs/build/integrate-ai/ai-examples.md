@@ -66,3 +66,20 @@ This section provides explanations of important AI concepts, and workflow templa
 [^4]: A vector store, or vector database, stores mathematical representations of information. Use with embeddings and retrievers to create a database that your AI can access when answering questions.
 [^5]: Embeddings are numerical representations of data using vectors. They're used by AI to interpret complex data and relationships by mapping values across many dimensions. Vector databases, or vector stores, are databases designed to store and access embeddings.
 [^6]: In an AI context, memory allows AI tools to persist message context across interactions. This allows you to have a continuing conversations with AI agents, for example, without submitting ongoing context with each message. In n8n, AI agent nodes can use memory, but AI chains can't.
+
+## In this section
+
+* [Use Google Sheets as a data source](ai-examples/use-google-sheets-as-a-data-source.md): use the n8n workflow tool to load data from Google Sheets into your AI workflow.
+* [Call APIs](ai-examples/call-apis.md): use the n8n workflow tool to load data from an API using the HTTP Request node.
+* [Use website content](ai-examples/use-website-content.md): scrape a website, load the data into Pinecone, then query it in a chat workflow.
+* [Human-in-the-loop for tools](ai-examples/human-in-the-loop-for-tools.md): require human approval before an AI Agent runs a tool.
+* [Set a human fallback for AI workflows](ai-examples/set-a-human-fallback-for-ai-workflows.md): trigger a human answer when the AI can't help.
+* [Use AI for parameters](ai-examples/use-ai-for-parameters.md): use `$fromAI()` to dynamically populate parameters for AI app tools.
+
+## Related resources
+
+* [Integrate AI](./)
+* [MCP servers](mcp-servers.md)
+* [Understand AI components](understand-ai-components/README.md)
+* [LangChain in n8n](langchain-in-n8n.md)
+* [Test and improve AI workflows](test-and-improve-ai-workflows/README.md)

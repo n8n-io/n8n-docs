@@ -25,7 +25,7 @@ You can use these credentials to authenticate the following nodes:
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
 
-Create a Venafi [TLS Protect Cloud](https://venafi.com/tls-protect/) account.
+Create a Venafi TLS Protect Cloud account. Palo Alto Networks now offers this service as [Next-Generation Trust Security](https://www.paloaltonetworks.com/network-security/next-gen-trust-security/certificate-manager).
 
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 

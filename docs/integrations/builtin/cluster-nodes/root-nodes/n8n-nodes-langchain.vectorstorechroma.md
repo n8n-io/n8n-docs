@@ -43,7 +43,7 @@ On this page, you'll find the node parameters for the Chroma node, and links to 
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/chroma.md).
+Refer to the [Chroma credentials documentation](../../credentials/chroma.md) for authentication information for this node.
 {% endhint %}
 
 ## Node usage patterns <a href="#node-usage-patterns" id="node-usage-patterns"></a>
@@ -131,8 +131,6 @@ This Operation Mode includes one **Node option**, the Metadata Filter
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/9OWZ8hSpVqky4D4xRnYP/" %}
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
-
-Refer to [LangChain's Chroma documentation](https://js.langchain.com/oss/javascript/integrations/vectorstores/chroma) for more information about the service.
 
 View n8n's [Advanced AI](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/integrate-ai) documentation.
 

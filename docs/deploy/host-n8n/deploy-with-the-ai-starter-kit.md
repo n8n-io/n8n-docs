@@ -52,3 +52,13 @@ n8n designed this kit to help you get started with self-hosted AI workflows. Whi
 {% endhint %}
 
 [^1]: AI agents are artificial intelligence systems capable of responding to requests, making decisions, and performing real-world tasks for users. They use large language models (LLMs) to interpret user input and make decisions about how to best process requests using the information and resources they have available.
+
+## Related resources
+
+* [Host n8n](./)
+* [Install options](install-options/README.md)
+* [Configure n8n](configure-n8n/README.md)
+* [Keep n8n running](keep-n8n-running/README.md)
+* [Understand the architecture](understand-the-architecture/README.md)
+* [Deploy as an OEM integration](deploy-as-an-oem-integration/README.md)
+* [Compare editions](community-edition-features.md)

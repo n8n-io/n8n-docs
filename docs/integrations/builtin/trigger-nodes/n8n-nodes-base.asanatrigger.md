@@ -24,7 +24,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/asana.md).
+Refer to the [Asana credentials documentation](../credentials/asana.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}
@@ -39,7 +39,7 @@ For usage examples and templates to help you get started, refer to n8n's [Asana 
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for Asana. You can find the node docs [here](../app-nodes/n8n-nodes-base.asana.md).
+n8n provides an app node for Asana. Refer to the [Asana node documentation](../app-nodes/n8n-nodes-base.asana.md) for more information.
 
 View [example workflows and related content](https://n8n.io/integrations/asana-trigger/) on n8n's website.
 

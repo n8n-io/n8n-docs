@@ -61,3 +61,16 @@ n8n doesn't clean up the existing contents of an instance when changing branches
 This is the simplest pattern.
 
 ![Single n8n instance connected to a single Git branch](../.gitbook/assets/vc-one-one.png)
+
+## Related resources
+
+* [Use source control and environments](./)
+* [Understand source control](understand-source-control.md)
+* [Work with environments](work-with-environments.md)
+* [Use Git in n8n](use-git-in-n8n.md)
+* [Set up source control](set-up-source-control.md)
+* [Push and pull changes](push-and-pull-changes.md)
+* [Compare versions](compare-versions.md)
+* [Move work between environments](move-work-between-environments.md)
+* [Use environments programmatically with the public API](use-environments-via-api.md)
+* [Tutorial: Create environments with source control](tutorial-create-environments-with-source-control.md)

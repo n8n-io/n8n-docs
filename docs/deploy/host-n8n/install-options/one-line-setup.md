@@ -9,12 +9,12 @@ layout:
 
 ## Who this is for
 
-This guide sets up a brand-new n8n instance with a single command that replaces the old `npm install n8n` / `npx n8n` approach, which no longer works from n8n 3.0 (launching October 2026). It's the fastest way to get n8n running, whether you've used Docker before or not.
+This guide sets up a brand-new n8n instance with a single command that replaces the old `npm install n8n` / `npx n8n` approach, which no longer works from n8n 3.0. It's the fastest way to get n8n running, whether you've used Docker before or not.
 
 It's meant for fresh installs, not for changing an existing setup:
 
 - **Already self-hosting with your own Docker Compose file?** You don't need to switch to this script, but feel free to take inspiration from [the Docker Compose setup process](./install-using-docker-compose.md).
-- **Currently installing n8n with npm?** From n8n 3.0, n8n is only distributed through Docker. Your existing npm install keeps working for now, but new installs (and future upgrades) should use this method instead. A step-by-step migration guide is coming soon.
+- **Currently installing n8n with npm?** From n8n 3.0, n8n is only distributed through Docker. Your existing npm install keeps working for now, but new installs (and future upgrades) should use this method instead.
 
 ## What you need before you start
 
@@ -88,7 +88,11 @@ Running the command sets up everything below automatically. There's nothing extr
 
 If you're setting n8n up for a team or a production environment, consider a more robust database like Postgres rather than the built-in default. See [Install using Docker Compose](./install-using-docker-compose.md) for that setup.
 
-The same goes for the sandbox: this setup uses n8n's own bundled sandbox, which is a good fit for trying things out, but for production, n8n currently recommends Daytona instead. See [Set up n8n Assistant](../configure-n8n/set-up-n8n-assistant.md) for how to configure it.
+{% hint style="warning" %}
+The bundled sandbox is for development and testing, not production. Its runner (`sandbox-runner-1`) runs with `privileged: true` and Docker-in-Docker, which gives weak isolation. If code escapes the sandbox, it reaches the host, so treat the runner as equivalent to root on the host.
+
+Run this setup on a dedicated machine or VM with nothing else on it, and never expose it to the internet. For production, see [Set up n8n Assistant](../configure-n8n/set-up-n8n-assistant.md). It describes the self-hosted option, which is the n8n sandbox service with Sysbox runners, ideally on Kubernetes. The managed option is Daytona, a third-party service that receives your workflow data.
+{% endhint %}
 
 ## Optional: Turn on n8n Assistant
 
@@ -115,6 +119,12 @@ You don't need to open any extra ports or configure anything for these services.
 | Upgrade to the latest version | `curl -fsSL https://get.n8n.io \| sh -s -- --upgrade` |
 | Remove n8n and delete its data | `docker compose -f ./n8n/compose.yml down -v` then `rm -rf ./n8n` |
 
+### What an upgrade changes
+
+The upgrade command moves both n8n and the bundled sandbox services to newer versions. It edits two lines in `.env`: `N8N_VERSION` and `N8N_SANDBOX_VERSION`. Your data, secrets, and other settings stay as they are.
+
+If you installed before the sandbox version moved into `.env`, your `compose.yml` still names fixed sandbox image tags. The first upgrade rewrites those image lines to use `N8N_SANDBOX_VERSION`, switches the sandbox runner address (`SANDBOX_RUNNER_HTTP_BASE_URL`) from `http://` to `https://`, and prints a note that says so. Nothing else in `compose.yml` changes, so any edits you made stay in place.
+
 ## Flags (for more control)
 
 Adding these to the end of the install command changes what it does:
@@ -123,7 +133,7 @@ Adding these to the end of the install command changes what it does:
 |---|---|
 | `--version` | On its own, shows the script's version and the latest n8n version it would install. Followed by a version number (for example, `--version 2.31.4`), installs or upgrades to that specific version. |
 | `--no-start` | Sets up the configuration files without starting n8n yet. |
-| `--upgrade` | Upgrades an existing install to a newer n8n version. Only updates the version number. Your data, settings, and any customizations stay untouched. |
+| `--upgrade` | Upgrades an existing install to a newer n8n version and the matching sandbox service version. Only updates the version lines in `.env` and, on older installs, the sandbox image lines and runner address in `compose.yml`. See [What an upgrade changes](#what-an-upgrade-changes). Your data, settings, and any other customizations stay untouched. |
 | `--help` | Shows all available options. |
 
 ## Prefer not to run a script from the internet?
@@ -142,6 +152,15 @@ The one-line setup command needs a terminal that understands shell scripts, whic
 
 - **WSL** (Windows Subsystem for Linux), with Docker Desktop's WSL2 integration turned on.
 - **Git Bash** (installed alongside [Git for Windows](https://git-scm.com/downloads/win)) with Docker Desktop running can also run POSIX shell scripts, but n8n hasn't verified it end-to-end for the one-line setup command. Stick with WSL unless you've confirmed Git Bash works for your setup.
+
+## Related resources
+
+* [Install options](./)
+* [Install using Docker Compose](install-using-docker-compose.md)
+* [Install with npm](install-with-npm.md)
+* [Install with Docker](install-with-docker.md)
+* [Production requirements](production-requirements.md)
+* [Use a cloud provider](use-a-cloud-provider/README.md)
 
 
 

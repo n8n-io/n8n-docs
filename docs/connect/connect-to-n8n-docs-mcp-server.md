@@ -114,4 +114,10 @@ After you connect, your tool can search n8n's knowledge as you work.
 The exact configuration steps and file locations vary between tools and versions. Check your tool's documentation for how it adds a remote MCP server. For more on the Kapa.ai server, see the [Kapa.ai MCP documentation](https://docs.kapa.ai/overview/build-with-ai).
 {% endhint %}
 
-See [Connect](README.md) for other ways to connect to n8n.
+## Related resources
+
+* [Connect](./)
+* [n8n API](n8n-api/README.md)
+* [n8n CLI](n8n-cli.md)
+* [Connect to n8n MCP server](connect-to-n8n-mcp-server.md)
+* [Create nodes](create-nodes/README.md)

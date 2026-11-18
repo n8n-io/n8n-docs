@@ -69,4 +69,11 @@ n8n supports both approaches. If you include more than one node, each node shoul
 
 n8n's built-in [Airtable node](https://github.com/n8n-io/n8n/tree/master/packages/nodes-base/nodes/Airtable) implements a modular structure and versioning, following recommended patterns.
 
+## Related resources
+
+* [Plan your node](./)
+* [Choose a node type](choose-a-node-type.md)
+* [Choose a node building style](choose-a-node-building-style.md)
+* [Node UI design](node-ui-design.md)
+
 

@@ -29,7 +29,7 @@ On this page, you'll find the node parameters for the Vercel AI Gateway Chat Mod
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/vercel.md).
+Refer to the [Vercel AI Gateway credentials documentation](../../credentials/vercel.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
@@ -85,7 +85,7 @@ Use this option to set the probability the completion should use. Use a lower va
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-As the Vercel AI Gateway is API-compatible with OpenAI, you can refer to [LangChains's OpenAI documentation](https://js.langchain.com/docs/integrations/chat/openai/) for more information about the service.
+As the Vercel AI Gateway is API-compatible with OpenAI, you can refer to [LangChain's OpenAI documentation](https://docs.langchain.com/oss/javascript/integrations/chat/openai) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

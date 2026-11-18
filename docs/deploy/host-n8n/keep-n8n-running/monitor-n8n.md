@@ -74,3 +74,12 @@ QUEUE_HEALTH_CHECK_ACTIVE=true
 ```
 
 Refer to [Configuration methods](../configure-n8n/basic-configuration.md) for more information on how to configure your instance using environment variables.
+
+## Related resources
+
+* [Keep n8n running](./)
+* [Set up logging](set-up-logging.md)
+* [Visualize metrics with Grafana](visualize-metrics-with-grafana.md)
+* [Back up and restore](backup-and-restore.md)
+* [Update n8n](update-n8n.md)
+* [Trace executions with OpenTelemetry](trace-executions-with-opentelemetry.md)

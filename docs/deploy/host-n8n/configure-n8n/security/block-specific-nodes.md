@@ -18,6 +18,8 @@ For security reasons, you may want to block your users from accessing or working
 
 Use the `NODES_EXCLUDE` environment variable to prevent your users from accessing specific nodes.
 
+To block nodes per project, or without restarting n8n, use [node type policies](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/control-node-availability) instead. `NODES_EXCLUDE` stops n8n from loading a node at all, so it's the stronger option for nodes that must never run.
+
 ## Exclude nodes <a href="#exclude-nodes" id="exclude-nodes"></a>
 
 Update your `NODES_EXCLUDE` environment variable to include an array of strings containing any nodes you want to block your users from using.
@@ -49,6 +51,6 @@ NODES_EXCLUDE: "[]"
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [Nodes environment variables](../basic-configuration/use-environment-variables/nodes.md) for more information on this environment variable.
-
-Refer to [Configuration](../basic-configuration.md) for more information on setting environment variables.
+* [Security](../security.md): audit, harden, and restrict a self-hosted instance.
+* [Nodes environment variables](../basic-configuration/use-environment-variables/nodes.md): more information on this environment variable.
+* [Configuration](../basic-configuration.md): how to set environment variables.

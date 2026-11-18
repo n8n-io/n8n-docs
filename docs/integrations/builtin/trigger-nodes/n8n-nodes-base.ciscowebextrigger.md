@@ -24,7 +24,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/ciscowebex.md).
+Refer to the [Webex by Cisco credentials documentation](../credentials/ciscowebex.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}

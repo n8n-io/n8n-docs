@@ -24,7 +24,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/webflow.md).
+Refer to the [Webflow credentials documentation](../credentials/webflow.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}

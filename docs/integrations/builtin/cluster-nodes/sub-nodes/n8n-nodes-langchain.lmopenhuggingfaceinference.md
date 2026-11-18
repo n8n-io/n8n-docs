@@ -46,7 +46,7 @@ This node lacks tools support, so it won't work with the [AI Agent](../root-node
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/huggingface.md).
+Refer to the [Hugging Face credentials documentation](../../credentials/huggingface.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
@@ -70,7 +70,5 @@ You can find authentication information for this node [here](../../credentials/h
 [Browse Hugging Face Inference Model node documentation integration templates](https://n8n.io/integrations/hugging-face-inference-model) or [search all templates](https://n8n.io/workflows/)
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
-
-Refer to [LangChains's Hugging Face Inference Model documentation](https://js.langchain.com/docs/integrations/llms/huggingface_inference/) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}

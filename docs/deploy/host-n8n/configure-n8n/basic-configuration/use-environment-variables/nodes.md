@@ -64,3 +64,7 @@ Pre-provision installed [community packages](https://app.gitbook.com/s/BKcbOzIWj
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/w3ftfKhp9KdsaTfUFHE8/" %}
 
 [^1]: In n8n, nodes are individual components that you compose to create workflows. Nodes define when the workflow should run, allow you to fetch, send, and process data, can define flow control logic, and connect with external services.
+
+## Related resources
+
+* [Environment variables](./)

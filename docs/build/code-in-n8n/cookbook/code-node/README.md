@@ -14,9 +14,16 @@ layout:
 
 This section contains examples and recipes for tasks you can do with the Code node.
 
+## In this section
 
+* [Get number of items returned by last node](get-number-of-items-returned-by-last-node.md): count the items output by the previous node.
+* [Get the binary data buffer](get-the-binary-data-buffer.md): access the binary data buffer to work with file contents.
+* [Output to the browser console](output-to-the-browser-console.md): use `console.log()` or `print()`.
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
+* [Cookbook](../)
+* [Built-in methods and variables examples](../built-in-methods-and-variables-examples/README.md)
+* [HTTP Request node](../http-request-node/README.md)
 * [Built-in methods and variables reference](../../use-built-in-shortcuts.md)
-* [Code node](../../using-the-code-node.md)
+* [Using the Code node](../../using-the-code-node.md)

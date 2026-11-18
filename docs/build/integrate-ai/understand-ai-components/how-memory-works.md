@@ -35,3 +35,13 @@ If you need to do advanced AI memory management in your workflows, use the [Chat
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/ipTfg43EHN14P930L6JP/" %}
 
 [^1]: In an AI context, memory allows AI tools to persist message context across interactions. This allows you to have a continuing conversations with AI agents, for example, without submitting ongoing context with each message. In n8n, AI agent nodes can use memory, but AI chains can't.
+
+## Related resources
+
+* [Understand AI components](./)
+* [What chains do](what-chains-do.md)
+* [What agents do](what-agents-do.md)
+* [How tools work](how-tools-work.md)
+* [Store and search data with vectors](store-and-search-data-with-vectors.md)
+* [Retrieve relevant context](retrieve-relevant-context.md)
+* [Agents vs chains](agents-vs-chains.md)

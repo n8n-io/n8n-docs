@@ -42,7 +42,7 @@ On this page, you'll find a list of events the Airtable Trigger node can respond
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/airtable.md).
+Refer to the [Airtable credentials documentation](../credentials/airtable.md) for authentication information for this node.
 {% endhint %}
 
 ## Events <a href="#events" id="events"></a>
@@ -51,7 +51,7 @@ You can find authentication information for this node [here](../credentials/airt
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for Airtable. You can find the node docs [here](../app-nodes/n8n-nodes-base.airtable/README.md).
+n8n provides an app node for Airtable. Refer to the [Airtable node documentation](../app-nodes/n8n-nodes-base.airtable/README.md) for more information.
 
 View [example workflows and related content](https://n8n.io/integrations/airtable-trigger/) on n8n's website.
 

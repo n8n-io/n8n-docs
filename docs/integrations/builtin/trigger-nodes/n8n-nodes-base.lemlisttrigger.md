@@ -24,7 +24,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/lemlist.md).
+Refer to the [Lemlist credentials documentation](../credentials/lemlist.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}

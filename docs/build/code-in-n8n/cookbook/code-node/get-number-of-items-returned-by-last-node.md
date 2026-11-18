@@ -76,3 +76,9 @@ The output will be similar to the following.
 ```
 {% endtab %}
 {% endtabs %}
+
+## Related resources
+
+* [Code node cookbook](./)
+* [Get the binary data buffer](get-the-binary-data-buffer.md)
+* [Output to the browser console](output-to-the-browser-console.md)

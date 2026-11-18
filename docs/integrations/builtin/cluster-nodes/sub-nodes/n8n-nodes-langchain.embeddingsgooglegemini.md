@@ -28,7 +28,7 @@ On this page, you'll find the node parameters for the Embeddings Google Gemini n
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/googleai.md).
+Refer to the [Google Gemini(PaLM) credentials documentation](../../credentials/googleai.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
@@ -46,7 +46,7 @@ Learn more about available models in [Google Gemini's models documentation](http
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [Langchain's Google Generative AI embeddings documentation](https://js.langchain.com/docs/integrations/text_embedding/google_generativeai) for more information about the service.
+Refer to [LangChain's Google Generative AI embeddings documentation](https://docs.langchain.com/oss/javascript/integrations/embeddings/google_generative_ai) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

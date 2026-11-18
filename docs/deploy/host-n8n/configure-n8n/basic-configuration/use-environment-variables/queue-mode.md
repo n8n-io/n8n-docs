@@ -28,6 +28,8 @@ You can run n8n in different modes depending on your needs. Queue mode provides 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
 | `QUEUE_BULL_PREFIX` | String | - | Prefix to use for all queue keys. |
+| `N8N_REDIS_KEY_PREFIX` | String | `n8n` | Prefix for Redis keys and pub/sub channels outside the job queue, such as the multi-main leader key, messages between main and worker instances, the cache, and locks. If two or more n8n deployments share one Redis, give each deployment a different value. Use the same value on every main and worker of a deployment. Before n8n 2.3.0, the prefix doesn't apply to pub/sub channels, so use a separate Redis for each deployment. |
+| `N8N_CACHE_REDIS_KEY_PREFIX` | String | `cache` | Prefix for cache keys in Redis. n8n adds it after `N8N_REDIS_KEY_PREFIX`, for example `n8n:cache`. |
 | `QUEUE_BULL_REDIS_DB` | Number | `0` | The Redis database used. |
 | `QUEUE_BULL_REDIS_HOST` | String | `localhost` | The Redis host. |
 | `QUEUE_BULL_REDIS_PORT` | Number | `6379` | The Redis port used. |
@@ -63,3 +65,7 @@ Refer to [Configuring multi-main setup](../../scaling/enable-queue-mode.md#confi
 | `N8N_MULTI_MAIN_SETUP_ENABLED` | Boolean | `false` | Whether to enable multi-main setup for queue mode (license required). |
 | `N8N_MULTI_MAIN_SETUP_KEY_TTL` | Number | `10` | Time to live (in seconds) for leader key in multi-main setup. |
 | `N8N_MULTI_MAIN_SETUP_CHECK_INTERVAL` | Number | `3` | Interval (in seconds) for leader check in multi-main setup. |
+
+## Related resources
+
+* [Environment variables](./)

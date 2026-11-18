@@ -15,7 +15,17 @@ This section provides guidance on designing your node, including key technical d
 
 When building a node, there are design choices you need to make before you start:
 
-* Which [node type](choose-a-node-type.md) you need to build.
-* Which [node building style](choose-a-node-building-style.md) to use.
-* Your [UI design and UX principles](node-ui-design.md)
-* Your node's [file structure](choose-node-file-structure.md).
+## In this section
+
+* [Choose a node type](choose-a-node-type.md): which node type you need to build.
+* [Choose a node building style](choose-a-node-building-style.md): which node building style to use.
+* [Node UI design](node-ui-design.md): UI design and UX principles.
+* [Choose node file structure](choose-node-file-structure.md): your node's file structure.
+
+## Related resources
+
+* [Create nodes](../)
+* [Overview](../overview.md)
+* [Build your node](../build-your-node/README.md)
+* [Test your node](../test-your-node/README.md)
+* [Deploy your node](../deploy-your-node/README.md)

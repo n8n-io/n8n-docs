@@ -31,8 +31,8 @@ Canvas-only mode applies to the whole instance. You can't turn it on for individ
 
 On the workflow details route, canvas-only mode hides:
 
-- **The header's top menu.** The workflow name, breadcrumbs, save controls, and tags no longer show.
-- **The sidebar.** n8n's main navigation isn't visible.
+- **The Canvas header.** The workflow name, breadcrumbs, save controls, and tags no longer show.
+- **The left menu.** n8n's main navigation isn't visible.
 - **Overlay elements.** The command bar and "Ask AI assistant" button are no longer shown.
 - **Keyboard shortcuts.** The following keyboard shortcuts are disabled in canvas-only mode: **Ctrl/Cmd** + **s** (save), **Ctrl/Cmd** + **Alt** + **n** (create new workflow), **Ctrl/Cmd** + **p** (publish), **Ctrl/Cmd** + **u** (unpublish), **Ctrl/Cmd** + **k** (command bar)
 
@@ -42,3 +42,7 @@ n8n keeps the following visible:
 - **The tab bar** for switching between the editor, executions, and evaluations. It floats near the top of the screen instead of sitting inside the header.
 - **The logs panel** to display execution logs of individual nodes.
 - **The node creator panel.** The "Add a node" panel still opens from the canvas, repositioned to the top of the screen instead of below the header.
+
+## Related resources
+
+* [Configure n8n](./)

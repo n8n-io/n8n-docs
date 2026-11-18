@@ -53,6 +53,12 @@ print(_items)
 The Python Code node denies some built-in functions by default, including `type()`. Refer to [task runners environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/task-runners) for the full list and how to change it when self-hosting.
 {% endhint %}
 
+## Related resources
+
+* [Code node cookbook](./)
+* [Get number of items returned by last node](get-number-of-items-returned-by-last-node.md)
+* [Get the binary data buffer](get-the-binary-data-buffer.md)
+
 
 
 

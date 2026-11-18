@@ -34,6 +34,6 @@ export N8N_PUBLIC_API_SWAGGERUI_DISABLED=true
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [Deployment environment variables](../basic-configuration/use-environment-variables/deployment.md) for more information on these environment variables.
-
-Refer to [Configuration](../basic-configuration.md) for more information on setting environment variables.
+* [Security](../security.md): audit, harden, and restrict a self-hosted instance.
+* [Deployment environment variables](../basic-configuration/use-environment-variables/deployment.md): more information on these environment variables.
+* [Configuration](../basic-configuration.md): how to set environment variables.

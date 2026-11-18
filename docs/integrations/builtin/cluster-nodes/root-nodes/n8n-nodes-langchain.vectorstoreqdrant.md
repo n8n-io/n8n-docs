@@ -43,7 +43,7 @@ On this page, you'll find the node parameters for the Qdrant node, and links to 
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/qdrant.md).
+Refer to the [Qdrant credentials documentation](../../credentials/qdrant.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
@@ -125,7 +125,7 @@ This Operation Mode includes one **Node option**, the [Metadata Filter](n8n-node
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [LangChain's Qdrant documentation](https://js.langchain.com/docs/integrations/vectorstores/qdrant) for more information about the service.
+Refer to [LangChain's Qdrant documentation](https://docs.langchain.com/oss/javascript/integrations/vectorstores/qdrant) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

@@ -45,7 +45,7 @@ Use the Moonshot Kimi Chat Model node to send chat requests to the Kimi chat API
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/moonshot.md).
+Refer to the [Moonshot credentials documentation](../../credentials/moonshot.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}

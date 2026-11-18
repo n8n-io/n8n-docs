@@ -1075,3 +1075,15 @@ Log in with `kubeadmin` / your password to see a graphical view of everything ru
 ## Next steps <a href="#next-steps" id="next-steps"></a>
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/GtC2RL8itCPuNiwv5UUW/" %}
+
+## Related resources
+
+* [Use a cloud provider](./)
+* [DigitalOcean](deploy-to-digital-ocean.md)
+* [Heroku](deploy-to-heroku.md)
+* [Hetzner Cloud](deploy-to-hetzner.md)
+* [AWS](deploy-to-aws.md)
+* [Azure](deploy-to-azure.md)
+* [Google Cloud Run](deploy-to-google-cloud-run.md)
+* [Google Kubernetes Engine](deploy-to-google-kubernetes.md)
+* [Use Docker Compose](use-docker-compose.md)

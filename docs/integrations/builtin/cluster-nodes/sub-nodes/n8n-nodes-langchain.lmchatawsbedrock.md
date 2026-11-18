@@ -27,7 +27,7 @@ On this page, you'll find the node parameters for the AWS Bedrock Chat Model nod
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/aws.md).
+Refer to the [AWS credentials documentation](../../credentials/aws.md) for authentication information for this node.
 
 If you route Bedrock through a [VPC interface endpoint (PrivateLink)](https://docs.aws.amazon.com/bedrock/latest/userguide/vpc-interface-endpoints.html) without private DNS, set the **Bedrock Endpoint** and **Bedrock Runtime Endpoint** custom endpoints in the credential.
 {% endhint %}
@@ -85,7 +85,7 @@ This node doesn't support the [`NO_PROXY` environment variable](https://app.gitb
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [LangChains's AWS Bedrock Chat Model documentation](https://js.langchain.com/docs/integrations/chat/bedrock/) for more information about the service.
+Refer to [LangChain's AWS Bedrock Chat Model documentation](https://docs.langchain.com/oss/javascript/integrations/chat/bedrock_converse) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

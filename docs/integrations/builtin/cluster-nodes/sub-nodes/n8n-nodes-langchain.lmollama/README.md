@@ -45,7 +45,7 @@ This node lacks tools support, so it won't work with the [AI Agent](../../root-n
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../../credentials/ollama.md).
+Refer to the [Ollama credentials documentation](../../../credentials/ollama.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
@@ -72,7 +72,7 @@ Refer to the Ollama [Models Library documentation](https://ollama.com/library) f
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [LangChains's Ollama documentation](https://js.langchain.com/docs/integrations/llms/ollama/) for more information about the service.
+Refer to [LangChain's Ollama documentation](https://docs.langchain.com/oss/javascript/integrations/llms/ollama) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

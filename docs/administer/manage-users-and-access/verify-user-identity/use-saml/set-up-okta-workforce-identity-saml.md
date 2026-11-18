@@ -115,3 +115,11 @@ In n8n, set **Role assignment** to **Instance roles via SSO** or **Instance and 
 	* **Group priority**: Combine values across groups
 
 Now when you go to **Directory** > **Groups** and edit the assigned n8n application, you can configure the **n8n_instance_role** and **n8n_projects** to be sent to n8n upon logging in via SAML.
+
+## Related resources
+
+* [Use SAML](./)
+* [Set up SAML](set-up-saml.md)
+* [Azure AD SAML setup](set-up-azure-ad-saml.md)
+* [Troubleshoot SAML](troubleshoot-saml.md)
+* [Manage users with SAML](manage-users-with-saml.md)

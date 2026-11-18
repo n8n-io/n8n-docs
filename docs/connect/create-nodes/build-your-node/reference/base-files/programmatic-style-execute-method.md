@@ -27,3 +27,11 @@ The `execute()` method creates and returns an instance of `INodeExecutionData`.
 
 You must include input and output item pairing information in the data you return. For more information, refer to [Paired items](../item-linking.md).
 {% endhint %}
+
+## Related resources
+
+* [Base files](./)
+* [Structure](structure.md)
+* [Standard parameters](standard-parameters.md)
+* [Declarative-style parameters](declarative-style-parameters.md)
+* [Programmatic-style parameters](programmatic-style-parameters.md)

@@ -80,13 +80,13 @@ n8n provides keyboard shortcuts for some actions.
  - **Space**: rename the selected group
  - **Ctrl/Cmd** + **Shift** + **o** on a sub-workflow node: open the sub-workflow in a new tab 
 
-## Node panel <a href="#node-panel" id="node-panel"></a>
+## Nodes panel <a href="#node-panel" id="node-panel"></a>
 
- - **N**: open the Node Panel
+ - **N**: open the Nodes panel
  - **Enter**: insert selected node into workflow
- - **Escape**: close Node panel
+ - **Escape**: close Nodes panel
 
-### Node panel categories <a href="#node-panel-categories" id="node-panel-categories"></a>
+### Nodes panel categories <a href="#node-panel-categories" id="node-panel-categories"></a>
 
 - **Enter**: insert node into workflow, collapse/expand category, open subcategory
 - **ArrowRight**: expand category, open subcategory 
@@ -104,5 +104,17 @@ The Command Bar provides quick access to actions and navigation throughout n8n. 
 * **Resource navigation:** Create and open workflows, credentials, data tables, projects; access recent resources
 * **Execution actions:** Debug, copy, retry, stop, or delete executions
 * **General navigation:** Access Templates, Variables, Insights, Settings, Help resources, and Documentation
+
+## Related resources
+
+* [Build](./)
+* [Understand workflows](understand-workflows/README.md)
+* [Build and manage agents](build-and-manage-agents/README.md)
+* [Ways of building workflows](ways-of-building-workflows/README.md)
+* [Manage workflows](manage-workflows/README.md)
+* [Flow logic](flow-logic/README.md)
+* [Work with data](work-with-data/README.md)
+* [Code in n8n](code-in-n8n/README.md)
+* [Integrate AI](integrate-ai/README.md)
 
 [^1]: In n8n, expressions allow you to populate node parameters dynamically by executing JavaScript code. Instead of providing a static value, you can use the n8n expression syntax to define the value using data from previous nodes, other workflows, or your n8n environment.

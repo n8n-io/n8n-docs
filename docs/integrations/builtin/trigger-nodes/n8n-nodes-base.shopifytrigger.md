@@ -25,7 +25,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/shopify.md).
+Refer to the [Shopify credentials documentation](../credentials/shopify.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}

@@ -1,0 +1,45 @@
+name: Internal link sweep
+# Weekly site-wide internal-link check. The PR gate (internal-links.yml) only sees the
+# markdown changed in that PR, and lychee can't cover internal links at all: lychee.toml
+# sets `base = "https://docs.n8n.io"`, which rewrites every relative link to that host,
+# and then excludes it. So nothing checked the whole site on a schedule, and a break that
+# landed on main stayed invisible until a PR happened to touch its page again (DOC-2396).
+#
+# Unlike the PR gate this runs with --strict-anchors: the site-wide anchor backlog is
+# clear, so a new dead anchor should count rather than warn.
+#
+# Broken links do not fail this job. It is red only if the checker crashed or the report
+# could not be delivered, the same contract as lychee.yml and product-links.yml.
+on:
+  schedule:
+    # Monday 08:18 UTC. 07:18 is the lychee sweep, 07:48 the product-link sweep.
+    - cron: "18 8 * * 1"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  internal-links-sweep:
+    name: runner / internal-links-sweep
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Check internal links across all of docs/
+        # `|| true` so findings don't fail the job; a crash still shows as a missing
+        # report, which the reporter below turns into a red run.
+        run: |
+          python3 .github/scripts/check_internal_links.py \
+            --strict-anchors \
+            --json internal-links/out.json || true
+
+      - name: Send report to n8n
+        if: always()
+        env:
+          REPORT: internal-links/out.json
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          WEBHOOK_URL: ${{ secrets.DOCOPS_INTERNAL_LINKS_WEBHOOK_URL }}
+          WEBHOOK_USER: ${{ secrets.WEBHOOK_USER }}
+          WEBHOOK_PASSWORD: ${{ secrets.WEBHOOK_PASSWORD }}
+        run: python3 .github/scripts/internal_links_report.py

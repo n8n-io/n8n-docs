@@ -27,7 +27,7 @@ On this page, you'll find a list of operations the MongoDB Chat Memory node supp
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/mongodb.md).
+Refer to the [MongoDB credentials documentation](../../credentials/mongodb.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
@@ -41,7 +41,7 @@ You can find authentication information for this node [here](../../credentials/m
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [LangChain's MongoDB Chat Message History documentation](https://js.langchain.com/docs/integrations/memory/mongodb) for more information about the service.
+Refer to [LangChain's MongoDB short-term memory documentation](https://docs.langchain.com/oss/javascript/integrations/memory/mongodb-short-term-memory) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

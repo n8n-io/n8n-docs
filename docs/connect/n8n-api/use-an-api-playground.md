@@ -82,3 +82,12 @@ To find the type, download your workflow as JSON and examine it. For example, fo
 }
 ```
 {% endhint %}
+
+## Related resources
+
+* [n8n API](./)
+* [Authentication](authentication.md)
+* [Pagination](pagination.md)
+* [Idempotency](idempotency.md)
+* [Rate limits](rate-limits.md)
+* [Endpoint reference](api-reference.md)

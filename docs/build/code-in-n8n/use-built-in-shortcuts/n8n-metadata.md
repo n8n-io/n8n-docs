@@ -83,3 +83,10 @@ Python (Pyodide) support is deprecated from n8n 1.113.2. Use Python (native) ins
 | `_workflow.active` | Whether the workflow is active (true) or not (false). |
 | `_workflow.id` | The workflow ID. | 
 | `_workflow.name` | The workflow name. |
+
+## Related resources
+
+* [Use built-in shortcuts](../use-built-in-shortcuts.md)
+* [JMESPath](jmespath.md)
+* [HTTP node](http-node.md)
+* [LangChain Code node](langchain-code-node.md)

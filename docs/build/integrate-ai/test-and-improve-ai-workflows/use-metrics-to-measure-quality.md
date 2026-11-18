@@ -116,3 +116,10 @@ Self-hosted instances can override the maximum with the [`N8N_CONCURRENCY_EVALUA
 
 Higher concurrency speeds up evaluation runs but increases the chance of hitting upstream LLM rate limits. If you see rate-limit errors, lower the slider.
 {% endhint %}
+
+## Related resources
+
+* [Test and improve AI workflows](./)
+* [Understand why to test](understand-why-to-test.md)
+* [Run quick evaluations](run-quick-evaluations.md)
+* [Fix common issues](fix-common-issues.md)

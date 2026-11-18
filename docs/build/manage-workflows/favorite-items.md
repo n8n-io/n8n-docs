@@ -50,6 +50,13 @@ n8n automatically removes a favorite when someone deletes the underlying item. I
 
 ## Related resources
 
-* [Data tables](../work-with-data/data-tables.md)
+* [Manage workflows](./)
+* [Configure workflow settings](configure-workflow-settings.md)
 * [Tag workflows](tag-workflows.md)
+* [View change history](view-change-history.md)
+* [Review workflows](workflow-reviews.md)
+* [Export and import](export-and-import.md)
+* [n8n packages](n8n-packages/README.md)
+* [Share with others](share-with-others.md)
+* [Data tables](../work-with-data/data-tables.md)
 * [Organize work in projects](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/organize-work-in-projects)

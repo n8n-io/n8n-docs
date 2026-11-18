@@ -25,3 +25,13 @@ When you execute a workflow containing an agent, the agent runs multiple times. 
 
 [^1]: AI agents are artificial intelligence systems capable of responding to requests, making decisions, and performing real-world tasks for users. They use large language models (LLMs) to interpret user input and make decisions about how to best process requests using the information and resources they have available.
 [^2]: In an AI context, a tool is an add-on resource that the AI can refer to for specific information or functionality when responding to a request. The AI model can use a tool to interact with external systems or complete specific, focused tasks.
+
+## Related resources
+
+* [Understand AI components](./)
+* [What chains do](what-chains-do.md)
+* [How memory works](how-memory-works.md)
+* [How tools work](how-tools-work.md)
+* [Store and search data with vectors](store-and-search-data-with-vectors.md)
+* [Retrieve relevant context](retrieve-relevant-context.md)
+* [Agents vs chains](agents-vs-chains.md)

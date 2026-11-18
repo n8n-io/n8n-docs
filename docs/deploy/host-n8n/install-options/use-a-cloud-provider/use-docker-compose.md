@@ -165,7 +165,7 @@ services:
       - N8N_PORT=5678
       - N8N_PROTOCOL=https  
       - NODE_ENV=production
-      - WEBHOOK_URL=https://${SUBDOMAIN}.${DOMAIN_NAME}/
+      - N8N_WEBHOOK_URL=https://${SUBDOMAIN}.${DOMAIN_NAME}/
       - GENERIC_TIMEZONE=${GENERIC_TIMEZONE}
       - TZ=${GENERIC_TIMEZONE}
       - N8N_RESTRICT_FILE_ACCESS_TO=/files
@@ -177,6 +177,8 @@ volumes:
   n8n_data:
   traefik_data:
 ```
+
+`N8N_WEBHOOK_URL` is available from n8n 2.30.0; on earlier versions, use `WEBHOOK_URL`.
 
 The Docker Compose file above configures two containers: one for n8n, and one to run [Traefik](https://github.com/traefik/traefik), an application proxy to manage TLS/SSL certificates and handle routing.
 
@@ -214,4 +216,14 @@ If you have trouble reaching your instance, check your server's firewall setting
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/GtC2RL8itCPuNiwv5UUW/" %}
 
-See [Use a cloud provider](README.md) for other cloud deployment options.
+## Related resources
+
+* [Use a cloud provider](./)
+* [DigitalOcean](deploy-to-digital-ocean.md)
+* [Heroku](deploy-to-heroku.md)
+* [Hetzner Cloud](deploy-to-hetzner.md)
+* [AWS](deploy-to-aws.md)
+* [Azure](deploy-to-azure.md)
+* [Google Cloud Run](deploy-to-google-cloud-run.md)
+* [Google Kubernetes Engine](deploy-to-google-kubernetes.md)
+* [OpenShift Local (CRC)](deploy-to-openshift-local-crc.md)

@@ -5,7 +5,7 @@ absolute, cross-space relative, cross-space broken, .md extension, target
 exists), asset and absolute-path handling, and the parsing helpers that decide
 what counts as a link at all.
 
-Also asserts that the space-ID table still parses out of the real style guide.
+Also asserts that the space-ID table still parses out of the real SPACE_INDEX.md.
 That table is scraped from Markdown with a regex, so reformatting it would
 silently empty the map and make every cross-space link unverifiable while the
 job still exits 0 -- the one failure mode this checker can't self-report.
@@ -13,6 +13,7 @@ job still exits 0 -- the one failure mode this checker can't self-report.
 Run: python3 .github/scripts/tests/test_check_internal_links.py
 """
 import importlib.util
+import re
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -22,6 +23,36 @@ FIXTURE_REPO = HERE / "fixtures" / "links"
 spec = importlib.util.spec_from_file_location("cil", SCRIPT)
 cil = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(cil)
+
+# Deliberately looser than check_internal_links' SPACE_ID_ROW_RE: any row of two
+# backticked cells. Sharing that regex would make the count check tautological —
+# tighten it wrongly and both sides would drop the same rows in lockstep.
+_ANY_BACKTICK_ROW = re.compile(r"^\|\s*`([^`]+)`\s*\|\s*`([^`]+)`\s*\|")
+
+
+def space_table_rows(path, header):
+    """(folder, space_id) rows from one Markdown space table, read straight from
+    the file. Scoped to the table starting with `header` so another two-column
+    table on the same page can't inflate it."""
+    rows = []
+    in_table = False
+    for line in path.read_text(encoding="utf-8").split("\n"):
+        if line.strip().startswith(header):
+            in_table = True
+            continue
+        if not in_table:
+            continue
+        if not line.strip().startswith("|"):
+            break                      # table ended
+        m = _ANY_BACKTICK_ROW.match(line)
+        if m:                          # the |---|---| separator just won't match
+            rows.append((m.group(1), m.group(2)))
+    return rows
+
+
+def space_table_folders():
+    """Folder names in the generated index — the file the checker actually parses."""
+    return [f for f, _ in space_table_rows(cil.SPACE_ID_TABLE_FILE, "| Folder")]
 
 checks = []
 
@@ -41,11 +72,20 @@ def category(src_rel, target):
 
 
 def main():
-    # --- Real style guide: the space table must still parse -------------------
+    # --- Real SPACE_INDEX.md: the space table must still parse ----------------
     # Run before the fixture overrides below, while the module still points at
     # the real repo.
     real_spaces = cil.load_space_ids()
-    check("space-ID table parses out of the real style guide", len(real_spaces) == 9)
+    # Derived from the table, not hardcoded (DOC-2353): the point is "the parser
+    # still picks up every row", not "there are exactly N spaces". A hardcoded
+    # count turned every new space into a CI break (DOC-2351). load_space_ids
+    # also drops rows whose folder is missing, so mirror that filter here.
+    expected_folders = [f for f in space_table_folders() if (cil.DOCS_ROOT / f).is_dir()]
+    check("SPACE_INDEX.md still has a parseable space table", len(expected_folders) > 0)
+    check("space-ID table parses out of the real SPACE_INDEX.md",
+          len(real_spaces) == len(expected_folders))
+    check("every table folder made it into the map",
+          sorted(real_spaces.values()) == sorted(expected_folders))
     check("space table maps integrations", real_spaces.get("BKcbOzIWja8NfqKDcqHc") == "integrations")
     check("space table maps deploy", real_spaces.get("jm0ZYRpZIPWge2ZSiDYO") == "deploy")
 
@@ -91,9 +131,46 @@ def main():
     check("same-space relative link passes", category(A, "sub/page-two.md") is None)
     check("relative link up and back down passes", category(A_SUB, "../page-one.md") is None)
     check("link without .md is flagged", category(A, "sub/page-two") == "no-md-extension")
-    check("trailing-slash link is flagged", category(A, "sub/") == "no-md-extension")
     check("missing .md target is flagged", category(A, "gone.md") == "missing-target")
     check("absolute path is flagged", category(A, "/spacea/page-one.md") == "absolute-path")
+
+    # --- Markdown backslash escapes, end to end (DOC-2570) --------------------
+    # A link target must escape parens, so `(node-name).all.md` is written
+    # `\(node-name\).all.md`. The weekly sweep reported docs/build/SUMMARY.md as
+    # missing-target every week because the backslashes reached the file lookup.
+    # These run a Markdown line through the same parse -> classify path as main().
+    def line_categories(src_rel, md_line):
+        return [category(src_rel, t) for _, t in cil.iter_targets(md_line)]
+
+    check("an escaped-paren SUMMARY entry resolves to the real file",
+          line_categories(A, r"* [(node-name).all](\(node-name\).all.md)") == [None])
+    check("an escaped-paren reference definition resolves to the real file",
+          line_categories(A, "[ref]: \\(node-name\\).all.md\n") == [None])
+    check("an escaped-paren link that really is missing is still flagged",
+          line_categories(A, r"[x](\(gone\).all.md)") == ["missing-target"])
+    check("an escaped-paren link with a bad anchor reaches the anchor check",
+          line_categories(A, r"[x](\(node-name\).all.md#nope)") == ["broken-anchor"])
+    # Escapes are dropped before the `#` split, as GitBook renders them: `\#` is a
+    # plain `#` in the href, so it still starts the anchor (cubic on PR #5707).
+    check("an escaped '#' still starts the anchor",
+          [t for _, t in cil.iter_targets(r"[x](page-one.md\#section-one)")]
+          == ["page-one.md#section-one"])
+    check("a backslash before a letter or digit is kept",
+          [t for _, t in cil.iter_targets(r"[x](a\nb\1.md)")] == [r"a\nb\1.md"])
+    check("HTML href values are not unescaped",
+          [t for _, t in cil.iter_targets(r'<a href="a\(b\).md">x</a>')] == [r"a\(b\).md"])
+
+    # --- Rule 1 exception: bare directory references resolve to README.md ----
+    check("current-folder bare directory reference resolves",
+          category(A, "./") is None)
+    check("parent-folder bare directory reference resolves",
+          category(A_SUB, "../") is None)
+    check("sibling-folder bare directory reference resolves",
+          category(A, "sub/") is None)
+    check("bare directory reference to a folder with no README is flagged",
+          category(A, "nope/") == "missing-target")
+    check("cross-space bare directory reference is flagged",
+          category(A, "../spaceb/") == "cross-space-relative")
 
     # --- Assets ---------------------------------------------------------------
     check("existing asset passes", category(A, ".gitbook/assets/img.png") is None)
@@ -192,6 +269,49 @@ def main():
     check("and that documented id isn't treated as a real anchor",
           category("docs/spacea/id-in-code-heading.md", "#example") == "broken-anchor")
 
+    # GitBook makes repeated heading ids unique with -1, -2 in page order
+    # (enterprise-hub: a stepper step and the section below share a title).
+    G = "docs/spacea/gitbook-ids.md"
+    check("first of repeated headings keeps the plain slug",
+          category(G, "#publish-first-workflow") is None)
+    check("second repeated heading resolves as -1",
+          category(G, "#publish-first-workflow-1") is None)
+    check("third repeated heading resolves as -2",
+          category(G, "#publish-first-workflow-2") is None)
+    check("a suffix past the last repeat is still broken",
+          category(G, "#publish-first-workflow-3") == "broken-anchor")
+
+    # GitBook serves explicit ids cut to 100 characters (v20-breaking-changes).
+    long_id = ("return-expected-sub-workflow-data-when-the-sub-workflow-resumes-"
+               "from-waiting-waiting-for-webhook-forms-hitl-etc")
+    check("the 100-character form of a long explicit id resolves",
+          category(G, "#" + long_id[:100]) is None)
+    check("the full long explicit id still resolves",
+          category(G, "#" + long_id) is None)
+    check("a shorter cut of a long id is still broken",
+          category(G, "#" + long_id[:90]) == "broken-anchor")
+
+    # A repeated heading whose slug is over 100 characters: unverified whether
+    # GitBook cuts before or after adding -1, so both forms must resolve.
+    long_slug = cil.anchor_slug("Long repeated heading about sandbox setup options "
+                                "about sandbox setup options about sandbox setup "
+                                "options for production")
+    check("fixture long slug is over 100 characters", len(long_slug) > 100)
+    check("long repeated heading: cut then suffix resolves",
+          category(G, "#" + long_slug[:100] + "-1") is None)
+    check("long repeated heading: suffix then cut resolves",
+          category(G, "#" + (long_slug + "-1")[:100]) is None)
+    check("long repeated heading: a suffix past the last repeat is still broken",
+          category(G, "#" + long_slug[:100] + "-2") == "broken-anchor")
+    # At 99 characters the two orders give different ids, so test both.
+    edge = cil.anchor_slug("Edge case heading with exactly ninety nine characters "
+                           "in its generated slug for the suffix tests ab")
+    check("fixture edge slug is 99 characters", len(edge) == 99)
+    check("99-character repeated heading: cut then suffix resolves",
+          category(G, "#" + edge[:100] + "-1") is None)
+    check("99-character repeated heading: suffix then cut resolves",
+          category(G, "#" + (edge + "-1")[:100]) is None)
+
     check("a block whose index Name is only in frontmatter resolves",
           cil.reusable_blocks().get("BLOCK2") is not None)
 
@@ -225,6 +345,12 @@ def main():
           [t for _, t in cil.iter_targets("[ref]: page-one.md\n")] == ["page-one.md"])
     check("filenames with parens are captured whole",
           [t for _, t in cil.iter_targets("[x]((node-name).all.md)")] == ["(node-name).all.md"])
+    check("escaped parens in an inline link are unescaped",
+          [t for _, t in cil.iter_targets(r"[x](\(node-name\).all.md)")] == ["(node-name).all.md"])
+    check("an escaped closing paren doesn't end an inline link",
+          [t for _, t in cil.iter_targets(r"[x](a\).md)")] == ["a).md"])
+    check("escaped parens in a reference definition are unescaped",
+          [t for _, t in cil.iter_targets("[ref]: \\(node-name\\).all.md\n")] == ["(node-name).all.md"])
 
     # --- space_of -------------------------------------------------------------
     check("space_of reads the top-level folder", cil.space_of(A) == "spacea")

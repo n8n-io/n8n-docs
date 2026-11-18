@@ -21,7 +21,7 @@ You need an authenticator app on your phone.
 
 To enable 2FA in n8n:
 
-1. Go to you **Settings** > **Personal**.
+1. Go to **Settings** > **Profile & preferences**.
 2. Select **Enable 2FA**. n8n opens a modal with a QR code.
 3. Scan the QR code in your authenticator app.
 4. Enter the code from your app in **Code from authenticator app**.
@@ -31,3 +31,10 @@ To enable 2FA in n8n:
 ## Disable 2FA for your instance <a href="#disable-2fa-for-your-instance" id="disable-2fa-for-your-instance"></a>
 
 Self-hosted users can configure their n8n instance to disable 2FA for all users by setting `N8N_MFA_ENABLED` to false. Note that n8n ignores this if existing users have 2FA enabled. Refer to [Configuration methods](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration) for more information on configuring your n8n instance with environment variables.
+
+## Related resources
+
+* [Verify user identity](./)
+* [Connect LDAP](connect-ldap.md)
+* [Use SAML](use-saml/README.md)
+* [Use OIDC](use-oidc/README.md)

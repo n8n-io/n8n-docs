@@ -26,7 +26,7 @@ Use the Redis Trigger node to subscribe to a Redis channel. The workflow starts 
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/redis.md).
+Refer to the [Redis credentials documentation](../credentials/redis.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}

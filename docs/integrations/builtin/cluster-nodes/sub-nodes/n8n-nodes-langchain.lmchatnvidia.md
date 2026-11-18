@@ -29,7 +29,7 @@ On this page, you'll find the node parameters for the NVIDIA Nemotron Chat Model
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/nvidia.md).
+Refer to the [NVIDIA Nemotron credentials documentation](../../credentials/nvidia.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
@@ -85,7 +85,7 @@ Use this option to set the probability the completion should use. Use a lower va
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [NVIDIA's build catalogue](https://build.nvidia.com/models) for the list of Nemotron models and to the [NIM documentation](https://docs.nvidia.com/nim/) for guidance on self-hosting. As the NVIDIA API is OpenAI-spec compatible, you can refer to [LangChain's OpenAI documentation](https://js.langchain.com/docs/integrations/chat/openai/) for more information about the underlying client.
+Refer to [NVIDIA's build catalogue](https://build.nvidia.com/models) for the list of Nemotron models and to the [NIM documentation](https://docs.nvidia.com/nim/) for guidance on self-hosting. As the NVIDIA API is OpenAI-spec compatible, you can refer to [LangChain's OpenAI documentation](https://docs.langchain.com/oss/javascript/integrations/chat/openai) for more information about the underlying client.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

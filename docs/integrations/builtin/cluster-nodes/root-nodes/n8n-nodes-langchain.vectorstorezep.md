@@ -51,7 +51,7 @@ On this page, you'll find the node parameters for the Zep Vector Store node, and
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/zep.md).
+Refer to the [Zep credentials documentation](../../credentials/zep.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}
@@ -142,8 +142,6 @@ Disable this to configure your embeddings in Zep instead of in n8n.
 [Browse Zep Vector Store node documentation integration templates](https://n8n.io/integrations/zep-vector-store) or [search all templates](https://n8n.io/workflows/)
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
-
-Refer to [LangChain's Zep documentation](https://js.langchain.com/docs/integrations/vectorstores/zep/) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

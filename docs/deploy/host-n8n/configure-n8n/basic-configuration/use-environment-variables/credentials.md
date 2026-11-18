@@ -32,3 +32,7 @@ Enable credential overwrites using the following environment variables. Refer to
 | `CREDENTIALS_OVERWRITE_PERSISTENCE` | Boolean | `false` | Enable database persistence for credential overwrites. Required for multi-instance or queue mode to propagate overwrites to workers through a publish/subscribe approach. |
 | `N8N_MANAGED_OAUTH_SHOW_SCOPES` | String | - | Comma-separated list of managed OAuth credential types for which users can configure scope fields. |
 | `CREDENTIALS_DEFAULT_NAME` | String | `My credentials` | The default name for credentials. |
+
+## Related resources
+
+* [Environment variables](./)

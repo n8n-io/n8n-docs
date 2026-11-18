@@ -14,10 +14,17 @@ layout:
 
 This section is the complete endpoint reference for n8n's public REST API, generated from the OpenAPI specification. Use it to explore every available operation and view the parameters, request bodies, and response schemas.
 
+The reference matches the latest stable n8n release. If you run a beta version, newer endpoints might not appear here yet.
+
 {% hint style="info" %}
 **Feature availability**
 
-The n8n API isn't available during the free trial. Please upgrade to access this feature.
+The n8n API is available on:
+
+- **n8n Cloud:** Starter, Pro, Enterprise
+- **Self-hosted:** All editions
+
+It isn't available on the free trial.
 {% endhint %}
 
 ## Before you start
@@ -27,6 +34,7 @@ The n8n API isn't available during the free trial. Please upgrade to access this
     * n8n Cloud: `https://<your-instance>.app.n8n.cloud/api/v1`
     * Self-hosted: `https://<your-domain>/api/v1`
 * **Paginate** large result sets. Refer to [Pagination](pagination.md).
+* **Retry a POST** with an `Idempotency-Key` header. Refer to [Idempotency](idempotency.md).
 
 ## Browse the endpoints
 
@@ -37,3 +45,12 @@ The endpoints are grouped by resource in the left sidebar under **n8n API**: Wor
 
 To experiment with live calls, use the [built-in API playground](use-an-api-playground.md) (self-hosted n8n only), or point requests at a test workflow or test instance.
 {% endhint %}
+
+## Related resources
+
+* [n8n API](./)
+* [Authentication](authentication.md)
+* [Pagination](pagination.md)
+* [Idempotency](idempotency.md)
+* [Rate limits](rate-limits.md)
+* [Use an API playground](use-an-api-playground.md)

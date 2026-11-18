@@ -40,7 +40,7 @@ Use the Postgres Trigger node to respond to events in [Postgres](https://www.pos
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/postgres.md).
+Refer to the [Postgres credentials documentation](../credentials/postgres.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}
@@ -70,6 +70,6 @@ You can configure how the node listens for events.
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for Postgres. You can find the node docs [here](../app-nodes/n8n-nodes-base.postgres/README.md).
+n8n provides an app node for Postgres. Refer to the [Postgres node documentation](../app-nodes/n8n-nodes-base.postgres/README.md) for more information.
 
 View [example workflows and related content](https://n8n.io/integrations/postgres-trigger/) on n8n's website.

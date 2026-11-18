@@ -30,7 +30,7 @@ On this page, you'll find a list of operations the Anthropic node supports, and 
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/anthropic.md).
+Refer to the [Anthropic credentials documentation](../credentials/anthropic.md) for authentication information for this node.
 {% endhint %}
 
 

@@ -50,7 +50,7 @@ Refer to [Google Calendar credentials](../../credentials/google/README.md) for g
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides a trigger node for Google Calendar. You can find the trigger node docs [here](../../trigger-nodes/n8n-nodes-base.googlecalendartrigger.md).
+n8n provides a trigger node for Google Calendar. Refer to the [Google Calendar Trigger node documentation](../../trigger-nodes/n8n-nodes-base.googlecalendartrigger.md) for more information.
 
 Refer to [Google Calendar's documentation](https://developers.google.com/calendar/api/v3/reference) for more information about the service.
 

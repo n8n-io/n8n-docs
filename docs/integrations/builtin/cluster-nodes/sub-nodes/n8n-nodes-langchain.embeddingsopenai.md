@@ -28,7 +28,7 @@ On this page, you'll find the node parameters for the Embeddings OpenAI node, an
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/openai.md).
+Refer to the [OpenAI credentials documentation](../../credentials/openai.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
@@ -49,7 +49,7 @@ You can find authentication information for this node [here](../../credentials/o
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [LangChains's OpenAI embeddings documentation](https://js.langchain.com/docs/integrations/text_embedding/openai/) for more information about the service.
+Refer to [LangChain's OpenAI embeddings documentation](https://docs.langchain.com/oss/javascript/integrations/embeddings/openai) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

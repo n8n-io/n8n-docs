@@ -24,7 +24,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/customerio.md).
+Refer to the [Customer.io credentials documentation](../credentials/customerio.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}
@@ -74,7 +74,7 @@ For usage examples and templates to help you get started, refer to n8n's [Custom
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for Customer.io. You can find the node docs [here](../app-nodes/n8n-nodes-base.customerio.md).
+n8n provides an app node for Customer.io. Refer to the [Customer.io node documentation](../app-nodes/n8n-nodes-base.customerio.md) for more information.
 
 View [example workflows and related content](https://n8n.io/integrations/customerio-trigger/) on n8n's website.
 

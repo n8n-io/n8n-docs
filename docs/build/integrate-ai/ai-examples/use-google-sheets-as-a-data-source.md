@@ -46,3 +46,12 @@ This workflow uses:
 ## Using the example <a href="#using-the-example" id="using-the-example"></a>
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/vKIIq31qrlay3ovXTvUj/" %}
+
+## Related resources
+
+* [AI examples](../ai-examples.md)
+* [Call APIs](call-apis.md)
+* [Use website content](use-website-content.md)
+* [Human-in-the-loop for tools](human-in-the-loop-for-tools.md)
+* [Set a human fallback for AI workflows](set-a-human-fallback-for-ai-workflows.md)
+* [Use AI for parameters](use-ai-for-parameters.md)

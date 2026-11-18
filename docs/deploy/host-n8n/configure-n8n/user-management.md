@@ -119,3 +119,7 @@ This variable expects a pre-hashed bcrypt value. Setting a plaintext password br
 ### Step three: Invite users <a href="#step-three-invite-users" id="step-three-invite-users"></a>
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/8qoOEjsLz4RnydVBogNy/" %}
+
+## Related resources
+
+* [Configure n8n](./)

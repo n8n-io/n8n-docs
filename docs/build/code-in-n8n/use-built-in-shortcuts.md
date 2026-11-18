@@ -30,4 +30,19 @@ All data transformation functions (the top-level helper functions listed in this
 
 The [Cookbook](README.md) contains examples for some common tasks, including some [Code node only](cookbook/code-node/README.md) functions.
 
+## In this section
+
+* [JMESPath](use-built-in-shortcuts/jmespath.md): use the JMESPath library in n8n.
+* [HTTP node](use-built-in-shortcuts/http-node.md): methods for common tasks in HTTP Request node expressions.
+* [LangChain Code node](use-built-in-shortcuts/langchain-code-node.md): methods for common tasks in the LangChain Code node.
+* [n8n metadata](use-built-in-shortcuts/n8n-metadata.md): methods for working with n8n metadata.
+
+## Related resources
+
+* [Code in n8n](./)
+* [Using the Code node](using-the-code-node.md)
+* [Get coding help from AI](get-coding-help-from-ai.md)
+* [Define custom variables](define-custom-variables.md)
+* [Cookbook](cookbook/README.md)
+
 [^1]: In n8n, expressions allow you to populate node parameters dynamically by executing JavaScript code. Instead of providing a static value, you can use the n8n expression syntax to define the value using data from previous nodes, other workflows, or your n8n environment.

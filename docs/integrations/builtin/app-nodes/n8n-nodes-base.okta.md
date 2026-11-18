@@ -24,7 +24,7 @@ On this page, you'll find a list of operations the Okta node supports, and links
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/okta.md).
+Refer to the [Okta credentials documentation](../credentials/okta.md) for authentication information for this node.
 {% endhint %}
 
 ## Operations <a href="#operations" id="operations"></a>

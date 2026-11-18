@@ -40,3 +40,7 @@ layout:
 
 **Source:**  Custom n8n functionality
 
+
+## Related resources
+
+* [Expression reference](./)

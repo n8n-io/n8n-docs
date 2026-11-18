@@ -32,7 +32,7 @@ On this page, you'll find the node parameters for the Anthropic Chat Model node,
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/anthropic.md).
+Refer to the [Anthropic credentials documentation](../../credentials/anthropic.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
@@ -58,7 +58,7 @@ You can find authentication information for this node [here](../../credentials/a
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [LangChains's Anthropic documentation](https://js.langchain.com/docs/integrations/chat/anthropic/) for more information about the service.
+Refer to [LangChain's Anthropic documentation](https://docs.langchain.com/oss/javascript/integrations/chat/anthropic) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

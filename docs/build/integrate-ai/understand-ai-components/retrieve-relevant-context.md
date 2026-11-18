@@ -103,3 +103,13 @@ Another good approach is to add more context to it (for example, about the docum
 [^2]: In AI, and specifically in retrieval-augmented generation (RAG) contexts, groundedness and ungroundedness are measures of how much a model's responses accurately reflect source information. The model uses its source documents to generate grounded responses, while ungrounded responses involve speculation or hallucination unsupported by those same sources.
 [^3]: A vector store, or vector database, stores mathematical representations of information. Use with embeddings and retrievers to create a database that your AI can access when answering questions.
 [^4]: Embeddings are numerical representations of data using vectors. They're used by AI to interpret complex data and relationships by mapping values across many dimensions. Vector databases, or vector stores, are databases designed to store and access embeddings.
+
+## Related resources
+
+* [Understand AI components](./)
+* [What chains do](what-chains-do.md)
+* [What agents do](what-agents-do.md)
+* [How memory works](how-memory-works.md)
+* [How tools work](how-tools-work.md)
+* [Store and search data with vectors](store-and-search-data-with-vectors.md)
+* [Agents vs chains](agents-vs-chains.md)

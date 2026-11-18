@@ -32,7 +32,7 @@ n8n collects anonymous telemetry data from self-hosted n8n installations. You ca
 
 ## Collected data <a href="#collected-data" id="collected-data"></a>
 
-Refer to [Privacy | Data collection in self-hosted n8n](https://app.gitbook.com/s/ukPPOMQ6NId4gpAIkPXa/#data-collection-in-self-hosted-n8n) for details on the data n8n collects.
+Refer to [Privacy | Telemetry](https://app.gitbook.com/s/ukPPOMQ6NId4gpAIkPXa/#telemetry) for details on the data n8n collects.
 
 ## How collection works <a href="#how-collection-works" id="how-collection-works"></a>
 
@@ -64,5 +64,6 @@ To prevent all communication with n8n's servers, refer to [Isolate n8n](../basic
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
+* [Security](../security.md): audit, harden, and restrict a self-hosted instance.
 * [Deployment environment variables](../basic-configuration/use-environment-variables/deployment.md): More information on these environment variables.
 * [Configuration](../basic-configuration.md): How to set environment variables.

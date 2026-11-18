@@ -420,3 +420,9 @@ You could do a search like "find the item with the name Lenovo and tell me their
 ```js
 {{ $jmespath($("Code").all(), "[?json.name=='Lenovo'].json.category_id") }}
 ```
+
+## Related resources
+
+* [Handle special data types](./)
+* [Work with files and images](work-with-files-and-images.md)
+* [Work with dates and times](work-with-dates-and-times.md)

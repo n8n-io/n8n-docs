@@ -26,7 +26,7 @@ On this page, you'll find a list of operations the LoneScale node supports, and 
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/lonescale.md).
+Refer to the [LoneScale credentials documentation](../credentials/lonescale.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}
@@ -41,6 +41,6 @@ For usage examples and templates to help you get started, refer to n8n's [LoneSc
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for LoneScale. You can find the node docs [here](../app-nodes/n8n-nodes-base.lonescale.md).
+n8n provides an app node for LoneScale. Refer to the [LoneScale node documentation](../app-nodes/n8n-nodes-base.lonescale.md) for more information.
 
 View [example workflows and related content](https://n8n.io/integrations/lonescale-trigger/) on n8n's website.

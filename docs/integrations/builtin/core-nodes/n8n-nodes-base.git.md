@@ -22,7 +22,7 @@ layout:
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../credentials/git.md).
+Refer to the [Git credentials documentation](../credentials/git.md) for authentication information for this node.
 {% endhint %}
 
 ## Operations <a href="#operations" id="operations"></a>

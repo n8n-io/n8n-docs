@@ -27,7 +27,7 @@ Use this object to receive updates sent to a specific app. Refer to [Facebook Tr
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/facebookapp.md).
+Refer to the [Facebook App credentials documentation](../../credentials/facebookapp.md) for authentication information for this node.
 {% endhint %}
 
 {% hint style="info" %}

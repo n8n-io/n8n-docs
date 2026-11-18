@@ -27,7 +27,7 @@ On this page, you'll find the node parameters for the Embeddings Google PaLM nod
 {% hint style="info" %}
 **Credentials**
 
-You can find authentication information for this node [here](../../credentials/googleai.md).
+Refer to the [Google Gemini(PaLM) credentials documentation](../../credentials/googleai.md) for authentication information for this node.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}
@@ -44,8 +44,6 @@ n8n dynamically loads models from the Google PaLM API and you'll only see the mo
 [Browse Embeddings Google PaLM node documentation integration templates](https://n8n.io/integrations/embeddings-google-palm) or [search all templates](https://n8n.io/workflows/)
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
-
-Refer to [Langchain's Google PaLM embeddings documentation](https://js.langchain.com/v0.2/docs/integrations/text_embedding/google_palm/) for more information about the service.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 

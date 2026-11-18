@@ -132,3 +132,11 @@ To embed your own video, copy the above syntax, replacing `ZCuL2e4zC_4` with you
 See [Workflow components](README.md) for other elements you can add to a workflow.
 
 [^1]: n8n templates are pre-built workflows designed by n8n and community members that you can import into your n8n instance. When using templates, you may need to fill in credentials and adjust the configuration to suit your needs.
+
+## Related resources
+
+* [Workflow components](./)
+* [Work with nodes](work-with-nodes.md)
+* [Connect nodes together](connect-nodes-together.md)
+* [Canvas Groups](canvas-groups.md)
+* [Find your workflow ID](find-your-workflow-id.md)

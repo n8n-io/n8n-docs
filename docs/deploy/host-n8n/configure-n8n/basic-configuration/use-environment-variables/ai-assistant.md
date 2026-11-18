@@ -22,3 +22,7 @@ layout:
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
 | `N8N_AI_ASSISTANT_BASE_URL` | String | (empty) | Base URL of the AI assistant service, specified as `https://ai-assistant.n8n.io `. Required if you self-host n8n and want to enable Ask n8n AI. |
+
+## Related resources
+
+* [Environment variables](./)

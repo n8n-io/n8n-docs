@@ -29,3 +29,7 @@ You can also set maximum execution time (in seconds) for each workflow individua
 export EXECUTIONS_TIMEOUT_MAX=7200
 ```
 Refer to [Environment variables reference](../use-environment-variables/executions.md) for more information on these variables.
+
+## Related resources
+
+* [Configuration examples](./)

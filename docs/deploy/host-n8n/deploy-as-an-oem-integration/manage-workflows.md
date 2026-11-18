@@ -406,3 +406,9 @@ The details and scope of this workflow will vary greatly according to the indivi
 For each new user, or for any existing user as may be needed, call the webhook defined as the workflow trigger and provide the necessary credentials (and any other workflow parameters).
 
 [^1]: In n8n, credentials store authentication information to connect with specific apps and services. After creating credentials with your authentication information (username and password, API key, OAuth secrets, etc.), you can use the associated app node to interact with the service.
+
+## Related resources
+
+* [Deploy as an OEM integration](./)
+* [Prerequisites](prerequisites.md)
+* [Set up token exchange](set-up-token-exchange.md)

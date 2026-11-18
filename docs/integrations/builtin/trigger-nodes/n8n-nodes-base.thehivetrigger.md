@@ -58,14 +58,14 @@ For usage examples and templates to help you get started, refer to n8n's [TheHiv
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-n8n provides an app node for TheHive. You can find the node docs [here](../app-nodes/n8n-nodes-base.thehive.md).
+n8n provides an app node for TheHive. Refer to the [TheHive node documentation](../app-nodes/n8n-nodes-base.thehive.md) for more information.
 
 View [example workflows and related content](https://n8n.io/integrations/thehive-trigger/) on n8n's website.
 
 Refer to TheHive's documentation for more information about the service:
 
-* [Version 3](https://docs.thehive-project.org/thehive/legacy/thehive3/api/)
-* [Version 4](https://docs.thehive-project.org/cortex/api/api-guide/)
+* The API docs for TheHive 3 and 4 are no longer online. Refer to the [TheHive 5 API documentation](https://docs.strangebee.com/thehive/api-docs/) for the current API.
+* [Cortex API guide](https://docs.strangebee.com/cortex/api/api-guide/), for Cortex, the analysis engine that works with TheHive.
 
 
 ## Configure a webhook in TheHive <a href="#configure-a-webhook-in-thehive" id="configure-a-webhook-in-thehive"></a>

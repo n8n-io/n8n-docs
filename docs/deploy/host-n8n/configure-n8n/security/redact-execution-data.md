@@ -65,7 +65,7 @@ You configure redaction per workflow in the workflow settings. You need the `wor
 To configure redaction:
 
 1. Open your workflow.
-2. Select the **three dots icon** <img src="../../../.gitbook/assets/three-dots-horizontal (1).png" alt="three dots icon" data-size="line"> in the upper-right corner.
+2. Select the **Workflow menu** <img src="../../../.gitbook/assets/three-dots-horizontal (1).png" alt="Workflow menu icon" data-size="line"> in the upper-right corner.
 3. Select **Settings**.
 4. Find the **Redact production execution data** and **Redact manual execution data** settings.
 5. For each setting, choose either **Default - Do not redact** or **Redact**.
@@ -90,7 +90,7 @@ There are two independent toggles that control redaction:
 
 Instance owners and admins can enforce redaction for all workflows on the instance instead of relying on each workflow's individual settings. Enforcement sets a minimum redaction policy (a "floor") that applies everywhere.
 
-To enable enforcement, navigate to **Settings** > **Security** and configure the **Data redaction** section. Refer to [Security settings](manage-security-policies.md#enforce-execution-data-redaction) for the step-by-step instructions.
+To enable enforcement, navigate to **Settings** > **Policies** and configure the **Data redaction** section. Refer to [Security settings](manage-security-policies.md#enforce-execution-data-redaction) for the step-by-step instructions.
 
 ### Enforcement scope <a href="#enforcement-scope" id="enforcement-scope"></a>
 
@@ -208,3 +208,7 @@ Redaction controls the visibility of execution data when users view executions. 
 * When you [create custom nodes](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/create-nodes/overview), you can declare specific output fields as sensitive (using `sensitiveOutputFields` in the node type definition). n8n always redacts these fields and prevents revealing them, even for users with reveal access.
 * If the redaction service can't resolve a node's type definition (for example, after uninstalling a community node), n8n fully redacts all output data for that node. This fail-closed approach prevents unknown nodes from leaking sensitive fields.
 * When redaction is enabled, execution data is also automatically redacted from [log streaming](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/stream-logs-to-external-systems) and logging output.
+
+## Related resources
+
+* [Security](../security.md)

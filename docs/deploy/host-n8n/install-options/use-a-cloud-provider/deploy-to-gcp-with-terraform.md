@@ -1,5 +1,5 @@
 ---
-description: A step-by-step walkthrough that deploys a working n8n instance on Google Cloud Platform with the terraform-google-n8n module, from an empty folder to a running editor.
+description: A step-by-step walkthrough that deploys a working n8n instance on Google Cloud with the terraform-google-n8n module, from an empty folder to a running editor.
 layout:
   description:
     visible: false

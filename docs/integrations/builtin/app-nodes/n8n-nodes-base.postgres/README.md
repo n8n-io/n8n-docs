@@ -164,7 +164,7 @@ Enter these parameters:
 
 The node returns one item for each schema, as `{ "schema_name": "public" }`. It runs the same query as the **Schema** dropdown, so the two always agree. The list shows the schemas that the credential's database user owns or has a privilege on. It includes the system schemas `pg_catalog` and `information_schema`, which most workflows filter out.
 
-Like the other operations, List Schemas runs its query one time for each item the node receives. Turn on **Execute Once** in the node's **Settings** to run it one time.
+Like the other operations, **List Schemas** runs its query one time for each item the node receives. Turn on **Execute Once** in the node's **Settings** to run it one time.
 
 #### List Schemas options
 
@@ -184,7 +184,7 @@ Enter these parameters:
 
 - **Credential to connect with**: Create or select an existing [Postgres credential](../../credentials/postgres.md).
 - **Operation**: Select **List Tables**.
-- **Schema**: Choose the schema that contains the tables you want to list. Select **From list** to choose the schema from the dropdown list or **By Name** to enter the schema name. This is required and defaults to `public`. This operation takes no **Table**.
+- **Schema**: Choose the schema that contains the tables you want to list. Select **From List** to choose the schema from the dropdown list or **By Name** to enter the schema name. This is required and defaults to `public`. This operation takes no **Table**.
 
 The node returns one item for each entry, as `{ "table_name": "orders", "table_type": "BASE TABLE" }`. A schema holds more than tables, so use `table_type` to tell them apart:
 

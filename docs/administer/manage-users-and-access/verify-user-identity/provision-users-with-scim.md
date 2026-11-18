@@ -52,13 +52,14 @@ If your IdP sends a `roles` attribute, n8n accepts it but ignores the value. Thi
 To use SCIM provisioning, you need:
 
 * An n8n Enterprise plan.
-* Permission to manage SCIM. Instance owners and instance admins can manage SCIM, as well as any [custom instance role](../set-permissions-and-roles-rbac/create-custom-instance-roles.md) with the **Instance settings** > **Manage** permission.
+* Permission to manage SCIM. Instance owners and instance admins can manage SCIM.
 * SAML or OIDC single sign-on set up and active. You can't turn on SCIM without it. SCIM doesn't work with LDAP. To set up SSO, see [Set up SAML](use-saml/set-up-saml.md) or [Set up OIDC](use-oidc/set-up-oidc.md).
+* While SCIM is in Preview, the `N8N_ENV_FEAT_SCIM` environment variable set to `true` on your n8n instance. Restart n8n after you set it. Without this variable, n8n hides the SCIM section and the SCIM endpoints return a `404` error.
 
 ## Turn on SCIM in n8n
 
 1. In n8n, go to **Settings** > **Authentication** > **Single sign-on (SSO)**.
-1. In the SCIM section, turn on **SCIM provisioning**.
+1. In the SCIM section, set **SCIM provisioning** to **Enabled**, then select **Save settings**. n8n creates the token.
 1. Copy the **bearer token**. n8n only shows the token once, so store it somewhere secure before you leave the page.
 1. Copy the **SCIM base URL**. It usually has this format: `https://<your-n8n-domain>/scim/v2`.
 
@@ -110,10 +111,9 @@ n8n protects some accounts from SCIM changes:
 
 ## Manage the SCIM token
 
-Instance owners and instance admins can rotate or revoke the SCIM token, as well as any role with the **Instance settings** > **Manage** permission. To manage the token, go to **Settings** > **Authentication** > **Single sign-on (SSO)**. After the token exists, n8n only shows its last four characters.
+Instance owners and instance admins can rotate the SCIM token. To manage the token, go to **Settings** > **Authentication** > **Single sign-on (SSO)**. After the token exists, n8n only shows its last four characters.
 
-* **Rotate:** creates a new token and replaces the old one. Update the token in your IdP straight away, or provisioning requests fail.
-* **Revoke:** removes the token. Your IdP can't send provisioning changes to n8n until you create a new token and add it to your IdP.
+Rotating creates a new token and replaces the old one. Update the token in your IdP straight away, or provisioning requests fail.
 
 ## Turn off SCIM or SSO
 

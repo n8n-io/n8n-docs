@@ -28,6 +28,12 @@ You can use these credentials to authenticate the following nodes:
 - JWT
 - OAuth2
 
+{% hint style="info" %}
+**Use JWT for unattended integrations**
+
+Use JWT for workflows that run without a person watching or that run only now and then. JWT doesn't use a refresh token, so Salesforce's 30-day idle limit for refresh tokens doesn't apply to it. The Salesforce node and the Salesforce Trigger node support JWT. The [HTTP Request](../core-nodes/n8n-nodes-base.httprequest/README.md) node can also use the **Salesforce JWT API** credential as a predefined credential type.
+{% endhint %}
+
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
 Refer to [Salesforce's developer documentation](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm) for more information about the service.
@@ -118,17 +124,16 @@ To set things up, first you'll create a private key and certificate, then a conn
         -----END PRIVATE KEY-----
         ```
 
-These steps are what's required on the n8n side. Salesforce recommends setting refresh token policies, session policies, and OAuth policies too:
+These steps are what's required on the n8n side. Salesforce recommends setting session policies and OAuth policies too:
 
 17. In Salesforce, select **Back to Manage Connected Apps**.
 18. Select **Manage**.
 19. Select **Edit Policies**.
-20. Review the **Refresh Token Policy** field. Salesforce recommends using expire refresh token after 90 days.
-21. In the **Session Policies** section, Salesforce recommends setting **Timeout Value** to 15 minutes.
-22. In the **OAuth Policies** section, select **Admin approved users are pre-authorized for permitted users** for **Permitted Users**, and select **OK**.
-23. Select **Save**.
-24. Select **Manage Profiles**, select the profiles that are pre-authorized to use this connected app, and select **Save**.
-25. Select **Manage Permission Sets** to select the permission sets. Create permission sets if necessary.
+20. In the **Session Policies** section, Salesforce recommends setting **Timeout Value** to 15 minutes.
+21. In the **OAuth Policies** section, select **Admin approved users are pre-authorized for permitted users** for **Permitted Users**, and select **OK**.
+22. Select **Save**.
+23. Select **Manage Profiles**, select the profiles that are pre-authorized to use this connected app, and select **Save**.
+24. Select **Manage Permission Sets** to select the permission sets. Create permission sets if necessary.
 
 Refer to Salesforce's [Create a Connected App in Your Org](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_connected_app.htm) documentation for more information.
 
@@ -200,10 +205,20 @@ These steps are what's required on the n8n side. Salesforce recommends setting r
 15. In Salesforce, select **Back to Manage Connected Apps**.
 16. Select **Manage**.
 17. Select **Edit Policies**.
-18. Review the **Refresh Token Policy** field. Salesforce recommends using expire refresh token after 90 days.
+18. Review the **Refresh Token Policy** field. Salesforce also invalidates any refresh token that isn't used for 30 days. Refer to [Refresh token idle limit](#refresh-token-idle-limit) for what this means in n8n.
 19. In the **Session Policies** section, Salesforce recommends setting **Timeout Value** to 15 minutes.
 
 Refer to Salesforce's [Create a Connected App in Your Org](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_connected_app.htm) documentation for more information.
+
+### Refresh token idle limit
+
+Salesforce invalidates an OAuth2 refresh token that isn't used for 30 days, and the credential then stops working. Refer to Salesforce's [security updates](https://help.salesforce.com/s/articleView?id=005461287&language=en_US&type=1) and the [FAQ](https://help.salesforce.com/s/articleView?id=005387798&language=en_US&type=1) for details.
+
+n8n uses the refresh token only when Salesforce rejects a request with a `401` error. It doesn't refresh the token on a schedule. A request that succeeds uses the access token, not the refresh token, so regular API calls don't reset the 30-day window.
+
+If the refresh token has expired, Salesforce rejects the refresh with an `invalid_grant` error. The node then fails with the error `The credential "<credential-name>" needs to be reconnected.` To fix it, open the credential in n8n and reconnect it. Set up an [error workflow](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/flow-logic/handle-errors-gracefully) so you know as soon as a workflow fails for this reason.
+
+To avoid this, use [JWT](#using-jwt) for workflows that run unattended or only now and then.
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>
 
@@ -220,3 +235,11 @@ If you encounter connection issues when authenticating with Salesforce from n8n 
 7. Click **Save**.
 
 This permission isn't enabled by default, even for administrator profiles, and must be manually activated. Without this permission, you might experience authentication failures when trying to connect n8n to Salesforce.
+
+### Credential needs to be reconnected after a period of inactivity
+
+An OAuth2 credential stops working when n8n hasn't used its refresh token for 30 days, because Salesforce then invalidates the refresh token. The node fails with the error `The credential "<credential-name>" needs to be reconnected.`
+
+To fix it, open the credential in n8n and reconnect it. Regular successful API calls don't keep the refresh token alive, because n8n uses the refresh token only after Salesforce rejects a request with a `401` error. Refer to [Refresh token idle limit](#refresh-token-idle-limit) for details.
+
+To stop it from happening again, switch to [JWT](#using-jwt). JWT doesn't use a refresh token, so the 30-day idle limit doesn't apply.

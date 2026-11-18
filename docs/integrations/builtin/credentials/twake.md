@@ -32,7 +32,7 @@ Create a [Twake](https://twake.app/) account.
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
-Refer to [Twake's documentation](https://doc.twake.app/developers-api/api-reference) for more information about the service.
+Refer to [Twake's documentation](https://help.twake.app/en/latest/) for more information about the service.
 
 ## Using Cloud API key <a href="#using-cloud-api-key" id="using-cloud-api-key"></a>
 
@@ -48,12 +48,10 @@ To configure this credential, you'll need:
 - A **Public ID**: Generated when you create an app.
 - A **Private API Key**: Generated when you create an app.
 
-To generate your **Public ID** and **Private API Key**, [create a Twake application](https://doc.twake.app/developers-api/get-started/create-your-first-application): 
+To generate your **Public ID** and **Private API Key**, create a Twake application:
 
 1. Go to **Workspace Settings > Applications and connectors > Access your applications and connectors > Create an application**.
 2. Enter appropriate details.
 3. Once you've created your app, view its **API Details**.
 4. Copy the **Public identifier** and add it as the n8n **Public ID**.
 5. Copy the **Private key** and add it as the n8n **Private API Key**.
-
-Refer to [API settings](https://doc.twake.app/developers-api/get-started/create-your-first-application#id-3.-api-settings) for more information.

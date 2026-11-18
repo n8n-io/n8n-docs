@@ -61,10 +61,10 @@ To avoid complications with how n8n and Postgres interpret timestamp and time zo
 
 n8n uses the [`pg` package](https://www.npmjs.com/package/pg) to integrate with Postgres, which affects how n8n processes date, timestamp, and related types. What you get back depends on the node version:
 
-| column type | node 2.9 and later | node 2.7 and 2.8 | node 2.1 to 2.6 |
+| Column type | Node version 2.9 and later | Node version 2.7–2.8 | Node version 2.1–2.6 |
 | --- | --- | --- | --- |
-| `DATE` | `2025-12-25` | `2025-12-25` | a datetime string, see below |
-| `timestamp without time zone` | `2025-12-25T14:30:00.123456` | a UTC instant, see below | a UTC instant, see below |
+| `DATE` | `2025-12-25` | `2025-12-25` | a datetime string, shifted by the host time zone |
+| `timestamp without time zone` | `2025-12-25T14:30:00.123456` | a UTC instant, shifted by the host time zone | a UTC instant, shifted by the host time zone |
 | `timestamp with time zone` | `2025-12-25T14:30:00.123Z` | `2025-12-25T14:30:00.123Z` | `2025-12-25T14:30:00.123Z` |
 
 Below node version 2.1 the node sets no type parsers at all, so all three types come back as JavaScript `Date` objects instead of strings. The JSON output looks the same, but an expression sees an object.
@@ -78,10 +78,12 @@ To get the current node version, open the node and select the **Settings** tab. 
 A `timestamp without time zone` column stores no offset. Before node version 2.9, n8n read it as an instant anyway, which has three effects:
 
 - The output ends in `Z`, which says the value is UTC. The column makes no such claim.
-- The conversion uses the time zone of the n8n process, taken from the host `TZ` environment variable. Two instances with different host time zones produce different strings for the same stored value. The n8n timezone setting and the workflow timezone don't change this.
+- The conversion uses the time zone of the n8n process, taken from the `TZ` environment variable, or the system time zone when `TZ` isn't set. Two instances with different host time zones produce different strings for the same stored value. The n8n timezone setting and the workflow timezone don't change this.
 - The output keeps milliseconds only, so a column storing microseconds loses the last three digits.
 
 From node version 2.9 the node returns the value the server sent, with a `T` between the date and the time and no suffix. The result is the same on every instance and keeps full precision. Add a new Postgres node to get version 2.9. An existing node keeps its current behavior.
+
+The new output has no `Z`, so expressions and Code nodes that compare it with UTC strings or parse it as UTC read a different time. Check the nodes that use this column before you replace an existing node.
 
 This applies when the server uses the default `DateStyle` of ISO. On any other `DateStyle`, node 2.9 returns the value as the server sent it, with no `T` inserted.
 
@@ -100,14 +102,14 @@ SELECT TO_CHAR(ts_col, 'YYYY-MM-DD"T"HH24:MI:SS.US') AS ts_col_as_text FROM tabl
 {% hint style="info" %}
 **The CrateDB, QuestDB, and TimescaleDB nodes**
 
-These three nodes share the Postgres type handling. A node at version 1.1 returns a `timestamp without time zone` the same way Postgres node 2.9 does. There's no new version to opt in to, so an existing 1.1 node changes when you upgrade n8n. A node still at version 1 isn't affected and keeps its current output.
+These three nodes share the Postgres date handling but keep the older timestamp reading. From node version 1.1 they return a `DATE` as `YYYY-MM-DD` and a `timestamp without time zone` as a UTC instant, as Postgres node versions 2.7 and 2.8 do. To get the stored value, use the `::text` cast above.
 {% endhint %}
 
 ### A DATE column before node 2.7
 
-Before node version 2.7, the `pg` package returns a `DATE` as a JavaScript `Date` at midnight in the time zone of the n8n process, which n8n then writes as an [ISO 8601 datetime string](https://en.wikipedia.org/wiki/ISO_8601#Combined_date_and_time_representations). The instant that midnight lands on depends on the host time zone. On an instance at UTC+1, a date of `2025-12-25` produces `2025-12-24T23:00:00.000Z`, a day earlier than the stored date. On an instance at UTC-5 it produces `2025-12-25T05:00:00.000Z`. From node version 2.7 the node returns `DATE` as its `YYYY-MM-DD` value instead, and this workaround is no longer needed.
+Before node version 2.7, the `pg` package returns a `DATE` as a JavaScript `Date` at midnight in the time zone of the n8n process, which shows in the output as an [ISO 8601 datetime string](https://en.wikipedia.org/wiki/ISO_8601#Combined_date_and_time_representations). The instant that midnight lands on depends on the host time zone. On an instance at UTC+1, a date of `2025-12-25` produces `2025-12-24T23:00:00.000Z`, a day earlier than the stored date. On an instance at UTC-5 it produces `2025-12-25T05:00:00.000Z`. From node version 2.7, the node returns `DATE` as its `YYYY-MM-DD` value and you don't need a workaround.
 
-To work around this, use the [Postgres `TO_CHAR` function](https://www.postgresql.org/docs/current/functions-formatting.html#FUNCTIONS-FORMATTING) to format the date into the expected format at query time:
+On older node versions, use the [Postgres `TO_CHAR` function](https://www.postgresql.org/docs/current/functions-formatting.html#FUNCTIONS-FORMATTING) to format the date into the expected format at query time:
 
 ```sql
 SELECT TO_CHAR(date_col, 'YYYY-MM-DD') AS date_col_as_date FROM table_with_date_col

@@ -177,7 +177,7 @@ terraform init
 
 This downloads the n8n module (v0.1.0) and the `google`, `google-beta`, `kubernetes`, `helm`, `kubectl`, `tls`, `random`, and `time` providers.
 
-### 5. Plan and apply
+## Step 5: Plan and apply
 
 Preview what Terraform will create:
 

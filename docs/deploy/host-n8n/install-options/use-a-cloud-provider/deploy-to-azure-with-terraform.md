@@ -218,7 +218,7 @@ The module ships three sizing examples. Use one as your starting point, then tun
 
 AKS has two node pools, so "nodes per pool" applies to each pool. The main cost drivers are AKS nodes, Application Gateway WAF_v2, PostgreSQL, and Azure Managed Redis. Check current Azure pricing for your region before you apply.
 
-Benchmark representative workflows before moving to production. Workflow shape, payload size, and Code nodes can change demand by orders of magnitude. All three examples issue a self-signed TLS certificate (see [Delegate the DNS zone](#6-delegate-the-dns-zone)).
+Benchmark representative workflows before moving to production. Workflow shape, payload size, and Code nodes can change demand by orders of magnitude. All three examples issue a self-signed TLS certificate (see [Delegate the DNS zone](#step-6-delegate-the-dns-zone)).
 
 ## Protect your state file
 

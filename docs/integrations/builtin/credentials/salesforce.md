@@ -31,7 +31,7 @@ You can use these credentials to authenticate the following nodes:
 {% hint style="info" %}
 **Use JWT for unattended integrations**
 
-Use JWT for workflows that run without a person watching or that run only now and then. JWT doesn't use a refresh token, so Salesforce's 30-day idle limit for refresh tokens doesn't apply to it. The Salesforce node and the Salesforce Trigger node support JWT. The [HTTP Request](../core-nodes/n8n-nodes-base.httprequest/README.md) node can also use the **Salesforce JWT API** credential as a predefined credential type.
+Use JWT for workflows that run without a person watching or that run only now and then. JWT doesn't use a refresh token, so Salesforce's 30-day idle limit for refresh tokens doesn't apply to it. The Salesforce node and the Salesforce Trigger node support JWT. The [**HTTP Request**](../core-nodes/n8n-nodes-base.httprequest/README.md) node can also use the **Salesforce JWT API** credential as a predefined credential type.
 {% endhint %}
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
@@ -212,7 +212,7 @@ Refer to Salesforce's [Create a Connected App in Your Org](https://developer.sal
 
 ### Refresh token idle limit
 
-Salesforce invalidates an OAuth2 refresh token that isn't used for 30 days, and the credential then stops working. Refer to Salesforce's [security updates](https://help.salesforce.com/s/articleView?id=005461287&language=en_US&type=1) and the [FAQ](https://help.salesforce.com/s/articleView?id=005387798&language=en_US&type=1) for details.
+Salesforce invalidates an OAuth2 refresh token that isn't used for 30 days, and the credential then stops working. Salesforce enforces this limit from October 21, 2026 in sandboxes and from November 4, 2026 in production. Refer to Salesforce's [security updates](https://help.salesforce.com/s/articleView?id=005461287&language=en_US&type=1) and the [FAQ](https://help.salesforce.com/s/articleView?id=005387798&language=en_US&type=1) for details.
 
 n8n uses the refresh token only when Salesforce rejects a request with a `401` error. It doesn't refresh the token on a schedule. A request that succeeds uses the access token, not the refresh token, so regular API calls don't reset the 30-day window.
 

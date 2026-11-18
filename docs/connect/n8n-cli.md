@@ -95,7 +95,7 @@ Every command supports `--help` for detailed usage.
 | `user` | `list`, `get` |
 | `config` | `set-url`, `set-api-key`, `show` |
 | `source-control` | `pull` |
-| `package (preview)` | `export`, `import` |
+| `package (preview)` | `export`, `import`, `import-selection` |
 | `skill` | `install` |
 | `audit` | (top-level) |
 | `login` / `logout` | (top-level) |
@@ -185,8 +185,8 @@ The `package` command is in Preview and may change in future releases.
 ```bash
 n8n-cli package export --workflow-id=<workflow-id> --output=export.n8np
 n8n-cli package export --project-id=<project-id> --output=project.n8np
-n8n-cli package import --file=export.n8np --workflow-conflict-policy=fail
-n8n-cli package import --file=export.n8np --project-id=<project-id> --workflow-conflict-policy=skip
+n8n-cli package import --file=export.n8np --conflict-policy=fail
+n8n-cli package import --file=export.n8np --project-id=<project-id> --conflict-policy=skip
 n8n-cli package import --file=export.n8np --project-id=<project-id> --data-table-schema-conflict-policy=overwrite-non-destructive
 ```
 
@@ -197,5 +197,6 @@ See [n8n packages](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflo
 * [Connect](./)
 * [n8n API](n8n-api/README.md)
 * [Connect to n8n MCP server](connect-to-n8n-mcp-server.md)
+* [Workflow SDK](workflow-sdk/README.md)
 * [Connect to the n8n docs MCP server](connect-to-n8n-docs-mcp-server.md)
 * [Create nodes](create-nodes/README.md)

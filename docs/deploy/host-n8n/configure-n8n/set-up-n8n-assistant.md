@@ -1,9 +1,5 @@
 ---
 description: Set up n8n Assistant on self-hosted n8n using environment variables.
-status: preview
-tags:
-  - tag: preview
-    primary: true
 layout:
   width: default
   title:
@@ -33,14 +29,19 @@ n8n Assistant is available on:
 
 - **n8n Cloud:** Starter, Pro
 - **Self-hosted:** Community, Registered Community, Business
-
-It isn't ready for n8n Cloud Enterprise or self-hosted Enterprise yet. If you're an Enterprise customer, contact your Customer Success Manager about preview access.
 {% endhint %}
 
 {% hint style="info" %}
-**Preview status**
+**Limited enterprise readiness**
 
-n8n Assistant is in Preview. It can make mistakes, and behavior may change while the feature is in development. Always review generated workflows before using them in production.
+n8n Assistant has **Limited enterprise readiness**. It partially supports the following Enterprise capabilities:
+
+- **RBAC and project scoping**
+- **Data residency**
+- **Queue mode and multi-main**
+- **Environments and source control**
+
+It doesn't yet support all other relevant Enterprise capabilities.
 {% endhint %}
 
 ## What n8n Assistant needs
@@ -51,7 +52,7 @@ Every self-hosted n8n Assistant setup needs three things:
 * **A sandbox (required):** An isolated environment where n8n Assistant runs code.
 * **A search provider (optional):** Lets n8n Assistant look things up on the web.
 
-How you provide the sandbox is the main decision. n8n's own bundled sandbox (`n8n-sandbox`) is a good fit for local development and testing. It's what the [one-line setup command](../install-options/one-line-setup.md) and [Docker Compose guide](../install-options/install-using-docker-compose.md) set up automatically. For production, use Daytona instead.
+How you provide the sandbox is the main decision. For self-hosted production, n8n recommends running the n8n sandbox service (`n8n-sandbox`) with Sysbox runners, ideally on Kubernetes. If you can send workflow data to a third party, Daytona is a managed alternative. The bundled sandbox that the [one-line setup command](../install-options/one-line-setup.md) and [Docker Compose guide](../install-options/install-using-docker-compose.md) set up automatically is for development and testing only. Its privileged runner gives weak isolation.
 
 [Pick your setup](#pick-your-setup) below based on how you installed n8n and where you're running it.
 
@@ -67,11 +68,165 @@ Make sure you have:
 
 | Setup | When to use this | Sandbox hosted by | Best for |
 | --- | --- | --- | --- |
-| [1. Already running the sandbox](#setup-1-already-running-the-sandbox-recommended-for-local-development) | You installed with the one-line setup command or the Docker Compose guide. | You (already done) | Local development and testing |
-| [2. Self-host the sandbox manually](#setup-2-self-host-the-sandbox-manually-advanced) | You're running n8n some other way and want to self-host the sandbox rather than use Daytona. | You | Local development and testing |
-| [3. Daytona (managed sandbox)](#setup-3-daytona-managed-sandbox-recommended-for-production) | You're deploying to production, or don't want to run sandbox containers yourself. | Daytona | Production |
+| [1. n8n sandbox service on Kubernetes with Sysbox](#setup-1-n8n-sandbox-service-on-kubernetes-with-sysbox-recommended-for-self-hosted-production) | You're self-hosting in production and can't send workflow data to a third party. | You | Self-hosted production |
+| [2. Daytona (managed sandbox)](#setup-2-daytona-managed-sandbox) | You want the easiest setup with no sandbox infrastructure to run, and a third party can process your workflow data. | Daytona | Production, where a third-party service is acceptable |
+| [3. Bundled sandbox](#setup-3-bundled-sandbox-for-development-and-testing) | You installed with the one-line setup command or the Docker Compose guide, or you're running the bundled sandbox yourself. | You | Development and testing only |
 
-### Setup 1: Already running the sandbox (recommended for local development)
+### Setup 1: n8n sandbox service on Kubernetes with Sysbox (recommended for self-hosted production)
+
+The n8n sandbox service runs sandboxes in Sysbox nodes on a Kubernetes cluster you control. Workflow data stays in your infrastructure, and the runners don't need `privileged: true`. This is the setup n8n recommends for self-hosted production.
+If you installed n8n with the [one-line setup command](../install-options/one-line-setup.md) or built it by hand with the [Docker Compose guide](../install-options/install-using-docker-compose.md), the sandbox and search, using bundled SearXNG, are already running. All that's left is a model key.
+
+**What you need:** an LLM API key. Nothing else.
+
+**Steps:**
+
+The quickest way: open the editor, go to the instance's AI settings, and add your model key there. Prefer `.env`?  Use the steps below.
+
+1. Add your model key to `.env`:
+
+   ```bash
+   N8N_INSTANCE_AI_MODEL_API_KEY=sk-ant-xxx
+   ```
+
+2. Restart n8n.
+3. Open the editor and confirm n8n Assistant appears and responds.
+
+`N8N_INSTANCE_AI_MODEL` defaults to `anthropic/claude-opus-5-5` from n8n 2.48.0. Earlier versions default to `anthropic/claude-opus-4-8`. Set it explicitly only if you want a different model (see [Choose a model provider](#choose-a-model-provider)).
+
+If you connect through a gateway with `N8N_INSTANCE_AI_MODEL_URL` and don't set a model, make sure the gateway offers Claude Opus 5.5. If it doesn't, set `N8N_INSTANCE_AI_MODEL` to a model it offers, such as `anthropic/claude-opus-4-8`.
+
+Prefer to watch? This [video guide](https://go.n8n.io/RZZWq1) covers the setup end to end, from the one-line install to selecting a provider and model in the editor.
+
+### Setup 2: Self-host the sandbox manually (advanced)
+
+Use this if you're configuring n8n outside of the one-line setup command or Docker Compose guide, and you want to run the sandbox yourself rather than hand it to Daytona.
+
+{% hint style="warning" %}
+This means hosting two extra containers yourself: the sandbox API and a privileged Docker-in-Docker runner, plus mutual TLS between them. Like setup 1, this uses `n8n-sandbox`, which is best suited to local development and testing. For production, use [Daytona](#setup-3-daytona-managed-sandbox-recommended-for-production) instead.
+{% endhint %}
+
+**What you need:**
+
+* A Kubernetes cluster, version 1.32 or later.
+* A dedicated Linux node pool for the sandbox runners, with Sysbox installed on it. Use Ubuntu worker nodes.
+* At least four CPUs and 4 GB RAM per node in that pool.
+* The `br_netfilter` kernel module loaded on those nodes.
+* An LLM API key.
+
+Provider notes:
+
+* **GKE:** Use Standard clusters with Ubuntu node pools. Autopilot isn't supported.
+* **EKS:** Use Ubuntu worker nodes, not the default Amazon Linux.
+* **AKS:** The default worker nodes work. Use at least four vCPUs per node.
+
+**Steps:**
+
+1. Follow the [Kubernetes quickstart](https://github.com/n8n-io/n8n-sandbox-service/blob/main/docs/quickstart-k8s.md) in the n8n sandbox service repository to deploy the sandbox API and Sysbox runners.
+2. Point n8n at the sandbox API using the same variables as the bundled sandbox:
+
+   ```bash
+   N8N_INSTANCE_AI_SANDBOX_ENABLED=true
+   N8N_INSTANCE_AI_SANDBOX_PROVIDER=n8n-sandbox
+   N8N_SANDBOX_SERVICE_URL=<your-sandbox-api-url>
+   N8N_SANDBOX_SERVICE_API_KEY=<your-sandbox-api-key>
+   ```
+
+   | Variable | Description |
+   | --- | --- |
+   | `N8N_INSTANCE_AI_SANDBOX_ENABLED` | Set to `true`. |
+   | `N8N_INSTANCE_AI_SANDBOX_PROVIDER` | Set to `n8n-sandbox`. |
+   | `N8N_SANDBOX_SERVICE_URL` | URL of the sandbox API, reachable from n8n. |
+   | `N8N_SANDBOX_SERVICE_API_KEY` | Must match a value in `SANDBOX_API_KEYS` on the sandbox API. |
+
+3. Add your model key (see [Choose a model provider](#choose-a-model-provider)) and restart n8n.
+
+{% hint style="warning" %}
+Some distributions, such as Talos and Bottlerocket, use an immutable root filesystem and can't run Sysbox. The quickstart describes a fallback that uses a privileged runner. That runner has the same weak isolation as the bundled sandbox in [setup 3](#setup-3-bundled-sandbox-for-development-and-testing): code that escapes the sandbox reaches the node. Use it only on a dedicated node pool with no other workloads, keep it private, and proceed only if your security team accepts that risk.
+{% endhint %}
+
+### Setup 2: Daytona (managed sandbox)
+
+Daytona creates sandboxes on demand instead of you hosting the containers yourself. It's the easiest option to set up and needs no sandbox infrastructure.
+
+Daytona is a third-party service. You need your own Daytona account, and workflow data that n8n Assistant sends to the sandbox goes to Daytona. It's a valid choice for production if that's acceptable to you. If it isn't, for example because of data sovereignty requirements or an air-gapped environment, use [setup 1](#setup-1-n8n-sandbox-service-on-kubernetes-with-sysbox-recommended-for-self-hosted-production).
+
+**What you need:** a Daytona account and API key, plus an LLM API key.
+
+**Steps:**
+
+1. Set these environment variables on your n8n instance:
+
+   ```bash
+   # Enable the module and choose a model
+   N8N_ENABLED_MODULES=instance-ai
+   N8N_INSTANCE_AI_MODEL=anthropic/claude-opus-5-5
+   N8N_INSTANCE_AI_MODEL_API_KEY=sk-ant-xxx
+
+   # Sandbox, required
+   N8N_INSTANCE_AI_SANDBOX_ENABLED=true
+   N8N_INSTANCE_AI_SANDBOX_PROVIDER=daytona
+   N8N_INSTANCE_AI_SANDBOX_IMAGE=daytonaio/sandbox:0.5.3-slim
+
+   # Daytona
+   DAYTONA_API_URL=https://app.daytona.io/api
+   DAYTONA_API_KEY=dtn_xxx
+
+   # Web search, recommended
+   INSTANCE_AI_BRAVE_SEARCH_API_KEY=BSA-xxx
+   ```
+
+   | Variable | Description |
+   | --- | --- |
+   | `N8N_ENABLED_MODULES` | Must include `instance-ai` to enable the module. |
+   | `N8N_INSTANCE_AI_MODEL` | Selects the LLM in `provider/model` format. Has a default (`anthropic/claude-opus-5-5`). Set it explicitly only if you want a different model. |
+   | `N8N_INSTANCE_AI_MODEL_API_KEY` | API key for the selected provider. |
+   | `N8N_INSTANCE_AI_SANDBOX_ENABLED` | Set to `true`. n8n Assistant requires a sandbox. |
+   | `N8N_INSTANCE_AI_SANDBOX_PROVIDER` | Set to `daytona`. |
+   | `N8N_INSTANCE_AI_SANDBOX_IMAGE` | Base container image for Daytona sandboxes. |
+   | `DAYTONA_API_URL` | Daytona API endpoint. |
+   | `DAYTONA_API_KEY` | Your Daytona API key. |
+   | `INSTANCE_AI_BRAVE_SEARCH_API_KEY` | Brave Search API key for web search. This variable intentionally doesn't use the `N8N_` prefix. |
+
+   Docker Compose example:
+
+   ```yaml
+   services:
+     n8n:
+       image: n8nio/n8n
+       environment:
+         N8N_ENABLED_MODULES: instance-ai
+         N8N_INSTANCE_AI_MODEL: anthropic/claude-opus-5-5
+         N8N_INSTANCE_AI_MODEL_API_KEY: sk-ant-xxx
+         N8N_INSTANCE_AI_SANDBOX_ENABLED: 'true'
+         N8N_INSTANCE_AI_SANDBOX_PROVIDER: daytona
+         N8N_INSTANCE_AI_SANDBOX_IMAGE: daytonaio/sandbox:0.5.3-slim
+         DAYTONA_API_URL: https://app.daytona.io/api
+         DAYTONA_API_KEY: dtn_xxx
+         INSTANCE_AI_BRAVE_SEARCH_API_KEY: BSA-xxx
+   ```
+
+2. Restart n8n, open the editor, and confirm n8n Assistant appears and responds.
+
+**Optional: tune the sandbox lifecycle**
+
+```bash
+N8N_INSTANCE_AI_SANDBOX_AUTO_STOP_MINUTES=15
+N8N_INSTANCE_AI_SANDBOX_AUTO_ARCHIVE_MINUTES=60
+N8N_INSTANCE_AI_SANDBOX_AUTO_DELETE_MINUTES=10080
+```
+
+{% hint style="info" %}
+By default, Daytona stops an idle sandbox after 15 minutes, archives a stopped sandbox after one hour, and deletes it after seven days. Change these settings with the variables above.
+{% endhint %}
+
+### Setup 3: Bundled sandbox (for development and testing)
+
+{% hint style="warning" %}
+The bundled sandbox runs `sandbox-runner-1` with `privileged: true` and Docker-in-Docker. That's weak isolation: code that escapes the sandbox reaches the host, so treat the runner as equivalent to root on the host. Use this setup for development and testing, not production. If you run it anyway, use a dedicated host or VM with nothing else running on it, and never expose it to the internet. A dedicated VM limits the damage of an escape but doesn't remove the risk.
+{% endhint %}
+
+#### Already running the sandbox
 
 If you installed n8n with the [one-line setup command](../install-options/one-line-setup.md) or built it by hand with the [Docker Compose guide](../install-options/install-using-docker-compose.md), the sandbox and search, using bundled SearXNG, are already running. All that's left is a model key.
 
@@ -94,13 +249,11 @@ The quickest way: open the editor, go to the instance's AI settings, and add you
 
 Prefer to watch? This [video guide](https://go.n8n.io/RZZWq1) covers the setup end to end, from the one-line install to selecting a provider and model in the editor.
 
-### Setup 2: Self-host the sandbox manually (advanced)
+#### Self-host the sandbox manually
 
-Use this if you're configuring n8n outside of the one-line setup command or Docker Compose guide, and you want to run the sandbox yourself rather than hand it to Daytona.
+Use this if you're configuring n8n outside of the one-line setup command or Docker Compose guide, and you want to run the bundled sandbox yourself for development or testing.
 
-{% hint style="warning" %}
-This means hosting two extra containers yourself: the sandbox API and a privileged Docker-in-Docker runner, plus mutual TLS between them. Like setup 1, this uses `n8n-sandbox`, which is best suited to local development and testing. For production, use [Daytona](#setup-3-daytona-managed-sandbox-recommended-for-production) instead.
-{% endhint %}
+This means hosting two extra containers yourself: the sandbox API and a privileged Docker-in-Docker runner, plus mutual TLS between them. For production, use [setup 1](#setup-1-n8n-sandbox-service-on-kubernetes-with-sysbox-recommended-for-self-hosted-production) or [setup 2](#setup-2-daytona-managed-sandbox) instead.
 
 **What you need:**
 
@@ -143,79 +296,6 @@ Expected response: `{"status":"ok"}`
 * The runner pulls its sandbox image on first use. For air-gapped setups, preload that image into the runner's inner Docker.
 * Hostnames matter. The certificates are issued for `sandbox-api` and `sandbox-runner-<n>`, so keep those service names or regenerate certificates with matching SANs.
 
-### Setup 3: Daytona (managed sandbox, recommended for production)
-
-Daytona creates sandboxes on demand instead of you hosting the containers yourself. It's the sandbox provider n8n recommends for production use.
-
-**What you need:** a Daytona account and API key, plus an LLM API key.
-
-**Steps:**
-
-1. Set these environment variables on your n8n instance:
-
-   ```bash
-   # Enable the module and choose a model
-   N8N_ENABLED_MODULES=instance-ai
-   N8N_INSTANCE_AI_MODEL=anthropic/claude-opus-4-8
-   N8N_INSTANCE_AI_MODEL_API_KEY=sk-ant-xxx
-
-   # Sandbox, required
-   N8N_INSTANCE_AI_SANDBOX_ENABLED=true
-   N8N_INSTANCE_AI_SANDBOX_PROVIDER=daytona
-   N8N_INSTANCE_AI_SANDBOX_IMAGE=daytonaio/sandbox:0.5.3-slim
-
-   # Daytona
-   DAYTONA_API_URL=https://app.daytona.io/api
-   DAYTONA_API_KEY=dtn_xxx
-
-   # Web search, recommended
-   INSTANCE_AI_BRAVE_SEARCH_API_KEY=BSA-xxx
-   ```
-
-   | Variable | Description |
-   | --- | --- |
-   | `N8N_ENABLED_MODULES` | Must include `instance-ai` to enable the module. |
-   | `N8N_INSTANCE_AI_MODEL` | Selects the LLM in `provider/model` format. Has a default (`anthropic/claude-opus-4-8`). Set it explicitly only if you want a different model. |
-   | `N8N_INSTANCE_AI_MODEL_API_KEY` | API key for the selected provider. |
-   | `N8N_INSTANCE_AI_SANDBOX_ENABLED` | Set to `true`. n8n Assistant requires a sandbox. |
-   | `N8N_INSTANCE_AI_SANDBOX_PROVIDER` | Set to `daytona`. |
-   | `N8N_INSTANCE_AI_SANDBOX_IMAGE` | Base container image for Daytona sandboxes. |
-   | `DAYTONA_API_URL` | Daytona API endpoint. |
-   | `DAYTONA_API_KEY` | Your Daytona API key. |
-   | `INSTANCE_AI_BRAVE_SEARCH_API_KEY` | Brave Search API key for web search. This variable intentionally doesn't use the `N8N_` prefix. |
-
-   Docker Compose example:
-
-   ```yaml
-   services:
-     n8n:
-       image: n8nio/n8n
-       environment:
-         N8N_ENABLED_MODULES: instance-ai
-         N8N_INSTANCE_AI_MODEL: anthropic/claude-opus-4-8
-         N8N_INSTANCE_AI_MODEL_API_KEY: sk-ant-xxx
-         N8N_INSTANCE_AI_SANDBOX_ENABLED: 'true'
-         N8N_INSTANCE_AI_SANDBOX_PROVIDER: daytona
-         N8N_INSTANCE_AI_SANDBOX_IMAGE: daytonaio/sandbox:0.5.3-slim
-         DAYTONA_API_URL: https://app.daytona.io/api
-         DAYTONA_API_KEY: dtn_xxx
-         INSTANCE_AI_BRAVE_SEARCH_API_KEY: BSA-xxx
-   ```
-
-2. Restart n8n, open the editor, and confirm n8n Assistant appears and responds.
-
-**Optional: tune the sandbox lifecycle**
-
-```bash
-N8N_INSTANCE_AI_SANDBOX_AUTO_STOP_MINUTES=15
-N8N_INSTANCE_AI_SANDBOX_AUTO_ARCHIVE_MINUTES=60
-N8N_INSTANCE_AI_SANDBOX_AUTO_DELETE_MINUTES=10080
-```
-
-{% hint style="info" %}
-By default, Daytona stops an idle sandbox after 15 minutes, archives a stopped sandbox after one hour, and deletes it after seven days. Change these settings with the variables above.
-{% endhint %}
-
 ## Choose a model provider
 
 `N8N_INSTANCE_AI_MODEL` uses this format:
@@ -230,13 +310,13 @@ Supported providers are:
 * `openai`
 * `openrouter`
 
-For a hosted provider, start with `anthropic/claude-opus-4-8` or `openai/gpt-5.5`.
+For a hosted provider, start with `anthropic/claude-opus-5-5` or `openai/gpt-5.5`.
 
 Examples:
 
 ```bash
 # Anthropic
-N8N_INSTANCE_AI_MODEL=anthropic/claude-opus-4-8
+N8N_INSTANCE_AI_MODEL=anthropic/claude-opus-5-5
 
 # OpenAI
 N8N_INSTANCE_AI_MODEL=openai/gpt-5.5
@@ -440,13 +520,13 @@ If n8n Assistant doesn't appear or doesn't work, check for these issues.
 * The API key is valid for the selected provider.
 * `N8N_INSTANCE_AI_SANDBOX_ENABLED` is set to `true`.
 
-**Self-hosted sandbox (setup 2)**
+**n8n sandbox service (setups 1 and 3)**
 
 * `N8N_SANDBOX_SERVICE_API_KEY` matches `SANDBOX_API_KEYS` on the API container.
 * The sandbox health check returns `{"status":"ok"}`.
 * `N8N_SANDBOX_SERVICE_URL` is reachable from the n8n container.
 
-**Daytona (setup 3)**
+**Daytona (setup 2)**
 
 * `DAYTONA_API_URL` and `DAYTONA_API_KEY` are set.
 * Your Daytona account has capacity to create a new sandbox.

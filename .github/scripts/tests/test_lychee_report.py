@@ -56,7 +56,7 @@ check("payload: source and run metadata",
       payload["source"] == "lychee-weekly" and payload["run_id"] == "123" and payload["sha"] == "abc")
 check("payload: totals map lychee 'excludes' to 'excluded'; errors = delivered rows (incl. timeouts), lychee's own counter kept",
       payload["totals"] == {"total": 120, "successful": 100, "excluded": 16, "timeouts": 1,
-                            "errors": 3, "blocked": 1, "lychee_errors": 3})
+                            "errors": 3, "blocked": 1, "server_errors": 0, "lychee_errors": 3})
 check("payload: failures included and not truncated",
       len(payload["failures"]) == 3 and payload["failures_truncated"] is False)
 
@@ -74,6 +74,58 @@ rate_limited = lr.build_payload(
 check("payload: 429 counts as blocked, not broken",
       rate_limited["totals"]["errors"] == 0 and rate_limited["totals"]["blocked"] == 1)
 check("payload: exit code passed through", payload["lychee_exit_code"] == 2)
+
+# DOC-2568: a GitHub outage returned 504 to anonymous requests and the sweep called 181
+# live links broken. Gateway errors are "not verifiable", like a WAF refusal.
+outage = lr.build_payload({"error_map": {
+    "./docs/changelog/release-notes-0.x.md": [
+        {"url": "https://github.com/aarongut", "status": {"code": 504, "text": "Gateway Timeout"}},
+        {"url": "https://github.com/curryy", "status": {"code": 502, "text": "Bad Gateway"}},
+        {"url": "https://github.com/mertmit", "status": {"code": 503, "text": "Service Unavailable"}}],
+    "./docs/integrations/builtin/credentials/halopsa.md": [
+        {"url": "https://halopsa.com/guides/article/?kbid=1737", "status": {"code": 404, "text": "Not Found"}},
+        {"url": "https://example.com/broken", "status": {"code": 500, "text": "Internal Server Error"}}]}}, ctx)
+check("payload: 502/503/504 count as not verifiable, not broken",
+      outage["totals"]["blocked"] == 3
+      and {f["status"] for f in outage["blocked"]} == {502, 503, 504})
+check("payload: 404 and 500 still count as broken",
+      outage["totals"]["errors"] == 2
+      and sorted(f["status"] for f in outage["failures"]) == [404, 500])
+check("payload: no gateway error left in failures",
+      all(f["status"] not in lr.SERVER_ERROR_STATUSES for f in outage["failures"]))
+outage_summary = lr.summary_markdown(outage)
+check("summary: names the server errors inside the not-verifiable bucket",
+      "Broken: 2" in outage_summary
+      and "server errors (502/503/504), usually a host outage: 3" in outage_summary)
+check("summary: no server-error line when there are none",
+      "server errors" not in lr.summary_markdown(rate_limited))
+check("payload: server_errors total counts the 502/503/504 rows", outage["totals"]["server_errors"] == 3)
+
+# During the outage the second pass hits the same 504s and reports `error` (no verdict).
+# That must not withdraw the lychee row, or the link leaves the not-verifiable count.
+gh_504 = {"error_map": {"./docs/changelog/release-notes-0.x.md": [
+    {"url": "https://github.com/aarongut", "status": {"code": 504, "text": "Gateway Timeout"}}]}}
+no_verdict = lr.merge_quality(lr.build_payload(gh_504, ctx), {"totals": {}, "findings": [
+    {"page": "docs/changelog/release-notes-0.x.md", "url": "https://github.com/aarongut",
+     "kind": "error", "detail": "unexpected status 504"}]})
+check("merge: a second-pass 'error' on a 504 keeps the blocked row",
+      len(no_verdict["blocked"]) == 1 and no_verdict["quality"] == []
+      and no_verdict["totals"]["blocked"] == 1 and no_verdict["totals"]["server_errors"] == 1)
+real_verdict = lr.merge_quality(lr.build_payload(gh_504, ctx), {"totals": {}, "findings": [
+    {"page": "docs/changelog/release-notes-0.x.md", "url": "https://github.com/aarongut",
+     "kind": "dead", "detail": "returns 404 to a browser user agent"}]})
+check("merge: a second-pass 'dead' on a 504 still wins and updates both totals",
+      real_verdict["blocked"] == [] and real_verdict["quality"][0]["kind"] == "dead"
+      and real_verdict["totals"]["blocked"] == 0 and real_verdict["totals"]["server_errors"] == 0)
+
+# The "of which server errors" line must use the real count, not the capped row list.
+many_504 = {"error_map": {"./docs/a.md": [
+    {"url": f"https://github.com/u{i}", "status": {"code": 504, "text": "Gateway Timeout"}}
+    for i in range(lr.MAX_FAILURES + 25)]}}
+big_outage = lr.build_payload(many_504, ctx)
+check("summary: server-error count is not capped at MAX_FAILURES",
+      len(big_outage["blocked"]) == lr.MAX_FAILURES
+      and f"usually a host outage: {lr.MAX_FAILURES + 25}" in lr.summary_markdown(big_outage))
 
 # fallback to fail_map (older lychee) and errors derived from the map when the counter is absent
 old = {"total": 5, "fail_map": {"./docs/a.md": [{"url": "https://x/1", "status": "500 Internal Server Error"}]}}
@@ -224,6 +276,7 @@ summary = lr.summary_markdown(payload)
 check("summary: mentions counts (Broken = rows in the table)", "Checked: 120" in summary and "Broken: 3" in summary)
 check("summary: lists pages with counts", "airtable.md` | 1" in summary)
 check("summary: reports the blocked bucket separately", "Blocked by the host" in summary and "not verifiable): 1" in summary)
+check("summary: the blocked label names the server errors too", "502/503/504, not verifiable" in summary)
 check("summary: missing report explained", "did not produce a report" in lr.summary_markdown(missing))
 
 # --- BLOCKED_STATUSES, which exists twice -------------------------------------------
@@ -237,6 +290,31 @@ check("blocked statuses: link_second_pass.py still declares the set where we can
 check("blocked statuses: the two copies have not drifted",
       bool(_m) and {int(x) for x in _m.group(1).replace(" ", "").strip(",").split(",")}
       == set(lr.BLOCKED_STATUSES))
+
+# --- main(): dry run --------------------------------------------------------------
+# A manual run with send_report=false must build the report and never POST it. The
+# webhook URL points at a closed local port: a POST attempt would fail and return 1.
+import os
+import tempfile
+
+with tempfile.TemporaryDirectory() as tmp:
+    saved = dict(os.environ)
+    os.environ.update({
+        "REPORT": str(FIXTURE), "QUALITY_REPORT": str(Path(tmp) / "none.json"),
+        "PAYLOAD_OUT": str(Path(tmp) / "out" / "payload.json"), "DRY_RUN": "true",
+        "WEBHOOK_URL": "http://127.0.0.1:9/never", "EXIT_CODE": "2"})
+    os.environ.pop("GITHUB_STEP_SUMMARY", None)
+    try:
+        rc = lr.main()
+        written = json.loads((Path(tmp) / "out" / "payload.json").read_text(encoding="utf-8"))
+        check("dry run: exits 0 without posting", rc == 0)
+        check("dry run: writes the payload it would have sent",
+              written["totals"]["errors"] == payload["totals"]["errors"])
+        os.environ["DRY_RUN"] = "false"
+        check("dry run off: still tries to post (and fails on the closed port)", lr.main() == 1)
+    finally:
+        os.environ.clear()
+        os.environ.update(saved)
 
 # --- report ------------------------------------------------------------------------
 failed = [name for name, ok in checks if not ok]

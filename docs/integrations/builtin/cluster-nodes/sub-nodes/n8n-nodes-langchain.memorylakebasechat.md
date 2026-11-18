@@ -59,8 +59,6 @@ With **Session ID** set to **Connected Chat Trigger Node**, each Databricks Lake
 
 Refer to the [Lakebase Data API documentation](https://docs.databricks.com/aws/en/oltp/projects/data-api) for more information about the service.
 
-The nodes panel doesn't show the node until [n8n-io/n8n#41795](https://github.com/n8n-io/n8n/pull/41795) ships. This page gets a Preview status hint once that release has a version number.
-
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 
 ## Common issues

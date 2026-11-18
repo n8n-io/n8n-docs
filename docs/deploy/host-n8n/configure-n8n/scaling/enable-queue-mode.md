@@ -11,12 +11,14 @@ layout:
 
 # Queue mode <a href="#queue-mode" id="queue-mode"></a>
 
+Queue mode lets you run n8n at scale: a main instance receives triggers and webhooks, Redis queues the executions, and you scale by adding or removing workers.
+
 You can run n8n in different modes depending on your needs. The queue mode provides the best scalability.
 
 {% hint style="info" %}
 **Binary data storage**
 
-n8n doesn't support queue mode with binary data storage in filesystem. If your workflows need to persist binary data in queue mode, you can use [S3 external storage](use-external-storage.md).
+In queue mode, n8n stores binary data in the database by default unless you configure another storage mode. If your license includes the relevant [external storage](use-external-storage.md) option, you can use AWS S3 or Azure Blob Storage. If you use filesystem storage, all main instances, workers, and webhook processors that handle binary data must access the same shared volume at the same configured path. Refer to [Handle binary data](handle-binary-data.md) for details.
 {% endhint %}
 
 ## How it works <a href="#how-it-works" id="how-it-works"></a>
@@ -268,7 +270,7 @@ n8n only offloads the response body. It measures the rest of the response, its h
 
 ### Turn on offloading during an upgrade
 
-Only a main instance running n8n 2.34.0 or later reads an offloaded body. An older one returns the storage reference to the client instead of the response body. Upgrade every main and webhook instance first, then set `N8N_WEBHOOK_RESPONSE_RELAY_OFFLOAD_ENABLED` on your workers. A worker with the variable unset sends every response inline and fails one above the limit.
+Only main and webhook instances running n8n 2.34.0 or later fully handle an offloaded body. An older instance can still stream the body to the client, but it sends status code `200` instead of the response's own status code. It also doesn't delete the stored body. Upgrade every main and webhook instance first, then set `N8N_WEBHOOK_RESPONSE_RELAY_OFFLOAD_ENABLED` on your workers. A worker with the variable unset sends every response inline and fails one above the limit.
 
 ### Troubleshoot large webhook responses
 
@@ -328,12 +330,16 @@ To deploy n8n in multi-main setup, ensure:
 - All `main` processes have set the environment variable `N8N_MULTI_MAIN_SETUP_ENABLED` to `true`.
 - All `main` processes are running behind a load balancer with session persistence (sticky sessions) enabled.
 
+If two or more n8n deployments share one Redis, set a different [`N8N_REDIS_KEY_PREFIX`](../basic-configuration/use-environment-variables/queue-mode.md) value for each deployment. Use the same value on every `main` and `worker` process of a deployment. This keeps leader election and messages between instances inside one deployment. Before n8n 2.3.0, the prefix doesn't apply to pub/sub channels, so use a separate Redis for each deployment.
+
 If needed, you can adjust the leader key options:
 
 | Using configuration file | Using environment variables | Description |
 | ------ | ------ | ----- |
 | `multiMainSetup.ttl:10` | `N8N_MULTI_MAIN_SETUP_KEY_TTL=10` | Time to live (in seconds) for leader key in multi-main setup. |
 | `multiMainSetup.interval:3` | `N8N_MULTI_MAIN_SETUP_CHECK_INTERVAL=3` | Interval (in seconds) for leader check in multi-main setup. |
+
+For a reference multi-main deployment on AWS, including worker autoscaling and Redis high availability, see [Scale and run at high availability on AWS](../../install-options/use-a-cloud-provider/deploy-to-aws-with-terraform/scale-and-run-at-high-availability.md).
 
 
 

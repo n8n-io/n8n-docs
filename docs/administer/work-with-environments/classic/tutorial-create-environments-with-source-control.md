@@ -14,14 +14,32 @@ layout:
 
 # Tutorial: Create environments with source control <a href="#tutorial-create-environments-with-source-control" id="tutorial-create-environments-with-source-control"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/2T2SmMUgiLyck7FDDwRD/" %}
+{% hint style="info" %}
+**Feature availability**
 
-This tutorial walks through the process of setting up environments end-to-end. You'll create two environments: development and production. It uses GitHub as the Git provider. The process is similar for other providers. 
+Environments (Classic) are available on:
 
-n8n has built its environments feature on top of Git, a version control software. You link an n8n instance to a Git branch, and use a push-pull pattern to move work between environments. You should have some understanding of environments and Git. If you need more information on these topics, refer to:
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Business, Enterprise
 
-* [Classic environments in n8n](work-with-environments.md): the purpose of environments, and how they work in n8n. 
-* [Git and n8n](use-git-in-n8n.md): Git concepts and source control in n8n.
+You must be an n8n instance owner or instance admin to enable and configure source control.
+
+Instance owners and instance admins can push changes to and pull changes from the connected repository. Project admins can push changes to the connected repository. They can't pull changes from the repository.
+{% endhint %}
+
+{% hint style="info" %}
+**Environments (Preview) are also available**
+
+This page is about Environments (Classic). Environments (Preview) is a newer version of environments, available on Enterprise plans. See [Environments (Preview)](../preview/README.md). To find out which version your instance uses, see [Work with environments](../README.md#find-out-which-version-your-instance-uses).
+{% endhint %}
+
+This tutorial walks through the process of setting up Environments (Classic) end-to-end. You'll create two environments: development and production. It uses GitHub as the Git provider. The process is similar for other providers. 
+
+n8n built Environments (Classic) on top of Git, a version control software. You link an n8n instance to a Git branch, and use a push-pull pattern to move work between environments. You should have some understanding of environments and Git. If you need more information on these topics, refer to:
+
+* [Classic environments in n8n](work-with-environments.md): how Environments (Classic) work. 
+* [Git concepts for environments](../git-concepts.md): the Git concepts and terms n8n uses.
+* [Git and n8n](use-git-in-n8n.md): how Environments (Classic) use Git.
 
 ## Choose your source control pattern <a href="#choose-your-source-control-pattern" id="choose-your-source-control-pattern"></a>
 

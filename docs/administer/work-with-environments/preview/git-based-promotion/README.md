@@ -11,9 +11,20 @@ layout:
 With Git-based promotion, changes travel between n8n instances through a Git repository. Each environment is a repository and branch. If you're new to Git, see [Git concepts for environments](../../git-concepts.md) for the concepts n8n uses.
 
 {% hint style="info" %}
+**Feature availability**
+
+Environments are available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Enterprise
+
+Available from n8n 2.47.0.
+{% endhint %}
+
+{% hint style="info" %}
 **Preview status**
 
-Environments are in Preview and may change in future releases. Try them on test instances before you set them up for your production instances.
+Environments are in Preview and may change in future releases. Avoid relying on them in production workflows.
 {% endhint %}
 
 ## What n8n writes to the repository

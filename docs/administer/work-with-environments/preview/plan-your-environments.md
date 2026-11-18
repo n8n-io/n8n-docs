@@ -11,9 +11,20 @@ layout:
 Decide which instances promote changes, which instances apply them, and which repository and branch stand for each environment before you set anything up.
 
 {% hint style="info" %}
+**Feature availability**
+
+Environments are available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Enterprise
+
+Available from n8n 2.47.0.
+{% endhint %}
+
+{% hint style="info" %}
 **Preview status**
 
-Environments are in Preview and may change in future releases. Try them on test instances before you set them up for your production instances.
+Environments are in Preview and may change in future releases. Avoid relying on them in production workflows.
 {% endhint %}
 
 ## How instances and environments relate

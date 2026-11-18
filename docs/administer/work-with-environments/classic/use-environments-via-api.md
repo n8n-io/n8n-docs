@@ -7,18 +7,32 @@ layout:
 
 # Use environments programmatically with the public API
 
-You can manage n8n environments from scripts and pipelines using the public API, without opening the n8n UI. This lets you automate promotion between instances, for example moving work from a development instance to production on a schedule or as part of a CI/CD pipeline.
+{% hint style="info" %}
+**Feature availability**
 
-This page explains how the source control API endpoints work together. It assumes you've already connected your instances to Git and understand how push and pull behave in the UI. For that background, read [Push and pull](push-and-pull-changes.md) and [Copy work between environments](move-work-between-environments.md).
+Environments (Classic) are available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Business, Enterprise
+{% endhint %}
+
+{% hint style="info" %}
+**Environments (Preview) are also available**
+
+This page is about Environments (Classic). Environments (Preview) is a newer version of environments, available on Enterprise plans. See [Environments (Preview)](../preview/README.md). To find out which version your instance uses, see [Work with environments](../README.md#find-out-which-version-your-instance-uses).
+{% endhint %}
+
+You can manage Environments (Classic) from scripts and pipelines using the public API, without opening the n8n UI. This lets you automate promotion between instances, for example moving work from a development instance to production on a schedule or as part of a CI/CD pipeline.
+
+This page explains how the source control API endpoints work together. Environments (Preview) use promotion endpoints instead. See [Upgrade from Environments (Classic)](../preview/upgrade-from-environments-classic.md). It assumes you've already connected your instances to Git and understand how push and pull behave in the UI. For that background, read [Push and pull](push-and-pull-changes.md) and [Copy work between environments](move-work-between-environments.md).
 
 {% hint style="info" %}
 **Feature availability**
 
-The Source Control `status` and `push` endpoints are available from n8n version `2.39.0`.
+The Source Control `status` and `push` endpoints are available from n8n 2.39.0.
+
 * `GET /api/v1/source-control/status`
 * `POST /api/v1/source-control/push`
-
-Environments is an Enterprise feature.
 {% endhint %}
 
 ## The endpoints

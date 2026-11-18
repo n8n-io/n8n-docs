@@ -49,6 +49,24 @@ The two versions use the word differently:
 - In Environments (Classic), an environment is an n8n instance plus the Git branch it's linked to.
 - In Environments (Preview), an environment is a configuration on an instance. It points to a repository and branch, and an instance promotes to one environment and applies from another.
 
+### What source control means
+
+Source control is a way of storing your work in a central place outside the tool you build it in. It lets you keep copies and versions of your work, share it with other people, and move it between places.
+
+In n8n, source control means using a Git repository to store your workflows, and the resources they use, outside your n8n instance. n8n doesn't move work directly from one instance to another. Work travels through the repository.
+
+Source control and environments are closely related but not the same thing:
+
+- Source control is the mechanism: storing work in Git, and sending it to and from your instances.
+- Environments are how you use that mechanism: connecting instances, such as development and production, through a repository, so you can move changes through your release process.
+
+Both versions of environments work this way, but they use different words for it:
+
+- Environments (Classic) calls it source control. You push work from an instance to Git and pull it from Git into an instance. The term still appears in page names, in the `source-control` endpoints of the public API, and in self-hosted configuration.
+- Environments (Preview) doesn't use the term. It moves work with promote and apply, and calls its use of Git [Git-based promotion](preview/git-based-promotion/README.md).
+
+n8n uses only part of Git's functionality, so don't treat source control in n8n as full version control.
+
 ### Git stores the work
 
 Both versions use Git to move work between instances, and you work with the Git host to set up the repository and branches. For the Git concepts n8n uses, such as branches, remotes, and pull or merge requests, and for how each version uses Git, see [Git concepts for environments](git-concepts.md).

@@ -14,7 +14,22 @@ layout:
 
 # Copy work between environments <a href="#copy-work-between-environments" id="copy-work-between-environments"></a>
 
-The steps to send work from one n8n instance to another are different depending on whether you use a single Git branch or multiple branches.
+{% hint style="info" %}
+**Feature availability**
+
+Environments (Classic) are available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Business, Enterprise
+{% endhint %}
+
+{% hint style="info" %}
+**Environments (Preview) are also available**
+
+This page is about Environments (Classic). Environments (Preview) is a newer version of environments, available on Enterprise plans. See [Environments (Preview)](../preview/README.md). To find out which version your instance uses, see [Work with environments](../README.md#find-out-which-version-your-instance-uses).
+{% endhint %}
+
+In Environments (Classic), the steps to send work from one n8n instance to another are different depending on whether you use a single Git branch or multiple branches.
 
 ## Single branch <a href="#single-branch" id="single-branch"></a>
 

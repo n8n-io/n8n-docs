@@ -1,8 +1,8 @@
 ---
-title: Branch patterns
+title: Choose branching patterns
 description: >-
   Understand the different relationships between n8n instances and Git branches
-  that are possible with source control.
+  that are possible with Environments (Classic).
 contentType: explanation
 nodeTitle: Choose branching patterns
 originalFilePath: source-control-environments/understand/patterns.md
@@ -14,9 +14,25 @@ layout:
     visible: false
 ---
 
-# Branch patterns <a href="#branch-patterns" id="branch-patterns"></a>
+# Choose branching patterns <a href="#branch-patterns" id="branch-patterns"></a>
 
-The relationship between n8n instances and Git branches is flexible. You can create different setups depending on your needs. 
+In Environments (Classic), the relationship between n8n instances and Git branches is flexible. You can create different setups depending on your needs.
+
+{% hint style="info" %}
+**Feature availability**
+
+Environments (Classic) are available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Business, Enterprise
+{% endhint %}
+
+{% hint style="info" %}
+**Using Environments (Preview)?**
+
+These patterns describe how Environments (Classic) link an instance to a branch. Environments (Preview) connect instances and branches differently. See [Plan your environments](../preview/plan-your-environments.md).
+{% endhint %}
+
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/sVOSvjfqJPLqOGb1x77B/" %}
 

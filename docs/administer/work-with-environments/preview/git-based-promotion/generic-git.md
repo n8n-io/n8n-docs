@@ -11,9 +11,20 @@ layout:
 The Generic Git provider connects an environment to any Git repository by URL, including repositories on GitHub and Bitbucket. It authenticates with an SSH key or with a username and access token.
 
 {% hint style="info" %}
+**Feature availability**
+
+Environments are available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Enterprise
+
+Available from n8n 2.47.0.
+{% endhint %}
+
+{% hint style="info" %}
 **Preview status**
 
-Environments are in Preview and may change in future releases. Try them on test instances before you set them up for your production instances.
+Environments are in Preview and may change in future releases. Avoid relying on them in production workflows.
 {% endhint %}
 
 ## What Generic Git supports

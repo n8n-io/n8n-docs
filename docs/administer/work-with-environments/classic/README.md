@@ -15,7 +15,18 @@ layout:
 
 # Source control and environments <a href="#source-control-and-environments" id="source-control-and-environments"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/2T2SmMUgiLyck7FDDwRD/" %}
+{% hint style="info" %}
+**Feature availability**
+
+Environments (Classic) are available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Business, Enterprise
+
+You must be an n8n instance owner or instance admin to enable and configure source control.
+
+Instance owners and instance admins can push changes to and pull changes from the connected repository. Project admins can push changes to the connected repository. They can't pull changes from the repository.
+{% endhint %}
 
 {% hint style="info" %}
 **New version available**

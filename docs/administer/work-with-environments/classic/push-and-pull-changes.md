@@ -14,9 +14,24 @@ layout:
 
 # Push and pull <a href="#push-and-pull" id="push-and-pull"></a>
 
-If your n8n instance connects to a Git repository, you need to keep your work in sync with Git.
+{% hint style="info" %}
+**Feature availability**
 
-This document assumes some familiarity with Git concepts and terminology. Refer to [Git and n8n](use-git-in-n8n.md) for an introduction to how n8n works with Git.
+Environments (Classic) are available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Business, Enterprise
+{% endhint %}
+
+{% hint style="info" %}
+**Environments (Preview) are also available**
+
+This page is about Environments (Classic). Environments (Preview) is a newer version of environments, available on Enterprise plans. See [Environments (Preview)](../preview/README.md). To find out which version your instance uses, see [Work with environments](../README.md#find-out-which-version-your-instance-uses).
+{% endhint %}
+
+If your n8n instance uses Environments (Classic) and connects to a Git repository, you need to keep your work in sync with Git.
+
+This document assumes some familiarity with Git concepts and terminology. Refer to [Git concepts for environments](../git-concepts.md) for an introduction to Git, and [Git and n8n](use-git-in-n8n.md) for how Environments (Classic) use Git.
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/sVOSvjfqJPLqOGb1x77B/" %}
 

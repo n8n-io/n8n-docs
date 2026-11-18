@@ -15,6 +15,15 @@ layout:
 # Classic environments in n8n <a href="#environments-in-n8n" id="environments-in-n8n"></a>
 
 {% hint style="info" %}
+**Feature availability**
+
+Environments (Classic) are available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Business, Enterprise
+{% endhint %}
+
+{% hint style="info" %}
 **New version available**
 
 A new version of environments is in Preview and available on Enterprise plans. See [Environments (Preview)](../preview/README.md). To find out which version your instance uses, see [Work with environments](../README.md#find-out-which-version-your-instance-uses).

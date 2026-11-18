@@ -244,10 +244,10 @@ Select the **Microsoft Graph API Base URL** that matches your tenant's cloud env
 
 <!-- vale off -->
 
-- **Global (https://graph.microsoft.com)**: standard Microsoft 365 tenants (default)
-- **US Government (https://graph.microsoft.us)**: Azure US Government tenants, including GCC High
-- **US Government DOD (https://dod-graph.microsoft.us)**: Azure US Government Department of Defense tenants
-- **China (https://microsoftgraph.chinacloudapi.cn)**: Microsoft 365 operated by 21Vianet in China
+- **Global (`https://graph.microsoft.com`)**: standard Microsoft 365 tenants (default)
+- **US Government (`https://graph.microsoft.us`)**: Azure US Government tenants, including GCC High
+- **US Government DOD (`https://dod-graph.microsoft.us`)**: Azure US Government Department of Defense tenants
+- **China (`https://microsoftgraph.chinacloudapi.cn`)**: Microsoft 365 operated by 21Vianet in China
 
 n8n derives the matching sign-in endpoint automatically, for example `login.microsoftonline.us` for the US Government clouds and `login.partner.microsoftonline.cn` for China, so you don't need to configure any token or authorization URLs. Complete the app registration in your cloud's own Entra admin center, and the nodes route all Microsoft Graph calls through the endpoint you selected.
 

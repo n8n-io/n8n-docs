@@ -7,7 +7,7 @@ url: >-
   https://docs.n8n.io/connect/connect-to-n8n-mcp-server/mcp-server-tools-reference
 description: >-
   Complete reference for all tools exposed by the n8n MCP server, including
-  workflow management, workflow builder, agent management, user preference, and
+  workflow management, workflow builder, agent management, skill, user preference, and
   data table tools.
 layout:
   width: default
@@ -138,6 +138,7 @@ Get detailed information about a specific workflow, including trigger details.
 * Includes active version details if the workflow is published.
 * Includes user permission scopes and whether the workflow can be executed by the current user.
 * Use `triggerInfo` to understand how supported trigger nodes can be invoked.
+* From n8n 2.47.0, if n8n can't read the credential of a webhook that uses header or JWT authentication, `triggerInfo` still states that the webhook requires authentication. It asks the user for the header name and value, or for the JWT credentials.
 * Use `detailLevel: "execution"` when you only need to run the workflow with `execute_workflow`. It omits the node graph, which keeps the response small.
 
 ***
@@ -232,6 +233,7 @@ Test a workflow using pin data to bypass external services. Trigger nodes, nodes
 * Can be used to test workflow logic without setting up credentials or hitting external services.
 * This tool executes workflows synchronously (waits for execution to finish).
 * Has an enforced MCP execution timeout, five minutes by default. Use `timeout` to raise it, up to 60 minutes.
+* From n8n 2.47.0, if execution data redaction applies to you, `error` holds the redacted error instead of the original message. If n8n can't load or redact the execution, `error` holds `Error details hidden because the execution data redaction check failed`.
 
 ***
 
@@ -1531,9 +1533,11 @@ When `versionId` is omitted, the response describes the current draft:
 | `isRunnable`            | `boolean`        | Whether the agent has everything it needs to run                                                                                                   |
 | `missing`               | `string[]`       | Config paths still needed before the agent is runnable                                                                                             |
 | `skills`                | `object`         | Map of skill ID to skill body (`name`, `description`, `instructions`, and optionally `allowedTools`, `references`)                                 |
+| `skillHashes`           | `object`         | Map of skill ID to a hash of the skill body. Pass a skill's hash as `baseSkillHash` to `skill.upsert` in `mutate_agent`.                           |
+| `outdatedSkillIds`      | `string[]`       | IDs of the skills that the agent pins to a saved version that has a newer version. Available from n8n 2.46.0.                                      |
 | `tasks`                 | `array`          | Scheduled tasks, each with `id`, `name`, `objective`, `cronExpression`, and `enabled`                                                              |
 | `customTools`           | `array`          | Custom tools, each with `id` and `descriptor` (`name`, `description`, `inputSchema`, `outputSchema`, and related metadata)                         |
-| `integrations`          | `array`          | Configured Slack, Telegram, or Linear integrations. Read-only here; manage with `update_agent_integration`.                                        |
+| `integrations`          | `array`          | Configured Slack, Telegram, Linear, or API (type `"webhook"`) integrations. Read-only here; manage with `update_agent_integration`.                |
 
 When `versionId` is provided, the response describes that published snapshot instead:
 
@@ -1603,7 +1607,7 @@ The `data` field's shape depends on `kind`:
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `models` (no `provider`)   | `{ providers: [{ provider, name, modelCount }], hint }`, a provider summary. Pass `provider` to list its models.                                                                                                                                                                                                                                                                                                                                                          |
 | `models` (with `provider`) | `{ provider, verified, models: [{ id, name, toolCall, releaseDate?, reasoning?, cost?, limits? }], truncated, hint? }`. `verified` is true when the list was confirmed against the provider's own API using `credentialId`. From n8n 2.43.0, `models` holds at most 50 entries. `truncated` is `true` when more models match, and `hint` then asks you to pass `query` to filter models by ID. Earlier versions return the full model list without `truncated` or `hint`. |
-| `integrations`             | Array of `{ type, label, icon, credentialTypes, settingsRequired, settingsSchema?, settingsGuidance?, setupGuidance? }`. Telegram entries include `settingsSchema` and `settingsGuidance`. Slack entries include `setupGuidance`, which explains the managed setup flow.                                                                                                                                                                                                  |
+| `integrations`             | Array of `{ type, label, icon, credentialTypes, settingsRequired, settingsSchema?, settingsGuidance?, setupGuidance? }`. Telegram and API channel (type `"webhook"`) entries include `settingsSchema` and `settingsGuidance`. Slack entries include `setupGuidance`, which explains the managed setup flow.                                                                                                                                                               |
 | `workflows`                | Array of `{ name, active, triggerType }`, for workflows with a trigger supported for attaching as a `type: "workflow"` tool                                                                                                                                                                                                                                                                                                                                               |
 | `subagents`                | Array of `{ agentId, name }`, for published agents in the project, excluding `excludeAgentId`                                                                                                                                                                                                                                                                                                                                                                             |
 | `mcpServers`               | Array of MCP registry servers, each with `name`, `title`, `description`, `url`, `transport`, `authentication`, `credentialType`, `tools`, `metadata`                                                                                                                                                                                                                                                                                                                      |
@@ -1667,8 +1671,8 @@ Apply one config, skill, task, or custom-tool mutation to an agent draft. Return
 | ------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `config.replace`    | `config: object`                                       | Replace the full editable agent configuration. Can't include `integrations`.                                                                                                    |
 | `config.patch`      | `patch: array` (min 1)                                 | Apply an array of RFC 6902 JSON Patch operations (`add`, `remove`, `replace`, `move`, `copy`, `test`). Paths under `/integrations` are rejected.                                |
-| `skill.upsert`      | `skill: object`, `skillId?: string`                    | Omit `skillId` to create and attach a new skill; pass it to replace an existing skill body                                                                                      |
-| `skill.delete`      | `skillId: string`                                      | Delete a skill and remove its config reference                                                                                                                                  |
+| `skill.upsert`      | `skill: object`, `skillId?: string`, `baseSkillHash?: string` | Omit `skillId` to create a skill in the agent's project and attach it. Pass `skillId` to save the next version of an attached skill. Pass `baseSkillHash` from the `skillHashes` field of `get_agent` to reject the save if the skill changed since you read it. Skills ignore `allowedTools`. |
+| `skill.delete`      | `skillId: string`                                      | Detach the skill from the agent. The skill stays in the skills hub, available to other agents.                                                                                  |
 | `task.upsert`       | `task: object`, `taskId?: string`, `enabled?: boolean` | Omit `taskId` to create a new scheduled task; pass it to replace an existing one. `task` has `name`, `objective`, and `cronExpression` (a standard five-field cron expression). |
 | `task.delete`       | `taskId: string`                                       | Delete a task and remove its config reference                                                                                                                                   |
 | `customTool.upsert` | `code: string`                                         | Compile, validate, store, and attach a custom tool from source code                                                                                                             |
@@ -1698,9 +1702,11 @@ On a stale configuration:
 #### Notes <a href="#notes" id="notes"></a>
 
 * Every mutation requires `baseConfigHash` from `get_agent` or the previous successful mutation. If the agent changed since that hash was read, the call returns `stale_config` instead of applying the mutation; call `get_agent` and retry against the returned `configHash`.
-* Integrations (Slack, Telegram, Linear) can't be changed through `config.replace` or `config.patch`; use [update\_agent\_integration](mcp-server-tools-reference.md#updateagentintegration).
+* Integrations (Slack, Telegram, Linear, API) can't be changed through `config.replace` or `config.patch`; use [update\_agent\_integration](mcp-server-tools-reference.md#updateagentintegration).
 * Custom tool code may only import `@n8n/agents` and `zod`. Its default export must be a `Tool` builder chain with `description`, `input` (a Zod schema), and `handler`; `output` is optional.
 * Fetch [get\_agent\_builder\_reference](mcp-server-tools-reference.md#getagentbuilderreference) for the full configuration schema and worked examples before calling `config.replace` or `config.patch`.
+* From n8n 2.46.0, agents keep their skills in the [skills hub](mcp-server-tools-reference.md#skills). Agents can share a skill, so a new version from `skill.upsert` applies to every agent that uses the latest version of that skill. In earlier versions, `skill.upsert` with a `skillId` replaces the skill body, and `skill.delete` deletes the skill.
+* A skill ref with `versionId` in the agent config pins that saved version of the skill. `get_agent` lists pinned skills that have a newer version in `outdatedSkillIds`. To use the latest version, remove `versionId` from the ref with `config.patch`. Don't delete and add the skill again.
 
 ***
 
@@ -1721,6 +1727,7 @@ Validate an agent draft, its sidecar references, and user-accessible credentials
 | `valid`   | `boolean`  | Whether the agent is valid and runnable                |
 | `errors`  | `string[]` | Configuration schema errors                            |
 | `missing` | `string[]` | Config paths still needed before the agent is runnable |
+| `warnings` | `string[]` | Problems that don't change `valid`, for example two skills with names that are hard to tell apart. Present only when there are warnings. Available from n8n 2.46.0. |
 | `url`     | `string`   | The URL to open the agent in the n8n editor            |
 
 #### Notes <a href="#notes" id="notes"></a>
@@ -1965,7 +1972,7 @@ List the recorded sessions of an agent, newest first, with their status, origin,
 | `limit` | `integer` | No | `20` | Limit the number of results (min 1, max 50) |
 | `cursor` | `string` | No | | Cursor for pagination. Pass the `nextCursor` from an earlier `list_agent_sessions` result |
 | `status` | `string` | No | | Filter by session status. One of: `"running"`, `"succeeded"`, `"error"`, `"cancelled"`, `"interrupted"` |
-| `origin` | `string` | No | | Filter by where the session started. One of: `"preview"`, `"instance-ai"`, `"mcp"`, `"sub-agent"`, `"schedule"`, `"workflow"`, `"n8n_chat_production"`, `"slack"`, `"telegram"`, `"linear"`, `"discord"`, `"whatsapp"`, `"teams"`. `call_agent` test runs have the origin `"mcp"` |
+| `origin` | `string` | No | | Filter by where the session started. One of: `"preview"`, `"instance-ai"`, `"mcp"`, `"sub-agent"`, `"schedule"`, `"workflow"`, `"n8n_chat_production"`, `"slack"`, `"telegram"`, `"linear"`, `"discord"`, `"whatsapp"`, `"teams"`, `"webhook"` (the API channel). `call_agent` test runs have the origin `"mcp"` |
 | `updatedAfter` | `string` | No | | ISO 8601 timestamp. Only return sessions updated after this time |
 | `updatedBefore` | `string` | No | | ISO 8601 timestamp. Only return sessions updated before this time |
 
@@ -2032,20 +2039,20 @@ The tool returns a transcript of the session. Each turn shows its status, error,
 
 ### update\_agent\_integration <a href="#updateagentintegration" id="updateagentintegration"></a>
 
-Configure or disconnect a Slack, Telegram, or Linear conversation integration. This is the only way to manage integrations; `config.replace` and `config.patch` in `mutate_agent` can't change them. For Slack, n8n recommends that you connect without `credentialId` first, so that n8n can create the Slack app for the agent. You can also connect an existing `slackApi` credential.
+Configure or disconnect a Slack, Telegram, Linear, or API conversation integration. The API channel uses the integration type `"webhook"`. This is the only way to manage integrations; `config.replace` and `config.patch` in `mutate_agent` can't change them. For Slack, n8n recommends that you connect without `credentialId` first, so that n8n can create the Slack app for the agent. You can also connect an existing `slackApi` credential.
 
 #### Parameters <a href="#parameters" id="parameters"></a>
 
-| Name                   | Type                        | Required | Description                                                                                                                                                                  |
-| ---------------------- | --------------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `agentId`              | `string`                    | Yes      | The ID of the agent                                                                                                                                                          |
-| `action`               | `"connect" \| "disconnect"` | Yes      | Whether to connect or disconnect the integration                                                                                                                             |
-| `type`                 | `string`                    | Yes      | Integration type returned by `discover_agent_assets` (`"slack"`, `"telegram"`, or `"linear"`)                                                                                |
-| `credentialId`         | `string`                    | No       | Accessible credential for this integration. Required for `disconnect` and for `connect` on every type other than Slack. Omit it to connect Slack through managed setup       |
-| `managerCredentialId`  | `string`                    | No       | Slack managed setup only: the `managerCredentialId` returned by a Slack connect call without `credentialId`                                                                  |
-| `workspaceId`          | `string`                    | No       | Slack managed setup only: the `workspaceId` returned by a Slack connect call without `credentialId`                                                                          |
-| `replacesCredentialId` | `string`                    | No       | On `connect`, the credential of the same type that this one replaces. Swaps both in one operation instead of a separate `disconnect`                                         |
-| `settings`             | `object`                    | No       | Integration settings. Required for Telegram `connect` operations (`accessMode`: `"public"` with `allowedUsers: []`, or `"private"` with at least one allowed Telegram user). |
+| Name                   | Type                        | Required | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ---------------------- | --------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `agentId`              | `string`                    | Yes      | The ID of the agent                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `action`               | `"connect" \| "disconnect"` | Yes      | Whether to connect or disconnect the integration                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| `type`                 | `string`                    | Yes      | Integration type returned by `discover_agent_assets` (`"slack"`, `"telegram"`, `"linear"`, or `"webhook"` for the API channel)                                                                                                                                                                                                                                                                                                                                            |
+| `credentialId`         | `string`                    | No       | Accessible credential for this integration. Required for `disconnect` and for `connect` on every type other than Slack. Omit it to connect Slack through managed setup, and to connect or disconnect the API channel (type `"webhook"`) when its authentication is `"none"`                                                                                                                                                                                               |
+| `managerCredentialId`  | `string`                    | No       | Slack managed setup only: the `managerCredentialId` returned by a Slack connect call without `credentialId`                                                                                                                                                                                                                                                                                                                                                               |
+| `workspaceId`          | `string`                    | No       | Slack managed setup only: the `workspaceId` returned by a Slack connect call without `credentialId`                                                                                                                                                                                                                                                                                                                                                                       |
+| `replacesCredentialId` | `string`                    | No       | On `connect`, the credential of the same type that this one replaces. Swaps both in one operation instead of a separate `disconnect`                                                                                                                                                                                                                                                                                                                                      |
+| `settings`             | `object`                    | No       | Integration settings. Required for Telegram and API channel (type `"webhook"`) `connect` operations. For Telegram, pass `accessMode`: `"public"` with `allowedUsers: []`, or `"private"` with at least one allowed Telegram user. For the API channel, pass `authentication`: `"headerAuth"` with an `httpHeaderAuth` credential, `"jwtAuth"` with a `jwtAuth` credential, or `"none"` with no credential. Use `"none"` only when anyone with the URL can call the agent. |
 
 #### Output <a href="#output" id="output"></a>
 
@@ -2083,6 +2090,8 @@ Every call can also return `ok`, and a failed call returns `ok: false` with `cod
 * Configuring an integration never publishes the agent. If the agent is already published, connecting starts the channel immediately; otherwise the channel stays inactive until `publish_agent` is called.
 * Disconnecting tears down the live channel immediately, whether or not the agent is published.
 * Confirm with the user before connecting a channel on an already-published agent, since it connects immediately.
+* The API channel (type `"webhook"`) is available from n8n 2.49.0. An external system or backend sends a message to the published agent over HTTP and gets the reply in the same response.
+* To connect the API channel, pass `settings.authentication`. Omit `credentialId` when the authentication is `"none"`.
 * Slack managed setup is available from n8n 2.43.0. This covers the `managerCredentialId` and `workspaceId` parameters, and the `status`, `code`, `managerCredentials`, `appId`, `installUrl`, `agentUrl`, `nextStep`, and `slackApp` fields. From n8n 2.43.0, `credentialId` is optional for Slack `connect`. Earlier versions require `credentialId` on every call, and return `configured: true` for any accessible `slackApi` credential without checking the Slack app.
 * A Slack app sends events only to the request URL in its own configuration, so a Slack channel works only with a Slack app that points at this agent. A `slackApi` credential made for another use, such as a Slack Trigger or another agent, passes every credential check but the agent receives nothing.
 * To connect Slack, call with `action: "connect"`, `type: "slack"`, and no `credentialId` first. Nothing changes. n8n returns the workspaces where it can create a Slack app for the agent, or the steps the user must take in n8n.
@@ -2131,6 +2140,209 @@ For MCP clients that support resources, n8n also exposes the agent builder refer
 | URI       | `n8n://agents/reference`                                                                                                                                 |
 | MIME type | `text/markdown`                                                                                                                                          |
 | Content   | The same build-sequence guide, `mutate_agent` operation catalog, and canonical agent configuration JSON Schema returned by `get_agent_builder_reference` |
+
+***
+
+## Skills
+
+{% hint style="info" %}
+**Feature availability**
+
+Skills tools are available from n8n 2.46.0, when the agents module is enabled on the instance. Without the agents module, n8n doesn't register these tools.
+{% endhint %}
+
+A skill is a set of reusable instructions, with optional reference files, that agents can attach. n8n keeps skills in the skills hub. These tools let an MCP client search, read, create, update, and delete skills in the skills hub. To attach a skill to an agent or detach it, use [mutate\_agent](mcp-server-tools-reference.md#mutateagent).
+
+Two OAuth scopes cover these tools:
+
+| OAuth scope   | Consent screen label                 | Tools                                                                          |
+| ------------- | ------------------------------------ | ------------------------------------------------------------------------------ |
+| `skill:read`  | **List and read skills**             | `search_n8n_skills`, `get_skill`                                               |
+| `skill:write` | **Create, update and delete skills** | `create_skill`, `update_skill`, `delete_skill`, `search_n8n_skills`, `get_skill` |
+
+Each skill has one of two scopes:
+
+| Scope      | Who can use the skill                                    |
+| ---------- | -------------------------------------------------------- |
+| `project`  | Agents in one project                                    |
+| `instance` | Agents in every project on the instance                  |
+
+A skill body has these fields and limits:
+
+| Field          | Type     | Required | Description                                                                                                                                                                  |
+| -------------- | -------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`         | `string` | Yes      | Up to 128 characters. Must be unique in the skill's scope.                                                                                                                  |
+| `description`  | `string` | Yes      | Up to 1,024 characters                                                                                                                                                       |
+| `instructions` | `string` | Yes      | Up to 65,536 characters. Can't be only white space.                                                                                                                         |
+| `references`   | `array`  | No       | Up to 20 reference files, each with `path` and `content`. `path` must be a Markdown file under `references/`, for example `references/api.md`. Each `content` holds up to 65,536 characters, and all references together hold up to 262,144 characters. |
+
+When a skills tool fails with an error that its own section doesn't list, the response has `ok: false`, `code: "skill_tool_error"`, and the error message in `error`.
+
+### search\_n8n\_skills
+
+Search the skills the current user can access.
+
+#### Parameters
+
+| Name                  | Type                        | Required | Default | Description                                                                         |
+| --------------------- | --------------------------- | -------- | ------- | ----------------------------------------------------------------------------------- |
+| `query`               | `string`                    | No       |         | Filter by skill name or description (max 200 characters)                            |
+| `scope`               | `"project" \| "instance"`   | No       |         | Only return skills with this scope                                                  |
+| `projectId`           | `string`                    | No       |         | Only return skills of this project                                                  |
+| `attachableToAgentId` | `string`                    | No       |         | Only return skills this agent can attach. Don't combine it with `scope` or `projectId`. |
+| `limit`               | `integer`                   | No       | `50`    | Limit the number of results (max 100)                                               |
+| `skip`                | `integer`                   | No       | `0`     | Number of skills to skip, to read the next page                                     |
+
+#### Output
+
+| Field                   | Type             | Description                                                    |
+| ----------------------- | ---------------- | -------------------------------------------------------------- |
+| `count`                 | `integer`        | Total number of skills that match the filters                  |
+| `skills`                | `array`          | The skills on this page                                        |
+| `skills[].id`           | `string`         | The skill ID                                                   |
+| `skills[].name`         | `string`         | The skill name                                                 |
+| `skills[].description`  | `string`         | The skill description                                          |
+| `skills[].scope`        | `string`         | `"project"` or `"instance"`                                    |
+| `skills[].projectId`    | `string \| null` | The project of a project skill                                 |
+| `skills[].projectName`  | `string \| null` | The name of that project                                       |
+| `skills[].latestVersion`| `number`         | The number of the latest saved version                         |
+| `skills[].availableToAssistant` | `boolean` | Whether n8n Assistant can use the skill. Present only when n8n Assistant can use skills on the instance. |
+| `skills[].usedByAgents` | `number`         | Number of agents that use the skill                            |
+| `skills[].canEdit`      | `boolean`        | Whether the current user can update the skill                  |
+| `skills[].canDelete`    | `boolean`        | Whether the current user can delete the skill                  |
+| `skills[].updatedAt`    | `string`         | ISO timestamp when the skill was last updated                  |
+
+#### Notes
+
+* Use `attachableToAgentId` to find skills to attach to an agent. An agent can attach the skills of its own project and instance skills.
+
+***
+
+### get\_skill
+
+Read a skill with its instructions, references, `skillHash`, and the agents that use it.
+
+#### Parameters
+
+| Name      | Type     | Required | Description                                  |
+| --------- | -------- | -------- | -------------------------------------------- |
+| `skillId` | `string` | Yes      | The skill ID, from `search_n8n_skills`       |
+
+#### Output
+
+The response has every `skills[]` field from `search_n8n_skills`, without the `skills[]` prefix, and these fields:
+
+| Field                | Type      | Description                                                                                                         |
+| -------------------- | --------- | ------------------------------------------------------------------------------------------------------------------- |
+| `skill`              | `object`  | The body of the latest version: `name`, `description`, `instructions`, and optionally `references`                  |
+| `skillHash`          | `string`  | Hash of the latest version. Pass it as `baseSkillHash` to `update_skill`.                                           |
+| `usedBy`             | `object`  | The agents that use the skill, limited to the agents you can read                                                   |
+| `usedBy.drafts`      | `array`   | Agents whose draft uses the skill, each with `agentId`, `agentName`, `projectId`, `version`, and `pinned`           |
+| `usedBy.pins`        | `array`   | Agents whose published version pins the skill, each with `agentId`, `agentName`, `projectId`, and `version`         |
+| `usedBy.hiddenAgents`| `number`  | Number of agents that use the skill in projects you can't read                                                      |
+
+***
+
+### create\_skill
+
+Create a skill in the skills hub.
+
+#### Parameters
+
+| Name        | Type                      | Required | Description                                                                                         |
+| ----------- | ------------------------- | -------- | --------------------------------------------------------------------------------------------------- |
+| `scope`     | `"project" \| "instance"` | Yes      | `"project"` lets the agents in one project use the skill. `"instance"` lets agents in every project use it. |
+| `projectId` | `string`                  | No       | The project to create the skill in. Required when `scope` is `"project"`.                           |
+| `skill`     | `object`                  | Yes      | The skill body, with `name`, `description`, `instructions`, and optionally `references`. Can't include `allowedTools`. |
+| `availableToAssistant` | `boolean`      | No       | Let n8n Assistant use the skill. Defaults to `false`. Available only when n8n Assistant can use skills on the instance. |
+
+#### Output
+
+On success, the response has the same fields as `get_skill`.
+
+When another skill in the same scope has the name:
+
+| Field     | Type      | Description                                      |
+| --------- | --------- | ------------------------------------------------ |
+| `ok`      | `boolean` | `false`                                          |
+| `code`    | `string`  | `"skill_name_taken"`                             |
+| `message` | `string`  | Tells you to choose a different name and retry   |
+
+#### Notes
+
+* Creating a skill doesn't attach it to an agent. To attach it, add a skill ref to the agent config with `mutate_agent`.
+
+***
+
+### update\_skill
+
+Update a skill. Pass only the fields to change. A change to the content saves the next version of the skill.
+
+#### Parameters
+
+| Name            | Type                      | Required | Description                                                                                                  |
+| --------------- | ------------------------- | -------- | ------------------------------------------------------------------------------------------------------------ |
+| `skillId`       | `string`                  | Yes      | The skill to update                                                                                          |
+| `baseSkillHash` | `string`                  | Yes      | The `skillHash` from `get_skill`. n8n refuses the update if the skill changed since you read it.             |
+| `name`          | `string`                  | No       | The new name                                                                                                 |
+| `description`   | `string`                  | No       | The new description                                                                                          |
+| `instructions`  | `string`                  | No       | The new instructions                                                                                         |
+| `references`    | `array`                   | No       | The new reference files. Replaces all current reference files.                                               |
+| `scope`         | `"project" \| "instance"` | No       | Move the skill to this scope. n8n refuses the move if an agent that uses the skill can't use it in the new scope. |
+| `projectId`     | `string`                  | No       | The project to move the skill to. Required when `scope` is `"project"`.                                      |
+| `availableToAssistant` | `boolean`          | No       | Let n8n Assistant use the skill, or stop it. A change to only this setting doesn't save a new version. Available only when n8n Assistant can use skills on the instance. |
+
+#### Output
+
+On success:
+
+| Field       | Type      | Description                                                                                    |
+| ----------- | --------- | ---------------------------------------------------------------------------------------------- |
+| `id`        | `string`  | The skill ID                                                                                   |
+| `versionId` | `string`  | The ID of the latest version                                                                   |
+| `version`   | `number`  | The number of the latest version                                                               |
+| `created`   | `boolean` | `false` when the content matched the latest version, so n8n saved no new version               |
+| `skillHash` | `string`  | Hash of the latest version. Pass it as `baseSkillHash` to the next update.                     |
+
+When the skill changed since you read it:
+
+| Field       | Type      | Description                                                              |
+| ----------- | --------- | ------------------------------------------------------------------------ |
+| `ok`        | `boolean` | `false`                                                                  |
+| `skillId`   | `string`  | The skill ID                                                             |
+| `code`      | `string`  | `"stale_skill"`                                                          |
+| `skillHash` | `string`  | The current hash of the skill                                            |
+| `message`   | `string`  | `"The skill changed since you read it. Call get_skill before retrying."` |
+
+When another skill in the same scope has the new name, the response has `ok: false`, `skillId`, `code: "skill_name_taken"`, and `message`.
+
+#### Notes
+
+* Agents that use the latest version of the skill run the new version. Agents that pin an older version keep it until you remove the pin. See [mutate\_agent](mcp-server-tools-reference.md#mutateagent).
+
+***
+
+### delete\_skill
+
+Permanently delete a skill from the skills hub.
+
+#### Parameters
+
+| Name      | Type     | Required | Description          |
+| --------- | -------- | -------- | -------------------- |
+| `skillId` | `string` | Yes      | The skill to delete  |
+
+#### Output
+
+| Field     | Type      | Description          |
+| --------- | --------- | -------------------- |
+| `deleted` | `boolean` | `true`               |
+| `skillId` | `string`  | The deleted skill ID |
+
+#### Notes
+
+* n8n refuses to delete a skill while an agent uses it, in its draft or in a published version. The error names the agents you can read. To detach the skill from an agent draft, use `skill.delete` in `mutate_agent`.
+* You can't restore a deleted skill.
 
 ***
 

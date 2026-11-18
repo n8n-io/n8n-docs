@@ -405,6 +405,21 @@ def anchor_slug(heading: str) -> str:
     return re.sub(r"\s+", "-", h.strip())
 
 
+# GitBook serves a heading id cut to 100 characters, even when the markdown
+# carries a longer explicit `id=`. Seen live on changelog/v20-breaking-changes
+# (the `...-waiting-for-webhook-for` heading, CAP-426).
+GITBOOK_ID_MAX = 100
+
+
+def gitbook_id_forms(ids: set) -> set:
+    """Add the 100-character form of every id longer than GitBook serves.
+
+    Only adds ids, so it can silence a false positive but never create a
+    finding. The full id is kept too, because the cut was confirmed on one page.
+    """
+    return ids | {i[:GITBOOK_ID_MAX] for i in ids if len(i) > GITBOOK_ID_MAX}
+
+
 _HEADING_IDS: dict = {}
 
 
@@ -436,6 +451,10 @@ def heading_ids(path: Path) -> tuple:
     headings = strip_code(raw, inline=False)
     explicit = set(EXPLICIT_ID_RE.findall(markup))
     slugs = set()
+    # GitBook makes repeated heading ids unique by adding `-1`, `-2`, ... in page
+    # order (live on get-started/enterprise-hub: the stepper's "Publish first
+    # workflow" is `#publish-first-workflow`, the section below it is `-1`).
+    seen: dict = {}
     # Walk both views in step: judge id-presence on the markup line (so an
     # `<a id="...">` shown inside backticks doesn't count as a real anchor) while
     # slugging the heading line (which keeps its code spans).
@@ -444,7 +463,18 @@ def heading_ids(path: Path) -> tuple:
         if m and not re.search(r'<a\b[^>]*\bid="', line_markup):
             s = anchor_slug(m.group(1))
             if s:
-                slugs.add(s)
+                n = seen.get(s, 0)
+                if n == 0:
+                    slugs.add(s)
+                else:
+                    # Unverified for long ids whether GitBook cuts before or
+                    # after adding the suffix, so accept both. The cut-after
+                    # form, (s-n)[:100], comes from gitbook_id_forms below.
+                    slugs.add(f"{s}-{n}")
+                    slugs.add(f"{s[:GITBOOK_ID_MAX]}-{n}")
+                seen[s] = n + 1
+    explicit = gitbook_id_forms(explicit)
+    slugs = gitbook_id_forms(slugs)
     resolved = True
     blocks = reusable_blocks()
     for bid in INCLUDE_URL_RE.findall(markup):

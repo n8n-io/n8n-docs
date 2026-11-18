@@ -83,7 +83,7 @@ To test the [Enterprise plan](https://n8n.io/pricing/), contact the sales team. 
 - Log streaming
 - Version control using Git
 
-Select the **Contact** button on the [n8n website](https://n8n.io/pricing/).
+Select the **Contact** button on the [n8n website](https://n8n.io/pricing/). For guidance on rolling out Enterprise after you subscribe, see the [Enterprise Hub](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/enterprise-hub).
 
 ## Related resources
 

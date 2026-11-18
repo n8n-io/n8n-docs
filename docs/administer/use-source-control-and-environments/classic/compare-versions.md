@@ -14,13 +14,13 @@ layout:
 
 # Compare changes with workflow diffs <a href="#compare-changes-with-workflow-diffs" id="compare-changes-with-workflow-diffs"></a>
 
+In Environments (Classic), workflow diffs allow you to visually compare changes between the workflow you have on an instance and the most recent version saved in your connected Git repository. This helps you understand the exact changes to the workflow before you decide to either push or pull it across different environments.
+
 {% hint style="info" %}
 **Environments (Preview) are also available**
 
 This page is about Environments (Classic). A newer version of Environments is also available in Preview for Enterprise plans. It adds promotion reviews, a visual diff of each change, protection for production instances, and more. See [Environments (Preview)](../preview/README.md).
 {% endhint %}
-
-In Environments (Classic), workflow diffs allow you to visually compare changes between the workflow you have on an instance and the most recent version saved in your connected Git repository. This helps you understand the exact changes to the workflow before you decide to either push or pull it across different environments.
 
 {% hint style="info" %}
 **Feature availability**

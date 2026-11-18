@@ -14,6 +14,8 @@ layout:
 
 # Tutorial: Create environments with source control <a href="#tutorial-create-environments-with-source-control" id="tutorial-create-environments-with-source-control"></a>
 
+This tutorial walks through the process of setting up Environments (Classic) end-to-end. You'll create two environments: development and production. It uses GitHub as the Git provider. The process is similar for other providers. 
+
 {% hint style="info" %}
 **Feature availability**
 
@@ -32,8 +34,6 @@ Instance owners and instance admins can push changes to and pull changes from th
 
 This page is about Environments (Classic). A newer version of Environments is also available in Preview for Enterprise plans. It adds promotion reviews, a visual diff of each change, protection for production instances, and more. See [Environments (Preview)](../preview/README.md).
 {% endhint %}
-
-This tutorial walks through the process of setting up Environments (Classic) end-to-end. You'll create two environments: development and production. It uses GitHub as the Git provider. The process is similar for other providers. 
 
 n8n built Environments (Classic) on top of Git, a version control software. You link an n8n instance to a Git branch, and use a push-pull pattern to move work between environments. You should have some understanding of environments and Git. If you need more information on these topics, refer to:
 

@@ -1,6 +1,6 @@
 ---
-title: Source control and environments
-description: Overview of source control and environments in n8n
+title: Environments (Classic)
+description: Overview of Environments (Classic), the source control feature that pushes and pulls n8n work to and from Git.
 contentType: overview
 hide:
   - toc
@@ -13,7 +13,9 @@ layout:
     visible: false
 ---
 
-# Source control and environments <a href="#source-control-and-environments" id="source-control-and-environments"></a>
+# Environments (Classic)
+
+n8n uses Git-based source control to support environments. Linking your n8n instances to a Git repository lets you create multiple n8n environments, backed by Git branches.
 
 {% hint style="info" %}
 **Feature availability**
@@ -33,8 +35,6 @@ Instance owners and instance admins can push changes to and pull changes from th
 
 This page is about Environments (Classic). A newer version of Environments is also available in Preview for Enterprise plans. It adds promotion reviews, a visual diff of each change, protection for production instances, and more. See [Environments (Preview)](../preview/README.md).
 {% endhint %}
-
-n8n uses Git-based source control to support environments. Linking your n8n instances to a Git repository lets you create multiple n8n environments, backed by Git branches.
 
 ## In this section
 

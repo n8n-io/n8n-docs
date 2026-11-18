@@ -7,6 +7,8 @@ layout:
 
 # Use environments programmatically with the public API
 
+You can manage Environments (Classic) from scripts and pipelines using the public API, without opening the n8n UI. This lets you automate promotion between instances, for example moving work from a development instance to production on a schedule or as part of a CI/CD pipeline.
+
 {% hint style="info" %}
 **Feature availability**
 
@@ -21,8 +23,6 @@ Environments (Classic) are available on:
 
 This page is about Environments (Classic). A newer version of Environments is also available in Preview for Enterprise plans. It adds promotion reviews, a visual diff of each change, protection for production instances, and more. See [Environments (Preview)](../preview/README.md).
 {% endhint %}
-
-You can manage Environments (Classic) from scripts and pipelines using the public API, without opening the n8n UI. This lets you automate promotion between instances, for example moving work from a development instance to production on a schedule or as part of a CI/CD pipeline.
 
 This page explains how the source control API endpoints work together. Environments (Preview) use promotion endpoints instead. See [Upgrade from Environments (Classic)](../preview/upgrade-from-environments-classic.md). It assumes you've already connected your instances to Git and understand how push and pull behave in the UI. For that background, read [Push and pull](push-and-pull-changes.md) and [Copy work between environments](move-work-between-environments.md).
 

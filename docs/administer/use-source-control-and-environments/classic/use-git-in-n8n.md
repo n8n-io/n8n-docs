@@ -14,6 +14,8 @@ layout:
 
 # Git and n8n <a href="#git-and-n8n" id="git-and-n8n"></a>
 
+Environments (Classic) use Git to provide source control. To use this feature, it helps to have some knowledge of basic Git concepts. For an introduction to Git, branches, and remotes, see [Git concepts for environments](../git-concepts.md). This page covers how Environments (Classic) use Git.
+
 {% hint style="info" %}
 **Feature availability**
 
@@ -28,8 +30,6 @@ Environments (Classic) are available on:
 
 This page is about Environments (Classic). A newer version of Environments is also available in Preview for Enterprise plans. It adds promotion reviews, a visual diff of each change, protection for production instances, and more. See [Environments (Preview)](../preview/README.md).
 {% endhint %}
-
-Environments (Classic) use Git to provide source control. To use this feature, it helps to have some knowledge of basic Git concepts. For an introduction to Git, branches, and remotes, see [Git concepts for environments](../git-concepts.md). This page covers how Environments (Classic) use Git.
 
 n8n doesn't implement all Git functionality: you shouldn't view n8n's source control as full version control.
 

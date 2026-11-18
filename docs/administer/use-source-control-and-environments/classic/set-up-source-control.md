@@ -14,6 +14,8 @@ layout:
 
 # Set up source control for environments <a href="#set-up-source-control-for-environments" id="set-up-source-control-for-environments"></a>
 
+Link a Git repository to an n8n instance and configure source control for Environments (Classic).
+
 {% hint style="info" %}
 **Feature availability**
 
@@ -28,8 +30,6 @@ Environments (Classic) are available on:
 
 This page is about Environments (Classic). A newer version of Environments is also available in Preview for Enterprise plans. It adds promotion reviews, a visual diff of each change, protection for production instances, and more. See [Environments (Preview)](../preview/README.md).
 {% endhint %}
-
-Link a Git repository to an n8n instance and configure source control for Environments (Classic).
 
 Environments (Classic) use source control to move work between n8n instances. Refer to [Classic environments in n8n](work-with-environments.md) for more information.
 

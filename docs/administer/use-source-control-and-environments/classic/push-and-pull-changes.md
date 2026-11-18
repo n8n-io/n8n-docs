@@ -14,6 +14,8 @@ layout:
 
 # Push and pull <a href="#push-and-pull" id="push-and-pull"></a>
 
+If your n8n instance uses Environments (Classic) and connects to a Git repository, you need to keep your work in sync with Git.
+
 {% hint style="info" %}
 **Feature availability**
 
@@ -28,8 +30,6 @@ Environments (Classic) are available on:
 
 This page is about Environments (Classic). A newer version of Environments is also available in Preview for Enterprise plans. It adds promotion reviews, a visual diff of each change, protection for production instances, and more. See [Environments (Preview)](../preview/README.md).
 {% endhint %}
-
-If your n8n instance uses Environments (Classic) and connects to a Git repository, you need to keep your work in sync with Git.
 
 This document assumes some familiarity with Git concepts and terminology. Refer to [Git concepts for environments](../git-concepts.md) for an introduction to Git, and [Git and n8n](use-git-in-n8n.md) for how Environments (Classic) use Git.
 

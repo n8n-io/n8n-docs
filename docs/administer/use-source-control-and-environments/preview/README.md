@@ -21,7 +21,7 @@ Environments are available on:
 - **n8n Cloud:** Enterprise
 - **Self-hosted:** Enterprise
 
-Available from n8n 2.47.0.
+Environments are available from n8n 2.47.0.
 
 Only instance owners and instance admins can set up environments, promote, apply, and review promotions.
 {% endhint %}

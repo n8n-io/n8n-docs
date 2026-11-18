@@ -5,7 +5,7 @@ layout:
     visible: false
 ---
 
-# Use source control and environments
+# Use source control and environments <a href="#source-control-and-environments" id="source-control-and-environments"></a>
 
 Environments let you build and test changes on one n8n instance, then move them to the next step of your release process, such as production. n8n backs environments with Git.
 
@@ -15,6 +15,12 @@ n8n has two versions of this feature:
 - [Environments (Preview)](preview/README.md): the newer version, in Preview. You promote changes from one instance to an environment, and the instance for that environment applies them. Environments (Preview) replace Environments (Classic).
 
 An instance uses one version or the other, never both.
+
+## In this section
+
+* [Git concepts for environments](git-concepts.md): the Git and source control terms both versions use, and how each version uses Git.
+* [Environments (Classic)](classic/README.md): set up and use push-and-pull source control between n8n instances.
+* [Environments (Preview)](preview/README.md): plan environments, promote and apply changes, review promotions, and protect a production instance.
 
 ## Find out which version your instance uses
 

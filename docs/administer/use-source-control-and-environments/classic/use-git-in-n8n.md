@@ -39,7 +39,7 @@ n8n doesn't implement all Git functionality: you shouldn't view n8n's source con
 If you're familiar with Git, don't rely on behaviors matching exactly. In particular, be aware that Environments (Classic) doesn't support a pull request-style review and merge process, unless you do this outside n8n in your Git provider. Environments (Preview) adds [promotion reviews](../preview/promotion-reviews.md) with GitLab.
 {% endhint %}
 
-The person doing the [Setup](set-up-source-control.md) should have some familiarity with Git and with their Git hosting provider.
+You should have some familiarity with Git and with your Git hosting provider before you [set up source control](set-up-source-control.md).
 
 ## Push, pull, and commit <a href="#push-pull-and-commit" id="push-pull-and-commit"></a>
 

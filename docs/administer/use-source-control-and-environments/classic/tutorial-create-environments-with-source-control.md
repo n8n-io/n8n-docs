@@ -35,7 +35,7 @@ Instance owners and instance admins can push changes to and pull changes from th
 This page is about Environments (Classic). A newer version of Environments is also available in Preview for Enterprise plans. It adds promotion reviews, a visual diff of each change, protection for production instances, and more. See [Environments (Preview)](../preview/README.md).
 {% endhint %}
 
-n8n built Environments (Classic) on top of Git, a version control software. You link an n8n instance to a Git branch, and use a push-pull pattern to move work between environments. You should have some understanding of environments and Git. If you need more information on these topics, refer to:
+n8n uses Git, a version control system, to support Environments (Classic). You link an n8n instance to a Git branch, and use a push-pull pattern to move work between environments. You should have some understanding of environments and Git. If you need more information on these topics, refer to:
 
 * [Classic environments in n8n](work-with-environments.md): how Environments (Classic) work. 
 * [Git concepts for environments](../git-concepts.md): the Git concepts and terms n8n uses.

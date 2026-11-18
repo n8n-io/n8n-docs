@@ -55,6 +55,8 @@ This page is about Environments (Classic). A newer version of Environments is al
 
 ## Related resources
 
+* [Work with environments](../README.md)
+* [Environments (Preview)](../preview/README.md)
 * [Administer](../../)
 * [Manage users and access](../../manage-users-and-access/README.md)
 * [Manage credentials](../../manage-credentials/README.md)

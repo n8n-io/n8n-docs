@@ -84,7 +84,7 @@ Only users who can push or pull commits for an instance can access workflow diff
 
 ## Related resources
 
-* [Environments (Classic)](./)
+* [Source control and environments](./)
 * [Classic environments in n8n](work-with-environments.md)
 * [Use Git in n8n](use-git-in-n8n.md)
 * [Choose branching patterns](choose-branching-patterns.md)

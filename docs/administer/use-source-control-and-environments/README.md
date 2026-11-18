@@ -46,9 +46,9 @@ There are advantages to having more than one environment. Separate environments 
 
 In software development, an environment is all the infrastructure and tooling around the code, including the tools that run the software and the specific configuration of those tools. For a more detailed introduction, refer to [Codecademy | Environments](https://www.codecademy.com/article/environments).
 
-Low-code development in n8n is similar. n8n is where you build and run your workflows. Your instance has its own configuration. On Cloud, n8n determines the configuration. On self-hosted instances, there are extensive [configuration options](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration). You may also have changed your instance's settings. This combination of n8n and your instance's configuration and settings is the environment your workflows run in.
+Low-code development in n8n is similar. n8n is where you build and run your workflows. Your instance has its own configuration. On n8n Cloud, n8n determines the configuration. On self-hosted instances, there are extensive [configuration options](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration). You may also have changed your instance's settings. This combination of n8n and your instance's configuration and settings is the environment your workflows run in.
 
-In n8n, an environment is also a step in your release process, together with the n8n instance that runs it. Each version of the feature connects the instance to a Git repository and branch that stores the work.
+In n8n, an environment is also a step in your release process, together with the n8n instance that runs it. Classic links each instance to a Git branch; Preview uses separate Apply and Promote configurations, each pointing to a repository and branch.
 
 The two versions use the word differently:
 

@@ -31,7 +31,7 @@ Environments (Classic) are available on:
 This page is about Environments (Classic). A newer version of Environments is also available in Preview for Enterprise plans. It adds promotion reviews, a visual diff of each change, protection for production instances, and more. See [Environments (Preview)](../preview/README.md).
 {% endhint %}
 
-## How classic environments work in n8n<a href="#environments-in-n8n" id="environments-in-n8n"></a>
+## How classic environments work in n8n <a href="#how-classic-environments-work-in-n8n" id="how-classic-environments-work-in-n8n"></a>
 
 A classic environment comprises two parts, an n8n instance and a Git branch:
 
@@ -51,7 +51,7 @@ Refer to [Set up source control](set-up-source-control.md) to learn more about l
 
 ## Related resources
 
-* [Environments (Classic)](./)
+* [Source control and environments](./)
 * [Use Git in n8n](use-git-in-n8n.md)
 * [Choose branching patterns](choose-branching-patterns.md)
 * [Set up source control](set-up-source-control.md)

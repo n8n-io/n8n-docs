@@ -227,7 +227,7 @@ Terraform writes a `terraform.tfstate` file in your folder. It records your infr
 Follow two rules:
 
 * Never commit `terraform.tfstate` to version control.
-* For anything beyond a quick trial, store state remotely with an Azure Storage account (the `azurerm` backend, which supports state locking) or with [HCP Terraform](https://developer.hashicorp.com/terraform/cloud-docs). Remote state encrypts your secrets, backs them up, and gives your team one shared source of truth.
+* For anything beyond a quick trial, store state remotely with an Azure Storage account (the `azurerm` backend, which supports state locking) or with [HCP Terraform](https://developer.hashicorp.com/terraform/cloud-docs). Remote state gives your team one shared source of truth, and Azure Storage encrypts it at rest. Azure Storage doesn't back up state on its own, so enable blob versioning and soft delete on the storage account. HCP Terraform keeps a history of state versions.
 
 ## Clean up
 

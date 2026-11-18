@@ -29,9 +29,9 @@ Instance owners and instance admins can push changes to and pull changes from th
 {% endhint %}
 
 {% hint style="info" %}
-**New version available**
+**Environments (Preview) are also available**
 
-These pages cover Environments (Classic). For the new version, in Preview and available on Enterprise plans, see [Environments (Preview)](../preview/README.md). To find out which version your instance uses, see [Work with environments](../README.md#find-out-which-version-your-instance-uses). To compare the versions and upgrade an instance, see [Upgrade from Environments (Classic)](../preview/upgrade-from-environments-classic.md).
+This page is about Environments (Classic). A newer version of Environments is also available in Preview for Enterprise plans. It adds promotion reviews, a visual diff of each change, protection for production instances, and more. See [Environments (Preview)](../preview/README.md).
 {% endhint %}
 
 n8n uses Git-based source control to support environments. Linking your n8n instances to a Git repository lets you create multiple n8n environments, backed by Git branches.

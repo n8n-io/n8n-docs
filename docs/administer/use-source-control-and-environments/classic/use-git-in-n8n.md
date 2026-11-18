@@ -26,7 +26,7 @@ Environments (Classic) are available on:
 {% hint style="info" %}
 **Environments (Preview) are also available**
 
-This page is about Environments (Classic). Environments (Preview) is a newer version of environments, available on Enterprise plans. See [Environments (Preview)](../preview/README.md). To find out which version your instance uses, see [Work with environments](../README.md#find-out-which-version-your-instance-uses).
+This page is about Environments (Classic). A newer version of Environments is also available in Preview for Enterprise plans. It adds promotion reviews, a visual diff of each change, protection for production instances, and more. See [Environments (Preview)](../preview/README.md).
 {% endhint %}
 
 Environments (Classic) use Git to provide source control. To use this feature, it helps to have some knowledge of basic Git concepts. For an introduction to Git, branches, and remotes, see [Git concepts for environments](../git-concepts.md). This page covers how Environments (Classic) use Git.
@@ -56,7 +56,7 @@ Refer to [Push and pull](push-and-pull-changes.md) for detailed information abou
 
 ## Related resources
 
-* [Use source control and environments](./)
+* [Environments (Classic)](./)
 * [Git concepts for environments](../git-concepts.md)
 * [Classic environments in n8n](work-with-environments.md)
 * [Choose branching patterns](choose-branching-patterns.md)

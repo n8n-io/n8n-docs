@@ -18,5 +18,5 @@ Store and share the authentication details your workflows need, without spreadin
 
 * [Administer](../)
 * [Manage users and access](../manage-users-and-access/README.md)
-* [Use source control and environments](../work-with-environments/classic/README.md)
+* [Use source control and environments](../use-source-control-and-environments/README.md)
 * [Observe and log](../observe-and-log/README.md)

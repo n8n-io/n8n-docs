@@ -19,7 +19,7 @@ Environments (Classic) are available on:
 {% hint style="info" %}
 **Environments (Preview) are also available**
 
-This page is about Environments (Classic). Environments (Preview) is a newer version of environments, available on Enterprise plans. See [Environments (Preview)](../preview/README.md). To find out which version your instance uses, see [Work with environments](../README.md#find-out-which-version-your-instance-uses).
+This page is about Environments (Classic). A newer version of Environments is also available in Preview for Enterprise plans. It adds promotion reviews, a visual diff of each change, protection for production instances, and more. See [Environments (Preview)](../preview/README.md).
 {% endhint %}
 
 You can manage Environments (Classic) from scripts and pipelines using the public API, without opening the n8n UI. This lets you automate promotion between instances, for example moving work from a development instance to production on a schedule or as part of a CI/CD pipeline.
@@ -241,7 +241,7 @@ The API commits and applies the same resources as the UI: workflows, credential 
 
 ## Related resources
 
-* [Use source control and environments](./)
+* [Environments (Classic)](./)
 * [Classic environments in n8n](work-with-environments.md)
 * [Use Git in n8n](use-git-in-n8n.md)
 * [Choose branching patterns](choose-branching-patterns.md)

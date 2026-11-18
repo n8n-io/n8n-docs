@@ -17,7 +17,7 @@ layout:
 {% hint style="info" %}
 **Environments (Preview) are also available**
 
-This page is about Environments (Classic). Environments (Preview) is a newer version of environments, available on Enterprise plans. See [Environments (Preview)](../preview/README.md). To find out which version your instance uses, see [Work with environments](../README.md#find-out-which-version-your-instance-uses).
+This page is about Environments (Classic). A newer version of Environments is also available in Preview for Enterprise plans. It adds promotion reviews, a visual diff of each change, protection for production instances, and more. See [Environments (Preview)](../preview/README.md).
 {% endhint %}
 
 In Environments (Classic), workflow diffs allow you to visually compare changes between the workflow you have on an instance and the most recent version saved in your connected Git repository. This helps you understand the exact changes to the workflow before you decide to either push or pull it across different environments.
@@ -84,7 +84,7 @@ Only users who can push or pull commits for an instance can access workflow diff
 
 ## Related resources
 
-* [Use source control and environments](./)
+* [Environments (Classic)](./)
 * [Classic environments in n8n](work-with-environments.md)
 * [Use Git in n8n](use-git-in-n8n.md)
 * [Choose branching patterns](choose-branching-patterns.md)

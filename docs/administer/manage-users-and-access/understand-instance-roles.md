@@ -58,7 +58,7 @@ n8n recommends that owners create a second account with the **Member** role for 
 | Delete tags | ✅ | ✅ | ❌ | ❌ |
 | View and share all workflows | ✅ | ✅ | ❌ | ❌ |
 | View, edit, and share all credentials | ✅ | ✅ | ❌ | ❌ |
-| Set up and use [Source control](../work-with-environments/classic/README.md) | ✅ | ✅ | ❌ | ❌ |
+| Set up and use [Source control](../use-source-control-and-environments/classic/README.md) | ✅ | ✅ | ❌ | ❌ |
 | Create [projects](set-permissions-and-roles-rbac/organize-work-in-projects.md) | ✅ | ✅ | ❌ | ❌ |
 | View all projects | ✅ | ✅ | ❌ | ❌ |
 | Add and remove users | ✅ | ✅ | ❌ | ❌ |

@@ -24,12 +24,12 @@ Environments (Classic) are available on:
 {% endhint %}
 
 {% hint style="info" %}
-**New version available**
+**Environments (Preview) are also available**
 
-A new version of environments is in Preview and available on Enterprise plans. See [Environments (Preview)](../preview/README.md). To find out which version your instance uses, see [Work with environments](../README.md#find-out-which-version-your-instance-uses).
+This page is about Environments (Classic). A newer version of Environments is also available in Preview for Enterprise plans. It adds promotion reviews, a visual diff of each change, protection for production instances, and more. See [Environments (Preview)](../preview/README.md).
 {% endhint %}
 
-n8n built Environments (Classic) on top of Git, a version control software. This page explains how Environments (Classic) work. To learn what environments are and why to use them, see [Work with environments](../README.md#concepts-for-both-versions).
+n8n built Environments (Classic) on top of Git, a version control software. This page explains how Environments (Classic) work. To learn what environments are and why to use them, see [Use source control and environments](../README.md#concepts-for-both-versions).
 
 ## How classic environments work in n8n<a href="#environments-in-n8n" id="environments-in-n8n"></a>
 
@@ -51,7 +51,7 @@ Refer to [Set up source control](set-up-source-control.md) to learn more about l
 
 ## Related resources
 
-* [Use source control and environments](./)
+* [Environments (Classic)](./)
 * [Use Git in n8n](use-git-in-n8n.md)
 * [Choose branching patterns](choose-branching-patterns.md)
 * [Set up source control](set-up-source-control.md)

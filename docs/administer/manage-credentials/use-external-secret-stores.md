@@ -31,7 +31,7 @@ Credentials stored in an external secrets store only resolve in credential field
 
 You can use an external secrets store to manage credentials[^1] for n8n.
 
-n8n stores all credentials encrypted in its database, and restricts access to them by default. With the external secrets feature, you can store sensitive credential information in an external vault, and have n8n load it in when required. This provides an extra layer of security and allows you to manage credentials used across multiple [n8n environments](../work-with-environments/classic/README.md) in one central place.
+n8n stores all credentials encrypted in its database, and restricts access to them by default. With the external secrets feature, you can store sensitive credential information in an external vault, and have n8n load it in when required. This provides an extra layer of security and allows you to manage credentials used across multiple [n8n environments](../use-source-control-and-environments/classic/README.md) in one central place.
 
 ## Global vaults <a href="#global-vaults" id="global-vaults"></a>
 
@@ -277,7 +277,7 @@ To use a secret from your store in an n8n credential:
 
 ## Using external secrets with n8n environments <a href="#using-external-secrets-with-n8n-environments" id="using-external-secrets-with-n8n-environments"></a>
 
-n8n's [Source control and environments](../work-with-environments/classic/README.md) feature allows you to create different n8n environments, backed by Git. The feature doesn't support using different credentials in different instances. You can use an external secrets vault to provide different credentials for different environments by connecting each n8n instance to a different vault or project environment.
+n8n's [Source control and environments](../use-source-control-and-environments/classic/README.md) feature allows you to create different n8n environments, backed by Git. The feature doesn't support using different credentials in different instances. You can use an external secrets vault to provide different credentials for different environments by connecting each n8n instance to a different vault or project environment.
 
 For example, you have two n8n instances, one for development and one for production. In your secrets provider, create a project with two environments, development and production. Generate a token for each environment of your secrets provider. Use the token for the development environment to connect your development n8n instance, and the token for your production environment to connect your production n8n instance.
 

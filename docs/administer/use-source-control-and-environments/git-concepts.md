@@ -1,5 +1,5 @@
 ---
-description: Learn the Git concepts and terms that Environments (Classic) and Environments (Preview) use, and how each version uses Git.
+description: Learn the Git and source control concepts and terms that Environments (Classic) and Environments (Preview) use, and how each version uses Git.
 contentType: explanation
 layout:
   description:
@@ -8,7 +8,7 @@ layout:
 
 # Git concepts for environments
 
-Both versions of n8n environments use Git to move work between n8n instances. To use them, it helps to know some basic Git concepts. n8n doesn't implement all Git functionality: don't treat environments as full version control.
+Both versions of n8n environments use Git to move work between n8n instances. Git provides the source control for environments: it stores your work outside your n8n instance and lets you send it to and from your instances. For what source control means in n8n, see [Use source control and environments](README.md#what-source-control-means). To use environments, it helps to know some basic Git concepts. n8n doesn't implement all Git functionality: don't treat environments as full version control.
 
 {% hint style="info" %}
 **New to Git?**
@@ -26,7 +26,7 @@ Git is a complex topic. This page provides a brief introduction to the key terms
 
 ## Git overview
 
-[Git](https://git-scm.com/) is a tool for managing, tracking, and collaborating on multiple versions of documents. It's the basis for widely used platforms such as [GitHub](https://github.com/) and [GitLab](https://about.gitlab.com/).
+[Git](https://git-scm.com/) is a source control tool for managing, tracking, and collaborating on multiple versions of documents. It's the basis for widely used platforms such as [GitHub](https://github.com/) and [GitLab](https://about.gitlab.com/).
 
 ## Branches: Multiple copies of a project
 
@@ -62,6 +62,6 @@ See [Git-based promotion](preview/git-based-promotion/README.md) for how Environ
 
 ## Related resources
 
-- [Work with environments](README.md)
+- [Use source control and environments](README.md)
 - [Environments (Classic)](classic/README.md)
 - [Environments (Preview)](preview/README.md)

@@ -26,7 +26,7 @@ Environments (Classic) are available on:
 {% hint style="info" %}
 **Environments (Preview) are also available**
 
-This page is about Environments (Classic). Environments (Preview) is a newer version of environments, available on Enterprise plans. See [Environments (Preview)](../preview/README.md). To find out which version your instance uses, see [Work with environments](../README.md#find-out-which-version-your-instance-uses).
+This page is about Environments (Classic). A newer version of Environments is also available in Preview for Enterprise plans. It adds promotion reviews, a visual diff of each change, protection for production instances, and more. See [Environments (Preview)](../preview/README.md).
 {% endhint %}
 
 If your n8n instance uses Environments (Classic) and connects to a Git repository, you need to keep your work in sync with Git.
@@ -175,7 +175,7 @@ If you need different credentials on different n8n environments, use [external s
 
 ## Related resources
 
-* [Use source control and environments](./)
+* [Environments (Classic)](./)
 * [Classic environments in n8n](work-with-environments.md)
 * [Use Git in n8n](use-git-in-n8n.md)
 * [Choose branching patterns](choose-branching-patterns.md)

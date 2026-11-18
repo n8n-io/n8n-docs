@@ -99,7 +99,7 @@ A provider holds the details n8n uses to connect and authenticate to a Git host,
 
 ## Environments and Environments (Classic)
 
-Environments replace [Environments (Classic)](../classic/README.md), the earlier source control feature. An instance uses one or the other. To find out which one your instance uses, see [Work with environments](../README.md#find-out-which-version-your-instance-uses). To compare the two versions and migrate, see [Upgrade from Environments (Classic)](upgrade-from-environments-classic.md).
+Environments replace [Environments (Classic)](../classic/README.md), the earlier source control feature. An instance uses one or the other. To find out which one your instance uses, see [Use source control and environments](../README.md#find-out-which-version-your-instance-uses). To compare the two versions and migrate, see [Upgrade from Environments (Classic)](upgrade-from-environments-classic.md).
 
 ## In this section
 

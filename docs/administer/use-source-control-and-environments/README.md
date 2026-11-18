@@ -5,7 +5,7 @@ layout:
     visible: false
 ---
 
-# Work with environments
+# Use source control and environments
 
 Environments let you build and test changes on one n8n instance, then move them to the next step of your release process, such as production. n8n backs environments with Git.
 

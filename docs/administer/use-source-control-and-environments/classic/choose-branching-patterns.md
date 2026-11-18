@@ -28,9 +28,9 @@ Environments (Classic) are available on:
 {% endhint %}
 
 {% hint style="info" %}
-**Using Environments (Preview)?**
+**Environments (Preview) are also available**
 
-These patterns describe how Environments (Classic) link an instance to a branch. Environments (Preview) connect instances and branches differently. See [Plan your environments](../preview/plan-your-environments.md).
+This page is about Environments (Classic). A newer version of Environments is also available in Preview for Enterprise plans. It adds promotion reviews, a visual diff of each change, protection for production instances, and more. See [Environments (Preview)](../preview/README.md).
 {% endhint %}
 
 
@@ -80,7 +80,7 @@ This is the simplest pattern.
 
 ## Related resources
 
-* [Use source control and environments](./)
+* [Environments (Classic)](./)
 * [Classic environments in n8n](work-with-environments.md)
 * [Use Git in n8n](use-git-in-n8n.md)
 * [Set up source control](set-up-source-control.md)

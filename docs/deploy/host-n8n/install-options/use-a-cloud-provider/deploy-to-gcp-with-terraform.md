@@ -250,7 +250,9 @@ Terraform writes a `terraform.tfstate` file in your folder. It records your infr
 Follow two rules:
 
 * Never commit `terraform.tfstate` to version control.
-* For anything beyond a quick trial, store state remotely with a Cloud Storage bucket (the `gcs` backend, which supports state locking) or with [HCP Terraform](https://developer.hashicorp.com/terraform/cloud-docs). Remote state encrypts your secrets, backs them up, and gives your team one shared source of truth.
+* For anything beyond a quick trial, store state remotely with a Cloud Storage bucket (the `gcs` backend, which supports state locking) or with [HCP Terraform](https://developer.hashicorp.com/terraform/cloud-docs). Remote state gives your team one shared source of truth, and Cloud Storage encrypts it at rest.
+
+To use a bucket, create it outside this configuration, with object versioning enabled so you can recover earlier state. Then add a `terraform` block with a `backend "gcs"` block to `main.tf`, set to your bucket name, and run `terraform init`. If you already ran `terraform init` with local state, run `terraform init -migrate-state` to copy it to the bucket. See the [`gcs` backend documentation](https://developer.hashicorp.com/terraform/language/backend/gcs) for the settings.
 
 ## Clean up
 

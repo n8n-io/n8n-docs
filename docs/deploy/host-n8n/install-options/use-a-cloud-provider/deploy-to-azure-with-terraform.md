@@ -57,7 +57,7 @@ The module creates managed identities with role assignments so that pods can rea
 
 This guide deploys the `small` tier. Instead of cloning a repository, it references the published [n8n-io/n8n/azurerm](https://registry.terraform.io/modules/n8n-io/n8n/azurerm/0.1.0) module from the Terraform Registry, pinned to v0.1.0. `terraform init` downloads the module for you.
 
-You create a single `main.tf`; set your domain and license key; run `terraform init`, `terraform plan`, and `terraform apply`; and then delegate the DNS zone.
+You create a single `main.tf` and set your domain and license key. Then you run `terraform init`, `terraform plan`, and `terraform apply`. After the apply, you delegate the DNS zone.
 
 ## Step 1: Create a project folder
 

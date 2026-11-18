@@ -277,7 +277,7 @@ Not yet. Version 0.1.0 supports net-new deployments, including onto a GKE cluste
 
 ### I'm on AWS or Azure. Can I use this?
 
-Yes. Sibling modules exist for [AWS](/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-aws-with-terraform.md) (EKS, [`n8n-io/n8n/aws`](https://registry.terraform.io/modules/n8n-io/n8n/aws/0.5.0)) and [Azure](/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-azure-with-terraform.md) (AKS, [`n8n-io/n8n/azurerm`](https://registry.terraform.io/modules/n8n-io/n8n/azurerm/0.1.0)). Generic on-premises Kubernetes and OpenShift aren't covered yet.
+Yes. Sibling modules exist for [AWS](./deploy-to-aws-with-terraform/deploy-your-first-instance.md) (EKS, [`n8n-io/n8n/aws`](https://registry.terraform.io/modules/n8n-io/n8n/aws/0.5.0)) and [Azure](./deploy-to-azure-with-terraform.md) (AKS, [`n8n-io/n8n/azurerm`](https://registry.terraform.io/modules/n8n-io/n8n/azurerm/0.1.0)). Generic on-premises Kubernetes and OpenShift aren't covered yet.
 
 ### What if my DNS isn't in Cloud DNS?
 
@@ -301,9 +301,9 @@ This module is open source and maintained by the n8n Solutions team. Report bugs
 
 ## Related resources
 
-* [Use a cloud provider](/deploy/host-n8n/install-options/use-a-cloud-provider.md)
-* [Google Kubernetes Engine](/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-google-kubernetes.md)
-* [Google Cloud Run](/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-google-cloud-run.md)
+* [Use a cloud provider](../../../host-n8n/install-options/use-a-cloud-provider/README.md)
+* [Google Kubernetes Engine](../../../host-n8n/install-options/use-a-cloud-provider/deploy-to-google-kubernetes.md)
+* [Google Cloud Run](../../../host-n8n/install-options/use-a-cloud-provider/deploy-to-google-cloud-run.md)
 * [Deploy to AWS with Terraform](/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-aws-with-terraform.md)
 * [Deploy to Azure with Terraform](/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-azure-with-terraform.md)
 * [Enable queue mode](/deploy/host-n8n/configure-n8n/scaling/enable-queue-mode.md)

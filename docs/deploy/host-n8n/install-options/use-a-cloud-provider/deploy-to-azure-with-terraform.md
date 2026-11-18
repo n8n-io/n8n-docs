@@ -251,7 +251,7 @@ Not yet. Version 0.1.0 supports net-new deployments, including onto an AKS clust
 
 ### I'm on AWS or Google Cloud. Can I use this Terraform-based approach?
 
-Yes. Sibling modules exist for [AWS](/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-aws-with-terraform.md) (EKS, [`n8n-io/n8n/aws`](https://registry.terraform.io/modules/n8n-io/n8n/aws/0.5.0)) and Google Cloud (GKE, [`n8n-io/n8n/google`](https://registry.terraform.io/modules/n8n-io/n8n/google/0.1.0)). Generic on-premises Kubernetes and OpenShift aren't covered yet.
+Yes. Sibling modules exist for [AWS](./deploy-to-aws-with-terraform/deploy-your-first-instance.md) (EKS, [`n8n-io/n8n/aws`](https://registry.terraform.io/modules/n8n-io/n8n/aws/0.5.0)) and Google Cloud (GKE, [`n8n-io/n8n/google`](https://registry.terraform.io/modules/n8n-io/n8n/google/0.1.0)). Generic on-premises Kubernetes and OpenShift aren't covered yet.
 
 ### Which size should I pick?
 
@@ -271,8 +271,8 @@ This module is open source and maintained by the n8n Solutions team. Report bugs
 
 ## Related resources
 
-* [Use a cloud provider](/deploy/host-n8n/install-options/use-a-cloud-provider.md)
-* [Deploy to Azure](/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-azure.md)
-* [Deploy to AWS with Terraform](/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-aws-with-terraform.md)
-* [Google Kubernetes Engine](/deploy/host-n8n/install-options/use-a-cloud-provider/deploy-to-google-kubernetes.md)
-* [Enable queue mode](/deploy/host-n8n/configure-n8n/scaling/enable-queue-mode.md)
+* [Use a cloud provider](./../use-a-cloud-provider/README.md)
+* [Deploy to Azure](./deploy-to-azure.md)
+* [Deploy to AWS with Terraform](./deploy-to-aws-with-terraform/deploy-your-first-instance.md)
+* [Google Kubernetes Engine](./deploy-to-gcp-with-terraform.md)
+* [Enable queue mode](./../../configure-n8n/scaling/enable-queue-mode.md)

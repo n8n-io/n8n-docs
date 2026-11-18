@@ -170,7 +170,7 @@ Enter these parameters:
 - **Combine Conditions**: How to combine the conditions in **Select Rows**. **AND** requires every condition to be true. **OR** requires at least one condition to be true.
 - **Sort**: Choose how to sort the selected rows. Each rule takes a **Column** and a **Direction**.
 
-**Select** has no offset, so it can't skip the rows it already returned. To read a large table in pages, add a **Select Rows** condition like `id` **Greater Than** the last ID you read, and a **Sort** rule on the same column. This works for numeric columns only. For other columns, use **Execute SQL** and write the query yourself.
+**Select** has no offset, so it can't skip the rows it already returned. To read a large table in pages, add a **Select Rows** condition like `id` **Greater Than** the last ID you read, and a **Sort** rule on the same column with the **Direction** set to ascending. Update the last ID after each run. This works for numeric columns only. For other columns, use **Execute SQL** and write the query yourself.
 
 #### Select options <a href="#select-options" id="select-options"></a>
 

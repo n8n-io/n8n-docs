@@ -83,7 +83,7 @@ A `timestamp without time zone` column stores no offset. Before node version 2.9
 
 From node version 2.9 the node returns the value the server sent, with a `T` between the date and the time and no suffix. The result is the same on every instance and keeps full precision. Add a new Postgres node to get version 2.9. An existing node keeps its current behavior.
 
-The new output has no `Z`, so expressions and Code nodes that compare it with UTC strings or parse it as UTC read a different time. Check the nodes that use this column before you replace an existing node.
+The new output has no `Z`, so expressions and **Code** nodes that compare it with UTC strings or parse it as UTC read a different time. Check the nodes that use this column before you replace an existing node.
 
 This applies when the server uses the default `DateStyle` of ISO. On any other `DateStyle`, node 2.9 returns the value as the server sent it, with no `T` inserted.
 
@@ -102,7 +102,7 @@ SELECT TO_CHAR(ts_col, 'YYYY-MM-DD"T"HH24:MI:SS.US') AS ts_col_as_text FROM tabl
 {% hint style="info" %}
 **The CrateDB, QuestDB, and TimescaleDB nodes**
 
-These three nodes share the Postgres date handling but keep the older timestamp reading. From node version 1.1 they return a `DATE` as `YYYY-MM-DD` and a `timestamp without time zone` as a UTC instant, as Postgres node versions 2.7 and 2.8 do. To get the stored value, use the `::text` cast above.
+These three nodes share the Postgres date handling but keep the older timestamp reading. From node version 1.1 they return a `DATE` as `YYYY-MM-DD` and a `timestamp without time zone` as a UTC instant, as Postgres node versions 2.7 and 2.8 do. To get the stored value, cast the column at query time with `SELECT ts_col::text AS ts_col_as_text FROM table_with_ts_col`.
 {% endhint %}
 
 ### A DATE column before node 2.7

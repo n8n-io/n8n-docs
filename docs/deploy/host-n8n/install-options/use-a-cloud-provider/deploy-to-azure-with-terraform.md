@@ -274,5 +274,5 @@ This module is open source and maintained by the n8n Solutions team. Report bugs
 * [Use a cloud provider](./../use-a-cloud-provider/README.md)
 * [Deploy to Azure](./deploy-to-azure.md)
 * [Deploy to AWS with Terraform](./deploy-to-aws-with-terraform/deploy-your-first-instance.md)
-* [Google Kubernetes Engine](./deploy-to-gcp-with-terraform.md)
+* [Deploy to Google Cloud with Terraform](./deploy-to-gcp-with-terraform.md)
 * [Enable queue mode](./../../configure-n8n/scaling/enable-queue-mode.md)

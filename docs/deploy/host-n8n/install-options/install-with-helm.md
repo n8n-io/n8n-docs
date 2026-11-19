@@ -33,7 +33,7 @@ The chart runs n8n in one of two modes:
 
 In queue mode, the main pods serve the editor and API, and workers take executions from a Redis queue. Workers run in their own pods, so you can add workers without touching the editor. For details, see [Enable queue mode](../configure-n8n/scaling/enable-queue-mode.md).
 
-Both modes run [task runners](../configure-n8n/set-up-task-runners.md) in a sidecar container. Task runners execute the JavaScript and Python code from Code nodes. The sidecar keeps that code away from the n8n process, its credentials, and its encryption key. In queue mode, each worker pod gets the sidecar. In standalone mode, the main pod gets it. Each sidecar requests 100m CPU and 128 MiB of memory, so plan node capacity for it.
+By default, both modes run [task runners](../configure-n8n/set-up-task-runners.md) in a sidecar container. Task runners execute the JavaScript and Python code from Code nodes. The sidecar keeps that code away from the n8n process, its credentials, and its encryption key. In queue mode, each worker pod gets the sidecar. In standalone mode, the main pod gets it. Each sidecar requests 100m CPU and 128 MiB of memory, so plan node capacity for it. You can turn the sidecar off with `taskRunners.enabled: false`. n8n then runs code in internal mode, which isn't recommended for production.
 
 ## Choose a chart version
 
@@ -59,10 +59,11 @@ Skip this section if you use standalone mode with SQLite.
 
 n8n creates and updates its tables on startup, but it doesn't create the database. If the database is missing, n8n fails to start, and logs `database "n8n" does not exist`.
 
-Connect to PostgreSQL as an administrator, and create a user and a database for n8n. Replace `<your-password>` with a password of your own:
+Connect to PostgreSQL as an administrator with `psql`, and create a user and a database for n8n. `\password` asks for the new password without showing it, so it doesn't end up in your shell or client history:
 
 ```sql
-CREATE USER n8n WITH PASSWORD '<your-password>';
+CREATE USER n8n;
+\password n8n
 CREATE DATABASE n8n OWNER n8n;
 ```
 
@@ -220,7 +221,7 @@ n8n activates the key on its first start, and ignores it once the instance has a
 
 ### Connect to PostgreSQL and Redis over TLS
 
-To use TLS, set `database.ssl.enabled: true` for PostgreSQL and `redis.tls: true` for Redis. n8n then checks the server's certificate, so it only connects to the real server. If a publicly trusted certificate authority (CA) signed that certificate, you're done.
+To use TLS, set `database.ssl.enabled: true` for PostgreSQL and `redis.tls: true` for Redis. Merge the blocks in this section into your existing `database` and `redis` blocks. n8n then checks the server's certificate, so it only connects to the real server. If a publicly trusted certificate authority (CA) signed that certificate, you're done.
 
 Managed database services and private networks often use their own CA. n8n doesn't trust it by default, so it fails to start, and logs an error such as `self-signed certificate in certificate chain`. To fix this, download your provider's CA certificate in PEM format, save it as `ca.crt`, and store it in a Secret. If your provider offers a bundle of several certificates, save the whole bundle:
 
@@ -333,11 +334,11 @@ The chart doesn't create the Gateway, and you configure TLS on the Gateway's lis
 
 n8n uses two public URLs: the editor URL for the UI and OAuth callbacks, and the webhook URL for webhooks, forms, and MCP. By default, the chart sets both to `https://` and the first Ingress host or `HTTPRoute` hostname.
 
-If people reach n8n at another address, for example over plain HTTP or through a proxy the chart doesn't create, set the editor URL to that address. Otherwise n8n shows webhook and OAuth callback URLs that don't work:
+If people reach n8n at another address, for example over plain HTTP or through a proxy the chart doesn't create, set the editor URL to that full address, including `http://` or `https://`. Otherwise n8n shows webhook and OAuth callback URLs that don't work:
 
 ```yaml
 editor:
-  url: https://<your-n8n-domain>
+  url: <your-n8n-url>
 ```
 
 Webhooks use the editor URL unless you set `webhook.url`. To receive webhooks on a host of their own, see [A separate host for webhooks](https://github.com/n8n-io/n8n-hosting/blob/main/charts/n8n/README.md#a-separate-host-for-webhooks) in the chart's README.
@@ -396,7 +397,7 @@ In queue mode, you can scale each part of n8n on its own:
 
 | Goal | What to configure | Why |
 | --- | --- | --- |
-| Run more executions at the same time | `queueMode.workerReplicaCount` | Each worker runs up to 10 executions at the same time by default. To change that, set `queueMode.workerConcurrency`. |
+| Run more executions at the same time | `queueMode.workerReplicaCount` | Each worker runs up to 10 executions at the same time by default. To change that, set `queueMode.workerConcurrency`, or `N8N_CONCURRENCY_PRODUCTION_LIMIT` in `env.worker`, not both. If you set both, n8n uses the variable, so the chart rejects that combination. |
 | Handle production webhooks on separate pods | `webhookProcessor.enabled: true` and `webhookProcessor.replicaCount` | Webhook traffic then doesn't slow down the editor. |
 | Run more than one main pod (Enterprise) | `multiMain.enabled: true`, at least two `multiMain.replicas`, and your [license](#add-your-license-to-the-values-file) | The editor stays available while one main pod restarts. |
 
@@ -410,7 +411,7 @@ For autoscaling with HPA or KEDA, node placement, and task runner settings, see 
 
 This section covers upgrades within chart 2.x. To move from chart 1.x, follow [Upgrade the Helm chart from 1.x to 2.0](install-with-helm/upgrade-the-helm-chart-from-1x-to-20.md).
 
-Before you upgrade, back up the database, because a newer n8n version can change it, and Helm can't undo that. Check the [chart releases](https://github.com/n8n-io/n8n-hosting/releases) for upgrade notes. Then upgrade to a pinned chart version:
+Before you upgrade, back up the database, the encryption key, and the persistent volume if you use one. A newer n8n version can change the database, and Helm can't undo that. Check the [chart releases](https://github.com/n8n-io/n8n-hosting/releases) for upgrade notes. Then upgrade to a pinned chart version:
 
 ```bash
 helm upgrade n8n oci://ghcr.io/n8n-io/n8n-helm-chart/n8n \
@@ -421,7 +422,7 @@ helm upgrade n8n oci://ghcr.io/n8n-io/n8n-helm-chart/n8n \
 
 Pass your values file with `-f` instead of using `--reuse-values`. `--reuse-values` keeps the defaults of the chart version you installed, and those can conflict with the new version. If you no longer have your values file, `helm get values n8n --namespace n8n -o yaml` prints the values you set.
 
-`helm rollback` restores the previous Kubernetes resources, but not the database. To go back after a failed upgrade, restore your database backup too. See [Back up and restore](../keep-n8n-running/backup-and-restore.md).
+`helm rollback` restores the previous Kubernetes resources, but not the database or the volume. To go back after a failed upgrade, restore those backups too. See [Back up and restore](../keep-n8n-running/backup-and-restore.md).
 
 ## Related resources
 

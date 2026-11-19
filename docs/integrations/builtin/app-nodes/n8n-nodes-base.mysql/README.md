@@ -220,9 +220,9 @@ Enter these parameters:
 Two settings control this and the node takes the first one it finds:
 
 1. The **Connection Timeout** option on the node, in seconds.
-2. The **Connect Timeout** field of the [MySQL credential](../../credentials/mysql.md), in milliseconds.
+2. The **Connect Timeout** field of the [MySQL credential](../../credentials/mysql.md), in milliseconds. It defaults to 10000, so this is what applies until you add the option on the node.
 
-Set neither and the MySQL driver waits 10 seconds.
+Clear both and the MySQL driver waits 10 seconds.
 
 Version 1 of the node has no **Connection Timeout** option. It reads **Connect Timeout** from the credential.
 

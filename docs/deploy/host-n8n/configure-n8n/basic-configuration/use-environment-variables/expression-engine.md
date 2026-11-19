@@ -61,18 +61,18 @@ These variables configure the backend `vm` and `quickjs` engines. They have no e
 | `N8N_EXPRESSION_ENGINE_MEMORY_LIMIT` | Number | `128` | Memory limit in MiB for each sandbox. |
 | `N8N_EXPRESSION_ENGINE_IDLE_TIMEOUT` | Number | - | If set, scales the pool to zero warm sandboxes after this many seconds with no activity. |
 
-## Observability and tracing for expression evaluation
+## Trace expression evaluations
 
-The backend expression engines can emit observability signals about how expressions run. These variables only apply when `N8N_EXPRESSION_ENGINE` is `vm` or `quickjs`: the `legacy` engine never emits expression metrics.
+These variables control the `expression.evaluate` OpenTelemetry spans. Like the variables above, they only work with the `vm` and `quickjs` backend engines. The spans also need OpenTelemetry turned on, with `N8N_OTEL_ENABLED` or **Enable OpenTelemetry** in **Settings > OpenTelemetry**. Refer to [Choose which spans n8n exports](../../../keep-n8n-running/choose-which-spans-n8n-exports.md#trace-expression-evaluations).
 
 | Variable | Type | Default | Description |
 | :------- | :--- | :------ | :---------- |
-| `N8N_EXPRESSION_ENGINE_OBSERVABILITY_ENABLED` | Boolean | `true` | Whether n8n emits observability signals (metrics, traces, and logs) for expression evaluation. |
-| `N8N_EXPRESSION_ENGINE_TRACES_ENABLED` | Boolean | `false` | Whether n8n sends [OpenTelemetry](opentelemetry.md) spans for expression evaluations when OTEL is enabled (`N8N_OTEL_ENABLED`). Each failing or slow evaluation gets a span, and n8n samples the rest at the rate set by `N8N_EXPRESSION_ENGINE_TRACES_SAMPLE_RATE`. |
-| `N8N_EXPRESSION_ENGINE_SLOW_EVAL_THRESHOLD_MS` | Number | `50` | How long (in milliseconds) an evaluation can run before n8n considers it slow and gives it a span. |
-| `N8N_EXPRESSION_ENGINE_TRACES_SAMPLE_RATE` | Number | `0` | Head-based sampling rate for regular expression spans, from 0 to 1. Slow and failing expressions always emit spans. |
-
+| `N8N_EXPRESSION_ENGINE_TRACES_ENABLED` | Boolean | `false` | Whether n8n sends an `expression.evaluate` span for expressions that fail, take longer than the slow threshold, or fall in the sample. Available from n8n 2.19.0. The default is `false` from n8n 2.45.0, and `true` in earlier versions. |
+| `N8N_EXPRESSION_ENGINE_SLOW_EVAL_THRESHOLD_MS` | Number | `50` | Duration in milliseconds above which n8n treats an evaluation as slow and always sends its span. |
+| `N8N_EXPRESSION_ENGINE_TRACES_SAMPLE_RATE` | Number | `0` | Fraction of healthy evaluations to send spans for, from `0` to `1`. Failing and slow evaluations always get a span. |
+| `N8N_EXPRESSION_ENGINE_OBSERVABILITY_ENABLED` | Boolean | `true` | Whether the backend engine emits observability signals for expression evaluation: metrics, traces, and logs. Set to `false` to turn them all off, including expression spans, whatever the other settings say. |
 
 ## Related resources
 
 * [Environment variables](./)
+* [OpenTelemetry environment variables](opentelemetry.md)

@@ -40,6 +40,8 @@ When you turn on tracing, n8n exports two kinds of spans for each execution:
 
 n8n exports a span when it ends. To see a run while it's still going, turn on [start spans](#start-spans).
 
+Workflow, node, and [agent](#agent-tracing) spans are the only spans n8n exports by default. To add spans from other sources, such as expressions, or to see how n8n reads the standard `OTEL_*` variables, refer to [Choose which spans n8n exports](choose-which-spans-n8n-exports.md).
+
 Each span includes resource attributes that identify the n8n instance:
 
 - `service.name` (default `n8n`)
@@ -323,13 +325,13 @@ n8n can also emit detailed spans for agent runs built with the Agents feature, u
 This section covers tracing for the new Agents feature. The older AI Agent (LangChain) node doesn't produce agent-run or tool-call spans. It produces a standard `node.execute` span. From n8n 2.46.0, that span has `gen_ai.*` attributes, and so does the span of its chat model node.
 {% endhint %}
 
-Agent tracing rides along with the rest of the OTel module. With `N8N_OTEL_ENABLED` turned on, add:
+Agent tracing rides along with the rest of the OTel module. It's on by default: when you turn on `N8N_OTEL_ENABLED`, n8n exports agent spans too, because `N8N_AGENTS_TRACING_ENABLED` defaults to `true`.
+
+To keep workflow and node spans while dropping agent spans, set:
 
 ```bash
-export N8N_AGENTS_TRACING_ENABLED=true
+export N8N_AGENTS_TRACING_ENABLED=false
 ```
-
-Set it to `false` to keep workflow and node spans while dropping agent spans.
 
 By default, agent tracing records prompts, tool arguments, responses, and tool results. To exclude sensitive input or output data:
 
@@ -707,9 +709,9 @@ In queue mode, workers read the parent trace context from the database. If you o
 Agent spans depend on the OTel module. Check that:
 
 - `N8N_OTEL_ENABLED` is set to `true`.
-- `N8N_AGENTS_TRACING_ENABLED` is set to `true`.
+- `N8N_AGENTS_TRACING_ENABLED` isn't set to `false`. It defaults to `true`.
 
-With `N8N_OTEL_ENABLED` set to `false`, agent runs complete normally, but n8n emits no spans for them, even with `N8N_AGENTS_TRACING_ENABLED` set to `true`.
+With `N8N_OTEL_ENABLED` set to `false`, agent runs still complete, but n8n emits no spans for them, whatever value you give `N8N_AGENTS_TRACING_ENABLED`.
 
 If you deploy n8n on AWS using the [terraform-aws-n8n](https://github.com/n8n-io/terraform-aws-n8n) module, see [Configure Enterprise features on AWS](../install-options/use-a-cloud-provider/deploy-to-aws-with-terraform/use-enterprise-features-on-aws.md#opentelemetry-tracing) for the module-specific setup.
 
@@ -721,6 +723,7 @@ If you deploy n8n on AWS using the [terraform-aws-n8n](https://github.com/n8n-io
 - [Visualize metrics with Grafana](visualize-metrics-with-grafana.md)
 - [Back up and restore](backup-and-restore.md)
 - [Update n8n](update-n8n.md)
+- [Choose which spans n8n exports](choose-which-spans-n8n-exports.md)
 - [OpenTelemetry environment variables](../configure-n8n/basic-configuration/use-environment-variables/opentelemetry.md)
 - [W3C Trace Context specification](https://www.w3.org/TR/trace-context/)
 - [W3C Baggage specification](https://www.w3.org/TR/baggage/)

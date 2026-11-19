@@ -127,6 +127,7 @@
     * [Back up and restore](host-n8n/keep-n8n-running/backup-and-restore.md)
     * [Update n8n](host-n8n/keep-n8n-running/update-n8n.md)
     * [Trace executions with OpenTelemetry](host-n8n/keep-n8n-running/trace-executions-with-opentelemetry.md)
+    * [Choose which spans n8n exports](host-n8n/keep-n8n-running/choose-which-spans-n8n-exports.md)
   * [Understand the architecture](host-n8n/understand-the-architecture/README.md)
     * [How n8n works](host-n8n/understand-the-architecture/how-n8n-works.md)
     * [Understand the database](host-n8n/understand-the-architecture/understand-the-database.md)

@@ -493,18 +493,27 @@ The `otel.configure` external hook is available from n8n 2.47.0.
 
 With the `otel.configure` [external hook](../configure-n8n/external-hooks.md), you can add your own resource attributes and `baggage` entries to what n8n sends. n8n runs the hook once when it starts. If you change the hook file, restart n8n.
 
-The hook gives you two functions. You pass each one a function of your own, called a mapper:
+The hook gives you four functions. You pass each one a function of your own, called a mapper:
 
 | Function | What it does |
 | :------- | :----------- |
 | `registerResourceAttributeMapper` | Adds resource attributes to each exported span. n8n keeps its own value for `service.name`, `service.version`, `n8n.instance.id`, and `n8n.instance.role`. |
 | `registerOutboundBaggageMapper` | Adds entries to the `baggage` header on outbound requests. You need [outbound trace headers](#outbound-trace-headers) turned on. |
+| `dangerouslyOverrideResourceAttributes` | From n8n 2.49.0. Replaces resource attributes that n8n sets, such as `service.name`. |
+| `dangerouslyOverrideSpanAttributes` | From n8n 2.49.0. Replaces attributes on each exported span, such as `gen_ai.agent.id`. Return `{}` for spans you don't want to change. |
+
+{% hint style="warning" %}
+**Use your collector instead**
+
+n8n doesn't recommend the `dangerouslyOverride` functions. Change n8n's own attributes in your OpenTelemetry Collector, and use these functions only when you have no other way.
+{% endhint %}
 
 A mapper gets the attributes of one span and returns an object of keys and values:
 
 - Return string values. n8n ignores other values.
 - Don't make the mapper `async`.
 - If a mapper throws an error, n8n logs a warning and skips it.
+- In a `dangerouslyOverride` mapper, n8n ignores keys that start with `n8n.`.
 
 To try the example below, save it as a file. Then set `EXTERNAL_HOOK_FILES` to its path on the main instance, workers, and webhook processors:
 

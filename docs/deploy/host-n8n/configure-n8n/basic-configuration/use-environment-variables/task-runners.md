@@ -54,7 +54,7 @@ Unlike the main n8n image, you CANNOT use file-based configuration for secrets i
 | `N8N_RUNNERS_TASK_BROKER_URI` | String | `http://127.0.0.1:5679` | The URI of the task broker server (n8n instance). |
 | `N8N_RUNNERS_LAUNCHER_HEALTH_CHECK_PORT` | Number | `5680` | Port for the launcher's health check server. |
 | `N8N_RUNNERS_MAX_PAYLOAD` | Number | `1 073 741 824` | Maximum payload size in bytes for communication between a task broker and a task runner. |
-| `N8N_RUNNERS_MAX_CONCURRENCY` | Number | `10` | The number of concurrent tasks a task runner can execute at a time. |
+| `N8N_RUNNERS_MAX_CONCURRENCY` | Number | JavaScript: `10`, Python: `5` | The number of concurrent tasks a task runner can execute at a time. The launcher doesn't set a value of its own. It passes yours to the runner if you set one, and otherwise the runner uses its default. |
 
 ## Task runner environment variables (all languages) <a href="#task-runner-environment-variables-all-languages" id="task-runner-environment-variables-all-languages"></a>
 
@@ -66,7 +66,7 @@ Unlike the main n8n image, you CANNOT use file-based configuration for secrets i
 | `N8N_RUNNERS_TASK_BROKER_URI` | String | `http://127.0.0.1:5679` | The URI of the task broker server (n8n instance). |
 | `N8N_RUNNERS_LAUNCHER_HEALTH_CHECK_PORT` | Number | `5680` | Port for the launcher's health check server. |
 | `N8N_RUNNERS_MAX_PAYLOAD` | Number | `1 073 741 824` | Maximum payload size in bytes for communication between a task broker and a task runner. |
-| `N8N_RUNNERS_MAX_CONCURRENCY` | Number | `10` | The number of concurrent tasks a task runner can execute at a time. |
+| `N8N_RUNNERS_MAX_CONCURRENCY` | Number | JavaScript: `10`, Python: `5` | The number of concurrent tasks a task runner can execute at a time. |
 
 ## Task runner environment variables (JavaScript) <a href="#task-runner-environment-variables-javascript" id="task-runner-environment-variables-javascript"></a>
 

@@ -170,7 +170,7 @@ Enter these parameters:
 - **Combine Conditions**: How to combine the conditions in **Select Rows**. **AND** requires all conditions to be true, while **OR** requires at least one condition to be true.
 - **Sort**: Choose how to sort the selected rows. Choose a **Column** from a list or by ID and a sort **Direction**.
 
-**Select** returns either all matching rows or the first rows up to the **Limit** value. It has no offset or cursor option. To read a large table in batches, sort on a unique column and fetch the rows after the last one you read. You can do this with either operation:
+**Select** returns either all matching rows or the first rows up to the **Limit** value. It has no offset or cursor option. To read a large table in batches, sort on a unique column that can't be NULL, and fetch the rows after the last one you read. On any other column, the node skips some rows without an error. You can do this with either operation:
 
 - **Select**: Add a **Select Rows** condition on that column, with **Operator** set to **Greater Than** and **Value** set to the last value you read. Add a **Sort** rule on the same column with the **ASC** direction. Turn off **Return All**, and set **Limit** to the batch size.
 - [**Execute Query**](#execute-query): Use a query such as `SELECT * FROM orders WHERE id > $1 ORDER BY id LIMIT 1000`. In [**Query Parameters**](#use-query-parameters), set `$1` to the last `id` you read.

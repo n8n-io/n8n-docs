@@ -44,7 +44,8 @@ To configure this credential, you'll need the URL of your Schema Registry and, i
     - **OAuth2 Client Credentials**: use this for a Schema Registry behind an identity provider. Then add:
         1. The **Token URL** of the token endpoint that issues the bearer token.
         2. The **Client ID** and **Client Secret** of the application you registered with that provider.
-        3. The **Scope**, if your provider requires one. Separate several scopes with spaces. Leave it empty to request none.
+        3. The **Client Authentication** method. **Authorization Header** sends the client ID and secret as HTTP Basic, which every provider accepts and which Okta and PingFederate expect by default. Choose **Request Body** only if your provider requires the pair as form fields.
+        4. The **Scope**, if your provider requires one. Separate several scopes with spaces. Leave it empty to request none.
 3. If your registry uses `https` and presents a certificate that a public certificate authority didn't sign, enter the PEM-encoded **CA Certificate** that signed it. This replaces the certificate authorities that n8n trusts by default rather than adding to them, so include every certificate authority in the registry's chain.
 4. If your registry requires mutual TLS (mTLS), enter the **Client Certificate** and the **Client Private Key**, both PEM-encoded. Enter both or neither.
 5. Select **Save**. n8n tests the credential by calling the registry's `/subjects` endpoint.

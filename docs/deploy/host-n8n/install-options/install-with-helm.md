@@ -16,7 +16,7 @@ n8n maintains the chart in the [n8n-hosting repository](https://github.com/n8n-i
 * A Kubernetes cluster running Kubernetes 1.25 or later, and `kubectl` configured for it.
 * [Helm](https://helm.sh/docs/intro/install/) 3.12 or later.
 * OpenSSL, to generate the encryption key and the task runner token.
-* For queue mode, a PostgreSQL database and a Redis instance that you provide. The chart doesn't install them. See [Choose n8n's database](../configure-n8n/choose-n8ns-database.md) for supported PostgreSQL versions.
+* For queue mode, a PostgreSQL server and a Redis instance that you provide. The chart doesn't install them, and n8n doesn't create its PostgreSQL database, as described in [Create the PostgreSQL database for n8n](#create-the-postgresql-database-for-n8n). For supported PostgreSQL versions, see [Choose n8n's database](../configure-n8n/choose-n8ns-database.md).
 * For standalone mode with SQLite, a StorageClass that can provision the PersistentVolumeClaim for the database.
 * To reach n8n from outside the cluster, an Ingress controller, or a Gateway API implementation with a Gateway.
 
@@ -57,6 +57,19 @@ n8n releases a new chart version every week, on the day after n8n releases a new
 Pin the chart version with `--version` every time you install or upgrade, so you know which n8n version you get. To run a different n8n version than the chart's default, set `image.tag` in your values file. The chart is only tested against its own `appVersion`.
 
 n8n signs each chart release with cosign. To check a chart version before you install it, follow [Verify the chart](https://github.com/n8n-io/n8n-hosting/blob/main/charts/n8n/README.md#verify-the-chart) in the chart's README.
+
+## Create the PostgreSQL database for n8n
+
+n8n creates and updates its tables on startup, but it doesn't create the PostgreSQL database. If the database doesn't exist, n8n fails to start, and logs `database "n8n" does not exist`. Standalone mode with SQLite doesn't need this step.
+
+Before you install, connect to PostgreSQL as an administrator, and create a user and a database for n8n. Replace `<your-password>` with a password of your own:
+
+```sql
+CREATE USER n8n WITH PASSWORD '<your-password>';
+CREATE DATABASE n8n OWNER n8n;
+```
+
+Make the n8n user the owner of the database. From PostgreSQL 15, only the database owner can create tables in the `public` schema by default. The user and database names must match `database.user` and `database.database` in your values file. You store the password in a Secret in the next section.
 
 ## Create the Kubernetes Secrets for n8n
 

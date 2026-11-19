@@ -106,7 +106,9 @@ These three nodes share the Postgres date handling. From node version 1.1 they r
 
 TimescaleDB returns a `timestamp without time zone` as the stored value from node version 1.3. On 1.1 and 1.2 it returns a UTC instant, as Postgres node versions 2.7 and 2.8 do.
 
-CrateDB and QuestDB keep the UTC instant on every version. Both engines store and send the value in UTC, so the offset is real rather than invented. To get the stored value on those two, or on TimescaleDB below 1.3, cast the column at query time with `SELECT ts_col::text AS ts_col_as_text FROM table_with_ts_col`.
+CrateDB and QuestDB keep the older reading on every version. Both engines send the value in UTC, but the node reads it in the time zone of the n8n host and then labels the result `Z`, so the instant is only correct when that host runs in UTC. QuestDB also sends microseconds, which the reading cuts to milliseconds.
+
+To get the stored value on those two, or on TimescaleDB below 1.3, cast the column at query time with `SELECT ts_col::text AS ts_col_as_text FROM table_with_ts_col`.
 {% endhint %}
 
 ### A DATE column before node 2.7

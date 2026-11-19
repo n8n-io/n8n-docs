@@ -83,4 +83,5 @@ Changing the image tag or Helm release back to the older version doesn't reverse
 * [Visualize metrics with Grafana](visualize-metrics-with-grafana.md)
 * [Back up and restore](backup-and-restore.md)
 * [Trace executions with OpenTelemetry](trace-executions-with-opentelemetry.md)
+* [Choose which spans n8n exports](choose-which-spans-n8n-exports.md)
 * [Enable queue mode](../configure-n8n/scaling/enable-queue-mode.md)

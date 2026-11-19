@@ -40,6 +40,8 @@ When you turn on tracing, n8n exports two kinds of spans for each execution:
 
 n8n exports a span when it ends. To see a run while it's still going, turn on [start spans](#start-spans).
 
+Workflow, node, and [agent](#agent-tracing) spans are the only spans n8n exports by default. To add spans from other sources, such as expressions, or to see how n8n reads the standard `OTEL_*` variables, refer to [Choose which spans n8n exports](choose-which-spans-n8n-exports.md).
+
 Each span includes resource attributes that identify the n8n instance:
 
 - `service.name` (default `n8n`)
@@ -231,7 +233,7 @@ How n8n handles the entries:
 - n8n drops entries past the OpenTelemetry limits: 180 entries, 4,096 bytes for a single entry, and 8,192 bytes in total. A dropped entry never reaches the downstream service.
 - n8n saves the entries on the execution, so they survive a [queue mode](../configure-n8n/scaling/enable-queue-mode.md) worker and a resume after a Wait node.
 - n8n forwards the entries without recording them. A `tenant.id` entry goes out on the headers but never appears as a [span attribute](#span-attributes).
-- An `otel.configure` external hook can add entries of its own. Those win over the caller's when both set the same key.
+- An [`otel.configure` external hook](#change-exported-telemetry-with-an-external-hook) can add entries of its own. Those win over the caller's when both set the same key.
 
 ## Start spans
 
@@ -320,16 +322,16 @@ n8n can also emit detailed spans for agent runs built with the Agents feature, u
 {% hint style="warning" %}
 **Legacy AI Agent node**
 
-This section covers tracing for the new Agents feature. The older AI Agent (LangChain) node only produces the standard `node.execute` span like any other node. It doesn't emit the `gen_ai.*` agent-run or tool-call spans.
+This section covers tracing for the new Agents feature. The older AI Agent (LangChain) node doesn't produce agent-run or tool-call spans. It produces a standard `node.execute` span. From n8n 2.46.0, that span has `gen_ai.*` attributes, and so does the span of its chat model node.
 {% endhint %}
 
-Agent tracing rides along with the rest of the OTel module. With `N8N_OTEL_ENABLED` turned on, add:
+Agent tracing rides along with the rest of the OTel module. It's on by default: when you turn on `N8N_OTEL_ENABLED`, n8n exports agent spans too, because `N8N_AGENTS_TRACING_ENABLED` defaults to `true`.
+
+To keep workflow and node spans while dropping agent spans, set:
 
 ```bash
-export N8N_AGENTS_TRACING_ENABLED=true
+export N8N_AGENTS_TRACING_ENABLED=false
 ```
-
-Set it to `false` to keep workflow and node spans while dropping agent spans.
 
 By default, agent tracing records prompts, tool arguments, responses, and tool results. To exclude sensitive input or output data:
 
@@ -368,7 +370,7 @@ n8n supports the following custom attribute levels:
 
 | Level | Configure in | Exported span | Default attribute prefix |
 | :---- | :----------- | :------------ | :--------------- |
-| Project | **Project settings** | `workflow.execute` | `n8n.project.custom.<key>` |
+| Project | **Project settings** | `workflow.execute`, and `node.execute` from n8n 2.42.0 | `n8n.project.custom.<key>` |
 | Workflow | **Workflow settings** | `workflow.execute` | `n8n.workflow.custom.<key>` |
 | Node | Node **Settings** tab | `node.execute` | `n8n.node.custom.<key>` |
 
@@ -472,11 +474,69 @@ export N8N_OTEL_TRACES_CUSTOM_ATTRIBUTE_PREFIXES='{"project":"acme."}'
 
 If the value isn't valid JSON, uses any other key, or has a non-string value, n8n logs a warning and uses the default prefixes for all levels.
 
+If you change a prefix, a custom key can end up the same as another key on the same span:
+
+- If it's the same as a built-in attribute, such as `n8n.workflow.id` or `service.name`, n8n keeps its own value and drops yours.
+- If two levels use the same key, the more specific level wins. Node wins over workflow, and workflow wins over project.
+
 {% hint style="warning" %}
 **OpenTelemetry standard attributes**
 
 n8n doesn't check custom keys against the [OpenTelemetry semantic conventions](https://opentelemetry.io/docs/specs/semconv/). If your key matches a standard attribute, such as `user.id` or `http.request.method`, your backend reads your value as that attribute. Avoid standard keys unless your value has the standard meaning.
 {% endhint %}
+
+## Change exported telemetry with an external hook
+
+{% hint style="info" %}
+**Feature availability**
+
+The `otel.configure` external hook is available from n8n 2.47.0.
+{% endhint %}
+
+With the `otel.configure` [external hook](../configure-n8n/external-hooks.md), you can add your own resource attributes and `baggage` entries to what n8n sends. n8n runs the hook once when it starts. If you change the hook file, restart n8n.
+
+The hook gives you four functions. You pass each one a function of your own, called a mapper:
+
+| Function | What it does |
+| :------- | :----------- |
+| `registerResourceAttributeMapper` | Adds resource attributes to each exported span. n8n keeps its own value for `service.name`, `service.version`, `n8n.instance.id`, and `n8n.instance.role`. |
+| `registerOutboundBaggageMapper` | Adds entries to the `baggage` header on outbound requests. You need [outbound trace headers](#outbound-trace-headers) turned on and `baggage` included in `OTEL_PROPAGATORS`. |
+| `dangerouslyOverrideResourceAttributes` | From n8n 2.49.0. Replaces resource attributes that n8n sets, such as `service.name`. |
+| `dangerouslyOverrideSpanAttributes` | From n8n 2.49.0. Replaces attributes on each exported span, such as `gen_ai.agent.id`. Return `{}` for spans you don't want to change. |
+
+{% hint style="warning" %}
+**Use your collector instead**
+
+n8n doesn't recommend the `dangerouslyOverride` functions. Change n8n's own attributes in your OpenTelemetry Collector, and use these functions only when you have no other way.
+{% endhint %}
+
+A mapper gets the attributes of one span and returns an object of keys and values:
+
+- Return string values. n8n ignores other values.
+- Don't make the mapper `async`.
+- If a mapper throws an error, n8n logs a warning and skips it.
+- In a `dangerouslyOverride` mapper, n8n ignores keys that start with `n8n.`.
+
+To try the example below, save it as a file. Then set `EXTERNAL_HOOK_FILES` to its path on the main instance, workers, and webhook processors:
+
+```js
+// Copy the project ID to a resource attribute and a baggage entry
+const projectIdFrom = (spanAttributes) => {
+	const projectId = spanAttributes['n8n.project.id'];
+	return typeof projectId === 'string' ? { 'project.id': projectId } : {};
+};
+
+module.exports = {
+	otel: {
+		configure: [
+			async (api) => {
+				api.registerResourceAttributeMapper(projectIdFrom);
+				api.registerOutboundBaggageMapper(projectIdFrom);
+			},
+		],
+	},
+};
+```
 
 ## Try it out with Jaeger <a href="#try-it-out-with-jaeger" id="try-it-out-with-jaeger"></a>
 
@@ -547,7 +607,7 @@ Workflow and node spans include the following n8n-specific attributes.
 | `n8n.node.termination_reason` | Why a node span ended without a normal completion (for example, `workflow_cancelled` or `workflow_crashed`). |
 | `n8n.node.custom.<key>` | Custom attributes set through [node-level custom span attributes](#custom-span-attributes) in the node settings or `metadata.tracing` in custom node code. |
 
-From n8n 2.44.0, node spans also carry `n8n.execution.id`, `n8n.workflow.id`, `n8n.workflow.name`, `n8n.project.id`, and `n8n.project.name`, with the same values as their workflow span. To find every span of one execution in Jaeger, search for the tag `n8n.execution.id=<execution-id>`.
+Node spans also carry `n8n.project.id` from n8n 2.42.0, and `n8n.execution.id`, `n8n.workflow.id`, `n8n.workflow.name`, and `n8n.project.name` from n8n 2.44.0, with the same values as their workflow span. To find every span of one execution in Jaeger, search for the tag `n8n.execution.id=<execution-id>`.
 
 When a node fails, n8n records an `exception` event on the span with the standard OpenTelemetry exception attributes (`exception.type`, `exception.message`, `exception.stacktrace`).
 
@@ -649,9 +709,9 @@ In queue mode, workers read the parent trace context from the database. If you o
 Agent spans depend on the OTel module. Check that:
 
 - `N8N_OTEL_ENABLED` is set to `true`.
-- `N8N_AGENTS_TRACING_ENABLED` is set to `true`.
+- `N8N_AGENTS_TRACING_ENABLED` isn't set to `false`. It defaults to `true`.
 
-With `N8N_OTEL_ENABLED` set to `false`, agent runs complete normally, but n8n emits no spans for them, even with `N8N_AGENTS_TRACING_ENABLED` set to `true`.
+With `N8N_OTEL_ENABLED` set to `false`, agent runs still complete, but n8n emits no spans for them, whatever value you give `N8N_AGENTS_TRACING_ENABLED`.
 
 If you deploy n8n on AWS using the [terraform-aws-n8n](https://github.com/n8n-io/terraform-aws-n8n) module, see [Configure Enterprise features on AWS](../install-options/use-a-cloud-provider/deploy-to-aws-with-terraform/use-enterprise-features-on-aws.md#opentelemetry-tracing) for the module-specific setup.
 
@@ -663,6 +723,7 @@ If you deploy n8n on AWS using the [terraform-aws-n8n](https://github.com/n8n-io
 - [Visualize metrics with Grafana](visualize-metrics-with-grafana.md)
 - [Back up and restore](backup-and-restore.md)
 - [Update n8n](update-n8n.md)
+- [Choose which spans n8n exports](choose-which-spans-n8n-exports.md)
 - [OpenTelemetry environment variables](../configure-n8n/basic-configuration/use-environment-variables/opentelemetry.md)
 - [W3C Trace Context specification](https://www.w3.org/TR/trace-context/)
 - [W3C Baggage specification](https://www.w3.org/TR/baggage/)

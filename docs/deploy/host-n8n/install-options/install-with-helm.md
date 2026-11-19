@@ -431,6 +431,7 @@ Pass your values file with `-f` instead of using `--reuse-values`. `--reuse-valu
 * [Install using Docker Compose](install-using-docker-compose.md)
 * [Install with npm](install-with-npm.md)
 * [Install with Docker](install-with-docker.md)
+* [Production requirements](production-requirements.md)
 * [Use a cloud provider](use-a-cloud-provider/README.md)
 * [Enable queue mode](../configure-n8n/scaling/enable-queue-mode.md)
 * [Set up task runners](../configure-n8n/set-up-task-runners.md)

@@ -25,7 +25,9 @@ Encryption key rotation is available on:
 
 It isn't available on n8n Cloud.
 
-You need to be the instance owner to enable the feature and rotate keys.
+Encryption key rotation is on by default from n8n 3.0. On earlier versions, you turn it on with an environment variable.
+
+You need to be the instance owner to turn the feature on or off and to rotate keys.
 {% endhint %}
 
 Encryption key rotation lets you periodically replace the key that encrypts your n8n data, like credentials, OAuth tokens, and other sensitive content, without changing your instance's master encryption key.
@@ -41,10 +43,10 @@ When you rotate, n8n generates a new data encryption key and uses it for all fut
 
 ## Before you begin <a href="#before-you-begin" id="before-you-begin"></a>
 
-{% hint style="danger" %}
-**Take a full database backup before enabling this feature**
+{% hint style="warning" %}
+**Take a full database backup first**
 
-Enabling encryption key rotation is a one-way change. There's no rollback path. See [Backwards compatibility and rollback](#backwards-compatibility-and-rollback) for details.
+Once n8n writes data with a data encryption key, older n8n versions can't read it. Back up your database before you turn the feature on, and before you upgrade to n8n 3.0, which turns it on for you. See [Backwards compatibility and rollback](#backwards-compatibility-and-rollback) for details.
 {% endhint %}
 
 You also need to make sure that:
@@ -54,6 +56,10 @@ You also need to make sure that:
 
 ## Enable encryption key rotation <a href="#enable-encryption-key-rotation" id="enable-encryption-key-rotation"></a>
 
+From n8n 3.0, encryption key rotation is on by default. You don't need to set anything. On first startup after the upgrade, n8n generates the initial data encryption key and stores it, encrypted, in your database.
+
+On n8n 2.x, turn the feature on yourself:
+
 1. Set the following environment variable on **all** n8n instances, both main and workers:
 
     ```sh
@@ -61,7 +67,8 @@ You also need to make sure that:
     ```
 
 2. Restart all instances. On startup, n8n automatically generates the initial data encryption key and stores it, encrypted, in your database.
-3. To confirm the feature is active, go to **Settings** > **Data Encryption Keys**. You should see the active key listed.
+
+To confirm the feature is active, go to **Settings** > **Data Encryption Keys**. You should see the active key listed.
 
 ## Rotate the active key <a href="#rotate-the-active-key" id="rotate-the-active-key"></a>
 
@@ -77,27 +84,37 @@ Make a `POST` call to the `/encryption/keys` endpoint. The request requires the 
 
 After rotation, n8n uses the new active key for all new writes. Records encrypted with previous keys remain readable. n8n re-encrypts them to the new key the next time you update each record.
 
+## Turn off encryption key rotation
+
+From n8n 2.40.3, you can turn encryption key rotation off again. Set the following environment variable on **all** n8n instances, both main and workers, then restart them:
+
+```sh
+N8N_ENV_FEAT_ENCRYPTION_KEY_ROTATION=false
+```
+
+On versions earlier than n8n 2.40.3, turning the feature off after n8n has written data in the new format makes that data permanently inaccessible. Upgrade to n8n 2.40.3 first.
+
 ## Backwards compatibility and rollback <a href="#backwards-compatibility-and-rollback" id="backwards-compatibility-and-rollback"></a>
 
 {% hint style="danger" %}
-**This is a one-way migration**
+**Don't downgrade n8n after encryption key rotation writes data**
 
-Read this section carefully before enabling encryption key rotation.
+Read this section before you turn the feature on, and before you upgrade to n8n 3.0, which turns it on for you.
 {% endhint %}
 
-Once you enable encryption key rotation, n8n begins writing credentials and other sensitive data in a new format that includes a key identifier. Older versions of n8n, and instances running without the feature flag, can't read this format.
+Once encryption key rotation is on, n8n writes credentials and other sensitive data in a new format that includes a key identifier. Older versions of n8n can't read this format.
 
-* **Don't disable the feature flag** after any data has been written in the new format. Removing `N8N_ENV_FEAT_ENCRYPTION_KEY_ROTATION` or setting it to `false` makes all data encrypted after you enabled the feature permanently inaccessible.
-* **Don't downgrade your n8n version** after enabling. Older versions can't decrypt the new format.
+* **Don't downgrade your n8n version** after n8n writes data in the new format. Older versions can't decrypt it.
+* **Turning the feature off is safe from n8n 2.40.3.** On earlier versions, setting `N8N_ENV_FEAT_ENCRYPTION_KEY_ROTATION` to `false` makes all data encrypted since you turned the feature on permanently inaccessible.
 
-There's no automated tool to convert data encrypted in the new format back to the legacy format. The only recovery path is restoring from a database backup taken before you enabled the feature.
+There's no automated tool to convert data encrypted in the new format back to the legacy format. If you end up on an n8n version that can't read it, the only recovery path is restoring from a database backup.
 
 ## Recommended steps <a href="#recommended-steps" id="recommended-steps"></a>
 
-1. **Back up your database**. Take a full snapshot before any changes.
-2. **Enable on staging first**. Set `N8N_ENV_FEAT_ENCRYPTION_KEY_ROTATION=true` on a non-production environment, restart, and verify that credentials still decrypt correctly.
-3. **Enable on production**. Only do this after validating staging behavior.
-4. **Don't disable or downgrade**. Once production data has been written in the new format, keep the flag enabled and stay on the same or a newer n8n version.
+1. **Back up your database**. Take a full snapshot before any changes, including before you upgrade to n8n 3.0.
+2. **Try staging first**. Turn the feature on, or upgrade to n8n 3.0, in a non-production environment, restart, and verify that credentials still decrypt correctly.
+3. **Then do production**. Only do this after validating staging behavior.
+4. **Don't downgrade**. Once production data has been written in the new format, stay on the same or a newer n8n version.
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
@@ -105,3 +122,4 @@ There's no automated tool to convert data encrypted in the new format back to th
 * [Set a custom encryption key](../basic-configuration/configuration-examples/set-a-custom-encryption-key.md): set the instance-level `N8N_ENCRYPTION_KEY` value.
 * [Deployment environment variables](../basic-configuration/use-environment-variables/deployment.md): reference for `N8N_ENCRYPTION_KEY` and `N8N_ENV_FEAT_ENCRYPTION_KEY_ROTATION`.
 * [Configuring queue mode](../scaling/enable-queue-mode.md): make sure all workers share the same instance encryption key.
+* [n8n 3.0 breaking changes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v30-breaking-changes): what changes when you upgrade, including encryption key rotation.

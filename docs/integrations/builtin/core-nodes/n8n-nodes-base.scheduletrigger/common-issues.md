@@ -63,7 +63,7 @@ If you're [self hosting](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n
 To set the timezone for an individual workflow:
 
 1. Open the workflow on the canvas.
-2. Select the <img src="../../../.gitbook/assets/three-dots-horizontal (2).png" alt="three dots menu" data-size="line"> **Three dots icon** in the upper-right corner.
+2. Select the <img src="../../../.gitbook/assets/three-dots-horizontal (2).png" alt="Workflow menu icon" data-size="line"> **Workflow menu** in the upper-right corner.
 3. Select **Settings**.
 4. Change the **Timezone** setting.
 5. Select **Save**.

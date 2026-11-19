@@ -76,4 +76,8 @@ Before submitting your node for review by n8n, you must:
 * Publish your node to npm using a GitHub Actions workflow with provenance, as described in **Publishing to npm**. n8n will fetch it from there for final vetting.
 
 ## Ready to submit? <a href="#ready-to-submit" id="ready-to-submit"></a>
-If your node meets all the above requirements, sign up or log in to the [n8n Creator Portal](https://creators.n8n.io/nodes) and submit your node for verification. Note that n8n reserves the right to reject nodes that compete with any of n8n's paid features, especially enterprise functionality.
+If your node meets all the above requirements, sign up or log in to the [n8n Creator Portal](https://creators.n8n.io/nodes) and submit your node for verification.
+
+Reviews can take up to four weeks. n8n emails you as your submission moves through review.
+
+Note that n8n reserves the right to reject nodes that compete with any of n8n's paid features, especially enterprise functionality.

@@ -26,6 +26,7 @@ You can use these credentials to authenticate the following nodes:
 * [Microsoft Outlook](../app-nodes/n8n-nodes-base.microsoftoutlook.md)
 * [Microsoft Outlook Trigger](../trigger-nodes/n8n-nodes-base.microsoftoutlooktrigger.md)
 * [Microsoft SharePoint](../app-nodes/n8n-nodes-base.microsoftsharepoint.md)
+* [Microsoft SharePoint Trigger](../trigger-nodes/n8n-nodes-base.microsoftsharepointtrigger.md)
 * [Microsoft Teams](../app-nodes/n8n-nodes-base.microsoftteams.md)
 * [Microsoft Teams Trigger](../trigger-nodes/n8n-nodes-base.microsoftteamstrigger.md)
 * [Microsoft To Do](../app-nodes/n8n-nodes-base.microsofttodo.md)
@@ -127,6 +128,7 @@ Add the application permissions for every node you plan to use, then grant admin
 | Microsoft Outlook | `Mail.ReadWrite` (messages, drafts, folders, and attachments; also required by Reply and Draft: Send, which create or update a draft before sending), `Mail.Send` (send and reply), `Calendars.ReadWrite` (calendars and events), `Contacts.ReadWrite` (contacts), `MailboxSettings.Read` (loads the Categories dropdown). Add only the ones your operations use. |
 | Microsoft Outlook Trigger | `Mail.Read` |
 | Microsoft SharePoint | `Sites.Read.All` for read operations, `Sites.ReadWrite.All` for write operations. For items in document libraries, `Files.Read.All` (Item: Get) or `Files.ReadWrite.All` (Item: Delete) also works. To limit the app to chosen sites, grant `Sites.Selected` instead and refer to [Grant access per site](#grant-access-per-site). |
+| Microsoft SharePoint Trigger | `Sites.Read.All`. To limit the app to chosen sites, grant `Sites.Selected` instead and refer to [Grant access per site](#grant-access-per-site). |
 | Microsoft Teams and Microsoft Teams Trigger | `Team.ReadBasic.All`, plus the permissions for your operations in the table below |
 | Microsoft To Do | `Tasks.ReadWrite.All` |
 
@@ -154,7 +156,7 @@ The Microsoft Teams node needs `Team.ReadBasic.All` to list teams, plus a permis
 
 ## Grant access per site
 
-Tenant-wide `Sites.Read.All` or `Sites.ReadWrite.All` gives the app access to every SharePoint site in your organization. If your security team prefers to grant access site by site, use the `Sites.Selected` permission instead. The Microsoft SharePoint node (from version 2) and the Microsoft Excel (SharePoint) node support it.
+Tenant-wide `Sites.Read.All` or `Sites.ReadWrite.All` gives the app access to every SharePoint site in your organization. If your security team prefers to grant access site by site, use the `Sites.Selected` permission instead. The Microsoft SharePoint node (from version 2), the Microsoft SharePoint Trigger node, and the Microsoft Excel (SharePoint) node support it.
 
 Per-site access takes two steps. The second step has no page in the Entra admin center or the SharePoint admin center, which is why many setups miss it:
 
@@ -232,7 +234,7 @@ Some Microsoft Graph operations only exist for a signed-in user. When you select
 
 <!-- vale on -->
 
-The Microsoft Outlook, Microsoft Outlook Trigger, Microsoft SharePoint, and Microsoft To Do nodes have no blocked operations. In the Microsoft SharePoint node, site search needs the `Sites.Read.All` application permission; with only `Sites.Selected`, choose the site by URL or ID instead.
+The Microsoft Outlook, Microsoft Outlook Trigger, Microsoft SharePoint, Microsoft SharePoint Trigger, and Microsoft To Do nodes have no blocked operations. In the Microsoft SharePoint node, site search needs the `Sites.Read.All` application permission; with only `Sites.Selected`, choose the site by URL or ID instead.
 
 File: Share and Folder: Share in Microsoft OneDrive stay available, but creating sharing links app-only can need extra tenant or admin configuration. The node shows a notice on these operations.
 
@@ -242,10 +244,10 @@ Select the **Microsoft Graph API Base URL** that matches your tenant's cloud env
 
 <!-- vale off -->
 
-- **Global (https://graph.microsoft.com)**: standard Microsoft 365 tenants (default)
-- **US Government (https://graph.microsoft.us)**: Azure US Government tenants, including GCC High
-- **US Government DOD (https://dod-graph.microsoft.us)**: Azure US Government Department of Defense tenants
-- **China (https://microsoftgraph.chinacloudapi.cn)**: Microsoft 365 operated by 21Vianet in China
+- **Global (`https://graph.microsoft.com`)**: standard Microsoft 365 tenants (default)
+- **US Government (`https://graph.microsoft.us`)**: Azure US Government tenants, including GCC High
+- **US Government DOD (`https://dod-graph.microsoft.us`)**: Azure US Government Department of Defense tenants
+- **China (`https://microsoftgraph.chinacloudapi.cn`)**: Microsoft 365 operated by 21Vianet in China
 
 n8n derives the matching sign-in endpoint automatically, for example `login.microsoftonline.us` for the US Government clouds and `login.partner.microsoftonline.cn` for China, so you don't need to configure any token or authorization URLs. Complete the app registration in your cloud's own Entra admin center, and the nodes route all Microsoft Graph calls through the endpoint you selected.
 

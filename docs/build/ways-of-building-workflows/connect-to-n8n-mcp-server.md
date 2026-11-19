@@ -3,9 +3,7 @@ title: Build with MCP
 status: beta
 nodeTitle: Use n8n MCP server
 url: https://docs.n8n.io/build/ways-of-building-workflows/connect-to-n8n-mcp-server
-description: >-
-  Understand what it means to build and
-  run n8n workflows from MCP clients.
+description: Understand what it means to build and run n8n workflows from MCP clients.
 layout:
   width: default
   title:
@@ -24,9 +22,11 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
-# Build with MCP
+# Use n8n MCP server
 
 Model Context Protocol (MCP) is a standard way for AI tools to connect to other apps. n8n has a built-in MCP server, so you can describe the workflow you want in your favorite AI tool — like Claude, ChatGPT, or a coding agent — and it connects straight to your n8n instance to build and run that workflow for you.
 
@@ -56,6 +56,7 @@ When you connect an AI tool to n8n's MCP server, your n8n instance becomes a pla
 * **Build and manage data tables** to store and reuse data across your workflows.
 * **Iterate as you go:** run and test what you've built, review the results, and refine it — all from the same conversation, without switching back to the editor.
 * **Search for and run workflows** you already have access to.
+* **Follow your preferences:** the client reads your saved [preferences](../agentic-context-management/preferences.md) before it builds, and can save new ones when you state a lasting rule (n8n 2.42.0 onward, in Preview).
 
 [Enable Instance-level MCP](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server#enabling-mcp-access) to start building, testing, and running your n8n workflows from an AI application.
 
@@ -63,8 +64,8 @@ When you connect an AI tool to n8n's MCP server, your n8n instance becomes a pla
 
 Instance-level MCP isn't the only way n8n works with MCP:
 
-* **[MCP Server Trigger node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcptrigger):** build a single workflow that acts as its own MCP server, exposing only the tools you design inside it. Use this to hand-craft a custom MCP server for other AI apps to call.
-* **[MCP Client Tool node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp):** go the other direction and let an n8n workflow act as an MCP client that calls external MCP servers.
+* [**MCP Server Trigger node**](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.mcptrigger)**:** build a single workflow that acts as its own MCP server, exposing only the tools you design inside it. Use this to hand-craft a custom MCP server for other AI apps to call.
+* [**MCP Client Tool node**](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp)**:** go the other direction and let an n8n workflow act as an MCP client that calls external MCP servers.
 
 ## Learn more
 

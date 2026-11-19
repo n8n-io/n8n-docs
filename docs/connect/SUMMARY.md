@@ -4,6 +4,8 @@
 * [n8n API](n8n-api/README.md)
   * [Authentication](n8n-api/authentication.md)
   * [Pagination](n8n-api/pagination.md)
+  * [Idempotency](n8n-api/idempotency.md)
+  * [Rate limits](n8n-api/rate-limits.md)
   * [Use an API playground](n8n-api/use-an-api-playground.md)
   * [Endpoint reference](n8n-api/api-reference.md)
   * ```yaml
@@ -19,6 +21,9 @@
           spec: n8n
     ```
 * [n8n CLI](n8n-cli.md)
+* [Workflow SDK](workflow-sdk/README.md)
+  * [Quickstart](workflow-sdk/quickstart.md)
+  * [Build with AI](workflow-sdk/build-with-ai.md)
 * [Connect to n8n MCP server](connect-to-n8n-mcp-server.md)
   * [MCP client connection examples](connect-to-n8n-mcp-server/mcp-client-examples.md)
   * [MCP server tools reference](connect-to-n8n-mcp-server/mcp-server-tools-reference.md)

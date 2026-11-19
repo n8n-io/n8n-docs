@@ -165,7 +165,7 @@ services:
       - N8N_PORT=5678
       - N8N_PROTOCOL=https  
       - NODE_ENV=production
-      - WEBHOOK_URL=https://${SUBDOMAIN}.${DOMAIN_NAME}/
+      - N8N_WEBHOOK_URL=https://${SUBDOMAIN}.${DOMAIN_NAME}/
       - GENERIC_TIMEZONE=${GENERIC_TIMEZONE}
       - TZ=${GENERIC_TIMEZONE}
       - N8N_RESTRICT_FILE_ACCESS_TO=/files
@@ -177,6 +177,8 @@ volumes:
   n8n_data:
   traefik_data:
 ```
+
+`N8N_WEBHOOK_URL` is available from n8n 2.30.0; on earlier versions, use `WEBHOOK_URL`.
 
 The Docker Compose file above configures two containers: one for n8n, and one to run [Traefik](https://github.com/traefik/traefik), an application proxy to manage TLS/SSL certificates and handle routing.
 

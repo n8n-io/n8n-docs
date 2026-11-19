@@ -24,7 +24,7 @@ Workflow reviews are available on:
 - **n8n Cloud:** Enterprise
 - **Self-hosted:** Enterprise
 
-Workflow reviews are available from n8n 2.37.0. An instance admin must enable the feature in **Settings** > **Security & policies**.
+Workflow reviews are available from n8n 2.37.0. An instance admin must enable the feature in **Settings** > **Policies**.
 {% endhint %}
 
 {% hint style="info" %}
@@ -37,7 +37,7 @@ Workflow reviews let your team approve a specific [workflow version](view-change
 
 Reviews are optional after you enable the feature. You can still publish directly unless that workflow already has an open review.
 
-n8n doesn't send email or other external notifications when you assign a reviewer or when a reviewer requests changes. Check **Reviews** in the left sidebar for requests that need your attention.
+n8n doesn't send email or other external notifications when you assign a reviewer or when a reviewer requests changes. Check **Reviews** in the left menu for requests that need your attention.
 
 ## How reviews work
 
@@ -70,7 +70,7 @@ A workflow can have only one open review at a time. While that review is open, c
 
 ## Enable workflow reviews
 
-Instance admins enable workflow reviews for the whole instance in **Settings** > **Security & policies**, under **Workflow reviews**.
+Instance admins enable workflow reviews for the whole instance in **Settings** > **Policies**, under **Workflow reviews**.
 
 For more about instance security policies, refer to [Manage security policies](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/manage-security-policies).
 
@@ -86,7 +86,7 @@ A *version* is the snapshot of the workflow being reviewed and published. The *r
 
 The reviewer needs `workflow:read` on that workflow. They don't need `workflow:publish`.
 
-n8n creates a review for the current saved version. Open it from **Reviews** in the left sidebar.
+n8n creates a review for the current saved version. Open it from **Reviews** in the left menu.
 
 ### Submit later changes to an open review
 
@@ -119,7 +119,7 @@ People who can open the review can comment on **Activity** without deciding. To 
 
 | Action | Who can do it |
 | --- | --- |
-| Enable or disable workflow reviews for the instance | Instance admins with access to **Settings** > **Security & policies** |
+| Enable or disable workflow reviews for the instance | Instance admins with access to **Settings** > **Policies** |
 | Submit a workflow for review | Users with `workflow:publish` on that workflow |
 | Update an open review with a newer version | Users with `workflow:publish` on that workflow |
 | See that a review is in progress | Users who can open the workflow, including viewers and editors. They can't open review details unless they're listed below. |

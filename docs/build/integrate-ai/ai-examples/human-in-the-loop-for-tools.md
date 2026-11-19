@@ -15,6 +15,8 @@ layout:
 
 # Human-in-the-loop for AI tool calls <a href="#human-in-the-loop-for-ai-tool-calls" id="human-in-the-loop-for-ai-tool-calls"></a>
 
+You can make an AI agent wait for human approval, in Slack, n8n Chat, or another channel, before it runs a specific tool.
+
 You can require human approval before an AI Agent executes a specific tool. When a tool requires human review, the workflow pauses and waits for a person to take one of the following actions:
 
 - **Approve**: The tool executes with the input specified by the AI.
@@ -124,9 +126,9 @@ Consider including:
 
 
 
-## Chaining and subagents <a href="#chaining-and-subagents" id="chaining-and-subagents"></a>
+## Chaining and sub-agents <a href="#chaining-and-subagents" id="chaining-and-subagents"></a>
 
-When using an AI Agent as a tool for another AI Agent, human review steps in the subagent work correctly.
+When using an AI Agent as a tool for another AI Agent, human review steps in the sub-agent work correctly.
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 

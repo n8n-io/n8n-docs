@@ -1,0 +1,54 @@
+{
+  "files_scanned": 1464,
+  "counts": {
+    "cross-space-broken": 1,
+    "same-space-absolute": 2,
+    "absolute-path": 1,
+    "broken-anchor": 1
+  },
+  "errors": 5,
+  "warnings": 0,
+  "strict_anchors": true,
+  "findings": [
+    {
+      "page": "docs/integrations/builtin/core-nodes/n8n-nodes-base.webhook/workflow-development.md",
+      "line": 34,
+      "category": "absolute-path",
+      "message": "absolute path won't resolve in GitBook, use a relative .md link (target missing): /_video/integrations/builtin/core-nodes/webhook/webhook-node-intro.mp4",
+      "target": "/_video/integrations/builtin/core-nodes/webhook/webhook-node-intro.mp4",
+      "severity": "error"
+    },
+    {
+      "page": "docs/integrations/builtin/core-nodes/n8n-nodes-base.messageanagent.md",
+      "line": 89,
+      "category": "same-space-absolute",
+      "message": "app.gitbook.com URL targets this page's own space 'integrations'; use a relative .md link",
+      "target": "https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.webhook",
+      "severity": "error"
+    },
+    {
+      "page": "docs/integrations/builtin/core-nodes/n8n-nodes-base.messageanagent.md",
+      "line": 91,
+      "category": "same-space-absolute",
+      "message": "app.gitbook.com URL targets this page's own space 'integrations'; use a relative .md link",
+      "target": "https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.chattrigger",
+      "severity": "error"
+    },
+    {
+      "page": "docs/reusable-content/.gitbook/includes/integrations/builtin/cluster-nodes/use-with-chat-trigger.md",
+      "line": 4,
+      "category": "cross-space-broken",
+      "message": "cross-space target not found in space 'integrations': https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.compression/n8n-nodes-base.compression",
+      "target": "https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.compression/n8n-nodes-base.compression",
+      "severity": "error"
+    },
+    {
+      "page": "docs/deploy/some-page.md",
+      "line": 12,
+      "category": "broken-anchor",
+      "message": "no heading carries the id 'missing-section'",
+      "target": "other-page.md#missing-section",
+      "severity": "error"
+    }
+  ]
+}

@@ -49,6 +49,7 @@ the changed files in a PR) to check only those. Exits 1 if any error is found.
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import re
 import sys
@@ -94,8 +95,12 @@ SPACE_ID_TO_FOLDER = load_space_ids()
 # Run-level stats for coverage transparency (not errors).
 _STATS = {"unknown_space_ids": set(), "unknown_space_links": 0, "generated_links": 0}
 
-# Hidden/utility spaces: include mechanisms, not real link targets.
-HIDDEN_SPACES = {"_workflows", "reusable-content"}
+# Utility spaces that hold no rendered content of their own.
+# `reusable-content` is deliberately NOT listed here. Its files are the git-sync
+# form of GitBook reusable blocks, so the links inside them render on live pages.
+# Skipping the space hid those links from every checker we run; one cross-space
+# link had been broken there unseen until DOC-2396.
+HIDDEN_SPACES = {"_workflows"}
 
 # Sub-trees inside a space whose pages GitBook generates (e.g. the public API
 # reference, rendered from an OpenAPI spec) rather than backing them with a `.md`
@@ -124,8 +129,9 @@ ASSET_EXTS = {
 # Markdown inline links [text](target) and HTML href/src attributes.
 # The target allows one level of balanced parens so filenames like
 # `(node-name).all.md` are captured whole instead of truncated at the inner `)`.
-MD_LINK_RE = re.compile(r"\[[^\]]*\]\(\s*(<[^>]+>|(?:[^()\s]+|\([^()]*\))+)")
+MD_LINK_RE = re.compile(r"\[[^\]]*\]\(\s*(<[^>]+>|(?:\\.|[^()\s\\]+|\([^()]*\))+)")
 HTML_ATTR_RE = re.compile(r"""(?:href|src)\s*=\s*["']([^"']+)["']""", re.IGNORECASE)
+MD_ESCAPE_RE = re.compile(r"\\([!-/:-@\[-`{-~])")
 # Reference definitions: [id]: target. The label's first char must not be `^`,
 # so Markdown footnote definitions ([^1]: some text) aren't treated as links.
 REF_DEF_RE = re.compile(r"^\s{0,3}\[(?:[^^\]][^\]]*)\]:\s*(\S+)")
@@ -207,18 +213,25 @@ def space_of(rel_path: str) -> str | None:
 
 
 def iter_targets(text: str):
-    """Yield (line_number, raw_target) for every link in the (code-stripped) text."""
+    """Yield (line_number, target) for every link in the (code-stripped) text.
+
+    Markdown link targets come back with backslash escapes removed, as GitBook
+    resolves them: `\\(node-name\\).all.md` -> `(node-name).all.md`. HTML href/src
+    values are returned as written.
+    """
     for i, line in enumerate(text.split("\n"), start=1):
         for m in MD_LINK_RE.finditer(line):
             target = m.group(1).strip()
             if target.startswith("<") and target.endswith(">"):
                 target = target[1:-1].strip()
-            yield i, target
+            # CommonMark allows backslash escapes in link targets. GitBook writes
+            # SUMMARY entries such as `\(node-name\).all.md`.
+            yield i, MD_ESCAPE_RE.sub(r"\1", target)
         for m in HTML_ATTR_RE.finditer(line):
             yield i, m.group(1).strip()
         m = REF_DEF_RE.match(line)
         if m:
-            yield i, m.group(1).strip()
+            yield i, MD_ESCAPE_RE.sub(r"\1", m.group(1).strip())
 
 
 def classify_cross_space(target: str, src_rel: str):
@@ -392,6 +405,21 @@ def anchor_slug(heading: str) -> str:
     return re.sub(r"\s+", "-", h.strip())
 
 
+# GitBook serves a heading id cut to 100 characters, even when the markdown
+# carries a longer explicit `id=`. Seen live on changelog/v20-breaking-changes
+# (the `...-waiting-for-webhook-for` heading, CAP-426).
+GITBOOK_ID_MAX = 100
+
+
+def gitbook_id_forms(ids: set) -> set:
+    """Add the 100-character form of every id longer than GitBook serves.
+
+    Only adds ids, so it can silence a false positive but never create a
+    finding. The full id is kept too, because the cut was confirmed on one page.
+    """
+    return ids | {i[:GITBOOK_ID_MAX] for i in ids if len(i) > GITBOOK_ID_MAX}
+
+
 _HEADING_IDS: dict = {}
 
 
@@ -423,6 +451,10 @@ def heading_ids(path: Path) -> tuple:
     headings = strip_code(raw, inline=False)
     explicit = set(EXPLICIT_ID_RE.findall(markup))
     slugs = set()
+    # GitBook makes repeated heading ids unique by adding `-1`, `-2`, ... in page
+    # order (live on get-started/enterprise-hub: the stepper's "Publish first
+    # workflow" is `#publish-first-workflow`, the section below it is `-1`).
+    seen: dict = {}
     # Walk both views in step: judge id-presence on the markup line (so an
     # `<a id="...">` shown inside backticks doesn't count as a real anchor) while
     # slugging the heading line (which keeps its code spans).
@@ -431,7 +463,18 @@ def heading_ids(path: Path) -> tuple:
         if m and not re.search(r'<a\b[^>]*\bid="', line_markup):
             s = anchor_slug(m.group(1))
             if s:
-                slugs.add(s)
+                n = seen.get(s, 0)
+                if n == 0:
+                    slugs.add(s)
+                else:
+                    # Unverified for long ids whether GitBook cuts before or
+                    # after adding the suffix, so accept both. The cut-after
+                    # form, (s-n)[:100], comes from gitbook_id_forms below.
+                    slugs.add(f"{s}-{n}")
+                    slugs.add(f"{s[:GITBOOK_ID_MAX]}-{n}")
+                seen[s] = n + 1
+    explicit = gitbook_id_forms(explicit)
+    slugs = gitbook_id_forms(slugs)
     resolved = True
     blocks = reusable_blocks()
     for bid in INCLUDE_URL_RE.findall(markup):
@@ -582,6 +625,13 @@ def main() -> int:
         action="store_true",
         help="Fail on broken anchors instead of warning (see rule 5).",
     )
+    ap.add_argument(
+        "--json",
+        metavar="PATH",
+        help="Also write the findings as JSON, for the weekly sweep reporter "
+             "(internal_links_report.py). Same split as lychee: this script "
+             "finds, the reporter delivers.",
+    )
     args = ap.parse_args()
 
     if args.files:
@@ -598,6 +648,8 @@ def main() -> int:
     errors: list[str] = []
     warnings: list[str] = []
     counts: dict[str, int] = {}
+    records: list[dict] = []
+    scanned = 0
 
     for md_file in files:
         if not md_file.exists() or md_file.suffix != ".md":
@@ -611,6 +663,7 @@ def main() -> int:
         if space_of(rel) in HIDDEN_SPACES:
             continue
 
+        scanned += 1
         raw = md_file.read_text(encoding="utf-8", errors="replace")
         text = strip_code(blank_gitbook_native(raw))
         for line, target in iter_targets(text):
@@ -620,10 +673,25 @@ def main() -> int:
             category, message = result
             counts[category] = counts.get(category, 0) + 1
             entry = f"{rel}:{line}  [{category}]  {message}"
-            if category in warn_categories:
+            severity = "warning" if category in warn_categories else "error"
+            if severity == "warning":
                 warnings.append(entry)
             else:
                 errors.append(entry)
+            records.append({"page": rel, "line": line, "category": category,
+                            "message": message, "target": target,
+                            "severity": severity})
+
+    if args.json:
+        Path(args.json).parent.mkdir(parents=True, exist_ok=True)
+        Path(args.json).write_text(json.dumps({
+            "files_scanned": scanned,
+            "counts": counts,
+            "errors": len(errors),
+            "warnings": len(warnings),
+            "strict_anchors": bool(args.strict_anchors),
+            "findings": records,
+        }, indent=2), encoding="utf-8")
 
     if warnings:
         print(f"⚠️  {len(warnings)} warning(s):\n")
@@ -657,7 +725,7 @@ def main() -> int:
         )
         return 1
 
-    print(f"✅ No broken internal links found ({len(files)} file(s) scanned).")
+    print(f"✅ No broken internal links found ({scanned} file(s) scanned).")
     if warnings:
         print(f"   ({len(warnings)} warning(s) above — not failing the build.)")
     return 0

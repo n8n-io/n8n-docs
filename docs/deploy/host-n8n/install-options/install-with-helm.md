@@ -96,7 +96,7 @@ kubectl create secret generic n8n-core-secrets --namespace n8n \
 
 {% tab title="With a license key" %}
 ```bash
-read -r -s -p "n8n license key: " N8N_LICENSE_ACTIVATION_KEY
+printf "n8n license key: "; read -r -s N8N_LICENSE_ACTIVATION_KEY; echo
 kubectl create secret generic n8n-core-secrets --namespace n8n \
 	--from-literal=N8N_ENCRYPTION_KEY="$N8N_ENCRYPTION_KEY" \
 	--from-literal=N8N_RUNNERS_AUTH_TOKEN="$(openssl rand -base64 32)" \
@@ -110,7 +110,7 @@ To pass the license key to n8n, also [add the license to the values file](#add-y
 In queue mode, also create a Secret for the PostgreSQL password. Reading the password into a variable keeps special characters intact:
 
 ```bash
-read -r -s -p "PostgreSQL password: " DB_PASSWORD
+printf "PostgreSQL password: "; read -r -s DB_PASSWORD; echo
 kubectl create secret generic n8n-db-secret --namespace n8n \
 	--from-literal=password="$DB_PASSWORD"
 ```

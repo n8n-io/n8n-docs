@@ -1,0 +1,23 @@
+docs/build/work-with-data/transform-data/expression-reference/string.md
+  s_f4484042ac1c92::t_66cf170a8eb51a 78-80,82-85,105,109,113,118
+  s_f4484042ac1c92::t_b2e8fc35d56eb7 81
+  s_f4484042ac1c92::t_65413cff2a04f0 284-289,295-298,319,323,327,331
+docs/build/work-with-data/transform-data/expression-reference/README.md
+  s_f4484042ac1c92::t_0f07fdbdfed642 849
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "8f4ae4bb098bf8c0185d75feb5ba88a1058c1de3",
+  "prompts": {},
+  "sessions": {
+    "s_f4484042ac1c92": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a140ec45-3739-42da-ab82-0e7f8b68144b",
+        "model": "claude-fable-5-2"
+      },
+      "human_author": "Lorent Lempereur <lorent.lempereur@n8n.io>"
+    }
+  }
+}

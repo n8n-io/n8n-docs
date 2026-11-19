@@ -93,7 +93,7 @@ Once you have a license key, activate it by selecting the button in the license 
 
 ## Business and Enterprise plans <a href="#business-and-enterprise-editions" id="business-and-enterprise-editions"></a>
 
-The Business and Enterprise plans unlock the paid features that the Community edition doesn't include, such as SSO, environments, external secrets, and log streaming. The Enterprise plan adds the most advanced features for security, scaling, and governance.
+The Business and Enterprise plans unlock the paid features that the Community edition doesn't include, such as SSO, environments, external secrets, and log streaming. The Enterprise plan adds the most advanced features for security, scaling, and governance. For guidance on rolling out Enterprise across your organization, see the [Enterprise Hub](https://app.gitbook.com/s/CxSeOtVxqqhfxMSac0AV/enterprise-hub).
 
 When you subscribe to a paid plan, you get a license key that unlocks the features for that plan. Add the key to your instance to activate it. For how to get and activate a key, see [Manage your license](configure-n8n/manage-your-license.md). For the features included in each plan, see the [pricing page](https://n8n.io/pricing/).
 

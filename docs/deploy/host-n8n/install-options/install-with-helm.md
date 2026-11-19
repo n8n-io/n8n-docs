@@ -354,9 +354,9 @@ In queue mode, you can scale each role on its own:
 
 | Goal | What to configure |
 | --- | --- |
-| Run more executions at the same time | `queueMode.workerReplicaCount`, and either `queueMode.workerConcurrency` or a positive `executions.concurrency.productionLimit`, not both |
+| Run more executions at the same time | `queueMode.workerReplicaCount`, and either `queueMode.workerConcurrency` or a positive `N8N_CONCURRENCY_PRODUCTION_LIMIT` in `env.worker`, not both |
 | Handle production webhooks on separate pods | `webhookProcessor.enabled: true` and `webhookProcessor.replicaCount`. See [Route webhooks to webhook processors with the Helm chart](#route-webhooks-to-webhook-processors-with-the-helm-chart). |
-| Run more than one main pod (self-hosted Enterprise) | `multiMain.enabled: true`, at least two `multiMain.replicas`, your license as described in [Add your license to the values file](#add-your-license-to-the-values-file), and sticky sessions at the load balancer. With an NGINX Ingress controller, set `ingress.sticky.enabled: true`. |
+| Run more than one main pod (self-hosted Enterprise) | `multiMain.enabled: true`, at least two `multiMain.replicas`, your license as described in [Add your license to the values file](#add-your-license-to-the-values-file), and sticky sessions at the load balancer. With an Ingress, set your Ingress controller's session affinity annotations in `ingress.annotations`. For ingress-nginx, see [`https-ingress.yaml`](https://github.com/n8n-io/n8n-hosting/blob/main/charts/n8n/examples/https-ingress.yaml). |
 
 The chart refuses to run more than one main pod without multi-main mode, because each main pod would run every schedule and trigger on its own.
 

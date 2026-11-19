@@ -7,7 +7,7 @@ layout:
 
 # Upgrade the Helm chart from 1.x to 2.0
 
-To upgrade an n8n release from Helm chart 1.x to 2.0, update your values file until it renders against chart 2.0, then run `helm upgrade`.
+To upgrade an n8n release from Helm chart 1.x to 2.0, fix what n8n 3.0 changes in your instance, migrate your values file with the chart's migration script, then run `helm upgrade`.
 
 Chart 2.0 changes values keys and defaults, and moves n8n from 2.x to 3.0. Before you upgrade, read the [n8n 3.0 breaking changes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v30-breaking-changes) and the chart's [upgrade guide](https://github.com/n8n-io/n8n-hosting/blob/main/charts/n8n/UPGRADING.md).
 
@@ -19,11 +19,14 @@ The commands on this page use the release name `n8n`, as in `helm install n8n`. 
 
 To upgrade from chart 1.x to 2.0:
 
-1. Take a full backup of the database, the encryption key, and the persistent volume if you use one.
-2. Render your values file against chart 2.0, as shown in [Install the Helm chart](../install-with-helm.md#install-the-helm-chart). The render fails on every values key that 2.0 retired and names its replacement. Change your values file until the render passes.
-3. If you use `secretRefs.existingSecret` and task runners, add `N8N_RUNNERS_AUTH_TOKEN` to that Secret, unless you already set `taskRunners.authToken.existingSecret`. The chart can't see inside the Secret, so the render passes without the token, but the pods don't start. Don't point `taskRunners.authToken.existingSecret` at the Secret that chart 1.x generated, ending in `-task-runners`. Helm removes it during the upgrade.
-4. Read [Chart 2.0 changes the render doesn't catch](#chart-20-changes-the-render-doesnt-catch), and adjust your setup.
-5. Run `helm upgrade` with your values file, as shown in [Upgrade the Helm chart](../install-with-helm.md#upgrade-the-helm-chart).
+1. Fix what n8n 3.0 breaks in your instance. As an instance owner or admin, open the migration report in n8n at **Settings > Migration Report**. Fix the issues marked **Upgrade blocked** and **Executions will fail** first. For details, see [n8n 3.0 migration tool](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v30-migration-tool).
+2. Take a full backup of the database, the encryption key, and the persistent volume if you use one.
+3. Migrate your values file with the chart's migration script, as described in [Migrate the values file to Helm chart 2.0](#migrate-the-values-file-to-helm-chart-20).
+4. Render the migrated values file against chart 2.0, as shown in [Install the Helm chart](../install-with-helm.md#install-the-helm-chart), with `-f values-2.0.yaml`. The render fails on every values key that 2.0 retired and names its replacement. Change the file until the render passes.
+5. If you use `secretRefs.existingSecret` and task runners, add `N8N_RUNNERS_AUTH_TOKEN` to that Secret, unless you already set `taskRunners.authToken.existingSecret`. The chart can't see inside the Secret, so the render passes without the token, but the pods don't start. Don't point `taskRunners.authToken.existingSecret` at the Secret that chart 1.x generated, ending in `-task-runners`. Helm removes it during the upgrade.
+6. Read [Chart 2.0 changes the render doesn't catch](#chart-20-changes-the-render-doesnt-catch), and adjust your setup.
+7. Run `helm upgrade` with `-f values-2.0.yaml`, as shown in [Upgrade the Helm chart](../install-with-helm.md#upgrade-the-helm-chart).
+8. Check the upgrade, as described in [Check the upgrade to Helm chart 2.0](#check-the-upgrade-to-helm-chart-20).
 
 To add the task runner token to an existing core Secret, replace `<your-core-secret>` with the name you set in `secretRefs.existingSecret`:
 
@@ -33,9 +36,28 @@ kubectl patch secret <your-core-secret> --namespace <your-namespace> --type merg
 EOF
 ```
 
+## Migrate the values file to Helm chart 2.0
+
+The chart includes a script that migrates a chart 1.x values file to 2.0. It moves or removes every values key that 2.0 retired, turns the `extraEnv` lists into `env` maps, and removes or renames environment variables that n8n 3.0 no longer reads. The script needs [`yq`](https://github.com/mikefarah/yq) version 4.
+
+Download the chart version you upgrade to, and run the script on your values file. Replace `<chart-version>` with the version, for example `2.0.0`:
+
+```bash
+helm pull oci://ghcr.io/n8n-io/n8n-helm-chart/n8n --version "<chart-version>" --untar
+bash n8n/scripts/migrate-values.sh values.yaml > values-2.0.yaml
+```
+
+The script writes the migrated values to `values-2.0.yaml`, and prints a report in the terminal. The report lists what the script changed, and what you need to check yourself, such as a Secret that needs the task runner token. The script can't see inside Secrets, so check the task runner token yourself even if the report doesn't mention it. Review the output and the report before you continue.
+
+The script has these limits:
+
+* It reads one plain YAML file. It doesn't migrate settings from a second values file, or from templates such as `helmfile` `.gotmpl` files. If you layer several values files, merge them into one file before you run the script, because a setting in one file can change how the script migrates another.
+* It never reads the contents of a Secret. If a Secret needs a new key, the report names it, and you add it yourself.
+* It passes keys it doesn't know through unchanged.
+
 ## Values that change in Helm chart 2.0
 
-When you render chart 2.0 with a chart 1.x values file, the render fails on each retired key. The most common changes are:
+The migration script handles these changes. If you change a values file by hand, the render fails on each retired key until you change it. The most common changes are:
 
 | Chart 1.x | Chart 2.0 |
 | --- | --- |
@@ -47,7 +69,11 @@ When you render chart 2.0 with a chart 1.x values file, the render fails on each
 | `securityContext.fsGroup`, `runAsUser`, and `runAsGroup` | The same fields under `podSecurityContext.shared` |
 | `securityContext.enabled` | Remove it. Replace `enabled: false` with `podSecurityContext.shared: null`. |
 | `N8N_PROXY_HOPS` in `env.shared`, `env.main`, or `env.webhookProcessor`, with an Ingress or route | Remove it, or move it to `chartEnvOverrides` under the same component |
-| `queueMode.workerConcurrency` together with a positive `executions.concurrency.productionLimit` | Remove one. With both set, n8n already ran workers at `productionLimit`, so to keep your current concurrency, remove `workerConcurrency`. |
+| `executions.concurrency.productionLimit` | Remove it if it's `-1` or `0`. Chart 1.x didn't pass either value to n8n. Otherwise, set `N8N_CONCURRENCY_PRODUCTION_LIMIT` to the same number in `env.worker` in queue mode, or in `env.main` in standalone mode, and remove `queueMode.workerConcurrency`. n8n already ran workers at the production limit. |
+| `ingress.sticky` | Remove it. If `ingress.sticky.enabled` was `true`, set your ingress controller's session affinity annotations in `ingress.annotations`. For ingress-nginx, see [`https-ingress.yaml`](https://github.com/n8n-io/n8n-hosting/blob/main/charts/n8n/examples/https-ingress.yaml). |
+| `serviceAccount.awsRoleArn` | The annotation `eks.amazonaws.com/role-arn` in `serviceAccount.annotations`. With `serviceAccount.create: false`, the chart doesn't annotate the ServiceAccount, so annotate your existing ServiceAccount directly. |
+| `probes.worker.liveness.type`, `probes.worker.readiness.type` | Remove them. A probe with a `command` runs as an exec probe. Without one, it checks the worker health endpoint. |
+| `taskRunners.nativePythonRunner` | Remove it. The default task runner image runs JavaScript and Python. |
 
 ## Chart 2.0 changes the render doesn't catch
 
@@ -64,9 +90,26 @@ Some chart 2.0 changes don't fail the render. Check each one before you upgrade 
 * **Environment variable precedence:** ConfigMaps and Secrets you load with `envFrom` now override the values in the chart's ConfigMaps. In 1.x, the chart's variables won. Variables the chart reads from a Secret, such as the encryption key, still win. Check that they hold only the keys you mean to set.
 * **Security contexts:** a `podSecurityContext.<role>` block now merges over `podSecurityContext.shared` instead of replacing it. To remove a default field, such as a pinned user ID on OpenShift, set it to `null`.
 * **Network policy:** with `networkPolicy.enabled: true` and no `networkPolicy.egress` rules, the policy now allows all egress. Rules you set in `networkPolicy.ingress` or `networkPolicy.egress` now take effect and replace the chart's rules.
+* **Worker probes:** chart 1.x's default worker probe command, `/bin/sh -c "pgrep -f 'n8n worker' > /dev/null"`, always passes, because `pgrep` matches its own shell. If your values file copies this command, remove it, so the probe checks the worker health endpoint. This needs `redis.healthCheck.enabled: true`, which is the default.
+* **n8n 3.0 defaults:** n8n 3.0 changes several defaults, for example a JavaScript Code node task now times out after 60 seconds instead of 300. To keep the 2.x timeout, set `N8N_RUNNERS_TASK_TIMEOUT: 300` in both `env.shared` and `env.taskRunner`, because n8n and the task runner each apply it. This also raises the timeout for Python tasks, which was already 60 seconds. For the other changed defaults, see the [n8n 3.0 breaking changes](https://app.gitbook.com/s/hhM8Cox90Piiv0u0EgHM/v30-breaking-changes).
+* **Custom task runner configuration:** if you mount your own `n8n-task-runners.json` with `taskRunners.customConfig`, add `--no-experimental-webstorage` to the JavaScript runner's arguments. A file from n8n 2.x doesn't have it.
 * **Kubernetes access:** by default, the chart no longer creates a Role or mounts a service account token in n8n's pods, because n8n doesn't call the Kubernetes API. If a container you add needs the API, set `serviceAccount.automountServiceAccountToken: true` to mount the token. If it also needs to read ConfigMaps and Secrets, set `rbac.create: true` to grant that access.
 
 For the full list, including S3 binary data, security contexts, and webhook URLs, see the chart's [upgrade guide](https://github.com/n8n-io/n8n-hosting/blob/main/charts/n8n/UPGRADING.md).
+
+## Check the upgrade to Helm chart 2.0
+
+After `helm upgrade`, check that:
+
+* Every n8n Deployment finished its rollout, and the chart's test passes. The test only calls the main Service, so wait for the rollout first, or an old main pod can answer it:
+
+    ```bash
+    kubectl rollout status deployment --selector app.kubernetes.io/instance=n8n --namespace <your-namespace>
+    helm test n8n --namespace <your-namespace>
+    ```
+
+* The URL a Webhook node shows uses your public address, not `localhost`. The same applies to OAuth callback URLs.
+* A workflow with a Code node runs. With task runners on, this checks the task runner and its token.
 
 ## Move binary data to the storage directory
 

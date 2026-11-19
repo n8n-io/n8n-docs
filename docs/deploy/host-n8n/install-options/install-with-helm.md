@@ -153,9 +153,51 @@ secretRefs:
 
 Each worker runs up to 10 executions at the same time, which is n8n's default. To change this, set `queueMode.workerConcurrency`.
 
-If Redis needs a password, store it in a Secret and reference it with `redis.passwordSecret.name` and `redis.passwordSecret.key`. For managed Redis services that require TLS, set `redis.tls: true`.
+If Redis needs a password, store it in a Secret and reference it with `redis.passwordSecret.name` and `redis.passwordSecret.key`.
 
-If PostgreSQL requires TLS, set `database.ssl.enabled: true`. If the server's certificate authority isn't publicly trusted, store its certificate in a Secret and reference it with `database.ssl.existingSecret.name` and `database.ssl.existingSecret.caKey`.
+### Connect to PostgreSQL and Redis over TLS
+
+To connect over TLS, set `database.ssl.enabled: true` for PostgreSQL and `redis.tls: true` for Redis. If a publicly trusted certificate authority (CA) signed the server's certificate, that's all you need.
+
+Managed database services and private networks often use a CA that n8n doesn't trust by default. n8n then fails to start, and logs `self-signed certificate in certificate chain`. To fix this, download your provider's CA certificate in PEM format, save it as `ca.crt`, and store it in a Secret. If your provider offers a bundle of several certificates, save the whole bundle:
+
+```bash
+kubectl create secret generic n8n-ca --namespace n8n --from-file=ca.crt=ca.crt
+```
+
+For PostgreSQL, the chart reads the CA from the Secret:
+
+```yaml
+database:
+  ssl:
+    enabled: true
+    existingSecret:
+      name: n8n-ca
+      caKey: ca.crt
+```
+
+For Redis, n8n has no CA setting of its own. Mount the Secret as a file, and point Node.js at it with `NODE_EXTRA_CA_CERTS`. n8n then trusts the CA for all its outgoing TLS connections:
+
+```yaml
+redis:
+  tls: true
+
+extraVolumes:
+  - name: n8n-ca
+    secret:
+      secretName: n8n-ca
+
+extraVolumeMounts:
+  - name: n8n-ca
+    mountPath: /etc/n8n/ca
+    readOnly: true
+
+env:
+  shared:
+    NODE_EXTRA_CA_CERTS: /etc/n8n/ca/ca.crt
+```
+
+If PostgreSQL and Redis use different certificate authorities, put each certificate in the Secret under its own key. Set `caKey` to the PostgreSQL key, and point `NODE_EXTRA_CA_CERTS` at the file for the Redis key, for example `/etc/n8n/ca/redis-ca.crt`.
 
 ### Values for standalone mode
 

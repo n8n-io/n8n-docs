@@ -82,7 +82,7 @@ Refer to [Setting up your organization](https://platform.openai.com/docs/guides/
 
 ## Using OpenAI Account
 
-OpenAI Account authentication connects n8n to a ChatGPT/OpenAI account without an API key. It's available in the OpenAI Chat Model node.
+OpenAI Account authentication connects n8n to a ChatGPT/OpenAI account without an API key. It's available in the **OpenAI Chat Model** node.
 
 1. In the OpenAI Chat Model node, set **Authentication** to **OpenAI Account**.
 2. Select **Connect**.

@@ -184,6 +184,33 @@ AI tools apply a preference to every task in its scope, so write it to hold up i
 | "Be careful with errors."                                      | "Connect every new workflow to the `Error alerts` error workflow."             |
 | "Use good names, put things in folders, and avoid Code nodes." | Three preferences: one for naming, one for folders, one for the **Code** node. |
 
+## Turn preferences on or off for your instance
+
+{% hint style="info" %}
+**Feature availability**
+
+The instance switch for preferences is available from n8n 2.50.0.
+{% endhint %}
+
+Instance owners and admins turn preferences on and off for everyone on the instance:
+
+1. Select **Settings** > **Context**.
+2. Select **Preferences**.
+3. Use the switch next to the **Preferences** title.
+
+When preferences are off:
+
+* **Settings** > **Context** shows **Disabled** for **Preferences**, and only users who can change the switch see the **Preferences** row.
+* The **Preferences** page shows **Preferences are off**.
+* n8n Assistant doesn't read or save preferences.
+* The n8n MCP server doesn't offer the preferences tools.
+
+n8n keeps saved preferences while they're off, and applies them again when you turn preferences back on.
+
+Preferences also need n8n Assistant or instance-level MCP access. If both are off, preferences stay off even with the switch on, and the **Preferences** page shows **Turn on n8n Assistant or instance-level MCP to use preferences**.
+
+To manage the switch from environment variables on a self-hosted instance, set `N8N_PREFERENCES_MANAGED_BY_ENV` to `true` and `N8N_PREFERENCES_ENABLED` to `true` or `false`. n8n applies the value on every startup and locks the switch in the UI. `N8N_PREFERENCES_ENABLED` defaults to `false`.
+
 ## Turn on preferences on a self-hosted instance
 
 Preferences are on by default. If your instance has telemetry turned off (`N8N_DIAGNOSTICS_ENABLED=false`), or can't reach n8n's feature flag service, preferences stay off.

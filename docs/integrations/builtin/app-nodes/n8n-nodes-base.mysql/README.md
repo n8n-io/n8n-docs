@@ -63,7 +63,7 @@ Enter these parameters:
 
 #### Delete options <a href="#delete-options" id="delete-options"></a>
 
-- **Connection Timeout**: The number of seconds reserved for connecting to the database. Default is 30. Overrides the **Connect Timeout** of the credential.
+- **Connection Timeout**: The number of seconds reserved for connecting to the database. The node uses the credential's **Connect Timeout** until you add this option, and 30 seconds when you do. See [How long the node waits to connect](#how-long-the-node-waits-to-connect).
 - **Connections Limit**: The maximum number of connections to the database. Default is 10. A high value can cause performance problems and can crash the database.
 - **Output Query Execution Details**: Whether to output the details of the executed query for each statement, instead of a confirmation of success. Default is off.
 - **Query Batching**: The way to send queries to the database:
@@ -83,7 +83,7 @@ Enter these parameters:
 
 #### Execute SQL options <a href="#execute-sql-options" id="execute-sql-options"></a>
 
-- **Connection Timeout**: The number of seconds reserved for connecting to the database. Default is 30. Overrides the **Connect Timeout** of the credential.
+- **Connection Timeout**: The number of seconds reserved for connecting to the database. The node uses the credential's **Connect Timeout** until you add this option, and 30 seconds when you do. See [How long the node waits to connect](#how-long-the-node-waits-to-connect).
 - **Connections Limit**: The maximum number of connections to the database. Default is 10.
 - **Output Decimals as Numbers**: Whether to output `DECIMAL` columns as numbers instead of strings. Default is off. Refer to [Decimal numbers returned as strings](common-issues.md#decimal-numbers-returned-as-strings).
 - **Output Large-Format Numbers As**: How to return `BIGINT` values. The node behaves as **Numbers** until you add this option. `DECIMAL` columns have their own option, **Output Decimals as Numbers**, and this option doesn't change them.
@@ -113,7 +113,7 @@ Enter these parameters:
 
 #### Insert options <a href="#insert-options" id="insert-options"></a>
 
-- **Connection Timeout**: The number of seconds reserved for connecting to the database. Default is 30. Overrides the **Connect Timeout** of the credential.
+- **Connection Timeout**: The number of seconds reserved for connecting to the database. The node uses the credential's **Connect Timeout** until you add this option, and 30 seconds when you do. See [How long the node waits to connect](#how-long-the-node-waits-to-connect).
 - **Connections Limit**: The maximum number of connections to the database. Default is 10.
 - **Output Query Execution Details**: Whether to output the details of the executed query for each statement, instead of a confirmation of success. Default is off.
 - **Priority**: The priority of the INSERT statement. The node sends no priority keyword until you add this option.
@@ -146,7 +146,7 @@ Enter these parameters:
 
 #### Insert or Update options <a href="#insert-or-update-options" id="insert-or-update-options"></a>
 
-- **Connection Timeout**: The number of seconds reserved for connecting to the database. Default is 30. Overrides the **Connect Timeout** of the credential.
+- **Connection Timeout**: The number of seconds reserved for connecting to the database. The node uses the credential's **Connect Timeout** until you add this option, and 30 seconds when you do. See [How long the node waits to connect](#how-long-the-node-waits-to-connect).
 - **Connections Limit**: The maximum number of connections to the database. Default is 10.
 - **Output Query Execution Details**: Whether to output the details of the executed query for each statement, instead of a confirmation of success. Default is off.
 - **Query Batching**: The way to send queries to the database:
@@ -174,7 +174,7 @@ Enter these parameters:
 
 #### Select options <a href="#select-options" id="select-options"></a>
 
-- **Connection Timeout**: The number of seconds reserved for connecting to the database. Default is 30. Overrides the **Connect Timeout** of the credential.
+- **Connection Timeout**: The number of seconds reserved for connecting to the database. The node uses the credential's **Connect Timeout** until you add this option, and 30 seconds when you do. See [How long the node waits to connect](#how-long-the-node-waits-to-connect).
 - **Connections Limit**: The maximum number of connections to the database. Default is 10.
 - **Output Columns**: Choose which columns to return. Select from the list, which starts with `*` for every column, or specify IDs using an [expression](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/expressions-versus-data-nodes). The node returns every column until you add this option. If you add the option and select no column, the node sends an incomplete query and MySQL reports a syntax error.
 - **Output Decimals as Numbers**: Whether to output `DECIMAL` columns as numbers instead of strings. Default is off. Refer to [Decimal numbers returned as strings](common-issues.md#decimal-numbers-returned-as-strings).
@@ -206,7 +206,7 @@ Enter these parameters:
 
 #### Update options <a href="#update-options" id="update-options"></a>
 
-- **Connection Timeout**: The number of seconds reserved for connecting to the database. Default is 30. Overrides the **Connect Timeout** of the credential.
+- **Connection Timeout**: The number of seconds reserved for connecting to the database. The node uses the credential's **Connect Timeout** until you add this option, and 30 seconds when you do. See [How long the node waits to connect](#how-long-the-node-waits-to-connect).
 - **Connections Limit**: The maximum number of connections to the database. Default is 10.
 - **Output Query Execution Details**: Whether to output the details of the executed query for each statement, instead of a confirmation of success. Default is off.
 - **Query Batching**: The way to send queries to the database:

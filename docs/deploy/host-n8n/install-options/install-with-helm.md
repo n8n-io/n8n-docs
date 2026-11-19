@@ -130,6 +130,14 @@ kubectl create secret generic n8n-db-secret --namespace n8n \
 	--from-literal=password="$DB_PASSWORD"
 ```
 
+If Redis requires a password, such as an auth token on a managed Redis service, create a Secret for it too:
+
+```bash
+printf "Redis password: "; read -r -s REDIS_PASSWORD; echo
+kubectl create secret generic n8n-redis-secret --namespace n8n \
+	--from-literal=password="$REDIS_PASSWORD"
+```
+
 If you don't set `secretRefs.existingSecret`, the chart creates its own Secret from `secretRefs.env.N8N_ENCRYPTION_KEY` and `secretRefs.env.N8N_RUNNERS_AUTH_TOKEN` instead. The installation fails if the encryption key still has the placeholder value from `values.yaml`, or if the token is empty. For production, keep secrets out of values files, for example with an external secrets operator.
 
 ## Create a values file for the Helm chart
@@ -168,7 +176,16 @@ secretRefs:
 
 Each worker runs up to 10 executions at the same time, which is n8n's default. To change this, set `queueMode.workerConcurrency`.
 
-If Redis needs a password, store it in a Secret and reference it with `redis.passwordSecret.name` and `redis.passwordSecret.key`.
+If Redis requires a password, reference the Secret you created in [Create the Kubernetes Secrets for n8n](#create-the-kubernetes-secrets-for-n8n):
+
+```yaml
+redis:
+  passwordSecret:
+    name: n8n-redis-secret
+    key: password
+```
+
+If your Redis uses access control lists (ACLs) with a named user, also set `redis.username`. A Redis that requires a password often requires TLS too. See [Connect to PostgreSQL and Redis over TLS](#connect-to-postgresql-and-redis-over-tls).
 
 ### Connect to PostgreSQL and Redis over TLS
 

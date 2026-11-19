@@ -31,8 +31,8 @@ To start, follow [Set up user management](manage-users/set-up-user-management.md
 ## In this section
 
 * [Manage users](manage-users/README.md): set up user management, invite users, and delete users.
-* [Set permissions and roles (RBAC)](set-permissions-and-roles-rbac/README.md): control access with instance roles, project roles, and custom roles.
 * [Organize work in projects](organize-work-in-projects/README.md): group workflows and credentials, add project members, and move work between projects.
+* [Set permissions and roles (RBAC)](set-permissions-and-roles-rbac/README.md): control access with instance roles, project roles, and custom roles.
 * [Verify user identity](verify-user-identity/README.md): require two-factor auth, or connect LDAP, SAML, or OIDC.
 * [Control node availability](control-node-availability.md): block or allow nodes for the instance or a project.
 * [Follow best practices](follow-best-practices.md): user management best practices.

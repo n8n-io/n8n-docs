@@ -12,7 +12,7 @@ Environments let you build and test changes on one n8n instance, then move them 
 n8n has two versions of this feature:
 
 - [Environments (Classic)](classic/README.md): the original source control feature. You push an instance's work to a Git branch and pull it into another instance.
-- [Environments (Preview)](preview/README.md): the newer version, in Preview. You promote changes from one instance to an environment, and the instance for that environment applies them. Environments (Preview) replace Environments (Classic).
+- [Environments (Preview)](environments/README.md): the newer version, in Preview. You promote changes from one instance to an environment, and the instance for that environment applies them. Environments (Preview) replace Environments (Classic).
 
 An instance uses one version or the other, never both.
 
@@ -20,7 +20,7 @@ An instance uses one version or the other, never both.
 
 * [Git concepts for environments](git-concepts.md): the Git and source control terms both versions use, and how each version uses Git.
 * [Environments (Classic)](classic/README.md): set up and use push-and-pull source control between n8n instances.
-* [Environments (Preview)](preview/README.md): plan environments, promote and apply changes, review promotions, and protect a production instance.
+* [Environments (Preview)](environments/README.md): plan environments, promote and apply changes, review promotions, and protect a production instance.
 
 ## Find out which version your instance uses
 
@@ -29,9 +29,9 @@ In n8n, go to **Settings** and look at the menu entry:
 | Menu entry | Version |
 |---|---|
 | **Environments (Classic)** | [Environments (Classic)](classic/README.md) |
-| **Environments** | [Environments (Preview)](preview/README.md) |
+| **Environments** | [Environments (Preview)](environments/README.md) |
 
-On an instance that uses Classic, the **Environments (Classic)** page has an **Upgrade** button. To compare the two versions, migrate, or switch back, see [Upgrade from Environments (Classic)](preview/upgrade-from-environments-classic.md).
+On an instance that uses Classic, the **Environments (Classic)** page has an **Upgrade** button. To compare the two versions, migrate, or switch back, see [Upgrade from Environments (Classic)](environments/upgrade-from-environments-classic.md).
 
 ## Concepts for both versions
 
@@ -69,7 +69,7 @@ Source control and environments are closely related but not the same thing:
 Both versions of environments work this way, but they use different words for it:
 
 - Environments (Classic) calls it source control. You push work from an instance to Git and pull it from Git into an instance. The term still appears in page names, in the `source-control` endpoints of the public API, and in self-hosted configuration.
-- Environments (Preview) doesn't use the term. It moves work with promote and apply, and calls its use of Git [Git-based promotion](preview/git-based-promotion/README.md).
+- Environments (Preview) doesn't use the term. It moves work with promote and apply, and calls its use of Git [Git-based promotion](environments/git-based-promotion/README.md).
 
 n8n uses only part of Git's functionality, so don't treat source control in n8n as full version control.
 
@@ -77,7 +77,7 @@ n8n uses only part of Git's functionality, so don't treat source control in n8n 
 
 Both versions use Git to move work between instances, and you work with the Git host to set up the repository and branches. For the Git concepts n8n uses, such as branches, remotes, and pull or merge requests, and for how each version uses Git, see [Git concepts for environments](git-concepts.md).
 
-For how to arrange instances and branches, see [Choose branching patterns](classic/choose-branching-patterns.md) for Classic and [Plan your environments](preview/plan-your-environments.md) for Preview.
+For how to arrange instances and branches, see [Choose branching patterns](classic/choose-branching-patterns.md) for Classic and [Plan your environments](environments/plan-your-environments.md) for Preview.
 
 ### Credential secrets stay out of Git
 
@@ -88,5 +88,5 @@ Variables differ. Environments (Classic) writes variable stubs without values. E
 ## Related resources
 
 - [Environments (Classic)](classic/README.md)
-- [Environments (Preview)](preview/README.md)
-- [Upgrade from Environments (Classic)](preview/upgrade-from-environments-classic.md)
+- [Environments (Preview)](environments/README.md)
+- [Upgrade from Environments (Classic)](environments/upgrade-from-environments-classic.md)

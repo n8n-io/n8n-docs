@@ -13,18 +13,18 @@ The GitLab provider connects an environment to a repository on GitLab.com or a s
 {% hint style="info" %}
 **Feature availability**
 
-Environments are available on:
+Environments (Preview) are available on:
 
 - **n8n Cloud:** Enterprise
 - **Self-hosted:** Enterprise
 
-Environments are available from n8n 2.47.0.
+Environments (Preview) are available from n8n 2.47.0.
 {% endhint %}
 
 {% hint style="info" %}
 **Preview status**
 
-Environments are in Preview and may change in future releases. Avoid relying on them in production workflows.
+This version of Environments is in Preview and may change in future releases. Try it on test instances before you set it up for your production instances.
 {% endhint %}
 
 ## What GitLab supports

@@ -277,7 +277,7 @@ To use a secret from your store in an n8n credential:
 
 ## Using external secrets with n8n environments <a href="#using-external-secrets-with-n8n-environments" id="using-external-secrets-with-n8n-environments"></a>
 
-n8n's [Source control and environments](../use-source-control-and-environments/classic/README.md) feature allows you to create different n8n environments, backed by Git. The feature doesn't support using different credentials in different instances. You can use an external secrets vault to provide different credentials for different environments by connecting each n8n instance to a different vault or project environment.
+n8n lets you create different environments, backed by Git. Refer to [Use source control and environments](../use-source-control-and-environments/README.md) for the two versions of the feature. Neither version syncs credential secrets, so each instance needs its own credential values. To avoid entering them by hand on every instance, use an external secrets vault. Credential fields that use expressions travel with the workflows, and each instance resolves them from its own vault. Connect each n8n instance to a different vault or project environment to provide different credentials for different environments.
 
 For example, you have two n8n instances, one for development and one for production. In your secrets provider, create a project with two environments, development and production. Generate a token for each environment of your secrets provider. Use the token for the development environment to connect your development n8n instance, and the token for your production environment to connect your production n8n instance.
 

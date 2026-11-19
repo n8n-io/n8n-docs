@@ -13,18 +13,18 @@ Promote sends workflows and their dependencies from your instance to the environ
 {% hint style="info" %}
 **Feature availability**
 
-Environments are available on:
+Environments (Preview) are available on:
 
 - **n8n Cloud:** Enterprise
 - **Self-hosted:** Enterprise
 
-Environments are available from n8n 2.47.0.
+Environments (Preview) are available from n8n 2.47.0.
 {% endhint %}
 
 {% hint style="info" %}
 **Preview status**
 
-Environments are in Preview and may change in future releases. Avoid relying on them in production workflows.
+This version of Environments is in Preview and may change in future releases. Try it on test instances before you set it up for your production instances.
 {% endhint %}
 
 Before you start, add the environment this instance promotes changes to. See [Plan your environments](plan-your-environments.md).

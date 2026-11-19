@@ -108,7 +108,7 @@ Your browser stores this preference for that workflow. It isn't saved on the wor
 A review detail has two tabs:
 
 * **Activity**: description, activity feed, and comments. Comments stay visible after the review closes. Comments aren't anchored to a specific node in this release.
-* **Changes**: a visual workflow diff between the currently **Published** version and the version **In review**. The diff works like [workflow diffs for source control](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/use-source-control-and-environments/classic/compare-versions).
+* **Changes**: a visual workflow diff between the currently **Published** version and the version **In review**. The diff works like [workflow diffs for source control in Environments (Classic)](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/use-source-control-and-environments/classic/compare-versions).
 
 People who can open the review can comment on **Activity** without deciding. To decide, the assigned reviewer, or a project admin or instance admin, can choose:
 
@@ -146,6 +146,6 @@ You can't currently cancel or withdraw an open review. n8n plans to add this fun
 * [n8n packages](n8n-packages/README.md)
 * [Share with others](share-with-others.md)
 * [Save and publish workflows](../understand-workflows/save-and-publish-workflows.md)
-* [Compare changes with workflow diffs](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/use-source-control-and-environments/classic/compare-versions)
+* [Compare changes with workflow diffs in Environment (Classic)](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/use-source-control-and-environments/classic/compare-versions)
 * [Manage security policies](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/manage-security-policies)
 * [See available roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles)

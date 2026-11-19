@@ -28,7 +28,7 @@ Environments (Classic) are available on:
 {% hint style="info" %}
 **Environments (Preview) are also available**
 
-This page is about Environments (Classic). A newer version of Environments is also available in Preview for Enterprise plans. It adds protection for production instances and, with GitLab, promotion reviews with a visual diff of changes. See [Environments (Preview)](../preview/README.md).
+This page is about Environments (Classic). A newer version of Environments is also available in Preview for Enterprise plans. It adds protection for production instances and, with GitLab, promotion reviews with a visual diff of changes. See [Environments (Preview)](../environments/README.md).
 {% endhint %}
 
 n8n doesn't implement all Git functionality: you shouldn't view n8n's source control as full version control.
@@ -36,7 +36,7 @@ n8n doesn't implement all Git functionality: you shouldn't view n8n's source con
 {% hint style="info" %}
 **Familiar with Git and source control?**
 
-If you're familiar with Git, don't rely on behaviors matching exactly. In particular, be aware that Environments (Classic) doesn't support a pull request-style review and merge process, unless you do this outside n8n in your Git provider. Environments (Preview) adds [promotion reviews](../preview/promotion-reviews.md) with GitLab.
+If you're familiar with Git, don't rely on behaviors matching exactly. In particular, be aware that Environments (Classic) doesn't support a pull request-style review and merge process, unless you do this outside n8n in your Git provider. Environments (Preview) adds [promotion reviews](../environments/promotion-reviews.md) with GitLab.
 {% endhint %}
 
 You should have some familiarity with Git and with your Git hosting provider before you [set up source control](set-up-source-control.md).

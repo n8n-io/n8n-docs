@@ -1,5 +1,5 @@
 ---
-title: Choose branching patterns
+title: Branch patterns
 description: >-
   Understand the different relationships between n8n instances and Git branches
   that are possible with Environments (Classic).
@@ -14,7 +14,7 @@ layout:
     visible: false
 ---
 
-# Choose branching patterns <a href="#branch-patterns" id="branch-patterns"></a>
+# Branch patterns <a href="#branch-patterns" id="branch-patterns"></a>
 
 In Environments (Classic), the relationship between n8n instances and Git branches is flexible. You can create different setups depending on your needs.
 
@@ -30,7 +30,7 @@ Environments (Classic) are available on:
 {% hint style="info" %}
 **Environments (Preview) are also available**
 
-This page is about Environments (Classic). A newer version of Environments is also available in Preview for Enterprise plans. It adds protection for production instances and, with GitLab, promotion reviews with a visual diff of changes. See [Environments (Preview)](../preview/README.md).
+This page is about Environments (Classic). A newer version of Environments is also available in Preview for Enterprise plans. It adds protection for production instances and, with GitLab, promotion reviews with a visual diff of changes. See [Environments (Preview)](../environments/README.md).
 {% endhint %}
 
 

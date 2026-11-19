@@ -58,10 +58,10 @@ The two versions use different terms for moving work to and from Git, and they d
 
 An environment can commit promoted changes directly to its branch. Or it can push each promote to a feature branch named `n8n-promotion/<timestamp>`, based on its branch. Instances that apply from the environment read its branch, so they see changes from a feature branch only after someone merges it. n8n never force-pushes.
 
-See [Git-based promotion](preview/git-based-promotion/README.md) for how Environments (Preview) use repositories, branches, and Git providers. See [Use Git in n8n](classic/use-git-in-n8n.md) for how Environments (Classic) push, pull, and commit.
+See [Git-based promotion](environments/git-based-promotion/README.md) for how Environments (Preview) use repositories, branches, and Git providers. See [Use Git in n8n](classic/use-git-in-n8n.md) for how Environments (Classic) push, pull, and commit.
 
 ## Related resources
 
 - [Use source control and environments](./)
 - [Environments (Classic)](classic/README.md)
-- [Environments (Preview)](preview/README.md)
+- [Environments (Preview)](environments/README.md)

@@ -498,7 +498,7 @@ The hook gives you four functions. You pass each one a function of your own, cal
 | Function | What it does |
 | :------- | :----------- |
 | `registerResourceAttributeMapper` | Adds resource attributes to each exported span. n8n keeps its own value for `service.name`, `service.version`, `n8n.instance.id`, and `n8n.instance.role`. |
-| `registerOutboundBaggageMapper` | Adds entries to the `baggage` header on outbound requests. You need [outbound trace headers](#outbound-trace-headers) turned on. |
+| `registerOutboundBaggageMapper` | Adds entries to the `baggage` header on outbound requests. You need [outbound trace headers](#outbound-trace-headers) turned on and `baggage` included in `OTEL_PROPAGATORS`. |
 | `dangerouslyOverrideResourceAttributes` | From n8n 2.49.0. Replaces resource attributes that n8n sets, such as `service.name`. |
 | `dangerouslyOverrideSpanAttributes` | From n8n 2.49.0. Replaces attributes on each exported span, such as `gen_ai.agent.id`. Return `{}` for spans you don't want to change. |
 
@@ -605,7 +605,7 @@ Workflow and node spans include the following n8n-specific attributes.
 | `n8n.node.termination_reason` | Why a node span ended without a normal completion (for example, `workflow_cancelled` or `workflow_crashed`). |
 | `n8n.node.custom.<key>` | Custom attributes set through [node-level custom span attributes](#custom-span-attributes) in the node settings or `metadata.tracing` in custom node code. |
 
-From n8n 2.44.0, node spans also carry `n8n.execution.id`, `n8n.workflow.id`, `n8n.workflow.name`, `n8n.project.id`, and `n8n.project.name`, with the same values as their workflow span. To find every span of one execution in Jaeger, search for the tag `n8n.execution.id=<execution-id>`.
+Node spans also carry `n8n.project.id` from n8n 2.42.0, and `n8n.execution.id`, `n8n.workflow.id`, `n8n.workflow.name`, and `n8n.project.name` from n8n 2.44.0, with the same values as their workflow span. To find every span of one execution in Jaeger, search for the tag `n8n.execution.id=<execution-id>`.
 
 When a node fails, n8n records an `exception` event on the span with the standard OpenTelemetry exception attributes (`exception.type`, `exception.message`, `exception.stacktrace`).
 

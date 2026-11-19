@@ -66,7 +66,7 @@ The core Secret holds these keys:
 
 * `N8N_ENCRYPTION_KEY`: the key n8n uses to encrypt stored credentials.
 * `N8N_RUNNERS_AUTH_TOKEN`: the token task runners use to authenticate with n8n. The chart requires it while task runners are on, which is the default.
-* `N8N_LICENSE_ACTIVATION_KEY`: optional. Your license key, for the self-hosted Business and Enterprise plans. Leave it out for the Community and Registered Community plans.
+* `N8N_LICENSE_ACTIVATION_KEY`: optional. Your license key, if you have one: the free key for the Registered Community edition, or the key for the Business or Enterprise plan. Leave it out for the Community edition without registration.
 
 The chart reads these keys by name and ignores any other keys in the Secret. It doesn't read n8n's host, port, or protocol from the Secret. It sets the port from `service.port`, and builds n8n's public URLs from your Ingress or route, as described in [Set n8n's public URLs with the Helm chart](#set-n8ns-public-urls-with-the-helm-chart).
 
@@ -83,10 +83,10 @@ echo "$N8N_ENCRYPTION_KEY"
 n8n encrypts stored credentials with `N8N_ENCRYPTION_KEY`. Without the same key, n8n can't decrypt credentials after a reinstall, a restore, or the loss of the cluster. For more information, see [Back up and restore](../keep-n8n-running/backup-and-restore.md).
 {% endhint %}
 
-Then create the core Secret for your plan. The command generates the task runner token inline. You don't need a copy of the token: to change it later, update the Secret and restart the n8n Deployments with `kubectl rollout restart deployment --namespace n8n`.
+Then create the core Secret. The command generates the task runner token inline. You don't need a copy of the token: to change it later, update the Secret and restart the n8n Deployments with `kubectl rollout restart deployment --selector app.kubernetes.io/instance=n8n --namespace n8n`.
 
 {% tabs %}
-{% tab title="Community" %}
+{% tab title="Without a license key" %}
 ```bash
 kubectl create secret generic n8n-core-secrets --namespace n8n \
 	--from-literal=N8N_ENCRYPTION_KEY="$N8N_ENCRYPTION_KEY" \
@@ -94,7 +94,7 @@ kubectl create secret generic n8n-core-secrets --namespace n8n \
 ```
 {% endtab %}
 
-{% tab title="Business or Enterprise" %}
+{% tab title="With a license key" %}
 ```bash
 read -r -s -p "n8n license key: " N8N_LICENSE_ACTIVATION_KEY
 kubectl create secret generic n8n-core-secrets --namespace n8n \
@@ -185,7 +185,7 @@ With a `ReadWriteOnce` volume, which is the default, the chart replaces the main
 
 ### Add your license to the values file
 
-For the Business and Enterprise plans, add this block to `values.yaml`. It tells the chart to read the license key from the core Secret. For the Community and Registered Community plans, leave it out.
+If you added a license key to the core Secret, add this block to `values.yaml`. It tells the chart to read the license key from the core Secret. For the Community edition without registration, leave it out.
 
 ```yaml
 license:
@@ -195,7 +195,7 @@ license:
     key: N8N_LICENSE_ACTIVATION_KEY
 ```
 
-n8n activates the license key on first start. Once the instance has an activated license, the key has no effect. To activate a license in the UI instead, or to use a license certificate, see [Manage your license](../configure-n8n/manage-your-license.md).
+n8n activates the license key on first start. Once the instance has an activated license, the key has no effect. To register the Community edition or activate a license in the UI after you install instead, or to use a license certificate, see [Manage your license](../configure-n8n/manage-your-license.md).
 
 ### Set environment variables in the values file
 

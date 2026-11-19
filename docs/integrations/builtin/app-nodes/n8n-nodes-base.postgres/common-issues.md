@@ -102,7 +102,11 @@ SELECT TO_CHAR(ts_col, 'YYYY-MM-DD"T"HH24:MI:SS.US') AS ts_col_as_text FROM tabl
 {% hint style="info" %}
 **The CrateDB, QuestDB, and TimescaleDB nodes**
 
-These three nodes share the Postgres date handling but keep the older timestamp reading. From node version 1.1 they return a `DATE` as `YYYY-MM-DD` and a `timestamp without time zone` as a UTC instant, as Postgres node versions 2.7 and 2.8 do. To get the stored value, cast the column at query time with `SELECT ts_col::text AS ts_col_as_text FROM table_with_ts_col`.
+These three nodes share the Postgres date handling. From node version 1.1 they return a `DATE` as `YYYY-MM-DD`.
+
+TimescaleDB returns a `timestamp without time zone` as the stored value from node version 1.3. On 1.1 and 1.2 it returns a UTC instant, as Postgres node versions 2.7 and 2.8 do.
+
+CrateDB and QuestDB keep the UTC instant on every version. Both engines store and send the value in UTC, so the offset is real rather than invented. To get the stored value on those two, or on TimescaleDB below 1.3, cast the column at query time with `SELECT ts_col::text AS ts_col_as_text FROM table_with_ts_col`.
 {% endhint %}
 
 ### A DATE column before node 2.7

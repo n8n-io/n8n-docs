@@ -38,5 +38,8 @@ If SSO is your authentication method, your identity provider manages your users 
 ## Related resources
 
 * [Manage users and access](../)
-* [Understand instance roles](../set-permissions-and-roles-rbac/understand-instance-roles.md)
+* [Organize work in projects](../organize-work-in-projects/README.md)
+* [Set permissions and roles (RBAC)](../set-permissions-and-roles-rbac/README.md)
 * [Verify user identity](../verify-user-identity/README.md)
+* [Control node availability](../control-node-availability.md)
+* [Follow best practices](../follow-best-practices.md)

@@ -164,7 +164,7 @@ These events integrate with your existing log streaming destinations (syslog, we
 
 ## Permission scopes <a href="#permission-scopes" id="permission-scopes"></a>
 
-Execution data redaction introduces the following permission scopes that you can assign through [custom project roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac):
+Execution data redaction introduces the following permission scopes that you can assign through [custom project roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-project-roles):
 
 | Scope                       | Purpose                                                                                                                  |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------------ |

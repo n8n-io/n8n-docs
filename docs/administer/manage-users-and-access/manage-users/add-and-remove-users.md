@@ -34,8 +34,8 @@ Click the menu icon by the user, then click **Resend invite**.
 1. Open the **three-dot menu** for the user you want to delete and select **Delete user**.
 2. Confirm you want to delete them.
 3. If they're an active user, n8n asks what should happen to their data. Choose one of the following:
-   * **Transfer their workflows, credentials and data tables to another user or project**: n8n prompts you to choose the user or project to move the data to.
-   * **Delete their workflows, credentials and data tables**: n8n permanently deletes the data.
+   * **Transfer their workflows, credentials, and data tables to another user or project**: n8n prompts you to choose the user or project to move the data to.
+   * **Delete their workflows, credentials, and data tables**: n8n permanently deletes the data.
 
 {% hint style="warning" %}
 **Deleting a user with the API**

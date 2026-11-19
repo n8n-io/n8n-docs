@@ -20,7 +20,15 @@ n8n maintains the chart in the [n8n-hosting repository](https://github.com/n8n-i
 * For standalone mode with SQLite, a StorageClass that can provision the PersistentVolumeClaim for the database.
 * To reach n8n from outside the cluster, an Ingress controller, or a Gateway API implementation with a Gateway.
 
-Run every command on this page against the same cluster and namespace. The chart reads the Secrets you create from the namespace you install it into.
+## Create a namespace for n8n
+
+n8n recommends installing n8n in a namespace of its own. This keeps n8n's Secrets and ConfigMaps apart from other workloads, so you can limit who can read them. This page uses the namespace `n8n`:
+
+```bash
+kubectl create namespace n8n
+```
+
+The chart reads the Secrets you create from the namespace you install it into, so run every command on this page against the same namespace. If you choose another name, replace `n8n` in each `--namespace` option.
 
 ## Choose a deployment mode for the Helm chart
 
@@ -74,10 +82,10 @@ echo "$N8N_ENCRYPTION_KEY"
 n8n encrypts stored credentials with `N8N_ENCRYPTION_KEY`. Without the same key, n8n can't decrypt credentials after a reinstall, a restore, or the loss of the cluster. For more information, see [Back up and restore](../keep-n8n-running/backup-and-restore.md).
 {% endhint %}
 
-Then create the core Secret. The command generates the task runner token inline. You don't need a copy of the token: to change it later, update the Secret and restart the n8n Deployments with `kubectl rollout restart`.
+Then create the core Secret. The command generates the task runner token inline. You don't need a copy of the token: to change it later, update the Secret and restart the n8n Deployments with `kubectl rollout restart deployment --namespace n8n`.
 
 ```bash
-kubectl create secret generic n8n-core-secrets \
+kubectl create secret generic n8n-core-secrets --namespace n8n \
 	--from-literal=N8N_ENCRYPTION_KEY="$N8N_ENCRYPTION_KEY" \
 	--from-literal=N8N_RUNNERS_AUTH_TOKEN="$(openssl rand -base64 32)"
 ```
@@ -86,7 +94,7 @@ In queue mode, also create a Secret for the PostgreSQL password. Reading the pas
 
 ```bash
 read -r -s -p "PostgreSQL password: " DB_PASSWORD
-kubectl create secret generic n8n-db-secret \
+kubectl create secret generic n8n-db-secret --namespace n8n \
 	--from-literal=password="$DB_PASSWORD"
 ```
 
@@ -225,7 +233,7 @@ httpRoute:
     - <your-n8n-domain>
 ```
 
-The chart never creates the Gateway, and you configure TLS on the Gateway's listener. If the Gateway runs in another namespace, set the listener's `allowedRoutes` to accept routes from the namespace you install n8n into. By default, a listener only accepts routes from its own namespace. Install the Gateway API custom resource definitions before you install the chart. Use the route or the Ingress, not both: the installation fails if you enable both. For complete examples, see [Gateway API](https://github.com/n8n-io/n8n-hosting/blob/main/charts/n8n/README.md#gateway-api) in the chart's README.
+The chart never creates the Gateway, and you configure TLS on the Gateway's listener. If the Gateway runs in another namespace, set the listener's `allowedRoutes` to accept routes from the `n8n` namespace. By default, a listener only accepts routes from its own namespace. Install the Gateway API custom resource definitions before you install the chart. Use the route or the Ingress, not both: the installation fails if you enable both. For complete examples, see [Gateway API](https://github.com/n8n-io/n8n-hosting/blob/main/charts/n8n/README.md#gateway-api) in the chart's README.
 
 ### Set n8n's public URLs with the Helm chart
 
@@ -285,6 +293,7 @@ To check your values file before you install, render the chart locally. Replace 
 
 ```bash
 helm template n8n oci://ghcr.io/n8n-io/n8n-helm-chart/n8n \
+	--namespace n8n \
 	--version "<chart-version>" \
 	-f values.yaml > /dev/null
 ```
@@ -293,6 +302,7 @@ Then install the chart with your values file:
 
 ```bash
 helm install n8n oci://ghcr.io/n8n-io/n8n-helm-chart/n8n \
+	--namespace n8n \
 	--version "<chart-version>" \
 	-f values.yaml
 ```
@@ -300,7 +310,7 @@ helm install n8n oci://ghcr.io/n8n-io/n8n-helm-chart/n8n \
 Check that the pods start:
 
 ```bash
-kubectl get pods
+kubectl get pods --namespace n8n
 ```
 
 In queue mode with task runners on, which is the default, each worker pod runs two containers: n8n and the task runner sidecar. With `taskRunners.enabled: false`, each worker pod runs only the n8n container.
@@ -329,11 +339,12 @@ Before you upgrade, take a full backup and check the [chart releases](https://gi
 
 ```bash
 helm upgrade n8n oci://ghcr.io/n8n-io/n8n-helm-chart/n8n \
+	--namespace n8n \
 	--version "<new-chart-version>" \
 	-f values.yaml
 ```
 
-Pass your values file with `-f` instead of `--reuse-values`. `--reuse-values` keeps the defaults of the chart version you installed, which can conflict with the new version. If you no longer have your values file, `helm get values n8n -o yaml` prints the values you set.
+Pass your values file with `-f` instead of `--reuse-values`. `--reuse-values` keeps the defaults of the chart version you installed, which can conflict with the new version. If you no longer have your values file, `helm get values n8n --namespace n8n -o yaml` prints the values you set.
 
 A Helm rollback reapplies the previous release's Kubernetes manifests. It doesn't reverse database changes that the newer n8n version made. To recover the database, restore your backup. See [Back up and restore](../keep-n8n-running/backup-and-restore.md).
 

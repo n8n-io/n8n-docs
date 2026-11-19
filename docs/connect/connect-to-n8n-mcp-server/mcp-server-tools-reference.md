@@ -2378,6 +2378,8 @@ Preferences are part of agentic context management, which is in Preview and may 
 
 From n8n 2.48.0, the preferences tools no longer depend on the `111_context_preferences` feature flag. n8n registers them on every instance, including self-hosted instances with telemetry turned off, and offers their OAuth scopes on the consent screen. A client still needs the matching scope to use each tool.
 
+From n8n 2.50.0, an instance setting turns preferences on and off for the whole instance. When preferences are off, n8n doesn't register `get_user_preferences`, `save_user_preference`, `update_user_preference`, or `undo_user_preference`. The server instructions also stop telling clients to call `get_user_preferences`.
+
 In earlier versions, the tools are on by default but stay off on a self-hosted instance with telemetry turned off (`N8N_DIAGNOSTICS_ENABLED=false`), or one that can't reach n8n's feature flag service. To turn them on in those versions, set `N8N_FEATURE_FLAG_OVERRIDES` to `{"111_context_preferences":"variant"}`, preserving any other entries in the JSON object, then restart n8n. The value must be the string `"variant"`, not `true`. With preferences off, n8n doesn't register these tools and doesn't offer their OAuth scopes on the consent screen.
 {% endhint %}
 

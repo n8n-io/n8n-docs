@@ -173,16 +173,16 @@ If both directories exist on the first start, n8n can't tell which one holds you
     kubectl apply -f n8n-storage-fix.yaml --namespace <your-namespace>
     kubectl wait pod/n8n-storage-fix --for=condition=Ready --namespace <your-namespace>
     kubectl exec n8n-storage-fix --namespace <your-namespace> -- sh -c \
-    	'cd /data/binaryData && tar cf - . | (cd /data/storage && tar xkf -); diff -r /data/binaryData /data/storage | grep -v "^Only in /data/storage" || echo "No differences"'
+    	'cd /data/binaryData && tar cf - . | (cd /data/storage && tar xkf -); diff -r /data/binaryData /data/storage > /tmp/d; rc=$?; grep -v "^Only in /data/storage" /tmp/d > /tmp/c; if [ "$rc" -gt 1 ]; then echo "Comparison failed."; elif [ -s /tmp/c ]; then cat /tmp/c; else echo "No differences"; fi'
     ```
 
-    If the output ends with `No differences`, `storage` holds every file from `binaryData`. Otherwise, the output lists files that exist in both directories with different contents. For each one, copy the version you want to keep into `storage`, then run the command again until it prints `No differences`.
+    If the output ends with `No differences`, `storage` holds every file from `binaryData`. If it lists files, they exist in both directories with different contents. For each one, copy the version you want to keep into `storage`, then run the command again until it prints `No differences`. If it prints `Comparison failed`, fix the error it shows first, for example a file the Pod's user can't read.
 
-5. Remove `binaryData`, delete the Pod, and start the main Deployment again. The first command checks again, and only removes `binaryData` if no differences remain. Use your previous number of main replicas, which is `1` unless you run several main pods:
+5. Remove `binaryData`, delete the Pod, and start the main Deployment again. The first command compares the directories again, and only removes `binaryData` if the comparison succeeds and finds no differences. Use your previous number of main replicas, which is `1` unless you run several main pods:
 
     ```bash
     kubectl exec n8n-storage-fix --namespace <your-namespace> -- sh -c \
-    	'diff -r /data/binaryData /data/storage | grep -v "^Only in /data/storage" | grep -q . && echo "Differences remain. binaryData not removed." || rm -rf /data/binaryData'
+    	'diff -r /data/binaryData /data/storage > /tmp/d; rc=$?; grep -v "^Only in /data/storage" /tmp/d > /tmp/c; if [ "$rc" -gt 1 ]; then echo "Comparison failed. binaryData not removed."; elif [ -s /tmp/c ]; then echo "Differences remain. binaryData not removed."; else rm -rf /data/binaryData && echo "binaryData removed."; fi'
     kubectl delete pod/n8n-storage-fix --namespace <your-namespace>
     kubectl scale deployment/n8n-main --replicas=1 --namespace <your-namespace>
     ```

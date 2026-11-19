@@ -71,6 +71,8 @@ CREATE DATABASE n8n OWNER n8n;
 
 Make the n8n user the owner of the database. From PostgreSQL 15, only the database owner can create tables in the `public` schema by default. The user and database names must match `database.user` and `database.database` in your values file. You store the password in a Secret in the next section.
 
+Managed PostgreSQL services often let you create the database when you create the server, for example with an initial database name. In that case, skip these commands, and use the database name and user you set there.
+
 ## Create the Kubernetes Secrets for n8n
 
 The chart reads n8n's encryption key, the task runner token, and passwords from Kubernetes Secrets that you create before you install.

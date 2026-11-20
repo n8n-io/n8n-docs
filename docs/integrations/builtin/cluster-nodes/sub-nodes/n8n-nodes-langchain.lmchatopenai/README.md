@@ -163,6 +163,8 @@ Refer to [LangChain's OpenAI documentation](https://docs.langchain.com/oss/javas
 
 Refer to [OpenAI documentation](https://platform.openai.com/docs/api-reference/responses/create) for more information about the parameters.
 
+To reach an OpenAI-compatible gateway or proxy rather than OpenAI itself, use the [Custom Endpoint Chat Model](../n8n-nodes-langchain.lmchatcustomendpoint.md) node, which supports login methods this node can't send.
+
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/mjXhKRIw98UJ5hk9LWBl/" %}
 
 ## Common issues <a href="#common-issues" id="common-issues"></a>

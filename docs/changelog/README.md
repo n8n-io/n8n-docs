@@ -76,6 +76,28 @@ Both variables are now deprecated, and n8n logs a warning at startup if you set 
 
 Poll triggers and system tasks stay on their current schedulers. Learn more in the [durable scheduler documentation](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/durable-scheduler).
 
+## Promote selected workflows between instances through Git
+
+**Released:** 2026-11-03 in [n8n 3.1](release-notes.md#n8n31)
+
+You can now move workflows, credentials, variables, data table schemas, folders, tags, and projects from one n8n instance to the next through a Git repository, choosing exactly what to promote and reviewing every change before it lands. This is the second generation of Environments, appearing in the product as Environments, with the previous feature becoming Environments (Classic).
+
+Each instance belongs to one environment and promotes to the next. On the source, open a team project, select the workflows you want to promote, and inspect each change marked New, Modified, Renamed, Moved, Archived, or Deleted. A canvas diff shows what changed before you commit. On the target, incoming changes appear with a Blockers tab that lists missing credentials, missing variables, access gaps, and conflicts. Missing credentials and variables are created once on the target during Apply and stay there across future promotions. Secrets in credentials never travel to the repository. Changes that would remove or retype data table columns, or delete entire projects, require an explicit confirmation before Apply proceeds. You can also promote and apply at the instance level to seed a new instance or bring it fully in line with the branch.
+
+To get started, go to Settings > Environments on the source instance and add a promote environment pointing to a Git repository and branch. On the target, add an apply environment pointing to the same repository and branch. n8n supports Generic Git (any host, over SSH or HTTPS) and GitLab (with a native merge request flow reviewed inside n8n). Only instance owners and instance admins can set up environments, promote, apply, and review. Instances already on Environments (Classic) can upgrade from Settings > Environments (Classic) and switch back while Environments is in Preview.
+
+Learn more in the [Git-Based Promotion documentation](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/~/revisions/ATueQ6hK4tUYtVKSRZAm/environments).
+
+{% hint style="warning" %}
+**Preview feature**
+
+Git-Based Promotion is in preview on Enterprise. Behavior and APIs may change before general availability. Test on non-production instances before upgrading a production setup.
+{% endhint %}
+
+{% hint style="info" %}
+**Availability:** Enterprise.
+{% endhint %}
+
 ## Control which nodes users can add and run, per instance or per project
 
 **Released:** 2026-10-13 in [n8n 2.44](release-notes.md#n8n244)

@@ -45,8 +45,8 @@ To configure this credential, you'll need:
     - **Allow**: Connect over SSL.
     - **Disable**: Connect without SSL.
     - **Require**: Connect over SSL.
-- A **CA Certificate**: Optional. Enter the PEM-encoded certificate authority that signed the server's certificate. Use this when your QuestDB presents a certificate that a public certificate authority didn't sign. This field appears when **SSL** is **Allow** or **Require**.
-- **Ignore SSL Issues (Insecure)**: Optional. If turned on, n8n keeps the connection encrypted but doesn't check the server's certificate. This field appears when **SSL** is **Allow** or **Require**.
+- A **CA Certificate**: Optional. Enter the PEM-encoded certificate authority that signed the server's certificate. Use this when your QuestDB presents a certificate that a public certificate authority didn't sign. This replaces the system certificate authorities rather than adding to them, so include every authority in the server's chain. This field appears when **SSL** is **Allow** or **Require**.
+- **Ignore SSL Issues (Insecure)**: Optional. If turned on, n8n keeps the connection encrypted but doesn't check the server's certificate. You can't use this together with a **CA Certificate**, because skipping the check would ignore the certificate authority you supplied. This field appears when **SSL** is **Allow** or **Require**.
 - The **Port**: Enter the port number to use for the connection. Default is `8812`.
 
 QuestDB supports SSL on its PostgreSQL endpoint in QuestDB Enterprise and QuestDB Cloud only. Refer to [TLS](https://questdb.io/docs/operations/tls/) and the [List of supported connection properties](https://questdb.io/docs/reference/api/postgres/#list-of-supported-connection-properties) for more information.

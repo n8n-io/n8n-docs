@@ -7,7 +7,7 @@ layout:
 
 # Deploy to Azure with Terraform
 
-Deploy a production-grade, highly available n8n instance on Azure using the official Terraform module.
+Deploy n8n in queue mode on Azure Kubernetes Service using the official Terraform module.
 
 [terraform-azurerm-n8n](https://github.com/n8n-io/terraform-azurerm-n8n) is a Terraform module that deploys a production-grade n8n instance to Azure. It provisions AKS clusters running n8n's main, webhook, and worker pods, with managed PostgreSQL (PostgreSQL Flexible Server), Redis (Azure Managed Redis), and Azure Blob Storage for binary data. Application Gateway, Key Vault, and Azure DNS handle ingress, certificates, and name resolution.
 

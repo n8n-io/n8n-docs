@@ -21,6 +21,20 @@ cache = true
 # Discard all cached requests older than this duration.
 max_cache_age = "2d"
 
+# Cache successes only (DOC-2615). lychee also uses the cache inside a single run: once a
+# URL fails, every later occurrence of it in that run is reported as "Error (cached)"
+# without a new request. On 2026-11-16 that turned one failed request to emelia.io into
+# two dead links. Excluding every status except 200 and 429 (our `accept` list) means a
+# failed status is checked again on its next occurrence.
+#
+# Limit, as of lychee 0.18.1 (the version lychee-action v2.3.0 installs): this setting
+# matches HTTP status codes only. A failure with no status code at all (DNS, TLS,
+# connection reset: lychee's "Network error") is still cached, for the rest of the run
+# and in a local .lycheecache file. lychee has no setting for that. CI keeps no cache
+# file between runs, so there it only lasts one run. The DocOps side (DOC-2614) handles
+# it by calling a link dead only after it fails on two weekly runs.
+cache_exclude_status = "100..=199, 201..=428, 430..=999"
+
 #############################  Runtime  #############################
 
 # Number of threads to utilize.
@@ -39,7 +53,14 @@ max_concurrency = 5
 #############################  Requests  ############################
 
 # User agent to send with each request.
-user_agent = "lychee/0.18.1"
+# A browser-style string that still says who we are (DOC-2615). Many WAFs answer 403 to
+# any agent that starts with "lychee/", so the 2026-11-16 sweep filed 66 links as
+# blocked. Measured on 2026-11-20 against the 55 unique URLs of that bucket, one request
+# per agent: "lychee/0.18.1" got 9 answers of 200, a full Chrome string 19, and this
+# string 22. The Chrome string loses on Akamai hosts (Cisco, IBM, Salesforce, Webex),
+# which block a client that claims to be Chrome but does not act like one. Same form as
+# the second pass (link_second_pass.py).
+user_agent = "Mozilla/5.0 (compatible; n8n-docs-linkcheck/1.0; +https://github.com/n8n-io/n8n-docs)"
 
 # Website timeout from connect to response finished.
 timeout = 20
@@ -167,6 +188,9 @@ exclude = [
   '^https://wise-sandbox\.com/',  # In-app sandbox pages, redirect to login
   '^https://app\.todoist\.com/app/',  # In-app settings pages, need login
   '^https://(www\.)?googleapis\.com/auth/',  # OAuth scope strings shown in code cells, not web pages
+  # Example URLs written as text, not links (DOC-2615). example.com and private hosts are
+  # skipped already; these are made-up hosts that look real.
+  '^https://cloud\.n8n\.com(/|$)',  # Sample Nextcloud address on the Nextcloud credentials page
   ]
 
 # Exclude these filesystem paths from getting checked.

@@ -50,7 +50,7 @@ Projects control who can see and change the workflows, credentials, and data tab
 
 #### Executions in projects
 
-You can see a workflow's executions only if your project role, or a share on the workflow, gives you permission to read executions. Being a member of one project doesn't show you the executions of another project.
+You can see a workflow's executions when your project role, a share on the workflow, or your instance role gives you permission to read executions. Membership in one project doesn't by itself show you the executions of another project.
 
 [Instance owners and instance admins](../understand-instance-roles.md) can view saved executions across all projects. The Project Admin role by itself gives no access outside its project.
 
@@ -60,9 +60,9 @@ A workflow can call a sub-workflow in another project if the caller policy of th
 
 #### Data tables in projects
 
-Each data table belongs to one project, and you can't share a data table on its own. You can list data tables and read their rows in each project where you have the corresponding permissions. Instance owners and instance admins see the data tables in every project.
+Each [data table](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/data-tables), and you can't share a data table on its own. You can list data tables and read their rows in each project where you have the corresponding permissions. Instance owners and instance admins see the data tables in every project.
 
-The Data Table node only uses data tables from the project that owns the workflow. It rejects a table ID from another project, even if the person who runs the workflow has access to that project. For more on how data tables work, refer to [Data tables](https://docs.n8n.io/build/work-with-data/data-tables/).
+The **Data Table node** only uses data tables from the project that owns the workflow. It rejects a table ID from another project, even if the person who runs the workflow has access to that project. For more on how data tables work, refer to [Data tables](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/data-tables).
 
 #### Variables in projects
 

@@ -38,3 +38,4 @@ Self-hosted users can configure their n8n instance to disable 2FA for all users 
 * [Connect LDAP](connect-ldap.md)
 * [Use SAML](use-saml/README.md)
 * [Use OIDC](use-oidc/README.md)
+* [Provision users with SCIM](provision-users-with-scim.md)

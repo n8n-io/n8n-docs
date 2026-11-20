@@ -24,6 +24,8 @@ The Kafka node and Kafka Trigger use a Schema Registry to encode and decode Avro
 - None
 - Basic Auth (username and password), such as a Confluent Cloud Schema Registry API key and secret
 
+You can combine either method with TLS: a custom certificate authority, a client certificate for mutual TLS, or both. n8n applies the TLS fields to an `https` registry URL only.
+
 ## Related resources
 
 Refer to the [Confluent Schema Registry documentation](https://docs.confluent.io/platform/current/schema-registry/index.html) for more information about using the service.
@@ -38,6 +40,10 @@ To configure this credential, you'll need the URL of your Schema Registry and, i
     - **Basic Auth**: use this for a Schema Registry that requires HTTP Basic Auth, such as Confluent Cloud. Then add:
         1. The **Username**. For Confluent Cloud, this is the Schema Registry API key.
         2. The **Password**. For Confluent Cloud, this is the Schema Registry API secret.
-3. Select **Save**. n8n tests the credential by calling the registry's `/subjects` endpoint.
+3. If your registry uses `https` and presents a certificate that a public certificate authority didn't sign, enter the PEM-encoded **CA Certificate** that signed it. This replaces the system certificate authorities rather than adding to them, so include every certificate authority in the registry's chain.
+4. If your registry requires mutual TLS (mTLS), enter the **Client Certificate** and the **Client Private Key**, both PEM-encoded. Enter both or neither.
+5. Select **Save**. n8n tests the credential by calling the registry's `/subjects` endpoint.
+
+The credential test uses the system certificate authorities and sends no client certificate, so a registry that needs either fails the test while the Kafka nodes still connect to it. The **CA Certificate**, **Client Certificate** and **Client Private Key** fields also apply to an `https` registry URL only; n8n refuses them against an `http` one.
 
 To use the credential, open your Kafka or Kafka Trigger node, enable **Use Schema Registry**, and select this credential.

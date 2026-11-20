@@ -41,11 +41,11 @@ To configure this credential, you'll need:
 - The **Database**: The name of the database to connect to.
 - A **User**: The user name you want to log in with.
 - A **Password**: Enter the password for the database user you are connecting to.
-- **Ignore SSL Issues**: If turned on, n8n keeps the connection encrypted but doesn't check the server's certificate, so it connects to a server presenting a self-signed or hostname-mismatched certificate. n8n hides the **SSL** selector while this is on.
-- **SSL**: This setting controls the `ssl-mode` connection string for the connection. Options include:
-    - **Allow**: Sets the `ssl-mode` parameter to `allow`. First try a non-SSL connection; if that fails, try an SSL connection.
-    - **Disable**: Sets the `ssl-mode` parameter to `disable`. Only try a non-SSL connection.
-    - **Require**: Sets the `ssl-mode` parameter to `require`, which is the default for TimescaleDB connection strings. Only try an SSL connection. If a root CA file is present, verify that a trusted certificate authority (CA) issued the server certificate.
+- **Ignore SSL Issues**: If turned on, n8n keeps the connection encrypted but doesn't check the server's certificate, so it connects to a server presenting a self-signed or hostname-mismatched certificate. n8n hides the **SSL** selector while this is on. A server with SSL switched off needs this turned off and **SSL** set to **Disable**.
+- **SSL**: Whether to connect over SSL. Options include:
+    - **Allow**: Connect over SSL and verify the server's certificate.
+    - **Disable**: Connect without SSL.
+    - **Require**: Connect over SSL and verify the server's certificate. Behaves the same as **Allow**.
 - **Port**: The port number of the TimescaleDB server.
 
 Refer to the [Timescale connection settings documentation](https://docs.tigerdata.com/integrations/latest/find-connection-details/) for more information about the non-SSL fields. Refer to [Connect with a stricter SSL](https://docs.tigerdata.com/use-timescale/latest/security/strict-ssl/) for more information about the SSL options.

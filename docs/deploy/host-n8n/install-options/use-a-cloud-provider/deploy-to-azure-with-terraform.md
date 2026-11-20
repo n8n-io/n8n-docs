@@ -46,7 +46,7 @@ The module creates managed identities with role assignments so that pods can rea
 ## Prerequisites
 
 * An **n8n license key**: An Enterprise license for the default multi-main topology, or a Business license if you set `n8n_main_hpa_min_replicas = 1`.
-* **Terraform CLI 1.9 or later**. See [Install Terraform](https://developer.hashicorp.com/terraform/tutorials/azure-get-started/install-cli).
+* **Terraform CLI 1.13 or later**. See [Install Terraform](https://developer.hashicorp.com/terraform/tutorials/azure-get-started/install-cli).
 * **Azure CLI 2.50 or later**, signed in with `az login` and targeting the subscription you want to deploy into. See [Install the Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli).
 * **Permissions in that subscription** to create AKS, PostgreSQL Flexible Server, Azure Managed Redis, Application Gateway, Key Vault, Storage, Azure DNS, and virtual network resources, **and to create role assignments**. The example grants itself Storage Blob Data Contributor and Key Vault Administrator, and the module creates managed identities with role assignments. Owner, or Contributor plus User Access Administrator, on the subscription covers this.
 * **Enough vCPU quota** in your chosen region for the AKS node pools at their maximum size (for `small`: 2 pools × up to 6 nodes × `Standard_D2s_v5`), and Azure Managed Redis capacity in that region.

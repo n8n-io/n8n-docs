@@ -19,7 +19,7 @@ Chart 2.0 isn't final yet, so the commands on this page install the release cand
 For production, use chart 1.x until chart 2.0 is final. The [`release/n8n-2.x` branch](https://github.com/n8n-io/n8n-hosting/tree/release/n8n-2.x/charts/n8n) of the chart's repository holds the 1.x chart, and its README explains how to install and configure it. 
 {% endhint %}
 
-For the purpose of this guide, all commands use the namespace `n8n` and the release name `n8n`. If you choose other names, replace them in each command.
+All commands in this guide use the namespace `n8n` and the release name `n8n`. If you choose other names, replace them in each command.
 
 ## Prerequisites for the Helm chart
 
@@ -129,7 +129,7 @@ Open `http://localhost:5678` and create the owner account. To stop forwarding, p
 
 ## Install n8n in queue mode
 
-Queue mode is recommended for production scale deployments. In this mode, main pods serve the editor and API, and worker pods take executions from a Redis queue. You can then add workers without touching the editor. Queue mode needs PostgreSQL and Redis. For how it works, see [Enable queue mode](../configure-n8n/scaling/enable-queue-mode.md).
+Use queue mode for production-scale deployments. In this mode, main pods serve the editor and API, and worker pods take executions from a Redis queue. You can then add workers without touching the editor. Queue mode needs PostgreSQL and Redis. For how it works, see [Enable queue mode](../configure-n8n/scaling/enable-queue-mode.md).
 
 If the quick start release is still running, remove it. The quick start instance keeps its data in SQLite, which doesn't carry over to PostgreSQL, so queue mode starts as a new instance. Helm deletes the release's volume with it. The namespace and the Secret stay, so n8n keeps the same encryption key:
 
@@ -497,7 +497,7 @@ kubectl delete namespace envoy-gateway-system
 
 ## Next steps
 
-The n8n Helm charts are designed to be highly customizable to cater to a broad range of deployment needs.
+You can customize the n8n Helm chart to fit a broad range of deployment needs.
 
 To help you get started, the chart's repository includes [reference examples](https://github.com/n8n-io/n8n-hosting/tree/main/charts/n8n/examples): complete values files, each written for a common way to run n8n.
 | If you want to | Start from |

@@ -380,7 +380,7 @@ If the string also contains other content, try using <code>extractUrl()</code> f
 
 ## _`String`_.**`match()`** <a href="#stringmatch" id="stringmatch"></a>
 
-**Description:** Matches the string against a <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions”>regular expression</a>. Returns an array containing the first match, or all matches if the <code>g</code> flag is set in the regular expression. Returns <code>null</code> if no matches are found. 
+**Description:** Matches the string against a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions">regular expression</a>. Returns an array containing the first match, or all matches if the <code>g</code> flag is set in the regular expression. Returns <code>null</code> if no matches are found. 
 
 For checking whether text is present, consider <code>includes()</code> instead.
 
@@ -392,7 +392,7 @@ For checking whether text is present, consider <code>includes()</code> instead.
 
 **Parameters:**
 
-  * `regexp` (RegExp) - A <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions”>regular expression</a> with the pattern to look for. Will look for multiple matches if the <code>g</code> flag is present (see examples).
+  * `regexp` (RegExp) - A <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions">regular expression</a> with the pattern to look for. Will look for multiple matches if the <code>g</code> flag is present (see examples).
 
 **Examples:**
 
@@ -501,7 +501,7 @@ To replace all occurrences, use <code>replaceAll()</code> instead.
 
 **Parameters:**
 
-  * `pattern` (String|RegExp) - The pattern in the string to replace. Can be a string to match or a <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions”>regular expression</a>.
+  * `pattern` (String|RegExp) - The pattern in the string to replace. Can be a string to match or a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions">regular expression</a>.
   * `replacement` (String) - The new text to replace with
 
 **Examples:**
@@ -536,7 +536,7 @@ To replace all occurrences, use <code>replaceAll()</code> instead.
 
 **Parameters:**
 
-  * `pattern` (String|RegExp) - The pattern in the string to replace. Can be a string to match or a <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions”>regular expression</a>.
+  * `pattern` (String|RegExp) - The pattern in the string to replace. Can be a string to match or a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions">regular expression</a>.
   * `replacement` (String|function) - The new text to replace with. Can be a string or a function that returns a string (see examples).
 
 **Examples:**
@@ -574,7 +574,7 @@ To replace all occurrences, use <code>replaceAll()</code> instead.
 
 ## _`String`_.**`search()`** <a href="#stringsearch" id="stringsearch"></a>
 
-**Description:** Returns the index (position) of the first occurrence of a pattern within the string, or -1 if not found. The pattern is specified using a <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions”>regular expression</a>. To use text instead, see <code>indexOf()</code>.
+**Description:** Returns the index (position) of the first occurrence of a pattern within the string, or -1 if not found. The pattern is specified using a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions">regular expression</a>. To use text instead, see <code>indexOf()</code>.
 
 **Syntax:** _`String`_.search(regexp)
 
@@ -584,7 +584,7 @@ To replace all occurrences, use <code>replaceAll()</code> instead.
 
 **Parameters:**
 
-  * `regexp` (RegExp) - A <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions”>regular expression</a> with the pattern to look for
+  * `regexp` (RegExp) - A <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions">regular expression</a> with the pattern to look for
 
 **Examples:**
 
@@ -744,7 +744,7 @@ The opposite of using <code>join()</code> on an array.
 
 **Description:** Converts the string to a DateTime. Useful for further transformation. Supported formats for the string are ISO 8601, HTTP, RFC2822, SQL and Unix timestamp in milliseconds. 
 
-To parse other formats, use <a href=”https://moment.github.io/luxon/api-docs/index.html#datetimefromformat”> <code>DateTime.fromFormat()</code></a>.
+To parse other formats, use <a href="https://moment.github.io/luxon/api-docs/index.html#datetimefromformat"> <code>DateTime.fromFormat()</code></a>.
 
 **Syntax:** _`String`_.toDateTime()
 

@@ -72,7 +72,7 @@ The module creates the VPC, GKE cluster, Cloud SQL instance, Memorystore instanc
 {% hint style="info" %}
 **Run the preflight check**
 
-The module ships a read-only preflight script that checks your APIs, IAM permissions, and the org policy before you apply. The script lives in the [terraform-google-n8n](https://github.com/n8n-io/terraform-google-n8n/tree/0.1.0) repository, so download the pinned version and run it once before your first apply. It needs `gcloud`, `curl`, and `python3`.
+The module ships a read-only preflight script that checks your APIs, IAM permissions, and the org policy before you apply. The script lives in the [terraform-google-n8n](https://github.com/n8n-io/terraform-google-n8n/tree/0.1.0) repository, so download the pinned version and run it once before your first apply. It needs `gcloud`, `curl`, and `python3`, plus an active gcloud identity. If you only configured Application Default Credentials, run `gcloud auth login` or activate a service account before running it.
 
 ```bash
 curl -fsSLO https://raw.githubusercontent.com/n8n-io/terraform-google-n8n/0.1.0/scripts/preflight.sh

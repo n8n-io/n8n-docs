@@ -82,6 +82,12 @@ You must be an instance owner, instance admin, or project admin to push changes 
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/jlwygEO1bOtH6HDbN3We/" %}
 
+### Push to another branch
+
+When `N8N_SOURCECONTROL_BRANCH_SELECTION_ENABLED` is `true`, the push window shows a branch picker. You can push to an existing branch or create a branch from the branch labeled **Default branch**. Pull, reset, and status still use the branch configured in **Settings** > **Source Control**, labeled **Default branch**.
+
+When the variable is `false` or unset, n8n pushes to the configured branch and doesn't show the picker.
+
 ## What gets committed <a href="#what-gets-committed" id="what-gets-committed"></a>
 
 n8n commits the following to Git:

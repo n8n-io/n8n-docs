@@ -1,6 +1,6 @@
 ---
 title: Source control environment variables
-description: Environment variable to set the default SSH key type for source control setup.
+description: Environment variables for source control, including per-commit branch selection and the default SSH key type.
 contentType: reference
 tags:
   - environment variables
@@ -25,6 +25,7 @@ n8n uses Git-based source control to support environments. Refer to [Source cont
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
+| `N8N_SOURCECONTROL_BRANCH_SELECTION_ENABLED` | Boolean | `false` | Whether users can choose or create a Git branch for each commit when [pushing to source control](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/use-source-control-and-environments/push-and-pull-changes). When enabled, pulls always use the branch configured for the instance, and users choose or create the branch for each push. When disabled, pushes and pulls always use the branch configured for the instance. |
 | `N8N_SOURCECONTROL_DEFAULT_SSH_KEY_TYPE` | String | `ed25519` | Set to `rsa` to make RSA the default SSH key type for [Source control setup](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/use-source-control-and-environments/set-up-source-control). |
 
 ## Related resources

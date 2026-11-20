@@ -60,7 +60,7 @@ A workflow can call a sub-workflow in another project if the caller policy of th
 
 #### Data tables in projects
 
-Each [data table](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/data-tables), and you can't share a data table on its own. You can list data tables and read their rows in each project where you have the corresponding permissions. Instance owners and instance admins see the data tables in every project.
+Each [data table](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/data-tables) belongs to one project. Unlike workflows and credentials, you can't share a data table on its own. You can list data tables and read their rows in each project where you have the corresponding permissions. Instance owners and instance admins see the data tables in every project.
 
 The **Data Table node** only uses data tables from the project that owns the workflow. It rejects a table ID from another project, even if the person who runs the workflow has access to that project. For more on how data tables work, refer to [Data tables](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/data-tables).
 

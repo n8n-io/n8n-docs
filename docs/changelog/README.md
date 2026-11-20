@@ -76,6 +76,18 @@ Both variables are now deprecated, and n8n logs a warning at startup if you set 
 
 Poll triggers and system tasks stay on their current schedulers. Learn more in the [durable scheduler documentation](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/durable-scheduler).
 
+## Cap public API requests per key with rate limits
+
+**Released:** 2026-11-03 in [n8n 2.47](release-notes.md#n8n2473)
+
+You can now limit how many public API requests each API key makes, so a single runaway workflow can't exhaust your execution quota or block other teams. When a key exceeds a limit, n8n returns a `429 Too Many Requests` response with `Retry-After`, `X-RateLimit-Limit`, `X-RateLimit-Remaining`, and `X-RateLimit-Reset` headers so clients know exactly when to retry and how many requests remain in the current window.
+
+Admins set separate limits for reads and writes, both across all endpoints and per individual endpoint. The defaults are 1,200 reads and 600 writes per 60 seconds across all endpoints, and 1,000 reads and 500 writes per 60 seconds per endpoint. Each API key gets its own count against the same limits. To turn on and configure limits, go to **Settings > Policies > Public API Limits** and turn on **Enable API key rate limits**. You can also manage limits through the public API using `GET /api/v1/settings/rate-limits` and `PUT /api/v1/settings/rate-limits` (the API key needs the `securitySettings:manage` scope), or with environment variables on self-hosted instances. Changes apply immediately without a restart.
+
+If you have workflows that call the n8n API using the n8n node or the HTTP Request node, add Batching to the node to stay under the limits. Set Items per Batch and Batch Interval (ms) in the node's options. For example, five items per second sends 300 requests a minute, which is below every default limit. In multi-main setups, all main instances share one count per API key through Redis, so a key that reaches a limit on one main gets a `429` from every main until the window ends.
+
+Learn more in the [Public API rate limits documentation](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/rate-limits).
+
 ## Control which nodes users can add and run, per instance or per project
 
 **Released:** 2026-10-13 in [n8n 2.44](release-notes.md#n8n244)

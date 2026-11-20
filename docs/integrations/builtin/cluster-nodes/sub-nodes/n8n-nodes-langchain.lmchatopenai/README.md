@@ -54,6 +54,12 @@ Refer to the [OpenAI credentials documentation](../../../credentials/openai.md) 
 
 ## Node parameters <a href="#node-parameters" id="node-parameters"></a>
 
+### Authentication
+
+Select **API Key** to use an OpenAI API key, or **OpenAI Account** to connect a ChatGPT/OpenAI account. Refer to the [OpenAI credentials](../../../credentials/openai.md) for setup.
+
+With **OpenAI Account**, n8n loads models from the ChatGPT/Codex account backend and uses the account's available default model.
+
 ### Model <a href="#model" id="model"></a>
 
 Select the model to use to generate the completion.

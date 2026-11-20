@@ -121,6 +121,18 @@ The following options specify the names of the columns to store the vectors and 
 * **Content Column Name**
 * **Metadata Column Name**
 
+### Create extension
+
+**Create Extension** controls whether the node runs `CREATE EXTENSION IF NOT EXISTS vector` when it initializes. The option is off by default.
+
+When **Create Extension** is off, the node doesn't try to create the `vector` extension. It still creates the destination table if it doesn't exist. Leave the option off if a database administrator has already installed the extension.
+
+When **Create Extension** is on, the node creates the `vector` extension before it creates the table. This requires database superuser privileges. If you set a custom extension schema, the node uses the schema-qualified name.
+
+{% hint style="warning" %}
+If your database user isn't a superuser, leave **Create Extension** off and ask a database administrator to install the `vector` extension first. Turning the option on with a non-superuser role returns the `vector isn't a trusted extension` error.
+{% endhint %}
+
 ### Metadata Filter <a href="#metadata-filter" id="metadata-filter"></a>
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/9OWZ8hSpVqky4D4xRnYP/" %}

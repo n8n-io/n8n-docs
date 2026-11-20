@@ -1,34 +1,43 @@
 ---
-title: RBAC role types
-description: 'Understand the RBAC roles available in n8n, and the access they have.'
+title: Understand project roles
+description: 'Understand the project roles available in n8n, and the access they have.'
 contentType: reference
-nodeTitle: See available roles
+nodeTitle: Understand project roles
 originalFilePath: user-management/rbac/role-types.md
 originalUrl: 'https://docs.n8n.io/user-management/rbac/role-types'
 url: >-
-  https://docs.n8n.io/administer/manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles
+  https://docs.n8n.io/administer/manage-users-and-access/set-permissions-and-roles-rbac/understand-project-roles
 layout:
   description:
     visible: false
 ---
 
-# RBAC role types <a href="#rbac-role-types" id="rbac-role-types"></a>
+# Understand project roles <a href="#understand-project-roles" id="understand-project-roles"></a>
+
+Project roles control what a user can do inside a single [project](../organize-work-in-projects/README.md). A user has one role in each project they belong to, and that role can differ between projects. For example, a user can be a Project Admin in one project and a Project Viewer in another.
+
+n8n has three built-in project roles: Admin, Editor, and Viewer. On Enterprise, you can also create [custom project roles](create-custom-project-roles.md) with more granular permissions. Project roles are separate from [instance roles](understand-instance-roles.md), which control what a user can do across the whole instance.
 
 {% hint style="info" %}
 **Feature availability**
 
+The **Project Admin** role is available on:
+
+- **n8n Cloud:** Starter, Pro, Enterprise
+- **Self-hosted:** Business, Enterprise
+
 The **Project Editor** role is available on:
 
-- **n8n Cloud:** Pro
-- **Self-hosted:** Enterprise
+- **n8n Cloud:** Pro, Enterprise
+- **Self-hosted:** Business, Enterprise
 
 The **Project Viewer** role is available on:
 
 - **n8n Cloud:** Enterprise
 - **Self-hosted:** Enterprise
-{% endhint %}
 
-Within projects, there are three user roles: Admin, Editor, and Viewer. These roles control what the user can do in a project. A user can have different roles within different projects.
+No project roles are available on the Community and Registered Community editions.
+{% endhint %}
 
 ## Project Admin <a href="#project-admin" id="project-admin"></a>
 
@@ -41,7 +50,7 @@ A Project Admin role has the highest level of permissions. Project admins can:
 
 ## Project Editor <a href="#project-editor" id="project-editor"></a>
 
-A Project Editor can view, create, update, and delete any workflows, credentials, or executions within a project. The **Project Editor** role is available on n8n Cloud Pro and self-hosted Enterprise.
+A Project Editor can view, create, update, and delete any workflows, credentials, or executions within a project.
 
 ## Project Viewer <a href="#project-viewer" id="project-viewer"></a>
 
@@ -49,13 +58,21 @@ A Project Viewer is effectively a `read-only` role with access to all workflows,
 
 Viewers aren't able to manually execute any workflows that exist in a project. 
 
-The **Project Viewer** role is available on n8n Cloud Enterprise and self-hosted Enterprise.
+## Assign a project role <a href="#assign-a-project-role" id="assign-a-project-role"></a>
 
-{% hint style="info" %}
-**Project roles and instance roles**
+Project admins can assign a role to each project member. You can assign only the roles that your plan or edition includes.
 
-n8n has two levels of roles. [Instance roles](../understand-instance-roles.md) control what a user can do across the entire instance. Project roles control what a user can do within a specific [project](organize-work-in-projects.md), and a user can have different project roles in different projects.
-{% endhint %}
+To assign a project role:
+
+1. Select the project.
+2. Select **Project settings**.
+3. Under **Project members**, browse for users or search by username or email address.
+4. Select the user and choose a role from the dropdown.
+5. Select **Save**.
+
+To assign a role when you add a user to a project, refer to [Create and manage projects](../organize-work-in-projects/create-and-manage-projects.md#add-and-remove-users-in-a-project). To assign a custom role, refer to [Create custom project roles](create-custom-project-roles.md#assign-a-custom-role-to-users).
+
+## Permissions by role <a href="#permissions-by-role" id="permissions-by-role"></a>
 
 | Permission | Admin | Editor | Viewer | 
 | ---------- |------ | ------ | ------ | 
@@ -79,5 +96,5 @@ Project roles apply to the credentials the project holds. A project role doesn't
 ## Related resources
 
 * [Set permissions and roles (RBAC)](./)
-* [Organize work in projects](organize-work-in-projects.md)
-* [Custom roles](create-custom-roles.md)
+* [Organize work in projects](../organize-work-in-projects/README.md)
+* [Custom roles](README.md#custom-roles)

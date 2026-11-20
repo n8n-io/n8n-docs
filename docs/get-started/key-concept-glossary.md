@@ -156,7 +156,7 @@ An execution is a single run of a workflow. A manual execution starts when you r
 
 ### project (n8n) <a href="#project-n8n" id="project-n8n"></a>
 
-n8n projects let you separate workflows, variables, credentials, data tables, and agents into separate groups for easier management. Projects make it easier for teams to collaborate by sharing and compartmentalizing related resources. You assign each user a role in each project, so one person can have different access in different projects. Learn more: [RBAC projects](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/organize-work-in-projects).
+n8n projects let you separate workflows, variables, credentials, data tables, and agents into separate groups for easier management. Projects make it easier for teams to collaborate by sharing and compartmentalizing related resources. You assign each user a role in each project, so one person can have different access in different projects. Learn more: [RBAC projects](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/organize-work-in-projects).
 
 ### publish (n8n)
 

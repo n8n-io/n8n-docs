@@ -201,5 +201,4 @@ sum by (workflow_name) (
 * [Monitor n8n](monitor-n8n.md)
 * [Back up and restore](backup-and-restore.md)
 * [Update n8n](update-n8n.md)
-* [Trace executions with OpenTelemetry](trace-executions-with-opentelemetry.md)
-* [Choose which spans n8n exports](choose-which-spans-n8n-exports.md)
+* [Trace executions with OpenTelemetry](trace-executions-with-opentelemetry/README.md)

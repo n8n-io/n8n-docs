@@ -56,6 +56,11 @@ check("short_reason: cached error has no reason of its own", lpc.short_reason(No
 check("short_reason: quoted URLs are stripped from free text",
       "http" not in lpc.short_reason(None, "Something odd happened (https://x.y/z)"))
 check("short_reason: long text is cut", len(lpc.short_reason(None, "x " * 100)) <= 80)
+# DOC-2615: the message now carries lychee's details. A lychee 0.18.1 connection failure
+# reads as "could not connect", not as a certificate error.
+check("short_reason: lychee 0.18.1 connection failure",
+      lpc.short_reason(None, "Network error: connection failed: error sending request for url "
+                             "(https://portal.airtop.ai/)") == "Could not connect")
 
 # --- render: the #5661 report ------------------------------------------------------
 stats = json.loads(FIXTURE.read_text(encoding="utf-8"))

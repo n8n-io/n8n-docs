@@ -67,6 +67,7 @@ To generate your personal access token:
 7. Select the **Expiration** you'd like for the token, or select **No expiration**.
 8. Select **Scopes** for your token. For most of the n8n GitHub nodes, add the `repo` scope.
     - A token without assigned scopes can only access public information.
+    - For the [GitHub Trigger node](../trigger-nodes/n8n-nodes-base.githubtrigger.md), also add `admin:repo_hook` to create repository webhooks, or `admin:org_hook` to create organization webhooks.
 9. Select **Generate token**.
 10. Copy the token.
 

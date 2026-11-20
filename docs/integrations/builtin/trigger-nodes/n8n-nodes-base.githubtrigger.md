@@ -34,22 +34,60 @@ Refer to the [GitHub credentials documentation](../credentials/github.md) for au
 For usage examples and templates to help you get started, refer to n8n's [GitHub Trigger integrations](https://n8n.io/integrations/github-trigger/) page.
 {% endhint %}
 
+## Node parameters
+
+### Resource
+
+Choose where the node listens for events:
+
+* **Repository**: Receive events from one repository. Select the **Repository Owner** and the **Repository Name**.
+* **Organization**: Receive events from every repository in an organization. Select the organization as the **Repository Owner**.
+
+{% hint style="info" %}
+**Feature availability**
+
+The **Organization** resource is available from n8n 2.50.0.
+{% endhint %}
+
+When you publish the workflow, n8n creates a webhook with a signing secret on the repository or organization. GitHub signs each event with that secret, and the node rejects events without a valid signature.
+
+To create the webhook, the GitHub account that the credential uses needs these permissions:
+
+* **Repository**: Admin access to the repository. A personal access token (classic) needs the `admin:repo_hook` scope.
+* **Organization**: Owner of the organization. A personal access token (classic) needs the `admin:org_hook` scope. A fine-grained token or a GitHub App needs the organization permission **Webhooks** with read and write access.
+
+{% hint style="warning" %}
+**Event volume**
+
+An organization webhook sends the selected events for every repository in the organization. For example, **Workflow run** starts an execution for every GitHub Actions run in the organization. Select only the events you need.
+{% endhint %}
+
 ## Events <a href="#events" id="events"></a>
 
+* Branch protection configuration
+* Branch protection rule
 * Check run
 * Check suite
+* Code scanning alert
 * Commit comment
 * Create
+* Custom property values
 * Delete
+* Dependabot alert
 * Deploy key
 * Deployment
 * Deployment status
+* Discussion
+* Discussion comment
 * Fork
 * GitHub app authorization
 * Gollum
 * Installation
 * Installation repositories
 * Issue comment
+* Issue dependencies
+* Issue relates to
+* Issues
 * Label
 * Marketplace purchase
 * Member
@@ -58,6 +96,7 @@ For usage examples and templates to help you get started, refer to n8n's [GitHub
 * Milestone
 * Org block
 * Organization
+* Package
 * Page build
 * Project
 * Project card
@@ -66,17 +105,30 @@ For usage examples and templates to help you get started, refer to n8n's [GitHub
 * Pull request
 * Pull request review
 * Pull request review comment
+* Pull request review thread
 * Push
+* Registry package
 * Release
 * Repository
+* Repository advisory
 * Repository import
+* Repository ruleset
 * Repository vulnerability alert
+* Secret scanning alert
+* Secret scanning alert location
+* Secret scanning scan
 * Security advisory
+* Security and analysis
 * Star
 * Status
+* Sub issues
 * Team
 * Team add
 * Watch
+* Workflow job
+* Workflow run
+
+The **Membership**, **Org block**, **Organization**, and **Team** events only fire when **Resource** is **Organization**.
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 

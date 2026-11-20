@@ -272,6 +272,27 @@ Available channels:
 
 Open the **Channels** section on the agent and follow the setup for the channel you want. Each channel has its own connection and permission model.
 
+### Share an agent with other users
+
+You can let someone use your agent, edit it with you, or import their own copy. The steps depend on where you built the agent. Note that some of the steps below require direct workflow sharing and team project access, which are not available on every plan.
+
+| You built the agent in | To let someone use it | To edit it together | To give someone a copy on another instance |
+| --- | --- | --- | --- |
+| An **AI Agent** node in a workflow | Publish the workflow with a Chat Trigger in **Hosted Chat** mode and send them the chat URL. To require sign-in, choose **n8n User Auth**. | [Share the workflow](../manage-workflows/share-with-others.md), or add them as an editor to the team project that contains it. | [Export the workflow as JSON](../manage-workflows/export-and-import.md) and have them import it. |
+| The standalone **Agents** tab | Publish the agent to a configured channel, such as Slack. | Give them an editing role in the team project that owns the agent. | Export the agent as JSON and have them import it. |
+
+When you export an agent or workflow, stored credential secrets don't transfer. The person who imports it needs to reconnect credentials on their instance.
+
+#### What you can't do with a standalone agent
+
+Standalone agents don't share the way workflows do. Compared with workflow sharing:
+
+* **You can't add individual users to an agent.** For a workflow in your **Personal** space, you select **Share** and pick users. For an agent, access comes from the project that owns it, so you give people a role in that team project.
+* **You can't share an agent that's in your personal project.** Create a copy of the agent in a team project, then give people access to that project.
+* **You can't give people a chat URL for the agent.** Hosted Chat URLs come from the Chat Trigger in a workflow. People reach a standalone agent through the channels you connect to it, or through the chat in the Agent Builder if they have access to the project.
+* **You can't give someone read-only or run-only access by sharing.** Workflow sharing gives editors view, run, and update permissions. For an agent, you let people use it by publishing it to a channel, and you let people edit it by giving them an editing role in the project.
+* **You can't move credentials with the agent.** Export and import carry the agent's configuration but not credential secrets.
+
 ### Manage agents through MCP
 
 You can also build and manage agents from an MCP client, such as Claude Desktop or Claude Code, using n8n's [instance-level MCP server](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server). This approach exposes tools to search, create, and configure agents alongside the workflow tools the MCP server already provides.

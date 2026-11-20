@@ -75,6 +75,14 @@ layout:
 
 If the string also contains other content, try using <code>extractEmail()</code> or <code>extractUrl()</code> first.
 
+`extractDomain()` reads the string in this order:
+
+1. If the whole string is one email address, it returns the part after the `@`.
+2. If the whole string is a URL or a domain, it returns the host. The protocol (`http`, `https`, or `ftp`) is optional, and a `mailto:` prefix is accepted. For a URL that starts with a protocol, user information before the host (`user@`) and an `@` in the path or query don't change the result. The host must be a domain name with at least one dot, `localhost`, or an IPv4 address. `extractDomain()` doesn't read other hosts, such as an IPv6 address or a name without a dot, as a URL. Rule 3 applies to these strings.
+3. If the string has no spaces and contains an email address, it returns the domain of the first address.
+
+In every other case, it returns <code>undefined</code>. A string that contains a space always returns <code>undefined</code>.
+
 **Syntax:** _`String`_.extractDomain()
 
 **Returns:** String
@@ -89,6 +97,27 @@ If the string also contains other content, try using <code>extractEmail()</code>
 
   ```javascript
   "http://n8n.io/workflows".extractDomain() //=> 'n8n.io'
+  ```
+
+  ```javascript
+  "https://medium.com/@jane.doe".extractDomain() //=> 'medium.com'
+  ```
+
+  ```javascript
+  "mailto:me@example.com".extractDomain() //=> 'example.com'
+  ```
+
+  ```javascript
+  "<me@example.com>".extractDomain() //=> 'example.com'
+  ```
+
+  ```javascript
+  // No protocol, and the whole string has the format of an email address
+  "example.com/a@b.com".extractDomain() //=> 'b.com'
+  ```
+
+  ```javascript
+  "Name <me@example.com>".extractDomain() //=> undefined
   ```
 
   ```javascript
@@ -252,7 +281,21 @@ If the string also contains other content, try using <code>extractUrl()</code> f
 
 ## _`String`_.**`isEmail()`** <a href="#stringisemail" id="stringisemail"></a>
 
-**Description:** Returns <code>true</code> if the string is an email
+**Description:** Returns <code>true</code> if the whole string is one email address
+
+If the string also contains other content, try using <code>extractEmail()</code> first.
+
+`isEmail()` returns <code>false</code> if the string contains:
+
+* Any character before or after the address, for example punctuation or angle brackets.
+* A `mailto:` prefix, or a URL that contains an `@`.
+* More than one address.
+* A dot at the start of the address, or two dots in a row before the `@`.
+* A space, including a space at the start or end of the string. Use <code>trim()</code> first to remove it.
+
+A tab or line break before or after the address doesn't change the result.
+
+`isEmail()` checks the format of the address only. It doesn't check that the address exists.
 
 **Syntax:** _`String`_.isEmail()
 
@@ -268,6 +311,26 @@ If the string also contains other content, try using <code>extractUrl()</code> f
 
   ```javascript
   "It's me@example.com".isEmail() //=> false
+  ```
+
+  ```javascript
+  "me@example.com;".isEmail() //=> false
+  ```
+
+  ```javascript
+  "mailto:me@example.com".isEmail() //=> false
+  ```
+
+  ```javascript
+  "https://medium.com/@jane.doe".isEmail() //=> false
+  ```
+
+  ```javascript
+  "me@example.com\n".isEmail() //=> true
+  ```
+
+  ```javascript
+  " me@example.com".isEmail() //=> false
   ```
 
   ```javascript

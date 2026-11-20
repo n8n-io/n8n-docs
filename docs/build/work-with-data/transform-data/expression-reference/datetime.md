@@ -38,7 +38,7 @@ layout:
 
 Unit names are case-sensitive. Any other value is an unsupported unit, and most unsupported units cause an `Unsupported unit` error.
 
-Some unsupported units don't cause an error. With <code>weekday</code>, <code>weekNumber</code>, <code>yearDayNumber</code>, an empty string, or <code>null</code>, the expression returns <code>undefined</code>. Don't rely on this result. A future version of n8n may return an error for these values.
+Some unsupported units don't cause an error. With <code>weekday</code>, <code>weekNumber</code>, <code>yearDayNumber</code>, an empty string, or <code>null</code>, the expression returns <code>undefined</code>.
 
 **Syntax:** _`DateTime`_.diffTo(otherDateTime, unit)
 

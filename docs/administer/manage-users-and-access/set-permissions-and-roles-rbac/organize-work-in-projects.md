@@ -44,6 +44,30 @@ Different plans have different numbers of projects and roles.
 
 n8n uses projects to group workflows and credentials[^1], and assigns [roles](see-available-roles.md) to users in each project. This means that a single user can have different roles in different projects, giving them different levels of access.
 
+### What projects isolate and what they don't
+
+Projects control who can see and change the workflows, credentials, and data tables in them. They don't isolate infrastructure. Every project on an instance runs on the same n8n deployment and database.
+
+#### Executions in projects
+
+You can see a workflow's executions when your project role, a share on the workflow, or your instance role gives you permission to read executions. Membership in one project doesn't by itself show you the executions of another project.
+
+[Instance owners and instance admins](../understand-instance-roles.md) can view saved executions across all projects. The Project Admin role by itself gives no access outside its project.
+
+Team project workflows use project roles in the editor. Where workflow sharing is available, a direct share of a workflow in a personal space can give access to the executions of that workflow. It doesn't give access to the rest of the project.
+
+A workflow can call a sub-workflow in another project if the caller policy of the sub-workflow allows it. If **Wait for Sub-Workflow Completion** is on (the default), a successful call returns the output of the sub-workflow. It doesn't give the caller access to the execution history of the sub-workflow.
+
+#### Data tables in projects
+
+Each [data table](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/data-tables) belongs to one project. Unlike workflows and credentials, you can't share a data table on its own. You can list data tables and read their rows in each project where you have the corresponding permissions. Instance owners and instance admins see the data tables in every project.
+
+The **Data Table node** only uses data tables from the project that owns the workflow. It rejects a table ID from another project, even if the person who runs the workflow has access to that project. For more on how data tables work, refer to [Data tables](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/data-tables).
+
+#### Variables in projects
+
+Global variables are visible to every workflow. Project variables are visible only to workflows that the project owns. If a global variable and a project variable use the same key, `$vars` uses the project value. `$vars` never reads the variables of another project.
+
 ### Create a project <a href="#create-a-project" id="create-a-project"></a>
 
 Instance owners and instance admins can create projects.

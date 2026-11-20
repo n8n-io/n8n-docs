@@ -308,9 +308,9 @@ This module is open source and maintained by the n8n Solutions team. Report bugs
 
 ## Related resources
 
-* [Use a cloud provider](../../../host-n8n/install-options/use-a-cloud-provider/README.md)
-* [Google Kubernetes Engine](../../../host-n8n/install-options/use-a-cloud-provider/deploy-to-google-kubernetes.md)
-* [Google Cloud Run](../../../host-n8n/install-options/use-a-cloud-provider/deploy-to-google-cloud-run.md)
-* [Deploy to AWS with Terraform](./deploy-to-aws-with-terraform/deploy-your-first-instance.md)
-* [Deploy to Azure with Terraform](./deploy-to-azure-with-terraform.md)
+* [Use a cloud provider](./)
+* [Google Kubernetes Engine](deploy-to-google-kubernetes.md)
+* [Google Cloud Run](deploy-to-google-cloud-run.md)
+* [Deploy to AWS with Terraform](deploy-to-aws-with-terraform/deploy-your-first-instance.md)
+* [Deploy to Azure with Terraform](deploy-to-azure-with-terraform.md)
 * [Enable queue mode](../../configure-n8n/scaling/enable-queue-mode.md)

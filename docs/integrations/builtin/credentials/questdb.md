@@ -41,10 +41,12 @@ To configure this credential, you'll need:
 - The **Database**: Enter the database name, for example `qdb`.
 - A **User**: Enter the username for the user account as configured in `pg.user` or `pg.readonly.user` property in `server.conf`. Default value is `admin`.
 - A **Password**: Enter the password for the user account as configured in `pg.password` or `pg.readonly.password` property in `server.conf`. Default value is `quest`.
-- **SSL**: Select whether the connection should use SSL, which sets the `sslmode` parameter. Options include:
-    - **Allow**
-    - **Disable**
-    - **Require**
+- **SSL**: Select whether the connection should use SSL. Options include:
+    - **Allow**: Connect over SSL.
+    - **Disable**: Connect without SSL.
+    - **Require**: Connect over SSL.
+- A **CA Certificate**: Optional. Enter the PEM-encoded certificate authority that signed the server's certificate. Use this when your QuestDB presents a certificate that a public certificate authority didn't sign. This replaces the system certificate authorities rather than adding to them, so include every authority in the server's chain. This field appears when **SSL** is **Allow** or **Require**.
+- **Ignore SSL Issues (Insecure)**: Optional. If turned on, n8n keeps the connection encrypted but doesn't check the server's certificate. You can't use this together with a **CA Certificate**, because skipping the check would ignore the certificate authority you supplied. This field appears when **SSL** is **Allow** or **Require**.
 - The **Port**: Enter the port number to use for the connection. Default is `8812`.
 
-Refer to [List of supported connection properties](https://questdb.io/docs/reference/api/postgres/#list-of-supported-connection-properties) for more information.
+QuestDB supports SSL on its PostgreSQL endpoint in QuestDB Enterprise and QuestDB Cloud only. Refer to [TLS](https://questdb.io/docs/operations/tls/) and the [List of supported connection properties](https://questdb.io/docs/reference/api/postgres/#list-of-supported-connection-properties) for more information.

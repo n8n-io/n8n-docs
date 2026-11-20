@@ -41,7 +41,7 @@ To configure this credential, you'll need:
 - The **Database**: The name of the database to connect to.
 - A **User**: The user name you want to log in with.
 - A **Password**: Enter the password for the database user you are connecting to.
-- **Ignore SSL Issues**: If turned on, n8n will connect even if SSL certificate validation fails and you won't see the **SSL** selector.
+- **Ignore SSL Issues**: If turned on, n8n keeps the connection encrypted but doesn't check the server's certificate, so it connects to a server presenting a self-signed or hostname-mismatched certificate. n8n hides the **SSL** selector while this is on.
 - **SSL**: This setting controls the `ssl-mode` connection string for the connection. Options include:
     - **Allow**: Sets the `ssl-mode` parameter to `allow`. First try a non-SSL connection; if that fails, try an SSL connection.
     - **Disable**: Sets the `ssl-mode` parameter to `disable`. Only try a non-SSL connection.

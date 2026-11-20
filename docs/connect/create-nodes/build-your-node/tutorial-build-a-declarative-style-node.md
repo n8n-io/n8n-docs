@@ -399,7 +399,7 @@ Add the following code to the JSON file:
 
 ```json
 {
-	"node": "n8n-nodes-nasapics",
+	"node": "n8n-nodes-nasapics.nasaPics",
 	"nodeVersion": "1.0",
 	"codexVersion": "1.0",
 	"categories": [

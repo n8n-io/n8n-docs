@@ -76,7 +76,7 @@ The module ships a read-only preflight script that checks your APIs, IAM permiss
 
 ```bash
 curl -fsSLO https://raw.githubusercontent.com/n8n-io/terraform-google-n8n/0.1.0/scripts/preflight.sh
-bash preflight.sh YOUR_PROJECT_ID
+CHECK_CLOUD_DNS=true bash preflight.sh YOUR_PROJECT_ID
 ```
 {% endhint %}
 

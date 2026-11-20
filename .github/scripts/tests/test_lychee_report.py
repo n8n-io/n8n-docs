@@ -49,6 +49,27 @@ check("flatten: timeout without a code keeps status None", timeout["status"] is 
 # --- parse_status -----------------------------------------------------------------
 check("parse_status: non-numeric code becomes None", lr.parse_status({"status": {"code": "x", "text": "?"}}) == (None, "?"))
 check("parse_status: missing status", lr.parse_status({}) == (None, ""))
+# DOC-2615: keep lychee's details, which hold the cause, next to the category in `text`.
+check("parse_status: details are appended to text",
+      lr.parse_status({"status": {"text": "Network error", "details": "Too many redirects"}})
+      == (None, "Network error: Too many redirects"))
+check("parse_status: details alone when text is empty",
+      lr.parse_status({"status": {"details": "Too many redirects"}}) == (None, "Too many redirects"))
+check("parse_status: details already inside text are not repeated (newer lychee)",
+      lr.parse_status({"status": {
+          "text": "Network error: SSL certificate hostname mismatch. Check URL spelling (x)",
+          "details": "SSL certificate hostname mismatch. Check URL spelling"}})
+      == (None, "Network error: SSL certificate hostname mismatch. Check URL spelling (x)"))
+# lychee 0.18.1 guesses "certificate" for every failed connection, DNS included.
+_dns = lr.parse_status({"status": {"text": "Network error", "details":
+                                   "error sending request for url (https://portal.airtop.ai/) "
+                                   "Maybe a certificate error?"}})
+check("parse_status: lychee 0.18.1 certificate guess becomes 'connection failed'",
+      _dns == (None, "Network error: connection failed: error sending request for url "
+                     "(https://portal.airtop.ai/)"))
+check("parse_status: no certificate claim survives the rewrite", "certificate" not in _dns[1].lower())
+check("parse_status: cached error stays as lychee wrote it",
+      lr.parse_status({"status": {"text": "Error (cached)"}}) == (None, "Error (cached)"))
 
 # --- build_payload ----------------------------------------------------------------
 payload = lr.build_payload(stats, ctx)

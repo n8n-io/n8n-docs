@@ -61,6 +61,14 @@ BLOCKED_STATUSES = frozenset({401, 403, 407, 429})
 SERVER_ERROR_STATUSES = frozenset({502, 503, 504})
 UNVERIFIABLE_STATUSES = BLOCKED_STATUSES | SERVER_ERROR_STATUSES
 
+# lychee 0.18.1 adds this guess to EVERY failed connection (lychee-lib error.rs: any
+# reqwest error where `is_connect()` is true), and drops the real cause. A host with no
+# DNS record and a host with a bad certificate get the same text, so passing the guess on
+# would label every dead host a certificate problem (DOC-2615: portal.airtop.ai has no
+# DNS record and was reported this way). The guess is replaced with the one thing it does
+# tell us: the connection failed. Newer lychee versions report the real cause instead.
+LYCHEE_CONNECT_GUESS = " Maybe a certificate error?"
+
 # --------------------------------------------------------------------- pure helpers
 # No I/O here so the tests can cover them.
 
@@ -69,7 +77,12 @@ def parse_status(entry):
     """Return (code or None, message) from a lychee failure entry.
 
     lychee writes `status` either as an object ({"text": "...", "code": 404}) or, in
-    older versions, as a plain string like "404 Not Found"."""
+    older versions, as a plain string like "404 Not Found".
+
+    The message keeps both `text` and `details` (DOC-2615). `text` alone is only the
+    category ("Network error"); the cause is in `details`, and DocOps needs it to tell a
+    host that is gone from a temporary failure. Newer lychee versions already repeat the
+    details inside `text`, so they are only appended when missing."""
     status = entry.get("status") if isinstance(entry, dict) else None
     if isinstance(status, dict):
         code = status.get("code")
@@ -77,8 +90,13 @@ def parse_status(entry):
             code = int(code) if code is not None else None
         except (TypeError, ValueError):
             code = None
-        text = status.get("text") or status.get("details") or ""
-        return code, str(text)
+        text = str(status.get("text") or "")
+        details = str(status.get("details") or "")
+        if details.endswith(LYCHEE_CONNECT_GUESS):
+            details = "connection failed: " + details[:-len(LYCHEE_CONNECT_GUESS)].strip()
+        if text and details and details not in text:
+            return code, f"{text}: {details}"
+        return code, text or details
     if isinstance(status, str):
         parts = status.split()
         code = int(parts[0]) if parts and parts[0].isdigit() else None

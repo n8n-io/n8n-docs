@@ -24,8 +24,6 @@ Which RBAC features you can use depends on your plan or edition:
 - **Instance roles:** the Owner and Member roles are available on every plan and edition. The Admin and Chat user roles need a higher plan. Refer to [Understand instance roles](understand-instance-roles.md).
 - **Projects and project roles:** team projects and project roles aren't available on the Community and Registered Community editions. On other plans, the number of projects and the project roles you can assign depend on the plan. Refer to [Organize work in projects](../organize-work-in-projects/README.md) and [Understand project roles](understand-project-roles.md).
 - **Custom roles:** available on Enterprise only. Refer to [Create custom instance roles](create-custom-instance-roles.md) and [Create custom project roles](create-custom-project-roles.md).
-
-Plans can change. See the [pricing page](https://n8n.io/pricing/) for the current details.
 {% endhint %}
 
 The two levels are:

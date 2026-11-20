@@ -12,12 +12,12 @@ Create a project to group workflows and credentials, then manage who can access 
 {% hint style="info" %}
 **Feature availability**
 
-The number of team projects you can create depends on your plan or edition:
+Team projects are available on:
 
-- **n8n Cloud:** Starter, 1. Pro, 3. Enterprise, unlimited.
-- **Self-hosted:** Community and Registered Community, none. Business, 6. Enterprise, unlimited.
+- **n8n Cloud:** Starter (1 project), Pro (3 projects), Enterprise (unlimited)
+- **Self-hosted:** Business (6 projects), Enterprise (unlimited)
 
-Plans can change. See the [pricing page](https://n8n.io/pricing/) for the current details.
+They aren't available on the Community and Registered Community editions.
 {% endhint %}
 
 ## Create a project <a href="#create-a-project" id="create-a-project"></a>
@@ -47,7 +47,7 @@ To remove a user from a project:
 
 1. Select the project.
 2. Select **Project settings**.
-3. In the **three-dot menu** for the user you want to remove, select **Remove user**.
+3. Select the **Options menu** <img src="../../.gitbook/assets/three-dot-options-menu.png" alt="Options menu icon" data-size="line"> for the user you want to remove, then select **Remove user**.
 4. Select **Save**.
 
 ## Delete a project <a href="#delete-a-project" id="delete-a-project"></a>
@@ -71,7 +71,7 @@ To keep this data, transfer it to another project first. You can also delete the
 
 ## Favorite a project <a href="#favorite-a-project" id="favorite-a-project"></a>
 
-You can favorite a team project to pin it for quick access. Open the project and select the star icon in the project header, or select its **three-dot menu** and select **Favorite**. See [Favorite items](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/favorite-items) for details, including how to favorite workflows, folders, and data tables the same way.
+You can favorite a team project to pin it for quick access. Open the project and select the star icon in the project header, or select its **Options menu** <img src="../../.gitbook/assets/three-dot-options-menu.png" alt="Options menu icon" data-size="line"> and select **Favorite**. See [Favorite items](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/favorite-items) for details, including how to favorite workflows, folders, and data tables the same way.
 
 ## Related resources
 

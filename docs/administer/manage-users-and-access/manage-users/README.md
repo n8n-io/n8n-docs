@@ -16,6 +16,8 @@ User management, including adding and removing users, is available on:
 
 - **n8n Cloud:** Starter, Pro, Enterprise
 - **Self-hosted:** Community, Registered Community, Business, Enterprise
+
+Available from n8n 0.195.0.
 {% endhint %}
 
 ## Who can manage users <a href="#who-can-manage-users" id="who-can-manage-users"></a>

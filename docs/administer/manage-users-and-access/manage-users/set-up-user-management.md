@@ -17,7 +17,14 @@ Set up user management to create accounts for the people who work in your n8n in
 {% hint style="info" %}
 **Feature availability**
 
-User management is available from n8n 0.195.0. The instance owner sets it up. For the plans and editions that include it, and for who can manage users afterward, refer to [Manage users](./).
+**Feature availability**
+
+User management, including adding and removing users, is available on:
+
+- **n8n Cloud:** Starter, Pro, Enterprise
+- **Self-hosted:** Community, Registered Community, Business, Enterprise
+
+Available from n8n 0.195.0.
 {% endhint %}
 
 ## Set up user management on n8n Cloud <a href="#set-up-user-management-on-n8n-cloud" id="set-up-user-management-on-n8n-cloud"></a>
@@ -31,6 +38,8 @@ Once you upgrade your Cloud instance to an n8n version with user management, you
 ### Step one: In-app setup <a href="#step-one-in-app-setup" id="step-one-in-app-setup"></a>
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/c0111xcskz1G8PKOQogB/" %}
+
+You can now invite other people to your n8n instance.
 
 ### Step two: Invite users <a href="#step-two-invite-users" id="step-two-invite-users"></a>
 

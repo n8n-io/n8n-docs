@@ -40,17 +40,12 @@ A team project is a project that several users can work in.
 
 Team projects are available on:
 
-- **n8n Cloud:** All plans
-- **Self-hosted:** Business, Enterprise
+- **n8n Cloud:** Starter (1 project), Pro (3 projects), Enterprise (unlimited)
+- **Self-hosted:** Business (6 projects), Enterprise (unlimited)
 
 They aren't available on the Community and Registered Community editions.
 
-The number of team projects you can create depends on your plan or edition:
-
-- **n8n Cloud:** Starter, 1. Pro, 3. Enterprise, unlimited.
-- **Self-hosted:** Business, 6. Enterprise, unlimited.
-
-Which project roles you can assign also depends on your plan or edition. Refer to [Role-based access control (RBAC)](../set-permissions-and-roles-rbac/README.md). Plans can change. See the [pricing page](https://n8n.io/pricing/) for the current details.
+Which project roles you can assign also depends on your plan or edition. Refer to [Role-based access control (RBAC)](../set-permissions-and-roles-rbac/README.md). 
 {% endhint %}
 
 n8n assigns [roles](../set-permissions-and-roles-rbac/understand-project-roles.md) to users in each project. A single user can have different roles in different projects, which gives them different levels of access.

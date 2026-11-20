@@ -34,12 +34,6 @@ The Chat user role requires the Chat feature to be enabled.
 {% endhint %}
 
 {% hint style="info" %}
-**Instance roles and project roles**
-
-n8n has two levels of roles. Instance roles control what a user can do across the entire instance. Project roles (part of [RBAC](README.md)) control what a user can do within a specific project, and a user can have different project roles in different projects.
-{% endhint %}
-
-{% hint style="info" %}
 **Create a Member role account for the owner**
 
 n8n recommends that owners create a second account with the **Member** role for themselves. Owners can see and edit all workflows, credentials, and projects. However, there is no way to see who created a particular workflow, so there is a risk of overriding other people's work if you build and edit workflows as an owner.

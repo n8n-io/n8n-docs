@@ -16,14 +16,10 @@ Invite users to your n8n instance, resend pending invitations, and delete users 
 {% hint style="info" %}
 **Feature availability**
 
-**Feature availability**
-
 User management, including adding and removing users, is available on:
 
 - **n8n Cloud:** Starter, Pro, Enterprise
 - **Self-hosted:** Community, Registered Community, Business, Enterprise
-
-Available from n8n 0.195.0.
 {% endhint %}
 
 You must be an instance owner or instance admin to add and remove users. On Enterprise, custom instance roles with the **Members** > **Manage** permission can too.

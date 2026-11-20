@@ -17,14 +17,10 @@ Set up user management to create accounts for the people who work in your n8n in
 {% hint style="info" %}
 **Feature availability**
 
-**Feature availability**
-
 User management, including adding and removing users, is available on:
 
 - **n8n Cloud:** Starter, Pro, Enterprise
 - **Self-hosted:** Community, Registered Community, Business, Enterprise
-
-Available from n8n 0.195.0.
 {% endhint %}
 
 ## Set up user management on n8n Cloud <a href="#set-up-user-management-on-n8n-cloud" id="set-up-user-management-on-n8n-cloud"></a>

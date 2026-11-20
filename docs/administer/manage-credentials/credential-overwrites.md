@@ -108,3 +108,4 @@ When enabled, n8n stores the encrypted overwrites in the `settings` table and br
 * [Share credentials securely](share-credentials-securely.md)
 * [End-user credentials](end-user-credentials.md)
 * [Use external secret stores](use-external-secret-stores.md)
+* [Automatic OAuth client registration](automatic-oauth-client-registration.md)

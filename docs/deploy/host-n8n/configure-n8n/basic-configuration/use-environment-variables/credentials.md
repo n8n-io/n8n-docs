@@ -33,6 +33,15 @@ Enable credential overwrites using the following environment variables. Refer to
 | `N8N_MANAGED_OAUTH_SHOW_SCOPES` | String | - | Comma-separated list of managed OAuth credential types for which users can configure scope fields. |
 | `CREDENTIALS_DEFAULT_NAME` | String | `My credentials` | The default name for credentials. |
 
+## OAuth client registration
+
+Configure how n8n identifies itself to OAuth2 servers when a credential registers its client automatically. Refer to [Automatic OAuth client registration](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/automatic-oauth-client-registration) for details.
+
+| Variable | Type  | Default  | Description |
+| :------- | :---- | :------- | :---------- |
+| `N8N_OAUTH_CIMD_ENABLED` | Boolean | `false` | Set to `true` to let n8n identify itself with a Client ID Metadata Document (CIMD) when a credential registers its client automatically. Only turn this on if OAuth2 servers can download the document over HTTPS, from this instance or from `N8N_OAUTH_CLIENT_METADATA_URL`. If a server doesn't support CIMD, n8n uses Dynamic Client Registration (DCR). If the server supports neither, n8n shows an error. Available from n8n 2.49.0. |
+| `N8N_OAUTH_CLIENT_METADATA_URL` | String | - | HTTPS URL of a client metadata document that n8n sends as its client ID instead of its own. The URL needs a path, such as `https://example.com/client-metadata.json`, or n8n falls back to DCR. The document must list this instance's OAuth callback URL. When unset, n8n uses the document it serves at `/rest/oauth2-credential/client-metadata.json`. Available from n8n 2.49.0. |
+
 ## Related resources
 
 * [Environment variables](./)

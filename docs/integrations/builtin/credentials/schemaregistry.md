@@ -23,6 +23,7 @@ The Kafka node and Kafka Trigger use a Schema Registry to encode and decode Avro
 
 - None
 - Basic Auth (username and password), such as a Confluent Cloud Schema Registry API key and secret
+- OAuth2 Client Credentials (a bearer token minted from your identity provider), supported by Confluent Platform 7.7 and later
 
 ## Related resources
 
@@ -38,6 +39,13 @@ To configure this credential, you'll need the URL of your Schema Registry and, i
     - **Basic Auth**: use this for a Schema Registry that requires HTTP Basic Auth, such as Confluent Cloud. Then add:
         1. The **Username**. For Confluent Cloud, this is the Schema Registry API key.
         2. The **Password**. For Confluent Cloud, this is the Schema Registry API secret.
+    - **OAuth2 Client Credentials**: use this for a Schema Registry behind an identity provider. Then add:
+        1. The **Token URL** of the token endpoint that issues the bearer token.
+        2. The **Client ID** and **Client Secret** of the application you registered with that provider.
+        3. The **Client Authentication** method. **Authorization Header** sends the client ID and secret as HTTP Basic, which Okta and PingFederate expect by default. Choose **Request Body** if your provider requires the pair as form fields instead.
+        4. The **Scope**, if your provider requires one. Separate several scopes with spaces. Leave it empty to request none.
 3. Select **Save**. n8n tests the credential by calling the registry's `/subjects` endpoint.
+
+n8n gets a token when it first needs one and renews it before it expires, so a Kafka Trigger that stays active keeps working. The token URL is a separate host from the registry, so any domain restrictions on the credential have to allow both.
 
 To use the credential, open your Kafka or Kafka Trigger node, enable **Use Schema Registry**, and select this credential.

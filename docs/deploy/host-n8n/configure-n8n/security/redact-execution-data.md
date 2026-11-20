@@ -138,7 +138,7 @@ Users with the **Reveal execution data** (`execution:reveal`) scope can temporar
 To reveal redacted data, you need all of the following:
 
 * Access to the execution.
-* The `execution:reveal` scope, through one of these roles:
+* The `execution:reveal` scope, through a custom project role that includes the scope, or one of these built-in roles:
 
   | Level    | Roles that include the scope               | Roles that don't                  |
   | -------- | ------------------------------------------ | --------------------------------- |

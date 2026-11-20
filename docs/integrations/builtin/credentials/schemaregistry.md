@@ -44,4 +44,6 @@ To configure this credential, you'll need the URL of your Schema Registry and, i
 4. If your registry requires mutual TLS (mTLS), enter the **Client Certificate** and the **Client Private Key**, both PEM-encoded. Enter both or neither.
 5. Select **Save**. n8n tests the credential by calling the registry's `/subjects` endpoint.
 
+The credential test uses the system certificate authorities and sends no client certificate, so a registry that needs either fails the test while the Kafka nodes still connect to it. The **CA Certificate**, **Client Certificate** and **Client Private Key** fields also apply to an `https` registry URL only; n8n refuses them against an `http` one.
+
 To use the credential, open your Kafka or Kafka Trigger node, enable **Use Schema Registry**, and select this credential.

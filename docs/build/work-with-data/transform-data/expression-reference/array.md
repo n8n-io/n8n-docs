@@ -160,7 +160,7 @@ in <code>otherArray</code>.
 
 **Parameters:**
 
-  * `function()` (function) - A function to run for each array element. If it returns <code>true</code>, the element will be kept. Consider using <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions”>arrow function notation</a> to save space.
+  * `function()` (function) - A function to run for each array element. If it returns <code>true</code>, the element will be kept. Consider using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow function notation</a> to save space.
   * `element` (any) - The value of the current element
   * `index` (Number) - optional - The position of the current element in the array (starting at 0)
   * `array` (Array) - optional - The array being processed. Rarely needed.
@@ -203,7 +203,7 @@ If you need all matching elements, use <code>filter()</code>.
 
 **Parameters:**
 
-  * `function()` (function) - A function to run for each array element. As soon as it returns <code>true</code>, that element will be returned. Consider using <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions”>arrow function notation</a> to save space.
+  * `function()` (function) - A function to run for each array element. As soon as it returns <code>true</code>, that element will be returned. Consider using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow function notation</a> to save space.
   * `element` (any) - The value of the current element
   * `index` (Number) - optional - The position of the current element in the array (starting at 0)
   * `array` (Array) - optional - The array of the current element. Rarely needed.
@@ -434,7 +434,7 @@ The opposite of <code>split()</code>.
 
 **Parameters:**
 
-  * `function()` (function) - A function to run for each array element. In the new array, the output of this function takes the place of the element. Consider using <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions”>arrow function notation</a> to save space.
+  * `function()` (function) - A function to run for each array element. In the new array, the output of this function takes the place of the element. Consider using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow function notation</a> to save space.
   * `element` (any) - The value of the current element
   * `index` (Number) - optional - The position of the current element in the array (starting at 0)
   * `array` (Array) - optional - The array of the current element. Rarely needed.
@@ -568,7 +568,7 @@ The opposite of <code>split()</code>.
 
 **Parameters:**
 
-  * `function()` (function) - A function to run for each array element. Takes the accumulated result and the current element, and returns a new accumulated result. Consider using <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions”>arrow function notation</a> to save space.
+  * `function()` (function) - A function to run for each array element. Takes the accumulated result and the current element, and returns a new accumulated result. Consider using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow function notation</a> to save space.
   * `prevResult` (any) - The accumulated result from applying the function to previous elements. When processing the first element, it’s set to <code>initResult</code> (or the first array element if not specified).
   * `currentElem` (any) - The value in the array currently being processed
   * `currentIndex` (Number) - optional - The position of the current element in the array (starting at 0)

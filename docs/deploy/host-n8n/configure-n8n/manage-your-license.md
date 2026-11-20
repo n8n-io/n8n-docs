@@ -51,6 +51,16 @@ To report usage from air-gapped instances, see [Report usage from air-gapped ins
 
 
 
+## Data sent to the license server <a href="#data-sent-to-the-license-server" id="data-sent-to-the-license-server"></a>
+
+When your instance activates or renews its license, it sends an `x-request-id` header to the n8n license server.
+
+The value is a random identifier, newly generated for each call. It isn't derived from your license key, your instance, or your hardware, and it doesn't identify your instance across calls.
+
+n8n uses it to match a single activation or renewal with the matching entry in the license server's logs. If you report a failed activation or renewal, this identifier makes it possible to find that exact request.
+
+There's no setting to turn this header off.
+
 ## Related resources
 
 * [Configure n8n](./)

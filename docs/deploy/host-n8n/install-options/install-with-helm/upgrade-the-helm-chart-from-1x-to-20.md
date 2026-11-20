@@ -187,58 +187,6 @@ If both directories exist on the first start, n8n can't tell which one holds you
     kubectl scale deployment/n8n-main --replicas=1 --namespace <your-namespace>
     ```
 
-## Roll back to Helm chart 1.x
-
-`helm rollback` restores the chart 1.x resources and n8n 2.x, but not the database. n8n 2.x can't run on a database that n8n 3.0 changed, so you restore your backup before n8n starts again:
-
-1. If you removed `N8N_HOST`, `N8N_PORT`, and `N8N_PROTOCOL` from your core Secret, add them back. Chart 1.x pods can't start without them.
-2. If you use KEDA, pause it, and hold the workers and webhook processors at zero. Otherwise KEDA starts them again while you restore the backup. List the ScaledObjects, and pause each one that the `PAUSED` column doesn't show as paused yet, replacing `<scaledobject-name>`. Leave the ones that are already paused unchanged, so you keep their settings:
-
-    ```bash
-    kubectl get scaledobject --namespace <your-namespace>
-    kubectl annotate scaledobject <scaledobject-name> --namespace <your-namespace> \
-    	autoscaling.keda.sh/paused=true autoscaling.keda.sh/paused-replicas=0
-    ```
-
-3. Stop n8n by scaling every n8n Deployment to zero. A HorizontalPodAutoscaler doesn't start pods again for a Deployment you scale to zero. Check that no n8n pods run before you continue:
-
-    ```bash
-    kubectl scale deployment --selector app.kubernetes.io/instance=n8n --replicas=0 --namespace <your-namespace>
-    kubectl get pods --selector app.kubernetes.io/instance=n8n --namespace <your-namespace>
-    ```
-
-4. Restore the database and volume backups you took before the upgrade.
-5. Find the last revision of the release that used chart 1.x. The `CHART` column shows the chart version:
-
-    ```bash
-    helm history n8n --namespace <your-namespace>
-    ```
-
-6. Roll back to that revision:
-
-    ```bash
-    helm rollback n8n <revision> --namespace <your-namespace>
-    ```
-
-7. If you paused KEDA in step 2, resume it. The rollback keeps annotations you added by hand, so remove them from each ScaledObject you paused:
-
-    ```bash
-    kubectl annotate scaledobject <scaledobject-name> --namespace <your-namespace> \
-    	autoscaling.keda.sh/paused- autoscaling.keda.sh/paused-replicas-
-    ```
-
-8. Check that every n8n Deployment runs again:
-
-    ```bash
-    kubectl get deployments --selector app.kubernetes.io/instance=n8n --namespace <your-namespace>
-    ```
-
-    Scale any Deployment that stays at zero, and that wasn't at zero before the upgrade, back to the count in your chart 1.x values file: `replicaCount` or `multiMain.replicas` for main, `queueMode.workerReplicaCount` for workers, and `webhookProcessor.replicaCount` for webhook processors. Replace `<deployment-name>` and `<replica-count>`:
-
-    ```bash
-    kubectl scale deployment/<deployment-name> --replicas=<replica-count> --namespace <your-namespace>
-    ```
-
 ## Related resources
 
 * [Install with Helm](../install-with-helm.md)

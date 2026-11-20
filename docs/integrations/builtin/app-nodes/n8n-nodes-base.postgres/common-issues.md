@@ -116,3 +116,20 @@ SELECT TO_CHAR(date_col, 'YYYY-MM-DD') AS date_col_as_date FROM table_with_date_
 ```
 
 This produces the date as a string without the time or timezone components. To continue the earlier example, with this casting a date of `2025-12-25` produces the string `2025-12-25`. You can find out more in the [`pg` package documentation on dates](https://node-postgres.com/features/types#date--timestamp--timestamptz).
+
+## Data Mode or Define Below error
+
+The [**Insert or Update**](README.md#insert-or-update) and [**Update**](README.md#update) operations can fail with these errors:
+
+- `Column to match on not found in input item. Add a column to match on or set the 'Data Mode' to 'Define Below' to define the value to match on.` (**Insert or Update**, and **Update** with **Auto-Map Input Data to Columns** in node versions 2 and 2.1)
+- `Add values to update to the input item or set the 'Data Mode' to 'Define Below' to define the values to update.` (**Update**)
+- `Add values to update or insert to the input item or set the 'Data Mode' to 'Define Below' to define the values to insert or update.` (**Insert or Update**)
+
+These messages use old names. **Data Mode** is the name of **Mapping Column Mode** in node versions 2 and 2.1, and "Define Below" means the **Map Each Column Manually** option.
+
+To fix these errors, give the node a value for each column to match on and for at least one other column. Where the values come from depends on **Mapping Column Mode** (**Data Mode** in node versions 2 and 2.1):
+
+- **Map Automatically** (**Auto-Map Input Data to Columns** in node versions 2 and 2.1): n8n reads the values from the incoming item, so the item needs fields named like the column to match on and at least one other column. Use an [Edit Fields (Set) node](../../core-nodes/n8n-nodes-base.set.md) before the Postgres node to rename fields if needed.
+- **Map Each Column Manually**: n8n uses the values you set in the node. Set a value for the column to match on and for at least one other column.
+
+For the `Column to match on not found` error, n8n also treats an empty value, `0`, or `false` in the column to match on as missing.

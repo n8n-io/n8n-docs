@@ -112,7 +112,7 @@ Setting this lets n8n calculate the amount of time saved for [insights](https://
 
 ### Custom span attributes <a href="#custom-span-attributes" id="custom-span-attributes"></a>
 
-Add custom key-value attributes to the workflow's OpenTelemetry span. Refer to [Custom span attributes](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry#custom-span-attributes) for details.
+Add custom key-value attributes to the workflow's OpenTelemetry span. Refer to [Custom span attributes](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry/add-custom-span-attributes) for details.
 
 [^1]: The canvas is the main interface for building workflows in n8n's editor UI. You use the canvas to add and connect nodes to compose workflows.
 

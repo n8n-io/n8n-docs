@@ -18,7 +18,7 @@ The codex filename must match the node base filename. For example, given a node 
 
 | Parameter | Description |
 | -------- | ----------- |
-| `node`    | Identifies the node, in the format `<package-name>.<nodeName>`. `<package-name>` is the `name` in your `package.json`, which starts with `n8n-nodes-` or `@<scope>/n8n-nodes-`. `<nodeName>` is the `name` in your main node file. For example, `n8n-nodes-github-issues.githubIssues`. Each node in a package gets its own value. n8n's built-in nodes use the same format, for example `n8n-nodes-base.github` and `n8n-nodes-base.githubTrigger`. | 
+| `node`    | Identifies the node, in the format `<package-name>.<node-name>`. `<package-name>` is the `name` in your `package.json`, which starts with `n8n-nodes-` or `@<scope>/n8n-nodes-`. `<node-name>` is the `name` in your main node file. For example, `n8n-nodes-github-issues.githubIssues`. Each node in a package gets its own value. n8n's built-in nodes use the same format, for example `n8n-nodes-base.github` and `n8n-nodes-base.githubTrigger`. | 
 | `nodeVersion` | The node version. This should have the same value as the `version` parameter in your main node file. For example, `"1.0"`. |
 | `codexVersion` | The codex file version. The current version is `"1.0"`. |
 | `categories` | The settings in the `categories` array determine which category n8n adds your node to in the GUI. See [Node categories](#node-categories) for more information. |

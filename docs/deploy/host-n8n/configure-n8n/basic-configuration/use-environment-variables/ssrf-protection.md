@@ -31,7 +31,7 @@ SSRF protection is off by default. This page lists the variables that turn it on
 | Variable | Type | Default | Description |
 | :------- | :--- | :------ | :---------- |
 | `N8N_SSRF_PROTECTION_ENABLED` | Boolean | `false` | Turns on SSRF protection for requests to user-controllable targets. |
-| `N8N_SSRF_BLOCKED_IP_RANGES` | String | `default` | Comma-separated CIDR ranges to block. The keyword `default` (case-insensitive) expands to n8n's built-in set. Append your own ranges: `default,100.64.0.0/10`. |
+| `N8N_SSRF_BLOCKED_IP_RANGES` | String | `default` | Comma-separated CIDR ranges to block. The keyword `default` (case-insensitive) expands to n8n's built-in set. Append your own ranges: `default,192.88.99.0/24`. |
 | `N8N_SSRF_ALLOWED_IP_RANGES` | String | `-` | Comma-separated CIDR ranges to allow. Takes precedence over the block list, so use it to reach a known internal host. |
 | `N8N_SSRF_ALLOWED_HOSTNAMES` | String | `-` | Comma-separated hostnames to allow. Supports a leading `*.` wildcard: `*.internal.example.com` matches any subdomain, including nested ones, but not the bare domain. Matching is case-insensitive. |
 | `N8N_SSRF_BLOCKED_HOSTNAMES` | String | `-` | Comma-separated hostnames to deny by name, checked before DNS resolution. Uses the same leading `*.` wildcard and case-insensitive matching as `N8N_SSRF_ALLOWED_HOSTNAMES`. An allowed hostname always overrides a blocked one. |
@@ -47,6 +47,8 @@ When `N8N_SSRF_BLOCKED_IP_RANGES` includes `default`, n8n blocks these ranges:
 - Loopback: `127.0.0.0/8`, `::1/128`
 - Link-local, including cloud metadata: `169.254.0.0/16`, `fe80::/10`
 - IPv6 unique-local: `fc00::/7`, `fd00::/8`
+- Shared address space ([RFC 6598](https://datatracker.ietf.org/doc/html/rfc6598)): `100.64.0.0/10`
+- IPv6 transition (6to4 and NAT64) and the unspecified address: `2002::/16`, `64:ff9b::/96`, `::/128`
 - Reserved or special-purpose: `0.0.0.0/8`, `192.0.0.0/24`, `192.0.2.0/24`, `198.18.0.0/15`, `198.51.100.0/24`, `203.0.113.0/24`
 
 ## How n8n evaluates a request
@@ -79,7 +81,7 @@ N8N_SSRF_ALLOWED_HOSTNAMES=*.svc.cluster.local
 Tighten beyond the defaults. Add ranges specific to your environment:
 
 ```bash
-N8N_SSRF_BLOCKED_IP_RANGES=default,100.64.0.0/10
+N8N_SSRF_BLOCKED_IP_RANGES=default,192.88.99.0/24
 ```
 
 Deny a hostname by name. Block a host and all its subdomains, regardless of the IP it resolves to:

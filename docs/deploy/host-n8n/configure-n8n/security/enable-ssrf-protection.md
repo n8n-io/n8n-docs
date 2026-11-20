@@ -46,9 +46,11 @@ When SSRF protection is enabled, the following IP ranges are blocked by default:
 | `127.0.0.0/8`, `::1/128` | Loopback |
 | `169.254.0.0/16`, `fe80::/10` | Link-local |
 | `fc00::/7`, `fd00::/8` | IPv6 unique local |
+| `100.64.0.0/10` | Shared address space (RFC 6598) |
+| `2002::/16`, `64:ff9b::/96`, `::/128` | IPv6 transition (6to4 and NAT64) and the unspecified address |
 | `0.0.0.0/8`, `192.0.0.0/24`, `192.0.2.0/24`, `198.18.0.0/15`, `198.51.100.0/24`, `203.0.113.0/24` | Reserved/special purpose |
 
-You can extend this list with `N8N_SSRF_BLOCKED_IP_RANGES=default,100.0.0.0/8`.
+You can extend this list with `N8N_SSRF_BLOCKED_IP_RANGES=default,192.88.99.0/24`.
 
 ## Allow access to internal services <a href="#allow-access-to-internal-services" id="allow-access-to-internal-services"></a>
 

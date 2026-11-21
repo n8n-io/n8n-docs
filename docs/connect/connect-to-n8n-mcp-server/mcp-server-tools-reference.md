@@ -2246,7 +2246,7 @@ Search the skills the current user can see.
 | `count`                       | `number`  | Total number of matching skills                                                      |
 | `skills`                      | `array`   | The skills on this page                                                              |
 | `skills[].id`                 | `string`  | Skill ID. Pass it to `get_skill`, `update_skill`, or `delete_skill`.                 |
-| `skills[].name`               | `string`  | Skill name                                                                           |
+| `skills[].name`               | `string \| null` | Skill name                                                                           |
 | `skills[].description`        | `string`  | When to use the skill                                                                |
 | `skills[].scope`              | `string`  | One of: `"instance"`, `"project"`, `"agent"`                                         |
 | `skills[].projectId`          | `string`  | The project of a project skill, or the project of the agent of an agent skill        |
@@ -2259,8 +2259,8 @@ Search the skills the current user can see.
 | `skills[].usedByAgents`       | `number`  | Number of agents that use the skill                                                  |
 | `skills[].canEdit`            | `boolean` | Whether the current user can change the skill                                        |
 | `skills[].canDelete`          | `boolean` | Whether the current user can delete the skill                                        |
-| `skills[].sourceId`           | `string`  | The source that syncs the skill. `null` for a skill that isn't synced.               |
-| `skills[].syncState`          | `string`  | For a synced skill, one of: `"up_to_date"`, `"update_available"`, `"update_blocked"`, `"source_unavailable"`. `null` for a skill that isn't synced. |
+| `skills[].sourceId`           | `string \| null` | The source that syncs the skill. `null` for a skill that isn't synced.               |
+| `skills[].syncState`          | `string \| null` | For a synced skill, one of: `"up_to_date"`, `"update_available"`, `"update_blocked"`, `"source_unavailable"`. `null` for a skill that isn't synced. |
 | `skills[].updatedAt`          | `string`  | Time of the last change                                                              |
 
 ***
@@ -2284,7 +2284,7 @@ The fields of one `search_n8n_skills` item, plus:
 | `skill`     | `object` | The content: `name`, `description`, `instructions`, and `references` (an array of `path` and `content`)     |
 | `skillHash` | `string` | Hash of the current content. Pass it to `update_skill` as `baseSkillHash`.                                   |
 | `usedBy`    | `object` | The agents that use the skill: `drafts`, `pins` (published versions), and `hiddenAgents` (agents in projects the user can't read) |
-| `syncedFrom` | `object` | For a synced skill, where it comes from: `sourceId`, `type`, `label` (such as `owner/repository`), `ref` (the branch), `webUrl`, and `canStopSyncing`. `null` for a skill that isn't synced. |
+| `syncedFrom` | `object \| null` | For a synced skill, where it comes from: `sourceId`, `type`, `label` (such as `owner/repository`), `ref` (the branch), `webUrl`, and `canStopSyncing`. `null` for a skill that isn't synced. |
 
 ***
 
@@ -2372,19 +2372,19 @@ This tool has no parameters.
 | `sources[].id`                 | `string`   | Source ID. It matches the `sourceId` of the skills that the source syncs.                |
 | `sources[].type`               | `string`   | `"github"`                                                                               |
 | `sources[].label`              | `string`   | The repository, such as `owner/repository`                                               |
-| `sources[].ref`                | `string`   | The branch                                                                               |
+| `sources[].ref`                | `string \| null` | The branch. `null` for a source type that has no branches.                               |
 | `sources[].path`               | `string`   | The folder that the source reads. Empty for the whole repository.                        |
 | `sources[].webUrl`             | `string`   | The page of the source on GitHub                                                         |
-| `sources[].projectId`          | `string`   | The project of the source. `null` for a source with the `instance` scope.                |
-| `sources[].projectName`        | `string`   | Name of that project                                                                     |
-| `sources[].projectType`        | `string`   | `"personal"` or `"team"`. `null` for a source with the `instance` scope.                 |
-| `sources[].projectIcon`        | `object`   | Icon of that project                                                                     |
+| `sources[].projectId`          | `string \| null` | The project of the source. `null` for a source with the `instance` scope.                |
+| `sources[].projectName`        | `string \| null` | Name of that project                                                                     |
+| `sources[].projectType`        | `string \| null` | `"personal"` or `"team"`. `null` for a source with the `instance` scope.                 |
+| `sources[].projectIcon`        | `object \| null` | Icon of that project                                                                     |
 | `sources[].skillCount`         | `number`   | Number of synced skills of the source                                                    |
 | `sources[].updatesAvailable`   | `number`   | Updates that wait for review                                                             |
 | `sources[].updatesBlocked`     | `number`   | Updates that the security check blocked                                                  |
 | `sources[].newSkillsAvailable` | `number`   | Skills in the source that nobody imported yet                                            |
 | `sources[].health`             | `string`   | One of: `"connected"`, `"credential_issue"`, `"source_unavailable"`, `"delayed"`         |
-| `sources[].lastCheckedAt`      | `string`   | Time of the last check of the source. `null` before the first check.                     |
+| `sources[].lastCheckedAt`      | `string \| null` | Time of the last check of the source. `null` before the first check.                     |
 | `sources[].missingSkills`      | `string[]` | Names of synced skills whose folders the source no longer has                            |
 | `sources[].canReplaceCredential`, `canReview`, `canImport`, `canMove`, `canDelete` | `boolean` | What the current user can do with the source in **Settings** > **Context** > **Skills** |
 
@@ -2414,15 +2414,15 @@ This tool needs the `skill:write` scope.
 | -------------------- | --------- | ---------------------------------------------------------------------------------------------------- |
 | `source`             | `object`  | The source the link points to: `type`, `label`, `ref`, `path`, and `webUrl`                          |
 | `duplicate`          | `object`  | Whether the repository is already connected. `kind` is `"none"`, `"blocked"`, or `"warning"`. With `"blocked"`, the repository is already connected in the `instance` scope or in this scope (`where`), and an import fails. With `"warning"`, `projects` lists the other projects that have it, and an import works. |
-| `revision`           | `string`  | The commit that n8n read. Pass it to `import_skills_from_source`. Can be `null`.                     |
+| `revision`           | `string \| null` | The commit that n8n read. Pass it to `import_skills_from_source`. Can be `null`.                     |
 | `skills`             | `array`   | The skills n8n found                                                                                 |
 | `skills[].key`       | `string`  | Key of the skill. Pass it to `import_skills_from_source` in `skillKeys`.                             |
 | `skills[].location`  | `string`  | Where the skill is in the source, such as its folder                                                 |
-| `skills[].name`      | `string`  | Skill name. `null` when n8n can't read the skill.                                                    |
+| `skills[].name`      | `string \| null` | Skill name. `null` when n8n can't read the skill.                                                    |
 | `skills[].nameTaken` | `boolean` | Whether the scope already has a skill with this name                                                 |
 | `skills[].webUrl`    | `string`  | The page of the skill on GitHub, at the previewed revision                                           |
-| `skills[].verdict`   | `string`  | Result of the security check. One of: `"pass"`, `"needs_review"`, `"blocked"`. Can be `null`.        |
-| `skills[].reason`    | `string`  | Why n8n can't read the skill, such as `"parse_error"`. `null` when n8n can read it.                  |
+| `skills[].verdict`   | `string \| null` | Result of the security check. One of: `"pass"`, `"needs_review"`, `"blocked"`. Can be `null`.        |
+| `skills[].reason`    | `string \| null` | Why n8n can't read the skill, such as `"parse_error"`. `null` when n8n can read it.                  |
 | `truncated`          | `boolean` | `true` when the source has more than 200 skills. n8n lists the first 200.                            |
 | `tooDeep`            | `number`  | Number of skills n8n didn't list, because they're more than 8 folders below the link                 |
 
@@ -2446,7 +2446,7 @@ Connect a public GitHub source and import the selected skills as synced skills. 
 | `scope`     | `string`   | Yes      | The same scope as in the preview                                                         |
 | `projectId` | `string`   | No       | Required when `scope` is `"project"`                                                     |
 | `skillKeys` | `string[]` | Yes      | The `key` of each selected skill, from `discover_skill_source`. From 1 to 200 keys.      |
-| `revision`  | `string`   | Yes      | The `revision` from `discover_skill_source`. Pass `null` when the preview returned `null`. |
+| `revision`  | `string \| null` | Yes      | The `revision` from `discover_skill_source`. Pass `null` when the preview returned `null`. |
 
 #### Output
 

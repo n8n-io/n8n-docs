@@ -2246,7 +2246,7 @@ Search the skills the current user can see.
 | `count`                       | `number`  | Total number of matching skills                                                      |
 | `skills`                      | `array`   | The skills on this page                                                              |
 | `skills[].id`                 | `string`  | Skill ID. Pass it to `get_skill`, `update_skill`, or `delete_skill`.                 |
-| `skills[].name`               | `string \| null` | Skill name                                                                           |
+| `skills[].name`               | `string`  | Skill name                                                                           |
 | `skills[].description`        | `string`  | When to use the skill                                                                |
 | `skills[].scope`              | `string`  | One of: `"instance"`, `"project"`, `"agent"`                                         |
 | `skills[].projectId`          | `string`  | The project of a project skill, or the project of the agent of an agent skill        |

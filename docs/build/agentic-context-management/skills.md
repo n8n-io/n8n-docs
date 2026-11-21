@@ -482,13 +482,13 @@ n8n turns on three parts of skills step by step, with feature flags:
 | `130_attach_skills_to_assistant` | **Enable for n8n Assistant**, and skills in n8n Assistant |
 | `128_mcp_skills_extension` | **Enable for MCP clients**, and loading skills automatically in MCP clients |
 
-To turn them on yourself, set `N8N_FEATURE_FLAG_OVERRIDES`. For example, add this value to your `.env` file. Preserve any other entries in the JSON object.
+To turn them on yourself, set `N8N_FEATURE_FLAG_OVERRIDES`. For example, add this value to your `.env` file. If `N8N_FEATURE_FLAG_OVERRIDES` already has other entries, keep them in the same JSON object.
 
 ```bash
 N8N_FEATURE_FLAG_OVERRIDES='{"136_skill_sync":true,"130_attach_skills_to_assistant":true,"128_mcp_skills_extension":true}'
 ```
 
-Restart n8n to apply the change. Each value must be the boolean `true`, not the string `"variant"`.
+Restart n8n to apply the change. Set each value to the boolean `true`, not a string.
 
 ### Skill Sync environment variables
 

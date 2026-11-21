@@ -2627,7 +2627,7 @@ The fields of one `search_n8n_skills` item, plus:
 | `skill`     | `object` | The content: `name`, `description`, `instructions`, and `references` (an array of `path` and `content`)     |
 | `skillHash` | `string` | Hash of the current content. Pass it to `update_skill` as `baseSkillHash`.                                   |
 | `usedBy`    | `object` | The agents that use the skill: `drafts`, `pins` (published versions), and `hiddenAgents` (agents in projects the user can't read) |
-| `syncedFrom` | `object \| null` | For a synced skill, where it comes from: `sourceId`, `type`, `label` (such as `owner/repository`), `ref` (the branch), `webUrl`, and `canStopSyncing`. `null` for a skill that isn't synced. |
+| `syncedFrom` | `object \| null` | For a synced skill, where it comes from: `sourceId`, `type`, `label` (such as `owner/repository`), `ref` (the branch, or `null` for a source type that has no branches), `webUrl`, and `canStopSyncing`. `null` for a skill that isn't synced. |
 
 ***
 
@@ -2719,9 +2719,9 @@ This tool has no parameters.
 | `sources[].path`               | `string`   | The folder that the source reads. Empty for the whole repository.                        |
 | `sources[].webUrl`             | `string`   | The page of the source on GitHub                                                         |
 | `sources[].projectId`          | `string \| null` | The project of the source. `null` for a source with the `instance` scope.                |
-| `sources[].projectName`        | `string \| null` | Name of that project                                                                     |
+| `sources[].projectName`        | `string \| null` | Name of that project. `null` for a source with the `instance` scope. |
 | `sources[].projectType`        | `string \| null` | `"personal"` or `"team"`. `null` for a source with the `instance` scope.                 |
-| `sources[].projectIcon`        | `object \| null` | Icon of that project                                                                     |
+| `sources[].projectIcon`        | `object \| null` | Icon of that project. `null` for a source with the `instance` scope, and for a project with no icon. |
 | `sources[].skillCount`         | `number`   | Number of synced skills of the source                                                    |
 | `sources[].updatesAvailable`   | `number`   | Updates that wait for review                                                             |
 | `sources[].updatesBlocked`     | `number`   | Updates that the security check blocked                                                  |

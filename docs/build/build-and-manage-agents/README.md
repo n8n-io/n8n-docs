@@ -163,7 +163,7 @@ In the **Capabilities** section enable **Web search** to let the agent look up c
 
 #### Bundle capabilities with skills
 
-A skill is a set of instructions, with optional reference files, for a specific task. Use skills when the agent handles several distinct tasks, each with its own steps.
+A skill is a set of instructions, with optional reference files, for a specific task. Use skills when the agent handles several distinct tasks, each with its own steps. You can share a skill across multiple agents, both within n8n and externally.
 
 To add a skill:
 

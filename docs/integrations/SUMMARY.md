@@ -791,6 +791,7 @@
     * [Microsoft Entra Service Principal credentials](builtin/credentials/microsoftentraserviceprincipal.md)
     * [Provision a SharePoint app registration with the Azure CLI](builtin/credentials/microsoftentraserviceprincipal-sharepoint.md)
     * [Microsoft SQL credentials](builtin/credentials/microsoftsql.md)
+    * [Microsoft Work IQ credentials](builtin/credentials/microsoftworkiq.md)
     * [Microsoft Agent 365 credentials](builtin/credentials/microsoftagent365.md)
     * [Milvus credentials](builtin/credentials/milvus.md)
     * [Mindee credentials](builtin/credentials/mindee.md)

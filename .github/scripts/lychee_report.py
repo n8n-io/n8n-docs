@@ -13,6 +13,8 @@ n8n owns the alerting.
 Config comes from the environment (see the workflow):
   REPORT (path to lychee JSON, default lychee/out.json), EXIT_CODE (lychee-action
   exit_code output), RUN_URL, WEBHOOK_URL / WEBHOOK_USER / WEBHOOK_PASSWORD,
+  PAYLOAD_OUT (optional: also write the payload to this path), DRY_RUN ("true" = build
+  and print the report, never POST it),
   plus GITHUB_REPOSITORY / GITHUB_RUN_ID / GITHUB_SHA / GITHUB_STEP_SUMMARY set by Actions.
 """
 
@@ -47,6 +49,26 @@ MAX_FAILURES = 500
 # edit. Keep in step with the copy in link_second_pass.py; a test asserts they match.
 BLOCKED_STATUSES = frozenset({401, 403, 407, 429})
 
+# Gateway and availability errors: the host, or a proxy in front of it, failed to answer.
+# That says nothing about whether the page exists, so these go in the same not-verifiable
+# bucket as BLOCKED_STATUSES instead of counting as broken (DOC-2568). On 2026-11-09 a
+# GitHub incident returned 504 to anonymous requests for three hours. The sweep ran
+# inside it and reported 181 github.com links as broken. All of them answered 200 that
+# afternoon. 500 stays broken: it usually means the page itself is failing.
+#
+# Kept apart from BLOCKED_STATUSES on purpose. link_second_pass.py has its own copy of
+# that set, and there a 5xx is already an `error` (no verdict), which is right.
+SERVER_ERROR_STATUSES = frozenset({502, 503, 504})
+UNVERIFIABLE_STATUSES = BLOCKED_STATUSES | SERVER_ERROR_STATUSES
+
+# lychee 0.18.1 adds this guess to EVERY failed connection (lychee-lib error.rs: any
+# reqwest error where `is_connect()` is true), and drops the real cause. A host with no
+# DNS record and a host with a bad certificate get the same text, so passing the guess on
+# would label every dead host a certificate problem (DOC-2615: portal.airtop.ai has no
+# DNS record and was reported this way). The guess is replaced with the one thing it does
+# tell us: the connection failed. Newer lychee versions report the real cause instead.
+LYCHEE_CONNECT_GUESS = " Maybe a certificate error?"
+
 # --------------------------------------------------------------------- pure helpers
 # No I/O here so the tests can cover them.
 
@@ -55,7 +77,12 @@ def parse_status(entry):
     """Return (code or None, message) from a lychee failure entry.
 
     lychee writes `status` either as an object ({"text": "...", "code": 404}) or, in
-    older versions, as a plain string like "404 Not Found"."""
+    older versions, as a plain string like "404 Not Found".
+
+    The message keeps both `text` and `details` (DOC-2615). `text` alone is only the
+    category ("Network error"); the cause is in `details`, and DocOps needs it to tell a
+    host that is gone from a temporary failure. Newer lychee versions already repeat the
+    details inside `text`, so they are only appended when missing."""
     status = entry.get("status") if isinstance(entry, dict) else None
     if isinstance(status, dict):
         code = status.get("code")
@@ -63,8 +90,13 @@ def parse_status(entry):
             code = int(code) if code is not None else None
         except (TypeError, ValueError):
             code = None
-        text = status.get("text") or status.get("details") or ""
-        return code, str(text)
+        text = str(status.get("text") or "")
+        details = str(status.get("details") or "")
+        if details.endswith(LYCHEE_CONNECT_GUESS):
+            details = "connection failed: " + details[:-len(LYCHEE_CONNECT_GUESS)].strip()
+        if text and details and details not in text:
+            return code, f"{text}: {details}"
+        return code, text or details
     if isinstance(status, str):
         parts = status.split()
         code = int(parts[0]) if parts and parts[0].isdigit() else None
@@ -107,8 +139,8 @@ def build_payload(stats, ctx):
     lychee JSON (or {} when the report is missing); `ctx` carries run metadata."""
     stats = stats or {}
     all_failures = flatten_failures(stats)
-    failures = [f for f in all_failures if f["status"] not in BLOCKED_STATUSES]
-    blocked = [f for f in all_failures if f["status"] in BLOCKED_STATUSES]
+    failures = [f for f in all_failures if f["status"] not in UNVERIFIABLE_STATUSES]
+    blocked = [f for f in all_failures if f["status"] in UNVERIFIABLE_STATUSES]
     # `errors` = the rows we actually deliver (errors AND timeouts), so counts shown in
     # Slack/DocFather always match the sheet/Supabase rows. lychee's own counter, which
     # excludes timeouts, is kept separately as `lychee_errors`.
@@ -119,6 +151,9 @@ def build_payload(stats, ctx):
         "timeouts": _int(stats.get("timeouts")),
         "errors": len(failures),
         "blocked": len(blocked),
+        # The 502/503/504 share of `blocked`, counted before the MAX_FAILURES cap so
+        # the summary can say how much of the bucket was a host outage.
+        "server_errors": sum(1 for f in blocked if f["status"] in SERVER_ERROR_STATUSES),
         "lychee_errors": _int(stats.get("errors")),
     }
     return {
@@ -168,16 +203,21 @@ def merge_quality(payload, quality):
         if url in reported:
             continue
         if url in blocked_urls:
-            if f.get("kind") == "blocked":
-                continue          # same verdict, no new information
+            # `blocked` is the same verdict and `error` is no verdict at all (the second
+            # pass got no answer either). Neither may withdraw the lychee row: during a
+            # host outage the second pass hits the same 504s, and promoting its `error`
+            # moved those links out of the not-verifiable count (DOC-2568).
+            if f.get("kind") in ("blocked", "error"):
+                continue
             promoted.add(url)
         kept.append(f)
 
-    withdrawn = 0
+    withdrawn = withdrawn_server = 0
     if promoted:
-        before = len(payload["blocked"])
+        gone = [f for f in payload["blocked"] if f["url"] in promoted]
         payload["blocked"] = [f for f in payload["blocked"] if f["url"] not in promoted]
-        withdrawn = before - len(payload["blocked"])
+        withdrawn = len(gone)
+        withdrawn_server = sum(1 for f in gone if f["status"] in SERVER_ERROR_STATUSES)
 
     q_totals = quality.get("totals") or {}
     payload["quality"] = kept[:MAX_FAILURES]
@@ -193,6 +233,8 @@ def merge_quality(payload, quality):
     # the cap; those stay counted, which overstates rather than hides. `blocked_truncated`
     # remains the flag that the list is partial.
     payload["totals"]["blocked"] = max(0, _int(payload["totals"].get("blocked")) - withdrawn)
+    payload["totals"]["server_errors"] = max(
+        0, _int(payload["totals"].get("server_errors")) - withdrawn_server)
     payload["totals"].update({
         "quality_checked": _int(q_totals.get("checked")),
         "soft_404": _int(q_totals.get("soft_404")),
@@ -214,8 +256,13 @@ def summary_markdown(payload):
                  f"successful {t['successful']}, timeouts {t['timeouts']})")
     lines.append(f"- Broken: {t['errors']}")
     if t.get("blocked"):
-        lines.append(f"- Blocked by the host (401/403/407/429, not verifiable): "
-                     f"{t['blocked']}")
+        lines.append(f"- Blocked by the host or server error "
+                     f"(401/403/407/429/502/503/504, not verifiable): {t['blocked']}")
+        # From the totals, not the delivered rows: those are capped at MAX_FAILURES.
+        server = _int(t.get("server_errors"))
+        if server:
+            lines.append(f"  - of which server errors (502/503/504), usually a host "
+                         f"outage: {server}")
     pages = {}
     for f in payload["failures"]:
         pages[f["page"]] = pages.get(f["page"], 0) + 1
@@ -290,6 +337,20 @@ def main():
     if summary_path:
         with open(summary_path, "a", encoding="utf-8") as fh:
             fh.write(summary)
+
+    # Keep the exact payload next to the lychee report, so the run artifact shows what
+    # n8n received (or would have received). It holds no secrets.
+    payload_path = os.environ.get("PAYLOAD_OUT")
+    if payload_path:
+        Path(payload_path).parent.mkdir(parents=True, exist_ok=True)
+        Path(payload_path).write_text(json.dumps(payload, indent=2), encoding="utf-8")
+
+    # A manual run with send_report=false (lychee.yml): check everything, post nothing.
+    # Nothing reaches the webhook, so no Slack message, sheet tab, Supabase or Notion row.
+    if os.environ.get("DRY_RUN", "").lower() == "true":
+        print(f"Dry run: report NOT sent to n8n ({payload['totals']['errors']} broken "
+              f"link(s), {len(payload['failures'])} rows).")
+        return 0 if stats is not None else 1
 
     url = os.environ.get("WEBHOOK_URL")
     if not url:

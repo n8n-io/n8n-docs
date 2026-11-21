@@ -3,10 +3,6 @@ description: >-
   Learn how to use the Embeddings Databricks node in n8n. Generate embeddings
   with a Databricks model service and pair the node with the Databricks Vector
   Store node.
-status: preview
-tags:
-  - tag: preview
-    primary: true
 layout:
   description:
     visible: false
@@ -22,12 +18,6 @@ On this page, you'll find the prerequisites, setup steps, pairing rules, node pa
 **Credentials**
 
 Refer to [Databricks credentials](../../credentials/databricks.md) for guidance on setting up authentication. The node accepts the **Databricks OAuth2 API** credential only, with a service principal or user login. It doesn't accept a personal access token.
-{% endhint %}
-
-{% hint style="info" %}
-**Preview status**
-
-The Embeddings Databricks node is in Preview from n8n 2.45.0 and may change in future releases. Avoid relying on it in production workflows.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/X6JM1Mgg5iwvZLDpGEB0/" %}

@@ -32,11 +32,11 @@ Enter these parameters:
 - **Credential to connect with**: Create or select an existing [OpenAI credential](../../credentials/openai.md).
 - **Resource**: Select **Audio**.
 - **Operation**: Select **Generate Audio**.
-- **Model**: Select the model you want to use to generate the audio. Refer to [TTS | OpenAI](https://platform.openai.com/docs/models/tts) for more information.
+- **Model**: Select the model you want to use to generate the audio. Refer to [TTS | OpenAI](https://platform.openai.com/docs/models/tts-1) for more information.
     - **TTS-1**: Use this to optimize for speed.
     - **TTS-1-HD**:	Use this to optimize for quality.
 - **Text Input**: Enter the text to generate the audio for. The maximum length is 4096 characters.
-- **Voice**: Select a voice to use when generating the audio. Listen to the previews of the voices in [Text to speech guide | OpenAI](https://platform.openai.com/docs/guides/text-to-speech/quickstart).
+- **Voice**: Select a voice to use when generating the audio. Listen to the previews of the voices in [Text to speech guide | OpenAI](https://platform.openai.com/docs/guides/text-to-speech#voice-options).
 
 ### Options <a href="#options" id="options"></a>
 

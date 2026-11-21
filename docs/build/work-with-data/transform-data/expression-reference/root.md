@@ -109,7 +109,7 @@ layout:
 
 ## **`$ifEmpty()`** <a href="#dollarifempty" id="dollarifempty"></a>
 
-**Description:** Returns the first parameter if it isn’t empty, otherwise returns the second parameter. The following count as empty: <code>””</code>, <code>[]</code>, <code>{}</code>, <code>null</code>, <code>undefined</code>
+**Description:** Returns the first parameter if it isn’t empty, otherwise returns the second parameter. The following count as empty: <code>""</code>, <code>[]</code>, <code>{}</code>, <code>null</code>, <code>undefined</code>
 
 **Syntax:** $ifEmpty(value, valueIfEmpty)
 
@@ -150,7 +150,7 @@ layout:
 
 ## **`$jmespath()`** <a href="#dollarjmespath" id="dollarjmespath"></a>
 
-**Description:** Extracts data from an object (or array of objects) using a <a href=”/code/cookbook/jmespath/”>JMESPath</a> expression. Useful for querying complex, nested objects. Returns <code>undefined</code> if the expression is invalid.
+**Description:** Extracts data from an object (or array of objects) using a <a href="../../../code-in-n8n/use-built-in-shortcuts/jmespath.md">JMESPath</a> expression. Useful for querying complex, nested objects. Returns <code>undefined</code> if the expression is invalid.
 
 **Syntax:** $jmespath(obj, expression)
 
@@ -161,7 +161,7 @@ layout:
 **Parameters:**
 
   * `obj` (Object|Array) - The Object or array of Objects to retrieve data from
-  * `expression` (String) - A <a href=”https://jmespath.org/examples.html”>JMESPath expression</a> defining the data to retrieve from the object
+  * `expression` (String) - A <a href="https://jmespath.org/examples.html">JMESPath expression</a> defining the data to retrieve from the object
 
 **Examples:**
 

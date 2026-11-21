@@ -40,7 +40,7 @@ Skills are available on:
 
 Skills aren't available on n8n Cloud Enterprise or self-hosted Enterprise yet.
 
-Skills are available from n8n 2.45.0. Managing skills from n8n Assistant, and the MCP skills extension on the n8n MCP server, are available from n8n 2.46.0. The **Enable for n8n Assistant** and **Enable for MCP clients** settings, and importing skills from GitHub, are available from n8n 2.47.0.
+Skills are available from n8n 2.45.0. Managing skills from n8n Assistant, and the MCP skills extension on the n8n MCP server, are available from n8n 2.46.0. The **Enable for n8n Assistant** and **Enable for MCP clients** settings, and importing skills from GitHub, are available from n8n 2.47.0. Importing skills from GitHub with n8n Assistant and with MCP clients is available from n8n 2.50.0.
 {% endhint %}
 
 {% hint style="info" %}
@@ -207,6 +207,27 @@ You can attach a synced skill to agents, view its versions, download it, and del
 
 To make a synced skill editable, open the skill's options menu in the list and select **Stop syncing**. The skill stays in its scope with all its versions, and agents keep using it. After that, you can edit it and move it. The skill no longer gets changes from GitHub, and you can't undo this.
 
+### Import skills with n8n Assistant or an MCP client
+
+n8n Assistant and MCP clients can also work with GitHub repositories. They can:
+
+* List the repositories that you can see, with their sync status and the number of updates that wait for review.
+* Preview the skills in a link to a public repository, with the result of the security check for each skill.
+* Connect a public repository and import the skills you pick.
+
+The rules of the import dialog apply: the [links n8n accepts](skills.md#github-links-n8n-accepts), the scopes where you can create skills, the security check, and the rules for a [repository that's already connected](skills.md#repository-already-connected). n8n imports the skills as synced skills.
+
+n8n Assistant and MCP clients import only skills that pass the security check with no warnings. Do these tasks in **Settings** > **Context** > **Skills**:
+
+* Import skills from a private repository. n8n Assistant and MCP clients can't use a GitHub credential.
+* Import more skills from a repository that's already connected in the scope.
+* Import a skill that has warnings. A person must read the warnings first.
+* Review and accept the updates that synced skills get from GitHub.
+
+Each user can make 15 preview and import requests in 5 minutes, in n8n Assistant and MCP clients together. If you reach the limit, wait 5 minutes.
+
+For the steps, see [Import skills from GitHub with n8n Assistant](skills.md#import-skills-from-github-with-n8n-assistant) and [Import skills from GitHub with the skill source tools](skills.md#import-skills-from-github-with-the-skill-source-tools).
+
 ## Use skills in agents
 
 To add a skill to an agent:
@@ -248,7 +269,25 @@ The n8n MCP server has these skill tools:
 | `update_skill` | Changes a skill. A content change creates a new version. |
 | `delete_skill` | Deletes a skill. n8n refuses while an agent uses it. |
 
-The skill tools work for every skill you can see, whatever the setting **Enable for MCP clients** is. For each tool's parameters and output, see [Skills](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server/mcp-server-tools-reference#skills) in the MCP server tools reference.
+The skill tools work for every skill you can see, whatever the setting **Enable for MCP clients** is. For a synced skill, `search_n8n_skills` and `get_skill` also return its sync status and the repository it comes from. For each tool's parameters and output, see [Skills](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server/mcp-server-tools-reference#skills) in the MCP server tools reference.
+
+### Import skills from GitHub with the skill source tools
+
+When importing skills from GitHub is on, the n8n MCP server also has these tools:
+
+| Tool | What it does |
+| ---- | ------------ |
+| `list_skill_sources` | Lists the connected repositories you can see, with their sync status and update counts |
+| `discover_skill_source` | Previews the skills in a link to a public repository, with the result of the security check for each skill |
+| `import_skills_from_source` | Connects a public repository and imports the skills you pick as synced skills |
+
+To import skills, ask the MCP client to preview a link, for example "Preview the skills in `https://github.com/rmakowiak/example-skills` for my personal project". The client calls `discover_skill_source` and shows you the skills and their check results. Tell the client which skills to import. The client then calls `import_skills_from_source` with the same link, the same scope, and the revision from the preview.
+
+n8n reads the repository again before it imports. If the repository changed after the preview, n8n imports nothing and asks for a new preview. n8n imports the picked skills that pass the security check, and the result lists the other picked skills with a reason.
+
+n8n doesn't ask you to approve an import from an MCP client. The **Create, update and delete skills** permission that you gave the client covers it. If you want to approve each import, set that in your MCP client.
+
+An imported skill starts with **Enable for n8n Assistant** and **Enable for MCP clients** off, and no agent uses it. For what MCP clients can't do with repositories, see [Import skills with n8n Assistant or an MCP client](skills.md#import-skills-with-n8n-assistant-or-an-mcp-client).
 
 ### Use skills in clients with the skills extension
 
@@ -270,8 +309,10 @@ When you connect an MCP client with OAuth, n8n asks you to approve two permissio
 
 | Permission on the consent screen | OAuth scope | Tools |
 | -------------------------------- | ----------- | ----- |
-| **List and read skills** | `skill:read` | `search_n8n_skills`, `get_skill` |
-| **Create, update and delete skills** | `skill:write` | `create_skill`, `update_skill`, `delete_skill`, `search_n8n_skills`, `get_skill` |
+| **List and read skills** | `skill:read` | `search_n8n_skills`, `get_skill`, `list_skill_sources` |
+| **Create, update and delete skills** | `skill:write` | `create_skill`, `update_skill`, `delete_skill`, `search_n8n_skills`, `get_skill`, `list_skill_sources`, `discover_skill_source`, `import_skills_from_source` |
+
+The consent screen lists the three skill source tools only when importing skills from GitHub is on. A client that already has these permissions gets the skill source tools without a new connection.
 
 If you connected a client before skills were on, reconnect it to grant these permissions. See [Reviewing and revoking client access](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/connect-to-n8n-mcp-server#revoking-client-access).
 
@@ -290,6 +331,23 @@ Instance owners and admins control these actions in **Settings** > **Assistant**
 | **Delete skills** | **Ask first** |
 
 Set a permission to **Allow** to skip the approval, or to **Block** to stop n8n Assistant from doing the action. With **Block** set, n8n Assistant can still list and read skills.
+
+### Import skills from GitHub with n8n Assistant
+
+When importing skills from GitHub is on, you can ask n8n Assistant to import skills from a public repository:
+
+1. Ask n8n Assistant to preview a link, for example "Show me the skills in `https://github.com/rmakowiak/example-skills`". Say where the skills go: a project, or the whole instance.
+2. n8n Assistant lists the skills with the result of the security check for each one. Tell it which skills to import.
+3. n8n Assistant asks you to approve the import. The request names the repository, the scope, and the skills that n8n imports. It also says how many of the skills you picked can't come in.
+4. Select **Allow once**.
+
+n8n Assistant asks before each import. An import has no **Always allow** option, and the **Allow** setting of a permission doesn't skip this approval. The import uses the **Create skills** permission. If that permission is **Block**, n8n Assistant can't import skills.
+
+n8n reads the repository again before it imports. If the repository changed after the preview, n8n imports nothing, and n8n Assistant must preview the link again.
+
+An imported skill starts with **Enable for n8n Assistant** off. Turn it on in the skill's edit dialog to let n8n Assistant use the skill.
+
+You can also ask n8n Assistant to list the connected repositories and the synced skills that have updates. For what n8n Assistant can't do with repositories, see [Import skills with n8n Assistant or an MCP client](skills.md#import-skills-with-n8n-assistant-or-an-mcp-client).
 
 ## Skill versions
 
@@ -333,7 +391,7 @@ n8n turns on three parts of skills step by step, with feature flags:
 
 | Flag | Turns on |
 | ---- | -------- |
-| `136_skill_sync` | [Import skills from GitHub](skills.md#import-skills-from-github) |
+| `136_skill_sync` | [Import skills from GitHub](skills.md#import-skills-from-github), in **Settings**, in n8n Assistant, and in MCP clients |
 | `130_attach_skills_to_assistant` | **Enable for n8n Assistant**, and skills in n8n Assistant |
 | `128_mcp_skills_extension` | **Enable for MCP clients**, and loading skills automatically in MCP clients |
 

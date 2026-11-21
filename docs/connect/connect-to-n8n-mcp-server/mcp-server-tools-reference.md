@@ -2186,7 +2186,7 @@ Remove a preference that an MCP client saved for the current user. Use it when t
 {% hint style="info" %}
 **Feature availability**
 
-The skill tools are available from n8n 2.45.0. In n8n 2.45, the search tool has the name `search_skills`. The `availableToAssistant` and `availableToMCP` fields, and the MCP skills extension, are available from n8n 2.46.0.
+The skill tools are available from n8n 2.45.0. In n8n 2.45, the search tool has the name `search_skills`. The `availableToAssistant` and `availableToMCP` fields, and the MCP skills extension, are available from n8n 2.46.0. The skill source tools (`list_skill_sources`, `discover_skill_source`, and `import_skills_from_source`), and the `sourceId`, `syncState`, and `syncedFrom` fields, are available from n8n 2.50.0.
 {% endhint %}
 
 {% hint style="info" %}
@@ -2195,14 +2195,14 @@ The skill tools are available from n8n 2.45.0. In n8n 2.45, the search tool has 
 Skills are part of agentic context management, which is in Preview and may change in future releases.&#x20;
 {% endhint %}
 
-[Skills](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/agentic-context-management/skills) are instructions, with optional reference files, that agents and n8n Assistant follow for a specific task. MCP clients, such as Claude Code, can find, read, create, change, and delete the skills the current user has access to.
+[Skills](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/agentic-context-management/skills) are instructions, with optional reference files, that agents and n8n Assistant follow for a specific task. MCP clients, such as Claude Code, can find, read, create, change, and delete the skills the current user has access to. They can also import skills from a public GitHub repository.
 
 Two OAuth scopes cover these tools:
 
 | OAuth scope   | Consent screen label                 | Tools                                                                            |
 | ------------- | ------------------------------------ | -------------------------------------------------------------------------------- |
-| `skill:read`  | **List and read skills**             | `search_n8n_skills`, `get_skill`                                                 |
-| `skill:write` | **Create, update and delete skills** | `create_skill`, `update_skill`, `delete_skill`, `search_n8n_skills`, `get_skill` |
+| `skill:read`  | **List and read skills**             | `search_n8n_skills`, `get_skill`, `list_skill_sources`                           |
+| `skill:write` | **Create, update and delete skills** | `create_skill`, `update_skill`, `delete_skill`, `search_n8n_skills`, `get_skill`, `list_skill_sources`, `discover_skill_source`, `import_skills_from_source` |
 
 Each skill has one of three scopes:
 
@@ -2221,6 +2221,8 @@ A skill has these limits:
 * References: up to 20 Markdown files, each up to 65,536 characters, and up to 262,144 characters in total.
 
 Two fields depend on feature flags. `availableToAssistant` appears only when skills in n8n Assistant are on (`130_attach_skills_to_assistant`). `availableToMCP` appears only when the MCP skills extension is on (`128_mcp_skills_extension`). With the extension on, the n8n MCP server also offers the skills marked `availableToMCP` through the [MCP skills extension](https://modelcontextprotocol.io/seps/2640-skills-extension) (`skills/list` and `skills/get`). Only MCP clients that support the extension use it.
+
+The three skill source tools appear only when importing skills from GitHub is on for the current user (`136_skill_sync`).
 
 ### search\_n8n\_skills
 
@@ -2257,6 +2259,8 @@ Search the skills the current user can see.
 | `skills[].usedByAgents`       | `number`  | Number of agents that use the skill                                                  |
 | `skills[].canEdit`            | `boolean` | Whether the current user can change the skill                                        |
 | `skills[].canDelete`          | `boolean` | Whether the current user can delete the skill                                        |
+| `skills[].sourceId`           | `string`  | The source that syncs the skill. `null` for a skill that isn't synced.               |
+| `skills[].syncState`          | `string`  | For a synced skill, one of: `"up_to_date"`, `"update_available"`, `"update_blocked"`, `"source_unavailable"`. `null` for a skill that isn't synced. |
 | `skills[].updatedAt`          | `string`  | Time of the last change                                                              |
 
 ***
@@ -2280,6 +2284,7 @@ The fields of one `search_n8n_skills` item, plus:
 | `skill`     | `object` | The content: `name`, `description`, `instructions`, and `references` (an array of `path` and `content`)     |
 | `skillHash` | `string` | Hash of the current content. Pass it to `update_skill` as `baseSkillHash`.                                   |
 | `usedBy`    | `object` | The agents that use the skill: `drafts`, `pins` (published versions), and `hiddenAgents` (agents in projects the user can't read) |
+| `syncedFrom` | `object` | For a synced skill, where it comes from: `sourceId`, `type`, `label` (such as `owner/repository`), `ref` (the branch), `webUrl`, and `canStopSyncing`. `null` for a skill that isn't synced. |
 
 ***
 
@@ -2350,6 +2355,126 @@ Delete a skill permanently. n8n refuses while an agent uses the skill.
 | --------- | --------- | ---------------------------------- |
 | `deleted` | `boolean` | `true` when n8n deleted the skill  |
 | `skillId` | `string`  | The ID the call asked for          |
+
+***
+
+### list\_skill\_sources
+
+List the skill sources the current user can see, with their sync status and update counts. A skill source is a GitHub repository, or a folder in one, that someone connected to import skills.
+
+This tool has no parameters.
+
+#### Output
+
+| Field                          | Type       | Description                                                                              |
+| ------------------------------ | ---------- | ---------------------------------------------------------------------------------------- |
+| `sources`                      | `array`    | The sources the current user can see                                                     |
+| `sources[].id`                 | `string`   | Source ID. It matches the `sourceId` of the skills that the source syncs.                |
+| `sources[].type`               | `string`   | `"github"`                                                                               |
+| `sources[].label`              | `string`   | The repository, such as `owner/repository`                                               |
+| `sources[].ref`                | `string`   | The branch                                                                               |
+| `sources[].path`               | `string`   | The folder that the source reads. Empty for the whole repository.                        |
+| `sources[].webUrl`             | `string`   | The page of the source on GitHub                                                         |
+| `sources[].projectId`          | `string`   | The project of the source. `null` for a source with the `instance` scope.                |
+| `sources[].projectName`        | `string`   | Name of that project                                                                     |
+| `sources[].projectType`        | `string`   | `"personal"` or `"team"`. `null` for a source with the `instance` scope.                 |
+| `sources[].projectIcon`        | `object`   | Icon of that project                                                                     |
+| `sources[].skillCount`         | `number`   | Number of synced skills of the source                                                    |
+| `sources[].updatesAvailable`   | `number`   | Updates that wait for review                                                             |
+| `sources[].updatesBlocked`     | `number`   | Updates that the security check blocked                                                  |
+| `sources[].newSkillsAvailable` | `number`   | Skills in the source that nobody imported yet                                            |
+| `sources[].health`             | `string`   | One of: `"connected"`, `"credential_issue"`, `"source_unavailable"`, `"delayed"`         |
+| `sources[].lastCheckedAt`      | `string`   | Time of the last check of the source. `null` before the first check.                     |
+| `sources[].missingSkills`      | `string[]` | Names of synced skills whose folders the source no longer has                            |
+| `sources[].canReplaceCredential`, `canReview`, `canImport`, `canMove`, `canDelete` | `boolean` | What the current user can do with the source in **Settings** > **Context** > **Skills** |
+
+#### Usage notes
+
+* The tool only reads. To review and accept updates, use **Settings** > **Context** > **Skills**.
+
+***
+
+### discover\_skill\_source
+
+Preview the skills in a public GitHub repository, a folder, or one `SKILL.md` file, for a scope. The tool stores nothing. Show the user the check results before you import.
+
+This tool needs the `skill:write` scope.
+
+#### Parameters
+
+| Name        | Type     | Required | Description                                                                                      |
+| ----------- | -------- | -------- | ------------------------------------------------------------------------------------------------ |
+| `url`       | `string` | Yes      | A link to a public GitHub repository, a folder, or one `SKILL.md` file. Up to 2,048 characters. |
+| `scope`     | `string` | Yes      | Where the skills go. `"project"`: one project. `"instance"`: every project.                      |
+| `projectId` | `string` | No       | Required when `scope` is `"project"`. Get it from `search_projects`.                             |
+
+#### Output
+
+| Field                | Type      | Description                                                                                          |
+| -------------------- | --------- | ---------------------------------------------------------------------------------------------------- |
+| `source`             | `object`  | The source the link points to: `type`, `label`, `ref`, `path`, and `webUrl`                          |
+| `duplicate`          | `object`  | Whether the repository is already connected. `kind` is `"none"`, `"blocked"`, or `"warning"`. With `"blocked"`, the repository is already connected in the `instance` scope or in this scope (`where`), and an import fails. With `"warning"`, `projects` lists the other projects that have it, and an import works. |
+| `revision`           | `string`  | The commit that n8n read. Pass it to `import_skills_from_source`. Can be `null`.                     |
+| `skills`             | `array`   | The skills n8n found                                                                                 |
+| `skills[].key`       | `string`  | Key of the skill. Pass it to `import_skills_from_source` in `skillKeys`.                             |
+| `skills[].location`  | `string`  | Where the skill is in the source, such as its folder                                                 |
+| `skills[].name`      | `string`  | Skill name. `null` when n8n can't read the skill.                                                    |
+| `skills[].nameTaken` | `boolean` | Whether the scope already has a skill with this name                                                 |
+| `skills[].webUrl`    | `string`  | The page of the skill on GitHub, at the previewed revision                                           |
+| `skills[].verdict`   | `string`  | Result of the security check. One of: `"pass"`, `"needs_review"`, `"blocked"`. Can be `null`.        |
+| `skills[].reason`    | `string`  | Why n8n can't read the skill, such as `"parse_error"`. `null` when n8n can read it.                  |
+| `truncated`          | `boolean` | `true` when the source has more than 200 skills. n8n lists the first 200.                            |
+| `tooDeep`            | `number`  | Number of skills n8n didn't list, because they're more than 8 folders below the link                 |
+
+#### Usage notes
+
+* `import_skills_from_source` takes a skill only when its `verdict` is `"pass"`, its `reason` is `null`, and `nameTaken` is `false`.
+* A user can import a skill with the verdict `"needs_review"` in **Settings** > **Context** > **Skills**, after they read the warnings. Nobody can import a skill with the verdict `"blocked"`.
+* The tool doesn't read private repositories. Use **Settings** > **Context** > **Skills** for those.
+
+***
+
+### import\_skills\_from\_source
+
+Connect a public GitHub source and import the selected skills as synced skills. A synced skill is read-only in n8n, and changes only in GitHub. Call `discover_skill_source` first, and confirm the source, the scope, and the selection with the user.
+
+#### Parameters
+
+| Name        | Type       | Required | Description                                                                              |
+| ----------- | ---------- | -------- | ---------------------------------------------------------------------------------------- |
+| `url`       | `string`   | Yes      | The same link as in the preview                                                          |
+| `scope`     | `string`   | Yes      | The same scope as in the preview                                                         |
+| `projectId` | `string`   | No       | Required when `scope` is `"project"`                                                     |
+| `skillKeys` | `string[]` | Yes      | The `key` of each selected skill, from `discover_skill_source`. From 1 to 200 keys.      |
+| `revision`  | `string`   | Yes      | The `revision` from `discover_skill_source`. Pass `null` when the preview returned `null`. |
+
+#### Output
+
+| Field                | Type     | Description                                                                         |
+| -------------------- | -------- | ----------------------------------------------------------------------------------- |
+| `sourceId`           | `string` | ID of the connected source                                                          |
+| `imported`           | `array`  | The skills n8n imported                                                             |
+| `imported[].key`     | `string` | Key of the skill in the source                                                      |
+| `imported[].skillId` | `string` | ID of the new skill. Pass it to `get_skill`.                                        |
+| `imported[].name`    | `string` | Name of the new skill                                                               |
+| `failed`             | `array`  | The selected skills n8n didn't import. Each item has a `key`, a `name`, and a `reason`, such as `"blocked_by_check"`, `"review_required"`, `"name_taken"`, or `"not_found"`. |
+
+If n8n refuses a preview or an import, the result has `ok: false`, a `code`, and an `error` message. Both tools use these codes:
+
+* `stale`: the source changed since the preview. n8n imported nothing. Call `discover_skill_source` again.
+* `duplicate_source`: the repository is already connected in the `instance` scope or in this scope. To import more of its skills, use **Settings** > **Context** > **Skills**.
+* `rate_limited`: the user made 15 preview and import requests in 5 minutes, or GitHub limits the requests. Wait 5 minutes.
+* `invalid_url`, `unsupported_provider`: the link isn't a GitHub link that n8n accepts.
+* `not_found`: n8n can't read the repository. It's private or doesn't exist.
+* `no_skills_found`: the link has no `SKILL.md` file.
+* `blocked_by_check`, `review_required`, `name_taken`: none of the selected skills can come in, for this reason.
+
+#### Usage notes
+
+* n8n reads the source again before it imports, and runs the security check again. If one selected skill can't come in, the others still do.
+* n8n has no approval step for this tool. The `skill:write` scope covers it, as for `create_skill`.
+* An imported skill starts with `availableToAssistant` and `availableToMCP` set to `false`, and no agent uses it.
+* The tool doesn't import from private repositories, import a skill that has warnings, or accept updates. It also doesn't import more skills from a source that's already connected. Use **Settings** > **Context** > **Skills** for those.
 
 ***
 

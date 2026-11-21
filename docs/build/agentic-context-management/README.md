@@ -50,7 +50,15 @@ Context follows n8n's permissions. Each person only receives the context they're
 
 ## Types of context
 
-Today, n8n supports one kind of context: [preferences](preferences.md). A preference is a short instruction, such as "Always connect an error workflow", that AI tools apply every time they build workflows and agents for you. You can save a preference for yourself, for a project, or for everyone on the instance.
+n8n supports two kinds of context:
+
+* [Preferences](preferences.md): short instructions, such as "Always connect an error workflow", that AI tools apply every time they build workflows and agents for you. You can save a preference for yourself, for a project, or for everyone on the instance.
+* [Skills](skills.md): instructions, with optional reference files, that agents and n8n Assistant follow for a specific task. You can create skills in n8n or import them from GitHub.
+
+## In this section
+
+* [Preferences](preferences.md): save rules that AI tools apply every time they build for you.
+* [Skills](skills.md): create skills for agents and n8n Assistant, and import skills from GitHub.
 
 ## Related resources
 

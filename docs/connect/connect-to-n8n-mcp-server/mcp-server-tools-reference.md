@@ -314,7 +314,7 @@ Publish (activate) a workflow to make it available for production execution. Thi
 
 * From n8n 2.50.0, when the workflow publication service is on, `publish_workflow` waits up to five seconds for n8n to activate the triggers of the requested version. If activation doesn't finish in that time, the response has `success: false` and `publicationStatus.status` is `"in_progress"`.
 * When `N8N_USE_WORKFLOW_PUBLICATION_SERVICE` is `false`, the response has no `publicationStatus`. In multi-main mode, `publish_workflow` can return `success: true` before the leader registers the triggers.
-* From n8n 2.50.0, an instance can require an approved review for every new version of a team project workflow. [Workflow reviews](../../build/manage-workflows/workflow-reviews.md) are an Enterprise feature in Preview. When this policy is on, `publish_workflow` rejects a version with no approved review. The response has `success: false`, `reason: "review_required"`, and the `versionId` of the version. `publish_workflow` can't submit a review. Submit the version for review in the n8n editor, then call `publish_workflow` after a reviewer approves it. This rule applies to all users, including instance owners and admins. It doesn't apply to workflows in a personal space.
+* From n8n 2.50.0, an instance can require an approved review for every new version of a team project workflow. [Workflow reviews](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/workflow-reviews) are an Enterprise feature in Preview. When this policy is on, `publish_workflow` rejects a version with no approved review. The response has `success: false`, `reason: "review_required"`, and the `versionId` of the version. `publish_workflow` can't submit a review. Submit the version for review in the n8n editor, then call `publish_workflow` after a reviewer approves it. This rule applies to all users, including instance owners and admins. It doesn't apply to workflows in a personal space.
 
 ***
 
@@ -2557,7 +2557,6 @@ Each skill has one of three scopes:
 | `instance` | Agents in every project          | Instance owners and admins                          |
 | `project`  | Agents in one team project       | Project admins and project editors                  |
 | `project`  | Agents in one personal project   | The owner of the personal project                   |
-| `agent`    | One agent only                   | People who can edit the agent's project. MCP clients can't create these skills. |
 
 A skill has these limits:
 
@@ -2579,7 +2578,7 @@ Search the skills the current user can see.
 | Name                  | Type     | Required | Description                                                                         |
 | --------------------- | -------- | -------- | ----------------------------------------------------------------------------------- |
 | `query`               | `string` | No       | Filter by skill name or description. Up to 200 characters.                          |
-| `scope`               | `string` | No       | Only skills of this scope. One of: `"instance"`, `"project"`, `"agent"`.            |
+| `scope`               | `string` | No       | Only skills of this scope. One of: `"instance"`, `"project"`.                       |
 | `projectId`           | `string` | No       | Only skills of this project                                                         |
 | `attachableToAgentId` | `string` | No       | Only the skills this agent can use. Don't combine it with `scope` or `projectId`.   |
 | `limit`               | `number` | No       | Skills to return, from 1 to 100. Default: 50.                                       |
@@ -2594,11 +2593,9 @@ Search the skills the current user can see.
 | `skills[].id`                 | `string`  | Skill ID. Pass it to `get_skill`, `update_skill`, or `delete_skill`.                 |
 | `skills[].name`               | `string`  | Skill name                                                                           |
 | `skills[].description`        | `string`  | When to use the skill                                                                |
-| `skills[].scope`              | `string`  | One of: `"instance"`, `"project"`, `"agent"`                                         |
-| `skills[].projectId`          | `string`  | The project of a project skill, or the project of the agent of an agent skill        |
+| `skills[].scope`              | `string`  | One of: `"instance"`, `"project"`                                                    |
+| `skills[].projectId`          | `string`  | The project of a project skill                                                       |
 | `skills[].projectName`        | `string`  | Name of that project                                                                 |
-| `skills[].agentId`            | `string`  | Set for an agent skill: the only agent that can use it                               |
-| `skills[].agentName`          | `string`  | Name of that agent                                                                   |
 | `skills[].availableToAssistant` | `boolean` | Whether n8n Assistant can use the skill. Only with `130_attach_skills_to_assistant`. |
 | `skills[].availableToMCP`     | `boolean` | Whether MCP clients load the skill automatically. Only with `128_mcp_skills_extension`. |
 | `skills[].latestVersion`      | `number`  | Number of the latest version                                                         |

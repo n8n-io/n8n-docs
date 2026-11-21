@@ -40,7 +40,7 @@ Skills are available on:
 
 Skills aren't available on n8n Cloud Enterprise or self-hosted Enterprise yet.
 
-Skills are available from n8n 2.45.0. Managing skills from n8n Assistant, and the MCP skills extension on the n8n MCP server, are available from n8n 2.46.0. The **Enable for n8n Assistant** and **Enable for MCP clients** settings, and importing skills from GitHub, are available from n8n 2.47.0. Importing skills from GitHub with n8n Assistant and with MCP clients is available from n8n 2.50.0.
+Skills are available from n8n 2.45.0. Managing skills from n8n Assistant, and the MCP skills extension on the n8n MCP server, are available from n8n 2.46.0. The **Enable for n8n Assistant** and **Enable for MCP clients** settings, and importing skills from GitHub, are available from n8n 2.47.0. Reviewing updates, changing the scope or the credential of a source, deleting a source, and the GitHub sign-in are available from n8n 2.49.0. The **Skill Sync** setting, and importing skills from GitHub with n8n Assistant and with MCP clients, are available from n8n 2.50.0.
 {% endhint %}
 
 {% hint style="info" %}
@@ -83,31 +83,45 @@ A skill's scope decides who can use it. When you create a skill, you choose its 
 | **Global** | Agents in every project | Instance owners and admins |
 | A team project | Agents in that project | Project admins and project editors. Project viewers can see the skill but not change it. |
 | **Personal project** | Only you | You |
-| One agent (shown as **{agent name} only**) | Only that agent | People who can edit the agent's project |
 
 To move a skill to another scope, open it and change its scope. You need permission to delete the skill in its current scope, because a move removes it from there. If an agent that uses the skill can't reach the new scope, n8n refuses the move.
 
 ## Create a skill
 
 1. Select **Settings** > **Context** > **Skills**.
-2. Select **Create skills** > **Create manually**.
-3. Choose how to start:
-   * To upload a skill you already have, drop the skill folder or its `SKILL.md` file, or select **Upload folder** or **Upload SKILL.md**.
-   * To write a skill from scratch, select **Add manually**.
-4. Fill in or check **Name**, **When to use this skill**, and **What the skill does**.
-5. Optional: under **References**, select **Add reference** to add a Markdown file.
-6. Choose the scope.
-7. Select **Save skill**.
+2. Select **Create skills**, then choose how to start:
+   * To write a skill from scratch, select **Create manually**.
+   * To upload a skill you already have, select **Upload folder** or **Upload SKILL.md**. n8n opens the skill with the content of the upload.
+3. Fill in or check **Name**, **When to use this skill**, and **What the skill does**.
+4. Optional: under **References**, select **Add reference** to add a Markdown file.
+5. Choose the scope.
+6. Select **Save skill**.
 
 An uploaded `SKILL.md` must start with YAML frontmatter that has a `name` and a `description`. A folder must contain a `SKILL.md` file. n8n refuses a folder with scripts, and reference files that aren't Markdown.
 
 ## Import skills from GitHub
 
-You can import skills from a GitHub repository instead of copying them by hand. n8n finds every skill in the repository, checks each one for security issues, and imports the skills you pick.
+You can import skills from a GitHub repository instead of copying them by hand. This feature is Skill Sync. n8n finds every skill in the repository, checks each one for security issues, and imports the skills you pick. After the import, n8n checks the repository for changes, and you decide which updates your skills get.
+
+n8n calls a connected repository a source.
+
+### Turn Skill Sync on or off
+
+Instance owners and admins control Skill Sync for the whole instance:
+
+1. Select **Settings** > **Context** > **Skills**.
+2. Select **Skill settings**, the settings icon next to **Create skills**.
+3. Turn **Skill Sync** on or off.
+
+Skill Sync is on by default. On an Enterprise plan, it's off until an owner or admin turns it on.
+
+When Skill Sync is off, nobody can import skills from GitHub, and n8n stops checking for updates. The sources and the synced skills stay, and agents keep using the skills.
+
+If the setting shows **Managed via environment variables**, you can't change it here. See [Turn on skills on a self-hosted instance](skills.md#turn-on-skills-on-a-self-hosted-instance).
 
 ### GitHub links n8n accepts
 
-Paste a link to a whole repository, a folder, or one skill:
+You can paste a link to a whole repository, a folder, or one skill:
 
 | Link | Example | What n8n reads |
 | ---- | ------- | -------------- |
@@ -115,7 +129,7 @@ Paste a link to a whole repository, a folder, or one skill:
 | Folder | `https://github.com/rmakowiak/example-skills/tree/main/support` | Every skill in the folder, on the branch in the link |
 | One skill | `https://github.com/rmakowiak/example-skills/blob/main/support/triage/SKILL.md` | That skill only |
 
-The link must start with `https://github.com/`. Links to a tag or a commit don't work. Use a link to a branch.
+The link must start with `https://github.com/`. n8n doesn't read other GitHub servers, such as GitHub Enterprise Server. Links to a tag or a commit don't work. Use a link to a branch.
 
 ### How n8n finds skills
 
@@ -123,41 +137,31 @@ n8n reads every folder with a `SKILL.md` file, up to 8 folders below the link. I
 
 The skill's name comes from the `name` in its frontmatter. If there's no `name`, n8n uses the folder name. Every skill needs a `description`.
 
-n8n imports only `SKILL.md` and the Markdown files in `references/`. The skill list shows which other files n8n leaves out, such as scripts. n8n never runs scripts from a skill.
+n8n imports only `SKILL.md` and the Markdown files in `references/`. The review step shows which other files n8n leaves out, such as scripts. n8n never runs scripts from a skill.
 
-### Import skills from a link
-
-Use a link to import from a public repository, or to import one folder or one skill.
+### Import skills from a repository
 
 1. Select **Settings** > **Context** > **Skills**.
 2. Select **Create skills** > **Connect to GitHub**.
-3. On the **Connect a source** screen, select **paste URL manually**.
-4. In **Scope**, choose where the skills go. You only see the scopes where you can create skills.
-5. In **Credential**, keep **None, the repository is public**. For a private repository, choose a GitHub credential. See [Credentials for private repositories](skills.md#credentials-for-private-repositories).
-6. In **GitHub link**, paste the link.
-7. Select **Next**.
-8. In **Choose skills**, select the skills to import.
-9. If n8n asks for it, select **I reviewed the warnings**.
-10. Select **Add**.
+3. In **Who can use these skills**, choose the scope. You only see the scopes where you can create skills. All skills from the repository get this scope.
+4. In **GitHub credential**, keep **None, the repository is public** for a public repository. For a private repository, choose a GitHub credential. See [Credentials for private repositories](skills.md#credentials-for-private-repositories).
+5. In **Repository**, paste a link. If you chose a credential, you can also search the repositories that the credential can read, and pick one. A lock icon marks a private repository.
+6. Select **Next**.
+7. Review the skills. n8n sorts them into the **Warning**, **Passed**, and **Blocked** tabs, and selects every skill that it can import. Select a skill to read its files. Clear the skills you don't want.
+8. If a selected skill has warnings, read them, then select **I have reviewed the warnings**.
+9. Select **Import skills**. The button shows the number of skills and the scope.
 
-n8n runs a security check on each skill and shows the result next to it. You can't select a skill marked **Blocked**, and nobody can override that result. For a skill marked **Review**, read the warnings in the list before you select **I reviewed the warnings**.
+n8n runs a security check on each skill and sorts the skills by the result:
 
-If a skill has the same name as a skill in the scope, n8n marks it **Name taken** and doesn't import it.
+| Tab | What it means |
+| --- | ------------- |
+| **Passed** | The check found no issues. |
+| **Warning** | The check found something that a person must read first, such as a link to a new domain or hidden Unicode characters. You can import the skill after you read the warnings. |
+| **Blocked** | You can't import the skill, and nobody can override that. The tab shows the reason: the security check blocked the skill, a skill in the scope already has the same name, or n8n can't read the `SKILL.md`. |
 
-### Import skills from your GitHub account
+n8n reads the default branch of a repository that you pick from the list. If the credential can read more repositories than n8n lists, paste a link instead.
 
-Pick a repository from the list of repositories that a GitHub credential can read, instead of pasting a link.
-
-1. Select **Settings** > **Context** > **Skills**.
-2. Select **Create skills** > **Connect to GitHub**.
-3. On the **Connect a source** screen, select **Connect to GitHub**.
-4. In **Scope**, choose where the skills go.
-5. In **Credential**, choose a GitHub credential. To create one, select **+ Connect a new GitHub account** or **+ Connect a GitHub App installation**.
-6. In **Repository owner**, choose the user or organization.
-7. In **Repository**, choose the repository. A lock icon marks a private repository.
-8. Select **Next**, then select the skills and import them as in [Import skills from a link](skills.md#import-skills-from-a-link).
-
-n8n reads the default branch of the repository. If the credential can read more repositories than n8n lists, paste a link instead.
+n8n checks the skills again when you import them. If a skill changed in GitHub after the review step and no longer passes, n8n leaves it out and tells you why.
 
 ### Credentials for private repositories
 
@@ -165,6 +169,13 @@ To read a private repository, n8n needs a [GitHub credential](https://app.gitboo
 
 * An access token (personal access token, classic or fine-grained)
 * A GitHub App installation
+* A GitHub OAuth2 sign-in
+
+To create a credential in the import dialog, open **GitHub credential** and select **+ Connect a new GitHub account**, **+ Connect a GitHub App installation**, or **+ Sign in with GitHub**.
+
+{% hint style="warning" %}
+A GitHub sign-in gives n8n write access to every repository that the account can reach, and admin access to its organizations. n8n only reads skills. For read-only access, use a fine-grained token or a GitHub App.
+{% endhint %}
 
 n8n stores the credential with the source and uses it again for later checks. The credential must belong to the scope of the source:
 
@@ -176,17 +187,69 @@ n8n stores the credential with the source and uses it again for later checks. Th
 
 When you create a credential from the import dialog, n8n creates it in the scope of the source. For a Global source, n8n creates it in your personal project.
 
+### Sources in the skills list
+
+The skills list groups synced skills under their source. The row of a source shows:
+
+* The repository and the branch.
+* The scope of the source.
+* The status of the source. See [Source status](skills.md#source-status).
+* A **new** count: the skills in the repository that you didn't import yet.
+* An **updates** count: the updates that wait for review.
+
+The options menu of a source has these actions. You only see the actions that you have permission for.
+
+| Action | What it does |
+| ------ | ------------ |
+| **Review skills** | Opens the review of new skills and updates |
+| **Check for updates** | Checks the repository now, at most once a minute for each source |
+| **Change scope** | Moves the source and all its synced skills to another scope |
+| **Open in GitHub** | Opens the repository in GitHub |
+| **Replace credential** | Picks another credential for the source. n8n makes sure that the credential can read the repository before it saves. |
+| **Delete source** | Removes the source. You choose whether its skills stay. |
+
 ### Add more skills from a connected repository
 
-After you import skills from a repository, you can import more of its skills later. n8n doesn't connect the repository a second time.
+When a source has skills that you didn't import, its row shows a **new** count.
 
-1. Select **Settings** > **Context** > **Skills**, then select the **Sources** tab.
-2. Open the options menu of the source, then select **Add more skills**.
-3. Select the skills to import, then select **Add**.
+1. Open the options menu of the source, then select **Review skills**. You can also select the **new** count.
+2. Select the new skills to import. n8n marks them **New** and doesn't select them for you.
+3. If a selected skill has warnings, read them, then select **I have reviewed the warnings**.
+4. Select **Import skills**.
 
-The list shows only the skills that you didn't import from this source yet. The new skills get the scope of the source.
+The new skills get the scope of the source. You need permission to create skills in that scope.
 
-You can also select **Add more skills** in the source's details, or in the message that n8n shows when you connect the same repository to the same scope again. You need permission to create skills in the scope of the source.
+If you don't want a skill, select it, then select **Remove from new count**. The skill stays in **Review skills**, and n8n counts it again when its content changes.
+
+### Review and accept updates
+
+n8n checks each source every hour. To check sooner, open the options menu of the source and select **Check for updates**.
+
+A change in GitHub doesn't change your skills. n8n stores the change as an update that waits for review, and the skill shows **Update available**. Agents keep using the current version until someone accepts the update.
+
+1. On the row of the source, select the **updates** count. You can also select **Review skills** in the options menu.
+2. Select an update to read what changed. n8n shows the changed files, and the agent drafts that use the update after you accept it.
+3. Clear the updates that you don't want yet. They keep waiting for review.
+4. If a selected update has warnings, read them, then select **I have reviewed the warnings**.
+5. Select **Update skills**.
+
+Each accepted update creates a new version of the skill. Published agents keep their version until you publish them again. See [Skill versions](skills.md#skill-versions).
+
+n8n runs the security check on each update. A skill with **Update blocked** has an update that you can't accept. Fix the skill in GitHub, then check for updates again. n8n also refuses an update that gives the skill a name that another skill already uses.
+
+If the repository changes while you review, n8n applies none of the updates and asks you to review the latest changes.
+
+### Source status
+
+A source that n8n can read shows no status text. Hover over its status icon to see the time of the last check. If a check fails, the row shows one of these:
+
+| Status | What it means |
+| ------ | ------------- |
+| **Credential issue** | n8n can't use the credential of the source. Select **Replace credential** in the options menu of the source. |
+| **Source unavailable** | n8n can't read the source. The repository or the branch can be missing, n8n can have no access, or GitHub can be down. |
+| **Checking delayed** | GitHub limited the requests. n8n checks again later. |
+
+With any status, your skills keep their last accepted version, and agents keep using them.
 
 ### Repository already connected
 
@@ -195,17 +258,39 @@ n8n compares the repository, not the branch or the folder in the link:
 | Where the repository is already connected | What happens |
 | ----------------------------------------- | ------------ |
 | **Global** | n8n blocks the import. Every project can already use the skills of a Global source. |
-| The scope you picked | n8n blocks the import. Select **Add more skills** to import more skills from the source that exists. |
-| Another project that you can see | n8n warns you, and you can continue. Each scope gets its own copy of the skills. |
+| The scope you picked | n8n blocks the import. Select **View source** to go to the source that exists. To import more of its skills, see [Add more skills from a connected repository](skills.md#add-more-skills-from-a-connected-repository). |
+| Another project that you can see | n8n tells you, and you can continue. Each scope gets its own skills and reviews. |
 | A project that you can't see | n8n shows no message. |
 
 ### Work with synced skills
 
-A skill that you import from GitHub is a synced skill. It shows a **Synced from** banner with the name of its repository. To change the skill, select **Open in GitHub** and edit it there.
+A skill that you import from GitHub is a synced skill. It shows a **Synced from** banner with the name of its repository. To change the skill, select **Open in GitHub** and edit it there. Then [review and accept the update](skills.md#review-and-accept-updates) in n8n.
 
 You can attach a synced skill to agents, view its versions, download it, and delete it, as with any other skill. You can't edit its content in n8n or move it on its own. A synced skill moves only with its source.
 
-To make a synced skill editable, open the skill's options menu in the list and select **Stop syncing**. The skill stays in its scope with all its versions, and agents keep using it. After that, you can edit it and move it. The skill no longer gets changes from GitHub, and you can't undo this.
+To make a synced skill editable, open the skill's options menu in the list and select **Stop syncing**. The skill stays in its scope with all its versions, and agents keep using it. After that, you can edit it and move it. The skill no longer gets updates from GitHub, and you can't undo this.
+
+### Change the scope of a source
+
+1. Open the options menu of the source, then select **Change scope**.
+2. Choose the new scope. You only see the scopes where you can create skills.
+3. If the source uses a credential, choose a credential that the new scope can use.
+4. Select **Change scope**.
+
+All synced skills move with the source. Their content and versions stay the same. n8n refuses the move in these cases:
+
+* A skill in the new scope has the same name as a skill of the source. Rename the skill in the new scope, or rename the synced skill in GitHub.
+* An agent that uses a skill of the source can't use skills from the new scope. Remove the skill from the agent, or choose another scope.
+* The repository is already connected in the new scope or in **Global**.
+
+### Delete a source
+
+1. Open the options menu of the source, then select **Delete source**.
+2. Choose what happens to the synced skills:
+   * To delete the source and its synced skills, select **Delete skills**. You can't undo this.
+   * To remove the source and keep its skills, select **Stop syncing**. The skills keep their versions, agents keep using them, and people with edit access can edit them in n8n.
+
+n8n doesn't delete the skills of a source while an agent uses one of them. Remove the skills from each agent first, or select **Stop syncing**.
 
 ### Import skills with n8n Assistant or an MCP client
 
@@ -215,14 +300,14 @@ n8n Assistant and MCP clients can also work with GitHub repositories. They can:
 * Preview the skills in a link to a public repository, with the result of the security check for each skill.
 * Connect a public repository and import the skills you pick.
 
-The rules of the import dialog apply: the [links n8n accepts](skills.md#github-links-n8n-accepts), the scopes where you can create skills, the security check, and the rules for a [repository that's already connected](skills.md#repository-already-connected). n8n imports the skills as synced skills.
+Skill Sync must be on. The rules of the import dialog apply: the [links n8n accepts](skills.md#github-links-n8n-accepts), the scopes where you can create skills, the security check, and the rules for a [repository that's already connected](skills.md#repository-already-connected). n8n imports the skills as synced skills.
 
 n8n Assistant and MCP clients import only skills that pass the security check with no warnings. Do these tasks in **Settings** > **Context** > **Skills**:
 
 * Import skills from a private repository. n8n Assistant and MCP clients can't use a GitHub credential.
-* Import more skills from a repository that's already connected in the scope.
+* [Import more skills](skills.md#add-more-skills-from-a-connected-repository) from a repository that's already connected in the scope.
 * Import a skill that has warnings. A person must read the warnings first.
-* Review and accept the updates that synced skills get from GitHub.
+* [Review and accept the updates](skills.md#review-and-accept-updates) that synced skills get from GitHub.
 
 Each user can make 15 preview and import requests in 5 minutes, in n8n Assistant and MCP clients together. If you reach the limit, wait 5 minutes.
 
@@ -234,9 +319,9 @@ To add a skill to an agent:
 
 1. Open the agent in the agent builder.
 2. In the **Skills** section, select **Add skill**.
-3. Search for the skill and select it, or select **Create skill** to write a new skill for this agent.
+3. Search for the skill and select it, or select **Create skill** to write a new skill.
 
-An agent can use Global skills, the skills of its own project, and its own agent skills. The agent reads the description of each skill, and follows a skill's instructions when a request matches. See [Build and manage agents](../build-and-manage-agents/) for the rest of the agent setup.
+An agent can use Global skills and the skills of its own project. The agent reads the description of each skill, and follows a skill's instructions when a request matches. See [Build and manage agents](../build-and-manage-agents/) for the rest of the agent setup.
 
 ## Use skills in n8n Assistant
 
@@ -246,7 +331,7 @@ An agent can use Global skills, the skills of its own project, and its own agent
 Skills in n8n Assistant are in Preview and may change in future releases. They aren't on every instance yet.
 {% endhint %}
 
-To let n8n Assistant use a skill, turn on **Enable for n8n Assistant** in the skill's edit dialog. n8n Assistant reads Global skills and the skills of the project you opened the conversation in. It doesn't read skills that belong to one agent. In the skills list, the **n8n Assistant** badge shows which skills have this setting on.
+To let n8n Assistant use a skill, turn on **Enable for n8n Assistant** in the skill's edit dialog. n8n Assistant reads Global skills and the skills of the project you opened the conversation in. In the skills list, the **n8n Assistant** badge shows which skills have this setting on.
 
 ## Use skills in MCP clients
 
@@ -360,16 +445,18 @@ Agents use versions this way:
 
 When a skill changes, a published agent that uses it shows unpublished changes.
 
-To see the history of a skill, open its options menu in the list and select **View timeline** or **Compare versions**. From an older version, select **Restore as new version** to make it the latest version again.
+To see the history of a skill, open its options menu in the list and select **Version history**. There you can compare two versions. From an older version, select **Restore as new version** to make it the latest version again.
+
+A synced skill gets a new version each time someone accepts an update from GitHub.
 
 ## Manage skills
 
-The skills list shows each skill's **Scope**, the **Agents** that use it, **Created by**, and **Last updated**. Filter the list by scope, agent, or creator, or search by name.
+The skills list shows each skill's **Scope**, the **Agents** that use it, **Created by**, and **Last updated**. Filter the list by scope, agent, creator, or source, or search by name. Synced skills appear under their source. See [Sources in the skills list](skills.md#sources-in-the-skills-list).
 
 Each skill's options menu has these actions:
 
 * **Edit**, or **View** if you can't change the skill
-* **View timeline** and **Compare versions**
+* **Version history**
 * **Download**
 * **Stop syncing**, for synced skills only
 * **Delete**
@@ -385,13 +472,13 @@ n8n doesn't delete a skill that an agent uses. Remove the skill from each agent 
 
 ## Turn on skills on a self-hosted instance
 
-Skills are part of the agents module, which is on by default. If you turned off the agents module with `N8N_DISABLED_MODULES`, skills are off too.
+Skills are part of the agents module, which is on by default. If you turned off the agents module with `N8N_DISABLED_MODULES`, skills are off too. Skills also need one or more of these features on: agents, n8n Assistant, or instance-level MCP access.
 
 n8n turns on three parts of skills step by step, with feature flags:
 
 | Flag | Turns on |
 | ---- | -------- |
-| `136_skill_sync` | [Import skills from GitHub](skills.md#import-skills-from-github), in **Settings**, in n8n Assistant, and in MCP clients |
+| `136_skill_sync` | [Import skills from GitHub](skills.md#import-skills-from-github), in **Settings**, in n8n Assistant, and in MCP clients. The **Skill Sync** setting must also be on. |
 | `130_attach_skills_to_assistant` | **Enable for n8n Assistant**, and skills in n8n Assistant |
 | `128_mcp_skills_extension` | **Enable for MCP clients**, and loading skills automatically in MCP clients |
 
@@ -402,6 +489,14 @@ N8N_FEATURE_FLAG_OVERRIDES='{"136_skill_sync":true,"130_attach_skills_to_assista
 ```
 
 Restart n8n to apply the change. Each value must be the boolean `true`, not the string `"variant"`.
+
+### Skill Sync environment variables
+
+| Variable | Default | What it does |
+| -------- | ------- | ------------ |
+| `N8N_SKILL_SYNC_MANAGED_BY_ENV` | `false` | When `true`, n8n applies `N8N_SKILL_SYNC_ENABLED` on every startup, and admins can't change the **Skill Sync** setting in the UI. |
+| `N8N_SKILL_SYNC_ENABLED` | `false` | Whether Skill Sync is on. n8n reads this variable only when `N8N_SKILL_SYNC_MANAGED_BY_ENV` is `true`. |
+| `N8N_SKILL_SYNC_CHECK_INTERVAL_SECONDS` | `3600` | How often n8n checks each source for updates, in seconds. The minimum is `60`. |
 
 ## Related resources
 

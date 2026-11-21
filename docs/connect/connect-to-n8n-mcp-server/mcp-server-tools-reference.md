@@ -2173,8 +2173,10 @@ Two OAuth scopes cover these tools:
 
 | OAuth scope   | Consent screen label                 | Tools                                                                          |
 | ------------- | ------------------------------------ | ------------------------------------------------------------------------------ |
-| `skill:read`  | **List and read skills**             | `search_n8n_skills`, `get_skill`                                               |
-| `skill:write` | **Create, update and delete skills** | `create_skill`, `update_skill`, `delete_skill`, `search_n8n_skills`, `get_skill` |
+| `skill:read`  | **List and read skills**             | `search_n8n_skills`, `get_skill`, `list_skill_sources`                                               |
+| `skill:write` | **Create, update and delete skills** | `create_skill`, `update_skill`, `delete_skill`, `search_n8n_skills`, `get_skill`, `list_skill_sources`, `discover_skill_source`, `import_skills_from_source` |
+
+From n8n 2.50.0, the skill scopes also cover the [skill source tools](mcp-server-tools-reference.md#skill-sources). The consent screen lists `list_skill_sources`, `discover_skill_source`, and `import_skills_from_source` only while the **Skill Sync** setting is on for the instance.
 
 Each skill has one of two scopes:
 
@@ -2226,6 +2228,8 @@ Search the skills the current user can access.
 | `skills[].usedByAgents` | `number`         | Number of agents that use the skill                            |
 | `skills[].canEdit`      | `boolean`        | Whether the current user can update the skill                  |
 | `skills[].canDelete`    | `boolean`        | Whether the current user can delete the skill                  |
+| `skills[].sourceId`     | `string \| null` | The ID of the skill source that syncs the skill. `null` for a skill that no source syncs. `sourceId` is available from n8n 2.50.0. |
+| `skills[].syncState`    | `string \| null` | The sync state of a synced skill: `"up_to_date"`, `"update_available"`, `"update_blocked"`, or `"source_unavailable"`. `null` for a skill that no source syncs. `syncState` is available from n8n 2.50.0. |
 | `skills[].updatedAt`    | `string`         | ISO timestamp when the skill was last updated                  |
 
 #### Notes
@@ -2256,6 +2260,7 @@ The response has every `skills[]` field from `search_n8n_skills`, without the `s
 | `usedBy.drafts`      | `array`   | Agents whose draft uses the skill, each with `agentId`, `agentName`, `projectId`, `version`, and `pinned`           |
 | `usedBy.pins`        | `array`   | Agents whose published version pins the skill, each with `agentId`, `agentName`, `projectId`, and `version`         |
 | `usedBy.hiddenAgents`| `number`  | Number of agents that use the skill in projects you can't read                                                      |
+| `syncedFrom`         | `object \| null` | The source that syncs the skill, with `sourceId`, `type`, `label`, `ref`, `webUrl`, and `canStopSyncing`. `null` for a skill that no source syncs. `syncedFrom` is available from n8n 2.50.0. |
 
 ***
 
@@ -2359,6 +2364,146 @@ Permanently delete a skill from the skills hub.
 
 * n8n refuses to delete a skill while an agent uses it, in its draft or in a published version. The error names the agents you can read. To detach the skill from an agent draft, use `skill.delete` in `mutate_agent`.
 * You can't restore a deleted skill.
+
+***
+
+### Skill sources
+
+{% hint style="info" %}
+**Feature availability**
+
+The skill source tools are available from n8n 2.50.0.
+{% endhint %}
+
+A skill source is a GitHub repository, folder, or `SKILL.md` file that n8n syncs skills from. The skill source tools let an MCP client list the sources the user can see, preview the skills in a public GitHub source, and import skills from it as read-only synced skills.
+
+n8n registers these tools only when Skill Sync is on for the current user. That needs the **Skill Sync** setting in **Settings** > **Context** > **Skills** to be on for the instance, and the `136_skill_sync` feature flag to be on for the user. `list_skill_sources` needs the `skill:read` or `skill:write` scope. `discover_skill_source` and `import_skills_from_source` need the `skill:write` scope.
+
+These tools only import skills from a public GitHub source for the first time. To connect a private repository, import more skills from a connected source, review warnings, or accept updates, use **Settings** > **Context** > **Skills**.
+
+Each user can make up to 15 calls to `discover_skill_source` and `import_skills_from_source` in 5 minutes. n8n counts these calls together with the same requests from n8n Assistant. n8n refuses a call over the limit with `code: "rate_limited"`.
+
+When a skill source tool fails, the response has `ok: false`, a reason in `code`, and the error message in `error`. For example, `code` is `"invalid_url"`, `"unsupported_provider"`, `"not_found"`, `"duplicate_source"`, `"stale"`, or `"rate_limited"`.
+
+***
+
+### list\_skill\_sources
+
+{% hint style="info" %}
+**Feature availability**
+
+`list_skill_sources` is available from n8n 2.50.0.
+{% endhint %}
+
+List the skill sources that the current user can see, with their sync status and the number of updates that wait for review.
+
+#### Parameters
+
+None.
+
+#### Output
+
+| Field                           | Type             | Description                                                                              |
+| ------------------------------- | ---------------- | ---------------------------------------------------------------------------------------- |
+| `sources`                       | `array`          | The skill sources                                                                        |
+| `sources[].id`                  | `string`         | The source ID                                                                            |
+| `sources[].type`                | `string`         | `"github"`                                                                               |
+| `sources[].label`               | `string`         | The source, for example `owner/repository`                                               |
+| `sources[].ref`                 | `string \| null` | The branch                                                                               |
+| `sources[].path`                | `string`         | The folder in the source that n8n reads. Empty for the whole source.                     |
+| `sources[].webUrl`              | `string`         | The link to the source                                                                   |
+| `sources[].projectId`           | `string \| null` | The project of the source. `null` for an instance source.                                |
+| `sources[].projectName`         | `string \| null` | The name of that project                                                                 |
+| `sources[].projectType`         | `string \| null` | `"personal"` or `"team"`. `null` for an instance source.                                 |
+| `sources[].skillCount`          | `number`         | Number of synced skills from the source                                                  |
+| `sources[].updatesAvailable`    | `number`         | Number of updates that wait for review and that the security check didn't block          |
+| `sources[].updatesBlocked`      | `number`         | Number of updates that the security check blocked                                        |
+| `sources[].newSkillsAvailable`  | `number`         | Number of new skills in the source that aren't imported                                  |
+| `sources[].health`              | `string`         | `"connected"`, `"credential_issue"`, `"source_unavailable"`, or `"delayed"`              |
+| `sources[].lastCheckedAt`       | `string \| null` | ISO timestamp of the last check of the source                                            |
+| `sources[].missingSkills`       | `string[]`       | Names of synced skills that the source no longer has. Their saved versions still work. |
+
+The response also has the permissions of the current user on each source: `canReplaceCredential`, `canReview`, `canImport`, `canMove`, and `canDelete`.
+
+***
+
+### discover\_skill\_source
+
+{% hint style="info" %}
+**Feature availability**
+
+`discover_skill_source` is available from n8n 2.50.0.
+{% endhint %}
+
+Preview the skills in a public GitHub source for a scope. n8n reads the source and runs the security check on each skill. `discover_skill_source` stores nothing.
+
+#### Parameters
+
+| Name        | Type                      | Required | Description                                                                                       |
+| ----------- | ------------------------- | -------- | ------------------------------------------------------------------------------------------------- |
+| `url`       | `string`                  | Yes      | A link to a public GitHub repository, folder, or `SKILL.md` file. Up to 2,048 characters.         |
+| `scope`     | `"instance" \| "project"` | Yes      | `"instance"` imports the skills for the whole instance. `"project"` imports them into one project. |
+| `projectId` | `string`                  | No       | The project to import into. Required when `scope` is `"project"`.                                 |
+
+#### Output
+
+| Field                 | Type             | Description                                                                                                       |
+| --------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `source`              | `object`         | The source that the link points to, with `type`, `label`, `ref`, `path`, and `webUrl`                             |
+| `duplicate`           | `object`         | Whether the scope can take the source. `kind` is `"none"`, `"blocked"`, or `"warning"`. `"blocked"` means that the instance or the chosen scope already has the source. `"warning"` means that other projects that you can see have the source. |
+| `revision`            | `string \| null` | The revision of the source that n8n read. Pass it to `import_skills_from_source`.                                 |
+| `skills`              | `array`          | The skills in the source                                                                                          |
+| `skills[].key`        | `string`         | The skill key. Pass it in `skillKeys` to `import_skills_from_source`.                                             |
+| `skills[].location`   | `string`         | Where the skill is in the source, for example its folder                                                          |
+| `skills[].name`       | `string \| null` | The skill name. `null` when n8n can't read the skill.                                                             |
+| `skills[].nameTaken`  | `boolean`        | Whether the chosen scope already has a skill with this name                                                       |
+| `skills[].webUrl`     | `string`         | The link to the skill in the source, at the previewed revision                                                    |
+| `skills[].verdict`    | `string \| null` | The result of the security check: `"pass"`, `"needs_review"`, or `"blocked"`                                     |
+| `skills[].reason`     | `string \| null` | Why n8n can't read the skill, for example `"parse_error"`. `null` when n8n can read it.                           |
+| `truncated`           | `boolean`        | `true` when the source has more skills than n8n lists                                                             |
+| `tooDeep`             | `number`         | Number of skills that n8n didn't list because they're too deep in the source                                      |
+
+#### Notes
+
+* `import_skills_from_source` imports only skills with a `"pass"` verdict, no `reason`, and `nameTaken` set to `false`. Review skills with a `"needs_review"` verdict in **Settings** > **Context** > **Skills**.
+
+***
+
+### import\_skills\_from\_source
+
+{% hint style="info" %}
+**Feature availability**
+
+`import_skills_from_source` is available from n8n 2.50.0.
+{% endhint %}
+
+Connect a public GitHub source in a scope and import the selected skills as read-only synced skills. Call `discover_skill_source` first.
+
+#### Parameters
+
+| Name        | Type                      | Required | Description                                                                                       |
+| ----------- | ------------------------- | -------- | ------------------------------------------------------------------------------------------------- |
+| `url`       | `string`                  | Yes      | The same link that you passed to `discover_skill_source`                                          |
+| `scope`     | `"instance" \| "project"` | Yes      | The same scope that you passed to `discover_skill_source`                                         |
+| `projectId` | `string`                  | No       | The project to import into. Required when `scope` is `"project"`.                                 |
+| `skillKeys` | `string[]`                | Yes      | The `key` of each skill to import, from `discover_skill_source`. From 1 to 200 keys.              |
+| `revision`  | `string \| null`          | Yes      | The `revision` from `discover_skill_source`. Pass `null` when `discover_skill_source` returned `null`. |
+
+#### Output
+
+| Field                | Type     | Description                                                                                         |
+| -------------------- | -------- | --------------------------------------------------------------------------------------------------- |
+| `sourceId`           | `string` | The ID of the connected source                                                                      |
+| `imported`           | `array`  | The imported skills, each with `key`, `skillId`, and `name`                                         |
+| `failed`             | `array`  | The selected skills that n8n didn't import, each with `key`, `name`, and `reason`                   |
+
+#### Notes
+
+* n8n reads the source again before it imports. If the source changed since the preview, n8n refuses the call with `code: "stale"` and imports nothing. Call `discover_skill_source` again.
+* n8n imports only the selected skills that pass the security check, have no error, and have a name that's free in the scope. n8n lists each other selected skill in `failed`, with a reason such as `"blocked_by_check"`, `"review_required"`, `"name_taken"`, or `"not_found"`.
+* If n8n can't import any selected skill, it connects nothing and refuses the call. `code` gives the reason of the first failed skill.
+* If two selected skills have the same name, n8n adds a number to the name of the second skill, for example `ponytail 2`.
+* If the instance or the chosen scope already has the source, n8n refuses the call with `code: "duplicate_source"`.
 
 ***
 

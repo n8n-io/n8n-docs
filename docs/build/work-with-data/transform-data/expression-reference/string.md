@@ -986,6 +986,8 @@ The same as JavaScript’s <code>JSON.stringify()</code>.
 
 **Description:** Decodes a URL-encoded string. Replaces any character codes in the form of <code>%XX</code> with their corresponding characters.
 
+If the string isn't a valid URL-encoded string, `urlDecode()` doesn't cause an error. The expression returns <code>undefined</code>. This happens when two hexadecimal digits don't follow a <code>%</code>, or when the character codes don't form a valid UTF-8 character.
+
 **Syntax:** _`String`_.urlDecode(allChars?)
 
 **Returns:** String
@@ -1004,6 +1006,11 @@ The same as JavaScript’s <code>JSON.stringify()</code>.
 
   ```javascript
   "name%3DNathan%20Automat".urlDecode(true) //=> "name%3DNathan Automat"
+  ```
+
+  ```javascript
+  // No error for a string that isn't valid
+  "100%".urlDecode() //=> undefined
   ```
 
 ## _`String`_.**`urlEncode()`** <a href="#stringurlencode" id="stringurlencode"></a>

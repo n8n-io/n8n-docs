@@ -66,7 +66,7 @@ The node drops any score it can't read as a number, so `confidence` can be missi
 
 When an item matches more than one category, each copy carries the confidence for its own branch. On the **Other** branch, `category` is `Other` and `confidence` runs the other way: 1.0 means no category fit the item, 0.0 means one of them did.
 
-The scores are estimates from the model, not measured probabilities. They can change between runs and between models. To find weak classifications, compare the categories in `scores` against each other, which is steadier than a fixed cut-off. If you do filter on a fixed value, set it from your own data and check it again after you change model.
+The scores are estimates from the model, not measured probabilities. They can change between runs and between models. To find weak classifications, compare the categories in `scores` against each other, which is steadier than a fixed cut-off. If you do filter on a fixed value, set it from your own data and check it again after you change the model.
 
 If you name one of your categories `confidence`, the node stops with an error while this option is on. Rename the category, or turn the option off.
 

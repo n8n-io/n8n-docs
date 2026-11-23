@@ -44,6 +44,28 @@ For what Preview, GA, deprecated, and removed mean, what Enterprise readiness me
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
 
+## Archive and restore agents
+
+**Released:** 2026-11-17 in [n8n 3.3](release-notes.md#n8n33)
+
+You can now archive an agent instead of deleting it, and restore it later. Until now, the only way to remove an agent was to delete it for good. Archiving works the same way it does for workflows.
+
+When you archive an agent, n8n unpublishes it. That disconnects its channels and stops its scheduled tasks, but n8n keeps everything else: configuration, versions, sessions, execution logs, memory, knowledge, and channel settings. Archived agents are hidden from the agent list until you turn on **Show archived agents**. You can still open one in the builder, but it's read-only and can't be published or run.
+
+To bring an agent back, select **Unarchive**. It returns unpublished, so publish it again to reconnect its channels and schedules. To delete an agent permanently, archive it first, then select **Delete**.
+
+Sub-agent references and Message an Agent nodes that point to an archived agent keep the reference and show an Archived label. A call to an archived agent fails with a clear error, so check what depends on an agent before you archive it.
+
+On the n8n MCP server, the `archive_agent` tool replaces `delete_agent`. In the project export API, the `includeArchivedWorkflows` flag is now `includeArchived` and covers agents too.
+
+{% hint style="warning" %}
+**Preview status**
+
+Agents, including archive and restore, are in [Preview](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#feature-maturity-preview-ga-deprecated-and-removed) and may change. Avoid relying on them in production.
+{% endhint %}
+
+Learn more in [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents).
+
 ## Use your personal credentials in team projects
 
 **Released:** 2026-10-27 in n8n 2.46.0

@@ -94,7 +94,7 @@ The trigger doesn't renew subscriptions for a workflow that has no stored subscr
 Renewal can also fail for other reasons, for example a Microsoft Graph rate limit, an expired refresh token, or revoked consent. The trigger doesn't retry, and the workflow shows no failed execution. The instance log shows one of these lines:
 
 * `Microsoft Teams Trigger: failed to renew subscription`
-* `Microsoft Teams Trigger: failed to re-create subscription` (from n8n 2.47.0, `Microsoft Teams Trigger: failed to create subscription`)
+* `Microsoft Teams Trigger: failed to re-create subscription` (from n8n 2.47.0 and n8n 3.1.0, `Microsoft Teams Trigger: failed to create subscription`)
 * `Microsoft Teams Trigger: failed to list subscriptions or resolve resources, skipped re-create`
 
 If no renewal succeeds before the subscription expires, the trigger stops receiving events. If the trigger fails to re-create a subscription, it has already stopped receiving events for that resource.
@@ -110,16 +110,16 @@ If the trigger stops receiving events and you can't find one of these log lines,
 {% hint style="info" %}
 **Feature availability**
 
-Subscription cleanup in the Microsoft Teams Trigger node is available from n8n 2.47.0.
+Subscription cleanup in the Microsoft Teams Trigger node is available from n8n 2.47.0 and n8n 3.1.0. n8n 3.0.x doesn't include it.
 {% endhint %}
 
-From n8n 2.47.0, the Microsoft Teams Trigger node keeps one Microsoft Graph subscription for each resource it watches, for example a team or a channel. It also removes the subscriptions it doesn't need:
+From n8n 2.47.0 and n8n 3.1.0, the Microsoft Teams Trigger node keeps one Microsoft Graph subscription for each resource it watches, for example a team or a channel. It also removes the subscriptions it doesn't need:
 
 * When you publish the workflow, the trigger keeps or creates one subscription for each resource. It removes every other subscription it left behind for the workflow, for example leftovers of a failed publish or duplicates.
 * When you unpublish the workflow, the trigger removes all its subscriptions.
 * When a renewal finds a problem, the trigger cleans up its subscriptions too. A problem is a subscription that Microsoft Graph removed, a subscription that the trigger doesn't know, or a failed renewal.
 
-Before n8n 2.47.0, unpublishing the workflow can leave subscriptions behind. A leftover subscription can cause the [Microsoft Graph subscription limit error](#microsoft-graph-subscription-limit-error).
+Before n8n 2.47.0, and in n8n 3.0.x, unpublishing the workflow can leave subscriptions behind. A leftover subscription can cause the [Microsoft Graph subscription limit error](#microsoft-graph-subscription-limit-error).
 
 With **Watch All Channels** turned on, the trigger subscribes to channels created after you publish the workflow only when it cleans up its subscriptions. A renewal that finds no problem doesn't add new channels. To make sure the trigger watches a new channel, unpublish the workflow and publish it again.
 
@@ -127,7 +127,7 @@ With **Watch All Channels** turned on, the trigger subscribes to channels create
 
 Microsoft Graph limits some kinds of subscription to one for each Microsoft account. For example, it allows one **New Channel** subscription for each team. With the **Service Principal (App-Only)** credential, the limit applies to each app registration instead.
 
-From n8n 2.47.0, a publish that goes over this limit fails with one of these errors:
+From n8n 2.47.0 and n8n 3.1.0, a publish that goes over this limit fails with one of these errors:
 
 * With an OAuth2 credential: `Microsoft Graph allows only one subscription of this kind per Microsoft account`
 * With the **Service Principal (App-Only)** credential: `Microsoft Graph allows only one subscription of this kind per app registration`
@@ -137,16 +137,16 @@ The cause is another workflow or n8n instance that watches the same team with th
 To fix the error, do one of these, then publish the workflow again:
 
 * Unpublish the other workflow that watches the same team with the same Microsoft account or app registration.
-* Wait up to three days for the old subscription to expire.
+* If no published workflow uses the old subscription, wait up to three days for it to expire.
 * Connect the credential with a different Microsoft account. With the **Service Principal (App-Only)** credential, use a different app registration.
 
-Before n8n 2.47.0, the publish fails with the Microsoft Graph error text, which contains `has reached its limit of '1'`. With the **Service Principal (App-Only)** credential, it fails with a missing permission message instead.
+Before n8n 2.47.0, and in n8n 3.0.x, the publish fails with the Microsoft Graph error text, which contains `has reached its limit of '1'`. With the **Service Principal (App-Only)** credential, it fails with a missing permission message instead.
 
 ### When to unpublish and publish the trigger again
 
-From n8n 2.47.0, the Microsoft Teams Trigger node cleans up its own subscriptions. In two cases, you still need to [unpublish the workflow](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/save-and-publish-workflows#how-to-unpublish-a-workflow) and publish it again once.
+From n8n 2.47.0 and n8n 3.1.0, the Microsoft Teams Trigger node cleans up its own subscriptions. In two cases, you still need to [unpublish the workflow](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/save-and-publish-workflows#how-to-unpublish-a-workflow) and publish it again once.
 
-**The trigger receives no events after you upgrade.** A workflow that you published before n8n 2.47.0 can keep a subscription that the trigger can't use. The trigger doesn't replace that subscription by itself. When the subscription expires, the trigger still receives no events, and restarting n8n doesn't fix it. To fix it, unpublish the workflow and publish it again. <!-- When the release that contains n8n-io/n8n#43077 ships, add: from that version, on self-hosted n8n with N8N_USE_WORKFLOW_PUBLICATION_SERVICE set to false, restarting n8n replaces the subscription. -->
+**The trigger receives no events after you upgrade.** A workflow that you published before n8n 2.47.0, or in n8n 3.0.x, can keep a subscription that the trigger can't use. The trigger doesn't replace that subscription by itself. When the subscription expires, the trigger still receives no events. To fix it, unpublish the workflow and publish it again. <!-- When the release that contains n8n-io/n8n#43077 ships, add: from that version, on self-hosted n8n with N8N_USE_WORKFLOW_PUBLICATION_SERVICE set to false, restarting n8n replaces the subscription. -->
 
 **You reconnected the credential with a different Microsoft account.** If you reconnect the credential with a different Microsoft account and don't change the trigger node, the workflow keeps receiving events from the previous account's subscriptions until they expire, up to three days later. After you unpublish the workflow and publish it again, the trigger ignores events from those subscriptions.
 

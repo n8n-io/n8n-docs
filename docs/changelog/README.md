@@ -44,6 +44,12 @@ For what Preview, GA, deprecated, and removed mean, what Enterprise readiness me
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
 
+## Reply with Chat nodes in embedded chat
+
+**Released:** 2026-10-27 in [n8n 3.0](release-notes.md#n8n30)
+
+You can now use Chat nodes to send replies in embedded chat, not just in hosted chat. In the Chat Trigger, set **Mode** to **Embedded Chat**, then add the **Response Mode** option and set it to **Using Response Nodes**. Chat nodes then push replies to the @n8n/chat widget over a live connection instead of answering a single HTTP request. This matters when a workflow pauses and resumes before it answers, for example when an AI Agent calls a sub-workflow that waits on a webhook. Until now, the widget's request had already closed by then, so the reply never reached the user. Existing workflows don't change, because the new response mode is opt-in. Learn more in the [Chat Trigger embedded chat options](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-langchain.chattrigger#embedded-chat-options).
+
 ## Use your personal credentials in team projects
 
 **Released:** 2026-10-27 in n8n 2.46.0

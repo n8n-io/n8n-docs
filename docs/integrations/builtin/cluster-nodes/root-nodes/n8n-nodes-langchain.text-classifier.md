@@ -71,7 +71,7 @@ Turn on **Include Confidence Scores** to see how strongly the model matched each
 
 When an item matches more than one category, each copy carries the confidence for its own branch. If you set **When No Clear Match** to **Output on Extra, 'Other' Branch**, items on that branch get a `category` of `Other`. There, `confidence` runs the other way: 1.0 means no category fit the item, and 0.0 means one of them did. The `scores` map covers the categories you defined, so it has no entry for **Other**.
 
-The scores are estimates from the model, not measured probabilities. They can change between runs and between models. To find weak classifications, compare the categories in `scores` against each other, which is steadier than a fixed cutoff. If you do filter on a fixed value, check that the field exists first, set the value from your own data, and check it again after you change the model.
+The scores are estimates from the model, not measured probabilities. They can change between runs and between models. To find weak classifications, compare the categories in `scores` against each other, which is steadier than a fixed cutoff. If you do filter on a fixed value, check that the field exists first. Set the value from your own data, and check it again after you change the model.
 
 The option also adds the scores to the format the model must return, so each item costs more tokens and the model's answers can change. Test your workflow again after you turn the option on.
 

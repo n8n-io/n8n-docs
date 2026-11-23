@@ -866,7 +866,7 @@ If the string also contains other content, try using <code>extractUrl()</code> f
 
 * [_`String`_.**`length`**](string.md#stringlength)
 
-    The number of characters in the string
+    The number of characters in the string. Most emoji count as two characters.
 
 * [_`String`_.**`match(regexp)`**](string.md#stringmatch)
 

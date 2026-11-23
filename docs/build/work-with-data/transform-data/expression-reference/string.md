@@ -427,7 +427,11 @@ A tab or line break before or after the address doesn't change the result.
 
 ## _`String`_.**`length`** <a href="#stringlength" id="stringlength"></a>
 
-**Description:** The number of characters in the string
+**Description:** The number of characters in the string. Most emoji count as two characters.
+
+Technically, `length` counts UTF-16 code units, like the standard JavaScript `length`. Most emoji use two code units. `length()` returns the same number.
+
+To count each emoji as one character, use `[...text].length`. Some emoji, such as flags, combine more than one emoji. They still count as more than one.
 
 **Syntax:** _`String`_.length
 
@@ -439,6 +443,18 @@ A tab or line break before or after the address doesn't change the result.
 
   ```javascript
   "hello".length //=> 5
+  ```
+
+  ```javascript
+  "Hi 😀".length //=> 5
+  ```
+
+  ```javascript
+  [..."Hi 😀"].length //=> 4
+  ```
+
+  ```javascript
+  [..."🇫🇷"].length //=> 2
   ```
 
 ## _`String`_.**`match()`** <a href="#stringmatch" id="stringmatch"></a>

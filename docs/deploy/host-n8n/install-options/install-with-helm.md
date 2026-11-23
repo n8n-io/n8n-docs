@@ -9,7 +9,7 @@ layout:
 
 The official n8n Helm chart installs self-hosted n8n on Kubernetes, as a single pod or in queue mode with separate workers.
 
-n8n maintains the chart in the [n8n-hosting repository](https://github.com/n8n-io/n8n-hosting/tree/main/charts/n8n) and publishes it at `oci://ghcr.io/n8n-io/n8n-helm-chart/n8n`. You can browse the chart's versions and default values on [Artifact Hub](https://artifacthub.io/packages/helm/n8n-io/n8n). This page covers chart 2.x, the chart line for n8n 3.x. If you run chart 1.x, see [Helm chart 2.0](install-with-helm/helm-chart-20.md) for what changed and how to upgrade.
+n8n maintains the chart in the [n8n-hosting repository](https://github.com/n8n-io/n8n-hosting/tree/main/charts/n8n) and publishes it at `oci://ghcr.io/n8n-io/n8n-helm-chart/n8n`. You can browse the chart's versions and default values on [Artifact Hub](https://artifacthub.io/packages/helm/n8n-io/n8n). This page covers chart 2.x, the chart line for n8n 3.x. If you run chart 1.x, see [Upgrade to Helm chart 2.0](install-with-helm/upgrade-to-helm-chart-20.md) for what changed and how to upgrade.
 
 {% hint style="warning" %}
 **This guide uses a release candidate of Helm chart 2.0**
@@ -19,7 +19,7 @@ Chart 2.0 isn't final yet, so the commands on this page install the release cand
 For production, use chart 1.x until chart 2.0 is final. The [`release/n8n-2.x` branch](https://github.com/n8n-io/n8n-hosting/tree/release/n8n-2.x/charts/n8n) of the chart's repository holds the 1.x chart, and its README explains how to install and configure it. 
 {% endhint %}
 
-All commands in this guide use the namespace `n8n` and the release name `n8n`. If you choose other names, replace them in each command.
+The n8n commands in this guide use the namespace `n8n` and the release name `n8n`. If you choose other names, replace them in each command.
 
 ## Prerequisites for the Helm chart
 
@@ -453,7 +453,7 @@ For autoscaling with HPA or KEDA, see [Scaling guidance](https://github.com/n8n-
 
 ## Upgrade the Helm chart
 
-This section covers upgrades within chart 2.x. To move from chart 1.x, follow [Helm chart 2.0](install-with-helm/helm-chart-20.md).
+This section covers upgrades within chart 2.x. To move from chart 1.x, follow [Upgrade to Helm chart 2.0](install-with-helm/upgrade-to-helm-chart-20.md).
 
 Each chart release installs one n8n version by default, so upgrading the chart also updates n8n. The [chart releases](https://github.com/n8n-io/n8n-hosting/releases) list the n8n version each one installs, with any upgrade notes.
 
@@ -500,6 +500,7 @@ kubectl delete namespace envoy-gateway-system
 You can customize the n8n Helm chart to fit a broad range of deployment needs.
 
 To help you get started, the chart's repository includes [reference examples](https://github.com/n8n-io/n8n-hosting/tree/main/charts/n8n/examples): complete values files, each written for a common way to run n8n.
+
 | If you want to | Start from |
 | --- | --- |
 | Run a single pod with no other services | [`standalone.yaml`](https://github.com/n8n-io/n8n-hosting/blob/main/charts/n8n/examples/standalone.yaml) |
@@ -524,7 +525,7 @@ This page covers the settings most installations start with. The chart's [README
 ## Related resources
 
 * [Install options](./)
-* [Helm chart 2.0](install-with-helm/helm-chart-20.md)
+* [Upgrade to Helm chart 2.0](install-with-helm/upgrade-to-helm-chart-20.md)
 * [One-line setup](one-line-setup.md)
 * [Install using Docker Compose](install-using-docker-compose.md)
 * [Install with npm](install-with-npm.md)

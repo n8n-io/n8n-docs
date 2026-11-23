@@ -5,7 +5,7 @@ layout:
     visible: false
 ---
 
-# Helm chart 2.0
+# Upgrade to Helm chart 2.0
 
 Helm chart 2.0 is the version of the official n8n Helm chart that installs n8n 3.0. This page lists what's new, and shows how to upgrade a chart 1.x release.
 

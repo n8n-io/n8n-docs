@@ -76,18 +76,7 @@ helm pull oci://ghcr.io/n8n-io/n8n-helm-chart/n8n --version 2.0.0-rc.2 --untar
 bash n8n/scripts/migrate-values.sh values.yaml > values-2.0.yaml
 ```
 
-The script writes the new values to `values-2.0.yaml`, and prints a report like this one:
-
-```
-Changed:
-  - Moved config.extraEnv to env.shared: N8N_RUNNERS_ENABLED, N8N_METRICS.
-  - Removed env.shared.N8N_RUNNERS_ENABLED. n8n 3.0 no longer reads it.
-  - Moved executions.concurrency.productionLimit to env.worker.N8N_CONCURRENCY_PRODUCTION_LIMIT.
-  - Removed database.useExternal. database.type chooses the database. Your connection settings stay as they are.
-Check:
-  - Task runners are on by default in 2.0 and need a token. Add N8N_RUNNERS_AUTH_TOKEN to the Secret n8n-core-secrets.
-Review the output before you upgrade. Then render it with helm template.
-```
+The script writes the new values to `values-2.0.yaml`, and prints a report with two lists: `Changed`, for what it moved or removed, and `Check`, for what you need to change yourself. For more on the script, see [The migration script](https://github.com/n8n-io/n8n-hosting/blob/main/charts/n8n/UPGRADING.md#the-migration-script) in the chart's upgrade guide.
 
 Review the new file, and work through each line under `Check`. The script has these limits:
 
@@ -125,26 +114,14 @@ If the chart creates the core Secret for you, set `secretRefs.env.N8N_RUNNERS_AU
 
 ## Check the changes Helm can't catch
 
-The render fails on retired keys, but some changes pass it and still change how n8n behaves. 
+The render fails on retired keys, but some changes pass it and still change how n8n behaves. Check these four first:
 
-A full table of changes that may apply to you are available in the [Which sections apply to you](https://github.com/n8n-io/n8n-hosting/blob/main/charts/n8n/UPGRADING.md#which-sections-apply-to-you) section of the chart's upgrade guide.
+* **Host settings in your core Secret:** n8n no longer reads `N8N_HOST`, `N8N_PORT`, and `N8N_PROTOCOL`. Without an Ingress or route, set `editor.url`, or n8n shows webhook and OAuth URLs on `localhost`. Keep the keys until you no longer need to roll back, because chart 1.x pods can't start without them.
+* **`$(VAR)` references in `extraEnv` values:** the values now reach n8n through ConfigMaps, where Kubernetes doesn't expand references. Write each value in full.
+* **ConfigMaps or Secrets loaded with `envFrom`:** their keys now override the values in the chart's ConfigMaps. In chart 1.x, the chart's values won. Check that they hold only the keys you mean to set.
+* **Client IP addresses:** with an Ingress or `HTTPRoute`, n8n now sees client IP addresses instead of the proxy's. Check the IP allowlists on Webhook nodes.
 
-The changes that will affect most users are:
-
-| If you use | Check |
-| --- | --- |
-| A core Secret with `N8N_HOST`, `N8N_PORT`, and `N8N_PROTOCOL` | n8n no longer reads these keys. Without an Ingress or route, set `editor.url`, or n8n shows webhook and OAuth URLs on `localhost`. Keep the keys until you no longer need to roll back, because chart 1.x pods can't start without them. |
-| `extraEnv` values with `$(VAR)` references | The values now reach n8n through ConfigMaps, where Kubernetes doesn't expand references. Write each value in full. |
-| ConfigMaps or Secrets loaded with `envFrom` | Their keys now override the values in the chart's ConfigMaps. In chart 1.x, the chart's values won. Check that they hold only the keys you mean to set. |
-| `s3.enabled: true` | n8n now stores binary data in the bucket instead of on each pod's disk. This needs a Business or Enterprise license, so the chart also requires `license.enabled: true`. |
-| Webhook processors and an Ingress | The chart now creates a second Ingress for webhook paths. Controllers that create a load balancer for each Ingress, such as the AWS Load Balancer Controller, create a second one. To share one, set the same group annotation in `ingress.annotations` and `ingress.webhook.annotations`. |
-| An Ingress or `HTTPRoute` | n8n now sees client IP addresses instead of the proxy's. Check the IP allowlists on Webhook nodes. |
-| `podSecurityContext.<role>` blocks | They now merge over `podSecurityContext.shared` instead of replacing it. To remove a default, such as a fixed user ID on OpenShift, set it to `null`. |
-| `networkPolicy.enabled: true` | Without `networkPolicy.egress` rules, the policy now allows all outgoing traffic. Rules you set now take effect and replace the chart's rules. |
-| Containers you add with `extraContainers` | n8n's pods no longer get a Kubernetes API token, a Role, or service link variables. If a container needs them, set `serviceAccount.automountServiceAccountToken`, `rbac.create`, or `enableServiceLinks` to `true`. |
-| Code nodes that run longer than a minute | n8n 3.0 stops JavaScript tasks after 60 seconds instead of 300. To keep 300, set `N8N_RUNNERS_TASK_TIMEOUT: 300` in both `env.shared` and `env.taskRunner`, because n8n and the runner each apply it. |
-| `persistence.enabled: true` | The main pod now stops before its replacement starts, so each upgrade has a short outage. If you installed with Helm 4, the first upgrade can fail with `spec.strategy.rollingUpdate: Forbidden`. Run that upgrade once with `--server-side=false`. |
-
+For the rest, see the [changes the render doesn't catch](https://github.com/n8n-io/n8n-hosting/blob/main/charts/n8n/UPGRADING.md#changes-the-render-does-not-catch) in the chart's upgrade guide. Its [Which sections apply to you](https://github.com/n8n-io/n8n-hosting/blob/main/charts/n8n/UPGRADING.md#which-sections-apply-to-you) table shows what to read for your setup.
 
 ## Upgrade the release to Helm chart 2.0
 

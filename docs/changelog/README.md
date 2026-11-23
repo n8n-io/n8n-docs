@@ -54,9 +54,9 @@ When you archive an agent, n8n unpublishes it. That disconnects its channels and
 
 To bring an agent back, select **Unarchive**. It returns unpublished, so publish it again to reconnect its channels and schedules. To delete an agent permanently, archive it first, then select **Delete**.
 
-Sub-agent references and Message an Agent nodes that point to an archived agent keep the reference and show an Archived label. A call to an archived agent fails with a clear error, so check what depends on an agent before you archive it.
+Agents that use an archived agent as a sub-agent keep the reference and show it with an Archived badge. A call to an archived sub-agent fails with an error asking you to restore it, so check what depends on an agent before you archive it.
 
-On the n8n MCP server, the `archive_agent` tool replaces `delete_agent`. In the project export API, the `includeArchivedWorkflows` flag is now `includeArchived` and covers agents too.
+On the n8n MCP server, the `archive_agent` tool replaces `delete_agent`. For package exports, the `includeArchivedWorkflows` flag is now `includeArchived`, and project exports with it set also include archived agents.
 
 {% hint style="warning" %}
 **Preview status**

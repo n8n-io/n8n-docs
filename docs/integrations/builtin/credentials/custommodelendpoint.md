@@ -88,7 +88,7 @@ Set **Authentication** to **OAuth2 Client Credentials**. Use this when your gate
 - **Scope**: space-separated scopes to ask for. Leave it empty to ask for none.
 - **Send Client Credentials In**: choose **Authorization Header** to send the client ID and secret as Basic auth, or **Request Body** to send them as body fields. Login servers differ on which they accept.
 
-n8n fetches a token when the node runs and keeps it in memory for that run. It fetches a new one shortly before the token expires, or after an hour if the login server doesn't say how long it lasts. The **Custom Model Endpoint** node fetches a new token for each input item. n8n doesn't write the token back to the credential.
+n8n fetches a token when the node runs and keeps it in memory for that run. It fetches a new one shortly before the token expires, or after an hour if the login server doesn't say how long it lasts. n8n doesn't write the token back to the credential.
 
 {% hint style="info" %}
 **If you restrict the credential's domains, allow the login server too**

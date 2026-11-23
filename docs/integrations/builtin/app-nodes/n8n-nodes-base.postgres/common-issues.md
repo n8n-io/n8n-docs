@@ -108,7 +108,13 @@ TimescaleDB returns a `timestamp without time zone` as the stored value from nod
 
 CrateDB and QuestDB keep the older reading on every version. Both engines send the value in UTC, but the node reads it in the time zone of the n8n host and then labels the result `Z`, so the instant is only correct when that host runs in UTC. QuestDB also sends microseconds, which the reading cuts to milliseconds.
 
-To get the stored value on those two, or on TimescaleDB below 1.3, cast the column at query time with `SELECT ts_col::text AS ts_col_as_text FROM table_with_ts_col`.
+To get the stored value on QuestDB, or on TimescaleDB below 1.3, cast the column at query time with `SELECT ts_col::text AS ts_col_as_text FROM table_with_ts_col`. On QuestDB this keeps all six fractional digits.
+
+CrateDB needs a different query. It holds a timestamp as epoch milliseconds, and a cast to text gives you that number, such as `1773453566535`. Use `TO_CHAR` instead, which always formats in UTC:
+
+```sql
+SELECT TO_CHAR(ts_col, 'YYYY-MM-DD HH24:MI:SS.MS') AS ts_col_as_text FROM table_with_ts_col
+```
 {% endhint %}
 
 ### A DATE column before node 2.7

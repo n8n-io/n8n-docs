@@ -144,7 +144,7 @@ To move:
 
 1. Create a **Custom Model Endpoint** credential. Set **Base URL** to the same URL as the **Base URL** on your OpenAI credential.
 2. Set **Authentication** to the method your gateway expects. It doesn't have to be a bearer token.
-3. Move the header from the OpenAI credential's **Add Custom Header** setting into **Gateway Headers**. If the OpenAI credential has an **Organization ID**, add it as an `OpenAI-Organization` gateway header.
+3. If the OpenAI credential has an **Add Custom Header** value, move it into **Gateway Headers**. If it has an **Organization ID**, add it as an `OpenAI-Organization` gateway header.
 4. In your workflow, replace the OpenAI node with the **Custom Model Endpoint** node, or the OpenAI Chat Model sub-node with **Custom Endpoint Chat Model**.
 5. Select the new credential and check the model name. See [Model names differ between gateways](#model-names-differ-between-gateways).
 
@@ -192,7 +192,7 @@ A gateway header name or value contains characters a header can't carry. Check t
 
 ### `This gateway does not publish a model list`
 
-The gateway doesn't serve a compatible `GET /models`. Many gateways don't, so this isn't always a fault. If your gateway does serve a model list, check that **Base URL** includes the version segment, such as `/v1`. Otherwise switch the node's **Model** field to **By ID** and type the model name your gateway uses.
+The gateway doesn't serve a compatible `GET /models`. Many gateways don't, so this isn't always a fault. If your gateway does serve a model list, check that **Base URL** matches the API path, including a version segment such as `/v1` when the gateway requires one. Otherwise switch the node's **Model** field to **By ID** and type the model name your gateway uses.
 
 ### `The gateway could not list its models`
 

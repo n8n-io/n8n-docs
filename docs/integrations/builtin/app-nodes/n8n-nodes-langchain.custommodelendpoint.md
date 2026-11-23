@@ -157,7 +157,7 @@ Here are some common errors and issues with the Custom Model Endpoint node and s
 
 ### `This gateway does not publish a model list`
 
-The gateway doesn't serve a compatible `GET /models`. Many gateways don't, so this isn't always a fault. If your gateway does serve a model list, check that **Base URL** includes the version segment, such as `/v1`. Otherwise switch **Model** to **By ID** and type the name your gateway uses.
+The gateway doesn't serve a compatible `GET /models`. Many gateways don't, so this isn't always a fault. If your gateway does serve a model list, check that **Base URL** matches the API path, including a version segment such as `/v1` when the gateway requires one. Otherwise switch **Model** to **By ID** and type the name your gateway uses.
 
 ### `This node has no message to send`
 

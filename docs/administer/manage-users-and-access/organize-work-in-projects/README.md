@@ -58,7 +58,7 @@ Projects control who can see and change the workflows, credentials, and data tab
 
 You can see a workflow's executions when your project role, a share on the workflow, or your instance role gives you permission to read executions. Membership in one project doesn't by itself show you the executions of another project.
 
-[Instance owners and instance admins](../understand-instance-roles.md) can view saved executions across all projects. The Project Admin role by itself gives no access outside its project.
+[Instance owners and instance admins](../set-permissions-and-roles-rbac/understand-instance-roles.md) can view saved executions across all projects. The Project Admin role by itself gives no access outside its project.
 
 Team project workflows use project roles in the editor. Where workflow sharing is available, a direct share of a workflow in a personal space can give access to the executions of that workflow. It doesn't give access to the rest of the project.
 

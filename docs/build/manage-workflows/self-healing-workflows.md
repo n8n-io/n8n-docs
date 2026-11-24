@@ -18,6 +18,8 @@ The Assistant reads the failed execution, investigates the cause, and proposes c
 {% hint style="info" %}
 **Feature availability**
 
+Self-healing workflows started rolling out gradually on n8n Cloud from n8n 2.49.5.
+
 <!-- vale from-microsoft.Contractions = NO -->
 <!-- vale from-write-good.TooWordy = NO -->
 Self-healing requires the n8n Assistant. It is available on:
@@ -45,6 +47,8 @@ Each investigation uses [Assistant credits](https://app.gitbook.com/s/jm0ZYRpZIP
 * For team projects, you need permission to manage project settings. Reviewers need edit access to the workflows they review. Publishing also requires publish permission.
 
 On self-hosted instances, [set up the n8n Assistant](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant), then set `N8N_INSTANCE_AI_WORKFLOW_SUGGESTIONS_ENABLED=true` and restart n8n.
+
+On self-hosted instances, keep `EXECUTIONS_DATA_SAVE_ON_ERROR=all` (the default) to save failed production executions. A workflow's **Save failed production executions** setting can override this default.
 
 ## Enable self-healing
 

@@ -12,6 +12,8 @@ layout:
 
 # Custom instance roles <a href="#custom-instance-roles" id="custom-instance-roles"></a>
 
+A custom instance role is a role that you define yourself, with the exact instance-level permissions you choose.
+
 {% hint style="info" %}
 **Feature availability**
 
@@ -20,20 +22,10 @@ Custom instance roles are available on:
 - **n8n Cloud:** Enterprise
 - **Self-hosted:** Enterprise
 
-Available from n8n 2.30.0 (released July 7, 2026)
+Custom instance roles are available from n8n 2.30.0 (released July 7, 2026).
 {% endhint %}
 
-{% hint style="info" %}
-**Instance roles vs project roles**
-
-n8n has two types of custom roles:
-
-**Custom instance roles**: Roles that relate to the administrative capabilities a user needs at the instance level.
-
-**Custom project roles**: Roles that apply within a specific project. Refer to [Create custom project roles](create-custom-project-roles.md).
-{% endhint %}
-
-Custom instance roles let you grant users specific instance-level capabilities without giving them full Admin access. Unlike built-in roles (Owner, Admin, Member, Chat user), custom instance roles let you define granular permissions for instance settings, user management, and other instance-wide management.
+Custom instance roles let you grant users specific instance-level capabilities without giving them full Admin access. Unlike [built-in roles](understand-instance-roles.md) (Owner, Admin, Member, Chat user), custom instance roles let you define granular permissions for instance settings, user management, and other instance-wide management.
 
 ## Create a custom instance role <a href="#create-a-custom-instance-role" id="create-a-custom-instance-role"></a>
 
@@ -141,6 +133,6 @@ Only assign these permissions to fully trusted users, and avoid combining them u
 
 ## Related resources
 
-* [Custom roles](create-custom-roles.md)
+* [Custom roles](README.md#custom-roles)
 * [Create custom project roles](create-custom-project-roles.md)
 

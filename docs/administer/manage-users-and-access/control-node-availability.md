@@ -194,12 +194,12 @@ A disabled node still counts. Users can't add a blocked node as disabled and tur
 ## Related resources
 
 * [Manage users and access](./)
-* [Set up for Cloud](set-up-for-cloud.md)
-* [Add and remove users](add-and-remove-users.md)
-* [Understand instance roles](understand-instance-roles.md)
+* [Set up user management](manage-users/set-up-user-management.md)
+* [Add and remove users](manage-users/add-and-remove-users.md)
+* [Understand instance roles](set-permissions-and-roles-rbac/understand-instance-roles.md)
 * [Set permissions and roles (RBAC)](set-permissions-and-roles-rbac/README.md)
 * [Verify user identity](verify-user-identity/README.md)
 * [Follow best practices](follow-best-practices.md)
-* [Organize work in projects](set-permissions-and-roles-rbac/organize-work-in-projects.md)
+* [Organize work in projects](organize-work-in-projects/README.md)
 * [Block specific nodes](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/block-specific-nodes)
 * [Endpoint reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/instance-settings/node-type-policy)

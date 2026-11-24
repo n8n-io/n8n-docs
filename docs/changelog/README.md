@@ -701,7 +701,7 @@ Vault connections can now be scoped to a single project. Secrets from that conne
 
 _Instance admin setup released in n8n 2.11 (2026-03-03)._ Instance admins create a project-scoped connection from **Settings > External Secrets**.
 
-_Full team access released in n8n 2.13 (2026-03-16)._ Project admins now manage their own vault connections from **Project Settings > External Secrets**. Instance-level connections shared with them appear as read-only. Project editors can use project-scoped secrets in credentials once an instance admin enables access with the **System Roles** toggle under **Settings > External Secrets**, or through custom roles for finer control. [Custom roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles) gained five secrets scopes: list, read, create, update, and delete. Instance admins and owners no longer need to be project members for secrets to resolve.
+_Full team access released in n8n 2.13 (2026-03-16)._ Project admins now manage their own vault connections from **Project Settings > External Secrets**. Instance-level connections shared with them appear as read-only. Project editors can use project-scoped secrets in credentials once an instance admin enables access with the **System Roles** toggle under **Settings > External Secrets**, or through custom roles for finer control. [Custom roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac#custom-roles) gained five secrets scopes: list, read, create, update, and delete. Instance admins and owners no longer need to be project members for secrets to resolve.
 
 Refer to [External secrets](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/use-external-secret-stores) for more information.
 
@@ -756,7 +756,7 @@ Available policies include:
 * **Sharing**: control whether users can share workflows and credentials from their personal space.
 * **Workflow publishing**: control whether users can publish workflows from their personal space.
 
-This release builds on recent updates to the permissions model, including [custom project roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles), to better support policy-driven governance.
+This release builds on recent updates to the permissions model, including [custom project roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac#custom-roles), to better support policy-driven governance.
 
 <figure><img src=".gitbook/assets/personal_space_policies.png" alt="The new Security &#x26; policies settings section"><figcaption><p>The new Security &#x26; policies settings section</p></figcaption></figure>
 
@@ -768,7 +768,7 @@ This release builds on recent updates to the permissions model, including [custo
 
 **Released:** 2026-02-13 in [n8n 2.8.3](release-notes.md#n8n28)
 
-The project role selector now splits built-in system roles and [custom roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles) into separate sections, so a long list of custom roles no longer buries the defaults. Hovering over any role shows a summary of its configured permissions, with an option to open the full permission details. Previously you had to leave the assignment flow and open the role itself to check what you were about to grant.
+The project role selector now splits built-in system roles and [custom roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac#custom-roles) into separate sections, so a long list of custom roles no longer buries the defaults. Hovering over any role shows a summary of its configured permissions, with an option to open the full permission details. Previously you had to leave the assignment flow and open the role itself to check what you were about to grant.
 
 <figure><img src=".gitbook/assets/custom_roles_selector.png" alt="System roles and custom roles are now displayed in separate sections"><figcaption><p>System roles and custom roles are now displayed in separate sections</p></figcaption></figure>
 

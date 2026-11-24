@@ -7,22 +7,22 @@ layout:
 
 # Deploy to Google Cloud with Terraform
 
-Deploy a production-grade, highly available n8n instance on Google Cloud using the official Terraform module.
+Deploy n8n in queue mode on Google Kubernetes Engine using the official Terraform module.
 
-[terraform-google-n8n](https://github.com/n8n-io/terraform-google-n8n) is a Terraform module that deploys a production-grade n8n instance to Google Cloud. It provisions a regional GKE cluster running n8n's main, webhook, and worker pods, with managed PostgreSQL (Cloud SQL), Redis (Memorystore), and Cloud Storage for binary data. A load balancer, a Google-managed certificate, and Cloud DNS handle ingress, TLS, and name resolution.
+[terraform-google-n8n](https://github.com/n8n-io/terraform-google-n8n) is a Terraform module that deploys n8n in queue mode to Google Cloud. It provisions a regional GKE cluster running n8n's main, webhook, and worker pods, with managed PostgreSQL (Cloud SQL), Redis (Memorystore), and Cloud Storage for binary data. A load balancer, a Google-managed certificate, and Cloud DNS handle ingress, TLS, and name resolution.
 
 This module automates a deployment with separate main, webhook, and worker pods, each with its own autoscaling bounds, and it's maintained by the n8n Solutions team.
 
 {% hint style="warning" %}
 **Pre-release module**
 
-Version 0.1.0 of the Google module is marked pre-release and isn't scale-validated (no load test has been run). Expect breaking changes between releases, and pin the module version as shown in this guide.
+Version 0.2.0 of the Google module is marked pre-release and isn't scale-validated (no load test has been run). Expect breaking changes between releases, and pin the module version as shown in this guide.
 {% endhint %}
 
 {% hint style="warning" %}
 **New deployments only**
 
-Version 0.1.0 supports net-new deployments only. It can't import the state of an existing n8n installation. You can deploy onto a GKE cluster you already have (set `create_gke = false` and `existing_gke_cluster_name`), but the module can't adopt a running n8n deployment.
+Version 0.2.0 supports net-new deployments only. It can't import the state of an existing n8n installation. You can deploy onto a GKE cluster you already have (set `create_gke = false` and `existing_gke_cluster_name`), but the module can't adopt a running n8n deployment.
 {% endhint %}
 
 {% hint style="info" %}
@@ -52,7 +52,7 @@ The module creates the VPC, GKE cluster, Cloud SQL instance, Memorystore instanc
 ## Prerequisites
 
 * An **n8n license key**: an Enterprise license for the default multi-main topology, or a Business license if you set `n8n_main_hpa_min_replicas = 1`.
-* **Terraform CLI 1.9 or later**. See [Install Terraform](https://developer.hashicorp.com/terraform/tutorials/gcp-get-started/install-cli).
+* **Terraform CLI 1.13 or later**. See [Install Terraform](https://developer.hashicorp.com/terraform/tutorials/gcp-get-started/install-cli).
 * **Google Cloud CLI (`gcloud`)**. See [Install the gcloud CLI](https://cloud.google.com/sdk/docs/install). You also need `kubectl` and the `gke-gcloud-auth-plugin`, once, to read the n8n encryption key after you deploy.
 * **A Google Cloud project with billing enabled**, and an identity with permission to create GKE, Cloud SQL, Memorystore, Cloud Storage, Cloud DNS, load balancer, service networking, and IAM resources in it. Owner on the project covers this.
 * **Required APIs enabled** on the project:
@@ -72,17 +72,17 @@ The module creates the VPC, GKE cluster, Cloud SQL instance, Memorystore instanc
 {% hint style="info" %}
 **Run the preflight check**
 
-The module ships a read-only preflight script that checks your APIs, IAM permissions, and the org policy before you apply. The script lives in the [terraform-google-n8n](https://github.com/n8n-io/terraform-google-n8n/tree/0.1.0) repository, so download the pinned version and run it once before your first apply. It needs `gcloud`, `curl`, and `python3`, plus an active gcloud identity. If you only configured Application Default Credentials, run `gcloud auth login` or activate a service account before running it.
+The module ships a read-only preflight script that checks your APIs, IAM permissions, and the org policy before you apply. The script lives in the [terraform-google-n8n](https://github.com/n8n-io/terraform-google-n8n/tree/0.2.0) repository, so download the pinned version and run it once before your first apply. It needs `gcloud`, `curl`, and `python3`, plus an active gcloud identity. If you only configured Application Default Credentials, run `gcloud auth login` or activate a service account before running it.
 
 ```bash
-curl -fsSLO https://raw.githubusercontent.com/n8n-io/terraform-google-n8n/0.1.0/scripts/preflight.sh
+curl -fsSLO https://raw.githubusercontent.com/n8n-io/terraform-google-n8n/0.2.0/scripts/preflight.sh
 CHECK_CLOUD_DNS=true bash preflight.sh YOUR_PROJECT_ID
 ```
 {% endhint %}
 
 ## Usage
 
-This guide deploys the `small` tier. Instead of cloning a repository, it references the published [n8n-io/n8n/google](https://registry.terraform.io/modules/n8n-io/n8n/google/0.1.0) module from the Terraform Registry, pinned to v0.1.0. `terraform init` downloads the module for you.
+This guide deploys the `small` tier. Instead of cloning a repository, it references the published [n8n-io/n8n/google](https://registry.terraform.io/modules/n8n-io/n8n/google/0.2.0) module from the Terraform Registry, pinned to v0.2.0. `terraform init` downloads the module for you.
 
 You create a single `main.tf`, set your project, domain, and license key, and run `terraform init`, `terraform plan`, and `terraform apply`.
 
@@ -95,7 +95,7 @@ cd n8n-gcp
 
 ## Step 2: Create `main.tf`
 
-Create one file, `main.tf`. It references the registry's [small example](https://registry.terraform.io/modules/n8n-io/n8n/google/0.1.0/examples/small) as a module, pinned to v0.1.0. The example bundles the provider setup, and the module creates the VPC, GKE cluster, Cloud SQL, Memorystore, Cloud Storage bucket, load balancer, Google-managed certificate, and DNS record, so this is all the Terraform you write.
+Create one file, `main.tf`. It references the registry's [small example](https://registry.terraform.io/modules/n8n-io/n8n/google/0.2.0/examples/small) as a module, pinned to v0.2.0. The example bundles the provider setup, and the module creates the VPC, GKE cluster, Cloud SQL, Memorystore, Cloud Storage bucket, load balancer, Google-managed certificate, and DNS record, so this is all the Terraform you write.
 
 ```hcl
 variable "n8n_license_key" {
@@ -121,7 +121,7 @@ variable "gcs_force_destroy" {
 
 module "n8n" {
   source  = "n8n-io/n8n/google//examples/small"
-  version = "0.1.0"
+  version = "0.2.0"
 
   project_id          = "my-gcp-project"
   n8n_fqdn            = "n8n.example.com"
@@ -180,7 +180,7 @@ If you can't have the `iam.disableServiceAccountKeyCreation` policy turned off o
 terraform init
 ```
 
-This downloads the n8n module (v0.1.0) and the `google`, `google-beta`, `kubernetes`, `helm`, `kubectl`, `tls`, `random`, and `time` providers.
+This downloads the n8n module (v0.2.0) and the `google`, `google-beta`, `kubernetes`, `helm`, `kubectl`, `tls`, `random`, and `time` providers.
 
 ## Step 5: Plan and apply
 
@@ -227,7 +227,7 @@ Store the value in a password manager. If you lose it, every stored credential b
 
 The module ships three sizing examples. Use one as your starting point, then tune node type, pod counts, and database size from there. Sizing isn't scale-validated on GKE, so tune it against a load test. If you're unsure, start with `small`.
 
-|                                  | [small](https://registry.terraform.io/modules/n8n-io/n8n/google/0.1.0/examples/small) (default) | [medium](https://registry.terraform.io/modules/n8n-io/n8n/google/0.1.0/examples/medium) | [large](https://registry.terraform.io/modules/n8n-io/n8n/google/0.1.0/examples/large) |
+|                                  | [small](https://registry.terraform.io/modules/n8n-io/n8n/google/0.2.0/examples/small) (default) | [medium](https://registry.terraform.io/modules/n8n-io/n8n/google/0.2.0/examples/medium) | [large](https://registry.terraform.io/modules/n8n-io/n8n/google/0.2.0/examples/large) |
 | -------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Node type                        | e2-standard-4 (4 vCPU, 16 GB)                         | e2-standard-8 (8 vCPU, 32 GB)                                | e2-standard-16 (16 vCPU, 64 GB)                              |
 | Nodes per zone (min/max)         | 1/4                                                   | 2/5                                                          | 3/10                                                         |
@@ -256,7 +256,7 @@ To use a bucket, create it outside this configuration, with object versioning en
 
 ## Clean up
 
-The example protects the GKE cluster, the Cloud SQL instance, and the storage bucket by default, so a plain `terraform destroy` fails. Terraform reads the protection flag from the live resource, so turn the protection off with an apply first, then destroy:
+The example protects the GKE cluster, the Cloud SQL instance, and the storage bucket by default, so a plain `terraform destroy` fails. Terraform reads the protection flag from state, so turn the protection off with an apply first, then destroy:
 
 ```bash
 terraform apply -auto-approve \
@@ -272,23 +272,23 @@ terraform destroy -auto-approve \
 
 Most destroys finish in 10 to 20 minutes. This example doesn't manage your Cloud DNS zone, so the zone stays, but the A record the module created is removed.
 
-If the destroy stalls, see the module's [destroy and cleanup guide](https://github.com/n8n-io/terraform-google-n8n/blob/0.1.0/docs/destroy-cleanup.md). By default, the Private Service Access connection is dropped from state rather than deleted, and a leftover VPC peering can occasionally block the network delete.
+If the destroy stalls, see the module's [destroy and cleanup guide](https://github.com/n8n-io/terraform-google-n8n/blob/0.2.0/docs/destroy-cleanup.md). By default, the Private Service Access connection is dropped from state rather than deleted, and a leftover VPC peering can occasionally block the network delete.
 
-The example keeps these protections on by default because they favor safety over easy teardown. Before you promote the setup to production, also review `postgres_backup_retained_backups` and `postgres_transaction_log_retention_days`. See the [`examples/small`](https://github.com/n8n-io/terraform-google-n8n/tree/0.1.0/examples/small) README for the full list.
+The example keeps these protections on by default because they favor safety over easy teardown. Before you promote the setup to production, also review `postgres_backup_retained_backups` and `postgres_transaction_log_retention_days`. See the [`examples/small`](https://github.com/n8n-io/terraform-google-n8n/tree/0.2.0/examples/small) README for the full list.
 
 ## Frequently asked questions
 
 ### Can I migrate an existing n8n deployment to the module?
 
-Not yet. Version 0.1.0 supports net-new deployments, including onto a GKE cluster you already have (`create_gke = false` with `existing_gke_cluster_name`). It can't import an existing n8n deployment's state. The module is the best fit right now if you're still evaluating n8n or haven't deployed yet. See the [roadmap](https://github.com/n8n-io/terraform-google-n8n/blob/main/ROADMAP.md) on GitHub.
+Not yet. Version 0.2.0 supports net-new deployments, including onto a GKE cluster you already have (`create_gke = false` with `existing_gke_cluster_name`). It can't import an existing n8n deployment's state. The module is the best fit right now if you're still evaluating n8n or haven't deployed yet. See the [roadmap](https://github.com/n8n-io/terraform-google-n8n/blob/main/ROADMAP.md) on GitHub.
 
 ### I'm on AWS or Azure. Can I use this?
 
-Yes. Sibling modules exist for [AWS](./deploy-to-aws-with-terraform/deploy-your-first-instance.md) (EKS, [`n8n-io/n8n/aws`](https://registry.terraform.io/modules/n8n-io/n8n/aws/0.5.0)) and [Azure](./deploy-to-azure-with-terraform.md) (AKS, [`n8n-io/n8n/azurerm`](https://registry.terraform.io/modules/n8n-io/n8n/azurerm/0.1.0)). Generic on-premises Kubernetes and OpenShift aren't covered yet.
+Yes. Sibling modules exist for [AWS](./deploy-to-aws-with-terraform/deploy-your-first-instance.md) (EKS, [`n8n-io/n8n/aws`](https://registry.terraform.io/modules/n8n-io/n8n/aws/0.5.0)) and [Azure](./deploy-to-azure-with-terraform.md) (AKS, [`n8n-io/n8n/azurerm`](https://registry.terraform.io/modules/n8n-io/n8n/azurerm/0.2.0)). Generic self-hosted Kubernetes and OpenShift aren't covered yet.
 
 ### What if my DNS isn't in Cloud DNS?
 
-The `small` example manages the DNS record in Cloud DNS. For Cloudflare or GoDaddy DNS, the module has [`examples/cloudflare`](https://registry.terraform.io/modules/n8n-io/n8n/google/0.1.0/examples/cloudflare) (Let's Encrypt certificates) and [`examples/godaddy`](https://registry.terraform.io/modules/n8n-io/n8n/google/0.1.0/examples/godaddy). They need an extra ACME email input, and the steps on this page don't cover them.
+The `small` example manages the DNS record in Cloud DNS. For Cloudflare or GoDaddy DNS, the module has [`examples/cloudflare`](https://registry.terraform.io/modules/n8n-io/n8n/google/0.2.0/examples/cloudflare) (Let's Encrypt certificates) and [`examples/godaddy`](https://registry.terraform.io/modules/n8n-io/n8n/google/0.2.0/examples/godaddy). They need an extra ACME email input, and the steps on this page don't cover them.
 
 ### Which size should I pick?
 
@@ -300,7 +300,15 @@ Cloud SQL backups and point-in-time recovery run with Cloud SQL's own defaults. 
 
 ### Does the module support all n8n environment variables and configuration options?
 
-No. Version 0.1.0 intentionally exposes a curated set of variables to keep the module simple and opinionated. If you need a specific configuration that isn't supported, open a [GitHub issue](https://github.com/n8n-io/terraform-google-n8n/issues).
+Mostly. The module has dedicated inputs for the settings it manages, such as the database, queue, storage, license, and domain. For other n8n environment variables, add `n8n_extra_env` to the module block. From 0.2.0, the `small`, `medium`, and `large` examples all pass it through, and the variables apply to every main, webhook, and worker pod:
+
+```hcl
+n8n_extra_env = [
+  { name = "GENERIC_TIMEZONE", value = "Europe/Berlin" },
+]
+```
+
+The module rejects names it manages itself, and you shouldn't put secrets here, because Terraform stores the values in plain text in state. If you need a setting that neither route covers, open a [GitHub issue](https://github.com/n8n-io/terraform-google-n8n/issues).
 
 ## Support
 

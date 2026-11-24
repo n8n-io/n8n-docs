@@ -30,7 +30,7 @@ They aren't available on n8n Cloud Enterprise or self-hosted n8n. Free trials in
 
 ## How Assistant credits work
 
-n8n Assistant uses credits based on the tokens that the underlying AI model processes for each message. Longer conversations, larger workflows, and debugging sessions use more credits than short, focused requests. A message you stop partway through, or one that ends in an error, still uses credits for the work n8n Assistant did before it stopped.
+The n8n Assistant uses credits based on the tokens that the underlying AI model processes for each message or [self-healing investigation](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/self-healing-workflows). Longer conversations, larger workflows, and debugging sessions use more credits than short, focused requests. A message you stop partway through, or one that ends in an error, still uses credits for the work n8n Assistant did before it stopped.
 
 Your Assistant credit balance has two parts:
 
@@ -41,7 +41,7 @@ n8n Assistant always uses your included credits first. When they run out, it dra
 
 This is the main difference from [Gateway credits](../gateway-credits/README.md), which are a single prepaid balance: with Gateway credits, you only have what you've bought. With Assistant credits, your plan tops you up every month, and extra credits are optional.
 
-Running a workflow doesn't use Assistant credits, even if n8n Assistant built it. Only your conversations with n8n Assistant do.
+Running a workflow doesn't use Assistant credits, even if the n8n Assistant built it. Self-healing investigations of failed workflows use Assistant credits, even when the Assistant can't produce a fix.
 
 ## Included monthly allowance
 
@@ -91,7 +91,7 @@ To start using n8n Assistant again:
 - On a paid plan, the instance owner can [buy extra credits](top-up-assistant-credits.md), or you can wait for your included credits to reset on the first day of the next month.
 - On a free trial, upgrade to a paid plan.
 
-Your workflows aren't affected. Workflows keep running when your Assistant credits run out, because running a workflow doesn't use Assistant credits.
+Workflow executions continue when your Assistant credits run out. New self-healing investigations require available Assistant credits.
 
 ## Credit expiry and forfeiture
 
@@ -110,7 +110,7 @@ Assistant credits and Gateway credits are separate balances that pay for differe
 
 | | Assistant credits | Gateway credits |
 |---|---|---|
-| What they pay for | Your conversations with n8n Assistant, including when it builds a workflow or agent for you | AI models and tool services used by nodes in your workflows |
+| What they pay for | Your conversations with the n8n Assistant, including when it builds a workflow or agent for you, and self-healing investigations | AI models and tool services used by nodes in your workflows |
 | What they don't pay for | AI model calls that your workflows or agents make when they run | n8n Assistant |
 | What your plan includes | A monthly allowance that resets on the first day of every month | A small one-time amount of free credit at sign-up |
 | Buying more | Extra credits, used only after your included credits run out | Top-ups that add to your balance |

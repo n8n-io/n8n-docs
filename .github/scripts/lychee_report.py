@@ -23,6 +23,7 @@ import json
 import os
 import socket
 import sys
+import threading
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
@@ -78,6 +79,10 @@ DNS_GONE = "Network error: DNS lookup failed. The host has no DNS record"
 # EAI_NODATA is missing on macOS, hence getattr.
 NO_SUCH_HOST_ERRNOS = frozenset(
     e for e in (socket.EAI_NONAME, getattr(socket, "EAI_NODATA", None)) if e is not None)
+# Bounds on that lookup, so a slow resolver cannot stall the report: worst case
+# MAX_DNS_LOOKUPS x DNS_TIMEOUT seconds. The 2026-11-24 sweep needed one lookup.
+DNS_TIMEOUT = 5
+MAX_DNS_LOOKUPS = 50
 CACHED = "Error (cached)"
 
 # --------------------------------------------------------------------- pure helpers
@@ -154,31 +159,49 @@ def flatten_failures(stats):
     return out
 
 
-def host_has_no_dns(host, resolve=socket.getaddrinfo):
+def host_has_no_dns(host, resolve=socket.getaddrinfo, timeout=DNS_TIMEOUT):
     """True only when DNS says the name does not exist. A timeout or a temporary
-    failure (EAI_AGAIN) is not proof that a host is gone, so it returns False."""
-    try:
-        resolve(host, 443)
-    except socket.gaierror as e:
-        return e.errno in NO_SUCH_HOST_ERRNOS
-    except (OSError, UnicodeError, ValueError):
-        return False
-    return False
+    failure (EAI_AGAIN) is not proof that a host is gone, so it returns False.
+
+    getaddrinfo takes no timeout, so it runs on a daemon thread and is abandoned after
+    `timeout` seconds. A stuck lookup can then neither hold up the report nor keep the
+    process alive at exit."""
+    result = {}
+
+    def lookup():
+        try:
+            resolve(host, 443)
+            result["gone"] = False
+        except socket.gaierror as e:
+            result["gone"] = e.errno in NO_SUCH_HOST_ERRNOS
+        except (OSError, UnicodeError, ValueError):
+            result["gone"] = False
+
+    worker = threading.Thread(target=lookup, daemon=True)
+    worker.start()
+    worker.join(timeout)
+    return result.get("gone", False)
 
 
-def mark_missing_hosts(failures, resolve=socket.getaddrinfo):
+def mark_missing_hosts(failures, resolve=socket.getaddrinfo, timeout=DNS_TIMEOUT):
     """Rewrite lychee's generic "Connection failed" as a DNS failure when the host has
-    no DNS record. One lookup per host. Rows with an HTTP status, or any other cause,
-    are left alone. Returns the same list."""
+    no DNS record. One lookup per host, at most MAX_DNS_LOOKUPS. Rows with an HTTP
+    status, any other cause, or a URL that does not parse are left alone. Returns the
+    same list."""
     verdicts = {}
     for f in failures:
         if f["status"] is not None or LYCHEE_CONNECT_FAILED not in f["message"]:
             continue
-        host = urlsplit(f["url"]).hostname
+        try:
+            host = urlsplit(f["url"]).hostname
+        except ValueError:  # e.g. an unclosed IPv6 bracket
+            continue
         if not host:
             continue
         if host not in verdicts:
-            verdicts[host] = host_has_no_dns(host, resolve)
+            if len(verdicts) >= MAX_DNS_LOOKUPS:
+                continue
+            verdicts[host] = host_has_no_dns(host, resolve, timeout)
         if verdicts[host]:
             f["message"] = DNS_GONE
     return failures

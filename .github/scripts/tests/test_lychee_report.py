@@ -165,6 +165,35 @@ _res = _resolver({})
 lr.mark_missing_hosts(_timeout, _res)
 check("dns: other failures are not looked up", _res.calls == [] and _timeout[0]["message"] == "Timeout")
 
+# cubic on #5808: getaddrinfo has no timeout of its own, and a bad URL must not crash
+# the report.
+import time
+
+_CONN = "Network error: Connection failed. Check network connectivity and firewall settings"
+
+
+def _hang(host, port):
+    time.sleep(3)
+    raise socket.gaierror(socket.EAI_NONAME, "too late")
+
+
+_slow = [{"page": "docs/a.md", "url": "https://slow-dns.example/", "status": None, "message": _CONN}]
+_t0 = time.monotonic()
+lr.mark_missing_hosts(_slow, _hang, timeout=0.2)
+check("dns: a lookup that hangs is abandoned after the timeout",
+      time.monotonic() - _t0 < 1.5)
+check("dns: an abandoned lookup is not proof the host is gone", _slow[0]["message"] == _CONN)
+_bad = [{"page": "docs/a.md", "url": "https://[::1/", "status": None, "message": _CONN}]
+_res = _resolver({})
+check("dns: a URL that does not parse is skipped, not a crash",
+      lr.mark_missing_hosts(_bad, _res)[0]["message"] == _CONN and _res.calls == [])
+_many = [{"page": "docs/a.md", "url": f"https://h{i}.example/", "status": None, "message": _CONN}
+         for i in range(lr.MAX_DNS_LOOKUPS + 5)]
+_res = _resolver({f"h{i}.example": socket.EAI_NONAME for i in range(lr.MAX_DNS_LOOKUPS + 5)})
+lr.mark_missing_hosts(_many, _res)
+check("dns: at most MAX_DNS_LOOKUPS lookups per report", len(_res.calls) == lr.MAX_DNS_LOOKUPS)
+check("dns: hosts past the cap keep lychee's message", _many[-1]["message"] == _CONN)
+
 # --- build_payload ----------------------------------------------------------------
 payload = lr.build_payload(stats, ctx)
 check("payload: source and run metadata",

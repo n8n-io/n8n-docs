@@ -28,4 +28,5 @@ This section covers how to enable and manage OpenID Connect (OIDC) for single si
 * [Require two-factor auth](../require-two-factor-auth.md)
 * [Connect LDAP](../connect-ldap.md)
 * [Use SAML](../use-saml/README.md)
+* [Provision users with SCIM](../provision-users-with-scim.md)
 

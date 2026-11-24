@@ -1,0 +1,20 @@
+docs/build/work-with-data/transform-data/expression-reference/array.md
+  s_22034c4b2641a6::t_6e0fa3c8bcdaac 554
+  s_22034c4b2641a6::t_7d5e305e642a7e 579-584
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "a430cb1e5d71c23e0bb9caf679b5d1edc551c456",
+  "prompts": {},
+  "sessions": {
+    "s_22034c4b2641a6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "151f5925-9042-41ae-801a-404bc440f97d",
+        "model": "claude-fable-5-2"
+      },
+      "human_author": "Lorent Lempereur <lorent.lempereur@n8n.io>"
+    }
+  }
+}

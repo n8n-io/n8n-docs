@@ -1,5 +1,6 @@
 ---
 description: Move workflows and credentials between projects or users in n8n, which changes their ownership.
+contentType: howto
 layout:
   description:
     visible: false

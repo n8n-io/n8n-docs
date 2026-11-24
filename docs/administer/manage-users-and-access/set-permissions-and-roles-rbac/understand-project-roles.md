@@ -34,7 +34,7 @@ The **Project Editor** role is available on:
 The **Project Viewer** role is available on:
 
 - **n8n Cloud:** Enterprise
-- **Self-hosted:** Enterprise
+- **Self-hosted:** Business, Enterprise
 
 No project roles are available on the Community and Registered Community editions.
 {% endhint %}

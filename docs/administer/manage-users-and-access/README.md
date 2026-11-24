@@ -16,7 +16,7 @@ User management in n8n allows you to invite people to work in your n8n instance.
 
 * [Verifying user identity](verify-user-identity/README.md) with two-factor authentication, LDAP, SAML, or OIDC
 * [Adding and removing users](manage-users/add-and-remove-users.md)
-* Four built-in [instance roles](set-permissions-and-roles-rbac/understand-instance-roles.md): **Owner**, **Admin**, **Member**, and **Chat user** (**Admin** and **Chat user** are available on n8n Cloud Pro, Enterprise, and self-hosted Enterprise), plus custom instance roles
+* Four built-in [instance roles](set-permissions-and-roles-rbac/understand-instance-roles.md): **Owner**, **Admin**, **Member**, and **Chat user** (**Admin** and **Chat user** are available on n8n Cloud Pro and Enterprise, and self-hosted Business and Enterprise), plus custom instance roles
 * [Projects](organize-work-in-projects/README.md) to group workflows and credentials
 * Three built-in [project roles](set-permissions-and-roles-rbac/understand-project-roles.md): **Project Admin**, **Project Editor**, and **Project Viewer**. These control what a user can do within one project, and a user can have a different role in each project. You can also create [custom project roles](set-permissions-and-roles-rbac/create-custom-project-roles.md)
 

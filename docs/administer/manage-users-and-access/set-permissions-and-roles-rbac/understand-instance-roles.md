@@ -28,7 +28,7 @@ The **Owner** and **Member** instance roles are available on:
 The **Admin** and **Chat user** instance roles are available on:
 
 - **n8n Cloud:** Pro, Enterprise
-- **Self-hosted:** Enterprise
+- **Self-hosted:** Business, Enterprise
 
 The Chat user role requires the Chat feature to be enabled.
 {% endhint %}

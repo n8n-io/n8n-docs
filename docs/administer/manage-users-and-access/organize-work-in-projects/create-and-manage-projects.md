@@ -1,5 +1,6 @@
 ---
 description: Create projects, add and remove project members, delete projects, and favorite projects in n8n.
+contentType: howto
 layout:
   description:
     visible: false

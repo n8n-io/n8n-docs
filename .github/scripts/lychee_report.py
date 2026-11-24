@@ -44,7 +44,7 @@ MAX_FAILURES = 500
 # `merge_quality` promotes that verdict over this bucket when it does.
 #
 # 429 is UNREACHABLE today and is kept as a guard, not as live behaviour: `accept` in
-# lychee.toml is still `["200", "429"]`, so lychee scores a rate-limited link as healthy
+# lychee.toml still holds 429 (`["200..=299", "429"]`), so lychee scores a rate-limited link as healthy
 # and it never reaches a failure map. Whether a 429 should be hidden that way is the same
 # question 403 already lost, but changing `accept` changes what the weekly sweep reports
 # and is not a review fix. Listed here so that removing it from `accept` needs no second

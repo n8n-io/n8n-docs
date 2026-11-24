@@ -24,7 +24,7 @@ max_cache_age = "2d"
 # Cache successes only (DOC-2615). lychee also uses the cache inside a single run: once a
 # URL fails, every later occurrence of it in that run is reported as "Error (cached)"
 # without a new request. On 2026-11-16 that turned one failed request to emelia.io into
-# two dead links. Excluding every status except 200 and 429 (our `accept` list) means a
+# two dead links. Excluding every status outside our `accept` list (2xx and 429) means a
 # failed status is checked again on its next occurrence.
 #
 # Limit, as of lychee 0.24.2 (pinned in the workflows, DOC-2626): this setting matches
@@ -34,7 +34,7 @@ max_cache_age = "2d"
 # the .lycheecache file, so it never outlives the run. lychee_report.py gives each
 # cached row the cause lychee found the first time. The DocOps side (DOC-2614) calls a
 # link with no status dead only after it fails on two weekly runs.
-cache_exclude_status = "100..=199, 201..=428, 430..=999"
+cache_exclude_status = "100..=199, 300..=428, 430..=999"
 
 #############################  Runtime  #############################
 
@@ -83,7 +83,12 @@ retry_wait_time = 10
 # under `blocked` instead of `broken`, so it is visible and triageable without inflating
 # the broken count. Hosts that always 403 belong in `exclude` below, with a dated note.
 # 429 stays accepted: that is our own crawl rate, not a broken link.
-accept = ["200", "429"]
+#
+# 200..=299, not 200 (DOC-2626): lychee 0.18.1 passed every 2xx whatever this list said.
+# From 0.19 it passes only the codes listed here, and the first 0.24.2 sweep
+# (2026-11-24) failed id.atlassian.com and account.postmarkapp.com for answering
+# "202 Accepted". The range keeps what counts as broken the same as before the upgrade.
+accept = ["200..=299", "429"]
 
 # Proceed for server connections considered insecure (invalid TLS).
 insecure = false

@@ -48,7 +48,7 @@ Each investigation uses [Assistant credits](https://app.gitbook.com/s/jm0ZYRpZIP
 
 On self-hosted instances, [set up the n8n Assistant](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/set-up-n8n-assistant), then set `N8N_INSTANCE_AI_WORKFLOW_SUGGESTIONS_ENABLED=true` and restart n8n.
 
-On self-hosted instances, keep `EXECUTIONS_DATA_SAVE_ON_ERROR=all` (the default) to save failed production executions. A workflow's **Save failed production executions** setting can override this default.
+On self-hosted instances, `EXECUTIONS_DATA_SAVE_ON_ERROR` defaults to `all`, which saves failed production executions. A workflow's **Save failed production executions** setting can override this default.
 
 ## Enable self-healing
 

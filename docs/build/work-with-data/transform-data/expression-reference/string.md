@@ -75,6 +75,14 @@ layout:
 
 If the string also contains other content, try using <code>extractEmail()</code> or <code>extractUrl()</code> first.
 
+`extractDomain()` reads the string in this order:
+
+1. If the whole string is one email address, it returns the part after the `@`.
+2. If the whole string is a URL or a domain, it returns the host. The protocol (`http`, `https`, or `ftp`) is optional, and a `mailto:` prefix is accepted. For a URL that starts with a protocol, user information before the host (`user@`) and an `@` in the path or query don't change the result. The host must be a domain name with at least one dot, `localhost`, or an IPv4 address. `extractDomain()` doesn't read other hosts, such as an IPv6 address or a name without a dot, as a URL. Rule 3 applies to these strings.
+3. If the string has no spaces and contains an email address, it returns the domain of the first address.
+
+In every other case, it returns <code>undefined</code>. A string that contains a space always returns <code>undefined</code>.
+
 **Syntax:** _`String`_.extractDomain()
 
 **Returns:** String
@@ -89,6 +97,27 @@ If the string also contains other content, try using <code>extractEmail()</code>
 
   ```javascript
   "http://n8n.io/workflows".extractDomain() //=> 'n8n.io'
+  ```
+
+  ```javascript
+  "https://medium.com/@jane.doe".extractDomain() //=> 'medium.com'
+  ```
+
+  ```javascript
+  "mailto:me@example.com".extractDomain() //=> 'example.com'
+  ```
+
+  ```javascript
+  "<me@example.com>".extractDomain() //=> 'example.com'
+  ```
+
+  ```javascript
+  // No protocol, and the whole string has the format of an email address
+  "example.com/a@b.com".extractDomain() //=> 'b.com'
+  ```
+
+  ```javascript
+  "Name <me@example.com>".extractDomain() //=> undefined
   ```
 
   ```javascript
@@ -252,7 +281,21 @@ If the string also contains other content, try using <code>extractUrl()</code> f
 
 ## _`String`_.**`isEmail()`** <a href="#stringisemail" id="stringisemail"></a>
 
-**Description:** Returns <code>true</code> if the string is an email
+**Description:** Returns <code>true</code> if the whole string is one email address
+
+If the string also contains other content, try using <code>extractEmail()</code> first.
+
+`isEmail()` returns <code>false</code> if the string contains:
+
+* Any character before or after the address, for example punctuation or angle brackets.
+* A `mailto:` prefix, or a URL that contains an `@`.
+* More than one address.
+* A dot at the start of the address, or two dots in a row before the `@`.
+* A space, including a space at the start or end of the string. Use <code>trim()</code> first to remove it.
+
+A tab or line break before or after the address doesn't change the result.
+
+`isEmail()` checks the format of the address only. It doesn't check that the address exists.
 
 **Syntax:** _`String`_.isEmail()
 
@@ -268,6 +311,26 @@ If the string also contains other content, try using <code>extractUrl()</code> f
 
   ```javascript
   "It's me@example.com".isEmail() //=> false
+  ```
+
+  ```javascript
+  "me@example.com;".isEmail() //=> false
+  ```
+
+  ```javascript
+  "mailto:me@example.com".isEmail() //=> false
+  ```
+
+  ```javascript
+  "https://medium.com/@jane.doe".isEmail() //=> false
+  ```
+
+  ```javascript
+  "me@example.com\n".isEmail() //=> true
+  ```
+
+  ```javascript
+  " me@example.com".isEmail() //=> false
   ```
 
   ```javascript
@@ -364,7 +427,11 @@ If the string also contains other content, try using <code>extractUrl()</code> f
 
 ## _`String`_.**`length`** <a href="#stringlength" id="stringlength"></a>
 
-**Description:** The number of characters in the string
+**Description:** The number of characters in the string. Most emoji count as two characters.
+
+Technically, `length` counts UTF-16 code units, like the standard JavaScript `length`. Most emoji use two code units. `length()` returns the same number.
+
+To count each emoji as one character, use `[...text].length`. Some emoji, such as flags, combine more than one emoji. They still count as more than one.
 
 **Syntax:** _`String`_.length
 
@@ -378,9 +445,21 @@ If the string also contains other content, try using <code>extractUrl()</code> f
   "hello".length //=> 5
   ```
 
+  ```javascript
+  "Hi 😀".length //=> 5
+  ```
+
+  ```javascript
+  [..."Hi 😀"].length //=> 4
+  ```
+
+  ```javascript
+  [..."🇫🇷"].length //=> 2
+  ```
+
 ## _`String`_.**`match()`** <a href="#stringmatch" id="stringmatch"></a>
 
-**Description:** Matches the string against a <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions”>regular expression</a>. Returns an array containing the first match, or all matches if the <code>g</code> flag is set in the regular expression. Returns <code>null</code> if no matches are found. 
+**Description:** Matches the string against a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions">regular expression</a>. Returns an array containing the first match, or all matches if the <code>g</code> flag is set in the regular expression. Returns <code>null</code> if no matches are found. 
 
 For checking whether text is present, consider <code>includes()</code> instead.
 
@@ -392,7 +471,7 @@ For checking whether text is present, consider <code>includes()</code> instead.
 
 **Parameters:**
 
-  * `regexp` (RegExp) - A <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions”>regular expression</a> with the pattern to look for. Will look for multiple matches if the <code>g</code> flag is present (see examples).
+  * `regexp` (RegExp) - A <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions">regular expression</a> with the pattern to look for. Will look for multiple matches if the <code>g</code> flag is present (see examples).
 
 **Examples:**
 
@@ -501,7 +580,7 @@ To replace all occurrences, use <code>replaceAll()</code> instead.
 
 **Parameters:**
 
-  * `pattern` (String|RegExp) - The pattern in the string to replace. Can be a string to match or a <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions”>regular expression</a>.
+  * `pattern` (String|RegExp) - The pattern in the string to replace. Can be a string to match or a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions">regular expression</a>.
   * `replacement` (String) - The new text to replace with
 
 **Examples:**
@@ -536,7 +615,7 @@ To replace all occurrences, use <code>replaceAll()</code> instead.
 
 **Parameters:**
 
-  * `pattern` (String|RegExp) - The pattern in the string to replace. Can be a string to match or a <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions”>regular expression</a>.
+  * `pattern` (String|RegExp) - The pattern in the string to replace. Can be a string to match or a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions">regular expression</a>.
   * `replacement` (String|function) - The new text to replace with. Can be a string or a function that returns a string (see examples).
 
 **Examples:**
@@ -574,7 +653,7 @@ To replace all occurrences, use <code>replaceAll()</code> instead.
 
 ## _`String`_.**`search()`** <a href="#stringsearch" id="stringsearch"></a>
 
-**Description:** Returns the index (position) of the first occurrence of a pattern within the string, or -1 if not found. The pattern is specified using a <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions”>regular expression</a>. To use text instead, see <code>indexOf()</code>.
+**Description:** Returns the index (position) of the first occurrence of a pattern within the string, or -1 if not found. The pattern is specified using a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions">regular expression</a>. To use text instead, see <code>indexOf()</code>.
 
 **Syntax:** _`String`_.search(regexp)
 
@@ -584,7 +663,7 @@ To replace all occurrences, use <code>replaceAll()</code> instead.
 
 **Parameters:**
 
-  * `regexp` (RegExp) - A <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions”>regular expression</a> with the pattern to look for
+  * `regexp` (RegExp) - A <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions">regular expression</a> with the pattern to look for
 
 **Examples:**
 
@@ -744,7 +823,7 @@ The opposite of using <code>join()</code> on an array.
 
 **Description:** Converts the string to a DateTime. Useful for further transformation. Supported formats for the string are ISO 8601, HTTP, RFC2822, SQL and Unix timestamp in milliseconds. 
 
-To parse other formats, use <a href=”https://moment.github.io/luxon/api-docs/index.html#datetimefromformat”> <code>DateTime.fromFormat()</code></a>.
+To parse other formats, use <a href="https://moment.github.io/luxon/api-docs/index.html#datetimefromformat"> <code>DateTime.fromFormat()</code></a>.
 
 **Syntax:** _`String`_.toDateTime()
 
@@ -907,6 +986,8 @@ The same as JavaScript’s <code>JSON.stringify()</code>.
 
 **Description:** Decodes a URL-encoded string. Replaces any character codes in the form of <code>%XX</code> with their corresponding characters.
 
+If the string isn't a valid URL-encoded string, `urlDecode()` doesn't cause an error. The expression returns <code>undefined</code>. This happens when two hexadecimal digits don't follow a <code>%</code>, or when the character codes don't form a valid UTF-8 character.
+
 **Syntax:** _`String`_.urlDecode(allChars?)
 
 **Returns:** String
@@ -925,6 +1006,11 @@ The same as JavaScript’s <code>JSON.stringify()</code>.
 
   ```javascript
   "name%3DNathan%20Automat".urlDecode(true) //=> "name%3DNathan Automat"
+  ```
+
+  ```javascript
+  // No error for a string that isn't valid
+  "100%".urlDecode() //=> undefined
   ```
 
 ## _`String`_.**`urlEncode()`** <a href="#stringurlencode" id="stringurlencode"></a>

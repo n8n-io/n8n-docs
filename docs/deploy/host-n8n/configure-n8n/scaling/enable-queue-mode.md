@@ -11,12 +11,14 @@ layout:
 
 # Queue mode <a href="#queue-mode" id="queue-mode"></a>
 
+Queue mode lets you run n8n at scale: a main instance receives triggers and webhooks, Redis queues the executions, and you scale by adding or removing workers.
+
 You can run n8n in different modes depending on your needs. The queue mode provides the best scalability.
 
 {% hint style="info" %}
 **Binary data storage**
 
-n8n doesn't support queue mode with binary data storage in filesystem. If your workflows need to persist binary data in queue mode, you can use [S3 external storage](use-external-storage.md).
+In queue mode, n8n stores binary data in the database by default unless you configure another storage mode. If your license includes the relevant [external storage](use-external-storage.md) option, you can use AWS S3 or Azure Blob Storage. If you use filesystem storage, all main instances, workers, and webhook processors that handle binary data must access the same shared volume at the same configured path. Refer to [Handle binary data](handle-binary-data.md) for details.
 {% endhint %}
 
 ## How it works <a href="#how-it-works" id="how-it-works"></a>

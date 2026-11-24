@@ -185,7 +185,7 @@ A feature's availability and maturity can be limited in four ways:
 * **Preview status**: whether the feature is in Preview.
 * **Enterprise readiness**: whether the feature is Enterprise ready.
 
-[Plan/platform and version limits](#plan-platform-and-version-limits) share one documentation system. [Preview status](#preview-status) and [Enterprise readiness](#enterprise-readiness) work differently and are always documented separately. For what each one means, see [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability).
+[Plan/platform and version limits](#plan-platform-and-version-limits) share one documentation system. [Preview status](#preview-status) and [Enterprise readiness](#enterprise-readiness) work differently and are always documented separately. For what each one means, refer to [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability).
 
 ### Plan, platform, and version limits
 
@@ -389,7 +389,7 @@ The Example feature has Limited enterprise readiness. It supports the following 
 - **SSO:** Full
 - **External secrets:** Partial
 
-Other Enterprise capabilities either don't apply to the Example feature or it doesn't support them yet. See [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#enterprise-capabilities) for the full list of Enterprise capabilities.
+Other Enterprise capabilities either don't apply to the Example feature or it doesn't support them yet. Refer to [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#enterprise-capabilities) for the full list of Enterprise capabilities.
 {% endhint %}
 ```
 

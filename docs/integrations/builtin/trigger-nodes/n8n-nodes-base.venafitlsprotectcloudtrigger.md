@@ -21,9 +21,9 @@ layout:
 
 # Venafi TLS Protect Cloud Trigger node <a href="#venafi-tls-protect-cloud-trigger-node" id="venafi-tls-protect-cloud-trigger-node"></a>
 
-[Venafi](https://www.venafi.com/) is a cybersecurity company providing services for machine identity management. They offer solutions to manage and protect identities for a wide range of machine types, delivering global visibility, lifecycle automation, and actionable intelligence.
+Venafi is a cybersecurity company providing services for machine identity management. They offer solutions to manage and protect identities for a wide range of machine types, delivering global visibility, lifecycle automation, and actionable intelligence.
 
-Use the n8n Venafi TLS Protect Cloud Trigger node to start a workflow in n8n in response to events in the [cloud-based Venafi TLS Protect](https://vaas.venafi.com/) service.
+Use the n8n Venafi TLS Protect Cloud Trigger node to start a workflow in n8n in response to events in the cloud-based Venafi TLS Protect service. Palo Alto Networks now offers this service as [Next-Generation Trust Security](https://www.paloaltonetworks.com/network-security/next-gen-trust-security/certificate-manager).
 
 {% hint style="info" %}
 **Credentials**

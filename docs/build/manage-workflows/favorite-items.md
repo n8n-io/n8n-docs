@@ -59,4 +59,4 @@ n8n automatically removes a favorite when someone deletes the underlying item. I
 * [n8n packages](n8n-packages/README.md)
 * [Share with others](share-with-others.md)
 * [Data tables](../work-with-data/data-tables.md)
-* [Organize work in projects](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/organize-work-in-projects)
+* [Organize work in projects](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/organize-work-in-projects)

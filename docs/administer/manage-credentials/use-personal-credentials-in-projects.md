@@ -29,7 +29,7 @@ The credential's **Sharing** tab shows two levels of access:
 | **Can view** | See that the credential exists and where it's used. You can't run or publish anything with it. |
 | **Can use** | Run and publish workflows with the credential. You can't see or change its details. |
 
-When you share a credential with a person, n8n gives them the **Can use** role. To see and change its details, you need to own the credential, or have an [instance role](../manage-users-and-access/understand-instance-roles.md) that lets you edit all credentials. For credentials a team project holds, your [project role](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md) decides your access.
+When you share a credential with a person, n8n gives them the **Can use** role. To see and change its details, you need to own the credential, or have an [instance role](../manage-users-and-access/set-permissions-and-roles-rbac/understand-instance-roles.md) that lets you edit all credentials. For credentials a team project holds, your [project role](../manage-users-and-access/set-permissions-and-roles-rbac/understand-project-roles.md) decides your access.
 
 ## Use personal credentials in team projects
 
@@ -85,4 +85,4 @@ If an execution used a credential you can't use, n8n hides its data from you. Yo
 * [End-user credentials](end-user-credentials.md)
 * [Credential overwrites](credential-overwrites.md)
 * [Use external secret stores](use-external-secret-stores.md)
-* [Organize work in projects](../manage-users-and-access/set-permissions-and-roles-rbac/organize-work-in-projects.md)
+* [Organize work in projects](../manage-users-and-access/organize-work-in-projects/README.md)

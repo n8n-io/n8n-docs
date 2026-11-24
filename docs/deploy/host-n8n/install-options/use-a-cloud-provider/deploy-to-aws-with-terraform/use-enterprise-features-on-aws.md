@@ -63,7 +63,7 @@ module "n8n" {
 }
 ```
 
-The module doesn't deploy a collector. Deploy one separately, for example with the upstream `open-telemetry/opentelemetry-collector` Helm chart. See [Trace executions with OpenTelemetry](../../../keep-n8n-running/trace-executions-with-opentelemetry.md) for the available tuning variables and what n8n traces.
+The module doesn't deploy a collector. Deploy one separately, for example with the upstream `open-telemetry/opentelemetry-collector` Helm chart. See [Trace executions with OpenTelemetry](../../../keep-n8n-running/trace-executions-with-opentelemetry/README.md) for the available tuning variables and what n8n traces.
 
 ## Log streaming
 

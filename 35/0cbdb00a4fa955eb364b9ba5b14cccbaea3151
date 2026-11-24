@@ -1,0 +1,30 @@
+docs/build/work-with-data/transform-data/expression-reference/string.md
+  s_97faca8b393815::t_6c69e344cfd599 174
+  s_7abc029613c0fc::t_815e322c8fc0e4 161,165-171,181
+docs/build/work-with-data/transform-data/expression-reference/README.md
+  s_7abc029613c0fc::t_bd819be2662ad4 831
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "350cbdb00a4fa955eb364b9ba5b14cccbaea3151",
+  "prompts": {},
+  "sessions": {
+    "s_7abc029613c0fc": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "7e73dbe8-a46d-4086-9a9b-c04648ab297c",
+        "model": "claude-fable-5-2"
+      },
+      "human_author": "Lorent Lempereur <lorent.lempereur@n8n.io>"
+    },
+    "s_97faca8b393815": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a20d09-3b4d-7151-90fe-e7947309e0ad",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "Lorent Lempereur <lorent.lempereur@n8n.io>"
+    }
+  }
+}

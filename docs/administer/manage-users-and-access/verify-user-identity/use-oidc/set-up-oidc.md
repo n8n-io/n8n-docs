@@ -14,6 +14,8 @@ layout:
 
 # Set up OIDC <a href="#set-up-oidc" id="set-up-oidc"></a>
 
+Set up OpenID Connect (OIDC) single sign-on (SSO) in n8n with your identity provider.
+
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/3sB2Mxc1yXYEg1FeAYjK/" %}
 
 {% hint style="info" %}

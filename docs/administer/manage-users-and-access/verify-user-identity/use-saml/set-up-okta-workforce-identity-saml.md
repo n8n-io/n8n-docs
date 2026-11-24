@@ -16,6 +16,8 @@ layout:
 
 Set up SAML SSO in n8n with Okta.
 
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/9DXSTQsxYGisAV8xk6p4/" %}
+
 {% hint style="info" %}
 **Workforce Identity and Customer Identity**
 

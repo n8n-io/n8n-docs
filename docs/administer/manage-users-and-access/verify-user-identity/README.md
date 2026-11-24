@@ -9,6 +9,8 @@ Confirm who's signing in to your n8n instance, from two-factor auth to directory
 
 In n8n, go to **Settings** > **Authentication** to see the sign-in methods for your instance. The page lists single sign-on (SSO) and LDAP, marks the active method, and shows whether two-factor auth is enforced.
 
+An n8n instance can use only one SSO method at a time, SAML or OIDC, with one identity provider (IdP). To use several IdPs, use an identity broker that federates them, such as Okta, and connect n8n to the broker with SAML or OIDC.
+
 ## In this section
 
 * [Require two-factor auth](require-two-factor-auth.md): enable 2FA for your n8n account.

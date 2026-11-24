@@ -18,8 +18,6 @@ The Assistant reads the failed execution, investigates the cause, and proposes c
 {% hint style="info" %}
 **Feature availability**
 
-Self-healing workflows started rolling out gradually on n8n Cloud from n8n 2.49.5.
-
 <!-- vale from-microsoft.Contractions = NO -->
 <!-- vale from-write-good.TooWordy = NO -->
 Self-healing requires the n8n Assistant. It is available on:
@@ -30,6 +28,8 @@ Self-healing requires the n8n Assistant. It is available on:
 * **Self-hosted:** Community, Registered Community, and Business.
 
 It isn't available on Enterprise plans.
+
+Self-healing workflows started rolling out gradually on n8n Cloud from n8n 2.49.5.
 {% endhint %}
 
 {% hint style="info" %}
@@ -54,7 +54,7 @@ On self-hosted instances, `EXECUTIONS_DATA_SAVE_ON_ERROR` defaults to `all`, whi
 
 1. Open your project. For a personal project, select **Self-healing**. For a team project, open **Settings** > **Self-healing**.
 2. Select **Add configuration**.
-3. Under **Workflows**, choose **All** or **Select manually**.
+3. Under **Workflows**, choose **All** or **Select manually**. If you choose **Select manually**, add at least one workflow.
 4. Keep **Include sub-workflows** enabled if fixes can also change called sub-workflows in the same project.
 5. For a team project, select **Reviewers**. In a personal project, you review the results yourself.
 6. Select **Create configuration**.
@@ -73,11 +73,11 @@ For **Fix ready**, select **Apply and publish** to save and publish the proposed
 
 **Continue with Assistant** and **Continue with Editor** save any proposed changes as unpublished changes and close the review. Test and edit the workflow before publishing it yourself.
 
-Review every affected workflow before publishing. A change to a shared sub-workflow can affect other workflows that call it. Verification can use simulations, so **Fix ready** doesn't guarantee that the next production execution will succeed. The Assistant can't create credentials or edit data tables.
+Review every affected workflow before publishing. A change to a shared sub-workflow can affect other workflows that call it. Verification can use simulations, so **Fix ready** doesn't guarantee that the next production execution will succeed. During a self-healing investigation, the Assistant can't create credentials or edit data tables.
 
 ## Pause self-healing
 
-Turn off the configuration's **Active** switch to stop new investigations. Existing results remain available. Deleting the configuration also deletes its investigation history and results.
+Turn off the configuration's **Active** switch to stop new investigations and cancel those in progress. Existing results remain available. Deleting the configuration also deletes its investigation history and results.
 
 ## If an investigation doesn't start
 
@@ -88,4 +88,12 @@ After **Could not fix**, self-healing waits 24 hours before investigating anothe
 ## Related resources
 
 * [Manage workflows](./)
+* [Configure workflow settings](configure-workflow-settings.md)
+* [Tag workflows](tag-workflows.md)
+* [Favorite items](favorite-items.md)
+* [View change history](view-change-history.md)
+* [Review workflows](workflow-reviews.md)
+* [Export and import](export-and-import.md)
+* [n8n packages](n8n-packages/README.md)
+* [Share with others](share-with-others.md)
 * [Handle workflow errors](../flow-logic/handle-errors-gracefully.md)

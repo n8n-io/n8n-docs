@@ -166,11 +166,51 @@ Enter these parameters:
 - **Table**: Choose the table that you want to work on. Select **From List** to choose the table from the dropdown list, or **Name** to enter the table name.
 - **Return All**: Whether to return all the rows that match, or only up to **Limit**. Default is off.
 - **Limit**: The maximum number of rows to return. Default is 50. Available when **Return All** is off.
+- **Start After**: Read a large table one page at a time. Available when **Return All** is off. Refer to [Read a MySQL table page by page with Start After](#read-a-mysql-table-page-by-page-with-start-after).
 - **Select Rows**: Set the conditions that select the rows. Each condition takes a **Column**, an **Operator**, and a **Value**. If you set no conditions, the node selects all rows.
 - **Combine Conditions**: How to combine the conditions in **Select Rows**. **AND** requires every condition to be true. **OR** requires at least one condition to be true.
 - **Sort**: Choose how to sort the selected rows. Each rule takes a **Column** and a **Direction**.
 
-**Select** has no offset, so it can't skip the rows it already returned. To read a large table in pages, add a **Select Rows** condition like `id` **Greater Than** the last ID you read, and a **Sort** rule on the same column with the **Direction** set to ascending. Update the last ID after each run. This works for numeric columns only. For other columns, use **Execute SQL** and write the query yourself.
+#### Read a MySQL table page by page with Start After
+
+{% hint style="info" %}
+**Feature availability**
+
+The **Start After** parameter of the MySQL node is available from n8n 2.50.0.
+{% endhint %}
+
+**Start After** lets the **Select** operation of the MySQL node read a large table one page at a time. **Limit** sets the page size. Each run returns the rows that come after the last row of the previous page.
+
+To read a table page by page:
+
+1. Turn off **Return All** and set **Limit** to the number of rows you want in each page.
+2. Select **Add Start After**.
+3. In **Column**, choose the column to page by, for example the primary key.
+4. Leave **Value** empty to get the first page.
+5. To get the next page, set **Value** to the value of **Column** in the last row of the previous page.
+6. Repeat until a page returns fewer rows than **Limit**.
+
+The node runs once for each input item. In a loop, pass it only the last row of the previous page, for example with a **Limit** node that keeps the last item. Then set **Value** with an expression like `{{ $json.id }}`.
+
+Conditions in **Select Rows** apply to every page.
+
+The node checks **Column** before each page and stops with an error that names the problem. **Column** must meet these requirements:
+
+- It has a primary key or a unique index on that column alone. A unique index on more than one column doesn't count.
+- It's `NOT NULL`.
+- Its type is an integer type from `TINYINT` to `BIGINT`, `DECIMAL`, `CHAR`, `VARCHAR`, or one of the `TEXT` types. The node refuses other types, such as dates and timestamps.
+- For a text column, no row has empty text. An empty **Value** means the first page, so a page that ends on that row would start the table again.
+- It's in **Output Columns**, if you set that option.
+
+For a `DECIMAL` column, keep **Output Decimals as Numbers** off.
+
+**Start After** sets the sort order of the pages:
+
+- Without **Sort** rules, the node sorts by **Column** in ascending order.
+- If you add **Sort** rules, **Column** must be the first rule.
+- To get the highest values first, sort **Column** in descending order. Each page then returns the rows before **Value**.
+
+On n8n releases before 2.50.0, **Select** has no **Start After** parameter and no offset. To read a large table in pages there, add a **Select Rows** condition like `id` **Greater Than** the last ID you read, and a **Sort** rule on the same column with the **Direction** set to ascending. Update the last ID after each run. This works for numeric columns only. For other columns, use **Execute SQL** and write the query yourself.
 
 #### Select options <a href="#select-options" id="select-options"></a>
 

@@ -148,13 +148,7 @@ Enter these parameters:
 - **Table**: Choose the table that you want to work on. Select **From list** to choose the table from the dropdown list, or select **By Name** to enter the table name.
 - **Return All**: Whether to return all results or only up to a given limit.
 - **Limit**: The maximum number of items to return when **Return All** is disabled.
-- **Start After**: Read a large table page by page. This parameter is available when **Return All** is disabled. Select **Add Cursor**, then set:
-	- **Column**: The column to page by. The column must be a primary key or have a unique index on that column alone.
-	- **Value**: The value of **Column** in the last row of the previous page. Leave this empty to get the first page.
-
-	The node returns the next **Limit** rows after **Value**, ordered by **Column**. To read the whole table, run the node again with the last value of each page until a page returns fewer rows than **Limit**.
-
-	The node doesn't return rows that have no value in **Column**. If you add **Sort** rules, sort only by the same **Column** in ascending order. Other sort rules can make pages skip or repeat rows.
+- **Start After**: Read a large table one page at a time. This parameter is available when **Return All** is disabled. Refer to [Read an Oracle Database table page by page with Start After](#read-an-oracle-database-table-page-by-page-with-start-after).
 - **Select Rows**: Set the conditions to select rows. Define a **Column**, **Operator**, and **Value**(as `json`) to match rows on.
 The **Value** can vary by type — for example with Fixed mode:
 	- String: "hello", hellowithoutquotes, "hello with space"
@@ -164,6 +158,39 @@ The **Value** can vary by type — for example with Fixed mode:
 If you don't select anything, Oracle Database selects all rows.
 - **Combine Conditions**: How to combine the conditions in **Select Rows**. The **AND** requires all conditions to be true, while **OR** requires at least one condition to be true.
 - **Sort**: Choose how to sort the selected rows. Choose a **Column** from a list or by ID and a sort **Direction**.
+
+#### Read an Oracle Database table page by page with Start After
+
+**Start After** lets the **Select** operation of the Oracle Database node read a large table one page at a time. **Limit** sets the page size. Each run returns the rows that come after the last row of the previous page.
+
+To read a table page by page:
+
+1. Turn off **Return All** and set **Limit** to the number of rows you want in each page.
+2. Select **Add Start After**.
+3. In **Column**, choose the column to page by, for example the primary key.
+4. Leave **Value** empty to get the first page.
+5. To get the next page, set **Value** to the value of **Column** in the last row of the previous page.
+6. Repeat until a page returns fewer rows than **Limit**.
+
+The node runs once for each input item. In a loop, pass it only the last row of the previous page, for example with a **Limit** node that keeps the last item. Then set **Value** with an expression like `{{ $json.ID }}`.
+
+Conditions in **Select Rows** apply to every page.
+
+The node checks **Column** before each page and stops with an error that names the problem. **Column** must meet these requirements:
+
+- It has a primary key, a unique constraint, or a unique index on that column alone. A key, constraint, or index on more than one column doesn't count.
+- It's `NOT NULL`.
+- Its type is `NUMBER`, `VARCHAR2`, `NVARCHAR2`, `CHAR`, or `NCHAR`.
+- For a text column, the `NLS_SORT` setting of the database session is `BINARY`. With another setting, use a `NUMBER` column.
+- It's in **Output Columns**, if you set that option.
+
+For a `NUMBER` column with values above 9007199254740991, turn on **Output Numbers As String** in the options.
+
+**Start After** sets the sort order of the pages:
+
+- Without **Sort** rules, the node sorts by **Column** in ascending order.
+- If you add **Sort** rules, **Column** must be the first rule.
+- To get the highest values first, sort **Column** in descending order. Each page then returns the rows before **Value**.
 
 #### Select options <a href="#select-options" id="select-options"></a>
 

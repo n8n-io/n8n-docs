@@ -163,16 +163,51 @@ Enter these parameters:
 - **Table**: Choose the table that you want to work on. Select **From list** to choose the table from the dropdown list or **By Name** to enter the table name.
 - **Return All**: Whether to return all results or only up to a given limit.
 - **Limit**: The maximum number of items to return when **Return All** is disabled.
-- **Start After**: Read a large table page by page. This parameter is available when **Return All** is disabled. Select **Add Cursor**, then set:
-	- **Column**: The column to page by. The column must be a primary key or have a unique index on that column alone.
-	- **Value**: The value of **Column** in the last row of the previous page. Leave this empty to get the first page.
-
-	The node returns the next **Limit** rows after **Value**, ordered by **Column**. To read the whole table, run the node again with the last value of each page until a page returns fewer rows than **Limit**.
-
-	The node doesn't return rows that have no value in **Column**. If you add **Sort** rules, sort only by the same **Column** in ascending order. Other sort rules can make pages skip or repeat rows.
+- **Start After**: Read a large table one page at a time. This parameter is available when **Return All** is disabled. Refer to [Read a Postgres table page by page with Start After](#read-a-postgres-table-page-by-page-with-start-after).
 - **Select Rows**: Set the conditions to select rows. Define a **Column**, **Operator**, and **Value** to match rows on. If you don't select anything, Postgres selects all rows.
 - **Combine Conditions**: How to combine the conditions in **Select Rows**. **AND** requires all conditions to be true, while **OR** requires at least one condition to be true.
 - **Sort**: Choose how to sort the selected rows. Choose a **Column** from a list or by ID and a sort **Direction**.
+
+#### Read a Postgres table page by page with Start After
+
+{% hint style="info" %}
+**Feature availability**
+
+The **Start After** parameter of the Postgres node is available from n8n 2.50.0. It shows on nodes with node version 2.7 or higher.
+{% endhint %}
+
+**Start After** lets the **Select** operation of the Postgres node read a large table one page at a time. **Limit** sets the page size. Each run returns the rows that come after the last row of the previous page.
+
+To read a table page by page:
+
+1. Turn off **Return All** and set **Limit** to the number of rows you want in each page.
+2. Select **Add Start After**.
+3. In **Column**, choose the column to page by, for example the primary key.
+4. Leave **Value** empty to get the first page.
+5. To get the next page, set **Value** to the value of **Column** in the last row of the previous page.
+6. Repeat until a page returns fewer rows than **Limit**.
+
+The node runs once for each input item. In a loop, pass it only the last row of the previous page, for example with a **Limit** node that keeps the last item. Then set **Value** with an expression like `{{ $json.id }}`.
+
+Conditions in **Select Rows** apply to every page.
+
+The node checks **Column** before each page and stops with an error that names the problem. **Column** must meet these requirements:
+
+- It has a primary key or a unique index on that column alone. A unique index on more than one column, with a `WHERE` condition, or on an expression doesn't count.
+- It's `NOT NULL`.
+- Its type isn't `timestamp`, `timestamptz`, `bytea`, `interval`, `json`, `jsonb`, or an array.
+- For a text column, no row has empty text. An empty **Value** means the first page, so a page that ends on that row would start the table again.
+- It's in **Output Columns**, if you set that option.
+
+For a `numeric` column, set **Output Large-Format Numbers As** to **Text** in the options. Do the same for a `bigint` column with values above 9007199254740991.
+
+**Start After** doesn't work on a view, or on a table that other tables inherit from. A partitioned table works.
+
+**Start After** sets the sort order of the pages:
+
+- Without **Sort** rules, the node sorts by **Column** in ascending order.
+- If you add **Sort** rules, **Column** must be the first rule.
+- To get the highest values first, sort **Column** in descending order. Each page then returns the rows before **Value**.
 
 #### Select options <a href="#select-options" id="select-options"></a>
 

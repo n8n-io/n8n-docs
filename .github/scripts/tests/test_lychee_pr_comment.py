@@ -8,6 +8,7 @@ Run: python3 .github/scripts/tests/test_lychee_pr_comment.py
 """
 import importlib.util
 import json
+import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -56,11 +57,18 @@ check("short_reason: cached error has no reason of its own", lpc.short_reason(No
 check("short_reason: quoted URLs are stripped from free text",
       "http" not in lpc.short_reason(None, "Something odd happened (https://x.y/z)"))
 check("short_reason: long text is cut", len(lpc.short_reason(None, "x " * 100)) <= 80)
-# DOC-2615: the message now carries lychee's details. A lychee 0.18.1 connection failure
-# reads as "could not connect", not as a certificate error.
-check("short_reason: lychee 0.18.1 connection failure",
-      lpc.short_reason(None, "Network error: connection failed: error sending request for url "
-                             "(https://portal.airtop.ai/)") == "Could not connect")
+# DOC-2626: lychee 0.24.2 messages, as lychee_report.parse_status passes them on.
+check("short_reason: lychee 0.24 connection failure",
+      lpc.short_reason(None, "Network error: Connection failed. Check network connectivity "
+                             "and firewall settings") == "Could not connect")
+check("short_reason: host with no DNS record",
+      lpc.short_reason(None, sys.modules["lychee_report"].DNS_GONE) == "Host not found")
+check("short_reason: expired certificate",
+      lpc.short_reason(None, "Network error: SSL certificate expired. Site needs to renew "
+                             "certificate") == "TLS certificate error")
+check("short_reason: untrusted certificate",
+      lpc.short_reason(None, "Network error: SSL certificate not trusted. Use --insecure if "
+                             "site is trusted") == "TLS certificate error")
 
 # --- render: the #5661 report ------------------------------------------------------
 stats = json.loads(FIXTURE.read_text(encoding="utf-8"))

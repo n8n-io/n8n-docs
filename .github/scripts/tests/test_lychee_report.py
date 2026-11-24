@@ -55,21 +55,115 @@ check("parse_status: details are appended to text",
       == (None, "Network error: Too many redirects"))
 check("parse_status: details alone when text is empty",
       lr.parse_status({"status": {"details": "Too many redirects"}}) == (None, "Too many redirects"))
-check("parse_status: details already inside text are not repeated (newer lychee)",
+check("parse_status: details already inside text are not repeated, URL tail dropped (lychee 0.24)",
       lr.parse_status({"status": {
-          "text": "Network error: SSL certificate hostname mismatch. Check URL spelling (x)",
+          "text": "Network error: SSL certificate hostname mismatch. Check URL spelling "
+                  "(error sending request for url (https://wrong.host.badssl.com/))",
           "details": "SSL certificate hostname mismatch. Check URL spelling"}})
-      == (None, "Network error: SSL certificate hostname mismatch. Check URL spelling (x)"))
-# lychee 0.18.1 guesses "certificate" for every failed connection, DNS included.
-_dns = lr.parse_status({"status": {"text": "Network error", "details":
-                                   "error sending request for url (https://portal.airtop.ai/) "
-                                   "Maybe a certificate error?"}})
-check("parse_status: lychee 0.18.1 certificate guess becomes 'connection failed'",
-      _dns == (None, "Network error: connection failed: error sending request for url "
-                     "(https://portal.airtop.ai/)"))
-check("parse_status: no certificate claim survives the rewrite", "certificate" not in _dns[1].lower())
+      == (None, "Network error: SSL certificate hostname mismatch. Check URL spelling"))
+# DOC-2626: the URL tail must go. Here it holds "ssl", which the DocOps cause function
+# would read as a bad certificate although the cause is a failed connection.
+_conn = lr.parse_status({"status": {
+    "text": "Network error: Connection failed. Check network connectivity and firewall settings "
+            "(error sending request for url (https://www.ssl.com/guide))",
+    "details": "Connection failed. Check network connectivity and firewall settings"}})
+check("parse_status: no URL left in a connection failure",
+      _conn == (None, "Network error: Connection failed. Check network connectivity and "
+                      "firewall settings") and "ssl" not in _conn[1].lower())
 check("parse_status: cached error stays as lychee wrote it",
       lr.parse_status({"status": {"text": "Error (cached)"}}) == (None, "Error (cached)"))
+check("parse_status: cached error with lychee 0.24 details",
+      lr.parse_status({"status": {"text": "Error (cached)", "details": "Error (cached)"}})
+      == (None, "Error (cached)"))
+
+# --- a real lychee 0.24.2 report (DOC-2626) ----------------------------------------
+# fixtures/lychee/out-0.24.2.json: lychee 0.24.2 on Linux (the CI build), 2026-11-24, on
+# a sample page with two hosts that have no DNS record, three bad certificates, a 404 and
+# a working link. portal.airtop.ai is on the page twice, and lychee lists its
+# "Error (cached)" row BEFORE the row with the cause.
+v24 = json.loads((HERE / "fixtures" / "lychee" / "out-0.24.2.json").read_text(encoding="utf-8"))
+v24_rows = {f["url"]: f for f in lr.flatten_failures(v24)}
+check("0.24.2: one row per page and URL", len(lr.flatten_failures(v24)) == 6)
+check("0.24.2: the row with a cause beats the cached row on the same page",
+      v24_rows["https://portal.airtop.ai/"]["message"]
+      == "Network error: Connection failed. Check network connectivity and firewall settings")
+check("0.24.2: expired certificate is named",
+      v24_rows["https://expired.badssl.com/"]["message"]
+      == "Network error: SSL certificate expired. Site needs to renew certificate")
+check("0.24.2: untrusted certificate is named",
+      "certificate not trusted" in v24_rows["https://self-signed.badssl.com/"]["message"])
+check("0.24.2: wrong-host certificate is a certificate error",
+      "SSL certificate error" in v24_rows["https://wrong.host.badssl.com/"]["message"])
+check("0.24.2: 404 keeps its code",
+      v24_rows["https://github.com/n8n-io/no-such-repo-doc-2626"]["status"] == 404)
+check("0.24.2: no message repeats the URL",
+      all("error sending request" not in f["message"] for f in v24_rows.values()))
+
+# A cached row on another page takes the cause found on the first page.
+_cached = lr.flatten_failures({"error_map": {
+    "docs/a.md": [{"url": "https://gone.example/", "status": {
+        "text": "Network error: Connection failed. Check network connectivity and firewall "
+                "settings (error sending request for url (https://gone.example/))",
+        "details": "Connection failed. Check network connectivity and firewall settings"}}],
+    "docs/b.md": [{"url": "https://gone.example/",
+                   "status": {"text": "Error (cached)", "details": "Error (cached)"}}]}})
+check("flatten: a cached row on another page borrows the cause",
+      [f["message"] for f in _cached] == [
+          "Network error: Connection failed. Check network connectivity and firewall settings"] * 2)
+check("flatten: a cached row with no cause anywhere stays cached",
+      lr.flatten_failures({"error_map": {"docs/a.md": [
+          {"url": "https://x.example/", "status": {"text": "Error (cached)"}}]}})[0]["message"]
+      == "Error (cached)")
+
+# --- mark_missing_hosts: DNS lookup for lychee's generic connection failure ---------
+import socket
+
+
+def _resolver(answers):
+    """Fake getaddrinfo. answers maps host -> None (resolves) or a gaierror errno."""
+    calls = []
+
+    def resolve(host, port):
+        calls.append(host)
+        errno = answers[host]
+        if errno is not None:
+            raise socket.gaierror(errno, "fake")
+        return [("ok",)]
+    resolve.calls = calls
+    return resolve
+
+
+_rows = lr.flatten_failures(v24)
+_res = _resolver({"portal.airtop.ai": socket.EAI_NONAME,
+                  "n8n-docs-linkcheck-no-such-host-2626.com": socket.EAI_NONAME})
+lr.mark_missing_hosts(_rows, _res)
+_by = {f["url"]: f["message"] for f in _rows}
+check("dns: a host with no DNS record is named as such",
+      _by["https://portal.airtop.ai/"] == lr.DNS_GONE
+      and _by["https://n8n-docs-linkcheck-no-such-host-2626.com/"] == lr.DNS_GONE)
+check("dns: certificate failures and the 404 are not looked up",
+      sorted(_res.calls) == ["n8n-docs-linkcheck-no-such-host-2626.com", "portal.airtop.ai"])
+check("dns: certificate messages are left alone",
+      _by["https://expired.badssl.com/"].startswith("Network error: SSL certificate expired"))
+check("dns: the message says DNS, which DocOps reads as 'Host gone'", "DNS" in lr.DNS_GONE)
+
+_two = [{"page": p, "url": "https://flaky.example/a", "status": None,
+         "message": "Network error: Connection failed. Check network connectivity and firewall settings"}
+        for p in ("docs/a.md", "docs/b.md")]
+_res = _resolver({"flaky.example": socket.EAI_AGAIN})
+lr.mark_missing_hosts(_two, _res)
+check("dns: a temporary DNS failure is not proof the host is gone",
+      all(f["message"].startswith("Network error: Connection failed") for f in _two))
+check("dns: one lookup per host", _res.calls == ["flaky.example"])
+_up = [{"page": "docs/a.md", "url": "https://up.example/", "status": None,
+        "message": "Network error: Connection failed. Check network connectivity and firewall settings"}]
+lr.mark_missing_hosts(_up, _resolver({"up.example": None}))
+check("dns: a host that resolves keeps lychee's message",
+      _up[0]["message"].startswith("Network error: Connection failed"))
+_timeout = [{"page": "docs/a.md", "url": "https://slow.example/", "status": None, "message": "Timeout"}]
+_res = _resolver({})
+lr.mark_missing_hosts(_timeout, _res)
+check("dns: other failures are not looked up", _res.calls == [] and _timeout[0]["message"] == "Timeout")
 
 # --- build_payload ----------------------------------------------------------------
 payload = lr.build_payload(stats, ctx)

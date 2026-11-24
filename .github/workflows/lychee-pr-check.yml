@@ -26,8 +26,10 @@ jobs:
       - name: Run Lychee Link Checker
         id: lychee
         if: steps.changed-markdown-files.outputs.any_changed == 'true'
-        uses: lycheeverse/lychee-action@a99389aeff3c193ffb6f0741178e519569d3f404 # v2.3.0
+        uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2.9.0
         with:
+          # Same version as lychee.yml, see the note there (DOC-2626).
+          lycheeVersion: v0.24.2
           # --accept overrides lychee.toml, which dropped 403 in DOC-2396 so the weekly
           # sweep can report WAF-blocked links as their own bucket. This check blocks a
           # contributor's PR, and "npmjs.com returns 403 to robots" is neither their

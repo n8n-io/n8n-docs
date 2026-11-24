@@ -21,10 +21,12 @@ Config comes from the environment (see the workflow):
 import base64
 import json
 import os
+import socket
 import sys
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.parse import urlsplit
 
 # lychee renamed its failure map across versions; read every spelling we know.
 MAP_KEYS = ("error_map", "fail_map", "timeout_map")
@@ -61,13 +63,22 @@ BLOCKED_STATUSES = frozenset({401, 403, 407, 429})
 SERVER_ERROR_STATUSES = frozenset({502, 503, 504})
 UNVERIFIABLE_STATUSES = BLOCKED_STATUSES | SERVER_ERROR_STATUSES
 
-# lychee 0.18.1 adds this guess to EVERY failed connection (lychee-lib error.rs: any
-# reqwest error where `is_connect()` is true), and drops the real cause. A host with no
-# DNS record and a host with a bad certificate get the same text, so passing the guess on
-# would label every dead host a certificate problem (DOC-2615: portal.airtop.ai has no
-# DNS record and was reported this way). The guess is replaced with the one thing it does
-# tell us: the connection failed. Newer lychee versions report the real cause instead.
-LYCHEE_CONNECT_GUESS = " Maybe a certificate error?"
+# lychee's text for a failed connection it could not classify. lychee 0.24.2 names TLS
+# failures precisely ("SSL certificate expired", "...hostname mismatch", "...not trusted"),
+# but on Linux and macOS a host with no DNS record also lands here: the lookup error
+# reaches lychee wrapped in a way its classifier does not open (measured 2026-11-24 on
+# portal.airtop.ai, DOC-2626). `mark_missing_hosts` settles those with one DNS lookup.
+# lychee 0.18.1, used before DOC-2626, appended "Maybe a certificate error?" to every
+# failed connection instead (DOC-2615); the version is now pinned in the workflows.
+LYCHEE_CONNECT_FAILED = "Connection failed"
+# Says "DNS" on purpose: the DocOps cause function (docops_outbound_link_cause, DOC-2614)
+# reads that word as "Host gone".
+DNS_GONE = "Network error: DNS lookup failed. The host has no DNS record"
+# getaddrinfo answers that mean "this name does not exist", not "try again later".
+# EAI_NODATA is missing on macOS, hence getattr.
+NO_SUCH_HOST_ERRNOS = frozenset(
+    e for e in (socket.EAI_NONAME, getattr(socket, "EAI_NODATA", None)) if e is not None)
+CACHED = "Error (cached)"
 
 # --------------------------------------------------------------------- pure helpers
 # No I/O here so the tests can cover them.
@@ -79,10 +90,11 @@ def parse_status(entry):
     lychee writes `status` either as an object ({"text": "...", "code": 404}) or, in
     older versions, as a plain string like "404 Not Found".
 
-    The message keeps both `text` and `details` (DOC-2615). `text` alone is only the
-    category ("Network error"); the cause is in `details`, and DocOps needs it to tell a
-    host that is gone from a temporary failure. Newer lychee versions already repeat the
-    details inside `text`, so they are only appended when missing."""
+    The message keeps the cause from `details` (DOC-2615); DocOps needs it to tell a host
+    that is gone from a bad certificate. lychee 0.24 writes
+    `text` = "Network error: <details> (error sending request for url (<url>))", so the
+    message stops at the end of the details (DOC-2626). The tail only repeats the URL, and
+    a URL holding "ssl" or "dns" would mislead the DocOps cause function."""
     status = entry.get("status") if isinstance(entry, dict) else None
     if isinstance(status, dict):
         code = status.get("code")
@@ -92,9 +104,9 @@ def parse_status(entry):
             code = None
         text = str(status.get("text") or "")
         details = str(status.get("details") or "")
-        if details.endswith(LYCHEE_CONNECT_GUESS):
-            details = "connection failed: " + details[:-len(LYCHEE_CONNECT_GUESS)].strip()
-        if text and details and details not in text:
+        if text and details:
+            if details in text:
+                return code, text[:text.index(details) + len(details)]
             return code, f"{text}: {details}"
         return code, text or details
     if isinstance(status, str):
@@ -105,9 +117,14 @@ def parse_status(entry):
 
 
 def flatten_failures(stats):
-    """One flat, de-duplicated, sorted list of {page, url, status, message}."""
-    seen = set()
-    out = []
+    """One flat, de-duplicated, sorted list of {page, url, status, message}.
+
+    lychee checks a URL once per run and reports every later occurrence as
+    "Error (cached)", with no cause, and not always after the first one in the report.
+    So when one page holds a URL twice, the row with a cause wins; and a cached row left
+    on another page takes the cause found elsewhere (DOC-2626). Without that, the same
+    dead host read "Host gone" on one page and "No answer" on the next."""
+    rows = {}
     for key in MAP_KEYS:
         failure_map = (stats or {}).get(key) or {}
         if not isinstance(failure_map, dict):
@@ -118,13 +135,53 @@ def flatten_failures(stats):
                 page = page[2:]
             for entry in entries or []:
                 url = entry.get("url") if isinstance(entry, dict) else str(entry)
-                if not url or (page, url) in seen:
+                if not url:
                     continue
-                seen.add((page, url))
+                kept = rows.get((page, url))
+                if kept is not None and kept["message"] != CACHED:
+                    continue
                 code, message = parse_status(entry)
-                out.append({"page": page, "url": url, "status": code, "message": message})
-    out.sort(key=lambda f: (f["page"], f["url"]))
+                if kept is not None and message == CACHED:
+                    continue
+                rows[(page, url)] = {"page": page, "url": url, "status": code,
+                                     "message": message}
+    out = sorted(rows.values(), key=lambda f: (f["page"], f["url"]))
+    cause = {f["url"]: f for f in out if f["message"] != CACHED}
+    for f in out:
+        if f["message"] == CACHED and f["url"] in cause:
+            f["status"] = cause[f["url"]]["status"]
+            f["message"] = cause[f["url"]]["message"]
     return out
+
+
+def host_has_no_dns(host, resolve=socket.getaddrinfo):
+    """True only when DNS says the name does not exist. A timeout or a temporary
+    failure (EAI_AGAIN) is not proof that a host is gone, so it returns False."""
+    try:
+        resolve(host, 443)
+    except socket.gaierror as e:
+        return e.errno in NO_SUCH_HOST_ERRNOS
+    except (OSError, UnicodeError, ValueError):
+        return False
+    return False
+
+
+def mark_missing_hosts(failures, resolve=socket.getaddrinfo):
+    """Rewrite lychee's generic "Connection failed" as a DNS failure when the host has
+    no DNS record. One lookup per host. Rows with an HTTP status, or any other cause,
+    are left alone. Returns the same list."""
+    verdicts = {}
+    for f in failures:
+        if f["status"] is not None or LYCHEE_CONNECT_FAILED not in f["message"]:
+            continue
+        host = urlsplit(f["url"]).hostname
+        if not host:
+            continue
+        if host not in verdicts:
+            verdicts[host] = host_has_no_dns(host, resolve)
+        if verdicts[host]:
+            f["message"] = DNS_GONE
+    return failures
 
 
 def _int(value):
@@ -321,6 +378,9 @@ def main():
         "report_found": stats is not None,
     }
     payload = build_payload(stats, ctx)
+    # The only network access before the POST: one DNS lookup per host that lychee could
+    # not connect to. `blocked` rows always carry an HTTP status, so they never qualify.
+    mark_missing_hosts(payload["failures"])
 
     quality_path = Path(os.environ.get("QUALITY_REPORT", "lychee/quality.json"))
     if quality_path.is_file():

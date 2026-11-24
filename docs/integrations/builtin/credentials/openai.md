@@ -70,7 +70,7 @@ To generate your API Key:
 3. Select **Create new secret key** to create an API key, optionally naming the key.
 4. Copy your key and add it as the **API Key** in n8n.
 
-Refer to the [API Quickstart Account Setup documentation](https://platform.openai.com/docs/quickstart/account-setup) for more information.
+Refer to the [Developer quickstart documentation](https://platform.openai.com/docs/quickstart) for more information.
 
 To find your Organization ID:
 

@@ -102,35 +102,42 @@ Get detailed information about a specific workflow, including trigger details.
 
 #### Output <a href="#output" id="output"></a>
 
-| Field                                | Type             | Description                                                                                                                                                                                    |
-| ------------------------------------ | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `workflow`                           | `object`         | Sanitized workflow data safe for MCP consumption                                                                                                                                               |
-| `workflow.id`                        | `string`         | Workflow ID                                                                                                                                                                                    |
-| `workflow.name`                      | `string \| null` | Workflow name                                                                                                                                                                                  |
-| `workflow.active`                    | `boolean`        | Whether the workflow has a published active version                                                                                                                                            |
-| `workflow.isArchived`                | `boolean`        | Whether the workflow is archived                                                                                                                                                               |
-| `workflow.versionId`                 | `string`         | The current workflow version ID                                                                                                                                                                |
-| `workflow.activeVersionId`           | `string \| null` | The active workflow version ID, if available                                                                                                                                                   |
-| `workflow.triggerCount`              | `number`         | Number of triggers                                                                                                                                                                             |
-| `workflow.nodeCount`                 | `number`         | Number of nodes in the workflow. Returned at both detail levels                                                                                                                                |
-| `workflow.createdAt`                 | `string \| null` | ISO timestamp when the workflow was created                                                                                                                                                    |
-| `workflow.updatedAt`                 | `string \| null` | ISO timestamp when the workflow was last saved                                                                                                                                                 |
-| `workflow.settings`                  | `object \| null` | Workflow settings                                                                                                                                                                              |
-| `workflow.connections`               | `object`         | Workflow connections graph                                                                                                                                                                     |
-| `workflow.nodes`                     | `array`          | List of workflow nodes. Credential references are stripped                                                                                                                                     |
-| `workflow.nodeGroups`                | `array`          | Node groups in the workflow. Only returned when `detailLevel` is `"full"`                                                                                                                      |
-| `workflow.activeVersion`             | `object \| null` | Active workflow graph, if available                                                                                                                                                            |
-| `workflow.activeVersion.sameAsDraft` | `boolean`        | When `true`, the published version matches the current draft, so use the top-level `nodes`, `connections`, and `nodeGroups`. When `false`, the published graph is returned in the fields below |
-| `workflow.activeVersion.nodes`       | `array`          | Nodes from the active workflow version. Credential references are stripped                                                                                                                     |
-| `workflow.activeVersion.connections` | `object`         | Connections from the active workflow version                                                                                                                                                   |
-| `workflow.activeVersion.nodeGroups`  | `array`          | Node groups in the published version. Present only when `sameAsDraft` is `false`                                                                                                               |
-| `workflow.tags`                      | `array`          | Tags with `id` and `name`                                                                                                                                                                      |
-| `workflow.meta`                      | `object \| null` | Workflow metadata                                                                                                                                                                              |
-| `workflow.parentFolderId`            | `string \| null` | Parent folder ID                                                                                                                                                                               |
-| `workflow.description`               | `string`         | Workflow description, if set                                                                                                                                                                   |
-| `workflow.scopes`                    | `string[]`       | User permissions for this workflow                                                                                                                                                             |
-| `workflow.canExecute`                | `boolean`        | Whether the user has permission to execute this workflow                                                                                                                                       |
-| `triggerInfo`                        | `string`         | Human-readable instructions describing how to trigger the workflow                                                                                                                             |
+| Field                                      | Type             | Description                                                                                                                                                                                    |
+| ------------------------------------------ | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `workflow`                                 | `object`         | Sanitized workflow data safe for MCP consumption                                                                                                                                               |
+| `workflow.id`                              | `string`         | Workflow ID                                                                                                                                                                                    |
+| `workflow.name`                            | `string \| null` | Workflow name                                                                                                                                                                                  |
+| `workflow.active`                          | `boolean`        | Whether the workflow has a live version. From n8n 2.50.0, when `workflow.publicationStatus` is present, n8n sets this field from `workflow.publicationStatus.liveVersionId`                    |
+| `workflow.publicationStatus`               | `object`         | Status of the latest publication request, including trigger activation. Returned at both detail levels. Present only when the workflow publication service is on (`N8N_USE_WORKFLOW_PUBLICATION_SERVICE`, default `true`). `workflow.publicationStatus` is available from n8n 2.50.0. |
+| `workflow.publicationStatus.status`        | `string`         | The publication state: `"in_progress"`, `"published"` (all triggers activated), `"partial"` (some triggers failed to activate), `"failed"` (all triggers failed to activate), or `"not_published"` (no version is live). `workflow.publicationStatus.status` is available from n8n 2.50.0. |
+| `workflow.publicationStatus.liveVersionId` | `string \| null` | The ID of the version whose triggers are live, or `null` when no version is live. `workflow.publicationStatus.liveVersionId` is available from n8n 2.50.0. |
+| `workflow.publicationStatus.pendingVersionId` | `string \| null` | The ID of the version that n8n is publishing. `null` unless `status` is `"in_progress"`. `workflow.publicationStatus.pendingVersionId` is available from n8n 2.50.0. |
+| `workflow.publicationStatus.versionId`     | `string \| null` | The version ID of the latest publication request. `workflow.publicationStatus.versionId` is available from n8n 2.50.0. |
+| `workflow.publicationStatus.errorMessage`  | `string \| null` | The trigger activation error when publication fails. `workflow.publicationStatus.errorMessage` is available from n8n 2.50.0. |
+| `workflow.publicationStatus.triggers`      | `array`          | Activation status of each trigger. Each item has `nodeId`, `status` (`"activated"` or `"failed"`), and `errorMessage`. `workflow.publicationStatus.triggers` is available from n8n 2.50.0. |
+| `workflow.isArchived`                      | `boolean`        | Whether the workflow is archived                                                                                                                                                               |
+| `workflow.versionId`                       | `string`         | The current workflow version ID                                                                                                                                                                |
+| `workflow.activeVersionId`                 | `string \| null` | The published version ID. From n8n 2.50.0, check `workflow.publicationStatus` to confirm that n8n activated the triggers                                                                       |
+| `workflow.triggerCount`                    | `number`         | Number of triggers                                                                                                                                                                             |
+| `workflow.nodeCount`                       | `number`         | Number of nodes in the workflow. Returned at both detail levels                                                                                                                                |
+| `workflow.createdAt`                       | `string \| null` | ISO timestamp when the workflow was created                                                                                                                                                    |
+| `workflow.updatedAt`                       | `string \| null` | ISO timestamp when the workflow was last saved                                                                                                                                                 |
+| `workflow.settings`                        | `object \| null` | Workflow settings                                                                                                                                                                              |
+| `workflow.connections`                     | `object`         | Workflow connections graph                                                                                                                                                                     |
+| `workflow.nodes`                           | `array`          | List of workflow nodes. Credential references are stripped                                                                                                                                     |
+| `workflow.nodeGroups`                      | `array`          | Node groups in the workflow. Only returned when `detailLevel` is `"full"`                                                                                                                      |
+| `workflow.activeVersion`                   | `object \| null` | Active workflow graph, if available                                                                                                                                                            |
+| `workflow.activeVersion.sameAsDraft`       | `boolean`        | When `true`, the published version matches the current draft, so use the top-level `nodes`, `connections`, and `nodeGroups`. When `false`, the published graph is returned in the fields below |
+| `workflow.activeVersion.nodes`             | `array`          | Nodes from the active workflow version. Credential references are stripped                                                                                                                     |
+| `workflow.activeVersion.connections`       | `object`         | Connections from the active workflow version                                                                                                                                                   |
+| `workflow.activeVersion.nodeGroups`        | `array`          | Node groups in the published version. Present only when `sameAsDraft` is `false`                                                                                                               |
+| `workflow.tags`                            | `array`          | Tags with `id` and `name`                                                                                                                                                                      |
+| `workflow.meta`                            | `object \| null` | Workflow metadata                                                                                                                                                                              |
+| `workflow.parentFolderId`                  | `string \| null` | Parent folder ID                                                                                                                                                                               |
+| `workflow.description`                     | `string`         | Workflow description, if set                                                                                                                                                                   |
+| `workflow.scopes`                          | `string[]`       | User permissions for this workflow                                                                                                                                                             |
+| `workflow.canExecute`                      | `boolean`        | Whether the user has permission to execute this workflow                                                                                                                                       |
+| `triggerInfo`                              | `string`         | Human-readable instructions describing how to trigger the workflow                                                                                                                             |
 
 #### Notes <a href="#notes" id="notes"></a>
 
@@ -293,12 +300,21 @@ Publish (activate) a workflow to make it available for production execution. Thi
 
 #### Output <a href="#output" id="output"></a>
 
-| Field             | Type             | Description                            |
-| ----------------- | ---------------- | -------------------------------------- |
-| `success`         | `boolean`        | Whether publishing succeeded           |
-| `workflowId`      | `string`         | The workflow ID                        |
-| `activeVersionId` | `string \| null` | The active version ID after publishing |
-| `error`           | `string`         | Error message if publishing failed     |
+| Field               | Type             | Description                                                                                                                                                                                                                                                                                                                                                       |
+| ------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `success`           | `boolean`        | Whether publishing succeeded. From n8n 2.50.0, when the response includes `publicationStatus`, `success` is `true` only when `publicationStatus.status` is `"published"` and the requested version is live                                                                                                                                                      |
+| `workflowId`        | `string`         | The workflow ID                                                                                                                                                                                                                                                                                                                                                   |
+| `activeVersionId`   | `string \| null` | The active version ID after publishing                                                                                                                                                                                                                                                                                                                            |
+| `publicationStatus` | `object`         | Trigger activation status for this request, with the same fields as `workflow.publicationStatus` in `get_workflow_details`. Present only when the instance uses the workflow publication service. If `status` is `"in_progress"`, poll `get_workflow_details` and check `workflow.publicationStatus` before you report the workflow as live. `publicationStatus` is available from n8n 2.50.0. |
+| `error`             | `string`         | Error message if publishing failed. From n8n 2.50.0, it holds the trigger activation error when activation fails. If another publication replaced this request, it holds `Another publication replaced this request. Check the current workflow publication status.`                                                                                            |
+| `reason`            | `string`         | Why a workflow review blocked the publication. Present only when a review blocks it. One of `review_pending`, `changes_requested`, or `review_required`. `review_required` is available from n8n 2.50.0. |
+| `versionId`         | `string`         | The ID of the workflow version that needs an approved review before you can publish it. Present only when n8n rejects the publication because the version has no approved review. `versionId` is available from n8n 2.50.0. |
+
+#### Notes
+
+* From n8n 2.50.0, when the workflow publication service is on, `publish_workflow` waits up to five seconds for n8n to activate the triggers of the requested version. If activation doesn't finish in that time, the response has `success: false` and `publicationStatus.status` is `"in_progress"`.
+* When `N8N_USE_WORKFLOW_PUBLICATION_SERVICE` is `false`, the response has no `publicationStatus`. In multi-main mode, `publish_workflow` can return `success: true` before the leader registers the triggers.
+* From n8n 2.50.0, an instance can require an approved review for every new version of a team project workflow. [Workflow reviews](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/workflow-reviews) are an Enterprise feature in Preview. When this policy is on, `publish_workflow` rejects a version with no approved review. The response has `success: false`, `reason: "review_required"`, and the `versionId` of the version. `publish_workflow` can't submit a review. Submit the version for review in the n8n editor, then call `publish_workflow` after a reviewer approves it. This rule applies to all users, including instance owners and admins. It doesn't apply to workflows in a personal space.
 
 ***
 
@@ -2508,6 +2524,300 @@ Remove a preference that an MCP client saved for the current user. Use it when t
 #### Notes
 
 * The tool only removes preferences an MCP client saved for this user, which are still in the `user` scope. It refuses a preference the user wrote in settings, one n8n Assistant saved, and one saved for a project or the whole instance. The user removes those in **Settings** > **Context** > **Preferences**.
+
+***
+
+## Skills
+
+{% hint style="info" %}
+**Feature availability**
+
+The skill tools are available from n8n 2.45.0. In n8n 2.45, the search tool has the name `search_skills`. The `availableToAssistant` and `availableToMCP` fields, and the MCP skills extension, are available from n8n 2.46.0. The skill source tools (`list_skill_sources`, `discover_skill_source`, and `import_skills_from_source`), and the `sourceId`, `syncState`, and `syncedFrom` fields, are available from n8n 2.50.0.
+{% endhint %}
+
+{% hint style="info" %}
+**Preview status**
+
+Skills are part of agentic context management, which is in Preview and may change in future releases.&#x20;
+{% endhint %}
+
+[Skills](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/agentic-context-management/skills) are instructions, with optional reference files, that agents and n8n Assistant follow for a specific task. MCP clients, such as Claude Code, can find, read, create, change, and delete the skills the current user has access to. They can also import skills from a public GitHub repository.
+
+Two OAuth scopes cover these tools:
+
+| OAuth scope   | Consent screen label                 | Tools                                                                            |
+| ------------- | ------------------------------------ | -------------------------------------------------------------------------------- |
+| `skill:read`  | **List and read skills**             | `search_n8n_skills`, `get_skill`, `list_skill_sources`                           |
+| `skill:write` | **Create, update and delete skills** | `create_skill`, `update_skill`, `delete_skill`, `search_n8n_skills`, `get_skill`, `list_skill_sources`, `discover_skill_source`, `import_skills_from_source` |
+
+Each skill has one of three scopes:
+
+| Scope      | Who can use the skill            | Who can write it                                    |
+| ---------- | -------------------------------- | --------------------------------------------------- |
+| `instance` | Agents in every project          | Instance owners and admins                          |
+| `project`  | Agents in one team project       | Project admins and project editors                  |
+| `project`  | Agents in one personal project   | The owner of the personal project                   |
+
+A skill has these limits:
+
+* Name: up to 128 characters. Two skills in one scope can't have the same name.
+* Description: up to 1,024 characters.
+* Instructions: up to 65,536 characters.
+* References: up to 20 Markdown files, each up to 65,536 characters, and up to 262,144 characters in total.
+
+Two fields depend on feature flags. `availableToAssistant` appears only when skills in n8n Assistant are on (`130_attach_skills_to_assistant`). `availableToMCP` appears only when the MCP skills extension is on (`128_mcp_skills_extension`). With the extension on, the n8n MCP server also offers the skills marked `availableToMCP` through the [MCP skills extension](https://modelcontextprotocol.io/seps/2640-skills-extension) (`skills/list` and `skills/get`). Only MCP clients that support the extension use it.
+
+The three skill source tools appear only when importing skills from GitHub is on for the current user (`136_skill_sync`).
+
+### search\_n8n\_skills
+
+Search the skills the current user can see.
+
+#### Parameters
+
+| Name                  | Type     | Required | Description                                                                         |
+| --------------------- | -------- | -------- | ----------------------------------------------------------------------------------- |
+| `query`               | `string` | No       | Filter by skill name or description. Up to 200 characters.                          |
+| `scope`               | `string` | No       | Only skills of this scope. One of: `"instance"`, `"project"`.                       |
+| `projectId`           | `string` | No       | Only skills of this project                                                         |
+| `attachableToAgentId` | `string` | No       | Only the skills this agent can use. Don't combine it with `scope` or `projectId`.   |
+| `limit`               | `number` | No       | Skills to return, from 1 to 100. Default: 50.                                       |
+| `skip`                | `number` | No       | Skills to skip, for the next page. Default: 0.                                      |
+
+#### Output
+
+| Field                         | Type      | Description                                                                          |
+| ----------------------------- | --------- | ------------------------------------------------------------------------------------ |
+| `count`                       | `number`  | Total number of matching skills                                                      |
+| `skills`                      | `array`   | The skills on this page                                                              |
+| `skills[].id`                 | `string`  | Skill ID. Pass it to `get_skill`, `update_skill`, or `delete_skill`.                 |
+| `skills[].name`               | `string`  | Skill name                                                                           |
+| `skills[].description`        | `string`  | When to use the skill                                                                |
+| `skills[].scope`              | `string`  | One of: `"instance"`, `"project"`                                                    |
+| `skills[].projectId`          | `string`  | The project of a project skill                                                       |
+| `skills[].projectName`        | `string`  | Name of that project                                                                 |
+| `skills[].availableToAssistant` | `boolean` | Whether n8n Assistant can use the skill. Only with `130_attach_skills_to_assistant`. |
+| `skills[].availableToMCP`     | `boolean` | Whether MCP clients load the skill automatically. Only with `128_mcp_skills_extension`. |
+| `skills[].latestVersion`      | `number`  | Number of the latest version                                                         |
+| `skills[].usedByAgents`       | `number`  | Number of agents that use the skill                                                  |
+| `skills[].canEdit`            | `boolean` | Whether the current user can change the skill                                        |
+| `skills[].canDelete`          | `boolean` | Whether the current user can delete the skill                                        |
+| `skills[].sourceId`           | `string \| null` | The source that syncs the skill. `null` for a skill that isn't synced.               |
+| `skills[].syncState`          | `string \| null` | For a synced skill, one of: `"up_to_date"`, `"update_available"`, `"update_blocked"`, `"source_unavailable"`. `null` for a skill that isn't synced. |
+| `skills[].updatedAt`          | `string`  | Time of the last change                                                              |
+
+***
+
+### get\_skill
+
+Read one skill with its instructions, references, `skillHash`, and the agents that use it.
+
+#### Parameters
+
+| Name      | Type     | Required | Description                         |
+| --------- | -------- | -------- | ----------------------------------- |
+| `skillId` | `string` | Yes      | The skill ID from `search_n8n_skills` |
+
+#### Output
+
+The fields of one `search_n8n_skills` item, plus:
+
+| Field       | Type     | Description                                                                                                  |
+| ----------- | -------- | ------------------------------------------------------------------------------------------------------------ |
+| `skill`     | `object` | The content: `name`, `description`, `instructions`, and `references` (an array of `path` and `content`)     |
+| `skillHash` | `string` | Hash of the current content. Pass it to `update_skill` as `baseSkillHash`.                                   |
+| `usedBy`    | `object` | The agents that use the skill: `drafts`, `pins` (published versions), and `hiddenAgents` (agents in projects the user can't read) |
+| `syncedFrom` | `object \| null` | For a synced skill, where it comes from: `sourceId`, `type`, `label` (such as `owner/repository`), `ref` (the branch, or `null` for a source type that has no branches), `webUrl`, and `canStopSyncing`. `null` for a skill that isn't synced. |
+
+***
+
+### create\_skill
+
+Create a skill.
+
+#### Parameters
+
+| Name                   | Type      | Required | Description                                                                                       |
+| ---------------------- | --------- | -------- | ------------------------------------------------------------------------------------------------- |
+| `scope`                | `string`  | Yes      | `"project"`: one project can use the skill. `"instance"`: every project can use it.               |
+| `projectId`            | `string`  | No       | Required when `scope` is `"project"`. Get it from `search_projects`.                              |
+| `skill`                | `object`  | Yes      | The content: `name`, `description`, `instructions`, and optional `references` (array of `path` and `content`). See the limits at the start of this section. |
+| `availableToAssistant` | `boolean` | No       | Allow n8n Assistant to use the skill. Default: `false`. Only with `130_attach_skills_to_assistant`. |
+| `availableToMCP`       | `boolean` | No       | Serve the skill to MCP clients that support skills. Default: `false`. Only with `128_mcp_skills_extension`. |
+
+#### Output
+
+A created skill, with the fields that `get_skill` returns. If n8n refuses the create, the result has `ok: false`, a `code`, and a `message`:
+
+* `skill_name_taken`: the scope already has a skill with this name. Choose another name.
+
+***
+
+### update\_skill
+
+Change a skill. Pass only the fields to change. A change to the content creates a new version. A change to only `availableToAssistant` or `availableToMCP` keeps the version.
+
+#### Parameters
+
+| Name                   | Type      | Required | Description                                                                                   |
+| ---------------------- | --------- | -------- | --------------------------------------------------------------------------------------------- |
+| `skillId`              | `string`  | Yes      | The skill to change                                                                           |
+| `baseSkillHash`        | `string`  | Yes      | `skillHash` from `get_skill`. n8n refuses the update if the skill changed since.              |
+| `name`                 | `string`  | No       | New name                                                                                      |
+| `description`          | `string`  | No       | New description                                                                               |
+| `instructions`         | `string`  | No       | New instructions                                                                              |
+| `references`           | `array`   | No       | New references. Replaces all references.                                                      |
+| `scope`                | `string`  | No       | Moves the skill. One of: `"project"`, `"instance"`. Refused if an agent that uses the skill can't use it in the new scope. |
+| `projectId`            | `string`  | No       | Required when `scope` is `"project"`                                                          |
+| `availableToAssistant` | `boolean` | No       | Only with `130_attach_skills_to_assistant`                                                    |
+| `availableToMCP`       | `boolean` | No       | Only with `128_mcp_skills_extension`                                                          |
+
+#### Output
+
+The skill after the change, without its content. If n8n refuses the update, the result has `ok: false`, the `skillId`, and a `code`:
+
+* `stale_skill`: the skill changed since the client read it. The result has the new `skillHash`. Call `get_skill` before you retry.
+* `skill_name_taken`: the scope already has a skill with this name.
+* `skill_synced`: the skill comes from GitHub, and n8n keeps it read-only. Change it in GitHub.
+
+***
+
+### delete\_skill
+
+Delete a skill permanently. n8n refuses while an agent uses the skill.
+
+#### Parameters
+
+| Name      | Type     | Required | Description         |
+| --------- | -------- | -------- | ------------------- |
+| `skillId` | `string` | Yes      | The skill to delete |
+
+#### Output
+
+| Field     | Type      | Description                        |
+| --------- | --------- | ---------------------------------- |
+| `deleted` | `boolean` | `true` when n8n deleted the skill  |
+| `skillId` | `string`  | The ID the call asked for          |
+
+***
+
+### list\_skill\_sources
+
+List the skill sources the current user can see, with their sync status and update counts. A skill source is a GitHub repository, or a folder in one, that someone connected to import skills.
+
+This tool has no parameters.
+
+#### Output
+
+| Field                          | Type       | Description                                                                              |
+| ------------------------------ | ---------- | ---------------------------------------------------------------------------------------- |
+| `sources`                      | `array`    | The sources the current user can see                                                     |
+| `sources[].id`                 | `string`   | Source ID. It matches the `sourceId` of the skills that the source syncs.                |
+| `sources[].type`               | `string`   | `"github"`                                                                               |
+| `sources[].label`              | `string`   | The repository, such as `owner/repository`                                               |
+| `sources[].ref`                | `string \| null` | The branch. `null` for a source type that has no branches.                               |
+| `sources[].path`               | `string`   | The folder that the source reads. Empty for the whole repository.                        |
+| `sources[].webUrl`             | `string`   | The page of the source on GitHub                                                         |
+| `sources[].projectId`          | `string \| null` | The project of the source. `null` for a source with the `instance` scope.                |
+| `sources[].projectName`        | `string \| null` | Name of that project. `null` for a source with the `instance` scope. |
+| `sources[].projectType`        | `string \| null` | `"personal"` or `"team"`. `null` for a source with the `instance` scope.                 |
+| `sources[].projectIcon`        | `object \| null` | Icon of that project. `null` for a source with the `instance` scope, and for a project with no icon. |
+| `sources[].skillCount`         | `number`   | Number of synced skills of the source                                                    |
+| `sources[].updatesAvailable`   | `number`   | Updates that wait for review                                                             |
+| `sources[].updatesBlocked`     | `number`   | Updates that the security check blocked                                                  |
+| `sources[].newSkillsAvailable` | `number`   | Skills in the source that nobody imported yet                                            |
+| `sources[].health`             | `string`   | One of: `"connected"`, `"credential_issue"`, `"source_unavailable"`, `"delayed"`         |
+| `sources[].lastCheckedAt`      | `string \| null` | Time of the last check of the source. `null` before the first check.                     |
+| `sources[].missingSkills`      | `string[]` | Names of synced skills whose folders the source no longer has                            |
+| `sources[].canReplaceCredential`, `canReview`, `canImport`, `canMove`, `canDelete` | `boolean` | What the current user can do with the source in **Settings** > **Context** > **Skills** |
+
+#### Usage notes
+
+* The tool only reads. To review and accept updates, use **Settings** > **Context** > **Skills**.
+
+***
+
+### discover\_skill\_source
+
+Preview the skills in a public GitHub repository, a folder, or one `SKILL.md` file, for a scope. The tool stores nothing. Show the user the check results before you import.
+
+This tool needs the `skill:write` scope.
+
+#### Parameters
+
+| Name        | Type     | Required | Description                                                                                      |
+| ----------- | -------- | -------- | ------------------------------------------------------------------------------------------------ |
+| `url`       | `string` | Yes      | A link to a public GitHub repository, a folder, or one `SKILL.md` file. Up to 2,048 characters. |
+| `scope`     | `string` | Yes      | Where the skills go. `"project"`: one project. `"instance"`: every project.                      |
+| `projectId` | `string` | No       | Required when `scope` is `"project"`. Get it from `search_projects`.                             |
+
+#### Output
+
+| Field                | Type      | Description                                                                                          |
+| -------------------- | --------- | ---------------------------------------------------------------------------------------------------- |
+| `source`             | `object`  | The source the link points to: `type`, `label`, `ref`, `path`, and `webUrl`                          |
+| `duplicate`          | `object`  | Whether the repository is already connected. `kind` is `"none"`, `"blocked"`, or `"warning"`. With `"blocked"`, the repository is already connected in the `instance` scope or in this scope (`where`), and an import fails. With `"warning"`, `projects` lists the other projects that have it, and an import works. |
+| `revision`           | `string \| null` | The commit that n8n read. Pass it to `import_skills_from_source`. Can be `null`.                     |
+| `skills`             | `array`   | The skills n8n found                                                                                 |
+| `skills[].key`       | `string`  | Key of the skill. Pass it to `import_skills_from_source` in `skillKeys`.                             |
+| `skills[].location`  | `string`  | Where the skill is in the source, such as its folder                                                 |
+| `skills[].name`      | `string \| null` | Skill name. `null` when n8n can't read the skill.                                                    |
+| `skills[].nameTaken` | `boolean` | Whether the scope already has a skill with this name                                                 |
+| `skills[].webUrl`    | `string`  | The page of the skill on GitHub, at the previewed revision                                           |
+| `skills[].verdict`   | `string \| null` | Result of the security check. One of: `"pass"`, `"needs_review"`, `"blocked"`. Can be `null`.        |
+| `skills[].reason`    | `string \| null` | Why n8n can't read the skill, such as `"parse_error"`. `null` when n8n can read it.                  |
+| `truncated`          | `boolean` | `true` when the source has more than 200 skills. n8n lists the first 200.                            |
+| `tooDeep`            | `number`  | Number of skills n8n didn't list, because they're more than 8 folders below the link                 |
+
+#### Usage notes
+
+* `import_skills_from_source` takes a skill only when its `verdict` is `"pass"`, its `reason` is `null`, and `nameTaken` is `false`.
+* A user can import a skill with the verdict `"needs_review"` in **Settings** > **Context** > **Skills**, after they read the warnings. Nobody can import a skill with the verdict `"blocked"`.
+* The tool doesn't read private repositories. Use **Settings** > **Context** > **Skills** for those.
+
+***
+
+### import\_skills\_from\_source
+
+Connect a public GitHub source and import the selected skills as synced skills. A synced skill is read-only in n8n, and changes only in GitHub. Call `discover_skill_source` first, and confirm the source, the scope, and the selection with the user.
+
+#### Parameters
+
+| Name        | Type       | Required | Description                                                                              |
+| ----------- | ---------- | -------- | ---------------------------------------------------------------------------------------- |
+| `url`       | `string`   | Yes      | The same link as in the preview                                                          |
+| `scope`     | `string`   | Yes      | The same scope as in the preview                                                         |
+| `projectId` | `string`   | No       | Required when `scope` is `"project"`                                                     |
+| `skillKeys` | `string[]` | Yes      | The `key` of each selected skill, from `discover_skill_source`. From 1 to 200 keys.      |
+| `revision`  | `string \| null` | Yes      | The `revision` from `discover_skill_source`. Pass `null` when the preview returned `null`. |
+
+#### Output
+
+| Field                | Type     | Description                                                                         |
+| -------------------- | -------- | ----------------------------------------------------------------------------------- |
+| `sourceId`           | `string` | ID of the connected source                                                          |
+| `imported`           | `array`  | The skills n8n imported                                                             |
+| `imported[].key`     | `string` | Key of the skill in the source                                                      |
+| `imported[].skillId` | `string` | ID of the new skill. Pass it to `get_skill`.                                        |
+| `imported[].name`    | `string` | Name of the new skill                                                               |
+| `failed`             | `array`  | The selected skills n8n didn't import. Each item has a `key`, a `name`, and a `reason`, such as `"blocked_by_check"`, `"review_required"`, `"name_taken"`, or `"not_found"`. |
+
+If n8n refuses a preview or an import, the result has `ok: false`, a `code`, and an `error` message. Both tools use these codes:
+
+* `stale`: the source changed since the preview. n8n imported nothing. Call `discover_skill_source` again.
+* `duplicate_source`: the repository is already connected in the `instance` scope or in this scope. To import more of its skills, use **Settings** > **Context** > **Skills**.
+* `rate_limited`: the user made 15 preview and import requests in 5 minutes, or GitHub limits the requests. Wait 5 minutes.
+* `invalid_url`, `unsupported_provider`: the link isn't a GitHub link that n8n accepts.
+* `not_found`: n8n can't read the repository. It's private or doesn't exist.
+* `no_skills_found`: the link has no `SKILL.md` file.
+* `blocked_by_check`, `review_required`, `name_taken`: none of the selected skills can come in, for this reason.
+
+#### Usage notes
+
+* n8n reads the source again before it imports, and runs the security check again. If one selected skill can't come in, the others still do.
+* n8n has no approval step for this tool. The `skill:write` scope covers it, as for `create_skill`.
+* An imported skill starts with `availableToAssistant` and `availableToMCP` set to `false`, and no agent uses it.
+* The tool doesn't import from private repositories, import a skill that has warnings, or accept updates. It also doesn't import more skills from a source that's already connected. Use **Settings** > **Context** > **Skills** for those.
 
 ***
 

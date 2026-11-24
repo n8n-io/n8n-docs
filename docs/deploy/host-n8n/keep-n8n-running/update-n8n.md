@@ -28,6 +28,7 @@ For instructions on how to update, refer to the documentation for your installat
 
 * [Installed with npm](../install-options/install-with-npm.md#updating)
 * [Installed with Docker or Docker Compose](../install-options/install-with-docker.md#updating)
+* [Installed with Helm](../install-options/install-with-helm.md#upgrade-the-helm-chart)
 
 ## Update an instance in queue mode
 
@@ -82,5 +83,5 @@ Changing the image tag or Helm release back to the older version doesn't reverse
 * [Monitor n8n](monitor-n8n.md)
 * [Visualize metrics with Grafana](visualize-metrics-with-grafana.md)
 * [Back up and restore](backup-and-restore.md)
-* [Trace executions with OpenTelemetry](trace-executions-with-opentelemetry.md)
+* [Trace executions with OpenTelemetry](trace-executions-with-opentelemetry/README.md)
 * [Enable queue mode](../configure-n8n/scaling/enable-queue-mode.md)

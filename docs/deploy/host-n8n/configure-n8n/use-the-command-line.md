@@ -437,9 +437,9 @@ The command:
 
 - Deletes all user accounts except the instance owner, including pending invites. Service accounts are kept.
 - Clears the owner's email, name, and password. The owner's MFA settings and API keys are kept.
-- Keeps all workflows and credentials, and moves their ownership to the owner's personal project.
+- Keeps all workflows and credentials, and moves ownership of workflows and project credentials to the owner's personal project. Instance credentials stay instance-owned.
 
-The command isn't transactional. If it fails part way, the ownership changes it already made stay in place. It fails if any other user has signed in with SAML, OIDC, or LDAP. For LDAP, use `n8n ldap:reset` first. Restart n8n after the command finishes.
+The command isn't transactional. If it fails partway, the ownership changes it already made stay in place. It fails if any other user has a linked SAML, OIDC, or LDAP identity. For LDAP, first run `n8n ldap:reset`, which deletes all LDAP users (see [Disable LDAP](#disable-ldap)). There's no CLI command to remove SAML or OIDC users. Restart n8n after the command finishes.
 
 Use this if you forget your password, and don't have SMTP set up to do password resets by email.
 

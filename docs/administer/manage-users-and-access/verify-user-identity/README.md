@@ -13,9 +13,9 @@ In n8n, go to **Settings** > **Authentication** to see the sign-in methods for y
 * [Use SAML](use-saml/README.md)
 * [Connect LDAP](connect-ldap.md)
 
-## Use one SSO method at a time
+## Use one sign-in method at a time
 
-An n8n instance can use only one SSO method at a time, SAML or OIDC, with one identity provider (IdP). To use several IdPs, use an identity broker that federates them, such as Okta, and connect n8n to the broker with SAML or OIDC.
+An n8n instance can use only one of SAML, OIDC, or LDAP at a time, with one identity provider (IdP). To use several IdPs, use an identity broker that federates them, such as Okta, and connect n8n to the broker with SAML or OIDC.
 
 ## Switch an instance with existing users to SSO
 
@@ -27,7 +27,7 @@ Users who sign in with SAML or OIDC can't change their name or email address in 
 
 ## Change another user's name or email address
 
-Instance owners and admins can't edit another SSO user's name or email in n8n. To change one user's details, update them in your IdP, then delete the user in n8n and transfer their workflows and credentials, as described in [Manage users](../add-and-remove-users.md). When the user signs in again through your IdP, n8n creates their account with the new details. You can also temporarily switch the instance back to email authentication, which affects every user.
+Instance owners and admins can't edit another SSO user's name or email in n8n. To change one user's details, update them in your IdP, then delete the user in n8n and transfer their workflows and credentials, as described in [Manage users](../add-and-remove-users.md). When the user signs in again through your IdP, n8n creates their account with the new details. The new account doesn't keep the user's API keys or MFA setup, and this doesn't work for the instance owner.
 
 ## In this section
 

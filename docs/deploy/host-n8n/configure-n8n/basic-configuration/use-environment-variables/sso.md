@@ -26,13 +26,13 @@ layout:
 
 Single sign-on (SAML) is available on:
 
-- **n8n Cloud:** Enterprise
 - **Self-hosted:** Business, Enterprise
 
 Single sign-on (OIDC) is available on:
 
-- **n8n Cloud:** Enterprise
 - **Self-hosted:** Enterprise
+
+n8n Cloud Enterprise also supports SAML and OIDC single sign-on, but not through the environment variables on this page.
 
 You need to be an instance owner or admin to enable and configure SAML or OIDC.
 {% endhint %}

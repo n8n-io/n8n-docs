@@ -27,7 +27,6 @@ import threading
 import time
 import urllib.error
 import urllib.request
-from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -96,9 +95,13 @@ CACHED = "Error (cached)"
 # report asks each 5xx URL again, after a pause, and leaves out the ones that answer
 # 2xx. Remove this with the bump to lychee 0.25.0 (DOC-2631).
 RECHECK_WAITS = (5, 10)     # seconds before each extra try
-RECHECK_TIMEOUT = 20        # same as `timeout` in lychee.toml
-MAX_RECHECKS = 50           # URLs per report; worst case about 6 minutes with 8 workers
+RECHECK_TIMEOUT = 20        # per request, same as `timeout` in lychee.toml
+MAX_RECHECKS = 50           # URLs per report
 RECHECK_WORKERS = 8
+# Hard stop for the whole re-check. The request timeout does not cover the DNS lookup,
+# so a stuck resolver could otherwise hold up the report. A URL not settled by then
+# keeps lychee's row.
+RECHECK_DEADLINE = 240
 # Same as `user_agent` in lychee.toml, so the second try looks like the first one.
 USER_AGENT = "Mozilla/5.0 (compatible; n8n-docs-linkcheck/1.0; +https://github.com/n8n-io/n8n-docs)"
 
@@ -224,12 +227,12 @@ def mark_missing_hosts(failures, resolve=socket.getaddrinfo, timeout=DNS_TIMEOUT
     return failures
 
 
-def http_status(url, timeout=RECHECK_TIMEOUT):
+def http_status(url, timeout=RECHECK_TIMEOUT, opener=urllib.request.urlopen):
     """GET the URL with lychee's user agent, following redirects. Returns the final HTTP
     status, or None when there is no HTTP answer at all."""
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
     try:
-        with urllib.request.urlopen(req, timeout=timeout) as resp:
+        with opener(req, timeout=timeout) as resp:
             return resp.status
     except urllib.error.HTTPError as e:
         return e.code
@@ -238,11 +241,16 @@ def http_status(url, timeout=RECHECK_TIMEOUT):
 
 
 def recheck_server_errors(failures, fetch=http_status, waits=RECHECK_WAITS, sleep=time.sleep,
-                          max_urls=MAX_RECHECKS, workers=RECHECK_WORKERS):
+                          max_urls=MAX_RECHECKS, workers=RECHECK_WORKERS,
+                          deadline=RECHECK_DEADLINE):
     """The set of URLs that lychee reported with a 5xx and that answer 2xx when asked
     again (see RECHECK_WAITS). Each URL is asked once per wait, at most. Anything else
     keeps lychee's row: another 5xx, no answer, or a real answer that is not 2xx (a 404
-    on the second try means the page is not fine, so it stays reported)."""
+    on the second try means the page is not fine, so it stays reported).
+
+    At most `workers` URLs are asked at a time. The checks run on daemon threads and the
+    whole re-check stops after `deadline` seconds, so a stuck request (the timeout does
+    not cover DNS) can neither hold up the report nor keep the process alive at exit."""
     urls = sorted({f["url"] for f in failures
                    if f["status"] is not None and 500 <= f["status"] <= 599})[:max_urls]
     if not urls:
@@ -258,8 +266,22 @@ def recheck_server_errors(failures, fetch=http_status, waits=RECHECK_WAITS, slee
                 return False
         return False
 
-    with ThreadPoolExecutor(max_workers=workers) as pool:
-        return {url for url, ok in zip(urls, pool.map(recovered, urls)) if ok}
+    found, lock, slots = set(), threading.Lock(), threading.Semaphore(workers)
+
+    def run(url):
+        with slots:
+            if recovered(url):
+                with lock:
+                    found.add(url)
+
+    threads = [threading.Thread(target=run, args=(url,), daemon=True) for url in urls]
+    for t in threads:
+        t.start()
+    end = time.monotonic() + deadline
+    for t in threads:
+        t.join(max(0.0, end - time.monotonic()))
+    with lock:
+        return set(found)
 
 
 def _int(value):

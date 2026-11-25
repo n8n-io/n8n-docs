@@ -241,8 +241,76 @@ lr.recheck_server_errors([_row(f"https://h{i}.example/", 500) for i in range(5)]
 check("recheck: at most max_urls URLs are asked", len(_capped.calls) == 3)
 check("recheck: nothing to ask, no thread pool, empty set",
       lr.recheck_server_errors([_row("https://x.example/", 404)], fetch=None) == set())
+# http_status with a fake opener: no network in this suite.
+import threading
+import urllib.error
+
+
+class _Resp:
+    def __init__(self, status):
+        self.status = status
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *exc):
+        return False
+
+
+def _opener(result):
+    def open_(req, timeout):
+        _opener.seen = (req.get_header("User-agent"), timeout)
+        if isinstance(result, Exception):
+            raise result
+        return _Resp(result)
+    return open_
+
+
+check("http_status: a 2xx answer gives its status",
+      lr.http_status("https://x.example/", opener=_opener(200)) == 200)
+check("http_status: sends lychee's user agent and the request timeout",
+      _opener.seen == (lr.USER_AGENT, lr.RECHECK_TIMEOUT))
+check("http_status: an HTTP error gives its code",
+      lr.http_status("https://x.example/", opener=_opener(
+          urllib.error.HTTPError("https://x.example/", 503, "x", {}, None))) == 503)
 check("http_status: no answer gives None, not an exception",
-      lr.http_status("http://127.0.0.1:9/never", timeout=2) is None)
+      lr.http_status("https://x.example/", opener=_opener(urllib.error.URLError("refused"))) is None)
+
+# cubic on #5808: concurrency is bounded, and a stuck request cannot hold up the report.
+_active, _peak, _lock = [0], [0], threading.Lock()
+
+
+def _slow(url):
+    with _lock:
+        _active[0] += 1
+        _peak[0] = max(_peak[0], _active[0])
+    time.sleep(0.05)
+    with _lock:
+        _active[0] -= 1
+    return 200
+
+
+_got = lr.recheck_server_errors([_row(f"https://c{i}.example/", 500) for i in range(6)],
+                                fetch=_slow, sleep=lambda s: None, workers=2)
+check("recheck: never more than `workers` requests at once", _peak[0] == 2)
+check("recheck: every URL still gets its answer with several workers", len(_got) == 6)
+
+_never = threading.Event()
+
+
+def _stuck_or_ok(url):
+    if "stuck" in url:
+        _never.wait()  # a request that never returns, like a stuck DNS lookup
+        return 200
+    return 200
+
+
+_t0 = time.monotonic()
+_got = lr.recheck_server_errors([_row("https://stuck.example/", 500), _row("https://ok.example/", 500)],
+                                fetch=_stuck_or_ok, sleep=lambda s: None, workers=2, deadline=0.5)
+check("recheck: stops at the deadline when a request hangs", time.monotonic() - _t0 < 2)
+check("recheck: a hung URL keeps lychee's row, a finished one is still recovered",
+      _got == {"https://ok.example/"})
 
 # build_payload leaves recovered URLs out of both lists and counts them.
 _stats5 = {"error_map": {

@@ -24,7 +24,10 @@ import os
 import socket
 import sys
 import threading
+import time
+import urllib.error
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -84,6 +87,20 @@ NO_SUCH_HOST_ERRNOS = frozenset(
 DNS_TIMEOUT = 5
 MAX_DNS_LOOKUPS = 50
 CACHED = "Error (cached)"
+
+# lychee 0.24.2 never retries an HTTP 5xx answer, whatever `max_retries` says: it treats
+# a rejected status as retryable only when it is 429 (lychee issue #2319). The fix
+# (lychee #2324, merged 2026-10-21) is not in a release yet; 0.25.0 is pending (lychee
+# #2217). On the two DOC-2626 test sweeps, 8 and 9 n8n.io pages came back as 500 and
+# answered 200 by hand, where lychee 0.18.1, which did retry, reported none. So the
+# report asks each 5xx URL again, after a pause, and leaves out the ones that answer
+# 2xx. Remove this with the bump to lychee 0.25.0 (DOC-2631).
+RECHECK_WAITS = (5, 10)     # seconds before each extra try
+RECHECK_TIMEOUT = 20        # same as `timeout` in lychee.toml
+MAX_RECHECKS = 50           # URLs per report; worst case about 6 minutes with 8 workers
+RECHECK_WORKERS = 8
+# Same as `user_agent` in lychee.toml, so the second try looks like the first one.
+USER_AGENT = "Mozilla/5.0 (compatible; n8n-docs-linkcheck/1.0; +https://github.com/n8n-io/n8n-docs)"
 
 # --------------------------------------------------------------------- pure helpers
 # No I/O here so the tests can cover them.
@@ -207,6 +224,44 @@ def mark_missing_hosts(failures, resolve=socket.getaddrinfo, timeout=DNS_TIMEOUT
     return failures
 
 
+def http_status(url, timeout=RECHECK_TIMEOUT):
+    """GET the URL with lychee's user agent, following redirects. Returns the final HTTP
+    status, or None when there is no HTTP answer at all."""
+    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            return resp.status
+    except urllib.error.HTTPError as e:
+        return e.code
+    except Exception:  # noqa: BLE001 - no answer is not a recovery
+        return None
+
+
+def recheck_server_errors(failures, fetch=http_status, waits=RECHECK_WAITS, sleep=time.sleep,
+                          max_urls=MAX_RECHECKS, workers=RECHECK_WORKERS):
+    """The set of URLs that lychee reported with a 5xx and that answer 2xx when asked
+    again (see RECHECK_WAITS). Each URL is asked once per wait, at most. Anything else
+    keeps lychee's row: another 5xx, no answer, or a real answer that is not 2xx (a 404
+    on the second try means the page is not fine, so it stays reported)."""
+    urls = sorted({f["url"] for f in failures
+                   if f["status"] is not None and 500 <= f["status"] <= 599})[:max_urls]
+    if not urls:
+        return set()
+
+    def recovered(url):
+        for wait in waits:
+            sleep(wait)
+            status = fetch(url)
+            if status is not None and 200 <= status <= 299:
+                return True
+            if status is not None and not 500 <= status <= 599:
+                return False
+        return False
+
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        return {url for url, ok in zip(urls, pool.map(recovered, urls)) if ok}
+
+
 def _int(value):
     try:
         return int(value or 0)
@@ -214,11 +269,15 @@ def _int(value):
         return 0
 
 
-def build_payload(stats, ctx):
+def build_payload(stats, ctx, recovered=frozenset()):
     """The contract between this Action and the n8n webhook. `stats` is the parsed
-    lychee JSON (or {} when the report is missing); `ctx` carries run metadata."""
+    lychee JSON (or {} when the report is missing); `ctx` carries run metadata.
+    `recovered` holds URLs that answered 2xx when re-checked (recheck_server_errors);
+    their rows are left out and counted in `recovered_on_recheck`."""
     stats = stats or {}
     all_failures = flatten_failures(stats)
+    recovered_rows = sum(1 for f in all_failures if f["url"] in recovered)
+    all_failures = [f for f in all_failures if f["url"] not in recovered]
     failures = [f for f in all_failures if f["status"] not in UNVERIFIABLE_STATUSES]
     blocked = [f for f in all_failures if f["status"] in UNVERIFIABLE_STATUSES]
     # `errors` = the rows we actually deliver (errors AND timeouts), so counts shown in
@@ -235,6 +294,8 @@ def build_payload(stats, ctx):
         # the summary can say how much of the bucket was a host outage.
         "server_errors": sum(1 for f in blocked if f["status"] in SERVER_ERROR_STATUSES),
         "lychee_errors": _int(stats.get("errors")),
+        # Rows lychee reported as 5xx that answered 2xx on a second try (DOC-2631).
+        "recovered_on_recheck": recovered_rows,
     }
     return {
         "source": "lychee-weekly",
@@ -343,6 +404,9 @@ def summary_markdown(payload):
         if server:
             lines.append(f"  - of which server errors (502/503/504), usually a host "
                          f"outage: {server}")
+    if t.get("recovered_on_recheck"):
+        lines.append(f"- Server errors that answered on a second try, not reported "
+                     f"(lychee 0.24.2 does not retry them): {t['recovered_on_recheck']}")
     pages = {}
     for f in payload["failures"]:
         pages[f["page"]] = pages.get(f["page"], 0) + 1
@@ -400,9 +464,15 @@ def main():
         "exit_code": int(exit_code) if exit_code.isdigit() else None,
         "report_found": stats is not None,
     }
-    payload = build_payload(stats, ctx)
-    # The only network access before the POST: one DNS lookup per host that lychee could
-    # not connect to. `blocked` rows always carry an HTTP status, so they never qualify.
+    # Network access before the POST: a second try for each URL lychee reported with a
+    # 5xx (lychee 0.24.2 does not retry them, see RECHECK_WAITS), and one DNS lookup per
+    # host that lychee could not connect to.
+    recovered = recheck_server_errors(flatten_failures(stats)) if stats else set()
+    if recovered:
+        print(f"Re-checked server errors: {len(recovered)} URL(s) answered 2xx on a second "
+              f"try and are not reported: {', '.join(sorted(recovered))}")
+    payload = build_payload(stats, ctx, recovered)
+    # `blocked` rows always carry an HTTP status, so they never qualify for the DNS lookup.
     mark_missing_hosts(payload["failures"])
 
     quality_path = Path(os.environ.get("QUALITY_REPORT", "lychee/quality.json"))

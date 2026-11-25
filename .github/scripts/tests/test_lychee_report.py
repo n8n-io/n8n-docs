@@ -194,13 +194,86 @@ lr.mark_missing_hosts(_many, _res)
 check("dns: at most MAX_DNS_LOOKUPS lookups per report", len(_res.calls) == lr.MAX_DNS_LOOKUPS)
 check("dns: hosts past the cap keep lychee's message", _many[-1]["message"] == _CONN)
 
+# --- recheck_server_errors: lychee 0.24.2 does not retry a 5xx (DOC-2631) -----------
+
+
+def _fetcher(answers):
+    """Fake http_status. answers maps url -> list of statuses, one per try."""
+    calls = []
+
+    def fetch(url):
+        calls.append(url)
+        return answers[url].pop(0)
+    fetch.calls = calls
+    return fetch
+
+
+def _row(url, status, page="docs/a.md"):
+    return {"page": page, "url": url, "status": status, "message": f"Rejected status code: {status}"}
+
+
+_waits = []
+_fetch = _fetcher({"https://flaky.example/": [500, 200], "https://down.example/": [503, 502],
+                   "https://gone.example/": [404], "https://busy.example/": [502, 200]})
+_rec = lr.recheck_server_errors(
+    [_row("https://flaky.example/", 500), _row("https://flaky.example/", 500, "docs/b.md"),
+     _row("https://down.example/", 503), _row("https://gone.example/", 500),
+     _row("https://busy.example/", 502), _row("https://missing.example/", 404),
+     {"page": "docs/a.md", "url": "https://dns.example/", "status": None, "message": "x"}],
+    fetch=_fetch, sleep=_waits.append, workers=1)
+check("recheck: a 5xx that answers 2xx on a later try is recovered",
+      _rec == {"https://flaky.example/", "https://busy.example/"})
+check("recheck: a 5xx that stays a 5xx is kept", "https://down.example/" not in _rec)
+check("recheck: a real non-2xx answer (404) is kept, and not asked again",
+      "https://gone.example/" not in _rec and _fetch.calls.count("https://gone.example/") == 1)
+check("recheck: a URL on two pages is asked once per try",
+      _fetch.calls.count("https://flaky.example/") == 2)
+check("recheck: non-5xx rows and rows with no status are never asked",
+      "https://missing.example/" not in _fetch.calls and "https://dns.example/" not in _fetch.calls)
+check("recheck: it waits before each try", _waits[:2] == list(lr.RECHECK_WAITS))
+_none = _fetcher({"https://quiet.example/": [None, None]})
+check("recheck: no answer at all is not a recovery",
+      lr.recheck_server_errors([_row("https://quiet.example/", 500)], fetch=_none,
+                               sleep=lambda s: None, workers=1) == set())
+_capped = _fetcher({f"https://h{i}.example/": [200] for i in range(5)})
+lr.recheck_server_errors([_row(f"https://h{i}.example/", 500) for i in range(5)],
+                         fetch=_capped, sleep=lambda s: None, max_urls=3, workers=1)
+check("recheck: at most max_urls URLs are asked", len(_capped.calls) == 3)
+check("recheck: nothing to ask, no thread pool, empty set",
+      lr.recheck_server_errors([_row("https://x.example/", 404)], fetch=None) == set())
+check("http_status: no answer gives None, not an exception",
+      lr.http_status("http://127.0.0.1:9/never", timeout=2) is None)
+
+# build_payload leaves recovered URLs out of both lists and counts them.
+_stats5 = {"error_map": {
+    "docs/a.md": [{"url": "https://flaky.example/", "status": {"text": "500", "code": 500}},
+                  {"url": "https://busy.example/", "status": {"text": "502", "code": 502}},
+                  {"url": "https://down.example/", "status": {"text": "503", "code": 503}},
+                  {"url": "https://dead.example/", "status": {"text": "404", "code": 404}}],
+    "docs/b.md": [{"url": "https://flaky.example/", "status": {"text": "500", "code": 500}}]}}
+_p5 = lr.build_payload(_stats5, ctx, recovered={"https://flaky.example/", "https://busy.example/"})
+check("payload: recovered URLs are not in failures or blocked",
+      {f["url"] for f in _p5["failures"] + _p5["blocked"]}
+      == {"https://down.example/", "https://dead.example/"})
+check("payload: recovered rows are counted, every page",
+      _p5["totals"]["recovered_on_recheck"] == 3)
+check("payload: counts match the rows left",
+      _p5["totals"]["errors"] == 1 and _p5["totals"]["blocked"] == 1
+      and _p5["totals"]["server_errors"] == 1)
+check("payload: nothing recovered by default",
+      lr.build_payload(_stats5, ctx)["totals"]["recovered_on_recheck"] == 0)
+check("summary: says how many server errors answered on a second try",
+      "answered on a second try" in lr.summary_markdown(_p5)
+      and "answered on a second try" not in lr.summary_markdown(lr.build_payload(_stats5, ctx)))
+
 # --- build_payload ----------------------------------------------------------------
 payload = lr.build_payload(stats, ctx)
 check("payload: source and run metadata",
       payload["source"] == "lychee-weekly" and payload["run_id"] == "123" and payload["sha"] == "abc")
 check("payload: totals map lychee 'excludes' to 'excluded'; errors = delivered rows (incl. timeouts), lychee's own counter kept",
       payload["totals"] == {"total": 120, "successful": 100, "excluded": 16, "timeouts": 1,
-                            "errors": 3, "blocked": 1, "server_errors": 0, "lychee_errors": 3})
+                            "errors": 3, "blocked": 1, "server_errors": 0, "lychee_errors": 3,
+                            "recovered_on_recheck": 0})
 check("payload: failures included and not truncated",
       len(payload["failures"]) == 3 and payload["failures_truncated"] is False)
 

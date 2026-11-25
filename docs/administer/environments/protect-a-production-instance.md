@@ -13,14 +13,18 @@ On instances that only apply changes, such as production, turn on **Protected in
 {% hint style="info" %}
 **Feature availability**
 
-Environments are in Preview and may change in future releases. Try them on test instances before you set them up for your production instances.
-
 Environments are available on:
 
 - **n8n Cloud:** Enterprise
 - **Self-hosted:** Enterprise
 
 Environments are available from n8n 2.47.0. This page covers Environments, not [Environments (Classic)](../use-source-control-and-environments/README.md), the current default source control feature.
+{% endhint %}
+
+{% hint style="info" %}
+**Preview status**
+
+Environments are in Preview and may change in future releases. Try them on test instances before you set them up for your production instances. For what Preview means, see [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#feature-maturity-preview-ga-deprecated-and-removed).
 {% endhint %}
 
 **Protected instance** blocks most workflow and configuration changes in the n8n UI, while allowing the actions listed below. Use it on instances that run live workflows.
@@ -47,7 +51,7 @@ In the UI, it stops people from doing these things:
 Data table rows aren't part of a promote or apply, so you add data on the instance itself. On a protected instance you can:
 
 - Add and edit rows in the data table UI.
-- Write rows from a published workflow with the [Data table node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.datatable), which runs from its trigger.
+- Write rows from a published workflow using the [**Data table node**](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.datatable) (when the workflow runs from its trigger).
 - Use the public API.
 
 You can't create a data table or change its columns in the UI. Create or change the table on the source instance and promote it, then apply it on the protected instance.

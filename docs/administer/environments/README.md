@@ -16,8 +16,6 @@ Environments let you move workflows and other n8n resources, such as credentials
 {% hint style="info" %}
 **Feature availability**
 
-Environments are in Preview and may change in future releases. Try them on test instances before you set them up for your production instances.
-
 Environments are available on:
 
 - **n8n Cloud:** Enterprise
@@ -26,6 +24,12 @@ Environments are available on:
 Environments are available from n8n 2.47.0. This page covers Environments, not [Environments (Classic)](../use-source-control-and-environments/README.md), the current default source control feature.
 
 Only instance owners and instance admins can set up environments, promote, apply, and review promotions.
+{% endhint %}
+
+{% hint style="info" %}
+**Preview status**
+
+Environments are in Preview and may change in future releases. Try them on test instances before you set them up for your production instances. For what Preview means, see [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#feature-maturity-preview-ga-deprecated-and-removed).
 {% endhint %}
 
 {% hint style="info" %}

@@ -16,6 +16,8 @@ layout:
 
 # Understand source control and environments <a href="#understand-source-control-and-environments" id="understand-source-control-and-environments"></a>
 
+Environments (Classic) use Git-based source control to move work between n8n instances.
+
 {% hint style="info" %}
 **Feature availability**
 
@@ -34,9 +36,8 @@ Environments (Classic) are available from n8n 1.1.0.
 {% hint style="info" %}
 **New version available**
 
-These pages cover Environments (Classic). For the new version, in Preview and available from n8n 2.47.0 on Enterprise plans, see [Environments](../environments/README.md). To compare the versions and upgrade an instance, see [Upgrade from Environments (Classic)](../environments/upgrade-from-environments-classic.md).
+These pages cover Environments (Classic). For the new version, see [Environments](../environments/README.md). Environments are available from n8n 2.47.0 on Enterprise plans. They're in Preview. To compare the versions and upgrade an instance, see [Upgrade from Environments (Classic)](../environments/upgrade-from-environments-classic.md).
 {% endhint %}
-
 
 ## Related resources
 

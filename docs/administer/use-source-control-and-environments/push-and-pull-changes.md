@@ -14,6 +14,8 @@ layout:
 
 # Push and pull <a href="#push-and-pull" id="push-and-pull"></a>
 
+If your n8n instance connects to a Git repository, you need to keep your work in sync with Git.
+
 {% hint style="info" %}
 **Feature availability**
 
@@ -28,10 +30,9 @@ Environments (Classic) are available from n8n 1.1.0.
 {% hint style="info" %}
 **New version available**
 
-These pages cover Environments (Classic). For the new version, in Preview and available from n8n 2.47.0 on Enterprise plans, see [Environments](../environments/README.md). To compare the versions and upgrade an instance, see [Upgrade from Environments (Classic)](../environments/upgrade-from-environments-classic.md).
+These pages cover Environments (Classic). For the new version, see [Environments](../environments/README.md). Environments are available from n8n 2.47.0 on Enterprise plans. They're in Preview. To compare the versions and upgrade an instance, see [Upgrade from Environments (Classic)](../environments/upgrade-from-environments-classic.md).
 {% endhint %}
 
-If your n8n instance connects to a Git repository, you need to keep your work in sync with Git.
 
 This document assumes some familiarity with Git concepts and terminology. Refer to [Git and n8n](use-git-in-n8n.md) for an introduction to how n8n works with Git.
 
@@ -75,7 +76,7 @@ n8n matches the project by its ID. If no project with that ID exists on the new 
 
 When pulling, you can choose to automatically publish workflows using the **Auto publish** dropdown in the pull modal. This has three modes:
 
-* **Off** (default): Don't attempt to publish any workflows. Workflows keep their current local publish state.
+* **Off** (default): Don't attempt to publish any workflows. Workflows keep their current local publish state, except a workflow that's archived in Git: n8n unpublishes it.
 * **If workflow already published**: Only attempt to publish workflows that are already published on this instance. New workflows aren't published.
 * **On**: Attempt to publish all pulled workflows, including new ones.
 

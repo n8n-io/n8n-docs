@@ -14,6 +14,8 @@ layout:
 
 # Compare changes with workflow diffs <a href="#compare-changes-with-workflow-diffs" id="compare-changes-with-workflow-diffs"></a>
 
+Workflow diffs allow you to visually compare changes between the workflow you have on an instance and the most recent version saved in your connected Git repository. This helps you understand the exact changes to the workflow before you decide to either push or pull it across different environments.
+
 {% hint style="info" %}
 **Feature availability**
 
@@ -28,10 +30,9 @@ Environments (Classic) are available from n8n 1.1.0.
 {% hint style="info" %}
 **New version available**
 
-These pages cover Environments (Classic). For the new version, in Preview and available from n8n 2.47.0 on Enterprise plans, see [Environments](../environments/README.md). To compare the versions and upgrade an instance, see [Upgrade from Environments (Classic)](../environments/upgrade-from-environments-classic.md).
+These pages cover Environments (Classic). For the new version, see [Environments](../environments/README.md). Environments are available from n8n 2.47.0 on Enterprise plans. They're in Preview. To compare the versions and upgrade an instance, see [Upgrade from Environments (Classic)](../environments/upgrade-from-environments-classic.md).
 {% endhint %}
 
-Workflow diffs allow you to visually compare changes between the workflow you have on an instance and the most recent version saved in your connected Git repository. This helps you understand the exact changes to the workflow before you decide to either push or pull it across different environments.
 
 {% hint style="info" %}
 **Feature availability**

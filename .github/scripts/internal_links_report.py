@@ -2,7 +2,7 @@
 """Send the weekly site-wide internal-link sweep to the DocOps n8n webhook (DOC-2396).
 
 `internal-links.yml` only ever sees the markdown changed in a PR, and lychee cannot
-cover the gap: `lychee.toml` sets `base = "https://docs.n8n.io"`, which rewrites every
+cover the gap: `lychee.toml` sets `base_url = "https://docs.n8n.io"`, which rewrites every
 relative link into a docs.n8n.io URL, and then excludes that host. So nothing checked
 internal links across the whole site on a schedule. A broken link that landed on main
 stayed invisible until some PR happened to touch its page again.

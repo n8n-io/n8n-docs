@@ -98,6 +98,28 @@ Both variables are now deprecated, and n8n logs a warning at startup if you set 
 
 Poll triggers and system tasks stay on their current schedulers. Learn more in the [durable scheduler documentation](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/durable-scheduler).
 
+## Review and approve promotions through GitLab merge requests
+
+**Released:** 2026-11-03 in [n8n 3.1](release-notes.md#n8n31)
+
+You can now connect an environment to GitLab and have every promotion open a merge request, turning it into a promotion review that lives alongside workflow reviews in the Reviews section of your n8n instance. Both [gitlab.com](http://gitlab.com) and self-managed GitLab work: you enter a base URL and an access token, then pick the repository and branch from a list rather than pasting raw URLs.
+
+When a promotion opens a merge request, reviewers open the review in n8n and see a canvas diff of every changed workflow and dependency, with the before and after states side by side. Selecting Approve and merge in n8n approves the merge request on GitLab, merges it, deletes the branch, and records the approving user's name in a note on the merge request. The target instance sees the changes only after that approval. While a review is open for a project, you can't promote that project again, keeping the branch clean until the current review is resolved. Approve and merge is disabled automatically when a reviewer has requested changes on GitLab, when there are conflicts, or when new commits have been pushed since you loaded the review.
+
+The merge request gate is optional per environment. Turn on Open a merge request in GitLab when you want a review step before changes reach the branch, or leave it off to commit directly. Nothing about your repository setup changes either way.
+
+Learn more in the [Promotion reviews with GitLab](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/environments/git-based-promotion/gitlab)[ documentation](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/~/revisions/ATueQ6hK4tUYtVKSRZAm/environments/promotion-reviews).
+
+{% hint style="warning" %}
+**Preview feature**
+
+This feature is in preview as part of the Environments release. Test it in a non-production environment before relying on it for production promotions.
+{% endhint %}
+
+{% hint style="info" %}
+**Availability:** Enterprise.
+{% endhint %}
+
 ## Control which nodes users can add and run, per instance or per project
 
 **Released:** 2026-10-13 in [n8n 2.44](release-notes.md#n8n244)

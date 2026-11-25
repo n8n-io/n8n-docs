@@ -28,10 +28,12 @@ From n8n 2.51.0, system tasks run on the durable scheduler by default. To opt ou
 export N8N_SCHEDULER_SYSTEM_TASKS_ENABLED=false
 ```
 
-Give every main instance the same values for both variables. Only tasks that support durable mode move over. The rest keep their timer mode.
+Give every main instance the same values for `N8N_SCHEDULER_SYSTEM_TASKS_ENABLED` and `N8N_SCHEDULER_ENABLED`. Only tasks that support durable mode move over. The rest keep their timer mode.
 
 {% hint style="warning" %}
 Run the same n8n version on every main instance. During a rolling deploy, an older main instance can run a task from its leader timer while newer ones run it on the durable scheduler, so the task can run twice.
+
+If you roll back from n8n 2.51.0 or later to a version from 2.41.0 to 2.50.x, set `N8N_SCHEDULER_SYSTEM_TASKS_ENABLED=true` on that version. Otherwise that version skips the system tasks that the newer version moved to the durable scheduler, and they stop running.
 {% endhint %}
 
 A durable system task is also a scheduler task. The [durable scheduler metrics](durable-scheduler.md#observability) report it with the `task_type` label `system:<task-name>`, for example `system:insights-compaction`. The metrics on this page cover all three modes under the same names.

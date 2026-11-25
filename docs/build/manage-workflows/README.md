@@ -14,6 +14,7 @@ Configure, tag, share, and maintain your workflows as they grow.
 * [Favorite items](favorite-items.md): pin workflows, folders, projects, and data tables for quick access.
 * [View change history](view-change-history.md): view and restore previous versions of your workflow.
 * [Review workflows](workflow-reviews.md): submit a workflow version for review before publishing.
+* [Self-healing workflows](self-healing-workflows.md): investigate failed executions and review suggested fixes.
 * [Export and import](export-and-import.md): move workflows in and out of n8n.
 * [n8n packages](n8n-packages/README.md): bundle workflows and their structure into a portable file to move between instances.
 * [Share with others](share-with-others.md): share workflows between users.

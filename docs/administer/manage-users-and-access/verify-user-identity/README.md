@@ -27,7 +27,7 @@ Users who sign in with SAML or OIDC can't change their name or email address in 
 
 ## Change another user's name or email address
 
-Instance owners and admins can't edit another SSO user's name or email in n8n. To change one user's details, update them in your IdP, then delete the user in n8n and transfer their workflows and credentials, as described in [Manage users](../add-and-remove-users.md). When the user signs in again through your IdP, n8n creates their account with the new details. The new account doesn't keep the user's API keys or MFA setup, and this doesn't work for the instance owner.
+Instance owners and admins can't edit another SSO user's name or email in n8n. To change one user's details, update them in your IdP, then delete the user in n8n and transfer their workflows and credentials, as described in [Add and remove users](../manage-users/add-and-remove-users.md). When the user signs in again through your IdP, n8n creates their account with the new details. The new account doesn't keep the user's API keys or MFA setup, and this doesn't work for the instance owner.
 
 ## In this section
 

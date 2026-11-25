@@ -105,6 +105,7 @@ The enforcement scope controls which executions n8n redacts across the instance:
 
 * **Enforcement applies when execution data is read.** n8n redacts data covered by the enforcement scope whenever anyone views an execution, including executions from workflows that don't have redaction enabled in their own settings.
 * **Workflow settings can't be weaker than the enforced scope.** The workflow settings UI locks the affected redaction toggles, and the [public API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api) rejects attempts to create or update a workflow with a redaction policy below the floor. Workflows can still opt into stricter redaction than the floor.
+* **Enforcement applies to everyone who opens a covered execution.** n8n hides execution data by default from workflow owners, instance owners and admins, and users with the `execution:reveal` scope too. The scope controls whether you can [reveal the data](#reveal-redacted-data), not what you see when you open the execution.
 * **New workflows start at the floor.** When you create a workflow while enforcement is active, its redaction policy defaults to the enforced scope. If you create a workflow through the public API without specifying a redaction policy, n8n sets it to the floor.
 * **Existing workflow settings stay as they are.** Enabling enforcement doesn't change the stored settings of existing workflows. Their execution data is still redacted at the enforced scope, and if you later disable enforcement, each workflow returns to its own settings.
 
@@ -130,7 +131,33 @@ When n8n redacts execution data, it also redacts error details to prevent sensit
 
 ## Reveal redacted data <a href="#reveal-redacted-data" id="reveal-redacted-data"></a>
 
-Users with the **Reveal execution data** (`execution:reveal`) scope can temporarily view redacted execution data for a specific execution. Instance owners and admins have this scope by default.
+Users with the **Reveal execution data** (`execution:reveal`) scope can temporarily view redacted execution data for a specific execution.
+
+### Who can reveal data <a href="#who-can-reveal-data" id="who-can-reveal-data"></a>
+
+To reveal redacted data, you need all of the following:
+
+* Access to the execution.
+* The `execution:reveal` scope, through a custom project role that includes the scope, or one of these built-in roles:
+
+  | Level    | Roles that include the scope               | Roles that don't                  |
+  | -------- | ------------------------------------------ | --------------------------------- |
+  | Instance | Owner, Admin                               | Member                            |
+  | Project  | Project Admin, Personal Project Owner      | Project Editor, Project Viewer    |
+
+  Instance owners and admins have the scope across the instance. Project admins and personal project owners have it for workflows their project owns. Creating a workflow doesn't grant the scope. For example, an instance member can reveal data in workflows in their own personal project, but not in a team project where they have the Editor role, even for a workflow they created.
+* Access to the credentials the workflow uses. Refer to [Credential restrictions](#credential-restrictions).
+
+If the effective redaction policy doesn't redact an execution, you don't need the scope to view it, but the credential checks still apply.
+
+### Credential restrictions <a href="#credential-restrictions" id="credential-restrictions"></a>
+
+n8n checks your current access to the workflow's credentials, separately from your role:
+
+* If you can't use one of the credentials, n8n redacts the execution and denies reveal, even when redaction is off for the workflow. n8n checks every credential on the workflow's enabled nodes, including nodes that didn't run, and credentials used by sub-workflows. A deleted credential counts as one you can't use.
+* Instance owners and admins don't bypass this check. n8n checks access through credential ownership or sharing, so a credential that sits only in another user's personal project can still block reveal.
+
+### Reveal steps <a href="#reveal-steps" id="reveal-steps"></a>
 
 To reveal data:
 
@@ -147,7 +174,7 @@ The execution data becomes visible for that execution in the current session.
 {% hint style="info" %}
 **Executions using dynamic credentials**
 
-n8n denies reveal requests for executions that used dynamic credentials, regardless of the user's permissions or the redaction policy in effect. This prevents exposing credentials that the execution resolved at runtime.
+For executions that used dynamic credentials, only the user the execution ran as can reveal the data. That user doesn't need the `execution:reveal` scope, but they still need access to the execution and must pass the credential checks. n8n denies reveal to everyone else, including instance owners and admins, and also when it can't identify the user the execution ran as. Redaction still applies by default to covered executions.
 {% endhint %}
 
 ## Audit logging <a href="#audit-logging" id="audit-logging"></a>
@@ -164,14 +191,14 @@ These events integrate with your existing log streaming destinations (syslog, we
 
 ## Permission scopes <a href="#permission-scopes" id="permission-scopes"></a>
 
-Execution data redaction introduces the following permission scopes that you can assign through [custom project roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles):
+Execution data redaction introduces the following permission scopes that you can assign through [custom project roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-project-roles):
 
 | Scope                       | Purpose                                                                                                                  |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | `workflow:enableRedaction`  | Allows turning redaction on in workflow settings. Displayed as **Enable data redaction** in the role configuration UI.   |
 | `workflow:disableRedaction` | Allows turning redaction off in workflow settings. Displayed as **Disable data redaction** in the role configuration UI. |
 
-By default, instance owners, admins, and project admins have the permissions to enable or disable redaction and to reveal redacted data. You can create custom roles to give more users, such as workflow builders, one or both scopes independently.
+By default, instance owners, admins, and project admins have the permissions to enable or disable redaction. Refer to [Who can reveal data](#who-can-reveal-data) for the roles that can reveal redacted data. You can create custom roles to give more users, such as workflow builders, one or both scopes independently.
 
 ## What redaction doesn't cover <a href="#what-redaction-doesnt-cover" id="what-redaction-doesnt-cover"></a>
 

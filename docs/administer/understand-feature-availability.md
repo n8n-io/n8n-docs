@@ -54,7 +54,7 @@ Plan or edition is your [commercial tier](https://n8n.io/pricing/):
 - For n8n Cloud: **Starter**, **Pro**, or **Enterprise**.
 - For self-hosted: **Community**, **Registered Community**, **Business**, or **Enterprise**.
 
-For example, [log streaming](observe-and-log/stream-logs-to-external-systems.md) is only available on Enterprise. The number of [shared projects](manage-users-and-access/set-permissions-and-roles-rbac/organize-work-in-projects.md) you can have differs according to your plan.
+For example, [log streaming](observe-and-log/stream-logs-to-external-systems.md) is only available on Enterprise. The number of [team projects](manage-users-and-access/organize-work-in-projects/README.md) you can have differs according to your plan.
 
 ### Plan limits in the docs
 
@@ -224,7 +224,7 @@ Publishing in the changelog or release notes doesn't guarantee a feature has rea
 
 * **Role or permissions**: even when your plan, platform, and version all include a feature, your instance owner or admin decides whether your role can see or use it.
 
-This is a limit your own admin sets, not n8n. See [Understand instance roles](manage-users-and-access/understand-instance-roles.md) and [Set permissions and roles (RBAC)](manage-users-and-access/set-permissions-and-roles-rbac/README.md) for how roles and permissions work.
+This is a limit your own admin sets, not n8n. See [Understand instance roles](manage-users-and-access/set-permissions-and-roles-rbac/understand-instance-roles.md) and [Set permissions and roles (RBAC)](manage-users-and-access/set-permissions-and-roles-rbac/README.md) for how roles and permissions work.
 
 ## Related resources
 

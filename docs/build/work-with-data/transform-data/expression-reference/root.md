@@ -297,6 +297,42 @@ Uses the workflow’s time zone (which can be changed in the workflow settings).
 
 **Source:**  Custom n8n functionality
 
+## **`numberList()`**
+
+**Description:** Returns an array of the numbers from <code>start</code> to <code>end</code>, in steps of 1. The array includes both numbers. If <code>start</code> is higher than <code>end</code>, the array counts down.
+
+The difference between `start` and `end` must be a whole number. If it isn't, or if a value is missing or isn't a number, `numberList()` doesn't cause an error. The expression returns <code>undefined</code>.
+
+**Syntax:** numberList(start, end)
+
+**Returns:** Array
+
+**Source:**  Custom n8n functionality
+
+**Parameters:**
+
+  * `start` (Number) - The first number in the array
+  * `end` (Number) - The last number in the array
+
+**Examples:**
+
+  ```javascript
+  numberList(1, 5) //=> [1, 2, 3, 4, 5]
+  ```
+
+  ```javascript
+  numberList(5, 1) //=> [5, 4, 3, 2, 1]
+  ```
+
+  ```javascript
+  numberList(1.5, 3.5) //=> [1.5, 2.5, 3.5]
+  ```
+
+  ```javascript
+  // No error when the difference isn't a whole number
+  numberList(1.5, 5.7) //=> undefined
+  ```
+
 ## **`$pageCount`** <a href="#dollarpagecount" id="dollarpagecount"></a>
 
 **Description:** The number of results pages the node has fetched. Only available in the ‘HTTP Request’ node.

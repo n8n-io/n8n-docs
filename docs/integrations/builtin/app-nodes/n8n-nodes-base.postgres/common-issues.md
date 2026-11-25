@@ -102,7 +102,19 @@ SELECT TO_CHAR(ts_col, 'YYYY-MM-DD"T"HH24:MI:SS.US') AS ts_col_as_text FROM tabl
 {% hint style="info" %}
 **The CrateDB, QuestDB, and TimescaleDB nodes**
 
-These three nodes share the Postgres date handling but keep the older timestamp reading. From node version 1.1 they return a `DATE` as `YYYY-MM-DD` and a `timestamp without time zone` as a UTC instant, as Postgres node versions 2.7 and 2.8 do. To get the stored value, cast the column at query time with `SELECT ts_col::text AS ts_col_as_text FROM table_with_ts_col`.
+These three nodes share the Postgres date handling. From node version 1.1 they return a `DATE` as `YYYY-MM-DD`.
+
+TimescaleDB returns a `timestamp without time zone` as the stored value from node version 1.3. On 1.1 and 1.2 it returns a UTC instant, as Postgres node versions 2.7 and 2.8 do.
+
+CrateDB and QuestDB keep the older reading on every version. Both engines send the value in UTC, but the node reads it in the time zone of the n8n host and then labels the result `Z`, so the instant is only correct when that host runs in UTC. QuestDB also sends microseconds, which the reading cuts to milliseconds.
+
+To get the stored value on QuestDB, or on TimescaleDB below 1.3, cast the column at query time with `SELECT ts_col::text AS ts_col_as_text FROM table_with_ts_col`. On QuestDB this keeps all six fractional digits.
+
+CrateDB needs a different query. It holds a timestamp as epoch milliseconds, and a cast to text gives you that number, such as `1773453566535`. Use `TO_CHAR` instead, which always formats in UTC:
+
+```sql
+SELECT TO_CHAR(ts_col, 'YYYY-MM-DD HH24:MI:SS.MS') AS ts_col_as_text FROM table_with_ts_col
+```
 {% endhint %}
 
 ### A DATE column before node 2.7

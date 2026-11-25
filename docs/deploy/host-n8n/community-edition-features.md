@@ -65,7 +65,7 @@ The Community edition includes almost the complete feature set of n8n. It doesn'
 * [External storage for binary data](configure-n8n/scaling/use-external-storage.md)
 * [Log streaming](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/stream-logs-to-external-systems) ([Logging](keep-n8n-running/set-up-logging.md) _is_ included)
 * [Multi-main mode](configure-n8n/scaling/enable-queue-mode.md#multi-main-setup) ([Queue mode](configure-n8n/scaling/enable-queue-mode.md) _is_ included)
-* [Projects](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/organize-work-in-projects)
+* [Team projects](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/organize-work-in-projects)
 * SSO ([SAML](configure-n8n/security/configure-sso.md), [OIDC](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/verify-user-identity/use-oidc), [LDAP](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/verify-user-identity/connect-ldap))
 * Sharing ([workflows](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/share-with-others), [credentials](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/share-credentials-securely)) (Only the instance owner and the user who creates them can access workflows and credentials)
 * [Version control using Git](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/use-source-control-and-environments)

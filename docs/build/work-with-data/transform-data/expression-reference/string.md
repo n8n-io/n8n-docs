@@ -158,20 +158,27 @@ In every other case, it returns <code>undefined</code>. A string that contains a
 
 ## _`String`_.**`extractUrlPath()`** <a href="#stringextracturlpath" id="stringextracturlpath"></a>
 
-**Description:** Returns the part of a URL after the domain, or <code>undefined</code> if no URL found. 
+**Description:** Returns the path of a URL, excluding the query string and the fragment. The URL must include a scheme, such as <code>https:</code>. Returns <code>undefined</code> if it can't read the string as a URL.
 
 If the string also contains other content, try using <code>extractUrl()</code> first.
 
+The path that <code>extractUrlPath()</code> returns follows these rules:
+
+* An <code>http</code> or <code>https</code> URL with no path returns <code>/</code>.
+* Paths resolve <code>.</code> and <code>..</code> segments: <code>/v1/../v2</code> becomes <code>/v2</code>.
+* Spaces and non-ASCII characters use <code>%XX</code> encoding. Existing encoded characters stay unchanged.
+* Host names with non-ASCII characters and <code>file:</code> URLs can give different results across [expression engines](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/expression-engine). This can cause differences between editor previews and workflow runs.
+
 **Syntax:** _`String`_.extractUrlPath()
 
-**Returns:** String
+**Returns:** String or <code>undefined</code>
 
 **Source:**  Custom n8n functionality
 
 **Examples:**
 
   ```javascript
-  "http://n8n.io/workflows".extractUrlPath() //=> '/workflows'
+  "https://n8n.io/workflows?sort=new#top".extractUrlPath() //=> '/workflows'
   ```
 
   ```javascript
@@ -986,6 +993,8 @@ The same as JavaScript’s <code>JSON.stringify()</code>.
 
 **Description:** Decodes a URL-encoded string. Replaces any character codes in the form of <code>%XX</code> with their corresponding characters.
 
+If the string isn't a valid URL-encoded string, `urlDecode()` doesn't cause an error. The expression returns <code>undefined</code>. This happens when two hexadecimal digits don't follow a <code>%</code>, or when the character codes don't form a valid UTF-8 character.
+
 **Syntax:** _`String`_.urlDecode(allChars?)
 
 **Returns:** String
@@ -1004,6 +1013,11 @@ The same as JavaScript’s <code>JSON.stringify()</code>.
 
   ```javascript
   "name%3DNathan%20Automat".urlDecode(true) //=> "name%3DNathan Automat"
+  ```
+
+  ```javascript
+  // No error for a string that isn't valid
+  "100%".urlDecode() //=> undefined
   ```
 
 ## _`String`_.**`urlEncode()`** <a href="#stringurlencode" id="stringurlencode"></a>

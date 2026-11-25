@@ -5,42 +5,32 @@ nodeTitle: Understand instance roles
 originalFilePath: user-management/account-types.md
 originalUrl: 'https://docs.n8n.io/user-management/account-types'
 url: >-
-  https://docs.n8n.io/administer/manage-users-and-access/understand-instance-roles
+  https://docs.n8n.io/administer/manage-users-and-access/set-permissions-and-roles-rbac/understand-instance-roles
 layout:
   description:
     visible: false
 ---
 
-# Instance roles <a href="#instance-roles" id="instance-roles"></a>
+# Understand instance roles <a href="#instance-roles" id="instance-roles"></a>
 
 Every user has one instance role. The instance role determines the user's permissions and access across the n8n instance.
 
-There are four built-in instance roles: Owner, Admin, Member, and Chat user. If these don't meet your needs, you can create [custom instance roles](set-permissions-and-roles-rbac/create-custom-instance-roles.md) with granular permissions.
+There are four built-in instance roles: Owner, Admin, Member, and Chat user. If these don't meet your needs, you can create [custom instance roles](create-custom-instance-roles.md) with granular permissions.
 
 {% hint style="info" %}
 **Feature availability**
 
-The **Admin** role is available on:
+The **Owner** and **Member** instance roles are available on:
+
+- **n8n Cloud:** All plans
+- **Self-hosted:** All editions
+
+The **Admin** and **Chat user** instance roles are available on:
 
 - **n8n Cloud:** Pro, Enterprise
-- **Self-hosted:** Enterprise
-{% endhint %}
-
-{% hint style="info" %}
-**Feature availability**
-
-The **Chat user** role is available on:
-
-- **n8n Cloud:** Pro, Enterprise
-- **Self-hosted:** Enterprise
+- **Self-hosted:** Business, Enterprise
 
 The Chat user role requires the Chat feature to be enabled.
-{% endhint %}
-
-{% hint style="info" %}
-**Instance roles and project roles**
-
-n8n has two levels of roles. Instance roles control what a user can do across the entire instance. Project roles (part of [RBAC](set-permissions-and-roles-rbac/README.md)) control what a user can do within a specific project, and a user can have different project roles in different projects.
 {% endhint %}
 
 {% hint style="info" %}
@@ -58,11 +48,26 @@ n8n recommends that owners create a second account with the **Member** role for 
 | Delete tags | ✅ | ✅ | ❌ | ❌ |
 | View and share all workflows | ✅ | ✅ | ❌ | ❌ |
 | View, edit, and share all credentials | ✅ | ✅ | ❌ | ❌ |
-| Set up and use [Source control](../use-source-control-and-environments/README.md) | ✅ | ✅ | ❌ | ❌ |
-| Create [projects](set-permissions-and-roles-rbac/organize-work-in-projects.md) | ✅ | ✅ | ❌ | ❌ |
+| Set up and use [Source control](../../use-source-control-and-environments/README.md) | ✅ | ✅ | ❌ | ❌ |
+| Create [projects](../organize-work-in-projects/README.md) | ✅ | ✅ | ❌ | ❌ |
 | View all projects | ✅ | ✅ | ❌ | ❌ |
 | Add and remove users | ✅ | ✅ | ❌ | ❌ |
 | Access the n8n Cloud console | ✅ | ❌ | ❌ | ❌ |
+
+## Assign an instance role <a href="#assign-an-instance-role" id="assign-an-instance-role"></a>
+
+Instance owners and instance admins can change a user's instance role.
+
+To assign an instance role:
+
+1. Go to **Settings** > **Users**.
+2. Find the user you want to update.
+3. Select the user's current role to open the role dropdown.
+4. Select the new role.
+
+You can't change your own role or the owner's role. While SAML or OIDC assigns instance roles, n8n blocks role changes in **Settings** > **Users**. Refer to [Verify user identity](../verify-user-identity/README.md).
+
+To assign a custom instance role, refer to [Assign a custom instance role to users](create-custom-instance-roles.md#assign-a-custom-instance-role-to-users).
 
 ## Chat user role
 The Chat user role is for people who only need to use n8n through Chat. Chat users can't build workflows or access other n8n features.
@@ -95,13 +100,13 @@ Changing the role of a user to Chat user has these effects:
 
 If the built-in roles don't match your access needs, you can create custom instance roles with granular permissions. Custom instance roles let you grant specific instance-level capabilities (such as managing users, tags, or API keys) without giving full Admin access.
 
-Refer to [Create custom instance roles](set-permissions-and-roles-rbac/create-custom-instance-roles.md) for instructions on creating and managing them.
+Refer to [Create custom instance roles](create-custom-instance-roles.md) for instructions on creating and managing them.
 
 ## Related resources
 
-* [Manage users and access](./)
-* [Set up for Cloud](set-up-for-cloud.md)
-* [Add and remove users](add-and-remove-users.md)
-* [Set permissions and roles (RBAC)](set-permissions-and-roles-rbac/README.md)
-* [Verify user identity](verify-user-identity/README.md)
-* [Follow best practices](follow-best-practices.md)
+* [Manage users and access](../)
+* [Set up user management](../manage-users/set-up-user-management.md)
+* [Add and remove users](../manage-users/add-and-remove-users.md)
+* [Set permissions and roles (RBAC)](README.md)
+* [Verify user identity](../verify-user-identity/README.md)
+* [Follow best practices](../follow-best-practices.md)

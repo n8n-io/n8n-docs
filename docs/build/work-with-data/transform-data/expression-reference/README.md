@@ -749,6 +749,10 @@ Always uses the current node’s first input connector if there is more than one
 
 Uses the workflow’s time zone (which can be changed in the workflow settings).
 
+* [**`numberList(start, end)`**](root.md#numberlist)
+
+    Returns an array of the numbers from <code>start</code> to <code>end</code>, in steps of 1
+
 * [**`$pageCount`**](root.md#dollarpagecount)
 
     The number of results pages the node has fetched. Only available in the ‘HTTP Request’ node.
@@ -824,7 +828,7 @@ If the string also contains other content, try using <code>extractEmail()</code>
 
 * [_`String`_.**`extractUrlPath()`**](string.md#stringextracturlpath)
 
-    Returns the part of a URL after the domain, or <code>undefined</code> if no URL found. 
+    Returns the path of a URL, excluding the query string and the fragment. Returns <code>undefined</code> if it can't read the string as a URL.
 
 If the string also contains other content, try using <code>extractUrl()</code> first.
 

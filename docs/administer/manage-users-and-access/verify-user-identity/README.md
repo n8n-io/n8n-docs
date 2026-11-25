@@ -39,8 +39,8 @@ Instance owners and admins can't edit another SSO user's name or email in n8n. T
 ## Related resources
 
 * [Manage users and access](../)
-* [Set up for Cloud](../set-up-for-cloud.md)
-* [Add and remove users](../add-and-remove-users.md)
-* [Understand instance roles](../understand-instance-roles.md)
+* [Set up user management](../manage-users/set-up-user-management.md)
+* [Add and remove users](../manage-users/add-and-remove-users.md)
+* [Understand instance roles](../set-permissions-and-roles-rbac/understand-instance-roles.md)
 * [Set permissions and roles (RBAC)](../set-permissions-and-roles-rbac/README.md)
 * [Follow best practices](../follow-best-practices.md)

@@ -37,9 +37,9 @@ More information on these variables is available in [Environment variables](http
 ## Related resources
 
 * [Manage users and access](./)
-* [Set up for Cloud](set-up-for-cloud.md)
-* [Add and remove users](add-and-remove-users.md)
-* [Understand instance roles](understand-instance-roles.md)
+* [Set up user management](manage-users/set-up-user-management.md)
+* [Add and remove users](manage-users/add-and-remove-users.md)
+* [Understand instance roles](set-permissions-and-roles-rbac/understand-instance-roles.md)
 * [Set permissions and roles (RBAC)](set-permissions-and-roles-rbac/README.md)
 * [Verify user identity](verify-user-identity/README.md)
 

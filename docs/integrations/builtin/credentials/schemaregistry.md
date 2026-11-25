@@ -41,7 +41,7 @@ To configure this credential, you'll need the URL of your Schema Registry and, i
     - **Basic Auth**: use this for a Schema Registry that requires HTTP Basic Auth, such as Confluent Cloud. Then add:
         1. The **Username**. For Confluent Cloud, this is the Schema Registry API key.
         2. The **Password**. For Confluent Cloud, this is the Schema Registry API secret.
-    - **OAuth2 Client Credentials**: use this for a Schema Registry behind an identity provider. Then add:
+    - **OAuth2 Client Credentials** (available from n8n 2.51.0): use this for a Schema Registry behind an identity provider. Then add:
         1. The **Token URL** of the token endpoint that issues the bearer token.
         2. The **Client ID** and **Client Secret** of the application you registered with that provider.
         3. The **Client Authentication** method. **Authorization Header** sends the client ID and secret as HTTP Basic, which Okta and PingFederate expect by default. Choose **Request Body** if your provider requires the pair as form fields instead.
@@ -54,6 +54,6 @@ The credential test doesn't use the **CA Certificate**, **Client Certificate**, 
 
 The registry URL must use `https` when you set the **CA Certificate**, the **Client Certificate**, or the **Client Private Key**. n8n refuses to connect to an `http` URL while one of them is set.
 
-n8n gets a token when it first needs one and renews it before it expires, so a Kafka Trigger that stays active keeps working. The token URL is a separate host from the registry, so any domain restrictions on the credential have to allow both.
+n8n gets a token when it first needs one and renews it before it expires, so a Kafka Trigger that stays active keeps working. The token URL is usually on a different host from the registry. If you set **Allowed HTTP Request Domains** to **Specific Domains** on this credential, add the token URL's host to **Allowed Domains**.
 
 To use the credential, open your Kafka or Kafka Trigger node, enable **Use Schema Registry**, and select this credential.

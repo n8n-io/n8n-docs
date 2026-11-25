@@ -67,7 +67,7 @@ Check:
 
 ### Certificate error when you connect to a self-hosted Git host
 
-If the connection fails with a certificate verification error, Git doesn't trust the certificate of your Git host. Set `GIT_SSL_CAINFO` or `GIT_SSL_CAPATH` as described in [Self-hosted n8n](#self-hosted-n8n). Don't turn off certificate verification, for example with `GIT_SSL_NO_VERIFY`.
+If the connection fails with a certificate verification error, the Git operation or the GitLab API call doesn't trust the certificate of your Git host. For Git operations, set `GIT_SSL_CAINFO` or `GIT_SSL_CAPATH`. For GitLab API calls, configure custom certificate authorities. See [Self-hosted n8n](#self-hosted-n8n). Don't turn off certificate verification, for example with `GIT_SSL_NO_VERIFY`.
 
 ## In this section
 

@@ -183,7 +183,7 @@ If you need different credentials on different n8n environments, use [external s
 
 ### Cannot push onto read-only branch
 
-n8n shows this error when the instance is set to a read-only branch. Pushing isn't allowed from a read-only instance, such as a production instance that only pulls. Push from your development instance instead, or change the branch settings in **Settings** > **Environments**.
+n8n shows this error when the instance is set to a read-only branch. Pushing isn't allowed from a read-only instance, such as a production instance that only pulls. Push from your development instance instead, or change the **Protected instance** setting in **Settings** > **Environments**.
 
 ## Related resources
 

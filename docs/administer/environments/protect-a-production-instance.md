@@ -23,7 +23,7 @@ Environments are available on:
 Environments are available from n8n 2.47.0. This page covers Environments, not [Environments (Classic)](../use-source-control-and-environments/README.md), the current default source control feature.
 {% endhint %}
 
-**Protected instance** makes an instance read-only in the n8n UI, so changes only arrive by apply (or pull, in Environments (Classic)). Use it on instances that run live workflows.
+**Protected instance** blocks most workflow and configuration changes in the n8n UI, while allowing the actions listed below. Use it on instances that run live workflows.
 
 ## What Protected instance blocks
 

@@ -184,7 +184,7 @@ The node checks **Column** before each page and stops with an error that names t
 - For a text column, the `NLS_SORT` setting of the database session is `BINARY`. With another setting, use a `NUMBER` column.
 - It's in **Output Columns**, if you set that option.
 
-For a `NUMBER` column with values above 9007199254740991, turn on **Output Numbers As String** in the options.
+For a `NUMBER` column with values above 9007199254740991, or with a fraction and more than 15 digits, turn on **Output Numbers As String** in the options. Without it, n8n rounds those values and a page can repeat or skip rows.
 
 **Start After** sets the sort order of the pages:
 

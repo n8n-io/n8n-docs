@@ -44,7 +44,7 @@ Select the method to use for the request:
 - POST
 - PUT
 
-To use WebDAV methods, turn on the [Enable WebDAV Methods](#enable-webdav-methods) option. This option adds these methods to **Method**:
+To use WebDAV methods, turn on the [**Enable WebDAV Methods**](#enable-webdav-methods) option. This option adds these methods to **Method**:
 
 - COPY
 - MKCOL
@@ -199,7 +199,7 @@ Control how to batch large numbers of input items:
 * **Items per Batch**: Enter the number of input items to include in each batch.
 * **Batch Interval**: Enter the time to wait between each batch of requests in milliseconds. Enter 0 for no batch interval.
 
-### Enable WebDAV Methods <a href="#enable-webdav-methods" id="enable-webdav-methods"></a>
+### Enable WebDAV Methods
 
 Use this option to send requests to a WebDAV server. This option is off by default.
 

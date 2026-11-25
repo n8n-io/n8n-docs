@@ -44,7 +44,7 @@ Select the method to use for the request:
 - POST
 - PUT
 
-To use WebDAV methods, turn on the [**Enable WebDAV Methods**](#enable-webdav-methods) option. This option adds these methods to **Method**:
+To use WebDAV methods, select **Add Option**, then turn on [**Enable WebDAV Methods**](#enable-webdav-methods). It adds these methods to **Method**:
 
 - COPY
 - MKCOL
@@ -201,9 +201,9 @@ Control how to batch large numbers of input items:
 
 ### Enable WebDAV methods
 
-Use the **Enable WebDAV Methods** option to send requests to a WebDAV server. This option is off by default.
+Use the **Enable WebDAV Methods** option to add the WebDAV request methods to **Method**. This option is off by default.
 
-Turn this option on to add PROPFIND, MKCOL, MOVE, COPY, REPORT, and SEARCH to **Method**. The SEARCH method is available from n8n 2.50.0 and n8n 3.4.0.
+Turn this option on to add the WebDAV methods to **Method**.
 
 ### Ignore SSL Issues <a href="#ignore-ssl-issues" id="ignore-ssl-issues"></a>
 

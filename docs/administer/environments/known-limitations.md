@@ -11,9 +11,16 @@ layout:
 Environments are in Preview, and n8n is actively improving and extending them. Many of these limitations are temporary. Each entry names a workaround where one exists.
 
 {% hint style="info" %}
-**Preview status**
+**Feature availability**
 
 Environments are in Preview and may change in future releases. Try them on test instances before you set them up for your production instances.
+
+Environments are available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Enterprise
+
+Environments are available from n8n 2.47.0. This page covers Environments, not [Environments (Classic)](../use-source-control-and-environments/README.md), the current default source control feature.
 {% endhint %}
 
 ## Enterprise readiness

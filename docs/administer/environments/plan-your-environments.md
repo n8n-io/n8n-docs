@@ -11,9 +11,16 @@ layout:
 Decide which instances promote changes, which instances apply them, and which repository and branch stand for each environment before you set anything up.
 
 {% hint style="info" %}
-**Preview status**
+**Feature availability**
 
 Environments are in Preview and may change in future releases. Try them on test instances before you set them up for your production instances.
+
+Environments are available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Enterprise
+
+Environments are available from n8n 2.47.0. This page covers Environments, not [Environments (Classic)](../use-source-control-and-environments/README.md), the current default source control feature.
 {% endhint %}
 
 ## How instances and environments relate

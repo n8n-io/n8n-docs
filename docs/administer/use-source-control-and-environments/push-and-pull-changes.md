@@ -14,6 +14,23 @@ layout:
 
 # Push and pull <a href="#push-and-pull" id="push-and-pull"></a>
 
+{% hint style="info" %}
+**Feature availability**
+
+Environments (Classic) are available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Business, Enterprise
+
+Environments (Classic) are available from n8n 1.1.0.
+{% endhint %}
+
+{% hint style="info" %}
+**New version available**
+
+These pages cover Environments (Classic). For the new version, in Preview and available from n8n 2.47.0 on Enterprise plans, see [Environments](../environments/README.md). To compare the versions and upgrade an instance, see [Upgrade from Environments (Classic)](../environments/upgrade-from-environments-classic.md).
+{% endhint %}
+
 If your n8n instance connects to a Git repository, you need to keep your work in sync with Git.
 
 This document assumes some familiarity with Git concepts and terminology. Refer to [Git and n8n](use-git-in-n8n.md) for an introduction to how n8n works with Git.
@@ -62,6 +79,8 @@ When pulling, you can choose to automatically publish workflows using the **Auto
 * **If workflow already published**: Only attempt to publish workflows that are already published on this instance. New workflows aren't published.
 * **On**: Attempt to publish all pulled workflows, including new ones.
 
+The pull modal always starts with **Auto publish** set to **Off**. n8n doesn't remember your choice or let you set a different default, so choose the mode each time you pull. To pull with the same mode every time, call the [pull endpoint of the API](use-environments-via-api.md) and set `autoPublish`.
+
 n8n never auto publishes archived workflows, regardless of the auto publish setting.
 
 After a pull with auto publish enabled, n8n displays a results modal showing which workflows were successfully published and which failed. Publishing can fail if a workflow has validation errors or missing credentials.
@@ -70,7 +89,9 @@ Auto publish is also available through the [API](https://app.gitbook.com/s/r7wKI
 
 ### Pulling may cause brief service interruption <a href="#pulling-may-cause-brief-service-interruption" id="pulling-may-cause-brief-service-interruption"></a>
 
-If you pull changes to a published workflow, n8n unpublishes the workflow while pulling, then republishes it. This may result in a few seconds of downtime for the workflow.
+If **Auto publish** publishes a workflow that's already published, n8n unpublishes it while pulling, then republishes it with the pulled changes. This may result in a few seconds of downtime for the workflow.
+
+With **Auto publish** set to **Off**, n8n doesn't do this. A published workflow keeps running its current published version, and the pulled changes don't go live until you publish them. The exception is a workflow that's archived in Git: n8n unpublishes it so it stops running.
 
 ## Send your work to Git <a href="#send-your-work-to-git" id="send-your-work-to-git"></a>
 
@@ -88,7 +109,7 @@ n8n commits the following to Git:
 
 * Workflows, including their tags and the email address of the workflow owner. You can choose which workflows to push.
 * Credential stubs - ID, name and type. Any other fields are included only if they are [expressions](https://docs.n8n.io/data/expressions/). You can choose which credentials to push.
-* Variable stubs (ID and name)
+* Variable stubs: ID, name, and type. n8n never pushes variable values. After you pull, set the values on the target instance.
 * Data table schemas (table name and column definitions, not row data). You can choose which data tables to push.
 * Projects
 * Folders
@@ -157,6 +178,12 @@ If a pulled data table has columns removed compared to your local version, n8n d
 
 If you need different credentials on different n8n environments, use [external secrets](../manage-credentials/use-external-secret-stores.md).
 {% endhint %}
+
+## Troubleshooting
+
+### Cannot push onto read-only branch
+
+n8n shows this error when the instance is set to a read-only branch. Pushing isn't allowed from a read-only instance, such as a production instance that only pulls. Push from your development instance instead, or change the branch settings in **Settings** > **Environments**.
 
 ## Related resources
 

@@ -11,9 +11,16 @@ layout:
 Promote sends workflows and their dependencies from your instance to the environment you promote to. You can promote selected workflows from one project, or every project on the instance.
 
 {% hint style="info" %}
-**Preview status**
+**Feature availability**
 
 Environments are in Preview and may change in future releases. Try them on test instances before you set them up for your production instances.
+
+Environments are available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Enterprise
+
+Environments are available from n8n 2.47.0. This page covers Environments, not [Environments (Classic)](../use-source-control-and-environments/README.md), the current default source control feature.
 {% endhint %}
 
 Before you start, add the environment this instance promotes changes to. See [Plan your environments](plan-your-environments.md).

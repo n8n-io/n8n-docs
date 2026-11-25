@@ -7,6 +7,12 @@ layout:
 
 # Use environments programmatically with the public API
 
+{% hint style="info" %}
+**New version available**
+
+These pages cover Environments (Classic). For the new version, in Preview and available from n8n 2.47.0 on Enterprise plans, see [Environments](../environments/README.md). To compare the versions and upgrade an instance, see [Upgrade from Environments (Classic)](../environments/upgrade-from-environments-classic.md).
+{% endhint %}
+
 You can manage n8n environments from scripts and pipelines using the public API, without opening the n8n UI. This lets you automate promotion between instances, for example moving work from a development instance to production on a schedule or as part of a CI/CD pipeline.
 
 This page explains how the source control API endpoints work together. It assumes you've already connected your instances to Git and understand how push and pull behave in the UI. For that background, read [Push and pull](push-and-pull-changes.md) and [Copy work between environments](move-work-between-environments.md).
@@ -18,7 +24,12 @@ The Source Control `status` and `push` endpoints are available from n8n version 
 * `GET /api/v1/source-control/status`
 * `POST /api/v1/source-control/push`
 
-Environments is an Enterprise feature.
+Environments (Classic) are available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Business, Enterprise
+
+Environments (Classic) are available from n8n 1.1.0.
 {% endhint %}
 
 ## The endpoints
@@ -46,6 +57,8 @@ Every request needs an API key sent in the `X-N8N-API-KEY` header. On Enterprise
 | `sourceControl:read` | Read the status of pending changes. |
 
 Scoping keys this way is how you enforce direction. A production instance that should only ever receive changes gets a key with `sourceControl:pull`, so it can't push. Add `sourceControl:read` too if you also want that key to preview incoming changes with `status` before pulling them.
+
+A pull through the API runs as the user who owns the API key. Ownership rules for the pull, such as who owns workflows whose original owner isn't on the instance, apply to that user as in [Workflow and credential owner may change on pull](push-and-pull-changes.md#workflow-and-credential-owner-may-change-on-pull). Create the key from a dedicated instance owner or instance admin account rather than a personal one, so ownership doesn't depend on one person.
 
 ## Check the status, then act
 

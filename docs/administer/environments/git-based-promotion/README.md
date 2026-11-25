@@ -11,9 +11,16 @@ layout:
 With Git-based promotion, changes travel between n8n instances through a Git repository. Each environment is a repository and branch.
 
 {% hint style="info" %}
-**Preview status**
+**Feature availability**
 
 Environments are in Preview and may change in future releases. Try them on test instances before you set them up for your production instances.
+
+Environments are available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Enterprise
+
+Environments are available from n8n 2.47.0. This page covers Environments, not [Environments (Classic)](../../use-source-control-and-environments/README.md), the current default source control feature.
 {% endhint %}
 
 ## What n8n writes to the repository
@@ -57,6 +64,10 @@ Check:
 - For SSH, the deploy key has write access.
 - The branch exists on the Git host.
 - The repository URL has the right format for the authentication type. See [Generic Git](generic-git.md).
+
+### Certificate error when you connect to a self-hosted Git host
+
+If the connection fails with a certificate verification error, Git doesn't trust the certificate of your Git host. Set `GIT_SSL_CAINFO` or `GIT_SSL_CAPATH` as described in [Self-hosted n8n](#self-hosted-n8n). Don't turn off certificate verification, for example with `GIT_SSL_NO_VERIFY`.
 
 ## In this section
 

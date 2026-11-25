@@ -13,9 +13,16 @@ Bring your work from a source instance, such as development, to a target instanc
 If your instances use Environments (Classic), start with [Migrate from Environments (Classic)](upgrade-from-environments-classic.md#migrate-from-environments-classic).
 
 {% hint style="info" %}
-**Preview status**
+**Feature availability**
 
 Environments are in Preview and may change in future releases. Try them on test instances before you set them up for your production instances.
+
+Environments are available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Enterprise
+
+Environments are available from n8n 2.47.0. This page covers Environments, not [Environments (Classic)](../use-source-control-and-environments/README.md), the current default source control feature.
 {% endhint %}
 
 ## Promote and apply

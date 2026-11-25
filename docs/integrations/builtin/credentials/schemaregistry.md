@@ -46,6 +46,6 @@ To configure this credential, you'll need the URL of your Schema Registry and, i
 
 The credential test doesn't use the **CA Certificate**, **Client Certificate**, or **Client Private Key** fields. A registry that needs any of them fails the test, even when the credential is correct. The error usually names a certificate or a TLS handshake. A registry that requires a client certificate can also close the connection. Every other error, such as a wrong URL or a wrong password, is a real failure. To confirm the credential works, run a Kafka node that uses it.
 
-The **CA Certificate**, **Client Certificate**, and **Client Private Key** fields apply to an `https` registry URL only. n8n refuses them against an `http` one.
+The registry URL must use `https` when you set the **CA Certificate**, the **Client Certificate**, or the **Client Private Key**. n8n refuses to connect to an `http` URL while one of them is set.
 
 To use the credential, open your Kafka or Kafka Trigger node, enable **Use Schema Registry**, and select this credential.

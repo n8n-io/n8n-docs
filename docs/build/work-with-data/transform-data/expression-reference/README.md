@@ -749,6 +749,10 @@ Always uses the current node’s first input connector if there is more than one
 
 Uses the workflow’s time zone (which can be changed in the workflow settings).
 
+* [**`numberList(start, end)`**](root.md#numberlist)
+
+    Returns an array of the numbers from <code>start</code> to <code>end</code>, in steps of 1
+
 * [**`$pageCount`**](root.md#dollarpagecount)
 
     The number of results pages the node has fetched. Only available in the ‘HTTP Request’ node.
@@ -866,7 +870,7 @@ If the string also contains other content, try using <code>extractUrl()</code> f
 
 * [_`String`_.**`length`**](string.md#stringlength)
 
-    The number of characters in the string
+    The number of characters in the string. Most emoji count as two characters.
 
 * [_`String`_.**`match(regexp)`**](string.md#stringmatch)
 

@@ -134,6 +134,7 @@ Use this checklist for production deployments. Skip items that don't apply to yo
 * [One-line setup](one-line-setup.md)
 * [Install using Docker Compose](install-using-docker-compose.md)
 * [Install with npm](install-with-npm.md)
+* [Install with Helm](install-with-helm.md)
 * [Use a cloud provider](use-a-cloud-provider/README.md)
 * [Choose n8n's database](../configure-n8n/choose-n8ns-database.md)
 * [Enable queue mode](../configure-n8n/scaling/enable-queue-mode.md)

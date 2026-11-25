@@ -551,7 +551,7 @@ The opposite of <code>split()</code>.
 
 ## _`Array`_.**`pluck()`** <a href="#arraypluck" id="arraypluck"></a>
 
-**Description:** Returns an array containing the values of the given field(s) in each Object of the array. Ignores any array elements that aren’t Objects or don’t have a key matching the field name(s) provided.
+**Description:** Returns an array containing the values of the given field(s) in each Object of the array. Ignores any array elements that aren’t Objects or don’t have a key matching the field name(s) provided. If you pass more than one field name, the values for each Object follow the order of its keys, not the order of the field names.
 
 **Syntax:** _`Array`_.pluck(fieldName1?, fieldName2?, …)
 
@@ -574,6 +574,12 @@ The opposite of <code>split()</code>.
   ```javascript
   // arr = [{'name':'Nathan','age':42},{'name':'Jan','city':'Berlin'}]
   arr.pluck('age') //=> [42]
+  ```
+
+  ```javascript
+  // The values follow the key order of each Object
+  // arr = [{'age':42,'name':'Nathan'},{'name':'Jan','age':35}]
+  arr.pluck('name', 'age') //=> [[42, "Nathan"], ["Jan", 35]]
   ```
 
 ## _`Array`_.**`randomItem()`** <a href="#arrayrandomitem" id="arrayrandomitem"></a>

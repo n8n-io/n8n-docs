@@ -427,7 +427,11 @@ A tab or line break before or after the address doesn't change the result.
 
 ## _`String`_.**`length`** <a href="#stringlength" id="stringlength"></a>
 
-**Description:** The number of characters in the string
+**Description:** The number of characters in the string. Most emoji count as two characters.
+
+Technically, `length` counts UTF-16 code units, like the standard JavaScript `length`. Most emoji use two code units. `length()` returns the same number.
+
+To count each emoji as one character, use `[...text].length`. Some emoji, such as flags, combine more than one emoji. They still count as more than one.
 
 **Syntax:** _`String`_.length
 
@@ -439,6 +443,18 @@ A tab or line break before or after the address doesn't change the result.
 
   ```javascript
   "hello".length //=> 5
+  ```
+
+  ```javascript
+  "Hi 😀".length //=> 5
+  ```
+
+  ```javascript
+  [..."Hi 😀"].length //=> 4
+  ```
+
+  ```javascript
+  [..."🇫🇷"].length //=> 2
   ```
 
 ## _`String`_.**`match()`** <a href="#stringmatch" id="stringmatch"></a>
@@ -970,6 +986,8 @@ The same as JavaScript’s <code>JSON.stringify()</code>.
 
 **Description:** Decodes a URL-encoded string. Replaces any character codes in the form of <code>%XX</code> with their corresponding characters.
 
+If the string isn't a valid URL-encoded string, `urlDecode()` doesn't cause an error. The expression returns <code>undefined</code>. This happens when two hexadecimal digits don't follow a <code>%</code>, or when the character codes don't form a valid UTF-8 character.
+
 **Syntax:** _`String`_.urlDecode(allChars?)
 
 **Returns:** String
@@ -988,6 +1006,11 @@ The same as JavaScript’s <code>JSON.stringify()</code>.
 
   ```javascript
   "name%3DNathan%20Automat".urlDecode(true) //=> "name%3DNathan Automat"
+  ```
+
+  ```javascript
+  // No error for a string that isn't valid
+  "100%".urlDecode() //=> undefined
   ```
 
 ## _`String`_.**`urlEncode()`** <a href="#stringurlencode" id="stringurlencode"></a>

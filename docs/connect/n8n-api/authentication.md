@@ -76,7 +76,7 @@ On versions before 2.14.0, non-Enterprise API keys have full access to all the a
 {% hint style="info" %}
 **API key scopes vs. project role scopes**
 
-API key scopes control what an API key can do at the instance level. They differ from the **project role scopes** used to define custom roles inside a project. For project role scopes, refer to [Custom project roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles).
+API key scopes control what an API key can do at the instance level. They differ from the **project role scopes** used to define custom roles inside a project. For project role scopes, refer to [Custom project roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-project-roles).
 {% endhint %}
 
 The following tables list the scopes available when you create a scoped API key, grouped by resource.

@@ -1524,10 +1524,13 @@ Read an agent draft, its skills, tasks, custom tools, runnable state, and `confi
 
 #### Parameters <a href="#parameters" id="parameters"></a>
 
-| Name        | Type     | Required | Description                                                                                                                                                      |
-| ----------- | -------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `agentId`   | `string` | Yes      | The ID of the agent to retrieve                                                                                                                                  |
-| `versionId` | `string` | No       | Read a published version snapshot instead of the draft, for example the agent's `activeVersionId`. Snapshots are read-only, so the response has no `configHash`. |
+| Name              | Type     | Required | Description                                                                                                                                                                                                                                      |
+| ----------------- | -------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `agentId`         | `string` | Yes      | The ID of the agent to retrieve                                                                                                                                                                                                                  |
+| `versionId`       | `string` | No       | Read a published version snapshot instead of the draft, for example the agent's `activeVersionId`. Snapshots are read-only, so the response has no `configHash`. From n8n 2.51.0, with `skillId`, n8n reads the skill from this version instead. |
+| `skillId`         | `string` | No       | Read bounded reference text from one skill attached to the agent, or to the version in `versionId`, instead of the full agent snapshot. `skillId` is available from n8n 2.51.0.                                                                  |
+| `referencePath`   | `string` | No       | With `skillId`, the path of the skill file to read. `referencePath` is available from n8n 2.51.0.                                                                                                                                               |
+| `referenceOffset` | `number` | No       | With `skillId`, the offset to read the reference text from, to read the next part of a long file. `referenceOffset` is available from n8n 2.51.0.                                                                                               |
 
 #### Output <a href="#output" id="output"></a>
 
@@ -1548,7 +1551,7 @@ When `versionId` is omitted, the response describes the current draft:
 | `configHash`            | `string`         | Hash of the full persisted configuration. Pass this as `baseConfigHash` to `mutate_agent`.                                                         |
 | `isRunnable`            | `boolean`        | Whether the agent has everything it needs to run                                                                                                   |
 | `missing`               | `string[]`       | Config paths still needed before the agent is runnable                                                                                             |
-| `skills`                | `object`         | Map of skill ID to skill body (`name`, `description`, `instructions`, and optionally `allowedTools`, `references`)                                 |
+| `skills`                | `object`         | Map of skill ID to skill body (`name`, `description`, `instructions`, and optionally `allowedTools`, `references`). From n8n 2.51.0, each skill lists its files by path and size, without content. Pass `skillId` to read the text. |
 | `skillHashes`           | `object`         | Map of skill ID to a hash of the skill body. Pass a skill's hash as `baseSkillHash` to `skill.upsert` in `mutate_agent`.                           |
 | `outdatedSkillIds`      | `string[]`       | IDs of the skills that the agent pins to a saved version that has a newer version. Available from n8n 2.46.0.                                      |
 | `tasks`                 | `array`          | Scheduled tasks, each with `id`, `name`, `objective`, `cronExpression`, and `enabled`                                                              |
@@ -1566,14 +1569,31 @@ When `versionId` is provided, the response describes that published snapshot ins
 | `version.createdAt` | `string`  | ISO timestamp when this version was published                                           |
 | `version.isActive`  | `boolean` | Whether this version is the currently published one                                     |
 | `config`            | `object`  | The editable agent configuration at that version                                        |
-| `skills`            | `object`  | Skills at that version                                                                  |
+| `skills`            | `object`  | Skills at that version. From n8n 2.51.0, each skill lists its files by path and size, without content. |
 | `tasks`             | `array`   | Tasks at that version, each with `id`, `name`, `objective`, `cronExpression`, `enabled` |
 | `customTools`       | `array`   | Custom tools at that version                                                            |
+
+When `skillId` is provided, the response describes one attached skill instead:
+
+| Field       | Type      | Description                                                                                                   |
+| ----------- | --------- | ------------------------------------------------------------------------------------------------------------- |
+| `ok`        | `boolean` | `true`. `ok` is available from n8n 2.51.0.                                                                    |
+| `agentId`   | `string`  | The agent ID. `agentId` is available from n8n 2.51.0.                                                         |
+| `versionId` | `string`  | The version n8n read the skill from. Present only when you pass `versionId`. `versionId` is available from n8n 2.51.0. |
+| `skillId`   | `string`  | The skill ID. `skillId` is available from n8n 2.51.0.                                                         |
+| `skillHash` | `string`  | Hash of the skill body. Present only when you read the draft. `skillHash` is available from n8n 2.51.0.       |
+
+The response also holds the skill and bounded text of its files, in the same shape as `get_skill`.
 
 #### Notes <a href="#notes" id="notes"></a>
 
 * A version snapshot response has no `configHash` and can't be used as a `mutate_agent` baseline; mutations only ever apply to the draft.
 * Use `list_agent_versions` to find a `versionId` to inspect.
+* From n8n 2.51.0, `skills` lists the files of each skill by path and size, without content. To read the text of a file of an attached skill, pass `skillId`, with optional `referencePath`, `referenceOffset`, and `versionId` for a published version.
+* Reading a skill with `skillId` uses the `agent:read` scope on the agent's project, so an MCP client with access to the agent can read the files of its attached skills.
+* If you pass `referencePath` or `referenceOffset` without `skillId`, the tool returns the error `Pass skillId with referencePath or referenceOffset.`
+* If the skill isn't attached to the version in `versionId`, the tool returns the error `Skill "<skillId>" is not attached to version "<versionId>".`
+* If the skill has no file at `referencePath`, the tool returns the error `Skill reference not found: <path>`.
 
 ***
 
@@ -1723,6 +1743,7 @@ On a stale configuration:
 * Fetch [get\_agent\_builder\_reference](mcp-server-tools-reference.md#getagentbuilderreference) for the full configuration schema and worked examples before calling `config.replace` or `config.patch`.
 * From n8n 2.46.0, agents keep their skills in the [skills hub](mcp-server-tools-reference.md#skills). Agents can share a skill, so a new version from `skill.upsert` applies to every agent that uses the latest version of that skill. In earlier versions, `skill.upsert` with a `skillId` replaces the skill body, and `skill.delete` deletes the skill.
 * A skill ref with `versionId` in the agent config pins that saved version of the skill. `get_agent` lists pinned skills that have a newer version in `outdatedSkillIds`. To use the latest version, remove `versionId` from the ref with `config.patch`. Don't delete and add the skill again.
+* From n8n 2.51.0, when `skill.upsert` passes `references`, they replace the text files of the skill, so pass every text file that stays. A binary file that you don't name stays in the skill. Read the text of the current files with `get_agent` and `skillId` first.
 
 ***
 
@@ -2236,13 +2257,15 @@ Search the skills the current user can access.
 
 ### get\_skill
 
-Read a skill with its instructions, references, `skillHash`, and the agents that use it.
+Read a skill with its instructions, reference paths, bounded text content, `skillHash`, and the agents that use it.
 
 #### Parameters
 
-| Name      | Type     | Required | Description                                  |
-| --------- | -------- | -------- | -------------------------------------------- |
-| `skillId` | `string` | Yes      | The skill ID, from `search_n8n_skills`       |
+| Name              | Type     | Required | Description                                                                                                                          |
+| ----------------- | -------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `skillId`         | `string` | Yes      | The skill ID, from `search_n8n_skills`                                                                                               |
+| `referencePath`   | `string` | No       | The path of a skill file to read. Use it for a file whose text the response omits. `referencePath` is available from n8n 2.51.0.    |
+| `referenceOffset` | `number` | No       | The offset to read the reference text from, to read the next part of a long file. `referenceOffset` is available from n8n 2.51.0.   |
 
 #### Output
 
@@ -2250,12 +2273,14 @@ The response has every `skills[]` field from `search_n8n_skills`, without the `s
 
 | Field                | Type      | Description                                                                                                         |
 | -------------------- | --------- | ------------------------------------------------------------------------------------------------------------------- |
-| `skill`              | `object`  | The body of the latest version: `name`, `description`, `instructions`, and optionally `references`                  |
+| `skill`              | `object`  | The body of the latest version: `name`, `description`, `instructions`, and optionally `references`. From n8n 2.51.0, `references` lists the file paths with bounded text content, and a binary file shows only metadata. |
 | `skillHash`          | `string`  | Hash of the latest version. Pass it as `baseSkillHash` to `update_skill`.                                           |
 | `usedBy`             | `object`  | The agents that use the skill, limited to the agents you can read                                                   |
 | `usedBy.drafts`      | `array`   | Agents whose draft uses the skill, each with `agentId`, `agentName`, `projectId`, `version`, and `pinned`           |
 | `usedBy.pins`        | `array`   | Agents whose published version pins the skill, each with `agentId`, `agentName`, `projectId`, and `version`         |
 | `usedBy.hiddenAgents`| `number`  | Number of agents that use the skill in projects you can't read                                                      |
+
+From n8n 2.51.0, if `referencePath` and `referenceOffset` don't form a valid read, the response has `ok: false`, `skillId`, and the reason in `error`.
 
 ***
 
@@ -2303,7 +2328,7 @@ Update a skill. Pass only the fields to change. A change to the content saves th
 | `name`          | `string`                  | No       | The new name                                                                                                 |
 | `description`   | `string`                  | No       | The new description                                                                                          |
 | `instructions`  | `string`                  | No       | The new instructions                                                                                         |
-| `references`    | `array`                   | No       | The new reference files. Replaces all current reference files.                                               |
+| `references`    | `array`                   | No       | The new reference files. From n8n 2.51.0, replaces the text files of the skill, and a binary file that you don't name stays in the skill. Read all parts of the files you want to keep before you replace them. |
 | `scope`         | `"project" \| "instance"` | No       | Move the skill to this scope. n8n refuses the move if an agent that uses the skill can't use it in the new scope. |
 | `projectId`     | `string`                  | No       | The project to move the skill to. Required when `scope` is `"project"`.                                      |
 | `availableToAssistant` | `boolean`          | No       | Let n8n Assistant use the skill, or stop it. A change to only this setting doesn't save a new version. Available only when n8n Assistant can use skills on the instance. |
@@ -2565,7 +2590,7 @@ A skill has these limits:
 * Instructions: up to 65,536 characters.
 * References: up to 20 Markdown files, each up to 65,536 characters, and up to 262,144 characters in total.
 
-Two fields depend on feature flags. `availableToAssistant` appears only when skills in n8n Assistant are on (`130_attach_skills_to_assistant`). `availableToMCP` appears only when the MCP skills extension is on (`128_mcp_skills_extension`). With the extension on, the n8n MCP server also offers the skills marked `availableToMCP` through the [MCP skills extension](https://modelcontextprotocol.io/seps/2640-skills-extension) (`skills/list` and `skills/get`). Only MCP clients that support the extension use it.
+Two fields depend on feature flags. `availableToAssistant` appears only when skills in n8n Assistant are on (`130_attach_skills_to_assistant`). `availableToMCP` appears only when the MCP skills extension is on (`128_mcp_skills_extension`). With the extension on, the n8n MCP server also offers the skills marked `availableToMCP` through the [MCP skills extension](https://modelcontextprotocol.io/seps/2640-skills-extension) (`skills/list` and `skills/get`). Only MCP clients that support the extension use it. From n8n 2.51.0, the extension serves a binary skill file as `application/octet-stream`, a Markdown file (`.md` or `.markdown`) as `text/markdown`, and any other text file as `text/plain`. Earlier versions serve every file as `text/markdown`.
 
 The three skill source tools appear only when importing skills from GitHub is on for the current user (`136_skill_sync`).
 
@@ -2610,13 +2635,15 @@ Search the skills the current user can see.
 
 ### get\_skill
 
-Read one skill with its instructions, references, `skillHash`, and the agents that use it.
+Read one skill with its instructions, reference paths, bounded text content, `skillHash`, and the agents that use it.
 
 #### Parameters
 
-| Name      | Type     | Required | Description                         |
-| --------- | -------- | -------- | ----------------------------------- |
-| `skillId` | `string` | Yes      | The skill ID from `search_n8n_skills` |
+| Name              | Type     | Required | Description                                                                                                                          |
+| ----------------- | -------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `skillId`         | `string` | Yes      | The skill ID from `search_n8n_skills`                                                                                                |
+| `referencePath`   | `string` | No       | The path of a skill file to read. Use it for a file whose text the response omits. `referencePath` is available from n8n 2.51.0.    |
+| `referenceOffset` | `number` | No       | The offset to read the reference text from, to read the next part of a long file. `referenceOffset` is available from n8n 2.51.0.   |
 
 #### Output
 
@@ -2624,10 +2651,12 @@ The fields of one `search_n8n_skills` item, plus:
 
 | Field       | Type     | Description                                                                                                  |
 | ----------- | -------- | ------------------------------------------------------------------------------------------------------------ |
-| `skill`     | `object` | The content: `name`, `description`, `instructions`, and `references` (an array of `path` and `content`)     |
+| `skill`     | `object` | The content: `name`, `description`, `instructions`, and `references` (an array of `path` and `content`). From n8n 2.51.0, `references` lists each file by path with bounded text content, and a binary file shows only metadata. |
 | `skillHash` | `string` | Hash of the current content. Pass it to `update_skill` as `baseSkillHash`.                                   |
 | `usedBy`    | `object` | The agents that use the skill: `drafts`, `pins` (published versions), and `hiddenAgents` (agents in projects the user can't read) |
 | `syncedFrom` | `object \| null` | For a synced skill, where it comes from: `sourceId`, `type`, `label` (such as `owner/repository`), `ref` (the branch, or `null` for a source type that has no branches), `webUrl`, and `canStopSyncing`. `null` for a skill that isn't synced. |
+
+From n8n 2.51.0, if `referencePath` and `referenceOffset` don't form a valid read, the result has `ok: false`, the `skillId`, and the reason in `error`.
 
 ***
 
@@ -2666,7 +2695,7 @@ Change a skill. Pass only the fields to change. A change to the content creates 
 | `name`                 | `string`  | No       | New name                                                                                      |
 | `description`          | `string`  | No       | New description                                                                               |
 | `instructions`         | `string`  | No       | New instructions                                                                              |
-| `references`           | `array`   | No       | New references. Replaces all references.                                                      |
+| `references`           | `array`   | No       | New references. From n8n 2.51.0, replaces the text files of the skill, and a binary file that you don't name stays in the skill. Read all parts of the files you want to keep before you replace them. |
 | `scope`                | `string`  | No       | Moves the skill. One of: `"project"`, `"instance"`. Refused if an agent that uses the skill can't use it in the new scope. |
 | `projectId`            | `string`  | No       | Required when `scope` is `"project"`                                                          |
 | `availableToAssistant` | `boolean` | No       | Only with `130_attach_skills_to_assistant`                                                    |

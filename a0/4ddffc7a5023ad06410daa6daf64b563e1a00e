@@ -1,0 +1,19 @@
+docs/integrations/builtin/app-nodes/n8n-nodes-base.postgres/README.md
+  s_ab0aa42760f99e::t_cd2d5a9c60c5ef 173,178
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a04ddffc7a5023ad06410daa6daf64b563e1a00e",
+  "prompts": {},
+  "sessions": {
+    "s_ab0aa42760f99e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "aab96d01-1f76-4548-9108-c7cc1ba98391",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Csaba Tuncsik <csaba.tuncsik@gmail.com>"
+    }
+  }
+}

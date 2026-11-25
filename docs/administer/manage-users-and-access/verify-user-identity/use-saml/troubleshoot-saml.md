@@ -14,6 +14,10 @@ layout:
 
 # Troubleshooting SAML SSO <a href="#troubleshooting-saml-sso" id="troubleshooting-saml-sso"></a>
 
+Troubleshooting SAML SSO helps you find and fix problems when single sign-on (SSO) with SAML doesn't work in n8n.
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/9DXSTQsxYGisAV8xk6p4/" %}
+
 If you get an error when testing your SAML setup, check the following:
 
 * Does the app you created in your IdP support SAML?

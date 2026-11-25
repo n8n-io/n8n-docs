@@ -170,10 +170,11 @@ Enter these parameters:
 - **Combine Conditions**: How to combine the conditions in **Select Rows**. **AND** requires all conditions to be true, while **OR** requires at least one condition to be true.
 - **Sort**: Choose how to sort the selected rows. Choose a **Column** from a list or by ID and a sort **Direction**.
 
-**Select** returns either all matching rows or the first rows up to the **Limit** value. It has no offset or cursor option. To read a large table in batches, sort on a unique column that can't be NULL, and fetch the rows after the last one you read. On any other column, the node skips some rows without an error. You can do this with either operation:
+**Select** returns either all matching rows or the first rows up to the **Limit** value. It has no offset or cursor option. To read a large table in batches, use [**Execute Query**](#execute-query) with a query such as `SELECT * FROM orders WHERE id > $1 ORDER BY id LIMIT 1000`. In [**Query Parameters**](#use-query-parameters), set `$1` to the last `id` you read. To get every row once, with none skipped or repeated:
 
-- **Select**: Add a **Select Rows** condition on that column, with **Operator** set to **Greater Than** and **Value** set to the last value you read. Add a **Sort** rule on the same column with the **ASC** direction. Turn off **Return All**, and set **Limit** to the batch size.
-- [**Execute Query**](#execute-query): Use a query such as `SELECT * FROM orders WHERE id > $1 ORDER BY id LIMIT 1000`. In [**Query Parameters**](#use-query-parameters), set `$1` to the last `id` you read.
+- Use a unique column that can't be NULL. On any other column, the node skips some rows without an error.
+- Don't use a timestamp column. n8n returns timestamps with millisecond precision, so the last row of a batch can come back in the next one.
+- For a `NUMERIC` or `BIGINT` column, set **Output Large-Format Numbers As** to **Text**, so the last value keeps all its digits.
 
 Run the node again with the last value from the previous batch, for example in a loop, until a batch returns no rows. Pass the node a single item that holds the last value, because the node runs the query once for each input item.
 

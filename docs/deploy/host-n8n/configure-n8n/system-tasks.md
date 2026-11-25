@@ -22,17 +22,16 @@ Each system task has its own cadence, either a fixed interval or a cron schedule
 
 ### Run system tasks on the durable scheduler
 
-To move system tasks to the durable scheduler, set these environment variables on every main instance and restart n8n:
+From n8n 2.51.0, system tasks run on the durable scheduler by default. To opt out, set `N8N_SCHEDULER_SYSTEM_TASKS_ENABLED=false` on every main instance and restart n8n. In n8n 2.45.0 to 2.50.x, set it to `true` to opt in.
 
 ```bash
-export N8N_SCHEDULER_ENABLED=true
-export N8N_SCHEDULER_SYSTEM_TASKS_ENABLED=true
+export N8N_SCHEDULER_SYSTEM_TASKS_ENABLED=false
 ```
 
-Give every main instance the same values for both variables. Only tasks that support durable mode move over. The rest keep their timer mode.
+`N8N_SCHEDULER_ENABLED` must stay on for the default to apply. Only tasks that support durable mode move over. The rest keep their timer mode.
 
 {% hint style="warning" %}
-Run the same n8n version on every main instance. During a rolling deploy, an older main instance can run a task from its leader timer while newer ones run it on the durable scheduler, so the task can run twice.
+If you upgrade a multi-main setup from a version before 2.45.0 with a rolling deploy, an older main can run a task from its leader timer while newer mains run it on the durable scheduler, so the task can run twice.
 {% endhint %}
 
 A durable system task is also a scheduler task. The [durable scheduler metrics](durable-scheduler.md#observability) report it with the `task_type` label `system:<task-name>`, for example `system:insights-compaction`. The metrics on this page cover all three modes under the same names.

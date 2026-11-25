@@ -127,26 +127,26 @@ With **Watch All Channels** turned on, the trigger subscribes to channels create
 
 Microsoft Graph limits some kinds of subscription to one for each Microsoft account. For example, it allows one **New Channel** subscription for each team. With the **Service Principal (App-Only)** credential, the limit applies to each app registration instead.
 
-From n8n 2.47.0 and n8n 3.1.0, a publish that goes over this limit fails with one of these errors:
+From n8n 2.47.0 and n8n 3.1.0, a publish or a test listen that goes over this limit fails with one of these errors:
 
 * With an OAuth2 credential: `Microsoft Graph allows only one subscription of this kind per Microsoft account`
 * With the **Service Principal (App-Only)** credential: `Microsoft Graph allows only one subscription of this kind per app registration`
 
-The cause is another workflow or n8n instance that watches the same team with the same Microsoft account or app registration. A subscription left behind, for example by a deleted workflow, also counts. When you listen for a test event, the published version of the same workflow counts too.
+The cause is another workflow or n8n instance that watches the same team, channel or chat with the same Microsoft account or app registration. A subscription left behind, for example by a deleted workflow, also counts. When you listen for a test event, the published version of the same workflow counts too.
 
-To fix the error, do one of these, then publish the workflow again:
+To fix the error, do one of these, then try again:
 
-* Unpublish the other workflow that watches the same team with the same Microsoft account or app registration.
-* If no published workflow uses the old subscription, wait up to three days for it to expire.
+* Unpublish the other workflow that watches the same team, channel or chat with the same Microsoft account or app registration. If the error appears when you listen for a test event, unpublish the same workflow.
+* If no published workflow uses the old subscription, wait up to three days for it to expire. A published workflow renews its subscription, so waiting doesn't help while one still watches the team.
 * Connect the credential with a different Microsoft account. With the **Service Principal (App-Only)** credential, use a different app registration.
 
 Before n8n 2.47.0, and in n8n 3.0.x, the publish fails with the Microsoft Graph error text, which contains `has reached its limit of '1'`. With the **Service Principal (App-Only)** credential, it fails with a missing permission message instead.
 
-### When to unpublish and publish the trigger again
+### When to unpublish and publish the workflow again
 
 From n8n 2.47.0 and n8n 3.1.0, the Microsoft Teams Trigger node cleans up its own subscriptions. In two cases, you still need to [unpublish the workflow](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/save-and-publish-workflows#how-to-unpublish-a-workflow) and publish it again once.
 
-**The trigger receives no events after you upgrade.** A workflow that you published before n8n 2.47.0, or in n8n 3.0.x, can keep a subscription that the trigger can't use. The trigger doesn't replace that subscription by itself. When the subscription expires, the trigger still receives no events. To fix it, unpublish the workflow and publish it again. From n8n 2.50.0 and n8n 3.4.0, on self-hosted n8n with `N8N_USE_WORKFLOW_PUBLICATION_SERVICE` set to `false`, restarting n8n replaces the subscription, so you don't need to unpublish and publish.
+**The trigger receives no events after you upgrade.** A workflow that you published before n8n 2.47.0, or in n8n 3.0.x, can keep a subscription that the trigger can't use. The trigger doesn't replace that subscription by itself. When the subscription expires, the trigger still receives no events. To fix it, unpublish the workflow and publish it again. If you self-host n8n 2.50.0 or later (or n8n 3.4.0 or later) and turned off the publication service (`N8N_USE_WORKFLOW_PUBLICATION_SERVICE` set to `false`, on by default), restarting n8n replaces the subscription instead.
 
 **You reconnected the credential with a different Microsoft account.** If you reconnect the credential with a different Microsoft account and don't change the trigger node, the workflow keeps receiving events from the previous account's subscriptions until they expire, up to three days later. After you unpublish the workflow and publish it again, the trigger ignores events from those subscriptions.
 

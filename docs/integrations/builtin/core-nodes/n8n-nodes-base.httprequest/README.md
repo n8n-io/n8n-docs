@@ -56,7 +56,7 @@ To use WebDAV methods, turn on the [**Enable WebDAV Methods**](#enable-webdav-me
 {% hint style="info" %}
 **Feature availability**
 
-The SEARCH method is available from n8n 2.50.0.
+The SEARCH method is available from n8n 2.50.0 and n8n 3.4.0.
 {% endhint %}
 
 ### URL <a href="#url" id="url"></a>
@@ -203,7 +203,7 @@ Control how to batch large numbers of input items:
 
 Use the **Enable WebDAV Methods** option to send requests to a WebDAV server. This option is off by default.
 
-Turn this option on to add PROPFIND, MKCOL, MOVE, COPY, REPORT, and SEARCH to **Method**. The SEARCH method is available from n8n 2.50.0.
+Turn this option on to add PROPFIND, MKCOL, MOVE, COPY, REPORT, and SEARCH to **Method**. The SEARCH method is available from n8n 2.50.0 and n8n 3.4.0.
 
 ### Ignore SSL Issues <a href="#ignore-ssl-issues" id="ignore-ssl-issues"></a>
 

@@ -20,6 +20,7 @@ This section contains reference information for node builders. It covers node UI
 * [Error handling](error-handling.md): the error classes n8n provides for node implementations.
 * [Versioning](versioning.md): make changes to an existing node without breaking its current behavior.
 * [Base files](base-files/README.md): the core code of your node, for declarative and programmatic styles.
+* [Declarative triggers](declarative-triggers/README.md): build polling and webhook trigger nodes without trigger code.
 * [Codex files](codex-files.md): the JSON file that holds your node's metadata.
 * [Credentials files](credentials-files.md): define the authorization methods for your node.
 * [HTTP request helpers](http-request-helpers.md): make HTTP requests from your node.

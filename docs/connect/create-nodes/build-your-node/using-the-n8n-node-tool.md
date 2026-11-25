@@ -114,13 +114,15 @@ This will start an interactive prompt where you can define the details of your p
     * `n8n-nodes-<YOUR_NODE_NAME>`
     * `@<YOUR_ORG>/n8n-nodes-<YOUR_NODE_NAME>`
 * **What kind of node are you building?** The [node building style](../plan-your-node/choose-a-node-building-style.md) you want to use:
-    * **HTTP API**: A low-code, declarative node structure that's designed for faster approval for n8n Cloud.
-    * **Other**: A programmatic style node with full flexibility. Choose this for trigger nodes: the declarative style doesn't support triggers. To add a trigger node to a package that already has a declarative-style node, write the trigger node in the programmatic style in the same package.
-* **What template do you want to use?** When using the HTTP API, you can choose the template to start from:
+    * **Declarative**: A low-code, declarative node structure that's designed for faster approval for n8n Cloud. n8n recommends it for REST APIs.
+    * **Programmatic**: A programmatic style node with full flexibility. Choose this for non-REST APIs, custom trigger logic, or custom data handling.
+* **What template do you want to use?** When using the declarative style, you can choose the template to start from:
     * **GitHub Issues API**: A demo node that includes multiple operations and credentials. This can help you get familiar with the node structure and conventions.
     * **Start from scratch**: A blank template that will guide you through your custom setup with some further prompts.
+    * **Polling trigger (preview)**: A [declarative polling trigger](reference/declarative-triggers/polling-triggers.md) that checks an API for new items on a schedule.
+    * **Webhook trigger (preview)**: A [declarative webhook trigger](reference/declarative-triggers/webhook-triggers.md) that registers a webhook and receives events.
 
-When choosing HTTP API > Start from scratch, `n8n-node` will ask you the following:
+When choosing Declarative > Start from scratch, `n8n-node` will ask you the following:
 
 * **What's the base URL of the API?** The root URL for the API you plan to integrate with.
 * **What type of authentication does your API use?** The authentication your node should provide:
@@ -162,6 +164,8 @@ The template must be one of the following:
 
 * `declarative/github-issues`: A demo node that includes multiple operations and credentials. This can help you get familiar with the node structure and conventions.
 * `declarative/custom`: A blank template that will guide you through your custom setup with some further prompts.
+* `declarative/polling-trigger`: A [declarative polling trigger](reference/declarative-triggers/polling-triggers.md) (Preview) that checks an API for new items on a schedule.
+* `declarative/webhook-trigger`: A [declarative webhook trigger](reference/declarative-triggers/webhook-triggers.md) (Preview) that registers a webhook and receives events.
 * `programmatic/example`: A programmatic style node with full flexibility.
 
 ## Building your node <a href="#building-your-node" id="building-your-node"></a>

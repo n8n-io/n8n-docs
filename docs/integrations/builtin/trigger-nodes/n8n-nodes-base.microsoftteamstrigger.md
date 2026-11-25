@@ -132,11 +132,11 @@ From n8n 2.47.0 and n8n 3.1.0, a publish or a test listen that goes over this li
 * With an OAuth2 credential: `Microsoft Graph allows only one subscription of this kind per Microsoft account`
 * With the **Service Principal (App-Only)** credential: `Microsoft Graph allows only one subscription of this kind per app registration`
 
-The cause is another workflow or n8n instance that watches the same team, channel or chat with the same Microsoft account or app registration. A subscription left behind, for example by a deleted workflow, also counts. When you listen for a test event, the published version of the same workflow counts too.
+The cause is another workflow or n8n instance that watches the same team, channel, or chat with the same Microsoft account or app registration. A subscription left behind, for example by a deleted workflow, also counts. When you listen for a test event, the published version of the same workflow counts too.
 
 To fix the error, do one of these, then try again:
 
-* Unpublish the other workflow that watches the same team, channel or chat with the same Microsoft account or app registration. If the error appears when you listen for a test event, unpublish the same workflow.
+* Unpublish the other workflow that watches the same team, channel, or chat with the same Microsoft account or app registration. If the error appears when you listen for a test event, unpublish the same workflow.
 * If no published workflow uses the old subscription, wait up to three days for it to expire. A published workflow renews its subscription, so waiting doesn't help while one still watches the team.
 * Connect the credential with a different Microsoft account. With the **Service Principal (App-Only)** credential, use a different app registration.
 

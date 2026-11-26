@@ -15,12 +15,15 @@ With automatic OAuth client registration, some OAuth2 credentials connect withou
 {% hint style="info" %}
 **Feature availability**
 
-Automatic OAuth client registration with Client ID Metadata Documents, and the **Automatic (recommended)** option for app credentials, are available from n8n 2.49.0.
+Client ID Metadata Documents (CIMD) are available on:
 
-Client ID Metadata Documents are available on:
+- **Self-hosted:** All editions
 
-- **n8n Cloud:** not available yet. Cloud instances use Dynamic Client Registration.
-- **Self-hosted:** all plans. An instance owner must turn them on.
+CIMD isn't available on n8n Cloud. n8n Cloud instances use Dynamic Client Registration (DCR).
+
+CIMD is available from n8n 2.47.0 and n8n 3.1.0. The **Automatic (recommended)** option for app credentials is available from n8n 2.49.0 and n8n 3.2.2.
+
+On self-hosted instances, CIMD is off by default.
 {% endhint %}
 
 ## Credentials that support automatic registration
@@ -43,7 +46,7 @@ With a Client ID Metadata Document (CIMD), n8n's client ID is the URL of a JSON 
 
 With Dynamic Client Registration (DCR, [RFC 7591](https://www.rfc-editor.org/rfc/rfc7591)), n8n sends a registration request to the OAuth2 server. The server returns a client ID, and sometimes a client secret. Each credential registers its own client.
 
-n8n uses CIMD when all of these are true:
+n8n uses CIMD when all these conditions are true:
 
 - CIMD is on for the instance. Refer to [Turn on CIMD on a self-hosted instance](#turn-on-cimd-on-a-self-hosted-instance).
 - The document URL is an HTTPS URL with a path.
@@ -52,7 +55,7 @@ n8n uses CIMD when all of these are true:
 
 Otherwise n8n uses DCR, and shows an error if the server doesn't support DCR either. A server that supports only CIMD works only when CIMD is on.
 
-Both methods need a server that supports PKCE with `S256`.
+From n8n 2.49.0 and n8n 3.2.2, DCR also needs a server that supports PKCE with `S256`.
 
 ## Turn on CIMD on a self-hosted instance
 
@@ -116,7 +119,7 @@ Token refreshes use the stored client ID and don't register a new client.
 
 ### An error shows on the OAuth2 server's page
 
-When CIMD fails, the OAuth2 server shows the error on its own page, not in n8n. For example: `This authorization request is invalid.` Usually the server can't download the metadata document.
+When CIMD fails, the OAuth2 server shows the error on its own page, not in n8n. For example: `This authorization request is invalid.` The most common cause is that the server can't download the metadata document.
 
 To fix it, do one of the following:
 

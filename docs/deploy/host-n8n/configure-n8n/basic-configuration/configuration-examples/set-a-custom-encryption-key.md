@@ -28,6 +28,16 @@ export N8N_ENCRYPTION_KEY=<SOME RANDOM STRING>
 ```
 Refer to [Environment variables reference](../use-environment-variables/deployment.md) for more information on this variable.
 
+## Protect the encryption key <a href="#protect-the-encryption-key" id="protect-the-encryption-key"></a>
+
+For production instances:
+
+* **Generate a strong key.** For example, run `openssl rand -hex 32`.
+* **Use the same key on every n8n process** that connects to the same database: main instances, workers, and webhook processors.
+* **Use a different key in each environment.** Don't share a key between development, staging, and production.
+* **Back up the key in a different location from the instance**, such as a secrets manager. If you lose the key, n8n can't decrypt your stored credentials and you must re-create them.
+* **Don't change the key on an existing database.** n8n can't re-encrypt existing data with a new instance key, and it won't start with a different key. To rotate the key that encrypts your credentials, use [encryption key rotation](../../security/rotate-encryption-keys.md) instead.
+
 ## Related resources
 
 * [Configuration examples](./)

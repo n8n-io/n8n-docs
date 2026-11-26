@@ -103,6 +103,7 @@
     * [Manage your license](host-n8n/configure-n8n/manage-your-license.md)
     * [Report usage from air-gapped instances](host-n8n/configure-n8n/report-usage-from-air-gapped-instances.md)
     * [Security](host-n8n/configure-n8n/security.md)
+      * [Security checklist for production](host-n8n/configure-n8n/security/security-checklist.md)
       * [Manage security policies](host-n8n/configure-n8n/security/manage-security-policies.md)
       * [Set up SSL](host-n8n/configure-n8n/security/set-up-ssl.md)
       * [Configure SSO](host-n8n/configure-n8n/security/configure-sso.md)

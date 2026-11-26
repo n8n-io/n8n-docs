@@ -83,12 +83,20 @@ Set **Authentication** to **Basic Auth**, then fill in **User Name** and **Passw
 
 Set **Authentication** to **OAuth2 Client Credentials**. Use this when your gateway doesn't take a static key and instead issues short-lived tokens.
 
+{% hint style="info" %}
+**Feature availability**
+
+OAuth2 client credentials are available from n8n 2.50.0.
+{% endhint %}
+
+This login method works only with the **Custom Model Endpoint** and **Custom Endpoint Chat Model** nodes, which perform the token exchange themselves. No other node does it for you.
+
 - **Token URL**: the token endpoint of your login server.
 - **Client ID** and **Client Secret**: the credentials of your service app.
 - **Scope**: space-separated scopes to ask for. Leave it empty to ask for none.
 - **Send Client Credentials In**: choose **Authorization Header** to send the client ID and secret as Basic auth, or **Request Body** to send them as body fields. Login servers differ on which they accept.
 
-n8n fetches a token when the node runs and keeps it in memory for that run. It fetches a new one shortly before the token expires, or after an hour if the login server doesn't say how long it lasts. n8n doesn't write the token back to the credential.
+n8n fetches a token when the node runs and keeps it in memory for that run. It fetches a new one before the token expires, or after an hour if the login server doesn't say how long it lasts. n8n doesn't write the token back to the credential.
 
 {% hint style="info" %}
 **If you restrict the credential's domains, allow the login server too**
@@ -192,7 +200,7 @@ A gateway header name or value contains characters a header can't carry. Check t
 
 ### `This gateway does not publish a model list`
 
-The gateway doesn't serve a compatible `GET /models`. Many gateways don't, so this isn't always a fault. If your gateway does serve a model list, check that **Base URL** matches the API path, including a version segment such as `/v1` when the gateway requires one. Otherwise switch the node's **Model** field to **By ID** and type the model name your gateway uses.
+The gateway doesn't serve a compatible `GET /models`. Not every gateway does, so this isn't always a fault. If your gateway does serve a model list, check that **Base URL** matches the API path, including a version segment such as `/v1` when the gateway requires one. Otherwise switch the node's **Model** field to **By ID** and type the model name your gateway uses.
 
 ### `The gateway could not list its models`
 

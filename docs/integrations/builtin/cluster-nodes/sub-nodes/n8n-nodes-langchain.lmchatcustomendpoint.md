@@ -15,6 +15,12 @@ Use the **Custom Endpoint Chat Model** node to give an **AI Agent** a model on a
 
 The model streams, so an agent built on it can stream its answer the same way it does on the other chat model sub-nodes.
 
+{% hint style="info" %}
+**Feature availability**
+
+The Custom Endpoint Chat Model node is available from n8n 2.50.0.
+{% endhint %}
+
 On this page, you'll find the node parameters for the Custom Endpoint Chat Model node and links to more resources.
 
 {% hint style="info" %}
@@ -40,6 +46,12 @@ The model to send the prompt to, as your gateway names it.
 **By ID** is the default: type the model name. Use **From List** to pick from the models your gateway reports, which only works when the gateway serves a compatible `GET /models`. Not every gateway serves that route, which is why typing the ID stays the default.
 
 Model names differ between gateways. The same underlying model might be `gpt-4o` on one gateway and `openai/gpt-4o` on another, so changing gateway can mean changing this field too.
+
+### API Format
+
+Which API of your gateway to call. **Chat Completions** is the default. **Responses** calls your gateway's Responses API instead, which not every gateway serves.
+
+The choice changes which node options apply, and it changes the shape of a tool definition in **Extra Body** to the flat Responses shape. The OpenAI built-in tools aren't available on either format.
 
 ### Headers
 
@@ -67,15 +79,25 @@ The project ID isn't sent, because a node can't read the project it belongs to. 
 
 ## Node options
 
-Use these options to further refine the node's behavior.
+Use these options to further refine the node's behavior. Some of them only apply to one **API Format**, and n8n hides the ones that don't apply to your choice.
 
 ### Frequency Penalty
 
 Use this option to control the chance of the model repeating itself. Higher values reduce the chance of the model repeating itself.
 
+Only on **Chat Completions**.
+
+### Max Output Tokens
+
+Enter the cap on the tokens generated. n8n sends this as `max_output_tokens`.
+
+Only on **Responses**.
+
 ### Maximum Number of Tokens
 
 Enter the maximum number of tokens used, which sets the completion length. n8n sends this as `max_completion_tokens` for a reasoning model and as `max_tokens` otherwise. Use **Extra Body** to force a different field.
+
+Only on **Chat Completions**. On **Responses**, use **Max Output Tokens** instead.
 
 ### Max Retries
 
@@ -85,6 +107,14 @@ Enter the maximum number of times to retry a request that times out, hits a rate
 
 Use this option to control the chance of the model talking about new topics. Higher values increase the chance of the model talking about new topics.
 
+Only on **Chat Completions**.
+
+### Reasoning Summary
+
+Ask a reasoning model to summarize its reasoning. Choose **Auto**, **Concise**, or **Detailed**. Not every model or gateway serves one.
+
+Only on **Responses**.
+
 ### Sampling Temperature
 
 Use this option to control the randomness of the sampling process. A higher temperature creates more diverse sampling, but increases the risk of hallucinations.
@@ -93,9 +123,19 @@ Use this option to control the randomness of the sampling process. A higher temp
 
 Ask the provider to sample deterministically. Not every provider honors it.
 
+Only on **Chat Completions**.
+
 ### Stop Sequences
 
 Comma-separated strings that end the answer when the model produces one.
+
+Only on **Chat Completions**.
+
+### Store Response
+
+Turn this on to let the gateway keep the response, so a later call can refer to it. Off by default.
+
+Only on **Responses**.
 
 ### Timeout
 
@@ -104,6 +144,12 @@ Enter the maximum request time in milliseconds.
 ### Top P
 
 Use this option to set the probability the completion should use. Use a lower value to ignore less probable options. Change this or the temperature, not both.
+
+### Truncation
+
+What to do when the conversation outgrows the context window. **Auto** drops items from the middle. **Disabled** fails the request.
+
+Only on **Responses**.
 
 ## Templates and examples
 
@@ -123,7 +169,7 @@ Here are some common errors and issues with the Custom Endpoint Chat Model node 
 
 ### `This gateway does not publish a model list`
 
-The gateway doesn't serve a compatible `GET /models`. Many gateways don't, so this isn't always a fault. If your gateway does serve a model list, check that **Base URL** matches the API path, including a version segment such as `/v1` when the gateway requires one. Otherwise switch **Model** to **By ID** and type the name your gateway uses.
+The gateway doesn't serve a compatible `GET /models`. Not every gateway does, so this isn't always a fault. If your gateway does serve a model list, check that **Base URL** matches the API path, including a version segment such as `/v1` when the gateway requires one. Otherwise switch **Model** to **By ID** and type the name your gateway uses.
 
 ### `The credential has no usable Base URL`
 
@@ -133,6 +179,6 @@ The gateway doesn't serve a compatible `GET /models`. Many gateways don't, so th
 
 Check the gateway's own response first. The node surfaces the gateway's error text rather than replacing it with a generic message, so a rejected key, a disabled deployment, and an exhausted quota each read differently.
 
-### Tool calling does nothing
+### Tool calling returns an error from the provider
 
 Not every provider behind a gateway supports tool calling. When the provider doesn't, you get the provider's own error rather than a silent failure.

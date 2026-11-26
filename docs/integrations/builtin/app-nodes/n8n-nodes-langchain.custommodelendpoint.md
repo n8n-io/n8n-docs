@@ -151,13 +151,19 @@ To move an existing workflow from the OpenAI node with a Base URL override, see 
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/96ifDzfcUuwOyYrubZUt/" %}
 
+{% hint style="info" %}
+**The HTTP Request node can't reuse this credential**
+
+The two Custom Model Endpoint nodes sign their own requests, so a **Custom Model Endpoint** credential sends no authentication when another node uses it. With **OAuth2 Client Credentials** nothing else performs the token exchange either. To call another route on your gateway, build a separate credential for the HTTP Request node.
+{% endhint %}
+
 ## Common issues
 
 Here are some common errors and issues with the Custom Model Endpoint node and steps to resolve or troubleshoot them.
 
 ### `This gateway does not publish a model list`
 
-The gateway doesn't serve a compatible `GET /models`. Many gateways don't, so this isn't always a fault. If your gateway does serve a model list, check that **Base URL** matches the API path, including a version segment such as `/v1` when the gateway requires one. Otherwise switch **Model** to **By ID** and type the name your gateway uses.
+The gateway doesn't serve a compatible `GET /models`. Not every gateway does, so this isn't always a fault. If your gateway does serve a model list, check that **Base URL** matches the API path, including a version segment such as `/v1` when the gateway requires one. Otherwise switch **Model** to **By ID** and type the name your gateway uses.
 
 ### `This node has no message to send`
 
@@ -171,7 +177,7 @@ Every **Messages** row has empty **Content**. The node drops empty rows and won'
 
 Gateways name models differently. Check the name against your gateway's own catalog rather than the provider's.
 
-### Tool calling does nothing
+### Tool calling returns an error from the provider
 
 Put the tool definitions in **Extra Body** in the shape your provider expects. When the provider behind your gateway doesn't support tool calling, you get the provider's own error rather than a silent failure.
 

@@ -1,0 +1,22 @@
+docs/deploy/host-n8n/configure-n8n/security/manage-security-policies.md
+  s_99ed1634560032::t_b4cc14ed54f1c8 110,115-117
+docs/build/manage-workflows/workflow-reviews.md
+  ai_agent 104
+  s_99ed1634560032::t_b4cc14ed54f1c8 38,63,73-103,137-138,151-156,162-163,170
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "9f484b01ea6e655baec3d9c1ad3dd2fabd072c16",
+  "prompts": {},
+  "sessions": {
+    "s_99ed1634560032": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9aa664d0-4ee8-456e-8e3d-d536df7f1282",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Jan K. <jan.kalkan@n8n.io>"
+    }
+  }
+}

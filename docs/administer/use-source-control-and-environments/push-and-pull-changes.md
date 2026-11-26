@@ -91,6 +91,7 @@ Auto publish is also available through the [API](https://app.gitbook.com/s/r7wKI
 ### Pulling may cause brief service interruption <a href="#pulling-may-cause-brief-service-interruption" id="pulling-may-cause-brief-service-interruption"></a>
 
 If **Auto-publish pulled version** publishes a workflow that's already published, n8n unpublishes it while pulling, then republishes it with the pulled changes. This may result in a few seconds of downtime for the workflow.
+
 With **Auto-publish pulled version** set to **Off**, n8n doesn't do this. A published workflow keeps running its current published version, and the pulled changes don't go live until you publish them. The exception is a workflow that's archived in Git: n8n unpublishes it so it stops running.
 
 ## Send your work to Git <a href="#send-your-work-to-git" id="send-your-work-to-git"></a>

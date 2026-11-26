@@ -58,11 +58,11 @@ You can't create a data table or change its columns in the UI. A promote only in
 
 ## The public API
 
-Protected instance also blocks manual runs, data table schema changes, and MCP write tools in the backend. The public API still allows most resource changes, including data table schemas, and promotions. The exception is `POST /api/v1/source-control/push`, which it blocks. Use API key scopes and roles to control who can change what through the API.
+**Protected instance** also blocks manual runs, data table schema changes, and MCP write tools in the backend. The public API still allows most resource changes, including data table schemas, and promotions. The exception is `POST /api/v1/source-control/push`, which it blocks. Use API key scopes and roles to control who can change what through the API.
 
 ## Environments (Classic)
 
-Environments (Classic) uses the same setting. Turning it on or off changes it for both. In Classic, a protected instance blocks push in the UI and the API, and allows pull. Disconnecting Git in Classic turns Protected instance off.
+Environments (Classic) uses the same setting. Turning it on or off changes it for both. In Classic, a protected instance blocks push in the UI and the API, and allows pull. Disconnecting Git in Classic turns **Protected instance** off.
 
 ## Related resources
 

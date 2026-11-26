@@ -271,7 +271,7 @@ n8n 3.0 enforces a Content Security Policy by default. The default policy is `sc
 
 Existing instances start enforcing the policy when they upgrade, unless you already set `N8N_CONTENT_SECURITY_POLICY`.
 
-The default policy blocks inline scripts without n8n's nonce, all inline event handlers such as `onclick`, and scripts that a proxy or CDN injects, such as NGINX `sub_filter` or Cloudflare Rocket Loader. If your reverse proxy adds its own `Content-Security-Policy` header, browsers enforce both policies. The editor, webhooks, forms, and iframe embedding keep working.
+The default policy blocks inline scripts without n8n's nonce and all inline event handlers, such as `onclick`. It also blocks scripts that a proxy or CDN injects, such as NGINX `sub_filter` or Cloudflare Rocket Loader. If your reverse proxy adds its own `Content-Security-Policy` header, browsers enforce both policies. The editor, webhooks, forms, and iframe embedding keep working.
 
 **What to do:** Before you upgrade, remove proxy-injected scripts and conflicting proxy `Content-Security-Policy` headers. To turn off enforcement, set `N8N_CONTENT_SECURITY_POLICY` to `{}`, or set it to your own policy. To test a policy first, set `N8N_CONTENT_SECURITY_POLICY` to `{}` and `N8N_CONTENT_SECURITY_POLICY_REPORT_ONLY` to your policy. Refer to [Security environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/security).
 

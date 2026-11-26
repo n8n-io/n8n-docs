@@ -25,7 +25,7 @@ This page contains advice on best practices relating to user management in n8n.
 
 ## Name workflows consistently
 
-n8n doesn't enforce workflow names. When several teams or customers share an instance, agree on a naming pattern and document it in your team guidelines. A consistent pattern helps people find workflows and see who owns them, across projects.
+n8n doesn't enforce workflow names. When several teams or customers share an instance, agree on a naming pattern and document it in your team guidelines. A consistent pattern helps you find workflows and see who owns them across projects.
 
 For example, name each workflow with its team or customer, its function, and its version:
 

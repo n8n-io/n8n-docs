@@ -79,6 +79,10 @@ A typical approval workflow:
 4. Deploys the approved change to the target instance.
 5. Logs the result for your audit trail.
 
+{% hint style="warning" %}
+Secure the approval workflow itself. Require authentication on the webhook or API call that starts it, so no one can deploy by calling the URL directly, and give the API key the deploy step uses only the scopes it needs. Without both, someone can bypass the approval step on a production instance.
+{% endhint %}
+
 ## Related resources
 
 - [Environments](./)

@@ -184,7 +184,7 @@ The node checks **Column** before each page and stops with an error that names t
 - For a text column, the `NLS_SORT` setting of the database session is `BINARY`. With another setting, use a `NUMBER` column.
 - It's in **Output Columns**, if you set that option.
 
-For a `NUMBER` column with values above 9007199254740991, or with a fraction and more than 15 digits, turn on **Output Numbers As String** in the options. Without it, n8n rounds those values and a page can repeat or skip rows. Do the same for a column declared as `NUMBER` with no precision or scale when its values have a fraction.
+For a `NUMBER` column with values above 9007199254740991 or below -9007199254740991, or with a fraction and more than 15 digits, turn on **Output Numbers As String** in the options. Without it, n8n rounds those values and a page can repeat or skip rows. Do the same for a column declared as `NUMBER` with no precision or scale when its values have a fraction.
 
 **Start After** sets the sort order of the pages:
 
@@ -195,6 +195,7 @@ For a `NUMBER` column with values above 9007199254740991, or with a fraction and
 #### Select options <a href="#select-options" id="select-options"></a>
 
 - **Auto Commit**: When this property is set to true, the transaction in the current connection is automatically committed at the end of statement execution.
+- **Output Columns**: Choose which columns to output. You can select from a list of available columns or specify IDs using [expressions](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/work-with-data/expressions-versus-data-nodes). If you set **Start After**, include its **Column** here.
 - **Output Numbers As String**: Indicates if the numbers should be retrieved as a String.
 - **Fetch Array Size**: This property is a number that sets the size of an internal buffer used for fetching query rows from Oracle Database. Changing it may affect query performance but does not affect how many rows are returned to the application.
 - **Number of Rows to Prefetch**: This property is a query tuning option to set the number of additional rows the underlying Oracle driver fetches during the internal initial statement execution phase of a query.

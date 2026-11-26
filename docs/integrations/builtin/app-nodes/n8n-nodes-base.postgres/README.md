@@ -199,7 +199,7 @@ The node checks **Column** before each page and stops with an error that names t
 - For a text column, no row has empty text. An empty **Value** means the first page, so a page that ends on that row would start the table again.
 - It's in **Output Columns**, if you set that option.
 
-For a `numeric` column, set **Output Large-Format Numbers As** to **Text** in the options. Do the same for a `bigint` column with values above 9007199254740991.
+For a `numeric` column, set **Output Large-Format Numbers As** to **Text** in the options. Do the same for a `bigint` column with values above 9007199254740991 or below -9007199254740991.
 
 **Start After** doesn't work on a view, or on a table that other tables inherit from. A partitioned table works.
 

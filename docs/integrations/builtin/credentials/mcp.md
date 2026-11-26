@@ -28,7 +28,7 @@ This credential extends n8n's generic [OAuth2 API credential](./httprequest.md#u
 
 * **Register Client Automatically**: Turned on by default. n8n identifies itself to the MCP server, so you don't create an app or enter a **Client ID** and **Client Secret**. It uses a Client ID Metadata Document (CIMD) when both the server and your instance support it, and Dynamic Client Registration (DCR, [RFC 7591](https://www.rfc-editor.org/rfc/rfc7591)) otherwise. [Automatic OAuth client registration](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/automatic-oauth-client-registration) explains how n8n picks the method and how to turn on CIMD on a self-hosted instance.
 
-    The **Register Client Automatically** toggle and CIMD are available from n8n 2.47.0 and n8n 3.1.0. On earlier versions, the toggle is **Use Dynamic Client Registration** and n8n always uses DCR.
+    From n8n 2.47.0 and n8n 3.1.0, the toggle is **Register Client Automatically** and self-hosted instances can use CIMD. On earlier versions, the toggle is **Use Dynamic Client Registration**. n8n Cloud and earlier versions always use DCR.
 
     Turn this off if your MCP server supports neither CIMD nor DCR, or if you already have a Client ID and Client Secret from the server's own developer settings. In that case, fill in the standard OAuth2 fields (**Authorization URL**, **Access Token URL**, **Client ID**, **Client Secret**) as you would for any generic OAuth2 credential.
 * **Resource URL**: Optional. The exact protected resource URL required by the MCP server. Leave this empty to let n8n discover it automatically from the server.

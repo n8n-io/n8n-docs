@@ -21,7 +21,7 @@ Client ID Metadata Documents (CIMD) are available on:
 
 CIMD isn't available on n8n Cloud. n8n Cloud instances use Dynamic Client Registration (DCR).
 
-CIMD is available from n8n 2.47.0 and n8n 3.1.0. The **Automatic (recommended)** option for app credentials is available from n8n 2.49.0 and n8n 3.2.2.
+CIMD and the **Register Client Automatically** toggle are available from n8n 2.47.0 and n8n 3.1.0. The **Automatic (recommended)** option for app credentials is available from n8n 2.49.0 and n8n 3.2.2.
 
 On self-hosted instances, CIMD is off by default.
 {% endhint %}
@@ -143,7 +143,7 @@ If the server supports CIMD, turn CIMD on. If not, use your own OAuth app.
 The OAuth2 server does not support PKCE with the S256 method, which automatic client registration requires
 ```
 
-Automatic registration needs PKCE, so use your own OAuth app.
+From n8n 2.49.0 and n8n 3.2.2, automatic registration needs a server that supports PKCE with `S256`. If you see this error, use your own OAuth app.
 
 ### n8n can't read the OAuth2 server's metadata
 

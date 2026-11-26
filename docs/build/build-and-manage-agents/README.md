@@ -107,7 +107,7 @@ Configure these parts of an agent in the Agent Builder:
 | **Instructions**   | The system prompt that describes the agent's role, tone, and constraints.                                       |
 | **Tools**          | Actions the agent can take: workflows, custom code, built-in n8n integrations, and [MCP servers](../integrate-ai/mcp-servers.md).                 |
 | **Web search**     | Lets the agent search the web for current information, using the model's native search tool or a fallback service. |
-| **Skills**         | Reusable behavior bundles that package instructions with the tools needed for a specific task.                  |
+| **Skills**         | Reusable instructions, with optional reference files, for a specific task.                                      |
 | **Channels**       | Places people can reach the agent, like Slack, Telegram, or Linear.                                             |
 | **Schedules**      | Tasks the agent runs on a recurring basis once published.                                                       |
 | **Sub-agents**     | Other published agents this agent can delegate work to.                                                         |
@@ -163,16 +163,14 @@ In the **Capabilities** section enable **Web search** to let the agent look up c
 
 #### Bundle capabilities with skills
 
-A skill packages instructions with the tools needed for a specific task. Use skills when the agent handles several distinct tasks, each with its own steps.
+A skill is a set of instructions, with optional reference files, for a specific task. Use skills when the agent handles several distinct tasks, each with its own steps. You can share a skill across multiple agents, both within n8n and externally.
 
 To add a skill:
 
 1. Open the **Skills** section and select **Add skill**.
-2. Give the skill a name and a short description.
-3. Pick the tools the skill can use.
-4. Write the instructions the agent should follow when it runs the skill.
+2. Search for an existing skill and select it, or select **Create skill** to write a new one.
 
-The agent picks the right skill based on the description and the current request.
+The agent picks the right skill based on the skill's description and the current request. To create, import, and manage skills, see [Skills](../agentic-context-management/skills.md).
 
 #### Upload knowledge
 
@@ -181,7 +179,7 @@ Add files the agent can search and read from the **Knowledge** tab. Supported fi
 {% hint style="info" %}
 **Feature availability**
 
-Knowledge bases are available on n8n Cloud. On self-hosted, they need a Daytona sandbox. See [Self-hosted](#self-hosted).
+Knowledge bases are available on n8n Cloud. On self-hosted, they need a configured sandbox. See [Self-hosted](#self-hosted).
 {% endhint %}
 
 {% hint style="info" %}
@@ -271,6 +269,27 @@ Available channels:
 * **Microsoft Teams**: see [Connect an agent to Microsoft Teams](microsoft-teams/README.md)
 
 Open the **Channels** section on the agent and follow the setup for the channel you want. Each channel has its own connection and permission model.
+
+### Share an agent with other users
+
+You can let someone use your agent, edit it with you, or import their own copy. The steps depend on where you built the agent. Some of these steps need direct workflow sharing or team projects, which aren't available on every plan. Refer to [Organize work in projects](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/organize-work-in-projects) for team project availability.
+
+| You built the agent in | To let someone use it | To edit it together | To give someone a copy on another instance |
+| --- | --- | --- | --- |
+| An **AI Agent** node in a workflow | Publish the workflow with a Chat Trigger in **Hosted Chat** mode and send them the chat URL. To require sign-in, choose **n8n User Auth**. | [Share the workflow](../manage-workflows/share-with-others.md), or add them as an editor to the team project that contains it. | [Export the workflow as JSON](../manage-workflows/export-and-import.md) and have them import it. |
+| The standalone **Agents** tab | Publish the agent to a channel, such as Slack or n8n Chat. n8n Chat makes the agent available to everyone in the project. | Give them an editing role in the team project that owns the agent. | Export the agent as JSON and have them import it. |
+
+When you export an agent or workflow, stored credential secrets don't transfer. The person who imports it needs to reconnect credentials on their instance.
+
+#### What you can't do with a standalone agent
+
+Standalone agents don't share the way workflows do. Compared with workflow sharing:
+
+* **You can't add individual users to an agent.** For a workflow in your **Personal** space, you select **Share** and pick users. For an agent, access comes from the project that owns it, so you give people a role in that team project.
+* **You can't publish an agent from your personal project.** Your personal project doesn't include the permission to publish agents, so others can't use it from there. To share it, export the agent as JSON, create a new agent in a team project, and select **Import JSON** on it. **Duplicate** copies the agent into the same project, and moving an agent only changes its folder, so neither reaches a team project.
+* **You can't give people a chat URL for the agent.** Hosted Chat URLs come from the Chat Trigger in a workflow. People reach a standalone agent through n8n Chat, through the other channels you connect to it, or through the chat in the Agent Builder if they have access to the project.
+* **You can't share an agent with read-only or run-only access directly.** Workflow sharing gives editors view, run, and update permissions. For an agent, access comes from the project role. Give someone the Viewer role for read-only access: they can view the agent and chat with it, but can't change it. Give someone the Chat user role for run-only access: they can chat with the agent in n8n Chat but can't view its configuration. To let people edit the agent, give them an editing role in the project.
+* **You can't move credentials with the agent.** Export and import carry the agent's configuration but not credential secrets.
 
 ### Manage agents through MCP
 

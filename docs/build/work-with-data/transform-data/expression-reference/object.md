@@ -12,7 +12,7 @@ layout:
 
 ## _`Object`_.**`compact()`** <a href="#objectcompact" id="objectcompact"></a>
 
-**Description:** Removes all fields that have empty values, i.e. are <code>null</code> or <code>""</code>
+**Description:** Removes all fields that have empty values (<code>null</code>, <code>undefined</code>, <code>"nil"</code>, <code>""</code>, empty objects, and empty arrays). Also compacts nested objects. Converts nested arrays to objects with index keys, at every level.
 
 **Syntax:** _`Object`_.compact()
 
@@ -25,6 +25,18 @@ layout:
   ```javascript
   // obj = {'x':null, 'y':2, 'z':''}
   obj.compact() //=> {'y':2}
+
+  // Nested objects are compacted too
+  // obj = {'name':'Nathan', 'address':{'city':'Berlin', 'zip':null}}
+  obj.compact() //=> {'name':'Nathan', 'address':{'city':'Berlin'}}
+
+  // Nested arrays become objects with index keys
+  // obj = {'tags':['new', 'vip']}
+  obj.compact() //=> {'tags':{'0':'new', '1':'vip'}}
+
+  // Arrays inside arrays become objects too
+  // obj = {'teams':[['Ana', 'Ben'], ['Cleo']]}
+  obj.compact() //=> {'teams':{'0':{'0':'Ana', '1':'Ben'}, '1':{'0':'Cleo'}}}
   ```
 
 ## _`Object`_.**`hasField()`** <a href="#objecthasfield" id="objecthasfield"></a>

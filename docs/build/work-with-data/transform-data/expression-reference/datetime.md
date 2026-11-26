@@ -31,6 +31,15 @@ layout:
 
 **Description:** Returns the difference between two DateTimes, in the given unit(s)
 
+`diffTo()` accepts these values for `unit`:
+
+* The plural names <code>years</code>, <code>quarters</code>, <code>months</code>, <code>weeks</code>, <code>days</code>, <code>hours</code>, <code>minutes</code>, <code>seconds</code>, and <code>milliseconds</code>.
+* The singular names <code>year</code>, <code>month</code>, <code>week</code>, <code>day</code>, <code>hour</code>, <code>minute</code>, <code>second</code>, and <code>millisecond</code>. `diffTo()` doesn't accept <code>quarter</code>.
+
+Unit names are case-sensitive. Any other value is an unsupported unit, and most unsupported units cause an `Unsupported unit` error.
+
+Some unsupported units don't cause an error. With <code>weekday</code>, <code>weekNumber</code>, <code>yearDayNumber</code>, an empty string, or <code>null</code>, the expression returns <code>undefined</code>.
+
 **Syntax:** _`DateTime`_.diffTo(otherDateTime, unit)
 
 **Returns:** Number
@@ -56,12 +65,25 @@ layout:
   ```
 
   ```javascript
+  // dt1 = "2024-03-30T18:49:07.234".toDateTime()
+  dt1.diffTo('2025-01-01', 'fortnight') //=> Error: Unsupported unit 'fortnight'
+  ```
+
+  ```javascript
+  // dt1 = "2024-03-30T18:49:07.234".toDateTime()
+  // No error for this unsupported unit
+  dt1.diffTo('2025-01-01', 'weekday') //=> undefined
+  ```
+
+  ```javascript
   Note: should support both day and days, etc.
   ```
 
 ## _`DateTime`_.**`diffToNow()`** <a href="#datetimedifftonow" id="datetimedifftonow"></a>
 
 **Description:** Returns the difference between the current moment and the DateTime, in the given unit(s). For a textual representation, use <code>toRelative()</code> instead.
+
+`diffToNow()` accepts the same values for `unit` as [`diffTo()`](#datetimediffto), and handles unsupported units in the same way.
 
 **Syntax:** _`DateTime`_.diffToNow(unit)
 
@@ -375,7 +397,7 @@ This applies to any method on this page marked **Source: Custom n8n functionalit
 
 **Parameters:**
 
-  * `n` (Number|Object) - The number of units to subtract. Or use a Luxon <a href=”https://moment.github.io/luxon/api-docs/index.html#duration”>Duration</a> object to subtract multiple units at once.
+  * `n` (Number|Object) - The number of units to subtract. Or use a Luxon <a href="https://moment.github.io/luxon/api-docs/index.html#duration">Duration</a> object to subtract multiple units at once.
   * `unit` (String) - optional - The units of the number. One of: <code>years</code>, <code>months</code>, <code>weeks</code>, <code>days</code>, <code>hours</code>, <code>minutes</code>, <code>seconds</code>, <code>milliseconds</code>
 
 **Examples:**
@@ -484,7 +506,7 @@ This applies to any method on this page marked **Source: Custom n8n functionalit
 
 **Parameters:**
 
-  * `n` (Number|Object) - The number of units to add. Or use a Luxon <a href=”https://moment.github.io/luxon/api-docs/index.html#duration”>Duration</a> object to add multiple units at once.
+  * `n` (Number|Object) - The number of units to add. Or use a Luxon <a href="https://moment.github.io/luxon/api-docs/index.html#duration">Duration</a> object to add multiple units at once.
   * `unit` (String) - optional - The units of the number. One of: <code>years</code>, <code>months</code>, <code>weeks</code>, <code>days</code>, <code>hours</code>, <code>minutes</code>, <code>seconds</code>, <code>milliseconds</code>
 
 **Examples:**
@@ -570,7 +592,7 @@ This applies to any method on this page marked **Source: Custom n8n functionalit
 
 **Parameters:**
 
-  * `locale ` (String) - The locale to assign, e.g. ‘en-GB’ for British English or ‘pt-BR’ for Brazilian Portuguese. <a href=”https://www.localeplanet.com/icu/”>List</a> (unofficial)
+  * `locale ` (String) - The locale to assign, e.g. ‘en-GB’ for British English or ‘pt-BR’ for Brazilian Portuguese. <a href="https://www.localeplanet.com/icu/">List</a> (unofficial)
 
 **Examples:**
 
@@ -645,7 +667,7 @@ This applies to any method on this page marked **Source: Custom n8n functionalit
 
 **Parameters:**
 
-  * `opts ` (Object) - optional - Configuration options. See <a href=”https://moment.github.io/luxon/api-docs/index.html#datetimetoiso”>Luxon docs</a> for more info.
+  * `opts ` (Object) - optional - Configuration options. See <a href="https://moment.github.io/luxon/api-docs/index.html#datetimetoiso">Luxon docs</a> for more info.
 
 **Examples:**
 
@@ -682,7 +704,7 @@ This applies to any method on this page marked **Source: Custom n8n functionalit
 
 **Parameters:**
 
-  * `formatOpts ` (Object) - optional - Configuration options for the rendering. See <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#parameters”>Intl.DateTimeFormat</a> for a full list. Defaults to rendering a short date.
+  * `formatOpts ` (Object) - optional - Configuration options for the rendering. See <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#parameters">Intl.DateTimeFormat</a> for a full list. Defaults to rendering a short date.
 
 **Examples:**
 

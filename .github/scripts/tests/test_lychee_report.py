@@ -49,6 +49,290 @@ check("flatten: timeout without a code keeps status None", timeout["status"] is 
 # --- parse_status -----------------------------------------------------------------
 check("parse_status: non-numeric code becomes None", lr.parse_status({"status": {"code": "x", "text": "?"}}) == (None, "?"))
 check("parse_status: missing status", lr.parse_status({}) == (None, ""))
+# DOC-2615: keep lychee's details, which hold the cause, next to the category in `text`.
+check("parse_status: details are appended to text",
+      lr.parse_status({"status": {"text": "Network error", "details": "Too many redirects"}})
+      == (None, "Network error: Too many redirects"))
+check("parse_status: details alone when text is empty",
+      lr.parse_status({"status": {"details": "Too many redirects"}}) == (None, "Too many redirects"))
+check("parse_status: details already inside text are not repeated, URL tail dropped (lychee 0.24)",
+      lr.parse_status({"status": {
+          "text": "Network error: SSL certificate hostname mismatch. Check URL spelling "
+                  "(error sending request for url (https://wrong.host.badssl.com/))",
+          "details": "SSL certificate hostname mismatch. Check URL spelling"}})
+      == (None, "Network error: SSL certificate hostname mismatch. Check URL spelling"))
+# DOC-2626: the URL tail must go. Here it holds "ssl", which the DocOps cause function
+# would read as a bad certificate although the cause is a failed connection.
+_conn = lr.parse_status({"status": {
+    "text": "Network error: Connection failed. Check network connectivity and firewall settings "
+            "(error sending request for url (https://www.ssl.com/guide))",
+    "details": "Connection failed. Check network connectivity and firewall settings"}})
+check("parse_status: no URL left in a connection failure",
+      _conn == (None, "Network error: Connection failed. Check network connectivity and "
+                      "firewall settings") and "ssl" not in _conn[1].lower())
+check("parse_status: cached error stays as lychee wrote it",
+      lr.parse_status({"status": {"text": "Error (cached)"}}) == (None, "Error (cached)"))
+check("parse_status: cached error with lychee 0.24 details",
+      lr.parse_status({"status": {"text": "Error (cached)", "details": "Error (cached)"}})
+      == (None, "Error (cached)"))
+
+# --- a real lychee 0.24.2 report (DOC-2626) ----------------------------------------
+# fixtures/lychee/out-0.24.2.json: lychee 0.24.2 on Linux (the CI build), 2026-11-24, on
+# a sample page with two hosts that have no DNS record, three bad certificates, a 404 and
+# a working link. portal.airtop.ai is on the page twice, and lychee lists its
+# "Error (cached)" row BEFORE the row with the cause.
+v24 = json.loads((HERE / "fixtures" / "lychee" / "out-0.24.2.json").read_text(encoding="utf-8"))
+v24_rows = {f["url"]: f for f in lr.flatten_failures(v24)}
+check("0.24.2: one row per page and URL", len(lr.flatten_failures(v24)) == 6)
+check("0.24.2: the row with a cause beats the cached row on the same page",
+      v24_rows["https://portal.airtop.ai/"]["message"]
+      == "Network error: Connection failed. Check network connectivity and firewall settings")
+check("0.24.2: expired certificate is named",
+      v24_rows["https://expired.badssl.com/"]["message"]
+      == "Network error: SSL certificate expired. Site needs to renew certificate")
+check("0.24.2: untrusted certificate is named",
+      "certificate not trusted" in v24_rows["https://self-signed.badssl.com/"]["message"])
+check("0.24.2: wrong-host certificate is a certificate error",
+      "SSL certificate error" in v24_rows["https://wrong.host.badssl.com/"]["message"])
+check("0.24.2: 404 keeps its code",
+      v24_rows["https://github.com/n8n-io/no-such-repo-doc-2626"]["status"] == 404)
+check("0.24.2: no message repeats the URL",
+      all("error sending request" not in f["message"] for f in v24_rows.values()))
+
+# A cached row on another page takes the cause found on the first page.
+_cached = lr.flatten_failures({"error_map": {
+    "docs/a.md": [{"url": "https://gone.example/", "status": {
+        "text": "Network error: Connection failed. Check network connectivity and firewall "
+                "settings (error sending request for url (https://gone.example/))",
+        "details": "Connection failed. Check network connectivity and firewall settings"}}],
+    "docs/b.md": [{"url": "https://gone.example/",
+                   "status": {"text": "Error (cached)", "details": "Error (cached)"}}]}})
+check("flatten: a cached row on another page borrows the cause",
+      [f["message"] for f in _cached] == [
+          "Network error: Connection failed. Check network connectivity and firewall settings"] * 2)
+check("flatten: a cached row with no cause anywhere stays cached",
+      lr.flatten_failures({"error_map": {"docs/a.md": [
+          {"url": "https://x.example/", "status": {"text": "Error (cached)"}}]}})[0]["message"]
+      == "Error (cached)")
+
+# --- mark_missing_hosts: DNS lookup for lychee's generic connection failure ---------
+import socket
+
+
+def _resolver(answers):
+    """Fake getaddrinfo. answers maps host -> None (resolves) or a gaierror errno."""
+    calls = []
+
+    def resolve(host, port):
+        calls.append(host)
+        errno = answers[host]
+        if errno is not None:
+            raise socket.gaierror(errno, "fake")
+        return [("ok",)]
+    resolve.calls = calls
+    return resolve
+
+
+_rows = lr.flatten_failures(v24)
+_res = _resolver({"portal.airtop.ai": socket.EAI_NONAME,
+                  "n8n-docs-linkcheck-no-such-host-2626.com": socket.EAI_NONAME})
+lr.mark_missing_hosts(_rows, _res)
+_by = {f["url"]: f["message"] for f in _rows}
+check("dns: a host with no DNS record is named as such",
+      _by["https://portal.airtop.ai/"] == lr.DNS_GONE
+      and _by["https://n8n-docs-linkcheck-no-such-host-2626.com/"] == lr.DNS_GONE)
+check("dns: certificate failures and the 404 are not looked up",
+      sorted(_res.calls) == ["n8n-docs-linkcheck-no-such-host-2626.com", "portal.airtop.ai"])
+check("dns: certificate messages are left alone",
+      _by["https://expired.badssl.com/"].startswith("Network error: SSL certificate expired"))
+check("dns: the message says DNS, which DocOps reads as 'Host gone'", "DNS" in lr.DNS_GONE)
+
+_two = [{"page": p, "url": "https://flaky.example/a", "status": None,
+         "message": "Network error: Connection failed. Check network connectivity and firewall settings"}
+        for p in ("docs/a.md", "docs/b.md")]
+_res = _resolver({"flaky.example": socket.EAI_AGAIN})
+lr.mark_missing_hosts(_two, _res)
+check("dns: a temporary DNS failure is not proof the host is gone",
+      all(f["message"].startswith("Network error: Connection failed") for f in _two))
+check("dns: one lookup per host", _res.calls == ["flaky.example"])
+_up = [{"page": "docs/a.md", "url": "https://up.example/", "status": None,
+        "message": "Network error: Connection failed. Check network connectivity and firewall settings"}]
+lr.mark_missing_hosts(_up, _resolver({"up.example": None}))
+check("dns: a host that resolves keeps lychee's message",
+      _up[0]["message"].startswith("Network error: Connection failed"))
+_timeout = [{"page": "docs/a.md", "url": "https://slow.example/", "status": None, "message": "Timeout"}]
+_res = _resolver({})
+lr.mark_missing_hosts(_timeout, _res)
+check("dns: other failures are not looked up", _res.calls == [] and _timeout[0]["message"] == "Timeout")
+
+# cubic on #5808: getaddrinfo has no timeout of its own, and a bad URL must not crash
+# the report.
+import time
+
+_CONN = "Network error: Connection failed. Check network connectivity and firewall settings"
+
+
+def _hang(host, port):
+    time.sleep(3)
+    raise socket.gaierror(socket.EAI_NONAME, "too late")
+
+
+_slow = [{"page": "docs/a.md", "url": "https://slow-dns.example/", "status": None, "message": _CONN}]
+_t0 = time.monotonic()
+lr.mark_missing_hosts(_slow, _hang, timeout=0.2)
+check("dns: a lookup that hangs is abandoned after the timeout",
+      time.monotonic() - _t0 < 1.5)
+check("dns: an abandoned lookup is not proof the host is gone", _slow[0]["message"] == _CONN)
+_bad = [{"page": "docs/a.md", "url": "https://[::1/", "status": None, "message": _CONN}]
+_res = _resolver({})
+check("dns: a URL that does not parse is skipped, not a crash",
+      lr.mark_missing_hosts(_bad, _res)[0]["message"] == _CONN and _res.calls == [])
+_many = [{"page": "docs/a.md", "url": f"https://h{i}.example/", "status": None, "message": _CONN}
+         for i in range(lr.MAX_DNS_LOOKUPS + 5)]
+_res = _resolver({f"h{i}.example": socket.EAI_NONAME for i in range(lr.MAX_DNS_LOOKUPS + 5)})
+lr.mark_missing_hosts(_many, _res)
+check("dns: at most MAX_DNS_LOOKUPS lookups per report", len(_res.calls) == lr.MAX_DNS_LOOKUPS)
+check("dns: hosts past the cap keep lychee's message", _many[-1]["message"] == _CONN)
+
+# --- recheck_server_errors: lychee 0.24.2 does not retry a 5xx (DOC-2631) -----------
+
+
+def _fetcher(answers):
+    """Fake http_status. answers maps url -> list of statuses, one per try."""
+    calls = []
+
+    def fetch(url):
+        calls.append(url)
+        return answers[url].pop(0)
+    fetch.calls = calls
+    return fetch
+
+
+def _row(url, status, page="docs/a.md"):
+    return {"page": page, "url": url, "status": status, "message": f"Rejected status code: {status}"}
+
+
+_waits = []
+_fetch = _fetcher({"https://flaky.example/": [500, 200], "https://down.example/": [503, 502],
+                   "https://gone.example/": [404], "https://busy.example/": [502, 200]})
+_rec = lr.recheck_server_errors(
+    [_row("https://flaky.example/", 500), _row("https://flaky.example/", 500, "docs/b.md"),
+     _row("https://down.example/", 503), _row("https://gone.example/", 500),
+     _row("https://busy.example/", 502), _row("https://missing.example/", 404),
+     {"page": "docs/a.md", "url": "https://dns.example/", "status": None, "message": "x"}],
+    fetch=_fetch, sleep=_waits.append, workers=1)
+check("recheck: a 5xx that answers 2xx on a later try is recovered",
+      _rec == {"https://flaky.example/", "https://busy.example/"})
+check("recheck: a 5xx that stays a 5xx is kept", "https://down.example/" not in _rec)
+check("recheck: a real non-2xx answer (404) is kept, and not asked again",
+      "https://gone.example/" not in _rec and _fetch.calls.count("https://gone.example/") == 1)
+check("recheck: a URL on two pages is asked once per try",
+      _fetch.calls.count("https://flaky.example/") == 2)
+check("recheck: non-5xx rows and rows with no status are never asked",
+      "https://missing.example/" not in _fetch.calls and "https://dns.example/" not in _fetch.calls)
+check("recheck: it waits before each try", _waits[:2] == list(lr.RECHECK_WAITS))
+_none = _fetcher({"https://quiet.example/": [None, None]})
+check("recheck: no answer at all is not a recovery",
+      lr.recheck_server_errors([_row("https://quiet.example/", 500)], fetch=_none,
+                               sleep=lambda s: None, workers=1) == set())
+_capped = _fetcher({f"https://h{i}.example/": [200] for i in range(5)})
+lr.recheck_server_errors([_row(f"https://h{i}.example/", 500) for i in range(5)],
+                         fetch=_capped, sleep=lambda s: None, max_urls=3, workers=1)
+check("recheck: at most max_urls URLs are asked", len(_capped.calls) == 3)
+check("recheck: nothing to ask, no thread pool, empty set",
+      lr.recheck_server_errors([_row("https://x.example/", 404)], fetch=None) == set())
+# http_status with a fake opener: no network in this suite.
+import threading
+import urllib.error
+
+
+class _Resp:
+    def __init__(self, status):
+        self.status = status
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *exc):
+        return False
+
+
+def _opener(result):
+    def open_(req, timeout):
+        _opener.seen = (req.get_header("User-agent"), timeout)
+        if isinstance(result, Exception):
+            raise result
+        return _Resp(result)
+    return open_
+
+
+check("http_status: a 2xx answer gives its status",
+      lr.http_status("https://x.example/", opener=_opener(200)) == 200)
+check("http_status: sends lychee's user agent and the request timeout",
+      _opener.seen == (lr.USER_AGENT, lr.RECHECK_TIMEOUT))
+check("http_status: an HTTP error gives its code",
+      lr.http_status("https://x.example/", opener=_opener(
+          urllib.error.HTTPError("https://x.example/", 503, "x", {}, None))) == 503)
+check("http_status: no answer gives None, not an exception",
+      lr.http_status("https://x.example/", opener=_opener(urllib.error.URLError("refused"))) is None)
+
+# cubic on #5808: concurrency is bounded, and a stuck request cannot hold up the report.
+_active, _peak, _lock = [0], [0], threading.Lock()
+
+
+def _slow(url):
+    with _lock:
+        _active[0] += 1
+        _peak[0] = max(_peak[0], _active[0])
+    time.sleep(0.05)
+    with _lock:
+        _active[0] -= 1
+    return 200
+
+
+_got = lr.recheck_server_errors([_row(f"https://c{i}.example/", 500) for i in range(6)],
+                                fetch=_slow, sleep=lambda s: None, workers=2)
+check("recheck: never more than `workers` requests at once", _peak[0] == 2)
+check("recheck: every URL still gets its answer with several workers", len(_got) == 6)
+
+_never = threading.Event()
+
+
+def _stuck_or_ok(url):
+    if "stuck" in url:
+        _never.wait()  # a request that never returns, like a stuck DNS lookup
+        return 200
+    return 200
+
+
+_t0 = time.monotonic()
+_got = lr.recheck_server_errors([_row("https://stuck.example/", 500), _row("https://ok.example/", 500)],
+                                fetch=_stuck_or_ok, sleep=lambda s: None, workers=2, deadline=0.5)
+check("recheck: stops at the deadline when a request hangs", time.monotonic() - _t0 < 2)
+check("recheck: a hung URL keeps lychee's row, a finished one is still recovered",
+      _got == {"https://ok.example/"})
+
+# build_payload leaves recovered URLs out of both lists and counts them.
+_stats5 = {"error_map": {
+    "docs/a.md": [{"url": "https://flaky.example/", "status": {"text": "500", "code": 500}},
+                  {"url": "https://busy.example/", "status": {"text": "502", "code": 502}},
+                  {"url": "https://down.example/", "status": {"text": "503", "code": 503}},
+                  {"url": "https://dead.example/", "status": {"text": "404", "code": 404}}],
+    "docs/b.md": [{"url": "https://flaky.example/", "status": {"text": "500", "code": 500}}]}}
+_p5 = lr.build_payload(_stats5, ctx, recovered={"https://flaky.example/", "https://busy.example/"})
+check("payload: recovered URLs are not in failures or blocked",
+      {f["url"] for f in _p5["failures"] + _p5["blocked"]}
+      == {"https://down.example/", "https://dead.example/"})
+check("payload: recovered rows are counted, every page",
+      _p5["totals"]["recovered_on_recheck"] == 3)
+check("payload: counts match the rows left",
+      _p5["totals"]["errors"] == 1 and _p5["totals"]["blocked"] == 1
+      and _p5["totals"]["server_errors"] == 1)
+check("payload: nothing recovered by default",
+      lr.build_payload(_stats5, ctx)["totals"]["recovered_on_recheck"] == 0)
+check("summary: says how many server errors answered on a second try",
+      "answered on a second try" in lr.summary_markdown(_p5)
+      and "answered on a second try" not in lr.summary_markdown(lr.build_payload(_stats5, ctx)))
 
 # --- build_payload ----------------------------------------------------------------
 payload = lr.build_payload(stats, ctx)
@@ -56,7 +340,8 @@ check("payload: source and run metadata",
       payload["source"] == "lychee-weekly" and payload["run_id"] == "123" and payload["sha"] == "abc")
 check("payload: totals map lychee 'excludes' to 'excluded'; errors = delivered rows (incl. timeouts), lychee's own counter kept",
       payload["totals"] == {"total": 120, "successful": 100, "excluded": 16, "timeouts": 1,
-                            "errors": 3, "blocked": 1, "lychee_errors": 3})
+                            "errors": 3, "blocked": 1, "server_errors": 0, "lychee_errors": 3,
+                            "recovered_on_recheck": 0})
 check("payload: failures included and not truncated",
       len(payload["failures"]) == 3 and payload["failures_truncated"] is False)
 
@@ -74,6 +359,58 @@ rate_limited = lr.build_payload(
 check("payload: 429 counts as blocked, not broken",
       rate_limited["totals"]["errors"] == 0 and rate_limited["totals"]["blocked"] == 1)
 check("payload: exit code passed through", payload["lychee_exit_code"] == 2)
+
+# DOC-2568: a GitHub outage returned 504 to anonymous requests and the sweep called 181
+# live links broken. Gateway errors are "not verifiable", like a WAF refusal.
+outage = lr.build_payload({"error_map": {
+    "./docs/changelog/release-notes-0.x.md": [
+        {"url": "https://github.com/aarongut", "status": {"code": 504, "text": "Gateway Timeout"}},
+        {"url": "https://github.com/curryy", "status": {"code": 502, "text": "Bad Gateway"}},
+        {"url": "https://github.com/mertmit", "status": {"code": 503, "text": "Service Unavailable"}}],
+    "./docs/integrations/builtin/credentials/halopsa.md": [
+        {"url": "https://halopsa.com/guides/article/?kbid=1737", "status": {"code": 404, "text": "Not Found"}},
+        {"url": "https://example.com/broken", "status": {"code": 500, "text": "Internal Server Error"}}]}}, ctx)
+check("payload: 502/503/504 count as not verifiable, not broken",
+      outage["totals"]["blocked"] == 3
+      and {f["status"] for f in outage["blocked"]} == {502, 503, 504})
+check("payload: 404 and 500 still count as broken",
+      outage["totals"]["errors"] == 2
+      and sorted(f["status"] for f in outage["failures"]) == [404, 500])
+check("payload: no gateway error left in failures",
+      all(f["status"] not in lr.SERVER_ERROR_STATUSES for f in outage["failures"]))
+outage_summary = lr.summary_markdown(outage)
+check("summary: names the server errors inside the not-verifiable bucket",
+      "Broken: 2" in outage_summary
+      and "server errors (502/503/504), usually a host outage: 3" in outage_summary)
+check("summary: no server-error line when there are none",
+      "server errors" not in lr.summary_markdown(rate_limited))
+check("payload: server_errors total counts the 502/503/504 rows", outage["totals"]["server_errors"] == 3)
+
+# During the outage the second pass hits the same 504s and reports `error` (no verdict).
+# That must not withdraw the lychee row, or the link leaves the not-verifiable count.
+gh_504 = {"error_map": {"./docs/changelog/release-notes-0.x.md": [
+    {"url": "https://github.com/aarongut", "status": {"code": 504, "text": "Gateway Timeout"}}]}}
+no_verdict = lr.merge_quality(lr.build_payload(gh_504, ctx), {"totals": {}, "findings": [
+    {"page": "docs/changelog/release-notes-0.x.md", "url": "https://github.com/aarongut",
+     "kind": "error", "detail": "unexpected status 504"}]})
+check("merge: a second-pass 'error' on a 504 keeps the blocked row",
+      len(no_verdict["blocked"]) == 1 and no_verdict["quality"] == []
+      and no_verdict["totals"]["blocked"] == 1 and no_verdict["totals"]["server_errors"] == 1)
+real_verdict = lr.merge_quality(lr.build_payload(gh_504, ctx), {"totals": {}, "findings": [
+    {"page": "docs/changelog/release-notes-0.x.md", "url": "https://github.com/aarongut",
+     "kind": "dead", "detail": "returns 404 to a browser user agent"}]})
+check("merge: a second-pass 'dead' on a 504 still wins and updates both totals",
+      real_verdict["blocked"] == [] and real_verdict["quality"][0]["kind"] == "dead"
+      and real_verdict["totals"]["blocked"] == 0 and real_verdict["totals"]["server_errors"] == 0)
+
+# The "of which server errors" line must use the real count, not the capped row list.
+many_504 = {"error_map": {"./docs/a.md": [
+    {"url": f"https://github.com/u{i}", "status": {"code": 504, "text": "Gateway Timeout"}}
+    for i in range(lr.MAX_FAILURES + 25)]}}
+big_outage = lr.build_payload(many_504, ctx)
+check("summary: server-error count is not capped at MAX_FAILURES",
+      len(big_outage["blocked"]) == lr.MAX_FAILURES
+      and f"usually a host outage: {lr.MAX_FAILURES + 25}" in lr.summary_markdown(big_outage))
 
 # fallback to fail_map (older lychee) and errors derived from the map when the counter is absent
 old = {"total": 5, "fail_map": {"./docs/a.md": [{"url": "https://x/1", "status": "500 Internal Server Error"}]}}
@@ -224,6 +561,7 @@ summary = lr.summary_markdown(payload)
 check("summary: mentions counts (Broken = rows in the table)", "Checked: 120" in summary and "Broken: 3" in summary)
 check("summary: lists pages with counts", "airtable.md` | 1" in summary)
 check("summary: reports the blocked bucket separately", "Blocked by the host" in summary and "not verifiable): 1" in summary)
+check("summary: the blocked label names the server errors too", "502/503/504, not verifiable" in summary)
 check("summary: missing report explained", "did not produce a report" in lr.summary_markdown(missing))
 
 # --- BLOCKED_STATUSES, which exists twice -------------------------------------------
@@ -237,6 +575,31 @@ check("blocked statuses: link_second_pass.py still declares the set where we can
 check("blocked statuses: the two copies have not drifted",
       bool(_m) and {int(x) for x in _m.group(1).replace(" ", "").strip(",").split(",")}
       == set(lr.BLOCKED_STATUSES))
+
+# --- main(): dry run --------------------------------------------------------------
+# A manual run with send_report=false must build the report and never POST it. The
+# webhook URL points at a closed local port: a POST attempt would fail and return 1.
+import os
+import tempfile
+
+with tempfile.TemporaryDirectory() as tmp:
+    saved = dict(os.environ)
+    os.environ.update({
+        "REPORT": str(FIXTURE), "QUALITY_REPORT": str(Path(tmp) / "none.json"),
+        "PAYLOAD_OUT": str(Path(tmp) / "out" / "payload.json"), "DRY_RUN": "true",
+        "WEBHOOK_URL": "http://127.0.0.1:9/never", "EXIT_CODE": "2"})
+    os.environ.pop("GITHUB_STEP_SUMMARY", None)
+    try:
+        rc = lr.main()
+        written = json.loads((Path(tmp) / "out" / "payload.json").read_text(encoding="utf-8"))
+        check("dry run: exits 0 without posting", rc == 0)
+        check("dry run: writes the payload it would have sent",
+              written["totals"]["errors"] == payload["totals"]["errors"])
+        os.environ["DRY_RUN"] = "false"
+        check("dry run off: still tries to post (and fails on the closed port)", lr.main() == 1)
+    finally:
+        os.environ.clear()
+        os.environ.update(saved)
 
 # --- report ------------------------------------------------------------------------
 failed = [name for name, ok in checks if not ok]

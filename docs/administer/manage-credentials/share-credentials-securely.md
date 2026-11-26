@@ -43,7 +43,7 @@ You don't need to share your own credentials to use them in a team project you'r
 
 Users can share credentials they created and own. Only project admins can share credentials created in and owned by a project. Instance owners and instance admins can view and share all credentials on an instance. On the **Sharing** tab, only the credential's owner, or users with permission to share credentials, can change who the credential is shared with.
 
-Refer to [Instance roles](../manage-users-and-access/understand-instance-roles.md) for more information about owners and admins.
+Refer to [Instance roles](../manage-users-and-access/set-permissions-and-roles-rbac/understand-instance-roles.md) for more information about owners and admins.
 
 In [projects](../manage-users-and-access/set-permissions-and-roles-rbac/README.md), a user's role controls how they can interact with the workflows and credentials associated to the projects they're a member of.
 
@@ -71,7 +71,7 @@ People you share a credential with get the **Can use** role: they can run and pu
 
 The **Sharing** tab lists everyone with access to the credential, and every project that uses it:
 
-* **Shared projects:** members can use the credential, according to their [project role](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md).
+* **Shared projects:** members can use the credential, according to their [project role](../manage-users-and-access/set-permissions-and-roles-rbac/understand-project-roles.md).
 * **Projects that use it without a share:** a member added their personal credential to one of the project's workflows. The project has the **Can view** label, so its members can see the credential on the workflow but can't use or edit it. Members you shared the credential with directly can still use it. To give the whole project access, select **Share**.
 
 In team projects, Owners and Admins follow the same sharing rules as everyone else: they can use your credential only after you share it with them. Their instance role only extends to their own personal space.

@@ -38,6 +38,7 @@
   * [Favorite items](manage-workflows/favorite-items.md)
   * [View change history](manage-workflows/view-change-history.md)
   * [Review workflows](manage-workflows/workflow-reviews.md)
+  * [Self-healing workflows](manage-workflows/self-healing-workflows.md)
   * [Export and import](manage-workflows/export-and-import.md)
   * [n8n packages](manage-workflows/n8n-packages/README.md)
     * [Package format](manage-workflows/n8n-packages/package-format.md)
@@ -141,4 +142,5 @@
     * [Use AI for parameters](integrate-ai/ai-examples/use-ai-for-parameters.md)
 * [Agentic context management](agentic-context-management/README.md)
   * [Preferences](agentic-context-management/preferences.md)
+  * [Skills](agentic-context-management/skills.md)
 * [Keyboard shortcuts](keyboard-shortcuts.md)

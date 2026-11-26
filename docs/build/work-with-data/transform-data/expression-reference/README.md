@@ -574,7 +574,7 @@ See also <code>slice()</code> and <code>append()</code>.
 
 * [_`Number`_.**`format(locale?, options?)`**](number.md#numberformat)
 
-    Returns a formatted string representing the number. Useful for formatting for a specific language or currency. The same as <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat”><code>Intl.NumberFormat()</code></a>.
+    Returns a formatted string representing the number. Useful for formatting for a specific language or currency. The same as <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat"><code>Intl.NumberFormat()</code></a>.
 
 * [_`Number`_.**`isEmpty()`**](number.md#numberisempty)
 
@@ -713,7 +713,7 @@ Always uses the current node’s first input connector if there is more than one
 
 * [**`$ifEmpty(value, valueIfEmpty)`**](root.md#dollarifempty)
 
-    Returns the first parameter if it isn’t empty, otherwise returns the second parameter. The following count as empty: <code>””</code>, <code>[]</code>, <code>{}</code>, <code>null</code>, <code>undefined</code>
+    Returns the first parameter if it isn’t empty, otherwise returns the second parameter. The following count as empty: <code>""</code>, <code>[]</code>, <code>{}</code>, <code>null</code>, <code>undefined</code>
 
 * [**`$input`**](root.md#dollarinput)
 
@@ -725,7 +725,7 @@ Always uses the current node’s first input connector if there is more than one
 
 * [**`$jmespath(obj, expression)`**](root.md#dollarjmespath)
 
-    Extracts data from an object (or array of objects) using a <a href=”/code/cookbook/jmespath/”>JMESPath</a> expression. Useful for querying complex, nested objects. Returns <code>undefined</code> if the expression is invalid.
+    Extracts data from an object (or array of objects) using a <a href="../../../code-in-n8n/use-built-in-shortcuts/jmespath.md">JMESPath</a> expression. Useful for querying complex, nested objects. Returns <code>undefined</code> if the expression is invalid.
 
 * [**`$json`**](root.md#dollarjson)
 
@@ -748,6 +748,10 @@ Always uses the current node’s first input connector if there is more than one
     A DateTime representing the current moment. 
 
 Uses the workflow’s time zone (which can be changed in the workflow settings).
+
+* [**`numberList(start, end)`**](root.md#numberlist)
+
+    Returns an array of the numbers from <code>start</code> to <code>end</code>, in steps of 1
 
 * [**`$pageCount`**](root.md#dollarpagecount)
 
@@ -824,7 +828,7 @@ If the string also contains other content, try using <code>extractEmail()</code>
 
 * [_`String`_.**`extractUrlPath()`**](string.md#stringextracturlpath)
 
-    Returns the part of a URL after the domain, or <code>undefined</code> if no URL found. 
+    Returns the path of a URL, excluding the query string and the fragment. Returns <code>undefined</code> if it can't read the string as a URL.
 
 If the string also contains other content, try using <code>extractUrl()</code> first.
 
@@ -846,7 +850,7 @@ If the string also contains other content, try using <code>extractUrl()</code> f
 
 * [_`String`_.**`isEmail()`**](string.md#stringisemail)
 
-    Returns <code>true</code> if the string is an email
+    Returns <code>true</code> if the whole string is one email address
 
 * [_`String`_.**`isEmpty()`**](string.md#stringisempty)
 
@@ -866,11 +870,11 @@ If the string also contains other content, try using <code>extractUrl()</code> f
 
 * [_`String`_.**`length`**](string.md#stringlength)
 
-    The number of characters in the string
+    The number of characters in the string. Most emoji count as two characters.
 
 * [_`String`_.**`match(regexp)`**](string.md#stringmatch)
 
-    Matches the string against a <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions”>regular expression</a>. Returns an array containing the first match, or all matches if the <code>g</code> flag is set in the regular expression. Returns <code>null</code> if no matches are found. 
+    Matches the string against a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions">regular expression</a>. Returns an array containing the first match, or all matches if the <code>g</code> flag is set in the regular expression. Returns <code>null</code> if no matches are found. 
 
 For checking whether text is present, consider <code>includes()</code> instead.
 
@@ -906,7 +910,7 @@ To replace all occurrences, use <code>replaceAll()</code> instead.
 
 * [_`String`_.**`search(regexp)`**](string.md#stringsearch)
 
-    Returns the index (position) of the first occurrence of a pattern within the string, or -1 if not found. The pattern is specified using a <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions”>regular expression</a>. To use text instead, see <code>indexOf()</code>.
+    Returns the index (position) of the first occurrence of a pattern within the string, or -1 if not found. The pattern is specified using a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions">regular expression</a>. To use text instead, see <code>indexOf()</code>.
 
 * [_`String`_.**`slice(start, end?)`**](string.md#stringslice)
 
@@ -934,7 +938,7 @@ The opposite of using <code>join()</code> on an array.
 
     Converts the string to a DateTime. Useful for further transformation. Supported formats for the string are ISO 8601, HTTP, RFC2822, SQL and Unix timestamp in milliseconds. 
 
-To parse other formats, use <a href=”https://moment.github.io/luxon/api-docs/index.html#datetimefromformat”> <code>DateTime.fromFormat()</code></a>.
+To parse other formats, use <a href="https://moment.github.io/luxon/api-docs/index.html#datetimefromformat"> <code>DateTime.fromFormat()</code></a>.
 
 * [_`String`_.**`toJsonString()`**](string.md#stringtojsonstring)
 

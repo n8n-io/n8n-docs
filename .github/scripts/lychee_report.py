@@ -13,16 +13,23 @@ n8n owns the alerting.
 Config comes from the environment (see the workflow):
   REPORT (path to lychee JSON, default lychee/out.json), EXIT_CODE (lychee-action
   exit_code output), RUN_URL, WEBHOOK_URL / WEBHOOK_USER / WEBHOOK_PASSWORD,
+  PAYLOAD_OUT (optional: also write the payload to this path), DRY_RUN ("true" = build
+  and print the report, never POST it),
   plus GITHUB_REPOSITORY / GITHUB_RUN_ID / GITHUB_SHA / GITHUB_STEP_SUMMARY set by Actions.
 """
 
 import base64
 import json
 import os
+import socket
 import sys
+import threading
+import time
+import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.parse import urlsplit
 
 # lychee renamed its failure map across versions; read every spelling we know.
 MAP_KEYS = ("error_map", "fail_map", "timeout_map")
@@ -40,12 +47,63 @@ MAX_FAILURES = 500
 # `merge_quality` promotes that verdict over this bucket when it does.
 #
 # 429 is UNREACHABLE today and is kept as a guard, not as live behaviour: `accept` in
-# lychee.toml is still `["200", "429"]`, so lychee scores a rate-limited link as healthy
+# lychee.toml still holds 429 (`["200..=299", "429"]`), so lychee scores a rate-limited link as healthy
 # and it never reaches a failure map. Whether a 429 should be hidden that way is the same
 # question 403 already lost, but changing `accept` changes what the weekly sweep reports
 # and is not a review fix. Listed here so that removing it from `accept` needs no second
 # edit. Keep in step with the copy in link_second_pass.py; a test asserts they match.
 BLOCKED_STATUSES = frozenset({401, 403, 407, 429})
+
+# Gateway and availability errors: the host, or a proxy in front of it, failed to answer.
+# That says nothing about whether the page exists, so these go in the same not-verifiable
+# bucket as BLOCKED_STATUSES instead of counting as broken (DOC-2568). On 2026-11-09 a
+# GitHub incident returned 504 to anonymous requests for three hours. The sweep ran
+# inside it and reported 181 github.com links as broken. All of them answered 200 that
+# afternoon. 500 stays broken: it usually means the page itself is failing.
+#
+# Kept apart from BLOCKED_STATUSES on purpose. link_second_pass.py has its own copy of
+# that set, and there a 5xx is already an `error` (no verdict), which is right.
+SERVER_ERROR_STATUSES = frozenset({502, 503, 504})
+UNVERIFIABLE_STATUSES = BLOCKED_STATUSES | SERVER_ERROR_STATUSES
+
+# lychee's text for a failed connection it could not classify. lychee 0.24.2 names TLS
+# failures precisely ("SSL certificate expired", "...hostname mismatch", "...not trusted"),
+# but on Linux and macOS a host with no DNS record also lands here: the lookup error
+# reaches lychee wrapped in a way its classifier does not open (measured 2026-11-24 on
+# portal.airtop.ai, DOC-2626). `mark_missing_hosts` settles those with one DNS lookup.
+# lychee 0.18.1, used before DOC-2626, appended "Maybe a certificate error?" to every
+# failed connection instead (DOC-2615); the version is now pinned in the workflows.
+LYCHEE_CONNECT_FAILED = "Connection failed"
+# Says "DNS" on purpose: the DocOps cause function (docops_outbound_link_cause, DOC-2614)
+# reads that word as "Host gone".
+DNS_GONE = "Network error: DNS lookup failed. The host has no DNS record"
+# getaddrinfo answers that mean "this name does not exist", not "try again later".
+# EAI_NODATA is missing on macOS, hence getattr.
+NO_SUCH_HOST_ERRNOS = frozenset(
+    e for e in (socket.EAI_NONAME, getattr(socket, "EAI_NODATA", None)) if e is not None)
+# Bounds on that lookup, so a slow resolver cannot stall the report: worst case
+# MAX_DNS_LOOKUPS x DNS_TIMEOUT seconds. The 2026-11-24 sweep needed one lookup.
+DNS_TIMEOUT = 5
+MAX_DNS_LOOKUPS = 50
+CACHED = "Error (cached)"
+
+# lychee 0.24.2 never retries an HTTP 5xx answer, whatever `max_retries` says: it treats
+# a rejected status as retryable only when it is 429 (lychee issue #2319). The fix
+# (lychee #2324, merged 2026-10-21) is not in a release yet; 0.25.0 is pending (lychee
+# #2217). On the two DOC-2626 test sweeps, 8 and 9 n8n.io pages came back as 500 and
+# answered 200 by hand, where lychee 0.18.1, which did retry, reported none. So the
+# report asks each 5xx URL again, after a pause, and leaves out the ones that answer
+# 2xx. Remove this with the bump to lychee 0.25.0 (DOC-2631).
+RECHECK_WAITS = (5, 10)     # seconds before each extra try
+RECHECK_TIMEOUT = 20        # per request, same as `timeout` in lychee.toml
+MAX_RECHECKS = 50           # URLs per report
+RECHECK_WORKERS = 8
+# Hard stop for the whole re-check. The request timeout does not cover the DNS lookup,
+# so a stuck resolver could otherwise hold up the report. A URL not settled by then
+# keeps lychee's row.
+RECHECK_DEADLINE = 240
+# Same as `user_agent` in lychee.toml, so the second try looks like the first one.
+USER_AGENT = "Mozilla/5.0 (compatible; n8n-docs-linkcheck/1.0; +https://github.com/n8n-io/n8n-docs)"
 
 # --------------------------------------------------------------------- pure helpers
 # No I/O here so the tests can cover them.
@@ -55,7 +113,13 @@ def parse_status(entry):
     """Return (code or None, message) from a lychee failure entry.
 
     lychee writes `status` either as an object ({"text": "...", "code": 404}) or, in
-    older versions, as a plain string like "404 Not Found"."""
+    older versions, as a plain string like "404 Not Found".
+
+    The message keeps the cause from `details` (DOC-2615); DocOps needs it to tell a host
+    that is gone from a bad certificate. lychee 0.24 writes
+    `text` = "Network error: <details> (error sending request for url (<url>))", so the
+    message stops at the end of the details (DOC-2626). The tail only repeats the URL, and
+    a URL holding "ssl" or "dns" would mislead the DocOps cause function."""
     status = entry.get("status") if isinstance(entry, dict) else None
     if isinstance(status, dict):
         code = status.get("code")
@@ -63,8 +127,13 @@ def parse_status(entry):
             code = int(code) if code is not None else None
         except (TypeError, ValueError):
             code = None
-        text = status.get("text") or status.get("details") or ""
-        return code, str(text)
+        text = str(status.get("text") or "")
+        details = str(status.get("details") or "")
+        if text and details:
+            if details in text:
+                return code, text[:text.index(details) + len(details)]
+            return code, f"{text}: {details}"
+        return code, text or details
     if isinstance(status, str):
         parts = status.split()
         code = int(parts[0]) if parts and parts[0].isdigit() else None
@@ -73,9 +142,14 @@ def parse_status(entry):
 
 
 def flatten_failures(stats):
-    """One flat, de-duplicated, sorted list of {page, url, status, message}."""
-    seen = set()
-    out = []
+    """One flat, de-duplicated, sorted list of {page, url, status, message}.
+
+    lychee checks a URL once per run and reports every later occurrence as
+    "Error (cached)", with no cause, and not always after the first one in the report.
+    So when one page holds a URL twice, the row with a cause wins; and a cached row left
+    on another page takes the cause found elsewhere (DOC-2626). Without that, the same
+    dead host read "Host gone" on one page and "No answer" on the next."""
+    rows = {}
     for key in MAP_KEYS:
         failure_map = (stats or {}).get(key) or {}
         if not isinstance(failure_map, dict):
@@ -86,13 +160,128 @@ def flatten_failures(stats):
                 page = page[2:]
             for entry in entries or []:
                 url = entry.get("url") if isinstance(entry, dict) else str(entry)
-                if not url or (page, url) in seen:
+                if not url:
                     continue
-                seen.add((page, url))
+                kept = rows.get((page, url))
+                if kept is not None and kept["message"] != CACHED:
+                    continue
                 code, message = parse_status(entry)
-                out.append({"page": page, "url": url, "status": code, "message": message})
-    out.sort(key=lambda f: (f["page"], f["url"]))
+                if kept is not None and message == CACHED:
+                    continue
+                rows[(page, url)] = {"page": page, "url": url, "status": code,
+                                     "message": message}
+    out = sorted(rows.values(), key=lambda f: (f["page"], f["url"]))
+    cause = {f["url"]: f for f in out if f["message"] != CACHED}
+    for f in out:
+        if f["message"] == CACHED and f["url"] in cause:
+            f["status"] = cause[f["url"]]["status"]
+            f["message"] = cause[f["url"]]["message"]
     return out
+
+
+def host_has_no_dns(host, resolve=socket.getaddrinfo, timeout=DNS_TIMEOUT):
+    """True only when DNS says the name does not exist. A timeout or a temporary
+    failure (EAI_AGAIN) is not proof that a host is gone, so it returns False.
+
+    getaddrinfo takes no timeout, so it runs on a daemon thread and is abandoned after
+    `timeout` seconds. A stuck lookup can then neither hold up the report nor keep the
+    process alive at exit."""
+    result = {}
+
+    def lookup():
+        try:
+            resolve(host, 443)
+            result["gone"] = False
+        except socket.gaierror as e:
+            result["gone"] = e.errno in NO_SUCH_HOST_ERRNOS
+        except (OSError, UnicodeError, ValueError):
+            result["gone"] = False
+
+    worker = threading.Thread(target=lookup, daemon=True)
+    worker.start()
+    worker.join(timeout)
+    return result.get("gone", False)
+
+
+def mark_missing_hosts(failures, resolve=socket.getaddrinfo, timeout=DNS_TIMEOUT):
+    """Rewrite lychee's generic "Connection failed" as a DNS failure when the host has
+    no DNS record. One lookup per host, at most MAX_DNS_LOOKUPS. Rows with an HTTP
+    status, any other cause, or a URL that does not parse are left alone. Returns the
+    same list."""
+    verdicts = {}
+    for f in failures:
+        if f["status"] is not None or LYCHEE_CONNECT_FAILED not in f["message"]:
+            continue
+        try:
+            host = urlsplit(f["url"]).hostname
+        except ValueError:  # e.g. an unclosed IPv6 bracket
+            continue
+        if not host:
+            continue
+        if host not in verdicts:
+            if len(verdicts) >= MAX_DNS_LOOKUPS:
+                continue
+            verdicts[host] = host_has_no_dns(host, resolve, timeout)
+        if verdicts[host]:
+            f["message"] = DNS_GONE
+    return failures
+
+
+def http_status(url, timeout=RECHECK_TIMEOUT, opener=urllib.request.urlopen):
+    """GET the URL with lychee's user agent, following redirects. Returns the final HTTP
+    status, or None when there is no HTTP answer at all."""
+    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    try:
+        with opener(req, timeout=timeout) as resp:
+            return resp.status
+    except urllib.error.HTTPError as e:
+        return e.code
+    except Exception:  # noqa: BLE001 - no answer is not a recovery
+        return None
+
+
+def recheck_server_errors(failures, fetch=http_status, waits=RECHECK_WAITS, sleep=time.sleep,
+                          max_urls=MAX_RECHECKS, workers=RECHECK_WORKERS,
+                          deadline=RECHECK_DEADLINE):
+    """The set of URLs that lychee reported with a 5xx and that answer 2xx when asked
+    again (see RECHECK_WAITS). Each URL is asked once per wait, at most. Anything else
+    keeps lychee's row: another 5xx, no answer, or a real answer that is not 2xx (a 404
+    on the second try means the page is not fine, so it stays reported).
+
+    At most `workers` URLs are asked at a time. The checks run on daemon threads and the
+    whole re-check stops after `deadline` seconds, so a stuck request (the timeout does
+    not cover DNS) can neither hold up the report nor keep the process alive at exit."""
+    urls = sorted({f["url"] for f in failures
+                   if f["status"] is not None and 500 <= f["status"] <= 599})[:max_urls]
+    if not urls:
+        return set()
+
+    def recovered(url):
+        for wait in waits:
+            sleep(wait)
+            status = fetch(url)
+            if status is not None and 200 <= status <= 299:
+                return True
+            if status is not None and not 500 <= status <= 599:
+                return False
+        return False
+
+    found, lock, slots = set(), threading.Lock(), threading.Semaphore(workers)
+
+    def run(url):
+        with slots:
+            if recovered(url):
+                with lock:
+                    found.add(url)
+
+    threads = [threading.Thread(target=run, args=(url,), daemon=True) for url in urls]
+    for t in threads:
+        t.start()
+    end = time.monotonic() + deadline
+    for t in threads:
+        t.join(max(0.0, end - time.monotonic()))
+    with lock:
+        return set(found)
 
 
 def _int(value):
@@ -102,13 +291,17 @@ def _int(value):
         return 0
 
 
-def build_payload(stats, ctx):
+def build_payload(stats, ctx, recovered=frozenset()):
     """The contract between this Action and the n8n webhook. `stats` is the parsed
-    lychee JSON (or {} when the report is missing); `ctx` carries run metadata."""
+    lychee JSON (or {} when the report is missing); `ctx` carries run metadata.
+    `recovered` holds URLs that answered 2xx when re-checked (recheck_server_errors);
+    their rows are left out and counted in `recovered_on_recheck`."""
     stats = stats or {}
     all_failures = flatten_failures(stats)
-    failures = [f for f in all_failures if f["status"] not in BLOCKED_STATUSES]
-    blocked = [f for f in all_failures if f["status"] in BLOCKED_STATUSES]
+    recovered_rows = sum(1 for f in all_failures if f["url"] in recovered)
+    all_failures = [f for f in all_failures if f["url"] not in recovered]
+    failures = [f for f in all_failures if f["status"] not in UNVERIFIABLE_STATUSES]
+    blocked = [f for f in all_failures if f["status"] in UNVERIFIABLE_STATUSES]
     # `errors` = the rows we actually deliver (errors AND timeouts), so counts shown in
     # Slack/DocFather always match the sheet/Supabase rows. lychee's own counter, which
     # excludes timeouts, is kept separately as `lychee_errors`.
@@ -119,7 +312,12 @@ def build_payload(stats, ctx):
         "timeouts": _int(stats.get("timeouts")),
         "errors": len(failures),
         "blocked": len(blocked),
+        # The 502/503/504 share of `blocked`, counted before the MAX_FAILURES cap so
+        # the summary can say how much of the bucket was a host outage.
+        "server_errors": sum(1 for f in blocked if f["status"] in SERVER_ERROR_STATUSES),
         "lychee_errors": _int(stats.get("errors")),
+        # Rows lychee reported as 5xx that answered 2xx on a second try (DOC-2631).
+        "recovered_on_recheck": recovered_rows,
     }
     return {
         "source": "lychee-weekly",
@@ -168,16 +366,21 @@ def merge_quality(payload, quality):
         if url in reported:
             continue
         if url in blocked_urls:
-            if f.get("kind") == "blocked":
-                continue          # same verdict, no new information
+            # `blocked` is the same verdict and `error` is no verdict at all (the second
+            # pass got no answer either). Neither may withdraw the lychee row: during a
+            # host outage the second pass hits the same 504s, and promoting its `error`
+            # moved those links out of the not-verifiable count (DOC-2568).
+            if f.get("kind") in ("blocked", "error"):
+                continue
             promoted.add(url)
         kept.append(f)
 
-    withdrawn = 0
+    withdrawn = withdrawn_server = 0
     if promoted:
-        before = len(payload["blocked"])
+        gone = [f for f in payload["blocked"] if f["url"] in promoted]
         payload["blocked"] = [f for f in payload["blocked"] if f["url"] not in promoted]
-        withdrawn = before - len(payload["blocked"])
+        withdrawn = len(gone)
+        withdrawn_server = sum(1 for f in gone if f["status"] in SERVER_ERROR_STATUSES)
 
     q_totals = quality.get("totals") or {}
     payload["quality"] = kept[:MAX_FAILURES]
@@ -193,6 +396,8 @@ def merge_quality(payload, quality):
     # the cap; those stay counted, which overstates rather than hides. `blocked_truncated`
     # remains the flag that the list is partial.
     payload["totals"]["blocked"] = max(0, _int(payload["totals"].get("blocked")) - withdrawn)
+    payload["totals"]["server_errors"] = max(
+        0, _int(payload["totals"].get("server_errors")) - withdrawn_server)
     payload["totals"].update({
         "quality_checked": _int(q_totals.get("checked")),
         "soft_404": _int(q_totals.get("soft_404")),
@@ -214,8 +419,16 @@ def summary_markdown(payload):
                  f"successful {t['successful']}, timeouts {t['timeouts']})")
     lines.append(f"- Broken: {t['errors']}")
     if t.get("blocked"):
-        lines.append(f"- Blocked by the host (401/403/407/429, not verifiable): "
-                     f"{t['blocked']}")
+        lines.append(f"- Blocked by the host or server error "
+                     f"(401/403/407/429/502/503/504, not verifiable): {t['blocked']}")
+        # From the totals, not the delivered rows: those are capped at MAX_FAILURES.
+        server = _int(t.get("server_errors"))
+        if server:
+            lines.append(f"  - of which server errors (502/503/504), usually a host "
+                         f"outage: {server}")
+    if t.get("recovered_on_recheck"):
+        lines.append(f"- Server errors that answered on a second try, not reported "
+                     f"(lychee 0.24.2 does not retry them): {t['recovered_on_recheck']}")
     pages = {}
     for f in payload["failures"]:
         pages[f["page"]] = pages.get(f["page"], 0) + 1
@@ -273,7 +486,16 @@ def main():
         "exit_code": int(exit_code) if exit_code.isdigit() else None,
         "report_found": stats is not None,
     }
-    payload = build_payload(stats, ctx)
+    # Network access before the POST: a second try for each URL lychee reported with a
+    # 5xx (lychee 0.24.2 does not retry them, see RECHECK_WAITS), and one DNS lookup per
+    # host that lychee could not connect to.
+    recovered = recheck_server_errors(flatten_failures(stats)) if stats else set()
+    if recovered:
+        print(f"Re-checked server errors: {len(recovered)} URL(s) answered 2xx on a second "
+              f"try and are not reported: {', '.join(sorted(recovered))}")
+    payload = build_payload(stats, ctx, recovered)
+    # `blocked` rows always carry an HTTP status, so they never qualify for the DNS lookup.
+    mark_missing_hosts(payload["failures"])
 
     quality_path = Path(os.environ.get("QUALITY_REPORT", "lychee/quality.json"))
     if quality_path.is_file():
@@ -290,6 +512,20 @@ def main():
     if summary_path:
         with open(summary_path, "a", encoding="utf-8") as fh:
             fh.write(summary)
+
+    # Keep the exact payload next to the lychee report, so the run artifact shows what
+    # n8n received (or would have received). It holds no secrets.
+    payload_path = os.environ.get("PAYLOAD_OUT")
+    if payload_path:
+        Path(payload_path).parent.mkdir(parents=True, exist_ok=True)
+        Path(payload_path).write_text(json.dumps(payload, indent=2), encoding="utf-8")
+
+    # A manual run with send_report=false (lychee.yml): check everything, post nothing.
+    # Nothing reaches the webhook, so no Slack message, sheet tab, Supabase or Notion row.
+    if os.environ.get("DRY_RUN", "").lower() == "true":
+        print(f"Dry run: report NOT sent to n8n ({payload['totals']['errors']} broken "
+              f"link(s), {len(payload['failures'])} rows).")
+        return 0 if stats is not None else 1
 
     url = os.environ.get("WEBHOOK_URL")
     if not url:

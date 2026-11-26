@@ -29,6 +29,8 @@ Starting points for a Kubernetes setup:
 * [AWS](deploy-to-aws.md): self-host n8n on Amazon Web Services with Postgres and Kubernetes.
 * [AWS with Terraform](deploy-to-aws-with-terraform/README.md): deploy a production-grade, highly available n8n instance on AWS using the official Terraform module.
 * [Azure](deploy-to-azure.md): self-host n8n on Azure with Postgres and Kubernetes.
+* [Azure with Terraform](deploy-to-azure-with-terraform.md): deploy n8n in queue mode on Azure Kubernetes Service using the official Terraform module.
+* [Google Cloud with Terraform](deploy-to-gcp-with-terraform.md): deploy n8n in queue mode on Google Kubernetes Engine using the official Terraform module.
 * [Google Kubernetes Engine (GKE)](deploy-to-google-kubernetes.md): self-host n8n on Google Kubernetes Engine.
 * [OpenShift Local (CRC)](deploy-to-openshift-local-crc.md): deploy n8n on a local OpenShift cluster for testing, without cloud costs.
 
@@ -43,3 +45,5 @@ Configuration guides to help you get started on other platforms:
 * [Install using Docker Compose](../install-using-docker-compose.md)
 * [Install with npm](../install-with-npm.md)
 * [Install with Docker](../install-with-docker.md)
+* [Install with Helm](../install-with-helm.md)
+* [Production requirements](../production-requirements.md)

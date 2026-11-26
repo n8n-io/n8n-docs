@@ -40,7 +40,31 @@ Old-style release notes pages for [2.x](release-notes-2.x.md), [1.x](release-not
 For guidance on major version upgrades, see [v3.0 breaking changes](v30-breaking-changes.md), [v3.0 migration tool](v30-migration-tool.md), [v2.0 breaking changes](v20-breaking-changes.md), [v2.0 migration tool](v20-migration-tool.md), and [v1.0 migration guide](v10-migration-guide.md).
 {% endhint %}
 
+For what Preview, GA, deprecated, and removed mean, what Enterprise readiness means, and how n8n's version numbers work, refer to [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability).
+
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/iFLUKG9zJaouigaM7IOo/" %}
+
+## Archive and restore agents
+
+**Released:** 2026-11-17 in [n8n 3.3](release-notes.md#n8n33)
+
+You can now archive an agent instead of deleting it, and restore it later. Until now, the only way to remove an agent was to delete it for good. Archiving works the same way it does for workflows.
+
+When you archive an agent, n8n unpublishes it. That disconnects its channels and stops its scheduled tasks, but n8n keeps everything else: configuration, versions, sessions, execution logs, memory, knowledge, and channel settings. Archived agents are hidden from the agent list until you turn on **Show archived agents**. You can still open one in the builder, but it's read-only and can't be published or run.
+
+To bring an agent back, select **Unarchive**. It returns unpublished, so publish it again to reconnect its channels and schedules. To delete an agent permanently, archive it first, then select **Delete**.
+
+Agents that use an archived agent as a sub-agent keep the reference and show it with an Archived badge. A call to an archived sub-agent fails with an error asking you to restore it, so check what depends on an agent before you archive it.
+
+On the n8n MCP server, the `archive_agent` tool replaces `delete_agent`. For package exports, the `includeArchivedWorkflows` flag is now `includeArchived`, and project exports with it set also include archived agents.
+
+{% hint style="warning" %}
+**Preview status**
+
+Agents, including archive and restore, are in [Preview](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#feature-maturity-preview-ga-deprecated-and-removed) and may change. Avoid relying on them in production.
+{% endhint %}
+
+Learn more in [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents).
 
 ## Use your personal credentials in team projects
 
@@ -265,7 +289,7 @@ You can now read and update instance-level settings through the n8n public REST 
 
 To use these endpoints, generate an API key with the `securitySettings:manage` scope. Scopes are fixed on a key when you create it, so an existing key won't pick up a new scope: issue a new one. Settings endpoints for log streaming and SAML followed in n8n 2.32, OpenTelemetry in n8n 2.33, and OIDC and LDAP in n8n 2.34.
 
-Learn more in the [security policy API documentation](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/security-policy).
+Learn more in the [security policy API documentation](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/instance-settings/security-policy).
 
 {% hint style="info" %}
 **Availability:** Enterprise.
@@ -502,7 +526,7 @@ Connect to MCP servers with less setup
 
 You can now attach custom span attributes to OpenTelemetry traces at the node, workflow, and project level, letting you filter and group execution spans by tenant, environment, customer ID, or any other dimension. Attribute values support expressions, so they can pull live data from webhook payloads or API responses at runtime rather than relying on hardcoded values. Configure tags in node or workflow settings when tracing is enabled (`N8N_OTEL_ENABLED=true`).
 
-Learn more in the [custom span attributes documentation](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry#custom-span-attributes).
+Learn more in the [custom span attributes documentation](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/keep-n8n-running/trace-executions-with-opentelemetry/add-custom-span-attributes).
 
 {% hint style="info" %}
 **Availability:** Enterprise.
@@ -677,7 +701,7 @@ Vault connections can now be scoped to a single project. Secrets from that conne
 
 _Instance admin setup released in n8n 2.11 (2026-03-03)._ Instance admins create a project-scoped connection from **Settings > External Secrets**.
 
-_Full team access released in n8n 2.13 (2026-03-16)._ Project admins now manage their own vault connections from **Project Settings > External Secrets**. Instance-level connections shared with them appear as read-only. Project editors can use project-scoped secrets in credentials once an instance admin enables access with the **System Roles** toggle under **Settings > External Secrets**, or through custom roles for finer control. [Custom roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles) gained five secrets scopes: list, read, create, update, and delete. Instance admins and owners no longer need to be project members for secrets to resolve.
+_Full team access released in n8n 2.13 (2026-03-16)._ Project admins now manage their own vault connections from **Project Settings > External Secrets**. Instance-level connections shared with them appear as read-only. Project editors can use project-scoped secrets in credentials once an instance admin enables access with the **System Roles** toggle under **Settings > External Secrets**, or through custom roles for finer control. [Custom roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac#custom-roles) gained five secrets scopes: list, read, create, update, and delete. Instance admins and owners no longer need to be project members for secrets to resolve.
 
 Refer to [External secrets](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/use-external-secret-stores) for more information.
 
@@ -732,7 +756,7 @@ Available policies include:
 * **Sharing**: control whether users can share workflows and credentials from their personal space.
 * **Workflow publishing**: control whether users can publish workflows from their personal space.
 
-This release builds on recent updates to the permissions model, including [custom project roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles), to better support policy-driven governance.
+This release builds on recent updates to the permissions model, including [custom project roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac#custom-roles), to better support policy-driven governance.
 
 <figure><img src=".gitbook/assets/personal_space_policies.png" alt="The new Security &#x26; policies settings section"><figcaption><p>The new Security &#x26; policies settings section</p></figcaption></figure>
 
@@ -744,7 +768,7 @@ This release builds on recent updates to the permissions model, including [custo
 
 **Released:** 2026-02-13 in [n8n 2.8.3](release-notes.md#n8n28)
 
-The project role selector now splits built-in system roles and [custom roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles) into separate sections, so a long list of custom roles no longer buries the defaults. Hovering over any role shows a summary of its configured permissions, with an option to open the full permission details. Previously you had to leave the assignment flow and open the role itself to check what you were about to grant.
+The project role selector now splits built-in system roles and [custom roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac#custom-roles) into separate sections, so a long list of custom roles no longer buries the defaults. Hovering over any role shows a summary of its configured permissions, with an option to open the full permission details. Previously you had to leave the assignment flow and open the role itself to check what you were about to grant.
 
 <figure><img src=".gitbook/assets/custom_roles_selector.png" alt="System roles and custom roles are now displayed in separate sections"><figcaption><p>System roles and custom roles are now displayed in separate sections</p></figcaption></figure>
 

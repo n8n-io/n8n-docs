@@ -1,7 +1,7 @@
 ---
 description: >-
-  Bundle workflows and the structure they need into a portable .n8np file, and
-  move them between n8n instances.
+  Bundle workflows, agents, and the structure they need into a portable .n8np
+  file, and move them between n8n instances.
 status: preview
 layout:
   description:
@@ -25,11 +25,11 @@ n8n packages are available from n8n 2.27.0, and n8n has added options in most re
 n8n packages are in Preview. The package format and the API may change in future releases, so avoid relying on them for critical automation without a plan to update.
 {% endhint %}
 
-An n8n package is a single file that holds a slice of your n8n instance: some workflows, plus the structure and references those workflows need to run. Export a package from one instance, move the file, and import it into another. Think of it as an `npm` package for part of your n8n instance.
+An n8n package is a single file that holds a slice of your n8n instance: some workflows or agents, plus the structure and references they need to run. Export a package from one instance, move the file, and import it into another. Think of it as an `npm` package for part of your n8n instance.
 
 A package is a gzipped tar archive with the `.n8np` extension. Inside it, each entity is a small JSON file, and a `manifest.json` lists what's in the package and what the target instance has to supply. See [Package format](package-format.md) for the full layout.
 
-Packages are an API feature. You export and import them through the [n8n API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api), or through the [n8n CLI](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-cli), which wraps the same two endpoints. There's no way to export or import a package from the n8n editor.
+Packages are an API feature. You export and import them through the [n8n API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api), or through the [n8n CLI](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-cli), which wraps the same endpoints. There's no way to export or import a package from the n8n editor.
 
 ## Three package shapes
 
@@ -39,21 +39,22 @@ What you export decides the shape of the package, and the shape decides how the 
 * **Folder package**: one or more folders, always including everything nested inside them. On import, the folder tree lands in the project you choose.
 * **Project package**: one or more whole projects. The package carries its own projects, so it decides where its contents land and ignores any target project you pass.
 
-You can combine workflows and folders in one export. You can't combine either with projects.
+You can combine workflows, agents, and folders in one export, and a project package includes the agents in its projects. You can't combine workflows, agents, or folders with projects.
 
 ## What travels in a package
 
 | Travels | Doesn't travel |
 |---------|----------------|
-| Workflows: nodes, connections, settings, published state, archived state | Credential secrets and configuration |
+| Workflows: nodes, connections, settings, published state, archived state | Credential secrets and most values typed in directly |
 | Folders and their nesting | Data table rows |
 | Projects: name, description, icon | Executions and execution history |
-| Credential references: ID, name, and type only | Users, project members, roles, and sharing |
+| Credential references: ID, name, type, and fields set by an expression | Users, project members, roles, and sharing |
 | Data table schemas: column IDs, names, and types | Pinned data and workflow static data |
 | Variables: name and type, and the value unless you exclude it | Workflow version history |
 | Tags | Whether a workflow is marked as a favorite |
+| Agents: definition, custom tools, schedules, skills, and channel settings | Agent channel connections, sessions, and knowledge base files |
 
-**Credential secrets never travel.** A credential file in a package holds exactly three fields: ID, name, and type. Non-secret configuration such as a host, base URL, or region lives in the same encrypted store as the secret, so it doesn't travel either. On import, n8n matches each reference to a credential that already exists on the target instance, or creates an empty placeholder for you to fill in.
+**Credential secrets never travel.** A credential file in a package holds the credential's ID, name, and type. By default, it also holds the fields set by an n8n expression, such as `={{ $secrets.apiKey }}`, and the settings those fields depend on. It never holds a secret or another value typed in directly, such as a host or region. See [Credential values](export-a-package.md#credential-values). On import, n8n matches each reference to a credential that already exists on the target instance, or creates one for you to fill in.
 
 **Data table rows never travel.** Only the schema does. An imported data table starts empty.
 
@@ -63,7 +64,7 @@ Use packages when you need a repeatable, automatable way to move work between in
 
 * **Promote between environments.** Push workflows from development to staging to production as part of a pipeline. Repeated imports update in place rather than creating duplicates, so the same command works the first time and every time after.
 * **Migrate to a new instance.** Move a project, its folders, and its workflows in one file.
-* **Share work without sharing secrets.** Hand a workflow to another team knowing no credential data is in the file.
+* **Share work without sharing secrets.** Hand a workflow to another team knowing no credential secrets are in the file.
 * **Back up structure.** Keep a copy of the workflows and structure you'd need to rebuild, though a package isn't a full backup: no execution data travels.
 
 ## Quick start

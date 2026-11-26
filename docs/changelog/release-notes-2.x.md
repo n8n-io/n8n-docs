@@ -1180,7 +1180,7 @@ What's new:
 
 * Project admins manage their own vault connections from project settings.
 * Project editors can use project-scoped secrets in credentials once the instance admin enables access.
-* [Custom roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles) now include five secrets scopes: list, read, create, update, and delete.
+* [Custom roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac#custom-roles) now include five secrets scopes: list, read, create, update, and delete.
 * Instance admins/owners no longer need to be project members for secrets to resolve.
 
 **For instance admins:** go to **Settings > External Secrets** and enable the **System Roles** toggle, or use custom roles for more granular control.
@@ -1306,7 +1306,7 @@ Setting up credentials on n8n Cloud is now much simpler. For supported services,
 
 ### Custom roles: Assignments tab (Enterprise) <a href="#custom-roles-assignments-tab-enterprise" id="custom-roles-assignments-tab-enterprise"></a>
 
-Instance admins now have a dedicated **Assignments** tab on each [custom role](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles) showing every user assigned to that role, which project they're in, and a direct link to manage them — no more navigating project by project.
+Instance admins now have a dedicated **Assignments** tab on each [custom role](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac#custom-roles) showing every user assigned to that role, which project they're in, and a direct link to manage them — no more navigating project by project.
 
 Custom roles are available on n8n Enterprise.
 
@@ -1318,7 +1318,7 @@ Refer to [External secrets](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manag
 
 ### Workflow execute as a separate permission scope (Enterprise) <a href="#workflow-execute-as-a-separate-permission-scope-enterprise" id="workflow-execute-as-a-separate-permission-scope-enterprise"></a>
 
-`workflow:execute` is now a distinct scope in [custom project roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles), separate from editing and publishing. Users can be granted run access without being able to modify the workflow, which is a common compliance requirement for sensitive workflows.
+`workflow:execute` is now a distinct scope in [custom project roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac#custom-roles), separate from editing and publishing. Users can be granted run access without being able to modify the workflow, which is a common compliance requirement for sensitive workflows.
 
 This scope is available on n8n Enterprise.
 
@@ -1478,7 +1478,7 @@ Available policies include:
 * **Sharing**: control whether users can share workflows and credentials from their personal space.
 * **Workflow publishing**: control whether users can publish workflows from their personal space.
 
-This release builds on the recent updates to the permissions model, including [custom project roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles), to better support policy-driven governance.
+This release builds on the recent updates to the permissions model, including [custom project roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac#custom-roles), to better support policy-driven governance.
 
 Personal space policies are available on n8n Enterprise.
 
@@ -1570,7 +1570,7 @@ This makes it easier to audit who has access to which projects and credentials w
 
 ### More granular workflow permissions <a href="#more-granular-workflow-permissions" id="more-granular-workflow-permissions"></a>
 
-Workflow publishing permissions for [custom roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles) have been split into two separate scopes: **workflow:publish** and **workflow:unpublish**. This enables more precise access control in governance scenarios where unpublishing needs to be managed independently.
+Workflow publishing permissions for [custom roles](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac#custom-roles) have been split into two separate scopes: **workflow:publish** and **workflow:unpublish**. This enables more precise access control in governance scenarios where unpublishing needs to be managed independently.
 
 ### Performance and stability improvements <a href="#performance-and-stability-improvements" id="performance-and-stability-improvements"></a>
 

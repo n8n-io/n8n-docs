@@ -14,6 +14,10 @@ layout:
 
 # Troubleshooting OIDC SSO <a href="#troubleshooting-oidc-sso" id="troubleshooting-oidc-sso"></a>
 
+Troubleshooting OIDC SSO helps you find and fix problems when single sign-on (SSO) with OpenID Connect (OIDC) doesn't work in n8n.
+
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/3sB2Mxc1yXYEg1FeAYjK/" %}
+
 ## Known issues <a href="#known-issues" id="known-issues"></a>
 
 ### State parameter not supported <a href="#state-parameter-not-supported" id="state-parameter-not-supported"></a>

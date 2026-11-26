@@ -24,11 +24,17 @@ layout:
 {% hint style="info" %}
 **Feature availability**
 
-Single sign-on is available on:
+Single sign-on (SAML) is available on:
 
 - **Self-hosted:** Business, Enterprise
 
-n8n Cloud Enterprise also supports single sign-on, but not through the environment variables on this page.
+Single sign-on (OIDC) is available on:
+
+- **Self-hosted:** Enterprise
+
+n8n Cloud Enterprise also supports SAML and OIDC single sign-on, but not through the environment variables on this page.
+
+You need to be an instance owner or admin to enable and configure SAML or OIDC.
 {% endhint %}
 
 Refer to [Set up SSO](../../security/configure-sso.md) for in-app setup steps and identity provider guides. See [Manage instance settings using environment variables](../../manage-settings-using-environment-variables.md) for how the activation pattern works.

@@ -6,7 +6,263 @@
 <atom:link href="https://raw.githubusercontent.com/n8n-io/n8n-docs/main/feeds/release-notes.xml" rel="self" type="application/rss+xml"/>
 <description>Feature-level updates from n8n releases: what shipped in the editor and the integration nodes.</description>
 <language>en</language>
-<lastBuildDate>Wed, 28 Oct 2026 14:01:05 GMT</lastBuildDate>
+<lastBuildDate>Wed, 18 Nov 2026 14:01:00 GMT</lastBuildDate>
+<item>
+<title>Show restricted template nodes on the template page and in the setup panel</title>
+<link>https://github.com/n8n-io/n8n/pull/43739</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/43739</guid>
+<pubDate>Tue, 17 Nov 2026 00:00:00 GMT</pubDate>
+<category>n8n 3.3</category>
+<description>Templates now surface restricted node types instead of failing silently on save. The template detail page shows a callout listing restricted nodes with a link to admin settings, and greys out their icons. After clicking Try template, the setup panel shows a card for each restricted node with a Restricted badge, reason, contact-admin button, and a Replace node option that opens the node replacement picker.</description>
+</item>
+<item>
+<title>Add brand spinner for loading states</title>
+<link>https://github.com/n8n-io/n8n/pull/43468</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/43468</guid>
+<pubDate>Tue, 17 Nov 2026 00:00:00 GMT</pubDate>
+<category>n8n 3.3</category>
+<description>Added a new brand-styled spinner to n8n's design system, using the logo mark as an animation for full-page loading states, replacing the old ring spinner. The animation automatically stops for users with reduced-motion preferences enabled. This loader now appears across the editor, including workflow loading, execution previews, the AI agent builder, and dataset loading modals, giving a more consistent branded loading experience.</description>
+</item>
+<item>
+<title>Cleans up nudge assistant on workflow error experiment logic and rolls out feature to all instances</title>
+<link>https://github.com/n8n-io/n8n/pull/43435</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/43435</guid>
+<pubDate>Tue, 17 Nov 2026 00:00:00 GMT</pubDate>
+<category>n8n 3.3</category>
+<description>When a workflow execution fails, n8n now shows a &quot;Fix with n8n Assistant&quot; nudge on the error toast for all n8n Assistant-ready instances, no longer limited to an experiment cohort or cloud-only deployments. The nudge also received a visual fix for its animated outline so it displays correctly across different button border radiuses.</description>
+</item>
+<item>
+<title>Add archive and restore for agents</title>
+<link>https://github.com/n8n-io/n8n/pull/43394</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/43394</guid>
+<pubDate>Tue, 17 Nov 2026 00:00:00 GMT</pubDate>
+<category>n8n 3.3</category>
+<description>Agents can now be archived instead of permanently deleted. The agent list offers a 'Show archived agents' filter with an Archived label, and card/builder menus now show Archive (with confirmation for published agents) or Unarchive and Delete for archived agents. Archived agents open read-only in the builder with an Archived badge, hidden publish button, and hidden setup tasks; archived sub-agents also display an Archived badge where referenced.</description>
+</item>
+<item>
+<title>Clarify agent budget coverage with a dismissible caption</title>
+<link>https://github.com/n8n-io/n8n/pull/43385</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/43385</guid>
+<pubDate>Tue, 17 Nov 2026 00:00:00 GMT</pubDate>
+<category>n8n 3.3</category>
+<description>The Agent Builder's usage-and-limits panel now includes a dismissible caption clarifying that both the monthly and per-session budget caps cover estimated AI model costs, including memory, but exclude n8n Assistant usage. This helps builders understand exactly what their spending limits measure when configuring agent budgets. Dismissing the caption hides it for the current session, but it reappears in new tabs or sessions.</description>
+</item>
+<item>
+<title>Let users edit and save skills in the Assistant artifact panel</title>
+<link>https://github.com/n8n-io/n8n/pull/43314</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/43314</guid>
+<pubDate>Tue, 17 Nov 2026 00:00:00 GMT</pubDate>
+<category>n8n 3.3</category>
+<description>You can now edit and save skills directly from the Assistant artifact panel, without opening the Skills page. The inline editor supports editing name, description, instructions, and references, with a Save button that activates only on changes. Users without edit access see a read-only view. Drafts persist when switching artifacts, tab names update after saving, and a fix ensures repeated saves with reordered references no longer fail unexpectedly.</description>
+</item>
+<item>
+<title>Add Upload folder and Upload SKILL.md to the Create skills menu</title>
+<link>https://github.com/n8n-io/n8n/pull/43171</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/43171</guid>
+<pubDate>Tue, 17 Nov 2026 00:00:00 GMT</pubDate>
+<category>n8n 3.3</category>
+<description>The Create skills menu in Settings &gt; Context &gt; Skills is now available to everyone who can create skills, not just those with Skill Sync enabled. It now offers Upload folder, Upload SKILL.md, and Create manually, letting users pick a creation method upfront instead of choosing inside the modal. Uploads open the create form pre-filled; unreadable files show a clear error. Connect to GitHub still requires Skill Sync.</description>
+</item>
+<item>
+<title>Move the user's links into an account menu at the bottom of the sidebar</title>
+<link>https://github.com/n8n-io/n8n/pull/42642</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/42642</guid>
+<pubDate>Tue, 17 Nov 2026 00:00:00 GMT</pubDate>
+<category>n8n 3.3</category>
+<description>The sidebar's bottom section has been redesigned: Help and Settings dropdowns are replaced with a simple Instance settings link and a single account menu accessed via your avatar/name. The account menu groups Cloud console (for cloud owners), Personal settings, What's new, Help links, About n8n, and Sign out. The unread-updates indicator now appears on the avatar, and the About n8n dialog has been visually refreshed with clearer version, license, and debug info sections.</description>
+</item>
+<item>
+<title>Add a shared settings enable row</title>
+<link>https://github.com/n8n-io/n8n/pull/42471</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/42471</guid>
+<pubDate>Tue, 17 Nov 2026 00:00:00 GMT</pubDate>
+<category>n8n 3.3</category>
+<description>Settings pages that let you enable or disable a feature now share a consistent look and behavior. Agents, Chat, Assistant, Workflow Reviews, OpenTelemetry, and External Secrets use a unified enable row with matching switch sizing. Turning a feature off now consistently hides its related settings sections (e.g. sandbox, collector/tracing, model, MCP, permissions) instead of varying by page, giving a cleaner, more predictable settings experience.</description>
+</item>
+<item>
+<title>MCP Client Tool Node: Accept generic OAuth2 API credentials</title>
+<link>https://github.com/n8n-io/n8n/pull/37371</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/37371</guid>
+<pubDate>Tue, 17 Nov 2026 00:00:00 GMT</pubDate>
+<category>n8n 3.3</category>
+<description>The MCP Client and MCP Client Tool nodes now support the generic OAuth2 API credential as an authentication option, alongside the existing MCP OAuth2 credential. This lets you reuse the same OAuth2 credential for both the HTTP Request node and an MCP server, useful for providers that only allow one active token per OAuth app. Note this credential has no Resource URL (RFC 8707) field; servers requiring one still need MCP OAuth2. Also fixes initial token acquisition for client-credentials OAuth2 credentials that had no token yet.</description>
+</item>
+<item>
+<title>GitHub Node: Add Secret resource</title>
+<link>https://github.com/n8n-io/n8n/pull/25441</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/25441</guid>
+<pubDate>Tue, 17 Nov 2026 00:00:00 GMT</pubDate>
+<category>n8n 3.3</category>
+<description>The GitHub node now supports a Secret resource with a Create or Update operation, letting you set GitHub Actions repository secrets directly from n8n. The node fetches the repository's public key, encrypts the secret value client-side using libsodium sealed box encryption, and stores it via the GitHub API, with secret name validation and a password-masked value field.</description>
+</item>
+<item>
+<title>Show Gateway credits promotions from the Gateway config</title>
+<link>https://github.com/n8n-io/n8n/pull/43661</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/43661</guid>
+<pubDate>Fri, 13 Nov 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.47.6</category>
+<description>n8n can now show Gateway credits promotions for built-in nodes, not just community nodes. Promotions are read directly from the Gateway config, letting n8n display offer callouts (e.g. for Google Gemini) in the node creator, the NDV, and the credential modal without needing a release or Strapi record. Gateway-defined promotions take precedence over community node promotions when both match, with date-based validity checks applied on each lookup.</description>
+</item>
+<item>
+<title>Paddle Node: Rename node to Paddle Classic</title>
+<link>https://github.com/n8n-io/n8n/pull/43042</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/43042</guid>
+<pubDate>Tue, 10 Nov 2026 00:00:00 GMT</pubDate>
+<category>n8n 3.2</category>
+<description>The Paddle node has been renamed to &quot;Paddle Classic&quot; and its credential to &quot;Paddle Classic API&quot; to clarify that it only supports the Paddle Classic platform, not Paddle Billing. Both the node and credential now show a notice directing Paddle Billing users to the dedicated Paddle Billing node. Existing workflows, credentials, and node names are unaffected; only newly added nodes get the updated default name.</description>
+</item>
+<item>
+<title>App bindings UI</title>
+<link>https://github.com/n8n-io/n8n/pull/42986</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/42986</guid>
+<pubDate>Tue, 10 Nov 2026 00:00:00 GMT</pubDate>
+<category>n8n 3.2</category>
+<description>You can now configure App bindings directly from the Configuration tab of an App. Add connections to workflows, data tables, and agents in the project, set permissions, and manage them from a new Connections section. The n8n Assistant can also propose and set up these bindings when building an app for you. This feature is currently in internal testing.</description>
+</item>
+<item>
+<title>Link Apps to n8n Assistant chats</title>
+<link>https://github.com/n8n-io/n8n/pull/42969</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/42969</guid>
+<pubDate>Tue, 10 Nov 2026 00:00:00 GMT</pubDate>
+<category>n8n 3.2</category>
+<description>Apps are now linked to n8n Assistant chats. This feature is currently in internal alpha. Opening an app detail view takes you to its most recent linked chat (or creates one if none exists), and you can add apps as resources to existing chat threads. A new &quot;Create app&quot; button on the empty apps list opens an app-specific empty Assistant chat to get started.</description>
+</item>
+<item>
+<title>Show a restriction callout in the credential modal</title>
+<link>https://github.com/n8n-io/n8n/pull/42678</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/42678</guid>
+<pubDate>Tue, 10 Nov 2026 00:00:00 GMT</pubDate>
+<category>n8n 3.2</category>
+<description>The credential edit modal now shows a warning callout when a credential type is restricted by an instance or project policy, or pending project admin approval. The callout names the credential type and the reason, and offers a button to view and contact the relevant admins. Fields remain editable and saving still works.</description>
+</item>
+<item>
+<title>Unify chat messages and Markdown rendering</title>
+<link>https://github.com/n8n-io/n8n/pull/42315</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/42315</guid>
+<pubDate>Tue, 10 Nov 2026 00:00:00 GMT</pubDate>
+<category>n8n 3.2</category>
+<description>Agents chat and n8n Assistant (AIA) now share consistent Markdown rendering and message styling. Code blocks use the shared copy-enabled code component with syntax highlighting for more languages, tables and typography are tidied up, and resource links display icons for easier identification. Message bubbles and fonts are also unified across both chat interfaces for a more consistent experience.</description>
+</item>
+<item>
+<title>Open the migration report filtered to the recipient from notification emails</title>
+<link>https://github.com/n8n-io/n8n/pull/43095</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/43095</guid>
+<pubDate>Mon, 09 Nov 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.47.3</category>
+<description>Migration finding notification emails now link directly to the migration report pre-filtered to the recipient's own workflows, instead of the full unfiltered report. This saves owners from having to manually search for the workflows they need to fix after receiving a notification.</description>
+</item>
+<item>
+<title>Show a message when the migration report takes long to load</title>
+<link>https://github.com/n8n-io/n8n/pull/43001</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/43001</guid>
+<pubDate>Wed, 04 Nov 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.46.5</category>
+<description>In Settings &gt; Migration report, if loading or refreshing the report takes longer than 5 seconds, a message now appears over the loading skeleton: 'Still scanning your workflows…' with a note that this can take a while on instances with many workflows. The message disappears once the report finishes loading, so users on large instances get a clear signal the scan is still running rather than seeing an unexplained skeleton.</description>
+</item>
+<item>
+<title>Show app blueprint card before creating an app</title>
+<link>https://github.com/n8n-io/n8n/pull/42815</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/42815</guid>
+<pubDate>Tue, 03 Nov 2026 00:00:00 GMT</pubDate>
+<category>n8n 3.1</category>
+<description>When asking the AI assistant to build an app, it now shows an editable blueprint card (name, namespace, visibility, theme, description, and optional notes) for review and approval before creating anything. Users can edit details or cancel. App creation and opening are now separate steps, so failures can be retried individually instead of restarting the whole flow.</description>
+</item>
+<item>
+<title>Open a resource from the Assistant header when no tabs are open</title>
+<link>https://github.com/n8n-io/n8n/pull/42671</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/42671</guid>
+<pubDate>Tue, 03 Nov 2026 00:00:00 GMT</pubDate>
+<category>n8n 3.1</category>
+<description>In the Assistant thread view, when no preview tabs are open, the header now shows a button to open a workflow, data table, or agent directly from a resource picker, instead of a disabled toggle. Selecting a resource opens it in a new tab and shows the preview. Once tabs are open, the header reverts to the usual preview toggle. This applies to both the main Assistant view and the Assistant agent view.</description>
+</item>
+<item>
+<title>n8n Node: Add user get operation</title>
+<link>https://github.com/n8n-io/n8n/pull/42566</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/42566</guid>
+<pubDate>Tue, 03 Nov 2026 00:00:00 GMT</pubDate>
+<category>n8n 3.1</category>
+<description>The n8n node now supports a User resource with a Get operation, letting workflows look up a user by ID or email via the n8n public API. An optional 'Include Role' toggle adds the user's global role to the output. This requires instance owner credentials with the user:read API scope, and returns a clear 'User not found' error for unknown IDs or emails.</description>
+</item>
+<item>
+<title>Venafi TLS Protect Cloud Trigger Node: Add webhook signature verification</title>
+<link>https://github.com/n8n-io/n8n/pull/42250</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/42250</guid>
+<pubDate>Tue, 03 Nov 2026 00:00:00 GMT</pubDate>
+<category>n8n 3.1</category>
+<description>The Venafi TLS Protect Cloud Trigger now verifies incoming webhook signatures. When the node creates its connector, it generates a secret and checks each delivery's VaaS-Signature header against it, rejecting unsigned or mismatched requests with a 401. Previously any POST to the webhook URL was accepted. Connectors created before this update are unaffected until the workflow is republished. Also fixed a bug where checking for existing connectors could incorrectly error out instead of properly matching and cleaning up duplicates by name.</description>
+</item>
+<item>
+<title>Microsoft Agent 365 Node: Send spans to Microsoft through the OpenTelemetry setup</title>
+<link>https://github.com/n8n-io/n8n/pull/42174</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/42174</guid>
+<pubDate>Tue, 03 Nov 2026 00:00:00 GMT</pubDate>
+<category>n8n 3.1</category>
+<description>The Microsoft Agent 365 node now reliably sends conversation spans to Microsoft's Agent 365 observability service through n8n's own OpenTelemetry setup. Previously this only worked on self-hosted instances without Sentry and with n8n's tracing off; it now also works on n8n Cloud and alongside Sentry or n8n OTel tracing. Export remains on by default and can be disabled via ENABLE_OBSERVABILITY=false or ENABLE_A365_OBSERVABILITY_EXPORTER=false; an opt-in env var also forwards these spans to the customer's own OTel endpoint.</description>
+</item>
+<item>
+<title>Add an on/off switch and env var for the n8n Assistant</title>
+<link>https://github.com/n8n-io/n8n/pull/42121</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/42121</guid>
+<pubDate>Tue, 03 Nov 2026 00:00:00 GMT</pubDate>
+<category>n8n 3.1</category>
+<description>The n8n Assistant now has an on/off switch in Settings &gt; Assistant, similar to Agents and Chat. On Enterprise plans it's off by default until an admin enables it; other plans keep it on by default. Self-hosted admins can set the default via N8N_INSTANCE_AI_ENABLED, with a saved Settings choice taking precedence. Enterprise instances already using the Assistant remain enabled after upgrading. Turning it on guides admins through remaining setup steps.</description>
+</item>
+<item>
+<title>Show skills created or edited by the n8n Assistant as artifacts</title>
+<link>https://github.com/n8n-io/n8n/pull/41631</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/41631</guid>
+<pubDate>Tue, 03 Nov 2026 00:00:00 GMT</pubDate>
+<category>n8n 3.1</category>
+<description>When the n8n Assistant creates or updates a skill, it now automatically opens a preview artifact alongside the chat, showing the skill's name, scope, and files in read-only mode with an 'Open in Skills' link for editing. Previews refresh on later saves and keep your selected reference file. Reads, lists, deletes, and denied or refused actions do not trigger a preview. Saved skill tabs persist across conversation reloads.</description>
+</item>
+<item>
+<title>Postgres Node: Add custom SSL certificate support</title>
+<link>https://github.com/n8n-io/n8n/pull/41593</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/41593</guid>
+<pubDate>Tue, 03 Nov 2026 00:00:00 GMT</pubDate>
+<category>n8n 3.1</category>
+<description>Postgres credentials now support custom SSL certificates: a CA certificate, client certificate, and client private key, shown when SSL mode is set to Allow or Require. This enables connections to databases requiring custom TLS trust or client authentication. SSH-tunneled connections now correctly verify the database hostname for TLS. Credential testing also gives a clearer error message suggesting adding a CA certificate when trust errors occur and none is set.</description>
+</item>
+<item>
+<title>Mailchimp Trigger Node: Add webhook signature verification</title>
+<link>https://github.com/n8n-io/n8n/pull/41561</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/41561</guid>
+<pubDate>Tue, 03 Nov 2026 00:00:00 GMT</pubDate>
+<category>n8n 3.1</category>
+<description>The Mailchimp Trigger node now verifies the X-Mailchimp-Signature header on incoming webhook deliveries, checking both the HMAC signature and timestamp freshness, and rejects invalid requests with a 401 response. This prevents unauthorized requests from triggering workflows. Existing workflows are unaffected until reactivated, since Mailchimp only provides the signing secret when a webhook is created; deactivating and reactivating the workflow enables verification.</description>
+</item>
+<item>
+<title>Redesign the agent session trace</title>
+<link>https://github.com/n8n-io/n8n/pull/41536</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/41536</guid>
+<pubDate>Tue, 03 Nov 2026 00:00:00 GMT</pubDate>
+<category>n8n 3.1</category>
+<description>The agent session timeline has been redesigned for clarity. User and agent messages now appear as distinct, Markdown-rendered transcript items with expand/collapse for long content, and agent avatars. Tool calls and skills show name, status, and expandable input/output. Approvals, errors, background tasks, and job results each have clearer displays, plus a link to pending approvals. The old 'Open test' action and dock close button are replaced with breadcrumb navigation and an 'Edit in builder' option.</description>
+</item>
+<item>
+<title>Zendesk Node: Default new nodes to OAuth2 authentication</title>
+<link>https://github.com/n8n-io/n8n/pull/39310</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/39310</guid>
+<pubDate>Tue, 03 Nov 2026 00:00:00 GMT</pubDate>
+<category>n8n 3.1</category>
+<description>New Zendesk and Zendesk Trigger nodes now default to OAuth2 authentication instead of API Token, since Zendesk is retiring API token support. API Token remains available as an option. Existing workflows using API Token are unaffected and keep their current authentication. The Zendesk API credential also now shows a notice recommending migration to OAuth2, with a link to Zendesk's migration guide.</description>
+</item>
+<item>
+<title>Add resolution guidance to the migration rule detail page</title>
+<link>https://github.com/n8n-io/n8n/pull/42615</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/42615</guid>
+<pubDate>Fri, 30 Oct 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.46.3</category>
+<description>The migration report rule detail page now includes a &quot;How to fix&quot; panel below the header, showing recommended resolution steps for the rule. If no recommendations exist, it links to the rule's documentation or, failing that, to the general breaking-changes docs. For migratable rules, it also points users to the Migrate action in the table.</description>
+</item>
+<item>
+<title>Show the project of each workflow in the migration report</title>
+<link>https://github.com/n8n-io/n8n/pull/42455</link>
+<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/42455</guid>
+<pubDate>Thu, 29 Oct 2026 00:00:00 GMT</pubDate>
+<category>n8n 2.46.2</category>
+<description>The migration report now shows which project each affected workflow belongs to. A new Project column displays team project names, while personal projects show as &quot;Personal&quot;. The column supports sorting by this label and truncates long names, making it easier for admins to identify and assign migration work without opening each workflow individually.</description>
+</item>
 <item>
 <title>Mark required credential fields</title>
 <link>https://github.com/n8n-io/n8n/pull/42028</link>
@@ -150,262 +406,6 @@
 <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
 <category>n8n 2.45.4</category>
 <description>The migration report's rule detail page now includes a Project filter alongside existing filters like owner and status. Admins can filter affected workflows by a specific team project, or view all personal-project workflows together, making it easier to see which teams own workflows impacted by an upcoming breaking change.</description>
-</item>
-<item>
-<title>Databricks Node: Show the Vector Store, Embeddings and AI Agent nodes in the node picker</title>
-<link>https://github.com/n8n-io/n8n/pull/41206</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/41206</guid>
-<pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.45</category>
-<description>The Databricks Vector Store, Embeddings Databricks, and Databricks AI Agent nodes are no longer hidden and now appear in the node picker and sub-node pickers. The AI Agent node links to its documentation and is now recognized as an AI root node in the editor and workflow SDK, so the Evaluations wizard offers it like other agent nodes. Existing workflows using these nodes are unaffected.</description>
-</item>
-<item>
-<title>Azure OpenAI Chat Model Node: Add an optional Project field to the Foundry credentials</title>
-<link>https://github.com/n8n-io/n8n/pull/41181</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/41181</guid>
-<pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.45</category>
-<description>The Microsoft Foundry (API Key) and Microsoft Foundry (Entra ID) credentials now have an optional Project field, shown when Endpoint Type is set to Microsoft Foundry. The Azure OpenAI Chat Model node uses this credential-level project to list deployments when the node's own Project field is left empty, with the node's value still taking precedence when set.</description>
-</item>
-<item>
-<title>Show agent personalisation icon in subagent modal</title>
-<link>https://github.com/n8n-io/n8n/pull/41094</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/41094</guid>
-<pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.45</category>
-<description>When selecting a sub-agent in the agent builder's sub-agent selector modal, n8n now shows that agent's personalized avatar (icon and gradient) instead of a generic bot icon, making it easier to visually identify agents when adding them as sub-agents.</description>
-</item>
-<item>
-<title>Let admins notify workflow owners in bulk from the migration rule detail</title>
-<link>https://github.com/n8n-io/n8n/pull/41060</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/41060</guid>
-<pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.45</category>
-<description>Admins reviewing a migration rule's affected workflows can now select multiple rows and click &quot;Notify owners&quot; to email all eligible owners in one request, instead of notifying one workflow at a time. The bar shows how many selected workflows lack an owner, notified rows move to &quot;Notified&quot; with a timestamp, and any skipped rows trigger a warning toast with reasons. Requires the breakingChanges:migrate scope and SMTP configured on the instance.</description>
-</item>
-<item>
-<title>Show the model that answered in the AI log header</title>
-<link>https://github.com/n8n-io/n8n/pull/40988</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/40988</guid>
-<pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.45</category>
-<description>The AI log view in the node details panel now shows which model actually answered a request, useful when a model router (e.g. Azure AI Foundry) picks a model different from the one configured on the node. An &quot;Answered by [model name]&quot; item appears next to the token count in both the Rendered and JSON tabs, with a tooltip explaining it may differ from the node's configured model. It only shows when the run data includes a model name, such as for streaming chat model runs.</description>
-</item>
-<item>
-<title>Publish agent modal and modal for warning about unpublished workflows</title>
-<link>https://github.com/n8n-io/n8n/pull/40987</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/40987</guid>
-<pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.45</category>
-<description>Publishing an agent now shows a confirmation modal titled &quot;Agent published&quot; explaining that further changes require republishing, with a &quot;Don't show again&quot; option. If the agent uses unpublished workflows as tools, a new modal lists them with links to publish each one, and blocks the publish instead of failing silently. The Workflows picker no longer shows &quot;Not published&quot; labels or disabled incompatible rows.</description>
-</item>
-<item>
-<title>Update budget panel when agent executes</title>
-<link>https://github.com/n8n-io/n8n/pull/40971</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/40971</guid>
-<pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.45</category>
-<description>The Agent builder's Settings panel now updates its monthly budget usage automatically when an agent turn finishes, instead of only showing the value from when the panel loaded. The spend amount and progress bar refresh in place without a loading flicker, and if a refresh fails, the last known value stays visible rather than showing 'unavailable'.</description>
-</item>
-<item>
-<title>Let admins notify workflow owners from the migration rule detail</title>
-<link>https://github.com/n8n-io/n8n/pull/40949</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/40949</guid>
-<pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.45</category>
-<description>Admins reviewing a migration report rule can now notify a workflow's owner by email directly from the affected workflows list, when SMTP is configured and the row has an owner with an email. Clicking &quot;Notify owner&quot; sends the email and marks the row &quot;Notified&quot;; a follow-up click shows as &quot;Remind&quot; and resends it, with a tooltip showing when the owner was last notified. Notified rows still count as needing a fix and can be reopened or marked won't fix.</description>
-</item>
-<item>
-<title>Kafka Node: Make version 2 the default for new Kafka nodes and triggers</title>
-<link>https://github.com/n8n-io/n8n/pull/40744</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/40744</guid>
-<pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.45</category>
-<description>New Kafka and Kafka Trigger nodes added from the panel now default to version 2, which runs on librdkafka instead of the unmaintained kafkajs library and supports additional compression codecs (Snappy, LZ4, Zstd). Existing workflows are unaffected and keep running on their previously saved version. Note: version 2 producers emit one output item per input record, and Acks now maps to all in-sync replicas rather than leader-only.</description>
-</item>
-<item>
-<title>Text Classifier Node: Add opt-in confidence scores to the output</title>
-<link>https://github.com/n8n-io/n8n/pull/40743</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/40743</guid>
-<pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.45</category>
-<description>The Text Classifier node now has an opt-in 'Include Confidence Scores' option. When enabled, each routed item gets a classification object with its category, the model's confidence score for that category, and a scores map comparing all categories. Off by default, with unchanged output when disabled, so no node version bump was needed.</description>
-</item>
-<item>
-<title>Show multiple workflows in the review detail view</title>
-<link>https://github.com/n8n-io/n8n/pull/40695</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/40695</guid>
-<pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.45</category>
-<description>The review detail view in the Inbox now lists each workflow in a review as a collapsible item, showing its name and pinned version. The first workflow opens automatically, only one stays open at a time, and the selection persists when switching between Activity and Changes tabs. Only the open item renders its diff view, improving performance for reviews with multiple workflows.</description>
-</item>
-<item>
-<title>Show the policy reason when an agent tool call is refused</title>
-<link>https://github.com/n8n-io/n8n/pull/40673</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/40673</guid>
-<pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.45</category>
-<description>When an instance policy refuses an agent's tool call in the preview chat, the step now shows a lock icon with a tooltip explaining the restriction, plus a callout stating the tool is restricted on this instance with a link to contact the instance admin. Previously refusals looked like generic tool errors. This requires the type availability policies feature; it doesn't yet cover refusals inside workflow tools.</description>
-</item>
-<item>
-<title>Show policy-blocked items in the source control pull modal</title>
-<link>https://github.com/n8n-io/n8n/pull/40604</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/40604</guid>
-<pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.45</category>
-<description>The source control pull modal now shows which workflows or credentials a content-import policy will block before you pull. A banner summarizes how many items are blocked, each tab groups blocked items under 'Not pulled · blocked by policy' with a hover badge explaining why, and the Pull button reflects how many items will actually come in. A separate warning appears if a policy check itself fails during preview.</description>
-</item>
-<item>
-<title>Don't save MCP connections without user approval</title>
-<link>https://github.com/n8n-io/n8n/pull/39996</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/39996</guid>
-<pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.45</category>
-<description>In the AI Assistant's MCP server setup, connecting a server now requires explicitly clicking &quot;Add connector&quot; before it is saved. Previously, selecting and authorizing a connector saved it immediately, with no way to discard an unwanted connection. This prevents accidental or unintended MCP server connections from being persisted.</description>
-</item>
-<item>
-<title>Monday.com Node: Add V2 with full V1 parity as the default</title>
-<link>https://github.com/n8n-io/n8n/pull/35515</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/35515</guid>
-<pubDate>Tue, 20 Oct 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.45</category>
-<description>The Monday.com node now has a V2 version with full parity to V1, covering Board, Board Group, Column, Item, and Update resources with 39 operations. V2 is the default for newly added nodes, uses resource locators for IDs, and fixes a bug where creating a Column failed when Column ID was left blank. Existing workflows keep running on V1 unchanged.</description>
-</item>
-<item>
-<title>Show Gemini models by name and list prioritized models first in model pickers</title>
-<link>https://github.com/n8n-io/n8n/pull/41016</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/41016</guid>
-<pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.43.5</category>
-<description>Gemini model pickers (Google Gemini Chat Model node, Google Gemini node, and the Agents model picker) now show models by readable product name, like &quot;Gemini 2.5 Pro&quot;, instead of raw IDs such as models/gemini-2.5-pro. Models can also be prioritized to appear first in the list. Saved workflow values still use the model ID, so existing workflows are unaffected.</description>
-</item>
-<item>
-<title>Replace Windsurf with Devin in the MCP client dialog</title>
-<link>https://github.com/n8n-io/n8n/pull/40912</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/40912</guid>
-<pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.44</category>
-<description>The instance-level MCP &quot;Connect a client&quot; dialog now offers Devin instead of Windsurf (renamed Devin Desktop by Cognition), with an updated official icon and correct position in the IDE group. Selecting Devin shows the shared config file path (~/.config/devin/mcp_config.json) and a copyable mcpServers entry using HTTP transport, matching both the Devin CLI and desktop app configuration formats. No one-click setup button is available for Devin.</description>
-</item>
-<item>
-<title>Add Antigravity to the MCP client connection dialog</title>
-<link>https://github.com/n8n-io/n8n/pull/40879</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/40879</guid>
-<pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.44</category>
-<description>The MCP client connection dialog now includes Antigravity in the IDE group, with its own color icon shown in the dropdown and selected-client button. Selecting it displays a copyable mcpServers config snippet with the instance server URL, plus setup steps pointing to ~/.gemini/config/mcp_config.json, noting that the Antigravity IDE, desktop app, and agy CLI share this file. Gemini CLI remains unchanged in the CLI group.</description>
-</item>
-<item>
-<title>Show who created each preference on the Preferences page</title>
-<link>https://github.com/n8n-io/n8n/pull/40868</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/40868</guid>
-<pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.44</category>
-<description>The Preferences page in Settings &gt; Context now shows a 'Created by' column instead of 'Source'. It displays the name of the user who created each preference, with the origin noted in parentheses for preferences added via the n8n assistant or MCP (e.g. 'Jane Doe (MCP)'). If the user no longer exists, only the origin is shown. The MCP label was also renamed from 'Connected AI tool' to 'MCP'.</description>
-</item>
-<item>
-<title>Add project selection to Vertex AI credentials</title>
-<link>https://github.com/n8n-io/n8n/pull/40667</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/40667</guid>
-<pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.44</category>
-<description>Google Vertex AI credentials now let you pick a Google Cloud project from a dropdown populated via your service account, or select Custom to enter a Project ID manually. Manual entry remains available while the list loads or if lookup fails. The credential's connection test now checks whichever project (selected or custom) the node will actually use for requests.</description>
-</item>
-<item>
-<title>Add Google Vertex AI credentials</title>
-<link>https://github.com/n8n-io/n8n/pull/40665</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/40665</guid>
-<pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.44</category>
-<description>Added a new Google Vertex AI credential type with a Project ID field, usable alongside existing Google Service Account credentials in the Vertex AI Chat Model and Embeddings nodes. Selecting it uses the credential's project for requests, while a node-level Region setting still overrides the credential's Region. The credential includes a connection test that verifies project access via the Vertex AI locations endpoint.</description>
-</item>
-<item>
-<title>Recommend Claude Opus 5.5 and GPT-6 models in AI Assistant setup</title>
-<link>https://github.com/n8n-io/n8n/pull/40660</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/40660</guid>
-<pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.44</category>
-<description>The AI Assistant setup model picker now suggests newer models by default: Claude Opus 5.5 and Claude Sonnet 5.5 for Anthropic, GPT-6.1 Sol and GPT-6 Astra for OpenAI, and updated equivalents for OpenRouter, with the first option in each provider marked as Recommended. Existing instances keep their previously saved model, and the default instance AI model environment variable is unchanged.</description>
-</item>
-<item>
-<title>Disable restricted model providers in the agent model selector</title>
-<link>https://github.com/n8n-io/n8n/pull/40658</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/40658</guid>
-<pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.44</category>
-<description>The agent model picker now respects instance or project policies that restrict credential types. Providers blocked by such a policy appear disabled with a lock icon and a note on which scope restricts them; a provider with multiple credential types is only disabled once all its credential types are blocked. If an agent already uses a now-restricted provider, the picker shows a &quot;Restricted&quot; badge instead of the connected marker.</description>
-</item>
-<item>
-<title>Show the restriction callout and lock the agent tool configuration form</title>
-<link>https://github.com/n8n-io/n8n/pull/40657</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/40657</guid>
-<pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.44</category>
-<description>When an agent tool's node type is blocked by an instance or project policy, opening it in the agent builder now shows a callout explaining the restriction with a link to contact instance admins. The configuration form is locked read-only (parameters, credentials, approval setting, title), Save is disabled, but the tool can still be removed so the agent can be fixed and published.</description>
-</item>
-<item>
-<title>Google Gemini Node: Show Nano Banana 2.1 and 2 Lite in the image model list</title>
-<link>https://github.com/n8n-io/n8n/pull/40596</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/40596</guid>
-<pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.44</category>
-<description>The Google Gemini node's Image Generate model list now correctly includes Nano Banana 2.1 and Nano Banana 2 Lite models, which were previously hidden because their model IDs don't contain the word &quot;image&quot;. The dropdown now shows friendly labels for these models while keeping them out of text and audio model lists.</description>
-</item>
-<item>
-<title>Explain instance-role access in the credential sharing &quot;Used in&quot; row</title>
-<link>https://github.com/n8n-io/n8n/pull/40555</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/40555</guid>
-<pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.44</category>
-<description>In the credential Sharing tab, the &quot;Used in&quot; row for your own personal project now clarifies access when your instance role (Owner, admin, or custom role) lets you use any credential. It shows &quot;Can use in personal space&quot; with a tooltip explaining you can already use the credential there without a share, while the Share button's tooltip clarifies that sharing additionally grants access in team projects.</description>
-</item>
-<item>
-<title>Add order to settings sidebar links</title>
-<link>https://github.com/n8n-io/n8n/pull/40505</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/40505</guid>
-<pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.44</category>
-<description>Settings sidebar links now support an optional order field, letting the shell and installed modules (like MCP, Chat Hub, Instance AI, and Agents) position their links precisely relative to each other instead of relying on manual insertion logic. This is an internal, developer-facing improvement for module authors; the visible sidebar order for end users is unchanged.</description>
-</item>
-<item>
-<title>Animate the n8n Assistant activity indicator</title>
-<link>https://github.com/n8n-io/n8n/pull/40497</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/40497</guid>
-<pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.44</category>
-<description>The n8n Assistant's activity indicator while it edits an agent has been refreshed. It now shows a new animated grid spinner, a colorful animated glow beneath the editor, and a status label that cycles through playful words like 'Imagining…' and 'Tinkering…' every five seconds. Panel headings and row labels dim while changes are in progress. Animations respect reduced-motion settings.</description>
-</item>
-<item>
-<title>Sort the credential sharing list by people, then projects</title>
-<link>https://github.com/n8n-io/n8n/pull/40478</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/40478</guid>
-<pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.44</category>
-<description>The credential sharing modal now lists people first, then projects, each sorted alphabetically, instead of grouping by access. Projects the credential is only used in (not yet shared) now appear inline with shared ones rather than in a separate block, and keep their position when the owner shares the credential with them, making the list easier to follow. Requires the N8N_ENV_FEAT_CRED_SHARING flag.</description>
-</item>
-<item>
-<title>Rebuild the command bar with type tabs and paged search</title>
-<link>https://github.com/n8n-io/n8n/pull/40461</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/40461</guid>
-<pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.44</category>
-<description>The command bar (Cmd+K) has been rebuilt for better performance and a refreshed design. Results are now organized into type tabs (workflows, projects, credentials, data tables, nodes, actions) with paged, debounced search instead of downloading full lists, making it much faster on instances with many workflows, projects, or credentials. Recent workflows load more efficiently, workflow results sort by last update, and the old context badge and sub-list layout are replaced by the new tabbed view.</description>
-</item>
-<item>
-<title>Azure OpenAI Chat Model Node: Rename the Foundry nodes and credentials to Microsoft Foundry</title>
-<link>https://github.com/n8n-io/n8n/pull/40398</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/40398</guid>
-<pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.44</category>
-<description>The Azure Chat Model and Embeddings nodes, along with their API Key and Entra ID credentials, are now labeled 'Microsoft Foundry' to match Microsoft's rebranded platform name. This is a display-only change: node and credential types, saved workflows, and existing credentials continue to work unchanged, and the old names (Azure, Azure OpenAI, Azure AI Foundry, AOAI) still work as search aliases in the node panel.</description>
-</item>
-<item>
-<title>Add a state column to the migration rule detail</title>
-<link>https://github.com/n8n-io/n8n/pull/40388</link>
-<guid isPermaLink="true">https://github.com/n8n-io/n8n/pull/40388</guid>
-<pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
-<category>n8n 2.44</category>
-<description>The migration rule detail page now shows a State column with an inline Open / Won't fix picker for each affected workflow. Marking a finding Won't fix removes it from the overview and affected-workflow counts without unpublishing the workflow; it automatically reopens as Open if the scan detects the issue again, and is marked fixed once resolved.</description>
 </item>
 </channel>
 </rss>

@@ -54,6 +54,7 @@ This page outlines environment variables to configure your chosen database for y
 | `DB_POSTGRESDB_KEEP_ALIVE`<br>/`_FILE` | Boolean | `true` | Whether to enable TCP keep-alive on connections. Keep-alive lets n8n notice a dead connection without having to run a query first. |
 | `DB_POSTGRESDB_KEEP_ALIVE_INITIAL_DELAY_MS`<br>/`_FILE` | Number | `10000` | How long, in milliseconds, n8n waits before sending the first TCP keep-alive probe on a connection. |
 | `DB_POSTGRESDB_SCHEMA`<br>/`_FILE` | String | `public` | The PostgreSQL schema. |
+| `DB_POSTGRESDB_STATEMENT_TIMEOUT`<br>/`_FILE` | Number | `300000` | Maximum time in milliseconds for a single query. n8n cancels queries that exceed this limit. Set to `0` to disable. |
 | `DB_POSTGRESDB_SSL_ENABLED`<br>/`_FILE` | Boolean | `false` | Whether to enable SSL. Automatically enabled if `DB_POSTGRESDB_SSL_CA`, `DB_POSTGRESDB_SSL_CERT` or `DB_POSTGRESDB_SSL_KEY` is set to a non-empty value, or if `DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED` is set to `false`. |
 | `DB_POSTGRESDB_SSL_CA`<br>/`_FILE` | String | - | The PostgreSQL SSL certificate authority. |
 | `DB_POSTGRESDB_SSL_CERT`<br>/`_FILE` | String | - | The PostgreSQL SSL certificate. |
@@ -64,7 +65,7 @@ This page outlines environment variables to configure your chosen database for y
 
 | Variable | Type  | Default  | Description |
 | :------- | :---- | :------- | :---------- |
-| `DB_SQLITE_POOL_SIZE` | Number | `0` | Controls whether to open the SQLite file in [WAL mode](https://www.sqlite.org/wal.html) or [rollback journal mode](https://www.sqlite.org/lockingv3.html#rollback). Uses rollback journal mode when set to zero. When greater than zero, uses WAL mode with the value determining the number of parallel SQL read connections to configure. WAL mode is much more performant and reliable than the rollback journal mode. |
+| `DB_SQLITE_POOL_SIZE` | Number | `3` | The number of parallel SQL read connections in the SQLite connection pool. Must be at least `1`. Setting it to `0` logs a warning and falls back to the default. n8n opens the SQLite file in [WAL mode](https://www.sqlite.org/wal.html). |
 | `DB_SQLITE_VACUUM_ON_STARTUP` | Boolean | `false` | Runs [VACUUM](https://www.sqlite.org/lang_vacuum.html) operation on startup to rebuild the database. Reduces file size and optimizes indexes. This is a long running blocking operation and increases start-up time. |
 
 ## How database connection recovery works <a href="#how-database-connection-recovery-works" id="how-database-connection-recovery-works"></a>

@@ -35,6 +35,54 @@ n8n uses [semantic versioning](https://semver.org/). All version numbers are in 
 
 ---
 
+## `n8n 3.3` Archive and restore agents, plus 10 other features <a href="#n8n33" id="n8n33"></a>
+
+**Released:** 2026-11-17
+
+* [Clarify agent budget coverage with a dismissible caption](https://github.com/n8n-io/n8n/pull/43385): The Agent Builder's usage-and-limits panel now includes a dismissible caption clarifying that both the monthly and per-session budget caps cover estimated AI model costs, including memory, but exclude n8n Assistant usage. This helps builders understand exactly what their spending limits measure when configuring agent budgets. Dismissing the caption hides it for the current session, but it reappears in new tabs or sessions.
+* [GitHub Node: Add Secret resource](https://github.com/n8n-io/n8n/pull/25441): The GitHub node now supports a Secret resource with a Create or Update operation, letting you set GitHub Actions repository secrets directly from n8n. The node fetches the repository's public key, encrypts the secret value client-side using libsodium sealed box encryption, and stores it via the GitHub API, with secret name validation and a password-masked value field.
+* [Add brand spinner for loading states](https://github.com/n8n-io/n8n/pull/43468): Added a new brand-styled spinner to n8n's design system, using the logo mark as an animation for full-page loading states, replacing the old ring spinner. The animation automatically stops for users with reduced-motion preferences enabled. This loader now appears across the editor, including workflow loading, execution previews, the AI agent builder, and dataset loading modals, giving a more consistent branded loading experience.
+* [Add Upload folder and Upload SKILL.md to the Create skills menu](https://github.com/n8n-io/n8n/pull/43171): The Create skills menu in Settings > Context > Skills is now available to everyone who can create skills, not just those with Skill Sync enabled. It now offers Upload folder, Upload SKILL.md, and Create manually, letting users pick a creation method upfront instead of choosing inside the modal. Uploads open the create form pre-filled; unreadable files show a clear error. Connect to GitHub still requires Skill Sync.
+* [Let users edit and save skills in the Assistant artifact panel](https://github.com/n8n-io/n8n/pull/43314): You can now edit and save skills directly from the Assistant artifact panel, without opening the Skills page. The inline editor supports editing name, description, instructions, and references, with a Save button that activates only on changes. Users without edit access see a read-only view. Drafts persist when switching artifacts, tab names update after saving, and a fix ensures repeated saves with reordered references no longer fail unexpectedly.
+* [MCP Client Tool Node: Accept generic OAuth2 API credentials](https://github.com/n8n-io/n8n/pull/37371): The MCP Client and MCP Client Tool nodes now support the generic OAuth2 API credential as an authentication option, alongside the existing MCP OAuth2 credential. This lets you reuse the same OAuth2 credential for both the HTTP Request node and an MCP server, useful for providers that only allow one active token per OAuth app. Note this credential has no Resource URL (RFC 8707) field; servers requiring one still need MCP OAuth2. Also fixes initial token acquisition for client-credentials OAuth2 credentials that had no token yet.
+* [Move the user's links into an account menu at the bottom of the sidebar](https://github.com/n8n-io/n8n/pull/42642): The sidebar's bottom section has been redesigned: Help and Settings dropdowns are replaced with a simple Instance settings link and a single account menu accessed via your avatar/name. The account menu groups Cloud console (for cloud owners), Personal settings, What's new, Help links, About n8n, and Sign out. The unread-updates indicator now appears on the avatar, and the About n8n dialog has been visually refreshed with clearer version, license, and debug info sections.
+* [Add a shared settings enable row](https://github.com/n8n-io/n8n/pull/42471): Settings pages that let you enable or disable a feature now share a consistent look and behavior. Agents, Chat, Assistant, Workflow Reviews, OpenTelemetry, and External Secrets use a unified enable row with matching switch sizing. Turning a feature off now consistently hides its related settings sections (e.g. sandbox, collector/tracing, model, MCP, permissions) instead of varying by page, giving a cleaner, more predictable settings experience.
+* [Cleans up nudge assistant on workflow error experiment logic and rolls out feature to all instances](https://github.com/n8n-io/n8n/pull/43435): When a workflow execution fails, n8n now shows a "Fix with n8n Assistant" nudge on the error toast for all n8n Assistant-ready instances, no longer limited to an experiment cohort or cloud-only deployments. The nudge also received a visual fix for its animated outline so it displays correctly across different button border radiuses.
+* [Add archive and restore for agents](https://github.com/n8n-io/n8n/pull/43394): Agents can now be archived instead of permanently deleted. The agent list offers a 'Show archived agents' filter with an Archived label, and card/builder menus now show Archive (with confirmation for published agents) or Unarchive and Delete for archived agents. Archived agents open read-only in the builder with an Archived badge, hidden publish button, and hidden setup tasks; archived sub-agents also display an Archived badge where referenced.
+* [Show restricted template nodes on the template page and in the setup panel](https://github.com/n8n-io/n8n/pull/43739): Templates now surface restricted node types instead of failing silently on save. The template detail page shows a callout listing restricted nodes with a link to admin settings, and greys out their icons. After clicking Try template, the setup panel shows a card for each restricted node with a Restricted badge, reason, contact-admin button, and a Replace node option that opens the node replacement picker.
+
+---
+
+## `n8n 3.2` Paddle node renamed to Paddle Classic, plus 4 other features <a href="#n8n32" id="n8n32"></a>
+
+**Released:** 2026-11-10
+
+* [Paddle Node: Rename node to Paddle Classic](https://github.com/n8n-io/n8n/pull/43042): The Paddle node has been renamed to "Paddle Classic" and its credential to "Paddle Classic API" to clarify that it only supports the Paddle Classic platform, not Paddle Billing. Both the node and credential now show a notice directing Paddle Billing users to the dedicated Paddle Billing node. Existing workflows, credentials, and node names are unaffected; only newly added nodes get the updated default name.
+* [App bindings UI](https://github.com/n8n-io/n8n/pull/42986): You can now configure App bindings directly from the Configuration tab of an App. Add connections to workflows, data tables, and agents in the project, set permissions, and manage them from a new Connections section. The n8n Assistant can also propose and set up these bindings when building an app for you. This feature is currently in internal testing.
+* [Unify chat messages and Markdown rendering](https://github.com/n8n-io/n8n/pull/42315): Agents chat and n8n Assistant (AIA) now share consistent Markdown rendering and message styling. Code blocks use the shared copy-enabled code component with syntax highlighting for more languages, tables and typography are tidied up, and resource links display icons for easier identification. Message bubbles and fonts are also unified across both chat interfaces for a more consistent experience.
+* [Link Apps to n8n Assistant chats](https://github.com/n8n-io/n8n/pull/42969): Apps are now linked to n8n Assistant chats. This feature is currently in internal alpha. Opening an app detail view takes you to its most recent linked chat (or creates one if none exists), and you can add apps as resources to existing chat threads. A new "Create app" button on the empty apps list opens an app-specific empty Assistant chat to get started.
+* [Show a restriction callout in the credential modal](https://github.com/n8n-io/n8n/pull/42678): The credential edit modal now shows a warning callout when a credential type is restricted by an instance or project policy, or pending project admin approval. The callout names the credential type and the reason, and offers a button to view and contact the relevant admins. Fields remain editable and saving still works.
+
+---
+
+## `n8n 3.1` Postgres node adds custom SSL certificate support, plus 10 other features <a href="#n8n31" id="n8n31"></a>
+
+**Released:** 2026-11-03
+
+* [Mailchimp Trigger Node: Add webhook signature verification](https://github.com/n8n-io/n8n/pull/41561): The Mailchimp Trigger node now verifies the X-Mailchimp-Signature header on incoming webhook deliveries, checking both the HMAC signature and timestamp freshness, and rejects invalid requests with a 401 response. This prevents unauthorized requests from triggering workflows. Existing workflows are unaffected until reactivated, since Mailchimp only provides the signing secret when a webhook is created; deactivating and reactivating the workflow enables verification.
+* [Add an on/off switch and env var for the n8n Assistant](https://github.com/n8n-io/n8n/pull/42121): The n8n Assistant now has an on/off switch in Settings > Assistant, similar to Agents and Chat. On Enterprise plans it's off by default until an admin enables it; other plans keep it on by default. Self-hosted admins can set the default via N8N_INSTANCE_AI_ENABLED, with a saved Settings choice taking precedence. Enterprise instances already using the Assistant remain enabled after upgrading. Turning it on guides admins through remaining setup steps.
+* [n8n Node: Add user get operation](https://github.com/n8n-io/n8n/pull/42566): The n8n node now supports a User resource with a Get operation, letting workflows look up a user by ID or email via the n8n public API. An optional 'Include Role' toggle adds the user's global role to the output. This requires instance owner credentials with the user:read API scope, and returns a clear 'User not found' error for unknown IDs or emails.
+* [Open a resource from the Assistant header when no tabs are open](https://github.com/n8n-io/n8n/pull/42671): In the Assistant thread view, when no preview tabs are open, the header now shows a button to open a workflow, data table, or agent directly from a resource picker, instead of a disabled toggle. Selecting a resource opens it in a new tab and shows the preview. Once tabs are open, the header reverts to the usual preview toggle. This applies to both the main Assistant view and the Assistant agent view.
+* [Zendesk Node: Default new nodes to OAuth2 authentication](https://github.com/n8n-io/n8n/pull/39310): New Zendesk and Zendesk Trigger nodes now default to OAuth2 authentication instead of API Token, since Zendesk is retiring API token support. API Token remains available as an option. Existing workflows using API Token are unaffected and keep their current authentication. The Zendesk API credential also now shows a notice recommending migration to OAuth2, with a link to Zendesk's migration guide.
+* [Venafi TLS Protect Cloud Trigger Node: Add webhook signature verification](https://github.com/n8n-io/n8n/pull/42250): The Venafi TLS Protect Cloud Trigger now verifies incoming webhook signatures. When the node creates its connector, it generates a secret and checks each delivery's VaaS-Signature header against it, rejecting unsigned or mismatched requests with a 401. Previously any POST to the webhook URL was accepted. Connectors created before this update are unaffected until the workflow is republished. Also fixed a bug where checking for existing connectors could incorrectly error out instead of properly matching and cleaning up duplicates by name.
+* [Microsoft Agent 365 Node: Send spans to Microsoft through the OpenTelemetry setup](https://github.com/n8n-io/n8n/pull/42174): The Microsoft Agent 365 node now reliably sends conversation spans to Microsoft's Agent 365 observability service through n8n's own OpenTelemetry setup. Previously this only worked on self-hosted instances without Sentry and with n8n's tracing off; it now also works on n8n Cloud and alongside Sentry or n8n OTel tracing. Export remains on by default and can be disabled via ENABLE_OBSERVABILITY=false or ENABLE_A365_OBSERVABILITY_EXPORTER=false; an opt-in env var also forwards these spans to the customer's own OTel endpoint.
+* [Postgres Node: Add custom SSL certificate support](https://github.com/n8n-io/n8n/pull/41593): Postgres credentials now support custom SSL certificates: a CA certificate, client certificate, and client private key, shown when SSL mode is set to Allow or Require. This enables connections to databases requiring custom TLS trust or client authentication. SSH-tunneled connections now correctly verify the database hostname for TLS. Credential testing also gives a clearer error message suggesting adding a CA certificate when trust errors occur and none is set.
+* [Show skills created or edited by the n8n Assistant as artifacts](https://github.com/n8n-io/n8n/pull/41631): When the n8n Assistant creates or updates a skill, it now automatically opens a preview artifact alongside the chat, showing the skill's name, scope, and files in read-only mode with an 'Open in Skills' link for editing. Previews refresh on later saves and keep your selected reference file. Reads, lists, deletes, and denied or refused actions do not trigger a preview. Saved skill tabs persist across conversation reloads.
+* [Redesign the agent session trace](https://github.com/n8n-io/n8n/pull/41536): The agent session timeline has been redesigned for clarity. User and agent messages now appear as distinct, Markdown-rendered transcript items with expand/collapse for long content, and agent avatars. Tool calls and skills show name, status, and expandable input/output. Approvals, errors, background tasks, and job results each have clearer displays, plus a link to pending approvals. The old 'Open test' action and dock close button are replaced with breadcrumb navigation and an 'Edit in builder' option.
+* [Show app blueprint card before creating an app](https://github.com/n8n-io/n8n/pull/42815): When asking the AI assistant to build an app, it now shows an editable blueprint card (name, namespace, visibility, theme, description, and optional notes) for review and approval before creating anything. Users can edit details or cancel. App creation and opening are now separate steps, so failures can be retried individually instead of restarting the whole flow.
+
+---
+
 ## `n8n 3.0` Edit Image node rebuilt with napi-rs canvas, plus 16 other features <a href="#n8n30" id="n8n30"></a>
 
 **Released:** 2026-10-27
@@ -63,6 +111,46 @@ n8n 3.0 is a major release with breaking changes. Before you upgrade, read [n8n 
 
 ---
 
+## `n8n 2.47.6` Gateway credits promotions for built-in nodes <a href="#n8n2476" id="n8n2476"></a>
+
+**Released:** 2026-11-13
+
+* [Show Gateway credits promotions from the Gateway config](https://github.com/n8n-io/n8n/pull/43661): n8n can now show Gateway credits promotions for built-in nodes, not just community nodes. Promotions are read directly from the Gateway config, letting n8n display offer callouts (e.g. for Google Gemini) in the node creator, the NDV, and the credential modal without needing a release or Strapi record. Gateway-defined promotions take precedence over community node promotions when both match, with date-based validity checks applied on each lookup.
+
+---
+
+## `n8n 2.47.3` Migration emails link to filtered report <a href="#n8n2473" id="n8n2473"></a>
+
+**Released:** 2026-11-09
+
+* [Open the migration report filtered to the recipient from notification emails](https://github.com/n8n-io/n8n/pull/43095): Migration finding notification emails now link directly to the migration report pre-filtered to the recipient's own workflows, instead of the full unfiltered report. This saves owners from having to manually search for the workflows they need to fix after receiving a notification.
+
+---
+
+## `n8n 2.46.5` Loading message added for migration report <a href="#n8n2465" id="n8n2465"></a>
+
+**Released:** 2026-11-04
+
+* [Show a message when the migration report takes long to load](https://github.com/n8n-io/n8n/pull/43001): In Settings > Migration report, if loading or refreshing the report takes longer than 5 seconds, a message now appears over the loading skeleton: 'Still scanning your workflows…' with a note that this can take a while on instances with many workflows. The message disappears once the report finishes loading, so users on large instances get a clear signal the scan is still running rather than seeing an unexplained skeleton.
+
+---
+
+## `n8n 2.46.3` Migration rule pages show fix guidance <a href="#n8n2463" id="n8n2463"></a>
+
+**Released:** 2026-10-30
+
+* [Add resolution guidance to the migration rule detail page](https://github.com/n8n-io/n8n/pull/42615): The migration report rule detail page now includes a "How to fix" panel below the header, showing recommended resolution steps for the rule. If no recommendations exist, it links to the rule's documentation or, failing that, to the general breaking-changes docs. For migratable rules, it also points users to the Migrate action in the table.
+
+---
+
+## `n8n 2.46.2` Project column added to migration report <a href="#n8n2462" id="n8n2462"></a>
+
+**Released:** 2026-10-29
+
+* [Show the project of each workflow in the migration report](https://github.com/n8n-io/n8n/pull/42455): The migration report now shows which project each affected workflow belongs to. A new Project column displays team project names, while personal projects show as "Personal". The column supports sorting by this label and truncates long names, making it easier for admins to identify and assign migration work without opening each workflow individually.
+
+---
+
 ## `n8n 2.45.4` Filter migration report workflows by project <a href="#n8n2454" id="n8n2454"></a>
 
 **Released:** 2026-10-26
@@ -71,7 +159,7 @@ n8n 3.0 is a major release with breaking changes. Before you upgrade, read [n8n 
 
 ---
 
-## `n8n 2.45` Monday.com node V2 reaches full parity, plus 15 other features <a href="#n8n245" id="n8n245"></a>
+## `n8n 2.45` Monday.com node V2 reaches full parity, plus 14 other features <a href="#n8n245" id="n8n245"></a>
 
 **Released:** 2026-10-20
 
@@ -90,7 +178,6 @@ n8n 3.0 is a major release with breaking changes. Before you upgrade, read [n8n 
 * [Don't save MCP connections without user approval](https://github.com/n8n-io/n8n/pull/39996): In the AI Assistant's MCP server setup, connecting a server now requires explicitly clicking "Add connector" before it is saved. Previously, selecting and authorizing a connector saved it immediately, with no way to discard an unwanted connection. This prevents accidental or unintended MCP server connections from being persisted.
 * [Show policy-blocked items in the source control pull modal](https://github.com/n8n-io/n8n/pull/40604): The source control pull modal now shows which workflows or credentials a content-import policy will block before you pull. A banner summarizes how many items are blocked, each tab groups blocked items under 'Not pulled · blocked by policy' with a hover badge explaining why, and the Pull button reflects how many items will actually come in. A separate warning appears if a policy check itself fails during preview.
 * [Databricks Node: Show the Vector Store, Embeddings and AI Agent nodes in the node picker](https://github.com/n8n-io/n8n/pull/41206): The Databricks Vector Store, Embeddings Databricks, and Databricks AI Agent nodes are no longer hidden and now appear in the node picker and sub-node pickers. The AI Agent node links to its documentation and is now recognized as an AI root node in the editor and workflow SDK, so the Evaluations wizard offers it like other agent nodes. Existing workflows using these nodes are unaffected.
-* [Microsoft Teams Node: Add the TeamMember.Read.All scope and correct the Trigger scope notice](https://github.com/n8n-io/n8n/pull/39819): The Microsoft Teams Trigger now requests the `TeamMember.Read.All` permission for its New Team Member event. On n8n Cloud, this is an admin-consent permission, so a Microsoft Entra administrator approves it once for the tenant. Until then, connecting fails with error AADSTS65004. Existing n8n Cloud users reconnect the credential after the admin approves. See [Microsoft Teams on Cloud: admin approval](https://docs.n8n.io/integrations/builtin/credentials/microsoft/#microsoft-teams-on-cloud-admin-approval) for the steps.
 
 ---
 
@@ -223,7 +310,6 @@ n8n 3.0 is a major release with breaking changes. Before you upgrade, read [n8n 
 * [Azure Storage Node: Add Azure cloud selection and custom endpoints to the Shared Key credential](https://github.com/n8n-io/n8n/pull/38181): The Azure Storage Shared Key credential now has an Azure Cloud dropdown to select Azure Public Cloud, Azure US Government, Azure China, or Custom. Custom reveals an Endpoint field for private endpoints or custom domains, letting each credential target a different endpoint instead of relying on a single instance-wide override. Custom endpoints must be enabled by an administrator via the new N8N_AZURE_STORAGE_CUSTOM_ENDPOINTS_ENABLED setting (default off); otherwise custom credentials fail with a clear error. Existing credentials keep working unchanged, defaulting to the public cloud. Only host-style endpoints are supported; path-style endpoints are a future improvement.
 * [HTTP Request Node: Add support for PROPFIND, MKCOL, MOVE, COPY and REPORT methods](https://github.com/n8n-io/n8n/pull/24151): The HTTP Request node (and HTTP Request Tool node) now support WebDAV methods PROPFIND, MKCOL, MOVE, COPY and REPORT, available via a new 'Enable WebDAV Methods' option in the node's Options. When enabled, these methods appear in the Method dropdown and correctly send a request body when Send Body is on, fixing previous silent body-dropping for non-standard methods. Useful for connecting to WebDAV servers and similar services.
 * [Microsoft Teams Node: Add the channel message delete operation](https://github.com/n8n-io/n8n/pull/38428): The Microsoft Teams node now supports a Delete operation for channel messages and replies, calling Microsoft Graph's soft delete endpoint. This requires the ChannelMessage.ReadWrite OAuth2 scope; existing credentials keep their original scopes, so users must create a new credential or enable Custom Scopes and add ChannelMessage.ReadWrite to use it. Delete is not available with Service Principal credentials.
-* [Microsoft Teams on Cloud needs a one-time Microsoft admin approval](https://docs.n8n.io/integrations/builtin/credentials/microsoft/#microsoft-teams-on-cloud-admin-approval): On n8n Cloud, the managed Microsoft Teams credential uses Microsoft permissions that need a one-time approval from a Microsoft Entra administrator before anyone in the tenant can connect. A non-admin who connects in a tenant that hasn't approved gets error AADSTS65004 and no token. The administrator approves first, then users reconnect. This applies from this release onward, and the credentials documentation now covers the steps.
 * [Rename AI Assistant to n8n Assistant](https://github.com/n8n-io/n8n/pull/38065): The AI Assistant feature is now called "n8n Assistant" throughout the product, including UI labels, settings pages, error and log messages, agent panel text, and telemetry event descriptions. New model, web search, and sandbox connections created in Settings are named accordingly (e.g. "n8n Assistant model"); existing connections keep their current names. This is a naming-only change with no functional impact.
 * [Hand agent change requests in the preview chat to the n8n Assistant](https://github.com/n8n-io/n8n/pull/38283): In the agent preview chat, the agent now recognizes it cannot change its own setup (instructions, model, tools, skills, knowledge, channels, integrations, schedules, or name) and tells users to use the n8n Assistant instead. When a message asks for such a change, the chat displays a note with a button that opens the n8n Assistant with the request pre-filled and the session attached. This behavior is limited to the preview chat and does not affect published channels, evals, MCP, or other test surfaces.
 * [Microsoft Teams Node: Add Online Meeting Update operation](https://github.com/n8n-io/n8n/pull/37707): The Microsoft Teams node's Online Meeting resource now supports an Update operation, letting you change subject, start/end time, and meeting settings (camera, mic, chat mode, reactions, presenters, entry announcement, lobby bypass scope, auto-recording) by meeting ID or join URL. Start and end times must be updated together, and Lobby Bypass Scope gains Invited and Organization Excluding Guests options, also now available on Create. Require Passcode remains unavailable on Update since Graph disallows changing it after creation.

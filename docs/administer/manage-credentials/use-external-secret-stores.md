@@ -41,7 +41,7 @@ In personal projects, only instance owners and admins can use secrets from globa
 
 ## Project vaults <a href="#project-vaults" id="project-vaults"></a>
 
-Instance admins can share a vault with a specific [project](../manage-users-and-access/set-permissions-and-roles-rbac/organize-work-in-projects.md). Once you assign a vault to a project, only that project’s credentials can reference its secrets. You can choose to tie a vault to a single project or keep it global.
+Instance admins can share a vault with a specific [project](../manage-users-and-access/organize-work-in-projects/README.md). Once you assign a vault to a project, only that project’s credentials can reference its secrets. You can choose to tie a vault to a single project or keep it global.
 
 To change the vault scope:
 
@@ -290,10 +290,10 @@ You can share a vault with a project so that only that project's credentials can
 {% hint style="info" %}
 **Feature availability**
 
-Granting project editors and project admins access to external secrets is available from n8n 2.13.0. Before n8n 2.13.0, using external secrets in an [RBAC project](../manage-users-and-access/set-permissions-and-roles-rbac/README.md) required an [instance owner or instance admin](../manage-users-and-access/understand-instance-roles.md) as a member of the project.
+Granting project editors and project admins access to external secrets is available from n8n 2.13.0. Before n8n 2.13.0, using external secrets in an [RBAC project](../manage-users-and-access/set-permissions-and-roles-rbac/README.md) required an [instance owner or instance admin](../manage-users-and-access/set-permissions-and-roles-rbac/understand-instance-roles.md) as a member of the project.
 {% endhint %}
 
-From n8n 2.13.0, instance owners and admins can grant [project editors](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md#project-editor) and [project admins](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md#project-admin) access to external secrets.
+From n8n 2.13.0, instance owners and admins can grant [project editors](../manage-users-and-access/set-permissions-and-roles-rbac/understand-project-roles.md#project-editor) and [project admins](../manage-users-and-access/set-permissions-and-roles-rbac/understand-project-roles.md#project-admin) access to external secrets.
 
 To enable this:
 

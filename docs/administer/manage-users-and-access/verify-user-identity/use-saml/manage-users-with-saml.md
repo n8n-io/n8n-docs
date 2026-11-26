@@ -14,9 +14,9 @@ layout:
 
 # Manage users with SAML <a href="#manage-users-with-saml" id="manage-users-with-saml"></a>
 
-{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/9DXSTQsxYGisAV8xk6p4/" %}
+When SAML is enabled, you can exempt individual users from SAML sign-in and remove users you've deleted from your IdP.
 
-There are some user management tasks that are affected by SAML.
+{% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/9DXSTQsxYGisAV8xk6p4/" %}
 
 ## Exempt users from SAML <a href="#exempt-users-from-saml" id="exempt-users-from-saml"></a>
 
@@ -28,7 +28,7 @@ You can allow users to log in without using SAML. To do this:
 
 ## Deleting users <a href="#deleting-users" id="deleting-users"></a>
 
-If you remove a user from your IdP, they remain logged in to n8n. You need to manually remove them from n8n as well. Refer to [Manage users](../../add-and-remove-users.md) for guidance on deleting users.
+If you remove a user from your IdP, they remain logged in to n8n. You need to manually remove them from n8n as well. Refer to [Manage users](../../manage-users/add-and-remove-users.md) for guidance on deleting users.
 
 ## Related resources
 

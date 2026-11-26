@@ -43,7 +43,7 @@ See the [Data Table node](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin
 
 Work with data tables programmatically using the `/datatables` endpoint in the n8n API.
 
-See the [API reference](https://docs.n8n.io/api/api-reference/#tag/datatable) for full documentation.
+See the [API reference](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api/build-and-run/data-tables) for full documentation.
 
 ### Data table tab <a href="#data-table-tab" id="data-table-tab"></a>
 
@@ -81,6 +81,7 @@ From the **Data tables** tab, you can:
 - When your data tables approach 80% of your storage limit, n8n displays a warning. A final warning appears when you reach the storage limit. Exceeding this limit will disable manual additions to tables and cause workflow execution errors during attempts to insert or update data.
 - By default, data tables created within a project are accessible to all team members in that project.
 - Admins and Owner can see all Users' data tables.
+- Each data table belongs to one project. Unlike workflows and credentials, you can't share a data table on its own. The Data Table node only uses data tables from the same project as the workflow. It rejects a table from another project, even if you have access to that project. For more on what projects separate, refer to [Organize work in projects](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/organize-work-in-projects#what-projects-isolate-and-what-they-dont).
 - Direct programmatic access to data tables from a Code node isn't supported. You can't access data table values via built-in methods or variables.
 
 ## Data tables versus variables <a href="#data-tables-versus-variables" id="data-tables-versus-variables"></a>

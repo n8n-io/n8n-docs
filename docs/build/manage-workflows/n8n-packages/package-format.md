@@ -42,23 +42,30 @@ Exporting by workflow ID gives you loose workflows, with everything they depend 
 triage.n8np
 ├── manifest.json
 ├── workflows/
-│   ├── triage-inbound/
-│   │   └── workflow.json
-│   └── send-email/
-│       └── workflow.json
+│   ├── triage-inbound-wf7Kq2/
+│   │   ├── workflow.json
+│   │   └── workflow-metadata.json
+│   └── send-email-wf9Zx1/
+│       ├── workflow.json
+│       └── workflow-metadata.json
 ├── credentials/
-│   └── linear-api/
+│   └── linear-api-crLin44/
 │       └── credential.json
 ├── variables/
-│   └── slackchannelid/
+│   └── slackchannelid-vaSl03/
 │       └── variable.json
 ├── data-tables/
-│   └── countries/
+│   └── countries-dtCn12/
 │       └── data-table.json
 └── tags/
-    └── prod/
+    └── prod-tgPr01/
         └── tag.json
 ```
+
+Each workflow directory holds two files:
+
+* `workflow.json`: the workflow itself.
+* `workflow-metadata.json`: the ID of the exported version, and of the version published on the source if there is one. Import uses it to apply the [publishing policy](import-a-package.md#publishing).
 
 ### Folder package
 
@@ -68,23 +75,25 @@ Exporting by folder ID keeps the folder tree. A folder's workflows sit in a `wor
 in-progress.n8np
 ├── manifest.json
 ├── folders/
-│   ├── to-production/
+│   ├── to-production-fdToProd/
 │   │   └── folder.json            # an empty folder is just the shell
-│   └── in-progress/
+│   └── in-progress-fdInProg/
 │       ├── folder.json
 │       ├── workflows/
-│       │   └── triage-inbound/
-│       │       └── workflow.json
-│       └── nested/
+│       │   └── triage-inbound-wf7Kq2/
+│       │       ├── workflow.json
+│       │       └── workflow-metadata.json
+│       └── nested-fdNest01/
 │           ├── folder.json
 │           └── workflows/
-│               └── playground/
-│                   └── workflow.json
+│               └── playground-wfPlay1/
+│                   ├── workflow.json
+│                   └── workflow-metadata.json
 ├── credentials/
-│   └── linear-api/
+│   └── linear-api-crLin44/
 │       └── credential.json
 └── tags/
-    └── prod/
+    └── prod-tgPr01/
         └── tag.json
 ```
 
@@ -96,54 +105,79 @@ Exporting by project ID adds a namespacing layer. Several projects can travel in
 team-ligo.n8np
 ├── manifest.json
 ├── projects/
-│   └── team-ligo/
+│   └── team-ligo-prTeam9/
 │       ├── project.json
 │       ├── workflows/                    # workflows at the project root
-│       │   └── triage-inbound/
-│       │       └── workflow.json
+│       │   └── triage-inbound-wf7Kq2/
+│       │       ├── workflow.json
+│       │       └── workflow-metadata.json
 │       ├── folders/
-│       │   └── in-progress/
+│       │   └── in-progress-fdInProg/
 │       │       ├── folder.json
 │       │       └── workflows/
-│       │           └── send-email/
-│       │               └── workflow.json
+│       │           └── send-email-wf9Zx1/
+│       │               ├── workflow.json
+│       │               └── workflow-metadata.json
 │       ├── credentials/                  # owned by this project
-│       │   └── linear-api/
+│       │   └── linear-api-crLin44/
 │       │       └── credential.json
 │       ├── variables/                    # scoped to this project
-│       │   └── slackchannelid/
+│       │   └── slackchannelid-vaSl03/
 │       │       └── variable.json
 │       └── data-tables/
-│           └── countries/
+│           └── countries-dtCn12/
 │               └── data-table.json
 ├── credentials/                          # a global credential
-│   └── shared-smtp/
+│   └── shared-smtp-crSmtp1/
 │       └── credential.json
 ├── variables/                            # a global variable
-│   └── region/
+│   └── region-vaRg02/
 │       └── variable.json
 └── tags/                                 # always global
-    └── prod/
+    └── prod-tgPr01/
         └── tag.json
 ```
 
 {% hint style="info" %}
-In a project package, where a variable sits decides where it's created. A variable under `projects/<project-slug>/variables/` is created in that project. One at the top level is created globally. This is why `--variable-parent-policy` is rejected for project packages: the layout already decided.
+In a project package, where a variable sits decides where it's created. A variable under `projects/<project-directory>/variables/` is created in that project. One at the top level is created globally. This is why `--variable-parent-policy` is rejected for project packages: the layout already decided.
 {% endhint %}
+
+## Agents and skills
+
+[Agents](../../build-and-manage-agents/README.md) sit next to workflows. In a workflow or folder package, each agent has a directory under the top-level `agents/`. In a project package, an agent sits under its project, in `projects/<project-directory>/agents/`. Each agent directory holds two files:
+
+* `agent.json`: the agent's definition, with its custom tools and schedules.
+* `agent-metadata.json`: the ID of the exported version, and of the version published on the source if there is one. Import uses it to apply the [publishing policy](import-a-package.md#publishing).
+
+Each skill an exported agent uses gets its own directory with a `skill.json`, holding the skill's content and whether it's a project or an instance skill. A project skill sits under its project when that project is in the package. Every other skill sits in the top-level `skills/`:
+
+```
+support.n8np
+├── manifest.json
+├── agents/
+│   └── support-triage-agSup01/
+│       ├── agent.json
+│       └── agent-metadata.json
+├── skills/
+│   └── refund-policy-skRf01/
+│       └── skill.json
+└── credentials/
+    └── openai-account-crOai01/
+        └── credential.json
+```
 
 ## Directory naming
 
-Each entity gets a directory named after a slug of its name, holding one JSON file. Slugging lowercases the name, drops every character that isn't a letter a to z, a digit, whitespace, or a hyphen, then turns whitespace runs into single hyphens:
+Each entity gets a directory named `<slug>-<id>`: a slug of its name, then a hyphen, then its ID on the source instance. Slugging lowercases the name, drops every character that isn't a letter a to z, a digit, whitespace, or a hyphen, turns whitespace runs and repeated hyphens into a single hyphen, and trims hyphens from both ends:
 
-| Entity name | Directory |
-|-------------|-----------|
-| `Triage inbound` | `triage-inbound` |
-| `Linear api` | `linear-api` |
-| `slackChannelId` | `slackchannelid` |
-| `Q4 报告` | `q4` |
-| `報告` | `workflow` |
+| Entity name | ID | Directory |
+|-------------|----|-----------|
+| `Triage inbound` | `wf7Kq2` | `triage-inbound-wf7Kq2` |
+| `slackChannelId` | `vaSl03` | `slackchannelid-vaSl03` |
+| `Q4 报告` | `wfQ4r1` | `q4-wfQ4r1` |
+| `報告` | `wfBg02` | `workflow-wfBg02` |
 
-The last row shows the fallback: when nothing survives slugging, n8n uses the entity type as the name (`workflow`, `folder`, `project`, `credential`, `variable`, `data-table`, or `tag`). Names that slug identically get a numeric suffix starting at 2, so a second `Triage inbound` becomes `triage-inbound-2`.
+The last row shows the fallback: when nothing survives slugging, n8n uses the entity type as the slug (`workflow`, `agent`, `skill`, `folder`, `project`, `credential`, `variable`, `data-table`, or `tag`). Because the ID is part of the directory name, two entities with the same name still get separate directories.
 
 Directory names are for humans reading the archive. n8n identifies entities by the IDs in the manifest and the JSON files, never by the directory name.
 
@@ -151,32 +185,34 @@ Directory names are for humans reading the archive. n8n identifies entities by t
 
 The manifest is an index. It tells n8n what's in the package and what the target instance has to supply, so an import can fail fast without reading every file.
 
-These four fields are always present:
+These three fields are always present:
 
 * `packageFormatVersion`: the version of the package format, currently the string `"1"`.
-* `exportedAt`: when n8n created the package, as an ISO 8601 timestamp.
 * `sourceN8nVersion`: the n8n version that created the package.
 * `sourceId`: an identifier for the instance that created the package.
 
-Then come the entry lists, one per entity type that's present: `workflows`, `folders`, `projects`, `credentials`, `dataTables`, `variables`, and `tags`. A list is left out entirely when it would be empty. Every entry has the same three fields:
+Then come the entry lists, one per entity type that's present: `workflows`, `agents`, `skills`, `folders`, `projects`, `credentials`, `dataTables`, `variables`, and `tags`. A list is left out entirely when it would be empty. Every entry has the same three fields:
 
 * `id`: the entity's ID on the source instance.
 * `name`: the entity's name.
 * `target`: the directory holding the entity's JSON file, relative to the package root.
 
-Last comes `requirements`, which lists what the workflows need to run on the target instance. It has up to six sections, and each entry carries `usedByWorkflows`, the IDs of the workflows that need it:
+Workflow entries also carry `isArchived`, whether the workflow is archived on the source.
+
+Last comes `requirements`, which lists what the workflows and agents need to run on the target instance. It has up to seven sections. Each entry carries `usedBy`, the workflows and agents that need it, each as `{ "kind": "workflow", "id": "<id>" }` or `{ "kind": "agent", "id": "<id>" }`:
 
 | Section | Entry shape | Notes |
 |---------|-------------|-------|
-| `credentials` | `{ id, name, type, usedByWorkflows }` | n8n never exports credential data, so a credential requirement always means the target has to supply it |
-| `dataTables` | `{ id, name, usedByWorkflows }` | The schema itself is in the bundled `data-table.json` |
-| `workflows` | `{ id, name, usedByWorkflows }` | Sub-workflow and error workflow references. `name` is optional, because a referenced workflow may not be one the exporting user can see |
-| `variables` | `{ name, usedByWorkflows }` | Name only. There's no ID, because `$vars.<name>` resolves by name at runtime |
-| `tags` | `{ id, name, usedByWorkflows }` | |
-| `nodeTypes` | `{ type, typeVersion, usedByWorkflows }` | Every node type and version the workflows use. Read it to tell whether a target instance can import the package, since it needs all of them installed. n8n re-derives the same list from the workflows on import rather than trusting this one |
+| `credentials` | `{ id, name, type, usedBy }` | A bundled credential carries at most its [expression values](export-a-package.md#credential-values), so the target has to supply the credential unless the import creates it from those values |
+| `dataTables` | `{ id, name, usedBy }` | The schema itself is in the bundled `data-table.json` |
+| `workflows` | `{ id, name, usedBy }` | Sub-workflow and error workflow references, and workflows an agent uses as tools. `name` is optional, because a referenced workflow may not be one the exporting user can see |
+| `agents` | `{ id, name, usedBy }` | Sub-agents an agent uses. `name` is only present when the sub-agent is in the package |
+| `variables` | `{ name, usedBy }` | Name only. There's no ID, because `$vars.<name>` resolves by name at runtime |
+| `tags` | `{ id, name, usedBy }` | Only workflows use tags |
+| `nodeTypes` | `{ type, typeVersion, usedBy }` | Every node type and version the workflows and agents' node tools use. Read it to tell whether a target instance can import the package, since it needs all of them installed. n8n re-derives the same list on import rather than trusting this one |
 
 {% hint style="warning" %}
-`requirements` lists what the workflows need, which isn't the same as what the package contains. `requirements.workflows` lists every static workflow reference, including sub-workflows that are bundled in the package. A credential the exporting user can't read appears in `requirements.credentials` with no matching file. Don't read `requirements` as an inventory of the archive; read the entry lists for that.
+`requirements` lists what the workflows and agents need, which isn't the same as what the package contains. `requirements.workflows` lists every static workflow reference, including sub-workflows that are bundled in the package. A credential the exporting user can't read appears in `requirements.credentials` with no matching file. Don't read `requirements` as an inventory of the archive; read the entry lists for that.
 {% endhint %}
 
 A full manifest for a workflow package holding two workflows:
@@ -184,49 +220,48 @@ A full manifest for a workflow package holding two workflows:
 ```json
 {
 	"packageFormatVersion": "1",
-	"exportedAt": "2026-08-04T09:14:02.117Z",
 	"sourceN8nVersion": "2.34.0",
 	"sourceId": "f9e1e962bba26edf357042c12f367dab17f4c63ec368e1f39cbf7ce43c8b9f8b",
 
 	"workflows": [
-		{ "id": "wf7Kq2", "name": "Triage inbound", "target": "workflows/triage-inbound" },
-		{ "id": "wf9Zx1", "name": "Send email", "target": "workflows/send-email" }
+		{ "id": "wf7Kq2", "name": "Triage inbound", "target": "workflows/triage-inbound-wf7Kq2", "isArchived": false },
+		{ "id": "wf9Zx1", "name": "Send email", "target": "workflows/send-email-wf9Zx1", "isArchived": false }
 	],
 	"credentials": [
-		{ "id": "crLin44", "name": "Linear api", "target": "credentials/linear-api" }
+		{ "id": "crLin44", "name": "Linear api", "target": "credentials/linear-api-crLin44" }
 	],
 	"dataTables": [
-		{ "id": "dtCn12", "name": "countries", "target": "data-tables/countries" }
+		{ "id": "dtCn12", "name": "countries", "target": "data-tables/countries-dtCn12" }
 	],
 	"variables": [
-		{ "id": "vaSl03", "name": "slackChannelId", "target": "variables/slackchannelid" }
+		{ "id": "vaSl03", "name": "slackChannelId", "target": "variables/slackchannelid-vaSl03" }
 	],
 	"tags": [
-		{ "id": "tgPr01", "name": "prod", "target": "tags/prod" }
+		{ "id": "tgPr01", "name": "prod", "target": "tags/prod-tgPr01" }
 	],
 
 	"requirements": {
 		"credentials": [
-			{ "id": "crLin44", "name": "Linear api", "type": "linearApi", "usedByWorkflows": ["wf7Kq2"] }
+			{ "id": "crLin44", "name": "Linear api", "type": "linearApi", "usedBy": [{ "kind": "workflow", "id": "wf7Kq2" }] }
 		],
 		"dataTables": [
-			{ "id": "dtCn12", "name": "countries", "usedByWorkflows": ["wf7Kq2"] }
+			{ "id": "dtCn12", "name": "countries", "usedBy": [{ "kind": "workflow", "id": "wf7Kq2" }] }
 		],
 		"workflows": [
-			{ "id": "wf9Zx1", "name": "Send email", "usedByWorkflows": ["wf7Kq2"] }
+			{ "id": "wf9Zx1", "name": "Send email", "usedBy": [{ "kind": "workflow", "id": "wf7Kq2" }] }
 		],
 		"variables": [
-			{ "name": "slackChannelId", "usedByWorkflows": ["wf7Kq2"] }
+			{ "name": "slackChannelId", "usedBy": [{ "kind": "workflow", "id": "wf7Kq2" }] }
 		],
 		"tags": [
-			{ "id": "tgPr01", "name": "prod", "usedByWorkflows": ["wf7Kq2"] }
+			{ "id": "tgPr01", "name": "prod", "usedBy": [{ "kind": "workflow", "id": "wf7Kq2" }] }
 		],
 		"nodeTypes": [
-			{ "type": "n8n-nodes-base.formTrigger", "typeVersion": 2.5, "usedByWorkflows": ["wf7Kq2"] },
-			{ "type": "n8n-nodes-base.linear", "typeVersion": 1, "usedByWorkflows": ["wf7Kq2"] },
-			{ "type": "n8n-nodes-base.executeWorkflow", "typeVersion": 1.2, "usedByWorkflows": ["wf7Kq2"] },
-			{ "type": "n8n-nodes-base.dataTable", "typeVersion": 1, "usedByWorkflows": ["wf7Kq2"] },
-			{ "type": "n8n-nodes-base.emailSend", "typeVersion": 2.1, "usedByWorkflows": ["wf9Zx1"] }
+			{ "type": "n8n-nodes-base.formTrigger", "typeVersion": 2.5, "usedBy": [{ "kind": "workflow", "id": "wf7Kq2" }] },
+			{ "type": "n8n-nodes-base.linear", "typeVersion": 1, "usedBy": [{ "kind": "workflow", "id": "wf7Kq2" }] },
+			{ "type": "n8n-nodes-base.executeWorkflow", "typeVersion": 1.2, "usedBy": [{ "kind": "workflow", "id": "wf7Kq2" }] },
+			{ "type": "n8n-nodes-base.dataTable", "typeVersion": 1, "usedBy": [{ "kind": "workflow", "id": "wf7Kq2" }] },
+			{ "type": "n8n-nodes-base.emailSend", "typeVersion": 2.1, "usedBy": [{ "kind": "workflow", "id": "wf9Zx1" }] }
 		]
 	}
 }
@@ -266,9 +301,7 @@ The exception is data table column IDs. From n8n 2.44.0, an exported data table 
 
 ## Comparing packages in a pipeline
 
-The archive is deterministic: file timestamps are fixed at the Unix epoch, permissions are fixed, and gzip runs in portable mode. Two exports of identical content produce identical bytes in the container.
-
-The one exception is `manifest.json`, which carries a fresh `exportedAt` on every export. Two exports of unchanged content aren't byte-identical because of that field alone. If you checksum packages to detect change in a pipeline, exclude `exportedAt` from the comparison, or you'll see drift on every run.
+The archive is deterministic: file timestamps are fixed at the Unix epoch, permissions are fixed, and gzip runs in portable mode. Two exports of identical content from the same instance and n8n version produce identical bytes, so you can checksum packages to detect change in a pipeline.
 
 ## Read next
 

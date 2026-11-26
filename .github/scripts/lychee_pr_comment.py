@@ -27,7 +27,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 
 from gitbook_preview_links import md_escape, page_title  # noqa: E402
-from lychee_report import flatten_failures  # noqa: E402
+from lychee_report import flatten_failures, mark_missing_hosts  # noqa: E402
 
 PROD_BASE = "https://docs.n8n.io/"
 # GitBook publishes this space at the site root (docs.n8n.io/), every other space under
@@ -70,10 +70,14 @@ def short_reason(code, message):
         return "Too many redirects"
     if "timeout" in low or "timed out" in low:
         return "Timed out"
-    if "dns" in low or "failed to lookup" in low or "connect" in low:
-        return "Could not connect"
+    # Certificate first: lychee 0.24 names the TLS problem, and its other texts mention
+    # "connectivity", which the connect test below would catch (DOC-2626).
     if "certificate" in low or "tls" in low or "ssl" in low:
         return "TLS certificate error"
+    if "dns" in low or "failed to lookup" in low:
+        return "Host not found"
+    if "connect" in low:
+        return "Could not connect"
     # Drop any URL lychee quoted in the message: the link itself is already shown.
     text = re.sub(r"\s*\(?https?://\S+\)?", "", message).strip(" :|")
     text = re.sub(r"\s+", " ", text)
@@ -192,7 +196,9 @@ def main():
         print(f"Could not read the lychee report at {report}: {err}", file=sys.stderr)
         stats = {}
 
-    failures = flatten_failures(stats)
+    # One DNS lookup per host lychee could not connect to, so a contributor sees
+    # "Host not found" instead of a generic connection failure (DOC-2626).
+    failures = mark_missing_hosts(flatten_failures(stats))
     titles = {f["page"]: title_for(f["page"]) for f in failures}
     body = render(failures, titles, run_url, lychee_failed)
 

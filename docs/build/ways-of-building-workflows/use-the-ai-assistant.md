@@ -64,12 +64,12 @@ AI usage settings are available from n8n 2.7.0.
 
 AI usage settings control what data n8n sends to Ask n8n AI and to [n8n Assistant](n8n-assistant.md). Where you find them depends on your instance:
 
-* If your instance has the **Assistant** settings page, navigate to **Settings** > **Assistant** and go to the **Data sent to the model** section.
+* If your instance has the **Assistant** settings page, navigate to **Settings** > **Assistant** and go to the **Data sent to the model** and **Model training** sections.
 * Otherwise, navigate to **Settings** > **AI usage**.
 
 These settings are only available to the instance owners and administrators, and apply to all users on the instance.
 
-![The Data sent to the model section on the Assistant settings page, with the Send field names and types and Send actual data values switches](../.gitbook/assets/ai_usage_settings.png)
+![The Assistant settings page, with the Send field names and types and Send actual data values switches in the Data sent to the model section, and the Help improve n8n's LLMs switch in the Model training section](../.gitbook/assets/ai_usage_settings.png)
 
 n8n always sends field names and types (the schema) of your data. **Send actual data values** controls whether n8n also sends real values from your workflows and executions (like node parameters). While it's off, Ask n8n AI can't give context-aware help based on your workflows.
 

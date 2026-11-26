@@ -49,6 +49,18 @@ Preferences are available from n8n 2.40.0. Saving preferences from n8n Assistant
 Preferences are part of agentic context management, which is in Preview and may change in future releases. Avoid relying on it in production.
 {% endhint %}
 
+{% hint style="info" %}
+**Limited enterprise readiness**
+
+Preferences have Limited enterprise readiness. They partially support the following Enterprise capabilities:
+
+- **RBAC and project scoping**
+- **Queue mode and multi-main**
+- **Environments and source control**
+
+Other Enterprise capabilities either don't apply to preferences or they don't support them yet. Refer to [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#enterprise-capabilities) for the full list of Enterprise capabilities.
+{% endhint %}
+
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
 
 ## What preferences are for

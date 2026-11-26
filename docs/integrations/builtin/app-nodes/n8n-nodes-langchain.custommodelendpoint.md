@@ -154,7 +154,7 @@ To move an existing workflow from the OpenAI node with a Base URL override, see 
 {% hint style="info" %}
 **The HTTP Request node can't reuse this credential**
 
-The two Custom Model Endpoint nodes sign their own requests, so a **Custom Model Endpoint** credential sends no authentication when another node uses it. With **OAuth2 Client Credentials** nothing else performs the token exchange either. To call another route on your gateway, build a separate credential for the HTTP Request node.
+The **Custom Model Endpoint** node and the **Custom Endpoint Chat Model** sub-node sign their own requests, so a **Custom Model Endpoint** credential sends no authentication when another node uses it. With **OAuth2 Client Credentials**, nothing else performs the token exchange either. To call another route on your gateway, build a separate credential for the **HTTP Request** node.
 {% endhint %}
 
 ## Common issues

@@ -13,7 +13,7 @@ layout:
 
 Use the **Custom Endpoint Chat Model** node to give an **AI Agent** a model on any endpoint that speaks the OpenAI API, such as an AI gateway, an API management proxy, or a self-hosted model. Examples include LiteLLM, Portkey, Kong AI Gateway, Azure API Management, vLLM, and NVIDIA NIM.
 
-The model streams, so an agent built on it can stream its answer the same way it does on the other chat model sub-nodes.
+The model streams on both API formats, so an agent built on it can stream its answer the same way it does on the other chat model sub-nodes. The gateway must serve streaming for the format you chose.
 
 {% hint style="info" %}
 **Feature availability**
@@ -51,7 +51,7 @@ Model names differ between gateways. The same underlying model might be `gpt-4o`
 
 Which API of your gateway to call. **Chat Completions** is the default. **Responses** calls your gateway's Responses API instead, which not every gateway serves.
 
-The choice changes which node options apply, and it changes the shape of a tool definition in **Extra Body** to the flat Responses shape. The OpenAI built-in tools aren't available on either format.
+The choice changes which node options apply. For a tool an **AI Agent** supplies, n8n sends the shape the chosen API needs. A tool you write yourself in **Extra Body** goes to the gateway unchanged, so write it in the shape of the API you chose. The OpenAI built-in tools aren't available on either format.
 
 ### Headers
 
@@ -157,7 +157,7 @@ Only on **Responses**.
 
 ## Related resources
 
-Refer to the [OpenAI API reference](https://platform.openai.com/docs/api-reference/chat) for the request and response format these endpoints follow.
+Refer to the OpenAI API reference for the request and response format these endpoints follow: [Chat Completions](https://platform.openai.com/docs/api-reference/chat) for the default format, and [Responses](https://platform.openai.com/docs/api-reference/responses) when you set **API Format** to **Responses**.
 
 To move an existing workflow from the OpenAI Chat Model sub-node with a Base URL override, see [Moving from the OpenAI node with a custom Base URL](../../credentials/custommodelendpoint.md#moving-from-the-openai-node-with-a-custom-base-url).
 

@@ -500,7 +500,7 @@ Uninstall a community node credential:
 n8n community-node --uninstall --credential <CREDENTIAL_TYPE> --userId <ID>
 ```
 
-For example, to uninstall the [Evolution API community node credential](https://www.npmjs.com/package/n8n-nodes-evolution-api), visit the [repository](https://github.com/oriondesign2015/n8n-nodes-evolution-api) and navigate to the [`credentials.ts` file](https://github.com/oriondesign2015/n8n-nodes-evolution-api/blob/main/credentials/EvolutionApi.credentials.ts) to find the `name`:
+For example, to uninstall the [Evolution API community node credential](https://www.npmjs.com/package/n8n-nodes-evolution-api), visit the [repository](https://github.com/oriondesign2015/n8n-nodes-evolution-api) and open the `credentials/EvolutionApi.credentials.ts` file to find the `name`:
 
 ```sh
 n8n community-node --uninstall --credential evolutionApi --userId 1234

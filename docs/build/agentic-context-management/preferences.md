@@ -35,10 +35,10 @@ Preferences are short instructions you write once, such as "Always connect an er
 
 Preferences are available on:
 
-* **n8n Cloud:** Starter, Pro
-* **Self-hosted:** Community, Registered Community, Business
+* **n8n Cloud:** Starter, Pro, Enterprise
+* **Self-hosted:** Community, Registered Community, Business, Enterprise
 
-Preferences aren't available on n8n Cloud Enterprise or self-hosted Enterprise yet.
+Preferences are available on n8n Cloud Enterprise and self-hosted Enterprise from n8n 2.50.0. On a new Enterprise instance, preferences start off until an instance owner or admin turns them on.
 
 Preferences are available from n8n 2.40.0. Saving preferences from n8n Assistant, and the preferences tools on the n8n MCP server, are available from n8n 2.42.0.
 {% endhint %}
@@ -47,6 +47,18 @@ Preferences are available from n8n 2.40.0. Saving preferences from n8n Assistant
 **Preview status**
 
 Preferences are part of agentic context management, which is in Preview and may change in future releases. Avoid relying on it in production.
+{% endhint %}
+
+{% hint style="info" %}
+**Limited enterprise readiness**
+
+Preferences have Limited enterprise readiness. They partially support the following Enterprise capabilities:
+
+- **RBAC and project scoping**
+- **Queue mode and multi-main**
+- **Environments and source control**
+
+Other Enterprise capabilities either don't apply to preferences or they don't support them yet. Refer to [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#enterprise-capabilities) for the full list of Enterprise capabilities.
 {% endhint %}
 
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/KbKP88R2IFii1k97togq/" %}
@@ -184,9 +196,40 @@ AI tools apply a preference to every task in its scope, so write it to hold up i
 | "Be careful with errors."                                      | "Connect every new workflow to the `Error alerts` error workflow."             |
 | "Use good names, put things in folders, and avoid Code nodes." | Three preferences: one for naming, one for folders, one for the **Code** node. |
 
+## Turn preferences on or off for your instance
+
+{% hint style="info" %}
+**Feature availability**
+
+The instance switch for preferences is available from n8n 2.50.0.
+{% endhint %}
+
+Instance owners and admins turn preferences on and off for everyone on the instance:
+
+1. Select **Settings** > **Context**.
+2. Select **Preferences**.
+3. Use the switch next to the **Preferences** title.
+
+Preferences start on for a new instance. On an Enterprise plan, a new instance starts with preferences off. An Enterprise instance that already has saved preferences keeps preferences on when it upgrades to n8n 2.50.0.
+
+When preferences are off:
+
+* **Settings** > **Context** shows **Disabled** for **Preferences**, and only users who can change the switch see the **Preferences** row.
+* The **Preferences** page shows **Preferences are off**.
+* n8n Assistant doesn't read or save preferences.
+* The n8n MCP server doesn't offer the preferences tools.
+
+n8n keeps saved preferences while they're off, and applies them again when you turn preferences back on.
+
+Preferences also need n8n Assistant or instance-level MCP access. If both are off, preferences stay off even with the switch on, and the **Preferences** page shows **Turn on n8n Assistant or instance-level MCP to use preferences**.
+
+To manage the switch from environment variables on a self-hosted instance, set `N8N_PREFERENCES_MANAGED_BY_ENV` to `true` and `N8N_PREFERENCES_ENABLED` to `true` or `false`. n8n applies the value on every startup and locks the switch in the UI. The switch shows **Managed via environment variables** when you hover over it. `N8N_PREFERENCES_ENABLED` defaults to `false`.
+
 ## Turn on preferences on a self-hosted instance
 
-Preferences are on by default. If your instance has telemetry turned off (`N8N_DIAGNOSTICS_ENABLED=false`), or can't reach n8n's feature flag service, preferences stay off.
+Preferences are on by default. From n8n 2.50.0, a new instance on an Enterprise plan starts with preferences off. To turn them on, see [Turn preferences on or off for your instance](preferences.md#turn-preferences-on-or-off-for-your-instance).
+
+If your instance has telemetry turned off (`N8N_DIAGNOSTICS_ENABLED=false`), or can't reach n8n's feature flag service, preferences stay off.
 
 To turn preferences on, set `N8N_FEATURE_FLAG_OVERRIDES`. For example, add this value to your `.env` file. Preserve any other entries in the JSON object.
 
@@ -204,7 +247,9 @@ With preferences off, n8n hides **Preferences** in **Settings** > **Context**, n
 
 ### Preferences doesn't appear in settings
 
-Check that your instance runs n8n 2.40.0 or later, and that it isn't on an Enterprise plan. On a self-hosted instance with telemetry turned off, see [Turn on preferences on a self-hosted instance](preferences.md#turn-on-preferences-on-a-self-hosted-instance).
+Check that your instance runs n8n 2.40.0 or later. On an Enterprise plan, check that your instance runs n8n 2.50.0 or later. On a self-hosted instance with telemetry turned off, see [Turn on preferences on a self-hosted instance](preferences.md#turn-on-preferences-on-a-self-hosted-instance).
+
+From n8n 2.50.0, check that an instance owner or admin hasn't turned preferences off. When preferences are off, only users who can turn them on see **Preferences** in **Settings** > **Context**. Preferences also stay off when both n8n Assistant and instance-level MCP access are off. See [Turn preferences on or off for your instance](preferences.md#turn-preferences-on-or-off-for-your-instance).
 
 ### An MCP client doesn't list the preferences tools
 

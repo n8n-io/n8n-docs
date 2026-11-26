@@ -27,40 +27,42 @@ Environments are available from n8n 2.47.0. This page covers Environments, not [
 Environments are in Preview and may change in future releases. Try them on test instances before you set them up for your production instances. For what Preview means, see [Understand feature availability](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/understand-feature-availability#feature-maturity-preview-ga-deprecated-and-removed).
 {% endhint %}
 
-**Protected instance** blocks most workflow and configuration changes in the n8n UI, while allowing the actions listed below. Use it on instances that run live workflows.
+**Protected instance** blocks most workflow and configuration changes, while allowing the actions listed below. Use it on instances that run live workflows.
 
 ## What Protected instance blocks
 
-In the UI, it stops people from doing these things:
-
-- Edit workflows, or create workflows, credentials, projects, folders, variables, or data tables.
-- Run workflows manually. The editor shows "This workflow can't be edited or run manually because it's on a protected instance". Published workflows still run from their triggers.
-- Change data table columns.
+- Creating, editing, renaming, moving, or deleting workflows, folders, variables, data tables, agents, and apps.
+- Creating credentials and projects.
+- Running workflows manually. The editor shows "This workflow can't be edited or run manually because it's on a protected instance". Published workflows still run from their triggers.
+- Changing data table columns.
 
 ## What people can still do
 
-- Edit existing credentials, variable values, and data table rows.
-- Add rows to an existing data table.
+- Edit existing credentials and variable values, and delete or move existing credentials.
+- Edit and delete existing projects.
+- Add, edit, and delete data table rows, and import CSV files into an existing table.
 - Create missing credentials and variables while they resolve Apply blockers.
 - Add missing projects from the environment they apply from.
-- Publish and unpublish workflows.
+- Publish and unpublish workflows in the workflow editor. The workflow list hides these actions.
 - Promote and apply.
 
 ## Data tables on a protected instance
 
-Data table rows aren't part of a promote or apply, so you add data on the instance itself. On a protected instance you can:
+Promote and apply don't copy data table rows, so add data on the instance itself. You can:
 
 - Add and edit rows in the data table UI.
-- Write rows from a published workflow using the [**Data table node**](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.datatable) (when the workflow runs from its trigger).
+- Write rows from a published workflow with the [**Data table node**](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/builtin/core-nodes/n8n-nodes-base.datatable), when the workflow runs from its trigger.
 - Use the public API.
 
-You can't create a data table or change its columns in the UI. Create or change the table on the source instance and promote it, then apply it on the protected instance.
+You can't create a data table or change its columns in the UI. A promote only includes data tables that a promoted workflow or agent references by ID. Create or change the table on the source instance, promote a workflow that uses it, then apply it on the protected instance. Removing columns or changing column types needs confirmation on Apply.
 
-## Protection applies to the UI
+## The public API
 
-Protected instance doesn't block the public API, so it still allows most other changes. Use API key scopes and roles to control who can change what through the API.
+Protected instance also blocks manual runs, data table schema changes, and MCP write tools in the backend. The public API still allows most resource changes, including data table schemas, and promotions. The exception is `POST /api/v1/source-control/push`, which it blocks. Use API key scopes and roles to control who can change what through the API.
 
-Environments (Classic) uses the same setting. Turning it on or off changes it for both.
+## Environments (Classic)
+
+Environments (Classic) uses the same setting. Turning it on or off changes it for both. In Classic, a protected instance blocks push in the UI and the API, and allows pull. Disconnecting Git in Classic turns Protected instance off.
 
 ## Related resources
 

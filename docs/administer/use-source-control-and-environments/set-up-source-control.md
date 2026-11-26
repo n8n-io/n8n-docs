@@ -113,11 +113,11 @@ The file or directory replaces the default trust store for Git. If the instance 
 
 If the connection fails with a certificate verification error, such as `SSL certificate problem: unable to get local issuer certificate`, Git doesn't trust the certificate of your Git host. Add the certificate authority that signed it to the instance. See [Git hosts with a private certificate authority](#git-hosts-with-a-private-certificate-authority).
 
-Don't turn off certificate verification, for example with `GIT_SSL_NO_VERIFY`. It removes the protection HTTPS gives against intercepted connections.
+Don't turn off certificate verification. It removes the protection HTTPS gives against intercepted connections.
 
 ### SSH host key verification failed
 
-n8n stores the host key of your Git server the first time it connects. If the server's key changes, for example after a server migration, n8n stops connecting and shows `SSH host key verification failed`. If you expect the change, select **Disconnect Git** in **Settings** > **Environments**, then connect again. Disconnecting resets the stored host keys.
+n8n stores the host key of your Git server the first time it connects. If the server's key changes, for example after a server migration, n8n stops connecting and shows `Host key verification failed`. If you expect the change, select **Disconnect Git** in **Settings** > **Environments**, then connect again. Disconnecting resets the stored host keys.
 
 ## Related resources
 

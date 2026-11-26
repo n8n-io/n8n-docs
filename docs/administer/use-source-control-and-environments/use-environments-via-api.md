@@ -59,7 +59,7 @@ Every request needs an API key sent in the `X-N8N-API-KEY` header. On Enterprise
 
 Scoping keys this way is how you enforce direction. A production instance that should only ever receive changes gets a key with `sourceControl:pull`, so it can't push. Add `sourceControl:read` too if you also want that key to preview incoming changes with `status` before pulling them.
 
-A pull through the API runs as the user who owns the API key. Ownership rules for the pull, such as who owns workflows whose original owner isn't on the instance, apply to that user as in [Workflow and credential owner may change on pull](push-and-pull-changes.md#workflow-and-credential-owner-may-change-on-pull). Create the key from a dedicated instance owner or instance admin account rather than a personal one, so ownership doesn't depend on one person.
+A pull through the API runs as the user who owns the API key. Ownership rules for the pull, such as who owns workflows whose original owner isn't on the instance, apply to that user as in [Workflow and credential owner may change on pull](push-and-pull-changes.md#workflow-and-credential-owner-may-change-on-pull). Create the key from a dedicated instance admin account rather than a personal one, so ownership doesn't depend on one person.
 
 ## Check the status, then act
 

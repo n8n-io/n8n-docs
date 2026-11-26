@@ -14,7 +14,7 @@ layout:
 
 # Environments in n8n <a href="#environments-in-n8n" id="environments-in-n8n"></a>
 
-Environments in n8n let you change and test workflows in a development instance without breaking production: each environment is an n8n instance linked to a Git branch.
+Environments (Classic) in n8n let you change and test workflows in a development instance without breaking production: each environment is an n8n instance linked to a Git branch.
 
 {% hint style="info" %}
 **Feature availability**

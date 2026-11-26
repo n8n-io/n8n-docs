@@ -14,7 +14,7 @@ layout:
 
 # Push and pull <a href="#push-and-pull" id="push-and-pull"></a>
 
-If your n8n instance connects to a Git repository, you need to keep your work in sync with Git.
+Use push and pull to send your work to Git and fetch changes from Git to your n8n instance.
 
 {% hint style="info" %}
 **Feature availability**
@@ -74,13 +74,13 @@ n8n matches the project by its ID. If no project with that ID exists on the new 
 
 ### Auto publish workflows on pull <a href="#auto-publish-workflows-on-pull" id="auto-publish-workflows-on-pull"></a>
 
-When pulling, you can choose to automatically publish workflows using the **Auto publish** dropdown in the pull modal. This has three modes:
+When pulling, you can choose to automatically publish workflows using the **Auto-publish pulled version** dropdown in the pull modal. This has three modes:
 
 * **Off** (default): Don't attempt to publish any workflows. Workflows keep their current local publish state, except a workflow that's archived in Git: n8n unpublishes it.
 * **If workflow already published**: Only attempt to publish workflows that are already published on this instance. New workflows aren't published.
 * **On**: Attempt to publish all pulled workflows, including new ones.
 
-The pull modal always starts with **Auto publish** set to **Off**. n8n doesn't remember your choice or let you set a different default, so choose the mode each time you pull. To pull with the same mode every time, call the [pull endpoint of the API](use-environments-via-api.md) and set `autoPublish`.
+The pull modal always starts with **Auto-publish pulled version** set to **Off**. n8n doesn't remember your choice or let you set a different default, so choose the mode each time you pull. To pull with the same mode every time, call the [pull endpoint of the API](use-environments-via-api.md) and set `autoPublish`.
 
 n8n never auto publishes archived workflows, regardless of the auto publish setting.
 
@@ -90,9 +90,8 @@ Auto publish is also available through the [API](https://app.gitbook.com/s/r7wKI
 
 ### Pulling may cause brief service interruption <a href="#pulling-may-cause-brief-service-interruption" id="pulling-may-cause-brief-service-interruption"></a>
 
-If **Auto publish** publishes a workflow that's already published, n8n unpublishes it while pulling, then republishes it with the pulled changes. This may result in a few seconds of downtime for the workflow.
-
-With **Auto publish** set to **Off**, n8n doesn't do this. A published workflow keeps running its current published version, and the pulled changes don't go live until you publish them. The exception is a workflow that's archived in Git: n8n unpublishes it so it stops running.
+If **Auto-publish pulled version** publishes a workflow that's already published, n8n unpublishes it while pulling, then republishes it with the pulled changes. This may result in a few seconds of downtime for the workflow.
+With **Auto-publish pulled version** set to **Off**, n8n doesn't do this. A published workflow keeps running its current published version, and the pulled changes don't go live until you publish them. The exception is a workflow that's archived in Git: n8n unpublishes it so it stops running.
 
 ## Send your work to Git <a href="#send-your-work-to-git" id="send-your-work-to-git"></a>
 
@@ -110,7 +109,7 @@ n8n commits the following to Git:
 
 * Workflows, including their tags and the email address of the workflow owner. You can choose which workflows to push.
 * Credential stubs - ID, name and type. Any other fields are included only if they are [expressions](https://docs.n8n.io/data/expressions/). You can choose which credentials to push.
-* Variable stubs: ID, name, and type. n8n never pushes variable values. After you pull, set the values on the target instance.
+* Variable stubs: ID, name, and type. n8n never pushes variable values. After you pull, set the values of new variables on the target instance.
 * Data table schemas (table name and column definitions, not row data). You can choose which data tables to push.
 * Projects
 * Folders
@@ -184,7 +183,7 @@ If you need different credentials on different n8n environments, use [external s
 
 ### Cannot push onto read-only branch
 
-n8n shows this error when the instance is set to a read-only branch. Pushing isn't allowed from a read-only instance, such as a production instance that only pulls. Push from your development instance instead, or change the **Protected instance** setting in **Settings** > **Environments**.
+n8n shows this error when **Protected instance** is on for the instance. It doesn't come from a rule on the Git branch. A protected instance can pull but can't push, such as a production instance. Push from your development instance instead, or clear **Protected instance** under **Instance settings** in **Settings** > **Environments** and select **Save settings**. This also lets people edit workflows on that instance.
 
 ## Related resources
 

@@ -285,6 +285,23 @@ For example, you have two n8n instances, one for development and one for product
 
 You can share a vault with a project so that only that project's credentials can reference its secrets. Refer to [Project vaults](#project-vaults) for setup steps. Project-scoped vaults are available from n8n 2.11.0.
 
+### Name secrets for each team or customer
+
+When each team or customer has its own value for the same service, such as a separate Salesforce API key, give the secrets a consistent naming pattern. The pattern makes it clear which project a secret belongs to:
+
+```
+customer_a_salesforce_api_key
+customer_b_salesforce_api_key
+```
+
+Reference the secret in the credential for that team's or customer's project:
+
+```js
+{{ $secrets.<vault-name>.customer_a_salesforce_api_key }}
+```
+
+For stricter separation, give each project its own [project vault](#project-vaults) instead of sharing one global vault. Credentials in one project then can't reference another project's secrets.
+
 ### Access for project roles <a href="#access-for-project-roles" id="access-for-project-roles"></a>
 
 {% hint style="info" %}

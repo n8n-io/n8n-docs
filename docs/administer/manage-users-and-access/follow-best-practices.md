@@ -23,6 +23,18 @@ This page contains advice on best practices relating to user management in n8n.
     * The path works for the first workflow that's run or published.
     * Other workflows will error if they try to run with the same path.
 
+## Name workflows consistently
+
+n8n doesn't enforce workflow names. When several teams or customers share an instance, agree on a naming pattern and document it in your team guidelines. A consistent pattern helps people find workflows and see who owns them, across projects.
+
+For example, name each workflow with its team or customer, its function, and its version:
+
+```
+<team-or-customer> - <function> - <version>
+Customer A - Invoice processing - v2
+Shared - Email notification template - v1
+```
+
 ## Self-hosted <a href="#self-hosted" id="self-hosted"></a>
 
 If you run n8n behind a reverse proxy, set the following environment variables so that n8n generates emails with the correct URL:

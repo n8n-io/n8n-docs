@@ -53,6 +53,14 @@ In [projects](../manage-users-and-access/set-permissions-and-roles-rbac/README.m
 Sharing an [end-user credential](end-user-credentials.md) shares the credential itself, not a connection. Users you share it with connect their own account, they don't use yours.
 {% endhint %}
 
+## Keep credentials isolated between projects
+
+A credential created in a team project is available only to members of that project until someone shares it. When projects separate teams or customers, share a credential across projects only when another project needs it, and review the **Sharing** tab to check who can use it.
+
+For values that differ for each team or customer, such as a separate API key for each customer, store them in an external secrets vault instead of copying credentials between projects. Refer to [Use external secret stores](use-external-secret-stores.md#using-external-secrets-in-projects).
+
+To change which project owns a credential, move it. Moving a credential removes all its existing sharing. Refer to [Move workflows and credentials](../manage-users-and-access/organize-work-in-projects/move-workflows-and-credentials.md).
+
 ## Share a credential <a href="#share-a-credential" id="share-a-credential"></a>
 
 To share a credential:

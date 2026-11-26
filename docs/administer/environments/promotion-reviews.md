@@ -67,6 +67,18 @@ Because the same GitLab user opens and approves the merge request, GitLab approv
 | **Merged** | The changes are on the environment's branch. |
 | **Closed** | Someone closed the review without merging it. |
 
+## Approve changes without promotion reviews
+
+If promotion reviews aren't available for your setup, for example because you don't use GitLab, you can build an approval step as an n8n workflow. Use it for production changes in shared or high-impact projects.
+
+A typical approval workflow:
+
+1. Receives a change request from a developer through a webhook or an API call.
+2. Notifies a reviewer, for example in Slack or by email.
+3. Waits for the reviewer to approve, for example through an n8n form or an external system.
+4. Deploys the approved change with the [n8n public API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api).
+5. Logs the result for your audit trail.
+
 ## Related resources
 
 - [Environments](./)

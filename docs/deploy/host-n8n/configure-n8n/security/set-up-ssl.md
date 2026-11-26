@@ -21,7 +21,7 @@ Use a reverse proxy like [Traefik](https://doc.traefik.io/traefik/) or a Network
 
 Refer to [Security | Data encryption](https://n8n.io/legal/#security) for more information.
 
-### Example NGINX configuration <a href="#example-nginx-configuration" id="example-nginx-configuration"></a>
+### Example NGINX configuration
 
 The following NGINX configuration terminates TLS 1.2 and 1.3, redirects HTTP to HTTPS, sets the HTTP Strict Transport Security (HSTS) header, and passes WebSocket and forwarded-request headers to n8n. Replace `n8n.example.com` and the certificate paths with your own values.
 
@@ -30,7 +30,7 @@ The following NGINX configuration terminates TLS 1.2 and 1.3, redirects HTTP to 
 server {
 	listen 80;
 	server_name n8n.example.com;
-	return 301 https://$host$request_uri;
+	return 301 https://n8n.example.com$request_uri;
 }
 
 server {
@@ -54,6 +54,7 @@ server {
 
 		# Pass on information about the original request
 		proxy_set_header Host $host;
+		proxy_set_header X-Forwarded-Host $host;
 		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 		proxy_set_header X-Forwarded-Proto $scheme;
 	}
@@ -62,11 +63,11 @@ server {
 
 Don't add a `Content-Security-Policy` header at the proxy. A proxy-level policy applies to every route, so it can break features such as the hosted Chat Trigger, binary data previews, and form pages. To set a Content Security Policy, use the `N8N_CONTENT_SECURITY_POLICY` environment variable instead. Refer to [Security environment variables](../basic-configuration/use-environment-variables/security.md).
 
-### Update n8n's URL settings <a href="#update-n8ns-url-settings" id="update-n8ns-url-settings"></a>
+### Update n8n's URL settings
 
-After you put n8n behind a reverse proxy with TLS, set the n8n environment variables for the public HTTPS URL and the proxy. Refer to [Configure n8n webhooks with reverse proxy](../basic-configuration/configuration-examples/configure-webhook-urls-with-reverse-proxy.md). If you don't update the webhook URL, n8n keeps showing and registering `http` webhook URLs, and existing webhooks registered with external services stop working.
+With a single reverse proxy in front of n8n, set `N8N_WEBHOOK_URL` to your public HTTPS URL, for example `https://n8n.example.com/`, and set `N8N_PROXY_HOPS=1`. If you don't update the webhook URL, n8n keeps showing and registering `http` webhook URLs, and existing webhooks registered with external services stop working. Refer to [Configure n8n webhooks with reverse proxy](../basic-configuration/configuration-examples/configure-webhook-urls-with-reverse-proxy.md) for details.
 
-### Renew certificates automatically <a href="#renew-certificates-automatically" id="renew-certificates-automatically"></a>
+### Renew certificates automatically
 
 An expired certificate stops browsers and webhook callers from connecting, and the failure can go unnoticed until a user reports it. Automate renewal with a tool such as Certbot, or [cert-manager](https://cert-manager.io/docs/) on Kubernetes, and monitor certificate expiry.
 

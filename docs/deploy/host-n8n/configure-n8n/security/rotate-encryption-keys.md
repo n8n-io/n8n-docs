@@ -36,7 +36,7 @@ Encryption key rotation lets you periodically replace the key that encrypts your
 
 n8n uses a two-layer key model:
 
-* **Instance encryption key** (`N8N_ENCRYPTION_KEY`): your master key, set at deployment time. This key never changes. n8n uses it only to protect the data encryption keys.
+* **Instance encryption key** (`N8N_ENCRYPTION_KEY`): your master key, set at deployment time. This key never changes. n8n uses it to protect the data encryption keys and instance secrets, such as signing keys.
 * **Data encryption key**: the key that directly encrypts your credential data. This is the key you rotate. n8n stores it encrypted in the database, protected by the instance key.
 
 When you rotate, n8n generates a new data encryption key and uses it for all future writes. Existing data encrypted with the previous key remains readable. n8n silently re-encrypts each record to the new key the next time you update it.
@@ -126,7 +126,7 @@ If you start n8n with a different `N8N_ENCRYPTION_KEY` on an existing database, 
 
 `n8n export:workflow` and `n8n export:credentials` move workflows, their tags, and credentials. They don't move the rest of the instance, including users, projects, folders, execution history, variables, data tables, and instance settings. Recreate these on the new instance.
 
-Imported workflows aren't published. Publish them again. In queue mode, you can import with `--activeState=fromJson` to keep the published state.
+Imported workflows aren't published. Review them, then publish them again.
 
 ### Migrate to a new instance
 
@@ -151,7 +151,10 @@ Imported workflows aren't published. Publish them again. In queue mode, you can 
 	openssl rand -hex 32
 	```
 
-1. Set up a new database and a new n8n instance. Set `N8N_ENCRYPTION_KEY` to the new key, and start with an empty n8n user folder. On Docker and Kubernetes, mount a new, empty volume at `/home/node/.n8n`. In queue mode, set the new key on every main, worker, and webhook container. Community nodes and custom extensions live in the user folder, so reinstall them.
+1. Set up a new database and a new n8n instance. Set `N8N_ENCRYPTION_KEY` to the new key.
+1. Start with an empty n8n user folder. On Docker and Kubernetes, mount a new, empty volume at `/home/node/.n8n`.
+1. In queue mode, set the new key on every main, worker, and webhook container.
+1. Reinstall your community nodes and custom extensions, which live in the user folder.
 1. Complete the owner setup on the new instance. The import commands fail without it. If you export per project, recreate your users and projects first.
 1. Import your credentials, then your workflows. Add `--projectId=<new-project-id>` or `--userId=<new-user-id>` to choose the owner:
 
@@ -161,10 +164,11 @@ Imported workflows aren't published. Publish them again. In queue mode, you can 
 	```
 
 1. Set up again what the export doesn't carry over:
-	- Secrets n8n encrypts with the instance key: user two-factor authentication, OIDC client secret, SAML signing key, LDAP bind password, external secrets connections, and source control credentials.
+	- Secrets stored encrypted in the database: user two-factor authentication, OIDC client secret, SAML signing key, LDAP bind password, external secrets connections, and source control credentials.
 	- On Enterprise: dynamic credential resolvers, promotion settings, inbound authentication trusted sources, and SCIM.
 	- Your license, user API keys, log streaming destinations, and persisted credential overwrites.
-1. Delete the exported files, and retire the old instance, database, and key.
+1. Rotate the credentials you stored in n8n at their source, such as API keys, OAuth secrets, and secrets in your external store. The new key doesn't protect them from anyone who has the old key and a copy of the old database.
+1. Delete the exported files and old database backups, and retire the old instance, database, and key.
 
 On the new instance, n8n generates new signing secrets. Users must sign in again, and links for waiting executions and signed binary data from the old instance stop working.
 

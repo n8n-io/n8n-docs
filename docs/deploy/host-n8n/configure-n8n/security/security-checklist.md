@@ -21,19 +21,21 @@ This checklist applies to self-hosted n8n. It doesn't apply to n8n Cloud, where 
 - [ ] HTTP redirects to HTTPS, and the proxy sets security headers such as HSTS. Refer to [Set up SSL](set-up-ssl.md).
 - [ ] n8n isn't exposed directly to the internet, and only the ports you need are open. Refer to [Production requirements](../../install-options/production-requirements.md#network).
 - [ ] `N8N_PROXY_HOPS`, `N8N_EDITOR_BASE_URL`, and the webhook URL variables match your proxy setup. Refer to [Configure n8n webhooks with reverse proxy](../basic-configuration/configuration-examples/configure-webhook-urls-with-reverse-proxy.md).
-- [ ] You configure Content Security Policy (CSP) in n8n, not at the proxy. Before n8n 3.0, n8n only reports violations through `N8N_CONTENT_SECURITY_POLICY_REPORT_ONLY`. Review them, then enforce with `N8N_CONTENT_SECURITY_POLICY=default`. From n8n 3.0, n8n enforces a policy by default. To restrict embedding, add `frame-ancestors` to `N8N_CONTENT_SECURITY_POLICY`. Don't use `form-action 'self'` if you use SAML SSO with POST binding. Refer to [Security environment variables](../basic-configuration/use-environment-variables/security.md).
+- [ ] You configure Content Security Policy (CSP) in n8n, not at the proxy. Before n8n 3.0, n8n only reports violations through `N8N_CONTENT_SECURITY_POLICY_REPORT_ONLY`. Review them, then enforce with `N8N_CONTENT_SECURITY_POLICY=default`. From n8n 3.0, n8n enforces a policy by default. Refer to [Security environment variables](../basic-configuration/use-environment-variables/security.md).
+- [ ] To restrict which sites can embed n8n, you add `frame-ancestors` to `N8N_CONTENT_SECURITY_POLICY`.
+- [ ] If you use SAML SSO with POST binding, your policy doesn't include `form-action 'self'`.
 - [ ] You restrict outbound requests from nodes to the hosts they need. Refer to [SSRF protection](enable-ssrf-protection.md).
 - [ ] You limit sensitive endpoints to approved IP ranges where appropriate, for example at your firewall or proxy.
 
 ## Secrets and credentials
 
-- [ ] `N8N_ENCRYPTION_KEY` is a strong random value, the same on every main instance and worker, and different in each environment. Refer to [Set a custom encryption key](../basic-configuration/configuration-examples/set-a-custom-encryption-key.md).
+- [ ] `N8N_ENCRYPTION_KEY` is a strong random value, the same on every main instance, worker, and webhook processor, and different in each environment. Refer to [Set a custom encryption key](../basic-configuration/configuration-examples/set-a-custom-encryption-key.md).
 - [ ] You back up the encryption key in a different location from the instance. If you lose it, n8n can't decrypt your stored credentials.
 - [ ] You don't change `N8N_ENCRYPTION_KEY` on an existing database. Changing it stops n8n from starting.
 - [ ] Data encryption key rotation is on, with a rotation schedule. Refer to [Encryption key rotation](rotate-encryption-keys.md).
 - [ ] **(Enterprise)** An external secrets store holds production credentials. Refer to [External secrets](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/use-external-secret-stores).
 - [ ] You don't store credentials in workflow parameters, Git-tracked configuration files, or Kubernetes values files.
-- [ ] You share credentials only with the projects that need them. Refer to [Share credentials securely](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/share-credentials-securely).
+- [ ] **(Business, Enterprise)** You share credentials only with the projects that need them. Refer to [Share credentials securely](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-credentials/share-credentials-securely).
 
 ## Authentication and access
 
@@ -55,10 +57,11 @@ This checklist applies to self-hosted n8n. It doesn't apply to n8n Cloud, where 
 
 - [ ] **(Enterprise)** Log streaming sends events to your logging or SIEM tool. Refer to [Log streaming](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/observe-and-log/stream-logs-to-external-systems).
 - [ ] Execution data retention matches your compliance policy. Refer to [Execution data](../scaling/manage-execution-data.md).
-- [ ] You redact sensitive execution data where needed. Refer to [Redact execution data](redact-execution-data.md).
-- [ ] You turn off telemetry, version notifications, and templates if your policy requires it. Refer to [Control telemetry](control-telemetry.md).
+- [ ] **(Enterprise)** You redact sensitive execution data where needed. Refer to [Redact execution data](redact-execution-data.md).
+- [ ] You turn off telemetry, version notifications, and templates if your policy requires it. Refer to [Control telemetry](control-telemetry.md) and the `N8N_TEMPLATES_ENABLED` variable in [Deployment environment variables](../basic-configuration/use-environment-variables/deployment.md).
 - [ ] You've run a security audit and reviewed the findings. Refer to [Security audit](run-security-audits.md).
-- [ ] You run separate development and production instances, and you protect production from edits in the UI. Refer to [Plan your environments](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/environments/plan-your-environments) and [Protect a production instance](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/environments/protect-a-production-instance), which is in Preview.
+- [ ] You run separate development and production instances.
+- [ ] **(Enterprise)** You promote changes between instances with Environments, and you protect production from edits in the UI. Refer to [Plan your environments](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/environments/plan-your-environments) and [Protect a production instance](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/environments/protect-a-production-instance), which is in Preview.
 - [ ] Backup and update procedures are in place. Refer to [Back up and restore](../../keep-n8n-running/backup-and-restore.md) and [Update self-hosted n8n](../../keep-n8n-running/update-n8n.md).
 
 ## Related resources

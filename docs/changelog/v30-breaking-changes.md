@@ -262,6 +262,14 @@ The default `N8N_COMPRESSION_NODE_MAX_DECOMPRESSED_SIZE_BYTES` drops from 2 GiB 
 
 **What to do:** If your workflows decompress archives larger than 256 MiB or with more than 1,000 entries, set these variables explicitly to their previous values (2147483648 and 5000) before upgrading to n8n 3.0. See the [node environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/nodes) reference.
 
+### Content Security Policy enforced by default
+
+n8n 3.0 enforces a Content Security Policy by default. `N8N_CONTENT_SECURITY_POLICY` changes from unset to `script-src <nonce> 'strict-dynamic' 'unsafe-eval'; object-src 'none'; base-uri 'none'`, and `N8N_CONTENT_SECURITY_POLICY_REPORT_ONLY` changes from that policy to unset. Existing instances start enforcing the policy when they upgrade, unless you already set `N8N_CONTENT_SECURITY_POLICY`.
+
+The default policy blocks inline scripts and event handlers that don't carry n8n's nonce, and scripts that a proxy or CDN injects, such as NGINX `sub_filter` or Cloudflare Rocket Loader. If your reverse proxy adds its own `Content-Security-Policy` header, browsers enforce both policies. The editor, webhooks, forms, and iframe embedding keep working.
+
+**What to do:** Before you upgrade, remove proxy-injected scripts and conflicting proxy `Content-Security-Policy` headers. To turn off enforcement, set `N8N_CONTENT_SECURITY_POLICY` to `{}`, or set it to your own policy. To test a policy first, set `N8N_CONTENT_SECURITY_POLICY` to `{}` and `N8N_CONTENT_SECURITY_POLICY_REPORT_ONLY` to your policy. Refer to [Security environment variables](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/use-environment-variables/security).
+
 ## Configuration
 
 n8n 3.0 changes some defaults and removes settings that only kept older behavior alive. n8n logs a deprecation warning at startup on 2.x for each of these when your instance is affected.

@@ -210,6 +210,7 @@ Command flags:
 | --all        | Exports all workflows/credentials.                                                                                                                                                                  |
 | --backup     | Sets --all --pretty --separate for backups. You can optionally set --output.                                                                                                                        |
 | --id         | The ID of the workflow to export.                                                                                                                                                                   |
+| --projectId  | Exports the workflows or credentials of the specified project, including items shared with it. Can't be used with `--all` or `--id`. Skips instance-scoped credentials.                        |
 | --output, -o | Outputs file name or directory if using separate files.                                                                                                                                             |
 | --pretty     | Formats the output in an easier to read fashion.                                                                                                                                                    |
 | --separate   | Exports one file per workflow (useful for versioning). Must set a directory using --output.                                                                                                         |

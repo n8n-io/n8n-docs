@@ -107,12 +107,14 @@ Workflow reviews are available on:
 Workflow reviews are available from n8n 2.37.0.
 {% endhint %}
 
-With workflow reviews, teams can submit a workflow version for approval before publishing. Instance admins enable the feature for the whole instance.
+With workflow reviews, teams can submit a workflow version for approval before publishing. Instance admins enable the feature for the whole instance, and can require reviews for every team project or for single projects.
 
 To enable workflow reviews:
 
 1. Navigate to **Settings** > **Policies**.
-2. In the **Workflow reviews** section, turn on **Enable workflow reviews**.
+2. In the **Reviews** section, turn on **Enable publish reviews**.
+
+To require an approved review before every publish in team projects, set **Require approval** to **Always required**. To require reviews for single projects, select **View all** and set each project to **Required**. Project admins can't relax a requirement that the instance sets.
 
 When the setting is off, users can't create or manage reviews. Turning the feature off also lifts the publish block for workflows that still have an open review. For how to submit, approve, and publish after you enable the feature, refer to [Workflow reviews](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/workflow-reviews).
 

@@ -9,15 +9,9 @@ layout:
 
 The official n8n Helm chart installs self-hosted n8n on Kubernetes, as a single pod or in queue mode with separate workers.
 
-n8n maintains the chart in the [n8n-hosting repository](https://github.com/n8n-io/n8n-hosting/tree/main/charts/n8n) and publishes it at `oci://ghcr.io/n8n-io/n8n-helm-chart/n8n`. You can browse the chart's versions and default values on [Artifact Hub](https://artifacthub.io/packages/helm/n8n-io/n8n). This page covers chart 2.x, the chart line for n8n 3.x. If you run chart 1.x, see [Upgrade to Helm chart 2.0](install-with-helm/upgrade-to-helm-chart-20.md) for what changed and how to upgrade.
+n8n maintains the chart in the [n8n-hosting repository](https://github.com/n8n-io/n8n-hosting/tree/main/charts/n8n) and publishes it at `oci://ghcr.io/n8n-io/n8n-helm-chart/n8n`. You can browse the chart's versions and default values on [Artifact Hub](https://artifacthub.io/packages/helm/n8n-io/n8n). This page covers chart 2.x, which installs n8n 3.x. If you run chart 1.x, see [Upgrade to Helm chart 2.0](install-with-helm/upgrade-to-helm-chart-20.md) for what changed and how to upgrade.
 
-{% hint style="warning" %}
-**This guide uses a release candidate of Helm chart 2.0**
-
-Chart 2.0 isn't final yet, so the commands on this page install the release candidate `2.0.0-rc.2`, which still installs n8n 2.x. Use it to try chart 2.0, not for production.
-
-For production, use chart 1.x until chart 2.0 is final. The [`release/n8n-2.x` branch](https://github.com/n8n-io/n8n-hosting/tree/release/n8n-2.x/charts/n8n) of the chart's repository holds the 1.x chart, and its README explains how to install and configure it. 
-{% endhint %}
+To run n8n 2.x, use chart 1.x instead. The [`release/n8n-2.x` branch](https://github.com/n8n-io/n8n-hosting/tree/release/n8n-2.x/charts/n8n) of the chart's repository holds the 1.x chart, and its README explains how to install and configure it.
 
 The n8n commands in this guide use the namespace `n8n` and the release name `n8n`. If you choose other names, replace them in each command.
 
@@ -93,11 +87,10 @@ EOF
 
 helm install n8n oci://ghcr.io/n8n-io/n8n-helm-chart/n8n \
 	--namespace n8n \
-	--values values.yaml \
-	--version 2.0.0-rc.2
+	--values values.yaml
 ```
 
-`--version` selects the release candidate, because Helm skips release candidates unless you name one. The chart checks your values file against its schema, so the installation stops at a misspelled key, and the error names it.
+Helm installs the latest chart version. The chart checks your values file against its schema, so the installation stops at a misspelled key, and the error names it.
 
 ### Check that n8n is running
 
@@ -284,8 +277,7 @@ EOF
 
 helm install n8n oci://ghcr.io/n8n-io/n8n-helm-chart/n8n \
 	--namespace n8n \
-	--values values.yaml \
-	--version 2.0.0-rc.2
+	--values values.yaml
 ```
 
 To use your own PostgreSQL and Redis instead of the examples, skip the manifests in [Deploy PostgreSQL and Redis](#deploy-postgresql-and-redis). Create `n8n-db-secret` with your database password, and set `database.host` and `redis.host` to your hosts. n8n creates its tables on startup, but not the database itself, so create an empty database that n8n's user owns first. For passwords, TLS, and other connection settings, see [`values.yaml`](https://github.com/n8n-io/n8n-hosting/blob/main/charts/n8n/values.yaml) in the chart.
@@ -399,8 +391,7 @@ EOF
 
 helm upgrade n8n oci://ghcr.io/n8n-io/n8n-helm-chart/n8n \
 	--namespace n8n \
-	--values values.yaml \
-	--version 2.0.0-rc.2
+	--values values.yaml
 ```
 
 The chart sets n8n's editor and webhook URLs to `https://` and the first hostname, so webhook and OAuth callback URLs use your domain.
@@ -457,16 +448,15 @@ This section covers upgrades within chart 2.x. To move from chart 1.x, follow [U
 
 Each chart release installs one n8n version by default, so upgrading the chart also updates n8n. The [chart releases](https://github.com/n8n-io/n8n-hosting/releases) list the n8n version each one installs, with any upgrade notes.
 
-Before you upgrade, back up the database, the encryption key, and the persistent volume if you use one. A newer n8n version can change the database, and Helm can't undo that. Then upgrade:
+Before you upgrade, back up the database, the encryption key, and the persistent volume if you use one. A newer n8n version can change the database, and Helm can't undo that. Then upgrade to the latest chart version:
 
 ```bash
 helm upgrade n8n oci://ghcr.io/n8n-io/n8n-helm-chart/n8n \
 	--namespace n8n \
-	--values values.yaml \
-	--version 2.0.0-rc.2
+	--values values.yaml
 ```
 
-To move to another chart version, change `--version` to a version from the chart releases. To run another n8n version on the same chart, set `image.tag` in `values.yaml`.
+To choose a chart version, add `--version` with a version from the chart releases. To run another n8n version on the same chart, set `image.tag` in `values.yaml`.
 
 Pass your values file with `--values` instead of using `--reuse-values`. `--reuse-values` keeps the defaults of the chart version you installed, and those can conflict with the new version. If you no longer have your values file, `helm get values n8n --namespace n8n --output yaml` prints the values you set.
 

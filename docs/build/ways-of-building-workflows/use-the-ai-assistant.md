@@ -79,6 +79,24 @@ Since access to workflow data is essential for the AI Workflow builder and n8n A
 
 The **Send actual data values** option is deprecated. Once it's on, you can't turn it off in the settings. To keep it off on a self-hosted instance, set the `N8N_AI_ALLOW_SENDING_PARAMETER_VALUES` environment variable to `false` and restart n8n. The variable is deprecated too and will be removed in n8n 4.
 
+### Help improve n8n's LLMs
+
+The instance owner controls this setting in **Settings** > **Assistant** > **Model training**. It applies to everyone on the instance.
+
+When this is on, n8n uses use cases from your conversations with the n8n Assistant to improve the models behind it:
+
+1. n8n removes identifying details from the conversation, and an AI model writes a one-line use case describing what you wanted to do.
+2. n8n groups similar use cases. A use case is only used once at least five different people share it.
+3. An AI model writes a made-up scenario covering the use case, and that scenario becomes a practice task for training and testing.
+
+n8n removes names, company names, email addresses, phone numbers, web addresses, IP addresses, card and bank numbers, government IDs, passwords, and API keys before writing the use case. n8n doesn't use your workflows, credentials, files, or data.
+
+n8n also uses metadata, such as which types of nodes a workflow used and whether the Assistant completed the task.
+
+This setting is on by default for Cloud Trial, Starter, and Pro plans. Cloud Enterprise and self-hosted instances are always excluded.
+
+Turning the setting off stops n8n using new conversations. It doesn't remove use cases already collected or change models already trained. The Assistant works the same either way.
+
 ## FAQs <a href="#faqs" id="faqs"></a>
 
 ### What context does the Assistant have? <a href="#what-context-does-the-assistant-have" id="what-context-does-the-assistant-have"></a>

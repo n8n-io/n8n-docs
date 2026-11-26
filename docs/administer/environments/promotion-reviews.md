@@ -76,7 +76,7 @@ A typical approval workflow:
 1. Receives a change request from a developer through a webhook or an API call.
 2. Notifies a reviewer, for example in Slack or by email.
 3. Waits for the reviewer to approve, for example through an n8n form or an external system.
-4. Deploys the approved change with the [n8n public API](https://app.gitbook.com/s/r7wKI4I1BgdBCuq5Cvcx/n8n-api).
+4. Deploys the approved change to the target instance.
 5. Logs the result for your audit trail.
 
 ## Related resources

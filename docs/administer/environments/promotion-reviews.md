@@ -80,7 +80,7 @@ A typical approval workflow:
 5. Logs the result for your audit trail.
 
 {% hint style="warning" %}
-Secure the approval workflow itself. Require authentication on the webhook or API call that starts it, so no one can deploy by calling the URL directly, and give the API key the deploy step uses only the scopes it needs. Without both, someone can bypass the approval step on a production instance.
+Secure the approval workflow itself. Require authentication on the webhook or API call that starts it. If step 3 uses a form or callback, authenticate that endpoint and verify that the submitter is an authorized reviewer. Give the API key the deploy step uses only the scopes it needs.
 {% endhint %}
 
 ## Related resources

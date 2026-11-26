@@ -21,7 +21,7 @@ This checklist applies to self-hosted n8n. It doesn't apply to n8n Cloud, where 
 - [ ] HTTP redirects to HTTPS, and the proxy sets security headers such as HSTS. Refer to [Set up SSL](set-up-ssl.md).
 - [ ] n8n isn't exposed directly to the internet, and only the ports you need are open. Refer to [Production requirements](../../install-options/production-requirements.md#network).
 - [ ] `N8N_PROXY_HOPS`, `N8N_EDITOR_BASE_URL`, and the webhook URL variables match your proxy setup. Refer to [Configure n8n webhooks with reverse proxy](../basic-configuration/configuration-examples/configure-webhook-urls-with-reverse-proxy.md).
-- [ ] You configure Content Security Policy (CSP) in n8n, not at the proxy. Before n8n 3.0, n8n only reports violations through `N8N_CONTENT_SECURITY_POLICY_REPORT_ONLY`. Review them, then enforce with `N8N_CONTENT_SECURITY_POLICY=default`. From n8n 3.0, n8n enforces a policy by default. Refer to [Security environment variables](../basic-configuration/use-environment-variables/security.md).
+- [ ] You configure Content Security Policy (CSP) in n8n, not at the proxy. Before n8n 3.0, n8n by default only reports violations through `N8N_CONTENT_SECURITY_POLICY_REPORT_ONLY`. Review them, then enforce with `N8N_CONTENT_SECURITY_POLICY=default`. From n8n 3.0, n8n enforces a policy by default. Refer to [Security environment variables](../basic-configuration/use-environment-variables/security.md).
 - [ ] To restrict which sites can embed n8n, you add `frame-ancestors` to `N8N_CONTENT_SECURITY_POLICY`.
 - [ ] If you use SAML SSO with POST binding, your policy doesn't include `form-action 'self'`.
 - [ ] You restrict outbound requests from nodes to the hosts they need. Refer to [SSRF protection](enable-ssrf-protection.md).

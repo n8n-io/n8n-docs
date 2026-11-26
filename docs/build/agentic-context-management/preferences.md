@@ -198,6 +198,8 @@ Instance owners and admins turn preferences on and off for everyone on the insta
 2. Select **Preferences**.
 3. Use the switch next to the **Preferences** title.
 
+Preferences start on for a new instance. On an Enterprise plan, a new instance starts with preferences off. An Enterprise instance that already has saved preferences keeps preferences on when it upgrades to n8n 2.50.0.
+
 When preferences are off:
 
 * **Settings** > **Context** shows **Disabled** for **Preferences**, and only users who can change the switch see the **Preferences** row.
@@ -209,7 +211,7 @@ n8n keeps saved preferences while they're off, and applies them again when you t
 
 Preferences also need n8n Assistant or instance-level MCP access. If both are off, preferences stay off even with the switch on, and the **Preferences** page shows **Turn on n8n Assistant or instance-level MCP to use preferences**.
 
-To manage the switch from environment variables on a self-hosted instance, set `N8N_PREFERENCES_MANAGED_BY_ENV` to `true` and `N8N_PREFERENCES_ENABLED` to `true` or `false`. n8n applies the value on every startup and locks the switch in the UI. `N8N_PREFERENCES_ENABLED` defaults to `false`.
+To manage the switch from environment variables on a self-hosted instance, set `N8N_PREFERENCES_MANAGED_BY_ENV` to `true` and `N8N_PREFERENCES_ENABLED` to `true` or `false`. n8n applies the value on every startup and locks the switch in the UI. The switch shows **Managed via environment variables** when you hover over it. `N8N_PREFERENCES_ENABLED` defaults to `false`.
 
 ## Turn on preferences on a self-hosted instance
 
@@ -232,6 +234,8 @@ With preferences off, n8n hides **Preferences** in **Settings** > **Context**, n
 ### Preferences doesn't appear in settings
 
 Check that your instance runs n8n 2.40.0 or later, and that it isn't on an Enterprise plan. On a self-hosted instance with telemetry turned off, see [Turn on preferences on a self-hosted instance](preferences.md#turn-on-preferences-on-a-self-hosted-instance).
+
+From n8n 2.50.0, check that an instance owner or admin hasn't turned preferences off. When preferences are off, only users who can turn them on see **Preferences** in **Settings** > **Context**. Preferences also stay off when both n8n Assistant and instance-level MCP access are off. See [Turn preferences on or off for your instance](preferences.md#turn-preferences-on-or-off-for-your-instance).
 
 ### An MCP client doesn't list the preferences tools
 

@@ -104,7 +104,7 @@ Instance (visible to instance owners and instance admins)
 
 When you set up this structure:
 
-* Give each member the least-privileged [project role](../set-permissions-and-roles-rbac/understand-project-roles.md) they need. Most members need Project Editor or Project Viewer, not Project Admin.
+* Give each member the least-privileged [project role](../set-permissions-and-roles-rbac/understand-project-roles.md) they need. Most members need Editor or Viewer, not Admin.
 * Keep each team's or customer's credentials in its own project. Share a credential with another project only when that project needs it. Refer to [Share credentials securely](../../manage-credentials/share-credentials-securely.md).
 * Put reusable sub-workflows in a shared project, and use each sub-workflow's caller policy to control which workflows can call it.
 * On n8n Enterprise 2.11.0 and later, use a [project vault](../../manage-credentials/use-external-secret-stores.md#project-vaults) for secrets that differ for each team or customer.

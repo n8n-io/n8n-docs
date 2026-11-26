@@ -62,7 +62,7 @@ Viewers aren't able to manually execute any workflows that exist in a project.
 
 Project admins can assign a role to each project member. You can assign only the roles that your plan or edition includes.
 
-Assign the least-privileged role each member needs. Most members need Project Editor, to build workflows, or Project Viewer, to check workflows and executions. Keep Project Admin for people who manage the project's members and settings.
+Assign the least-privileged role each member needs. Most members need Project Editor to build workflows or Project Viewer to check workflows and executions. Keep Project Admin for people who manage the project's members and settings.
 
 To assign a project role:
 

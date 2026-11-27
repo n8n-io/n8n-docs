@@ -51,6 +51,7 @@ Create an [OpenAI](https://platform.openai.com/signup/) account.
 ## Supported authentication methods <a href="#supported-authentication-methods" id="supported-authentication-methods"></a>
 
 * API key
+* **OpenAI Account** (**OpenAI Chat Model** node only)
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 
@@ -78,3 +79,14 @@ To find your Organization ID:
 2. Copy your Organization ID and add it as the **Organization ID** in n8n.
 
 Refer to [Setting up your organization](https://platform.openai.com/docs/guides/production-best-practices/setting-up-your-organization) for more information. Note that API requests made using an Organization ID will count toward the organization's subscription quota.
+
+## Using OpenAI Account
+
+OpenAI Account authentication connects n8n to a ChatGPT/OpenAI account without an API key. It's available in the **OpenAI Chat Model** node.
+
+1. In the OpenAI Chat Model node, set **Authentication** to **OpenAI Account**.
+2. Select **Connect**.
+3. Select **Open OpenAI device login**, then enter the code shown in n8n.
+4. In n8n, select **Continue after authorization** to finish the connection.
+
+When you use OpenAI Account authentication, n8n loads models from the ChatGPT/Codex account backend. The node uses the account's available default model.

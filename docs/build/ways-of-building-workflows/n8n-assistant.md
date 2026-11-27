@@ -209,7 +209,20 @@ Before you use an AI-generated workflow in production:
 * Check execution results and error handling.
 * Confirm that the workflow doesn't perform unintended actions.
 
-n8n Assistant asks for confirmation before high-impact actions, such as publishing, deleting, or making other important changes.
+Some actions need approval before they run, such as running or publishing a workflow, changing rows in a data table, or deleting something. For these actions, n8n Assistant shows an approval card in the chat.
+
+### Choose an approval mode for n8n Assistant
+
+{% hint style="info" %}
+**Feature availability**
+
+Approval modes are available from n8n 2.49.1.
+{% endhint %}
+
+Use the approval mode selector in the chat input to choose who approves the actions that need approval:
+
+* **Ask for approval:** you approve each action on its approval card before it runs.
+* **Approve for me:** n8n Assistant checks each action against what you asked for. It runs routine actions without a card and marks each one as **Approved automatically** in the chat. When it's unsure, it shows the approval card with the reason. Some actions always show the card, such as deleting a credential or a data table, or archiving or unpublishing a workflow.
 
 ## Credential handling
 

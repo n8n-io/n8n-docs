@@ -18,7 +18,7 @@ layout:
 
 # One Simple API node <a href="#one-simple-api-node" id="one-simple-api-node"></a>
 
-Use the One Simple API node to automate work in One Simple API, and integrate One Simple API with other applications. n8n has built-in support for a wide range of One Simple API features, including getting profiles, retrieving information, and generating utilities. 
+Use the One Simple API node to automate work in One Simple API, and integrate One Simple API with other applications. n8n has built-in support for a wide range of One Simple API features, including retrieving information and generating utilities.
 
 On this page, you'll find a list of operations the One Simple API node supports and links to more resources.
 
@@ -33,9 +33,6 @@ Refer to [One Simple API credentials](../credentials/onesimpleapi.md) for guidan
 * Information
     * Convert a value between currencies
     * Retrieve image metadata from a URL
-* Social Profile
-    * Get details about an Instagram profile
-    * Get details about a Spotify Artist
 * Utility
     * Expand a shortened url
     * Generate a QR Code

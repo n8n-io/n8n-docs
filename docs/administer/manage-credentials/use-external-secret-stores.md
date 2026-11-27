@@ -352,3 +352,4 @@ If you deploy n8n on AWS using the [terraform-aws-n8n](https://github.com/n8n-io
 * [Share credentials securely](share-credentials-securely.md)
 * [End-user credentials](end-user-credentials.md)
 * [Credential overwrites](credential-overwrites.md)
+* [Automatic OAuth client registration](automatic-oauth-client-registration.md)

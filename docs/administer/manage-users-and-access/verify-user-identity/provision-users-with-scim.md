@@ -5,10 +5,6 @@ description: >-
 layout:
   description:
     visible: false
-status: preview
-tags:
-  - tag: preview
-    primary: true
 ---
 
 # Provision users with SCIM
@@ -16,15 +12,9 @@ tags:
 SCIM provisioning lets your identity provider (IdP) create, update, and deactivate n8n user accounts automatically, so you don't add or remove users by hand.
 
 {% hint style="info" %}
-**Preview status**
-
-SCIM provisioning is in Preview and may change in future releases. Avoid relying on it in production.
-{% endhint %}
-
-{% hint style="info" %}
 **Feature availability**
 
-SCIM provisioning is available from n8n 2.48.0 on Enterprise plans. While SCIM is in Preview, you also need to set the `N8N_ENV_FEAT_SCIM` environment variable to `true`. Refer to [Before you set up SCIM](#before-you-set-up-scim).
+SCIM provisioning is available from n8n 2.49.0 on Enterprise plans.
 {% endhint %}
 
 SCIM (System for Cross-domain Identity Management) is an open standard that IdPs use to keep user accounts in sync with the apps they connect to. n8n supports SCIM 2.0 and works with IdPs such as Okta and Microsoft Entra ID.
@@ -54,7 +44,6 @@ To use SCIM provisioning, you need:
 * An n8n Enterprise plan.
 * Permission to manage SCIM. Instance owners and instance admins can manage SCIM.
 * SAML or OIDC single sign-on set up and active. You can't turn on SCIM without it. SCIM doesn't work with LDAP. To set up SSO, see [Set up SAML](use-saml/set-up-saml.md) or [Set up OIDC](use-oidc/set-up-oidc.md).
-* While SCIM is in Preview, the `N8N_ENV_FEAT_SCIM` environment variable set to `true` on your n8n instance. Restart n8n after you set it. Without this variable, n8n hides the SCIM section and the SCIM endpoints return a `404` error.
 
 ## Turn on SCIM in n8n
 
@@ -134,7 +123,7 @@ Turning SSO back on doesn't turn SCIM back on. Turn on SCIM again yourself. Your
 
 ## Limitations
 
-While SCIM provisioning is in Preview:
+SCIM provisioning currently has these limitations:
 
 * SCIM doesn't set instance or project roles. Use SSO role assignment instead.
 * n8n doesn't support SCIM groups. Your IdP can assign a group to the n8n app to provision its members, but n8n doesn't create or sync groups.

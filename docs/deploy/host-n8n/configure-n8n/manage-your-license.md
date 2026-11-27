@@ -49,11 +49,11 @@ Set either `N8N_LICENSE_CERT` or `N8N_LICENSE_ACTIVATION_KEY`, never both.
 
 
 
-## Data sent to the license server <a href="#data-sent-to-the-license-server" id="data-sent-to-the-license-server"></a>
+## Data sent to the license server
 
 When your instance activates or renews its license, it sends an `x-request-id` header to the n8n license server.
 
-The value is a random identifier, newly generated for each call. It isn't derived from your license key, your instance, or your hardware, and it doesn't identify your instance across calls.
+n8n generates a random identifier for each request. It isn't derived from your license key, your instance, or your hardware, and it doesn't identify your instance across requests.
 
 n8n uses it to match a single activation or renewal with the matching entry in the license server's logs. If you report a failed activation or renewal, this identifier makes it possible to find that exact request.
 

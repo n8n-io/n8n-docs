@@ -35,7 +35,7 @@ Workflow reviews are in Preview and may change before general availability. Avoi
 
 Workflow reviews let your team approve a specific [workflow version](view-change-history.md) before it's published. From the **Publish** menu, choose **Submit for review** instead of publishing directly, and assign a reviewer. On approval, n8n publishes that version automatically.
 
-Reviews are optional after you enable the feature. You can still publish directly unless that workflow already has an open review.
+Reviews are optional after you enable the feature, unless an admin requires them for the instance or the project (see [Require reviews](#require-reviews)). Where reviews are optional, you can still publish directly unless that workflow already has an open review.
 
 n8n doesn't send email or other external notifications when you assign a reviewer or when a reviewer requests changes. Check **Reviews** in the left menu for requests that need your attention.
 
@@ -60,7 +60,7 @@ A review doesn't cover the resources the workflow depends on. These aren't part 
 * **Waiting for review**: the pinned version is waiting for a decision. n8n blocks publishing.
 * **Changes requested**: the reviewer asked for updates. n8n keeps publishing blocked until someone submits a newer version (the review returns to **Waiting for review**) and someone approves that version.
 * **Approved**: the reviewer or an admin approved. The review closes, publishing is unblocked. n8n publishes the pinned version as the **requester** (the user who submitted the workflow for review), so publish history and audit trails attribute the publish to them, not to the approving reviewer. In rare cases, n8n can't publish the version automatically: the review stays approved and closed. In these cases, publish the version yourself using the **Publish** button in the editor.
-* **Closed** (no approval): n8n can also close a review without approving it when there's nothing left to review, for example if the workflow is deleted, archived, or moved out of the project. Those reviews appear under **Reviews** > **Closed**, and **Activity** shows why the review closed.
+* **Closed** (no approval): the requester, or anyone who can approve the review, can close it without approving (see [Close a review](#close-a-review)). n8n also closes a review without approving it when there's nothing left to review, for example if the workflow is deleted, archived, or moved out of the project. Those reviews appear under **Reviews** > **Closed**, and **Activity** shows why the review closed.
 
 ### Publishing while a review is open
 
@@ -70,7 +70,38 @@ A workflow can have only one open review at a time. While that review is open, c
 
 ## Enable workflow reviews
 
-Instance admins enable workflow reviews for the whole instance in **Settings** > **Policies**, under **Workflow reviews**.
+Instance admins enable workflow reviews for the whole instance in **Settings** > **Policies**, under **Reviews**. Turn on **Enable publish reviews**.
+
+## Require reviews
+
+You can require an approved review before anyone publishes a new version of a workflow. Set the requirement on the instance, on a project, or on a workflow. A lower level can make the requirement stricter, but can't relax a requirement from a higher level.
+
+| Level | Where | Who can change it |
+| --- | --- | --- |
+| Instance | **Settings** > **Policies** > **Reviews** > **Require approval** | Instance admins |
+| Single project, set by the instance | **Settings** > **Policies** > **Reviews** > **View all** | Instance admins |
+| Project | Project settings > **Reviews** > **Require approval** | Project admins |
+| Workflow | **Publish** menu > **Review required** (see [Review required preference](#review-required-preference)) | Each user, in their own browser |
+
+**Require approval** on the instance has two options:
+
+* **Set per project or workflow** (default): the projects and workflows decide.
+* **Always required**: every team project requires reviews. Project admins can't turn it off.
+
+Select **View all** to require reviews for single projects. Set a project to **Required** or **Not required**. **Not required** lets the project admin decide. If the project admin already requires reviews, the row shows **Required by project admin**. While the instance is on **Always required**, every project shows **Required** and you can't change it.
+
+In project settings, **Require approval** has the options **Set per workflow** (default) and **Always required**. If the instance requires reviews for the project, the setting shows **Always required**, locked.
+
+Where reviews are required:
+
+* The editor offers **Submit for review** instead of **Publish**. **Review required** shows on and locked, with the level that sets it.
+* n8n rejects a publish of any version that isn't live and has no approved review. This applies to the editor, the public API, and the n8n MCP server, for every user, including instance admins.
+* You can publish a version that has an approved review, for example to roll back to it.
+* You can unpublish without a review.
+
+Personal spaces never require reviews.
+
+Changing a requirement doesn't close open reviews or unpublish workflows. Open reviews still block publishing.
 
 For more about instance security policies, refer to [Manage security policies](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/security/manage-security-policies).
 
@@ -103,6 +134,8 @@ In the **Publish** menu, you can turn on **Review required** for the current wor
 
 Your browser stores this preference for that workflow. It isn't saved on the workflow itself, so it has no effect on other users. An open review still blocks publishing for everyone until that review closes.
 
+If the instance or the project requires reviews, **Review required** shows on and you can't turn it off.
+
 ## Review a submission
 
 A review detail has two tabs:
@@ -115,25 +148,28 @@ People who can open the review can comment on **Activity** without deciding. To 
 * **Approve**: closes the review and publishes the pinned version as the requester.
 * **Request changes**: keeps the review open so editors can update the workflow and resubmit.
 
+### Close a review
+
+To end a review without approving it, open the review and select **Close review**. The requester, the assigned reviewer, and project or instance admins can close a review.
+
+Closing doesn't publish the workflow or change what's published, and you can't undo it. **Activity** shows who closed the review.
+
 ## Permissions
 
 | Action | Who can do it |
 | --- | --- |
 | Enable or disable workflow reviews for the instance | Instance admins with access to **Settings** > **Policies** |
+| Require reviews for the instance or for single projects | Instance admins with access to **Settings** > **Policies** |
+| Require reviews for a project | Project admins |
 | Submit a workflow for review | Users with `workflow:publish` on that workflow |
 | Update an open review with a newer version | Users with `workflow:publish` on that workflow |
 | See that a review is in progress | Users who can open the workflow, including viewers and editors. They can't open review details unless they're listed below. |
 | Open review details and appear in **Reviews** | The requester, authors on the review, the assigned reviewer, and project or instance admins. Admins see all reviews. |
 | Appear as a reviewer | Users with at least `workflow:read` on that workflow |
 | Approve or request changes | The assigned reviewer, or a project admin or instance admin. Authors can't decide unless they also have one of those roles. |
+| Close a review without approving | The requester, the assigned reviewer, or a project admin or instance admin |
 
 The **requester** is the user who submitted the workflow for review. **Authors** are the requester and anyone who later submitted a newer version to the same open review.
-
-{% hint style="info" %}
-**Cancelling reviews**
-
-You can't currently cancel or withdraw an open review. n8n plans to add this functionality in a future release.
-{% endhint %}
 
 ## Related resources
 

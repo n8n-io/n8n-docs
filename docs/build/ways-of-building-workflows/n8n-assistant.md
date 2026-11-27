@@ -146,6 +146,8 @@ When you state a lasting rule in the chat, for example "From now on, always add 
 
 To manage all your preferences, go to **Settings** > **Context** > **Preferences**.
 
+From n8n 2.50.0, instance owners and admins can turn preferences off for the whole instance. With preferences off, n8n Assistant doesn't read or save preferences, and doesn't show the preference card. n8n keeps the saved preferences. Refer to [Turn preferences on or off for your instance](../agentic-context-management/preferences.md#turn-preferences-on-or-off-for-your-instance).
+
 ## Before you start
 
 To use n8n Assistant, you need access to an n8n instance with the feature enabled.

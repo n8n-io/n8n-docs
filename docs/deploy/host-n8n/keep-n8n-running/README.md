@@ -15,8 +15,7 @@ Monitor, log, trace, and update your self-hosted n8n instance.
 * [Visualize metrics with Grafana](visualize-metrics-with-grafana.md): connect Grafana to visualize your n8n data.
 * [Back up and restore](backup-and-restore.md): back up and restore a self-hosted n8n instance.
 * [Update n8n](update-n8n.md): best practices for updating your self-hosted n8n.
-* [Trace executions with OpenTelemetry](trace-executions-with-opentelemetry.md): send workflow and node execution traces to an OpenTelemetry collector.
-* [Choose which spans n8n exports](choose-which-spans-n8n-exports.md): see which spans reach your OTLP endpoint and turn on extra tracing sources.
+* [Trace executions with OpenTelemetry](trace-executions-with-opentelemetry/README.md): send workflow and node execution traces to an OpenTelemetry collector.
 
 ## Related resources
 

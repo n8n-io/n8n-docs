@@ -32,8 +32,14 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Run Lychee Link Checker
         id: lychee
-        uses: lycheeverse/lychee-action@a99389aeff3c193ffb6f0741178e519569d3f404 # v2.3.0
+        uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2.9.0
         with:
+          # Pinned, and kept the same in lychee-pr-check.yml. lychee 0.24 tells a
+          # certificate failure (expired, not trusted...) from any other failed
+          # connection; 0.18.1 called every one "Maybe a certificate error?" (DOC-2626).
+          # A new version can rename lychee.toml keys and stop lychee from loading it,
+          # so upgrade on purpose, not through the action's default.
+          lycheeVersion: v0.24.2
           # --hidden: without it lychee's directory walk skips dot-directories, which
           # silently dropped the 116 files in docs/reusable-content/.gitbook/includes
           # holding 70 URLs that appear nowhere else. They render on live pages via

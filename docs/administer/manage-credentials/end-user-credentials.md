@@ -57,7 +57,7 @@ You can mix fixed and end-user credentials across nodes in one workflow. For exa
 ## Requirements and limitations
 
 * **Enterprise only:** End-user credentials require an Enterprise plan.
-* **Controlled creation:** By default, only [project admins](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md) can create end-user credentials. Grant this permission to other users through [custom roles](../manage-users-and-access/set-permissions-and-roles-rbac/create-custom-roles.md). Limiting who can create them keeps credential management central: an admin sets up a template once and shares it to the projects that need it, rather than many users each setting up their own.
+* **Controlled creation:** By default, only [project admins](../manage-users-and-access/set-permissions-and-roles-rbac/understand-project-roles.md) can create end-user credentials. Grant this permission to other users through [custom project roles](../manage-users-and-access/set-permissions-and-roles-rbac/create-custom-project-roles.md). Limiting who can create them keeps credential management central: an admin sets up a template once and shares it to the projects that need it, rather than many users each setting up their own.
 * **Team projects only:** You can only create end-user credentials in team projects, not in personal projects. This keeps them centrally managed, where an admin sets up the credential template, rather than individual users creating their own in personal projects.
 * **OAuth credentials only:** End-user credentials support OAuth-based credential types only.
 * **One connection per user:** Each user can connect a single account per end-user credential template.
@@ -126,4 +126,4 @@ A good practice is to create your end-user credentials (for example Gmail, Linea
 * [Credential overwrites](credential-overwrites.md)
 * [Use external secret stores](use-external-secret-stores.md)
 * [Create and edit credentials](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/understand-workflows/create-and-edit-credentials)
-* [RBAC role types](../manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles.md)
+* [Understand project roles](../manage-users-and-access/set-permissions-and-roles-rbac/understand-project-roles.md)

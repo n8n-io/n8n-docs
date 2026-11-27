@@ -60,7 +60,7 @@ layout:
 
 ## _`Array`_.**`chunk()`** <a href="#arraychunk" id="arraychunk"></a>
 
-**Description:** Splits the array into an array of sub-arrays, each with the given length
+**Description:** Splits the array into an array of sub-arrays, each with the given length. The last sub-array holds the remaining elements, so it can be shorter. Throws an error if the length isn't a number greater than zero.
 
 **Syntax:** _`Array`_.chunk(length)
 
@@ -70,7 +70,7 @@ layout:
 
 **Parameters:**
 
-  * `length` (Number) - The number of elements in each chunk
+  * `length` (Number) - The number of elements in each chunk. Use a whole number greater than zero.
 
 **Examples:**
 
@@ -78,6 +78,42 @@ layout:
   // arr = [1, 2, 3, 4, 5, 6]
   arr.chunk(2) //=> [ [1,2], [3,4], [5,6] ]
   ```
+
+  ```javascript
+  // arr = [1, 2, 3, 4, 5]
+  arr.chunk(2) //=> [ [1,2], [3,4], [5] ]
+  arr.chunk(10) //=> [ [1,2,3,4,5] ]
+  ```
+
+  ```javascript
+  // Split into three groups. Round the length up to get a whole number.
+  // arr = [1, 2, 3, 4, 5]
+  arr.chunk(Math.ceil(arr.length / 3)) //=> [ [1,2], [3,4], [5] ]
+  ```
+
+**Result for each length:**
+
+| `length` | Result |
+| --- | --- |
+| A whole number greater than zero, for example `2` | Sub-arrays of `length` elements. The last sub-array holds the remaining elements. |
+| A number equal to or greater than the array size | One sub-array that holds every element. |
+| `Infinity` | One sub-array that holds every element. |
+| A fractional number, for example `2.5` | Sub-arrays of uneven sizes. `[1, 2, 3, 4, 5].chunk(2.5)` returns `[ [1,2], [3,4,5] ]`. A length below `1` also returns empty sub-arrays. |
+| `0`, a negative number, or `NaN` | Throws an error. |
+| A value that isn't a number, for example `"2"`, `true`, or `null` | Throws an error. |
+| No value | Throws an error. |
+
+An empty array returns an empty array for every valid length.
+
+{% hint style="warning" %}
+`chunk()` doesn't round a fractional length and doesn't throw an error for it. Every element stays in the result, in the same order, but the sub-arrays don't have the same size. If you calculate the length, round it first, for example with `Math.ceil()`.
+
+`chunk()` doesn't convert a string to a number. If the length comes from a string, convert it first, for example with [`toNumber()`](string.md#stringtonumber).
+{% endhint %}
+
+When the length isn't valid, the expression fails with this error: `chunk(): expected positive numeric arg, e.g. .chunk(5)`.
+
+n8n versions before 2.44.0 don't throw an error for a negative number or `NaN`.
 
 ## _`Array`_.**`compact()`** <a href="#arraycompact" id="arraycompact"></a>
 
@@ -160,7 +196,7 @@ in <code>otherArray</code>.
 
 **Parameters:**
 
-  * `function()` (function) - A function to run for each array element. If it returns <code>true</code>, the element will be kept. Consider using <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions”>arrow function notation</a> to save space.
+  * `function()` (function) - A function to run for each array element. If it returns <code>true</code>, the element will be kept. Consider using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow function notation</a> to save space.
   * `element` (any) - The value of the current element
   * `index` (Number) - optional - The position of the current element in the array (starting at 0)
   * `array` (Array) - optional - The array being processed. Rarely needed.
@@ -203,7 +239,7 @@ If you need all matching elements, use <code>filter()</code>.
 
 **Parameters:**
 
-  * `function()` (function) - A function to run for each array element. As soon as it returns <code>true</code>, that element will be returned. Consider using <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions”>arrow function notation</a> to save space.
+  * `function()` (function) - A function to run for each array element. As soon as it returns <code>true</code>, that element will be returned. Consider using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow function notation</a> to save space.
   * `element` (any) - The value of the current element
   * `index` (Number) - optional - The position of the current element in the array (starting at 0)
   * `array` (Array) - optional - The array of the current element. Rarely needed.
@@ -434,7 +470,7 @@ The opposite of <code>split()</code>.
 
 **Parameters:**
 
-  * `function()` (function) - A function to run for each array element. In the new array, the output of this function takes the place of the element. Consider using <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions”>arrow function notation</a> to save space.
+  * `function()` (function) - A function to run for each array element. In the new array, the output of this function takes the place of the element. Consider using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow function notation</a> to save space.
   * `element` (any) - The value of the current element
   * `index` (Number) - optional - The position of the current element in the array (starting at 0)
   * `array` (Array) - optional - The array of the current element. Rarely needed.
@@ -515,7 +551,7 @@ The opposite of <code>split()</code>.
 
 ## _`Array`_.**`pluck()`** <a href="#arraypluck" id="arraypluck"></a>
 
-**Description:** Returns an array containing the values of the given field(s) in each Object of the array. Ignores any array elements that aren’t Objects or don’t have a key matching the field name(s) provided.
+**Description:** Returns an array containing the values of the given field(s) in each Object of the array. Ignores any array elements that aren’t Objects or don’t have a key matching the field name(s) provided. If you pass more than one field name, the values for each Object follow the order of its keys, not the order of the field names.
 
 **Syntax:** _`Array`_.pluck(fieldName1?, fieldName2?, …)
 
@@ -538,6 +574,12 @@ The opposite of <code>split()</code>.
   ```javascript
   // arr = [{'name':'Nathan','age':42},{'name':'Jan','city':'Berlin'}]
   arr.pluck('age') //=> [42]
+  ```
+
+  ```javascript
+  // The values follow the key order of each Object
+  // arr = [{'age':42,'name':'Nathan'},{'name':'Jan','age':35}]
+  arr.pluck('name', 'age') //=> [[42, "Nathan"], ["Jan", 35]]
   ```
 
 ## _`Array`_.**`randomItem()`** <a href="#arrayrandomitem" id="arrayrandomitem"></a>
@@ -568,7 +610,7 @@ The opposite of <code>split()</code>.
 
 **Parameters:**
 
-  * `function()` (function) - A function to run for each array element. Takes the accumulated result and the current element, and returns a new accumulated result. Consider using <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions”>arrow function notation</a> to save space.
+  * `function()` (function) - A function to run for each array element. Takes the accumulated result and the current element, and returns a new accumulated result. Consider using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow function notation</a> to save space.
   * `prevResult` (any) - The accumulated result from applying the function to previous elements. When processing the first element, it’s set to <code>initResult</code> (or the first array element if not specified).
   * `currentElem` (any) - The value in the array currently being processed
   * `currentIndex` (Number) - optional - The position of the current element in the array (starting at 0)

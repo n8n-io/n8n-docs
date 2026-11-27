@@ -19,7 +19,7 @@ Only the instance owner can top up, and topping up requires an active paid subsc
 {% hint style="warning" %}
 **Assistant credits only pay for n8n Assistant**
 
-Extra Assistant credits only pay for your conversations with n8n Assistant. They don't pay for AI model calls that your workflows or agents make when they run. For those, [top up Gateway credits](../gateway-credits/top-up-gateway-credits.md) instead, or use your own provider credentials. Top-ups are final, so check which balance you're topping up before you pay.
+Extra Assistant credits pay for your conversations with the n8n Assistant and [self-healing investigations](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/manage-workflows/self-healing-workflows). They don't pay for AI model calls that your workflows or agents make when they run. For those, [top up Gateway credits](../gateway-credits/top-up-gateway-credits.md) instead, or use your own provider credentials. Top-ups are final, so check which balance you're topping up before you pay.
 {% endhint %}
 
 ## Top up manually

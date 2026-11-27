@@ -1,0 +1,114 @@
+{
+  "total": 8,
+  "unique": 7,
+  "successful": 1,
+  "unknown": 0,
+  "unsupported": 0,
+  "timeouts": 0,
+  "redirects": 0,
+  "remaps": 0,
+  "excludes": 0,
+  "errors": 7,
+  "cached": 1,
+  "success_map": {
+    "sample.md": [
+      {
+        "url": "https://github.com/n8n-io/n8n",
+        "status": {
+          "text": "200 OK",
+          "code": 200
+        },
+        "span": {
+          "line": 9,
+          "column": 17
+        }
+      }
+    ]
+  },
+  "error_map": {
+    "sample.md": [
+      {
+        "url": "https://github.com/n8n-io/no-such-repo-doc-2626",
+        "status": {
+          "text": "Rejected status code: 404 Not Found",
+          "code": 404
+        },
+        "span": {
+          "line": 8,
+          "column": 19
+        }
+      },
+      {
+        "url": "https://expired.badssl.com/",
+        "status": {
+          "text": "Network error: SSL certificate expired. Site needs to renew certificate (error sending request for url (https://expired.badssl.com/))",
+          "details": "SSL certificate expired. Site needs to renew certificate"
+        },
+        "span": {
+          "line": 5,
+          "column": 24
+        }
+      },
+      {
+        "url": "https://portal.airtop.ai/",
+        "status": {
+          "text": "Error (cached)",
+          "details": "Error (cached)"
+        },
+        "span": {
+          "line": 10,
+          "column": 39
+        }
+      },
+      {
+        "url": "https://self-signed.badssl.com/",
+        "status": {
+          "text": "Network error: SSL certificate not trusted. Use --insecure if site is trusted (error sending request for url (https://self-signed.badssl.com/))",
+          "details": "SSL certificate not trusted. Use --insecure if site is trusted"
+        },
+        "span": {
+          "line": 7,
+          "column": 28
+        }
+      },
+      {
+        "url": "https://portal.airtop.ai/",
+        "status": {
+          "text": "Network error: Connection failed. Check network connectivity and firewall settings (error sending request for url (https://portal.airtop.ai/))",
+          "details": "Connection failed. Check network connectivity and firewall settings"
+        },
+        "span": {
+          "line": 3,
+          "column": 30
+        }
+      },
+      {
+        "url": "https://n8n-docs-linkcheck-no-such-host-2626.com/",
+        "status": {
+          "text": "Network error: Connection failed. Check network connectivity and firewall settings (error sending request for url (https://n8n-docs-linkcheck-no-such-host-2626.com/))",
+          "details": "Connection failed. Check network connectivity and firewall settings"
+        },
+        "span": {
+          "line": 4,
+          "column": 31
+        }
+      },
+      {
+        "url": "https://wrong.host.badssl.com/",
+        "status": {
+          "text": "Network error: SSL certificate error. Check certificate validity (error sending request for url (https://wrong.host.badssl.com/))",
+          "details": "SSL certificate error. Check certificate validity"
+        },
+        "span": {
+          "line": 6,
+          "column": 33
+        }
+      }
+    ]
+  },
+  "timeout_map": {},
+  "suggestion_map": {},
+  "redirect_map": {},
+  "excluded_map": {},
+  "detailed_stats": true
+}

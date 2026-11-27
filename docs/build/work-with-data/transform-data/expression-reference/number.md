@@ -63,7 +63,7 @@ layout:
 
 ## _`Number`_.**`format()`** <a href="#numberformat" id="numberformat"></a>
 
-**Description:** Returns a formatted string representing the number. Useful for formatting for a specific language or currency. The same as <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat”><code>Intl.NumberFormat()</code></a>.
+**Description:** Returns a formatted string representing the number. Useful for formatting for a specific language or currency. The same as <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat"><code>Intl.NumberFormat()</code></a>.
 
 **Syntax:** _`Number`_.format(locale?, options?)
 
@@ -73,7 +73,7 @@ layout:
 
 **Parameters:**
 
-  * `locale` (String) - optional - A <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument”>locale tag</a> for formatting the number, e.g. <code>fr-FR</code>, <code>en-GB</code>, <code>pr-BR</code>
+  * `locale` (String) - optional - A <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument">locale tag</a> for formatting the number, e.g. <code>fr-FR</code>, <code>en-GB</code>, <code>pr-BR</code>
   * `options` (Object) - optional - Configuration options for number formatting. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat" target="_blank">More info</a>
 
 **Examples:**
@@ -292,8 +292,8 @@ layout:
 
 **Parameters:**
 
-  * `locales` (String|Array<String>) - optional - The locale to assign, e.g. ‘en-GB’ for British English or ‘pt-BR’ for Brazilian Portuguese. See <a href=”https://www.localeplanet.com/icu/”>full list</a> (unofficial). Also accepts an array of locales. Defaults to the system locale if not specified.
-  * `options` (Object) - optional - An object with <a href=”https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#parameters”>formatting options</a>
+  * `locales` (String|Array<String>) - optional - The locale to assign, e.g. ‘en-GB’ for British English or ‘pt-BR’ for Brazilian Portuguese. See <a href="https://www.localeplanet.com/icu/">full list</a> (unofficial). Also accepts an array of locales. Defaults to the system locale if not specified.
+  * `options` (Object) - optional - An object with <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#parameters">formatting options</a>
 
 **Examples:**
 

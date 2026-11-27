@@ -413,7 +413,7 @@ Add the following code to the JSON file:
 
 ```json
 {
-	"node": "n8n-nodes-friendgrid",
+	"node": "n8n-nodes-friendgrid.friendGrid",
 	"nodeVersion": "1.0",
 	"codexVersion": "1.0",
 	"categories": [

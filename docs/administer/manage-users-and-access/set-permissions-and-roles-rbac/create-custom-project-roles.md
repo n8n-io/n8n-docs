@@ -14,6 +14,8 @@ layout:
 
 # Custom project roles <a href="#custom-project-roles" id="custom-project-roles"></a>
 
+A custom project role is a role that you define yourself, with the exact permissions you choose inside a project.
+
 {% hint style="info" %}
 **Feature availability**
 
@@ -22,20 +24,10 @@ Custom project roles are available on:
 - **n8n Cloud:** Enterprise
 - **Self-hosted:** Enterprise
 
-Available from n8n 1.122.0.
+Custom project roles are available from n8n 1.122.0.
 {% endhint %}
 
-{% hint style="info" %}
-**Instance roles vs project roles**
-
-n8n has two types of custom roles:
-
-**Custom instance roles**: Roles that relate to the administrative capabilities a user needs at the instance level. Refer to [Create custom instance roles](create-custom-instance-roles.md).
-
-**Custom project roles**: Roles that apply within a specific project.
-{% endhint %}
-
-Custom project roles allow you to create roles with specific permissions tailored to your team's needs. Unlike the built-in project roles (Admin, Editor, Viewer), custom roles let you define granular access to workflows, credentials, and other project resources.
+Custom project roles allow you to create roles with specific permissions tailored to your team's needs. Unlike the [built-in project roles](understand-project-roles.md) (Admin, Editor, Viewer), custom roles let you define granular access to workflows, credentials, and other project resources.
 
 ## Create a custom role <a href="#create-a-custom-role" id="create-a-custom-role"></a>
 
@@ -241,5 +233,5 @@ You can combine any scopes to create roles that match your specific needs. Consi
 
 ## Related resources
 
-* [Custom roles](create-custom-roles.md)
+* [Custom roles](README.md#custom-roles)
 * [Create custom instance roles](create-custom-instance-roles.md)

@@ -16,10 +16,15 @@ layout:
 {% hint style="info" %}
 **Feature availability**
 
-Single sign-on is available on:
+Single sign-on (SAML) is available on:
 
 - **n8n Cloud:** Enterprise
 - **Self-hosted:** Business, Enterprise
+
+Single sign-on (OIDC) is available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Enterprise
 
 You need to be an instance owner or admin to enable and configure SAML or OIDC.
 {% endhint %}
@@ -29,6 +34,8 @@ n8n supports the SAML and OIDC authentication protocols for single sign-on (SSO)
 * [Set up SAML](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/verify-user-identity/use-saml/set-up-saml): a general guide to setting up SAML in n8n, and links to resources for common identity providers (IdPs).
 * [Set up OIDC](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/verify-user-identity/use-oidc/set-up-oidc): a general guide to setting up OpenID Connect (OIDC) SSO in n8n.
 
+n8n also supports signing in with your organization's directory credentials. Refer to [LDAP](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/verify-user-identity/connect-ldap) to set this up.
+
 ## Configure SSO with environment variables <a href="#configure-sso-with-environment-variables" id="configure-sso-with-environment-variables"></a>
 
 {% hint style="info" %}
@@ -37,7 +44,7 @@ n8n supports the SAML and OIDC authentication protocols for single sign-on (SSO)
 Configuring SSO with environment variables is available from n8n 2.18.0.
 {% endhint %}
 
-You can also configure SSO from environment variables instead of through the UI. See [SSO environment variables](../basic-configuration/use-environment-variables/sso.md) for the full list of variables, and [Manage instance settings using environment variables](../manage-settings-using-environment-variables.md) for how the activation pattern works.
+You can also configure SSO (SAML and OIDC) from environment variables instead of through the UI. See [SSO environment variables](../basic-configuration/use-environment-variables/sso.md) for the full list of variables, and [Manage instance settings using environment variables](../manage-settings-using-environment-variables.md) for how the activation pattern works.
 
 ## Related resources
 

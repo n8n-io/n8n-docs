@@ -69,11 +69,11 @@ A log of all database migrations. Read more about [Migrations](https://typeorm.i
 
 ### project <a href="#project" id="project"></a>
 
-Lists the [projects](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/organize-work-in-projects) in your instance.
+Lists the [projects](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/organize-work-in-projects) in your instance.
 
 ### project_relation <a href="#projectrelation" id="projectrelation"></a>
 
-Describes the relationship between a user and a [project](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/organize-work-in-projects), including the user's [role type](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/see-available-roles).
+Describes the relationship between a user and a [project](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/organize-work-in-projects), including the user's [role type](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/understand-project-roles).
 
 ### role <a href="#role" id="role"></a>
 

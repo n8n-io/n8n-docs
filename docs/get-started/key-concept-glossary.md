@@ -126,7 +126,7 @@ Each n8n cluster node contains a single root node that defines the main function
 
 ### skill (n8n)
 
-A skill bundles instructions with the tools an agent needs for a specific task. Add a skill to an agent to reuse that behavior. Learn more: [Build and manage agents](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/build-and-manage-agents#bundle-capabilities-with-skills).
+A skill is a set of instructions, with optional reference files, that agents and n8n Assistant follow for a specific task. n8n stores skills centrally, and you can share them between agents and team members. n8n skills follow the open Agent Skills format. You can create skills in n8n or import them from GitHub. Skills are in Preview. Learn more: [Skills](https://app.gitbook.com/s/rPN1zU5jaYNvwH7RzxqA/agentic-context-management/skills).
 
 ### sub-agent (n8n)
 
@@ -156,7 +156,7 @@ An execution is a single run of a workflow. A manual execution starts when you r
 
 ### project (n8n) <a href="#project-n8n" id="project-n8n"></a>
 
-n8n projects let you separate workflows, variables, credentials, data tables, and agents into separate groups for easier management. Projects make it easier for teams to collaborate by sharing and compartmentalizing related resources. You assign each user a role in each project, so one person can have different access in different projects. Learn more: [RBAC projects](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/set-permissions-and-roles-rbac/organize-work-in-projects).
+n8n projects let you separate workflows, variables, credentials, data tables, and agents into separate groups for easier management. Projects make it easier for teams to collaborate by sharing and compartmentalizing related resources. You assign each user a role in each project, so one person can have different access in different projects. Learn more: [RBAC projects](https://app.gitbook.com/s/wMJrGrimpx3PxCJpUswm/manage-users-and-access/organize-work-in-projects).
 
 ### publish (n8n)
 

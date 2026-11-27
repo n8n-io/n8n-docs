@@ -21,6 +21,21 @@ cache = true
 # Discard all cached requests older than this duration.
 max_cache_age = "2d"
 
+# Cache successes only (DOC-2615). lychee also uses the cache inside a single run: once a
+# URL fails, every later occurrence of it in that run is reported as "Error (cached)"
+# without a new request. On 2026-11-16 that turned one failed request to emelia.io into
+# two dead links. Excluding every status outside our `accept` list (2xx and 429) means a
+# failed status is checked again on its next occurrence.
+#
+# Limit, as of lychee 0.24.2 (pinned in the workflows, DOC-2626): this setting matches
+# HTTP status codes only. A failure with no status code at all (DNS, TLS, connection
+# reset: lychee's "Network error") is still reused for the rest of the run, as
+# "Error (cached)". lychee has no setting for that. Since 0.24 it is no longer written to
+# the .lycheecache file, so it never outlives the run. lychee_report.py gives each
+# cached row the cause lychee found the first time. The DocOps side (DOC-2614) calls a
+# link with no status dead only after it fails on two weekly runs.
+cache_exclude_status = "100..=199, 300..=428, 430..=999"
+
 #############################  Runtime  #############################
 
 # Number of threads to utilize.
@@ -39,7 +54,14 @@ max_concurrency = 5
 #############################  Requests  ############################
 
 # User agent to send with each request.
-user_agent = "lychee/0.18.1"
+# A browser-style string that still says who we are (DOC-2615). Many WAFs answer 403 to
+# any agent that starts with "lychee/", so the 2026-11-16 sweep filed 66 links as
+# blocked. Measured on 2026-11-20 against the 55 unique URLs of that bucket, one request
+# per agent: "lychee/0.18.1" got 9 answers of 200, a full Chrome string 19, and this
+# string 22. The Chrome string loses on Akamai hosts (Cisco, IBM, Salesforce, Webex),
+# which block a client that claims to be Chrome but does not act like one. Same form as
+# the second pass (link_second_pass.py).
+user_agent = "Mozilla/5.0 (compatible; n8n-docs-linkcheck/1.0; +https://github.com/n8n-io/n8n-docs)"
 
 # Website timeout from connect to response finished.
 timeout = 20
@@ -61,7 +83,12 @@ retry_wait_time = 10
 # under `blocked` instead of `broken`, so it is visible and triageable without inflating
 # the broken count. Hosts that always 403 belong in `exclude` below, with a dated note.
 # 429 stays accepted: that is our own crawl rate, not a broken link.
-accept = ["200", "429"]
+#
+# 200..=299, not 200 (DOC-2626): lychee 0.18.1 passed every 2xx whatever this list said.
+# From 0.19 it passes only the codes listed here, and the first 0.24.2 sweep
+# (2026-11-24) failed id.atlassian.com and account.postmarkapp.com for answering
+# "202 Accepted". The range keeps what counts as broken the same as before the upgrade.
+accept = ["200..=299", "429"]
 
 # Proceed for server connections considered insecure (invalid TLS).
 insecure = false
@@ -77,14 +104,18 @@ require_https = true
 # Request method
 method = "get"
 
-# Custom request headers
-headers = []
+# Custom request headers: none. lychee 0.19+ calls this `header` and takes a map
+# (header = { "accept" = "text/html" }); the old `headers = []` stops lychee 0.24 from
+# loading this file at all (DOC-2626).
 
 # Remap URI matching pattern to different URI.
 # remap = ["https://example.com http://example.invalid"]
 
-# Base URL or website root directory to check relative URLs.
-base = "https://docs.n8n.io"
+# Base URL to resolve relative and root-relative links against. Called `base` before
+# lychee 0.19; lychee 0.24 rejects the old name and stops (DOC-2626). The links it
+# produces are docs.n8n.io links, which `exclude` skips: internal links are checked by
+# check_internal_links.py instead.
+base_url = "https://docs.n8n.io"
 
 # HTTP basic auth support. This will be the username and password passed to the
 # authorization HTTP header. See
@@ -167,6 +198,9 @@ exclude = [
   '^https://wise-sandbox\.com/',  # In-app sandbox pages, redirect to login
   '^https://app\.todoist\.com/app/',  # In-app settings pages, need login
   '^https://(www\.)?googleapis\.com/auth/',  # OAuth scope strings shown in code cells, not web pages
+  # Example URLs written as text, not links (DOC-2615). example.com and private hosts are
+  # skipped already; these are made-up hosts that look real.
+  '^https://cloud\.n8n\.com(/|$)',  # Sample Nextcloud address on the Nextcloud credentials page
   ]
 
 # Exclude these filesystem paths from getting checked.

@@ -170,10 +170,10 @@ Enter these parameters:
 - **Combine Conditions**: How to combine the conditions in **Select Rows**. **AND** requires all conditions to be true, while **OR** requires at least one condition to be true.
 - **Sort**: Choose how to sort the selected rows. Choose a **Column** from a list or by ID and a sort **Direction**.
 
-**Select** returns either all matching rows or the first rows up to the **Limit** value. It has no offset or cursor option. To read a large table in batches, use [**Execute Query**](#execute-query) with a query such as `SELECT * FROM orders WHERE id > $1 ORDER BY id LIMIT 1000`. In [**Query Parameters**](#use-query-parameters), set `$1` to the last `id` you read. To avoid skipped or repeated rows:
+**Select** returns either all matching rows or the first rows up to the **Limit** value. From n8n 2.50.0 and n8n 3.4.0, on node version 2.7 and higher, **Select** also has a **Start After** parameter that reads a large table page by page. On earlier n8n releases and node versions, **Select** has no offset or cursor option. To read a large table in batches on those versions, use [**Execute Query**](#execute-query) with a query such as `SELECT * FROM orders WHERE id > $1 ORDER BY id LIMIT 1000`. In [**Query Parameters**](#use-query-parameters), set `$1` to the last `id` you read. To avoid skipped or repeated rows:
 
 - Use a unique column that can't be NULL. On any other column, the node skips some rows without an error.
-- Don't use a timestamp column. n8n returns timestamps with millisecond precision, so the last row of a batch can come back in the next one.
+- Don't use a timestamp column. n8n keeps only milliseconds for a `timestamp with time zone`, and for a `timestamp without time zone` before node version 2.9, so the last row of a batch can come back in the next one.
 - For a `NUMERIC` or `BIGINT` column, set **Output Large-Format Numbers As** to **Text**, so the last value keeps all its digits.
 - Changes to the table while you read can still skip or repeat rows, for example a row whose value in that column changes between batches.
 

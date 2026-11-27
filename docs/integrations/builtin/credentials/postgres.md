@@ -69,7 +69,7 @@ To configure this credential, you'll need:
 * **Maximum Number of Connections**: The maximum size of each connection pool.
 * **Ignore SSL Issues (Insecure)**: Set whether the credential connects if SSL validation fails.
 * **SSL**: Choose whether to use SSL in your connection.
-* Optional SSL certificates (available from n8n 2.47.0): **CA Certificate**, **Client Private Key**, and **Client Certificate**.
+* Optional SSL certificates (available from n8n 2.47.0 and n8n 3.0.1): **CA Certificate**, **Client Private Key**, and **Client Certificate**.
 * The **Port** number to use for the connection.
 * **SSH Tunnel**: Choose if you want to use SSH to encrypt the network connection with the Postgres server.
 
@@ -89,7 +89,7 @@ To set up the database connection:
    * **Allow**: Connect over SSL and verify the server certificate, the same as **Require**. n8n doesn't fall back to a connection without SSL.
    * **Disable**: Connect without SSL.
    * **Require**: Connect over SSL only, and verify that a trusted certificate authority (CA) issued the server certificate. To trust a private CA, add its root certificate in **CA Certificate**. Without it, n8n trusts the public certificate authorities built into Node.js, plus any certificate authorities you [added to your self-hosted instance](https://app.gitbook.com/s/jm0ZYRpZIPWge2ZSiDYO/host-n8n/configure-n8n/basic-configuration/configuration-examples/configure-custom-ssl-certificate-authorities).
-8. If you set **SSL** to **Allow** or **Require**, you can add these certificates in PEM format (available from n8n 2.47.0):
+8. If you set **SSL** to **Allow** or **Require**, you can add these certificates in PEM format (available from n8n 2.47.0 and n8n 3.0.1):
    * **CA Certificate**: The root certificate of the CA that issued the server certificate. Add it when your Postgres server uses a certificate from a private CA, such as a managed database service that issues its own certificates. If the server certificate comes from a public CA, leave this field empty. If your provider gives you a bundle with several certificates, paste the whole bundle.
    * **Client Private Key** and **Client Certificate**: The private key and certificate n8n presents to the server. Add both when the server requires client certificate authentication. The private key can't have a passphrase.
 9.  Enter the **Port** number to use for the connection. You can either run the `/conninfo` command to confirm the host name or run this query:

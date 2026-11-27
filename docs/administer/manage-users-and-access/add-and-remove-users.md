@@ -13,7 +13,7 @@ layout:
 
 The **Settings** > **Users** page shows all users, including ones with pending invitations.
 
-If you use SAML or OIDC single sign-on, your identity provider can create, update, and deactivate n8n users for you. See [Provision users with SCIM](verify-user-identity/provision-users-with-scim.md).
+If you use SAML or OIDC single sign-on on an Enterprise plan with SCIM enabled, your identity provider can create, update, and deactivate n8n users for you. See [Provision users with SCIM](verify-user-identity/provision-users-with-scim.md).
 
 ## Delete a user <a href="#delete-a-user" id="delete-a-user"></a>
 

@@ -36,7 +36,7 @@ Encryption key rotation lets you periodically replace the key that encrypts your
 
 n8n uses a two-layer key model:
 
-* **Instance encryption key** (`N8N_ENCRYPTION_KEY`): your master key, set at deployment time. This key never changes. n8n uses it only to protect the data encryption keys.
+* **Instance encryption key** (`N8N_ENCRYPTION_KEY`): your master key, set at deployment time. This key never changes. n8n uses it to protect the data encryption keys and instance secrets, such as signing keys.
 * **Data encryption key**: the key that directly encrypts your credential data. This is the key you rotate. n8n stores it encrypted in the database, protected by the instance key.
 
 When you rotate, n8n generates a new data encryption key and uses it for all future writes. Existing data encrypted with the previous key remains readable. n8n silently re-encrypts each record to the new key the next time you update it.
@@ -115,6 +115,64 @@ There's no automated tool to convert data encrypted in the new format back to th
 2. **Try staging first**. Turn the feature on, or upgrade to n8n 3.0, in a non-production environment, restart, and verify that credentials still decrypt correctly.
 3. **Then do production**. Only do this after validating staging behavior.
 4. **Don't downgrade**. Once production data has been written in the new format, stay on the same or a newer n8n version.
+
+## Replace a compromised instance encryption key
+
+Encryption key rotation replaces the data encryption key, not the instance encryption key (`N8N_ENCRYPTION_KEY`). n8n has no command or setting to change the instance key on an existing database. If it's compromised, migrate to a new database and a new n8n instance with a new key.
+
+If you start n8n with a different `N8N_ENCRYPTION_KEY` on an existing database, n8n fails with `Mismatching encryption keys` or `Deployment key '<type>' cannot be read with this instance encryption key`.
+
+### What moves and what doesn't
+
+`n8n export:workflow` and `n8n export:credentials` move workflows, their tags, and credentials. They don't move the rest of the instance, including users, projects, folders, execution history, variables, data tables, and instance settings. Recreate these on the new instance.
+
+Imported workflows aren't published. Review them, then publish them again.
+
+### Migrate to a new instance
+
+{% hint style="warning" %}
+**Protect the exported credentials**
+
+`--decrypted` writes your credentials to disk in plaintext. Store the file in a protected location, and delete it securely when you finish the import.
+{% endhint %}
+
+1. On the old instance, export your workflows and credentials:
+
+	```bash
+	n8n export:workflow --all --output=workflows.json
+	n8n export:credentials --all --decrypted --output=credentials.json
+	```
+
+	With `--all`, n8n imports everything into one owner's personal project. To keep project ownership, export each project with `--projectId=<project-id>` instead of `--all`. These exports include items shared with the project, so import each item only under the project that owns it. They skip instance-scoped credentials, such as AI provider connections, so export those with `--all` or `--id`.
+
+1. Generate a new instance key:
+
+	```bash
+	openssl rand -hex 32
+	```
+
+1. Set up a new database and a new n8n instance. Set `N8N_ENCRYPTION_KEY` to the new key.
+1. Start with an empty n8n user folder. On Docker and Kubernetes, mount a new, empty volume at `/home/node/.n8n`.
+1. In queue mode, set the new key on every main, worker, and webhook container.
+1. Reinstall your community nodes and custom extensions, which live in the user folder.
+1. Complete the owner setup on the new instance. The import commands fail without it. If you export per project, recreate your users and projects first.
+1. Import your credentials, then your workflows. Add `--projectId=<new-project-id>` or `--userId=<new-user-id>` to choose the owner:
+
+	```bash
+	n8n import:credentials --input=credentials.json
+	n8n import:workflow --input=workflows.json
+	```
+
+1. Set up again what the export doesn't carry over:
+	- Secrets stored encrypted in the database: user two-factor authentication, OIDC client secret, SAML signing key, LDAP bind password, external secrets connections, and source control credentials.
+	- On Enterprise: dynamic credential resolvers, promotion settings, inbound authentication trusted sources, and SCIM.
+	- Your license, user API keys, log streaming destinations, and persisted credential overwrites.
+1. Rotate the credentials you stored in n8n at their source, such as API keys, OAuth secrets, and secrets in your external store. The new key doesn't protect them from anyone who has the old key and a copy of the old database.
+1. Delete the exported files and old database backups, and retire the old instance, database, and key.
+
+On the new instance, n8n generates new signing secrets. Users must sign in again, and links for waiting executions and signed binary data from the old instance stop working.
+
+Don't use `n8n export:entities` and `n8n import:entities` for this. The `--keyFile` option only encrypts the archive, and doesn't re-encrypt the secrets in the database. Refer to [Use the command line](../use-the-command-line.md) for the export and import commands.
 
 ## Related resources <a href="#related-resources" id="related-resources"></a>
 

@@ -34,6 +34,16 @@ Blocks the [Execute Command](https://app.gitbook.com/s/BKcbOzIWja8NfqKDcqHc/buil
 
 Your n8n users won't be able to search for or use these nodes.
 
+{% hint style="warning" %}
+**`NODES_EXCLUDE` replaces the default list**
+
+By default, n8n blocks the **Execute Command** (`n8n-nodes-base.executeCommand`) and **Local File Trigger** (`n8n-nodes-base.localFileTrigger`) nodes. When you set `NODES_EXCLUDE`, your value replaces that default instead of adding to it. The example above unblocks **Local File Trigger**. To keep both default nodes blocked and block more, include them in your list:
+
+```
+NODES_EXCLUDE: "[\"n8n-nodes-base.executeCommand\", \"n8n-nodes-base.localFileTrigger\", \"n8n-nodes-base.readWriteFile\"]"
+```
+{% endhint %}
+
 ## Suggested nodes to block <a href="#suggested-nodes-to-block" id="suggested-nodes-to-block"></a>
 
 The nodes that can pose security risks vary based on your use case and user profile. Here are some nodes you might want to start with:

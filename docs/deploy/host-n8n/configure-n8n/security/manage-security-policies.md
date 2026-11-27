@@ -32,6 +32,15 @@ To access security settings, navigate to **Settings** > **Policies**.
 
 ## Enforce two-factor authentication <a href="#enforce-two-factor-authentication" id="enforce-two-factor-authentication"></a>
 
+{% hint style="info" %}
+**Feature availability**
+
+Enforcing two-factor authentication is available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Enterprise
+{% endhint %}
+
 You can require all users on your instance to set up two-factor authentication (2FA) when they sign in with email and password.
 
 {% hint style="info" %}

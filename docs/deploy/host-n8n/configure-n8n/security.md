@@ -18,6 +18,7 @@ Securing your n8n instance can take several forms.
 
 ## In this section
 
+* [Security checklist for production](security/security-checklist.md): check the network, secrets, access, and operations settings that secure a production instance.
 * [Manage security policies](security/manage-security-policies.md): manage instance-wide security policies including MFA enforcement and personal space controls.
 * [Run security audits](security/run-security-audits.md): run a security audit to identify security risks.
 * [Set up SSL](security/set-up-ssl.md): enforce secure connections.

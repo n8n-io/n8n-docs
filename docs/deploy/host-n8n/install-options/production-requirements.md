@@ -127,6 +127,7 @@ Use this checklist for production deployments. Skip items that don't apply to yo
 - [ ] [Persistent volumes](#storage) available.
 - [ ] [Encryption key](../configure-n8n/basic-configuration/configuration-examples/set-a-custom-encryption-key.md) generated, stored securely, and set to the same value on every n8n instance. Run `openssl rand -hex 32` to generate one.
 - [ ] [Backup strategy](../keep-n8n-running/backup-and-restore.md) decided.
+- [ ] [Security checklist for production](../configure-n8n/security/security-checklist.md) completed.
 
 ## Related resources
 

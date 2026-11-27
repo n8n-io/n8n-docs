@@ -210,6 +210,7 @@ Command flags:
 | --all        | Exports all workflows/credentials.                                                                                                                                                                  |
 | --backup     | Sets --all --pretty --separate for backups. You can optionally set --output.                                                                                                                        |
 | --id         | The ID of the workflow to export.                                                                                                                                                                   |
+| --projectId  | Exports the workflows or credentials of the specified project, including items shared with it. Can't be used with `--all` or `--id`. Skips instance-scoped credentials.                        |
 | --output, -o | Outputs file name or directory if using separate files.                                                                                                                                             |
 | --pretty     | Formats the output in an easier to read fashion.                                                                                                                                                    |
 | --separate   | Exports one file per workflow (useful for versioning). Must set a directory using --output.                                                                                                         |
@@ -499,7 +500,7 @@ Uninstall a community node credential:
 n8n community-node --uninstall --credential <CREDENTIAL_TYPE> --userId <ID>
 ```
 
-For example, to uninstall the [Evolution API community node credential](https://www.npmjs.com/package/n8n-nodes-evolution-api), visit the [repository](https://github.com/oriondesign2015/n8n-nodes-evolution-api) and navigate to the [`credentials.ts` file](https://github.com/oriondesign2015/n8n-nodes-evolution-api/blob/main/credentials/EvolutionApi.credentials.ts) to find the `name`:
+For example, to uninstall the [Evolution API community node credential](https://www.npmjs.com/package/n8n-nodes-evolution-api), visit the [repository](https://github.com/oriondesign2015/n8n-nodes-evolution-api) and open the `credentials/EvolutionApi.credentials.ts` file to find the `name`:
 
 ```sh
 n8n community-node --uninstall --credential evolutionApi --userId 1234

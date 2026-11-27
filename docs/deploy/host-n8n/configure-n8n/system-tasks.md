@@ -22,7 +22,7 @@ Each system task has its own cadence, either a fixed interval or a cron schedule
 
 ### Run system tasks on the durable scheduler
 
-From n8n 2.51.0, system tasks run on the durable scheduler by default. To opt out, set `N8N_SCHEDULER_SYSTEM_TASKS_ENABLED=false` on every main instance and restart n8n. From n8n 2.45.0 to 2.50.x, set it to `true` to opt in.
+From n8n 2.51.0, system tasks that support durable mode run on the durable scheduler by default. To opt out, set `N8N_SCHEDULER_SYSTEM_TASKS_ENABLED=false` on every main instance and restart n8n. From n8n 2.45.0 to 2.50.x, set it to `true` to opt in.
 
 ```bash
 export N8N_SCHEDULER_SYSTEM_TASKS_ENABLED=false

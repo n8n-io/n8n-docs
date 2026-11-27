@@ -63,7 +63,7 @@ Use a skill for a procedure that agents and n8n Assistant follow for a specific 
 
 n8n skills follow the open [Agent Skills](https://agentskills.io/home) format. A skill is a folder with a `SKILL.md` file. The file holds the skill's name, a description of when to use the skill, and the instructions. See the [Agent Skills specification](https://agentskills.io/specification) for the full format.
 
-In n8n, a skill keeps its `SKILL.md` and the Markdown files in its `references/` folder. n8n doesn't support scripts, templates, or other files in a skill, and never runs scripts.
+In n8n, a skill keeps its `SKILL.md` and the Markdown files in its `references/` folder. From n8n 2.51.0, a skill that you [import from GitHub](skills.md#import-skills-from-github) also keeps its other files, such as scripts and images, at their paths in the skill folder. In earlier versions, n8n doesn't support scripts, templates, or other files in a skill. n8n never runs scripts.
 
 In the n8n editor, the fields of a skill have these labels:
 
@@ -72,7 +72,7 @@ In the n8n editor, the fields of a skill have these labels:
 | `name` | **Name** | 128 characters, unique in the skill's scope |
 | `description` | **When to use this skill** | 1,024 characters |
 | Instructions after the frontmatter | **What the skill does** | 65,536 characters |
-| Files in `references/` | **References** | 20 Markdown files, 65,536 characters each, 262,144 characters in total |
+| Files in the skill folder other than `SKILL.md` | **References** | From n8n 2.51.0: 500 files, 1,048,576 characters for each text file, 1 MiB for each binary file, and 2,097,152 characters in total. A binary file counts with its Base64 length. Earlier versions: 20 Markdown files, 65,536 characters each, 262,144 characters in total. |
 
 ## Skill scopes
 
@@ -137,7 +137,7 @@ n8n reads every folder with a `SKILL.md` file, up to 8 folders below the link. I
 
 The skill's name comes from the `name` in its frontmatter. If there's no `name`, n8n uses the folder name. Every skill needs a `description`.
 
-n8n imports only `SKILL.md` and the Markdown files in `references/`. The review step shows which other files n8n leaves out, such as scripts. n8n never runs scripts from a skill.
+From n8n 2.51.0, n8n imports `SKILL.md` and the other files in the skill folder at their paths, so links in `SKILL.md` to those files work. This includes scripts and binary files, such as images. If a skill is over a limit, n8n keeps the files in `references/` first, then the files in `scripts/` and `assets/`, then other files. Files in dependency folders come last. The review step lists the files that n8n leaves out, and flags scripts and binary files. In earlier versions, n8n imports only `SKILL.md` and the Markdown files in `references/`. n8n never runs scripts from a skill.
 
 ### Import skills from a repository
 

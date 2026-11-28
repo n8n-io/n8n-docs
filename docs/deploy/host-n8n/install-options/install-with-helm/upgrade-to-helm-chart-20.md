@@ -9,15 +9,7 @@ layout:
 
 Helm chart 2.0 is the version of the official n8n Helm chart that installs n8n 3.0. This page lists what's new, and shows how to upgrade a chart 1.x release.
 
-Chart 2.x installs n8n 3.x, and chart 1.x stays on n8n 2.x. For a new installation, see [Install with Helm](../install-with-helm.md).
-
-{% hint style="warning" %}
-**Helm chart 2.0 is a release candidate**
-
-Chart 2.0 isn't final yet, so the commands on this page use the release candidate `2.0.0-rc.2`, which still installs n8n 2.x. Use it to rehearse the upgrade on a test release, and wait for the final 2.0.0 before you upgrade production.
-
-Chart 1.x stays supported. The [`release/n8n-2.x` branch](https://github.com/n8n-io/n8n-hosting/tree/release/n8n-2.x/charts/n8n) of the chart's repository holds the 1.x chart and its README.
-{% endhint %}
+Chart 2.x installs n8n 3.x, and chart 1.x stays on n8n 2.x. The [`release/n8n-2.x` branch](https://github.com/n8n-io/n8n-hosting/tree/release/n8n-2.x/charts/n8n) of the chart's repository holds the 1.x chart and its README. For a new installation, see [Install with Helm](../install-with-helm.md).
 
 For every change in chart 2.0, see these files in the chart's repository:
 
@@ -72,7 +64,7 @@ The chart includes a script that migrates a chart 1.x values file. It renames or
 Download the chart, and run the script on your values file:
 
 ```bash
-helm pull oci://ghcr.io/n8n-io/n8n-helm-chart/n8n --version 2.0.0-rc.2 --untar
+helm pull oci://ghcr.io/n8n-io/n8n-helm-chart/n8n --untar
 bash n8n/scripts/migrate-values.sh values.yaml > values-2.0.yaml
 ```
 

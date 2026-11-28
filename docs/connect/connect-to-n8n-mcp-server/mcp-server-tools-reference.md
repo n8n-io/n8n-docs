@@ -92,7 +92,7 @@ Get detailed information about a specific workflow, including trigger details.
 | Name          | Type     | Required      | Default | Description                        |
 | ------------- | -------- | ------------- | ------- | ---------------------------------- |
 | `workflowId`  | `string` | Yes           |         | The ID of the workflow to retrieve |
-| `detailLevel` | \`"full" | "execution"\` | No      | `"full"`                           |
+| `detailLevel` | `"full" \| "execution"`  | No      | `"full"` |                         |
 
 {% hint style="info" %}
 **Feature availability**

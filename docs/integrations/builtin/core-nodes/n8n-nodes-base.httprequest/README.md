@@ -44,6 +44,21 @@ Select the method to use for the request:
 - POST
 - PUT
 
+To use WebDAV methods, select **Add Option**, then turn on [**Enable WebDAV Methods**](#enable-webdav-methods). It adds these methods to **Method**:
+
+- COPY
+- MKCOL
+- MOVE
+- PROPFIND
+- REPORT
+- SEARCH
+
+{% hint style="info" %}
+**Feature availability**
+
+The SEARCH method is available from n8n 2.50.0 and n8n 3.4.0.
+{% endhint %}
+
 ### URL <a href="#url" id="url"></a>
 
 Enter the endpoint you want to use.
@@ -183,6 +198,12 @@ Control how to batch large numbers of input items:
 
 * **Items per Batch**: Enter the number of input items to include in each batch.
 * **Batch Interval**: Enter the time to wait between each batch of requests in milliseconds. Enter 0 for no batch interval.
+
+### Enable WebDAV methods
+
+Use the **Enable WebDAV Methods** option to add the WebDAV request methods to **Method**. This option is off by default.
+
+Turn this option on to add the WebDAV methods to **Method**.
 
 ### Ignore SSL Issues <a href="#ignore-ssl-issues" id="ignore-ssl-issues"></a>
 

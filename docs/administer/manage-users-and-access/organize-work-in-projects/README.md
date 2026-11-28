@@ -80,6 +80,37 @@ Every user has a personal project that n8n creates automatically, on every plan.
 
 On plans that include team projects, instance owners and instance admins can create team projects and add users to them. Refer to [Create and manage projects](create-and-manage-projects.md).
 
+## Plan a project structure for several teams or customers
+
+When one instance serves several teams, business units, or customers, give each one its own team project. Each project then holds its own workflows, credentials, and member list, and members of one project can't see the resources of another unless you share them.
+
+A common layout uses one project per team or customer, plus projects for shared and operational work:
+
+```
+Instance (visible to instance owners and instance admins)
+├── Project: Customer A
+│	├── Workflows (Customer A automations)
+│	└── Credentials (Customer A API keys)
+├── Project: Customer B
+│	├── Workflows
+│	└── Credentials
+├── Project: Shared services
+│	├── Workflows (reusable sub-workflows)
+│	└── Credentials (shared infrastructure credentials)
+└── Project: Platform operations
+	├── Workflows (monitoring, alerting, and health checks)
+	└── Credentials (internal tooling)
+```
+
+When you set up this structure:
+
+* Give each member the least-privileged [project role](../set-permissions-and-roles-rbac/understand-project-roles.md) they need. Most members need Editor or Viewer, not Admin.
+* Keep each team's or customer's credentials in its own project. Share a credential with another project only when that project needs it. Refer to [Share credentials securely](../../manage-credentials/share-credentials-securely.md).
+* Put reusable sub-workflows in a shared project, and use each sub-workflow's caller policy to control which workflows can call it.
+* On n8n Enterprise 2.11.0 and later, use a [project vault](../../manage-credentials/use-external-secret-stores.md#project-vaults) for secrets that differ for each team or customer.
+
+Projects separate access, not infrastructure. All projects on an instance share the same n8n deployment and database, as described in [What projects isolate and what they don't](#what-projects-isolate-and-what-they-dont).
+
 ## Use personal credentials in team projects <a href="#use-personal-credentials-in-team-projects" id="use-personal-credentials-in-team-projects"></a>
 
 Project members can select their own personal credentials in any workflow in a team project they belong to, without sharing the credential with the project. The credential selector groups credentials into **Available to you** (your personal credentials) and **Available in** _project name_.

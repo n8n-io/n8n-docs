@@ -18,6 +18,24 @@ layout:
 
 The relationship between n8n instances and Git branches is flexible. You can create different setups depending on your needs. 
 
+{% hint style="info" %}
+**Feature availability**
+
+Environments (Classic) are available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Business, Enterprise
+
+Environments (Classic) are available from n8n 1.1.0.
+{% endhint %}
+
+{% hint style="info" %}
+**New version available**
+
+These pages cover Environments (Classic). For the new version, see [Environments](../environments/README.md). Environments are available from n8n 2.47.0 on Enterprise plans. They're in Preview. To compare the versions and upgrade an instance, see [Upgrade from Environments (Classic)](../environments/upgrade-from-environments-classic.md).
+{% endhint %}
+
+
 {% include "https://app.gitbook.com/s/GixZThfitWP21x2gQFpD/~/reusable/sVOSvjfqJPLqOGb1x77B/" %}
 
 ## Multiple instances, multiple branches <a href="#multiple-instances-multiple-branches" id="multiple-instances-multiple-branches"></a>

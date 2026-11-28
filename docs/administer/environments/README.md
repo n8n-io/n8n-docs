@@ -21,13 +21,15 @@ Environments are available on:
 - **n8n Cloud:** Enterprise
 - **Self-hosted:** Enterprise
 
+Environments are available from n8n 2.47.0. This page covers Environments, not [Environments (Classic)](../use-source-control-and-environments/README.md), the current default source control feature.
+
 Only instance owners and instance admins can set up environments, promote, apply, and review promotions.
 {% endhint %}
 
 {% hint style="info" %}
 **Preview status**
 
-Environments are in Preview and may change in future releases. Try them on test instances before you set them up for your production instances.
+Environments are in Preview and may change in future releases. Try them on test instances before you set them up for your production instances. For what Preview means, see [Understand feature availability](../understand-feature-availability.md#feature-maturity-preview-ga-deprecated-and-removed).
 {% endhint %}
 
 {% hint style="info" %}
@@ -97,7 +99,12 @@ A provider holds the details n8n uses to connect and authenticate to a Git host,
 
 ## Environments and Environments (Classic)
 
-Environments replace [Environments (Classic)](../use-source-control-and-environments/README.md), the earlier source control feature. An instance uses one or the other. See [Upgrade from Environments (Classic)](upgrade-from-environments-classic.md).
+n8n has two versions of this feature:
+
+- **Environments** (these pages): in Preview, and available from n8n 2.47.0. Changes move between instances by promoting and applying.
+- **[Environments (Classic)](../use-source-control-and-environments/README.md):** the current default. Changes move by pushing to and pulling from Git.
+
+An instance uses one or the other. To compare them and switch, see [Upgrade from Environments (Classic)](upgrade-from-environments-classic.md).
 
 ## In this section
 

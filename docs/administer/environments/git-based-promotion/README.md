@@ -11,9 +11,20 @@ layout:
 With Git-based promotion, changes travel between n8n instances through a Git repository. Each environment is a repository and branch.
 
 {% hint style="info" %}
+**Feature availability**
+
+Environments are available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Enterprise
+
+Environments are available from n8n 2.47.0. This page covers Environments, not [Environments (Classic)](../../use-source-control-and-environments/README.md), the current default source control feature.
+{% endhint %}
+
+{% hint style="info" %}
 **Preview status**
 
-Environments are in Preview and may change in future releases. Try them on test instances before you set them up for your production instances.
+Environments are in Preview and may change in future releases. Try them on test instances before you set them up for your production instances. For what Preview means, see [Understand feature availability](../../understand-feature-availability.md#feature-maturity-preview-ga-deprecated-and-removed).
 {% endhint %}
 
 ## What n8n writes to the repository
@@ -57,6 +68,15 @@ Check:
 - For SSH, the deploy key has write access.
 - The branch exists on the Git host.
 - The repository URL has the right format for the authentication type. See [Generic Git](generic-git.md).
+
+### Certificate error when you connect to a self-hosted Git host
+
+For a self-hosted GitLab over HTTPS, set up both, as described in [Self-hosted n8n](#self-hosted-n8n):
+
+- **Git operations:** set `GIT_SSL_CAINFO` or `GIT_SSL_CAPATH`. n8n doesn't pass other Git SSL variables, such as `GIT_SSL_NO_VERIFY`, to Git.
+- **GitLab API calls:** configure custom certificate authorities.
+
+A Git certificate failure shows only as "Could not complete the Git operation". These settings don't apply to SSH remotes. Don't turn off certificate verification.
 
 ## In this section
 

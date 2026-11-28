@@ -11,9 +11,20 @@ layout:
 Environments improve on and replace [Environments (Classic)](../use-source-control-and-environments/README.md), the earlier source control feature. Each instance uses either Classic or Environments, and you can switch back to Classic while Environments are in Preview.
 
 {% hint style="info" %}
+**Feature availability**
+
+Environments are available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Enterprise
+
+Environments are available from n8n 2.47.0. This page compares Environments with [Environments (Classic)](../use-source-control-and-environments/README.md), the current default source control feature.
+{% endhint %}
+
+{% hint style="info" %}
 **Preview status**
 
-Environments are in Preview and may change in future releases. Try them on test instances before you set them up for your production instances.
+Environments are in Preview and may change in future releases. Try them on test instances before you set them up for your production instances. For what Preview means, see [Understand feature availability](../understand-feature-availability.md#feature-maturity-preview-ga-deprecated-and-removed).
 {% endhint %}
 
 ## Compare Classic and Environments
@@ -27,7 +38,7 @@ Environments are in Preview and may change in future releases. Try them on test 
 | Dependencies | You select workflows, credentials, and data tables. n8n adds tags and variable stubs. | n8n includes everything the selected workflows use. Selecting dependencies yourself is planned. |
 | Before changes land | Pull can overwrite local changes after you confirm. | Apply checks for blockers first and asks you to confirm destructive changes. |
 | Credentials | Stubs without values. | Must exist on the target, or you create them during Apply. |
-| Variables | Stubs without values. | Written to the repository with their values. Must exist on the target, or you create them during Apply. |
+| Variables | Stubs without values. You can't push variable values, so you set them on each instance. | Written to the repository with their values. Must exist on the target, or you create them during Apply. |
 | Who can use it | Instance owners and admins. Project admins can push. | Instance owners and admins. Support for project admins in project promotes and project applies is planned. |
 | Personal projects | Included. | Not included. |
 | Automation | Source control endpoints in the public API, and a pull command in the n8n CLI. | Promotion endpoints in the public API, and promotion commands in the n8n CLI. |

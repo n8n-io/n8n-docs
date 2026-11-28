@@ -11,9 +11,20 @@ layout:
 The GitLab provider connects an environment to a repository on GitLab.com or a self-managed GitLab instance. It lists your repositories and branches, and supports promotion reviews based on merge requests that you review visually in n8n.
 
 {% hint style="info" %}
+**Feature availability**
+
+Environments are available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Enterprise
+
+Environments are available from n8n 2.47.0. This page covers Environments, not [Environments (Classic)](../../use-source-control-and-environments/README.md), the current default source control feature.
+{% endhint %}
+
+{% hint style="info" %}
 **Preview status**
 
-Environments are in Preview and may change in future releases. Try them on test instances before you set them up for your production instances.
+Environments are in Preview and may change in future releases. Try them on test instances before you set them up for your production instances. For what Preview means, see [Understand feature availability](../../understand-feature-availability.md#feature-maturity-preview-ga-deprecated-and-removed).
 {% endhint %}
 
 ## What GitLab supports

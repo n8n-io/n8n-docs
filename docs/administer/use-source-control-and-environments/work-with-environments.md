@@ -14,7 +14,25 @@ layout:
 
 # Environments in n8n <a href="#environments-in-n8n" id="environments-in-n8n"></a>
 
-Environments in n8n let you change and test workflows in a development instance without breaking production: each environment is an n8n instance linked to a Git branch.
+Environments (Classic) in n8n let you change and test workflows in a development instance without breaking production: each environment is an n8n instance linked to a Git branch.
+
+{% hint style="info" %}
+**Feature availability**
+
+Environments (Classic) are available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Business, Enterprise
+
+Environments (Classic) are available from n8n 1.1.0.
+{% endhint %}
+
+{% hint style="info" %}
+**New version available**
+
+These pages cover Environments (Classic). For the new version, see [Environments](../environments/README.md). Environments are available from n8n 2.47.0 on Enterprise plans. They're in Preview. To compare the versions and upgrade an instance, see [Upgrade from Environments (Classic)](../environments/upgrade-from-environments-classic.md).
+{% endhint %}
+
 
 n8n has built its environments feature on top of Git, a version control software. This document helps you understand:
 

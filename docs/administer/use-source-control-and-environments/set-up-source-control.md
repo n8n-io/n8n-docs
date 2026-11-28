@@ -16,6 +16,24 @@ layout:
 
 Link a Git repository to an n8n instance and configure your source control.
 
+{% hint style="info" %}
+**Feature availability**
+
+Environments (Classic) are available on:
+
+- **n8n Cloud:** Enterprise
+- **Self-hosted:** Business, Enterprise
+
+Environments (Classic) are available from n8n 1.1.0.
+{% endhint %}
+
+{% hint style="info" %}
+**New version available**
+
+These pages cover Environments (Classic). For the new version, see [Environments](../environments/README.md). Environments are available from n8n 2.47.0 on Enterprise plans. They're in Preview. To compare the versions and upgrade an instance, see [Upgrade from Environments (Classic)](../environments/upgrade-from-environments-classic.md).
+{% endhint %}
+
+
 n8n uses source control to provide environments. Refer to [Environments in n8n](work-with-environments.md) for more information.
 
 ## Prerequisites <a href="#prerequisites" id="prerequisites"></a>
@@ -85,9 +103,21 @@ The file or directory replaces the default trust store for Git. If the instance 
 
 1. In **Settings** > **Environments** in n8n, select **Connect**. n8n connects to your Git repository.
 1. Under **Instance settings**, choose which branch you want to use for the current n8n instance.
-1. **Optional**: select **Protected instance** to prevent users editing source-controlled resources in this instance. This is useful for protecting production instances.
+1. **Optional**: select **Protected instance** to prevent users editing source-controlled resources in this instance. This is useful for protecting production instances. For what it blocks, including manual runs and data tables, see [Protect a production instance](../environments/protect-a-production-instance.md).
 1. **Optional**: choose a custom color for the instance. This will appear in the menu next to the source control push and pull buttons. It helps users know which instance they're in.
 1. Select **Save settings**.
+
+## Troubleshooting
+
+### Certificate error when you connect to a self-hosted Git host
+
+If the connection fails with a certificate verification error, such as `SSL certificate problem: unable to get local issuer certificate`, Git doesn't trust the certificate of your Git host. Add the certificate authority that signed it to the instance. See [Git hosts with a private certificate authority](#git-hosts-with-a-private-certificate-authority).
+
+Don't turn off certificate verification. It removes the protection HTTPS gives against intercepted connections.
+
+### SSH host key verification failed
+
+n8n stores the host key of your Git server the first time it connects. If the server's key changes, for example after a server migration, n8n stops connecting and shows `Host key verification failed`. If you expect the change, select **Disconnect Git** in **Settings** > **Environments**, then connect again. Disconnecting resets the stored host keys.
 
 ## Related resources
 

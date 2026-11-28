@@ -1,0 +1,207 @@
+---
+title: Custom Model Endpoint credentials
+description: >-
+  Documentation for Custom Model Endpoint credentials. Use these credentials to
+  authenticate any OpenAI-compatible endpoint in n8n, a workflow automation
+  platform.
+layout:
+  description:
+    visible: false
+---
+
+# Custom Model Endpoint credentials
+
+You can use these credentials to authenticate the following nodes:
+
+- [Custom Model Endpoint](../app-nodes/n8n-nodes-langchain.custommodelendpoint.md)
+- [Custom Endpoint Chat Model](../cluster-nodes/sub-nodes/n8n-nodes-langchain.lmchatcustomendpoint.md)
+
+Use these credentials to reach any endpoint that speaks the OpenAI API, such as an AI gateway, an API management proxy, or a self-hosted model. Examples include LiteLLM, Portkey, Kong AI Gateway, Azure API Management, vLLM, and NVIDIA NIM.
+
+The gateway's address, its login method, and the headers it needs on every call live on the credential, not on the node. When your company changes its gateway, you edit one credential rather than every node. A workflow can still need a change of its own: model names differ between gateways, and so can the per-request headers a node sends.
+
+{% hint style="info" %}
+**Name each credential after its gateway**
+
+The node shows the credential name, not the host it reaches. Naming a credential `Portkey production` or `LiteLLM staging` is what tells a reviewer where the prompts go.
+{% endhint %}
+
+## Prerequisites
+
+- An endpoint that accepts OpenAI-format requests.
+- Whatever that endpoint needs to authenticate you: a key, a user name and password, or an OAuth2 client.
+
+## Supported authentication methods
+
+Set the credential's **Authentication** field to one of:
+
+- **Bearer Token**
+- **API Key in Header**
+- **Basic Auth**
+- **OAuth2 Client Credentials**
+- **None**
+
+## Related resources
+
+Refer to the [OpenAI API reference](https://platform.openai.com/docs/api-reference/chat) for the request and response format these endpoints follow.
+
+## Base URL
+
+Every method needs a **Base URL**. Set it to the root your gateway serves the OpenAI API from, including any version segment:
+
+```text
+https://gateway.example.com/v1
+```
+
+The node appends the route, so `/chat/completions` and `/models` hang off whatever you set here. If you leave the version off when your gateway expects it, requests fail with a 404 from the gateway rather than an n8n error.
+
+## Using bearer token
+
+Set **Authentication** to **Bearer Token** and **API Key** to your key. n8n sends it as:
+
+```text
+Authorization: Bearer <your-key>
+```
+
+Use this when your gateway accepts an OpenAI-style key.
+
+## Using API key in a header
+
+Set **Authentication** to **API Key in Header**. Use this when your gateway reads its key from a header of its own, which is common with API management products. Azure API Management subscription keys work this way and can't carry a `Bearer` prefix.
+
+- **Header Name**: the header your gateway reads, for example `Ocp-Apim-Subscription-Key`.
+- **Header Value Prefix**: leave empty for a bare key. Set it only when your gateway expects the value prefixed, for example `Token `.
+- **API Key**: the key itself.
+
+n8n sends no `Authorization` header when you use this method.
+
+## Using basic auth
+
+Set **Authentication** to **Basic Auth**, then fill in **User Name** and **Password**. n8n sends them as a standard `Authorization: Basic` header.
+
+## Using OAuth2 client credentials
+
+Set **Authentication** to **OAuth2 Client Credentials**. Use this when your gateway doesn't take a static key and instead issues short-lived tokens.
+
+{% hint style="info" %}
+**Feature availability**
+
+OAuth2 client credentials are available from n8n 2.50.0.
+{% endhint %}
+
+This login method works only with the **Custom Model Endpoint** and **Custom Endpoint Chat Model** nodes, which perform the token exchange themselves. No other node does it for you.
+
+- **Token URL**: the token endpoint of your login server.
+- **Client ID** and **Client Secret**: the credentials of your service app.
+- **Scope**: space-separated scopes to ask for. Leave it empty to ask for none.
+- **Send Client Credentials In**: choose **Authorization Header** to send the client ID and secret as Basic auth, or **Request Body** to send them as body fields. Login servers differ on which they accept.
+
+n8n fetches a token when the node runs and keeps it in memory for that run. It fetches a new one before the token expires, or after an hour if the login server doesn't say how long it lasts. n8n doesn't write the token back to the credential.
+
+{% hint style="info" %}
+**If you restrict the credential's domains, allow the login server too**
+
+A credential reaches any host by default, so this needs no action in most setups. If you set **Allowed HTTP Request Domains** to **Specific Domains**, n8n adds the host of your **Base URL** to the allowlist for you, but not your login server's. Add that host to **Allowed Domains** as well, or the token request stops with `Domain not allowed: This credential is restricted from accessing <host>.`
+{% endhint %}
+
+## Using no authentication
+
+Set **Authentication** to **None** for an endpoint that needs no login, such as a self-hosted model on your own network.
+
+## Gateway headers
+
+**Gateway Headers** are name and value pairs sent on every request to your gateway, including the model list. n8n encrypts them with the rest of the credential.
+
+They don't travel on the OAuth2 token request, which carries only the fields the login server needs. A login server that requires a header of its own isn't supported.
+
+Use them for anything your gateway needs on every call, such as a tenant ID, a cost center, or a routing hint:
+
+| Name | Value |
+| --- | --- |
+| `x-portkey-provider` | `vertex-ai` |
+| `x-cost-center` | `research` |
+
+Headers that change per request belong on the node instead, where they accept expressions. See the [Custom Model Endpoint node](../app-nodes/n8n-nodes-langchain.custommodelendpoint.md) documentation.
+
+## Sending a project name
+
+n8n sends three context headers on every request by default, so your gateway can attribute usage:
+
+- `x-n8n-workflow-id`
+- `x-n8n-workflow-name`
+- `x-n8n-execution-id`
+
+**The project ID isn't among them**, because a node can't read the project it belongs to. To send a project name, add it yourself: as a gateway header on this credential if every workflow using the credential belongs to one project, or as a per-request header on the node if it varies.
+
+To stop sending them, turn off **Send n8n Context Headers** on the node.
+
+## Moving from the OpenAI node with a custom Base URL
+
+If you reach your gateway today with the **OpenAI** node and a **Base URL** override, you replace the node, but not the credential. Both nodes accept an existing OpenAI credential, so you can swap the node first and build a **Custom Model Endpoint** credential later.
+
+Build one when you need something the OpenAI credential can't express:
+
+| You need | Why the OpenAI credential can't do it |
+| --- | --- |
+| A key in a header you name, with no `Authorization` header | It always sends `Authorization: Bearer`, also next to a custom header |
+| OAuth2 client credentials | It only holds a static key |
+| More than one gateway header | It carries a single custom header |
+| Basic auth, or no auth at all | Neither is available |
+
+To move:
+
+1. Create a **Custom Model Endpoint** credential. Set **Base URL** to the same URL as the **Base URL** on your OpenAI credential.
+2. Set **Authentication** to the method your gateway expects. It doesn't have to be a bearer token.
+3. If the OpenAI credential has an **Add Custom Header** value, move it into **Gateway Headers**. If it has an **Organization ID**, add it as an `OpenAI-Organization` gateway header.
+4. In your workflow, replace the OpenAI node with the **Custom Model Endpoint** node, or the OpenAI Chat Model sub-node with **Custom Endpoint Chat Model**.
+5. Select the new credential and check the model name. See [Model names differ between gateways](#model-names-differ-between-gateways).
+
+## Model names differ between gateways
+
+A gateway decides what to call the models behind it. The same underlying model might be `gpt-4o` on one gateway, `openai/gpt-4o` on another, and a deployment name you chose on a third.
+
+This matters when you change gateway: the credential change is one edit, but the model ID on each node may need changing too. Where a gateway serves `GET /models`, use **From List** on the node's **Model** field to see what it actually offers. Not every gateway serves that route, so typing the ID stays the default.
+
+## Common issues
+
+Here are some common errors and issues with Custom Model Endpoint credentials and steps to resolve or troubleshoot them.
+
+### `The credential has no usable Base URL`
+
+**Base URL** is empty, or isn't an absolute `http` or `https` URL. Set it to the root of your gateway, such as `https://gateway.example.com/v1`.
+
+### `Node does not have any credentials set`
+
+The node has no credential selected. Choose a **Custom Model Endpoint** credential, or an OpenAI one.
+
+### The gateway returns 404 Not Found
+
+Your **Base URL** is probably missing the version segment your gateway expects. The node appends `/chat/completions`, so a base of `https://gateway.example.com` sends requests to `https://gateway.example.com/chat/completions`, not `https://gateway.example.com/v1/chat/completions`.
+
+### The gateway rejects the key
+
+Check that you picked the right **Authentication** option. A gateway that reads its key from a named header rejects a Bearer token, and the reverse is also true. **API Key in Header** sends no `Authorization` header at all, which is what API management products expect.
+
+### `Could not sign in to the gateway`
+
+The login server refused the OAuth2 token request. The message carries the login server's own reason. Check **Token URL**, **Client ID**, **Client Secret**, and **Scope**. Then try the other **Send Client Credentials In** option. Login servers differ on whether they accept the client ID and secret in the header or in the body.
+
+### `The login server did not answer with JSON`
+
+**Token URL** probably points at something other than the token endpoint, such as the authorization endpoint or a login page.
+
+### `Domain not allowed: This credential is restricted from accessing <host>.`
+
+The credential has **Allowed HTTP Request Domains** set to **Specific Domains** and that host isn't on the list. n8n adds your **Base URL** host for you, so this usually means an OAuth2 login server on a different host. Add it to **Allowed Domains**.
+
+### `The header "<name>" is not valid`
+
+A gateway header name or value contains characters a header can't carry. Check the name and the value of the header.
+
+### `This gateway does not publish a model list`
+
+The gateway doesn't serve a compatible `GET /models`. Not every gateway does, so this isn't always a fault. If your gateway does serve a model list, check that **Base URL** matches the API path, including a version segment such as `/v1` when the gateway requires one. Otherwise switch the node's **Model** field to **By ID** and type the model name your gateway uses.
+
+### `The gateway could not list its models`
+
+The gateway answered the model list request with an error. The message carries the gateway's own reason.

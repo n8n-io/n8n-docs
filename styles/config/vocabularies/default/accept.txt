@@ -227,6 +227,7 @@ Pinecone
 [Pp]laintext
 Plivo
 Pluralsight
+Portkey
 Postbin
 Postgres
 PostHog
